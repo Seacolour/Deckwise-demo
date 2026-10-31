@@ -1,0 +1,62 @@
+/* Keep text-drag selection color consistent across chat, markdown, and other app surfaces.
+   Editor lasso temporarily overrides this when it needs to hide native text selection. */
+::selection {
+    background-color: var(--app-selection-solid);
+    color: inherit;
+}
+
+::-moz-selection {
+    background-color: var(--app-selection-solid);
+    color: inherit;
+}
+
+/* pdf.js ships its own AccentColor-based selection mix for text layers.
+   That can look odd across OS/browser combinations, so pin PDF selection
+   to a stable blue while keeping the rest of the app on the global rule. */
+.textLayer ::selection {
+    background: rgba(56, 139, 253, 0.26) !important;
+}
+
+.textLayer ::-moz-selection {
+    background: rgba(56, 139, 253, 0.26) !important;
+}
+
+.textLayer br::selection {
+    background: transparent !important;
+}
+
+.textLayer br::-moz-selection {
+    background: transparent !important;
+}
+
+/* Base element styles. */
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        scroll-behavior: auto;
+    }
+
+    html {
+        background-color: rgb(var(--background));
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        transition: background-color 180ms ease, color 180ms ease;
+    }
+
+    a[href],
+    button:not(:disabled),
+    input[type="button"]:not(:disabled),
+    input[type="submit"]:not(:disabled),
+    input[type="reset"]:not(:disabled),
+    [role="button"]:not([aria-disabled="true"]),
+    summary {
+        cursor: pointer;
+    }
+}

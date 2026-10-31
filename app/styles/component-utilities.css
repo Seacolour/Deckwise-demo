@@ -1,0 +1,81 @@
+/* Component utilities. */
+
+/* Theme buttons for selected and send states. */
+.btn-theme {
+    background: rgb(var(--theme-color));
+    color: rgb(var(--primary-foreground));
+}
+
+.btn-theme-disabled {
+    background: rgb(var(--theme-color));
+    color: rgb(var(--primary-foreground));
+    opacity: .55;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+}
+
+.btn-disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+/* Shared primary CTA press/hover motion. */
+.app-primary-cta-motion {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0) scale(1);
+    transform-origin: center;
+    transition: transform 180ms cubic-bezier(0.2, 0.76, 0.22, 1);
+    will-change: transform;
+}
+
+.app-primary-cta-motion:not(:disabled):hover,
+.app-primary-cta-motion:not(:disabled):focus-visible {
+    transform: translate3d(0, 0, 0) scale(1.04);
+}
+
+.app-primary-cta-motion:not(:disabled):active {
+    transform: translate3d(0, 0, 0) scale(0.99);
+}
+
+.app-plus-plan-label {
+    box-sizing: border-box;
+    display: inline-flex;
+    min-width: 40px;
+    height: 20px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    border-radius: 3px;
+    background: linear-gradient(100deg, #002b6f 0%, #0751bd 56%, #79bbff 100%);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .app-primary-cta-motion {
+        transition: none;
+    }
+}
+
+.chat-message-action-tooltip {
+    z-index: var(--app-layer-floating-submenu);
+    border-radius: 7px;
+    background: rgb(24 24 27);
+    color: #ffffff;
+    padding: 6px 8px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.chat-message-action-tooltip > svg {
+    fill: rgb(24 24 27);
+}

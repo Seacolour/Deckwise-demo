@@ -1,0 +1,3289 @@
+{
+  "app": {
+    "name": "Deckwise Demo",
+    "tagline": "Không gian nghiên cứu AI",
+    "logIn": "Đăng nhập",
+    "getStartedForFree": "Bắt đầu",
+    "openApp": "Mở ứng dụng",
+    "backToWebsite": "Quay lại trang web",
+    "backToHome": "Trở về nhà",
+    "homeAria": "Trang chủ {appName}"
+  },
+  "metadata": {
+    "siteTitle": "Deckwise Demo | Không gian tài liệu AI",
+    "siteDescription": "Không gian cộng tác với AI Agent để sắp xếp tư liệu, viết và chỉnh sửa tài liệu."
+  },
+  "locale": {
+    "language": "Ngôn ngữ",
+    "english": "English",
+    "chinese": "简体中文",
+    "traditionalChinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "spanish": "Español",
+    "vietnamese": "Tiếng Việt"
+  },
+  "toast": {
+    "messages": {
+      "copiedDescription": "Đã sao chép vào bảng nhớ tạm",
+      "documentNoLongerExists": "Tài liệu không còn tồn tại.",
+      "fileUrlMissing": "URL tệp bị thiếu.",
+      "failedToLoadFiles": "Không tải được tệp, vui lòng thử lại sau",
+      "exportStarted": "Xuất khẩu đã bắt đầu."
+    }
+  },
+  "nav": {
+    "backToProjects": "Quay lại dự án",
+    "newChat": "Trò chuyện mới",
+    "projects": "Dự án"
+  },
+  "home": {
+    "ariaHome": "Trang chủ",
+    "ariaNewProject": "Dự án mới",
+    "ariaProjects": "Dự án",
+    "presentationStartTitle": "Bài thuyết trình tiếp theo của bạn bắt đầu ở đây",
+    "marketingTaskReviewerHandoff": "Tải PowerPoint lên hoặc mở một deck gần đây, sau đó chọn Đánh giá từ khán giả trong trình chỉnh sửa.",
+    "recentProjects": "Bản nháp",
+    "newProject": "Dự án mới",
+    "signIn": "Đăng nhập",
+    "untitledProject": "Không có tiêu đề",
+    "updatedAt": "Đã cập nhật {date}",
+    "projectActionsAria": "Hoạt động dự án cho {title}",
+    "createdByUsers": "Thư viện slide mẫu",
+    "galleryCategories": "Danh mục ví dụ",
+    "galleryMetrics": "Lượt xem {views} / Lượt thích {likes}",
+    "customizeExample": "Tùy chỉnh",
+    "publicDeckLabel": "Đã xuất bản",
+    "useExample": "Sử dụng mẫu",
+    "usingExample": "Thêm",
+    "useExampleAria": "Sử dụng ví dụ {title}",
+    "previewExampleAria": "Xem trước ví dụ {title}",
+    "examplePreviewLoading": "Đang tải các slide mẫu",
+    "examplePreviewFailed": "Không tải được bản xem trước mẫu",
+    "examplePreviewEmpty": "Ví dụ này hiện không có slide có thể xem trước.",
+    "exampleImportSucceeded": "Đã thêm các slide mẫu.",
+    "exampleImportFailed": "Không thể thêm ví dụ",
+    "exampleImportMissingProject": "Kết quả nhập thiếu một dự án.",
+    "examplesUnavailable": "Các ví dụ hiện không có sẵn.",
+    "examplesSignInHint": "Đăng nhập để sử dụng các slide mẫu.",
+    "examplesEmpty": "Không có ví dụ có sẵn.",
+    "galleryTabs": {
+      "all": "Tất cả",
+      "ai": "AI",
+      "product": "sản phẩm",
+      "branding": "Xây dựng thương hiệu",
+      "postersAds": "Áp phích & Quảng cáo",
+      "illustration": "Minh họa",
+      "uiLayout": "Bố cục giao diện người dùng",
+      "characterDesign": "Thiết kế nhân vật",
+      "videosStoryboards": "Video & Bảng phân cảnh",
+      "productDesign": "Thiết kế sản phẩm",
+      "architecturalDesign": "Thiết kế kiến trúc"
+    }
+  },
+  "chat": {
+    "delete": "Xóa",
+    "new": "Trò chuyện mới",
+    "newChat": "Trò chuyện mới",
+    "history": "Lịch sử",
+    "chats": "Trò chuyện",
+    "currentProject": "Dự án hiện tại",
+    "noSessions": "Chưa có phiên nào",
+    "untitledSession": "Phiên không có tiêu đề",
+    "welcome": "Chỉnh sửa ghi chú bằng Deckwise",
+    "sessionNumber": "Phiên #{id}",
+    "thinking": "Đang suy nghĩ…",
+    "newSession": "Trò chuyện mới",
+    "confirmDeleteSession": "Bạn có chắc chắn muốn xóa phiên này không?",
+    "deleteFailed": "Không thể xóa. Vui lòng thử lại.",
+    "sendFailedNeedProject": "Gửi không thành công: vui lòng mở/chọn dự án trước khi tạo phiên.",
+    "createSessionFailed": "Không tạo được phiên.",
+    "sendFailed": "Gửi không thành công: {reason}",
+    "planningNextMoves": "Lên kế hoạch cho những bước đi tiếp theo…",
+    "dropFilesToAddToChat": "Thả tệp vào đây để thêm vào cuộc trò chuyện",
+    "resizeTray": "Thay đổi kích thước khay trò chuyện"
+  },
+  "streamError": {
+    "timeout": "Yêu cầu đã hết thời gian chờ. Vui lòng kiểm tra mạng của bạn hoặc thử lại sau.",
+    "networkError": "Kết nối mạng không thành công. Vui lòng kiểm tra kết nối của bạn và thử lại.",
+    "serverError": "Lỗi máy chủ. Vui lòng thử lại sau.",
+    "serviceUnavailable": "Dịch vụ tạm thời không có sẵn. Vui lòng thử lại sau.",
+    "deadlineExceeded": "Yêu cầu đã hết thời gian chờ. Vui lòng kiểm tra mạng của bạn hoặc thử lại sau.",
+    "connectionClosed": "Mất kết nối. Vui lòng thử lại.",
+    "otherSessionActive": "Một phiên khác đang trả lời. Vui lòng đợi và thử lại.",
+    "aiServiceError": "AI lỗi dịch vụ. Vui lòng thử lại sau.",
+    "unknown": "Đã xảy ra lỗi không xác định."
+  },
+  "tool": {
+    "echo": "Đang kiểm tra kết nối…",
+    "fileList": "Đang tìm nạp tệp dự án...",
+    "fileContentRead": "Đang đọc nội dung tệp…",
+    "imageRead": "Đọc hình ảnh…",
+    "documentRead": "Đang đọc tài liệu…",
+    "documentLocate": "Đang định vị nội dung…",
+    "documentDiff": "AI đang chỉnh sửa tài liệu…",
+    "documentSave": "Đang lưu thay đổi…",
+    "documentUpdateSummary": "Đang cập nhật tóm tắt…",
+    "documentCreate": "Đang tạo tài liệu…",
+    "scholarSearch": "Đang tìm kiếm tài liệu học thuật…",
+    "todoList": "Tổ chức các công việc…",
+    "unknown": "Đang làm việc…"
+  },
+  "chatInput": {
+    "placeholder": "Yêu cầu cải thiện trang chiếu này",
+    "addAttachment": "Thêm tệp đính kèm",
+    "connectApps": "Kết nối ứng dụng",
+    "appConnectionToggle": "Kết nối {app}",
+    "projectSlashMenuLabel": "Thao tác dự án",
+    "projectSlashPolishDeck": "Hoàn thiện bộ slide này",
+    "projectSlashMakeVisual": "Làm trực quan hơn",
+    "projectSlashCheckWeakSlides": "Kiểm tra các slide yếu",
+    "addPhotosAndFiles": "Thêm ảnh và tệp",
+    "addFromGoogleDrive": "Thêm từ Google Drive",
+    "addFromNotion": "Thêm từ Notion",
+    "addFromOneDrive": "Thêm từ OneDrive",
+    "addFromDropbox": "Thêm từ Dropbox",
+    "recentFiles": "Các tệp gần đây",
+    "noRecentFiles": "Không có tệp gần đây",
+    "addImage": "Thêm hình ảnh",
+    "addPdf": "Thêm PDF",
+    "send": "Gửi",
+    "stop": "Dừng lại",
+    "modeSelectLabel": "Chọn chế độ",
+    "modeAskTitle": "Hỏi",
+    "modeAskDesc": "Trò chuyện với trợ lý",
+    "modeAgentTitle": "Tác nhân",
+    "modeAgentDesc": "Hành động và chỉnh sửa nhiều bước",
+    "model": "người mẫu",
+    "modelsLoading": "Đang tải mô hình",
+    "modelsUnavailable": "Model không có sẵn",
+    "chatModels": {
+      "fast": {
+        "label": "Nhanh",
+        "description": "Phản hồi nhanh"
+      },
+      "smart": {
+        "label": "Thông minh",
+        "description": "Cân bằng chỉnh sửa và suy luận"
+      },
+      "expert": {
+        "label": "Chuyên gia",
+        "description": "Phù hợp với nội dung phức tạp"
+      }
+    },
+    "modelCreditCost": "{cost} tín dụng",
+    "openFiles": "Mở tệp",
+    "selectedFiles": "Tệp {count} đã chọn để truy xuất",
+    "attachedFiles": "Tệp đính kèm",
+    "clear": "Xóa",
+    "file": "tệp",
+    "image": "Hình ảnh",
+    "pdf": "PDF",
+    "removeImage": "Xóa hình ảnh",
+    "removePdf": "Xóa PDF",
+    "removeQuote": "Xóa trích dẫn",
+    "fileFallbackName": "Tệp {id}",
+    "materials": "Nguồn",
+    "outline": "phác thảo",
+    "slide": "Slide",
+    "slides": "Slide",
+    "decreaseSlides": "Giảm slide",
+    "increaseSlides": "Tăng slide",
+    "slideCount": "Số lượng slide",
+    "outlineWithSlides": "Nội dung · {count} slide",
+    "slideCountLabel": "{count} slide",
+    "slideCountMenuLabel": "{count} slide",
+    "outlineSlideLimitExceeded": "Gói hiện tại của bạn hỗ trợ tối đa {max} slide. Bạn đã chọn {count} slide.",
+    "outlineSlideLimitPrompt": "Cần nhiều hơn {max} slide?",
+    "outlineSlideLimitUpgradeAction": "Nâng cấp",
+    "outlineModels": {
+      "fast": {
+        "label": "Nhanh",
+        "description": "Tạo nhanh một bản trình bày hoàn chỉnh"
+      },
+      "smart": {
+        "label": "Thông minh",
+        "description": "Tạo bản trình bày chất lượng cao hơn với suy luận sâu hơn"
+      },
+      "expert": {
+        "label": "Chuyên gia",
+        "description": "Chất lượng cao nhất cho các bản trình bày phức tạp"
+      }
+    }
+  },
+  "user": {
+    "ariaUserInfo": "Thông tin người dùng",
+    "notSignedIn": "Chưa đăng nhập",
+    "user": "người dùng",
+    "defaultAccountName": "Tài khoản của bạn",
+    "upgrade": "Nâng cấp",
+    "fullName": "Tên đầy đủ",
+    "freePlan": "miễn phí",
+    "credits": "Tín dụng",
+    "freeCredits": "Tín dụng miễn phí",
+    "settingsShortcut": "Cài đặt",
+    "settings": "Cài đặt",
+    "manageAccount": "Quản lý tài khoản",
+    "billing": "Thanh toán",
+    "marketingHome": "Trang chủ",
+    "userGuide": "Hướng dẫn sử dụng",
+    "contactUs": "Liên hệ với chúng tôi",
+    "accountInfo": "Tài khoản",
+    "accountInfoDesc": "Người dùng đã đăng nhập hiện tại",
+    "userId": "ID người dùng",
+    "account": "Tài khoản",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "role": "Vai trò",
+    "createdAt": "Đã tạo",
+    "updatedAt": "Đã cập nhật",
+    "appearance": "Ngoại hình",
+    "theme": "chủ đề",
+    "language": "Ngôn ngữ",
+    "communicationPreferences": "Tùy chọn liên lạc",
+    "browserNotifications": "Thông báo trình duyệt",
+    "browserNotificationsDescription": "Nhận thông báo trong trình duyệt của bạn khi có tiến trình mới hoặc một nhiệm vụ được hoàn thành.",
+    "receiveProductUpdates": "Nhận thông tin cập nhật về sản phẩm",
+    "receiveProductUpdatesDescription": "Nhận quyền truy cập sớm vào các bản phát hành tính năng và câu chuyện thành công để tối ưu hóa quy trình làm việc của bạn.",
+    "emailQueuedTaskStarts": "Gửi email cho tôi khi tác vụ xếp hàng đợi của tôi bắt đầu",
+    "emailQueuedTaskStartsDescription": "Khi được bật, chúng tôi sẽ gửi email cho bạn ngay khi nhiệm vụ của bạn rời hàng đợi và bắt đầu được xử lý.",
+    "adsAboutDeckwise": "Quảng cáo về Deckwise",
+    "adsAboutDeckwiseDescription": "Khi được bật, chúng tôi có thể chia sẻ thông tin cá nhân mà chúng tôi thu thập về bạn với các nhà cung cấp tiếp thị của chúng tôi để hiển thị cho bạn quảng cáo về Deckwise trên các ứng dụng, trang web và nền tảng khác.",
+    "languageEnglish": "English",
+    "languageChinese": "简体中文",
+    "themeLight": "Ánh sáng",
+    "themeDark": "Tối",
+    "themeSystem": "Hệ thống",
+    "dangerZone": "Vùng nguy hiểm",
+    "close": "Đóng",
+    "logout": "Đăng xuất",
+    "logoutConfirmTitle": "Đăng xuất?",
+    "logoutConfirmMessage": "Bạn sẽ cần phải đăng nhập lại để truy cập không gian làm việc của mình.",
+    "logoutConfirmAction": "Đăng xuất",
+    "accountNameSaveFailed": "Không lưu được tên tài khoản.",
+    "deleteAccount": "Xóa tài khoản",
+    "deleteAccountConfirmTitle": "Xóa tài khoản?",
+    "deleteAccountConfirmMessage": "Thao tác này sẽ xóa vĩnh viễn tài khoản của bạn và khiến bạn đăng xuất. Không thể hoàn tác hành động này.",
+    "deleteAccountConfirmAction": "Xóa tài khoản",
+    "deleteAccountFailed": "Không thể xóa tài khoản. Vui lòng thử lại.",
+    "languageTraditionalChinese": "繁體中文",
+    "languageJapanese": "日本語",
+    "languageKorean": "한국어",
+    "languageSpanish": "Español",
+    "personalization": "Cá nhân hóa",
+    "inviteFriends": "Mời bạn bè",
+    "inviteFriendsSubtitle": "Kiếm {credits} tín dụng mỗi lần",
+    "inviteDialogTitle": "Mời và kiếm tín dụng",
+    "inviteDialogDescription": "Chia sẻ liên kết mời của bạn với bạn bè, nhận {credits} tín dụng cho mỗi người.",
+    "copyInvitationLink": "Sao chép văn bản mời",
+    "shareInviteOn": "Chia sẻ lời mời trên {platform}",
+    "resetInvitationLink": "Đặt lại liên kết lời mời",
+    "invitationLinkCopied": "Đã sao chép văn bản lời mời.",
+    "invitationLinkCopyFailed": "Không sao chép được văn bản lời mời.",
+    "invitationLinkLoadFailed": "Không tải được liên kết lời mời.",
+    "invitationLinkReset": "Đặt lại liên kết lời mời.",
+    "invitationLinkResetFailed": "Không đặt lại được liên kết lời mời.",
+    "invitationLinkUnavailable": "Liên kết lời mời không có sẵn.",
+    "languageVietnamese": "Tiếng Việt"
+  },
+  "billing": {
+    "title": "Thanh toán & Hóa đơn",
+    "subtitle": "Xem lại đăng ký, mức sử dụng, điểm nhập hóa đơn hiện tại của bạn và các hành động thanh toán được lưu trữ trên Stripe.",
+    "settingsTitle": "Cài đặt",
+    "settingsNavBilling": "Thanh toán",
+    "workspaceNavTitle": "Tài khoản",
+    "workspaceNavAccount": "Tài khoản",
+    "workspaceNavSubscription": "Đăng ký",
+    "workspaceNavOverview": "Tổng quan",
+    "workspaceNavUsage": "Cách sử dụng",
+    "workspaceNavManagePlan": "Điều chỉnh kế hoạch",
+    "workspaceNavPayment": "Thanh toán",
+    "workspaceNavInvoices": "Hóa đơn",
+    "workspaceNavPortal": "Cổng thông tin Stripe",
+    "backToWorkspace": "Quay lại ứng dụng",
+    "refresh": "Làm mới",
+    "summaryTitle": "Ảnh chụp nhanh thanh toán",
+    "summarySubtitle": "Trạng thái đăng ký và thanh toán mới nhất.",
+    "statusLabel": "Trạng thái",
+    "planLabel": "kế hoạch",
+    "renewalLabel": "Giai đoạn hiện tại kết thúc",
+    "paymentMethodLabel": "Phương thức thanh toán",
+    "creditsLabel": "Tín dụng có sẵn",
+    "reservedLabel": "Tín dụng dành riêng",
+    "summaryNoPlan": "miễn phí",
+    "plansTitle": "kế hoạch",
+    "plansSubtitle": "Chọn từ các gói Stripe hiện được chương trình phụ trợ xuất bản.",
+    "currentPlan": "Kế hoạch hiện tại",
+    "planRecommended": "Được đề xuất",
+    "planCreditsPerCycle": "Đã bao gồm tín dụng {credits}",
+    "planCreditsMonthly": "{credits} tín dụng mỗi tháng",
+    "planCreditsAnnual": "{credits} tín chỉ dự kiến hàng năm",
+    "planCreditsIncluded": "Đã bao gồm tín dụng {credits}",
+    "planIntervalUnknown": "Linh hoạt",
+    "pricingCallout": "Bản so sánh gói đầy đủ vẫn có sẵn trên trang Định giá.",
+    "viewPricing": "Xem giá",
+    "freePlanDescription": "Không có thuê bao trả phí đang hoạt động. Bạn có thể tiếp tục sử dụng gói miễn phí hoặc chọn gói trong phần Định giá.",
+    "renewalDescription": "Đăng ký của bạn được gia hạn vào {date}.",
+    "billingPeriodOutcomeLabel": "Kết quả kỳ hiện tại",
+    "billingPeriodAutoRenewLabel": "Tự động gia hạn",
+    "billingPeriodAutoRenewDescription": "Chu kỳ đăng ký tiếp theo bắt đầu vào {date}.",
+    "billingPeriodExpiresLabel": "Hết hạn",
+    "billingPeriodExpiresDescription": "Lợi ích đăng ký kết thúc vào {date}.",
+    "billingPeriodSwitchLabel": "Chuyển sang {plan}",
+    "billingPeriodSwitchDescription": "Kế hoạch đã lên lịch có hiệu lực vào {date}.",
+    "billingPeriodSwitchUnknownPlan": "một kế hoạch mới",
+    "selectedPlanDescription": "{plan} đã được chọn từ Định giá. Tiếp tục tới Stripe Thanh toán để đăng ký.",
+    "noActivePlanDescription": "Chưa có gói trả phí nào được chọn. Chọn một gói từ Định giá để tiếp tục.",
+    "adjustPlan": "Điều chỉnh kế hoạch",
+    "adjustPlanCheckoutDescription": "Chọn gói để mở Stripe Thanh toán và đăng ký.",
+    "adjustPlanPortalDescription": "Bạn đã có đăng ký đang hoạt động nên việc quản lý và thay đổi gói sẽ diễn ra trong cổng Stripe.",
+    "planDialogTitle": "Chọn phương án phù hợp với bạn",
+    "planDialogDescription": "Chọn gói Deckwise và chu kỳ thanh toán.",
+    "planDialogCycleMonthly": "hàng tháng",
+    "planDialogCycleAnnual": "Hàng năm · Tiết kiệm 20%",
+    "planDialogCycleAnnualShort": "Hàng năm",
+    "planDialogBillingUnitMonthly": "/ tháng",
+    "planDialogBillingUnitAnnual": "/ tháng",
+    "planDialogUpgrade": "Nâng cấp",
+    "planDialogCurrentPlan": "Kế hoạch hiện tại của bạn",
+    "planDialogFeatureCardsPerPrompt": "Tạo tối đa {count} thẻ cho mỗi lời nhắc",
+    "planDialogFeatureMonthlyCredits": "{credits} tín dụng hàng tháng",
+    "planDialogPlusDescription": "Để tạo thêm bộ slide và tinh chỉnh chúng với AI",
+    "planDialogPlusIncludes": "Mọi thứ trong Free",
+    "planDialogPlusFeatureCards": "Tạo tối đa 30 thẻ cho mỗi lời nhắc",
+    "planDialogPlusFeatureEditablePowerPoint": "Xuất PowerPoint có thể chỉnh sửa",
+    "planDialogPlusFeatureEditableGoogleSlides": "Xuất Google Slides có thể chỉnh sửa",
+    "planDialogPlusFeatureImageModels": "Mô hình AI nâng cao",
+    "planDialogProDescription": "Dành cho mô hình AI nâng cao, dự án dài hơn và bản trình bày tinh tế hơn",
+    "planDialogProIncludes": "Mọi thứ trong Plus và:",
+    "planDialogProFeatureCards": "Tạo tối đa 60 thẻ cho mỗi lời nhắc",
+    "planDialogProFeatureCredits": "2.000 tín dụng hàng tháng",
+    "planDialogProFeatureImageModels": "Mẫu hình ảnh cao cấp AI",
+    "planDialogProFeatureBranding": "Nhãn hiệu và phông chữ tùy chỉnh",
+    "planDialogProFeatureAnalytics": "Phân tích chi tiết và chia sẻ nâng cao",
+    "planDialogProFeatureDomains": "Xuất bản tối đa 10 tên miền tùy chỉnh",
+    "planDialogUltraDescription": "Dành cho việc sử dụng AI nhiều, các mẫu nâng cao và tạo bộ slide có khối lượng lớn",
+    "planDialogUltraIncludes": "Mọi thứ trong Pro và:",
+    "planDialogUltraFeatureCards": "Tạo tối đa 75 thẻ cho mỗi lời nhắc",
+    "planDialogUltraFeatureCredits": "20.000 tín dụng hàng tháng",
+    "planDialogUltraFeatureModels": "Truy cập vào các mô hình AI tiên tiến nhất (văn bản, hình ảnh, video)",
+    "planDialogUltraFeatureDomains": "Xuất bản tối đa 100 tên miền tùy chỉnh",
+    "planDialogUltraFeatureEarlyAccess": "Quyền truy cập sớm vào các tính năng mới",
+    "planDialogSecurityTitle": "Bảo mật và tuân thủ",
+    "planDialogSecurityDescription": "Bảo mật cấp doanh nghiệp và chứng nhận tiêu chuẩn ngành.",
+    "planDialogSecurityLearnMore": "Tìm hiểu thêm",
+    "planDialogHelpPrefix": "Có một vấn đề?",
+    "planDialogHelpLink": "Liên hệ với chúng tôi",
+    "planDialogEditBilling": "Chỉnh sửa thanh toán",
+    "activePlanHint": "Gói hiện tại: {plan}",
+    "noPlansTitle": "Không có kế hoạch nào",
+    "noPlansDescription": "Phần phụ trợ chưa xuất bản bất kỳ gói Stripe đang hoạt động nào.",
+    "paymentTitle": "Stripe quản lý thanh toán",
+    "paymentSubtitle": "Checkout thu thập thẻ, Liên kết và các phương thức thanh toán đủ điều kiện khác; cổng thanh toán quản lý các phương thức và hóa đơn đã lưu.",
+    "paymentReady": "Phương thức thanh toán mặc định đã sẵn sàng trong Stripe.",
+    "paymentMissing": "Thanh toán sẽ thu thập một phương thức thanh toán khi bạn đăng ký.",
+    "paymentReadyShort": "Đã lưu",
+    "paymentMissingShort": "Thiếu",
+    "paymentManage": "Mở cổng thanh toán",
+    "manageInStripe": "Quản lý trong Stripe",
+    "paymentManagedByStripe": "Được quản lý bởi Stripe Cổng thanh toán và khách hàng",
+    "subscriptionTitle": "Hành động đăng ký",
+    "subscriptionSubtitle": "Bắt đầu hoặc thay đổi gói thông qua Stripe Thanh toán, sau đó quay lại đây để biết trạng thái và mức sử dụng.",
+    "subscribe": "Tiếp tục thanh toán",
+    "managePortal": "Mở cổng Stripe",
+    "cancelSubscription": "Hủy vào cuối kỳ",
+    "resumeSubscription": "Tiếp tục gia hạn",
+    "resourceBreakdownTitle": "Tín dụng",
+    "resourceBreakdownSubtitle": "Nhóm tín dụng đang hoạt động được đồng bộ hóa từ chương trình phụ trợ.",
+    "creditsPanelBreakdown": "Phân tích tín dụng",
+    "creditsPanelFreeDescription": "Tín dụng miễn phí được làm mới theo lịch trình đã định cấu hình.",
+    "creditsPanelViewUsage": "Xem mức sử dụng",
+    "includedUsageTitle": "Bao gồm cách sử dụng",
+    "usageTypeColumn": "loại",
+    "usageAvailableColumn": "Có sẵn",
+    "usageExpiresColumn": "Hết hạn",
+    "creditBucketFreeMonthly": "miễn phí",
+    "creditBucketSubscriptionCycle": "Đăng ký",
+    "creditBucketCampaignBonus": "Phần thưởng cho người đăng ký",
+    "creditBucketPersistent": "Tín dụng liên tục",
+    "creditBucketGeneric": "Nhóm tín dụng",
+    "usageRefreshTooltip": "Làm mới trên {date}",
+    "usageRefreshTooltipUnknown": "Khoản phụ cấp này được làm mới vào chu kỳ thanh toán phụ trợ tiếp theo.",
+    "onDemandUsageTitle": "Sử dụng theo yêu cầu",
+    "onDemandUsageSubtitle": "Thanh toán theo đồng hồ đo chưa được bật. Chi tiết chi phí sẽ xuất hiện ở đây sau.",
+    "onDemandUsageTotal": "Chu kỳ hiện tại",
+    "onDemandUsageEmpty": "Không tìm thấy dữ liệu sử dụng theo yêu cầu cho chu kỳ hiện tại.",
+    "invoicesTitle": "Hóa đơn",
+    "invoicesDescription": "Hóa đơn và biên lai được quản lý bởi Cổng thông tin khách hàng Stripe.",
+    "cancelTitle": "Hủy bỏ",
+    "cancelDescription": "Việc hủy sẽ ngừng gia hạn khi kết thúc chu kỳ thanh toán hiện tại.",
+    "resumeTitle": "Tiếp tục gia hạn",
+    "resumeDescription": "Đăng ký này được thiết lập để hủy vào cuối kỳ. Bạn có thể tiếp tục gia hạn trước thời điểm đó.",
+    "resourceBreakdownEmpty": "Chưa có nhóm tín dụng nào đang hoạt động.",
+    "bucketExpires": "Hết hạn {date}",
+    "subscribeSuccess": "Đang mở Stripe Thanh toán.",
+    "subscribeFailed": "Không khởi động được Stripe Thanh toán.",
+    "alreadyActiveSubscription": "Bạn đã có một đăng ký đang hoạt động.",
+    "checkoutSyncFailed": "Không thể đồng bộ hóa trạng thái đăng ký Checkout. Vui lòng làm mới ngay.",
+    "cancelSuccess": "Đăng ký sẽ hủy vào cuối giai đoạn hiện tại.",
+    "cancelFailed": "Không thể cập nhật việc hủy.",
+    "resumeSuccess": "Việc gia hạn đăng ký đã được tiếp tục.",
+    "resumeFailed": "Không thể tiếp tục đăng ký.",
+    "portalFailed": "Không mở được cổng Stripe.",
+    "refreshFailed": "Không tải được dữ liệu thanh toán.",
+    "syncing": "Đang chờ Stripe đồng bộ hóa webhook…",
+    "webhookSyncTitle": "Trạng thái được đồng bộ hóa Webhook",
+    "webhookSyncDescription": "Ảnh chụp nhanh thanh toán cập nhật sau khi webhook Stripe kết thúc, do đó, có thể sẽ có độ trễ ngắn sau khi đăng ký hoặc thay đổi cài đặt gia hạn.",
+    "testModeTitle": "Luồng lưu trữ Stripe",
+    "testModeDescription": "Checkout xử lý việc thu phí và quản lý Link/thẻ; trang này tập trung vào trạng thái đăng ký, mức sử dụng và các liên kết quản lý an toàn.",
+    "statusActive": "Đang hoạt động",
+    "statusTrialing": "Đang dùng thử",
+    "statusIncomplete": "Chưa hoàn thành",
+    "statusPastDue": "Quá hạn",
+    "statusPaused": "Đã tạm dừng",
+    "statusUnpaid": "Chưa thanh toán",
+    "statusCanceled": "Đã hủy",
+    "statusExpired": "Đã hết hạn",
+    "statusNone": "Chưa đăng ký",
+    "planDialogBillingCycleLabel": "Chu kỳ thanh toán"
+  },
+  "login": {
+    "emailLabel": "Địa chỉ email",
+    "codeLabel": "Mã xác minh",
+    "sendCode": "Gửi mã",
+    "sendingCode": "Đang gửi...",
+    "codeSent": "Đã gửi mã. Hãy kiểm tra email.",
+    "signInWithEmail": "Đăng nhập bằng email",
+    "invalidEmail": "Vui lòng nhập email hợp lệ.",
+    "missingCode": "Nhập mã trong email của bạn.",
+    "emailCodeFailed": "Không thể gửi mã. Vui lòng thử lại.",
+    "emailLoginFailed": "Đăng nhập thất bại. Kiểm tra mã và thử lại.",
+    "headline": "Chúng tôi sẽ đăng nhập cho bạn hoặc tạo tài khoản nếu bạn chưa có tài khoản.",
+    "title": "Đăng nhập vào {appName}",
+    "subtitle": "Tiếp tục với tài khoản Google của bạn",
+    "verifying": "Đang xác minh đăng nhập…",
+    "signingIn": "Đang đăng nhập...",
+    "desktopBrowserSignIn": "Tiếp tục trong trình duyệt",
+    "desktopBrowserOpening": "Đang mở trình duyệt...",
+    "desktopBrowserWaiting": "Đang chờ phê duyệt trong trình duyệt...",
+    "desktopBrowserRetry": "Đăng nhập lại trong trình duyệt",
+    "desktopBrowserOpenFailed": "Không thể mở trình duyệt. Vui lòng thử lại.",
+    "desktopBrowserExpired": "Yêu cầu đăng nhập đã hết hạn. Vui lòng thử lại.",
+    "desktopBrowserSignInFailed": "Đăng nhập trong trình duyệt thất bại. Vui lòng thử lại.",
+    "desktopWelcome": {
+      "title": "Deckwise Desktop",
+      "description": "Biến ý tưởng và tài liệu thành bài thuyết trình hoàn chỉnh ngay trên máy tính.",
+      "getStarted": "Bắt đầu",
+      "checkingSession": "Đang mở Deckwise..."
+    },
+    "desktopAuthorization": {
+      "title": "Ủy quyền Deckwise Desktop",
+      "description": "Xác nhận rằng bạn muốn đăng nhập vào ứng dụng máy tính bên dưới.",
+      "loading": "Đang tải yêu cầu đăng nhập...",
+      "device": "Thiết bị",
+      "platform": "Nền tảng",
+      "version": "Phiên bản ứng dụng",
+      "approve": "Ủy quyền ứng dụng",
+      "approving": "Đang ủy quyền...",
+      "approvedTitle": "Ứng dụng đã được ủy quyền",
+      "approvedDescription": "Bạn có thể đóng trang này và quay lại Deckwise Desktop.",
+      "expiredTitle": "Yêu cầu đăng nhập đã hết hạn",
+      "expiredDescription": "Quay lại Deckwise Desktop và bắt đầu đăng nhập lại.",
+      "errorTitle": "Không thể ủy quyền",
+      "loadFailed": "Không thể tải yêu cầu đăng nhập này. Vui lòng thử lại.",
+      "approveFailed": "Không thể ủy quyền ứng dụng. Vui lòng thử lại.",
+      "invalidRequest": "Liên kết đăng nhập không hợp lệ. Quay lại Deckwise Desktop và thử lại.",
+      "retry": "Thử lại",
+      "unknownDevice": "Không xác định"
+    },
+    "termsAcknowledgement": "Bằng cách nhấp vào \"Tiếp tục\", bạn đồng ý với <terms>Điều khoản dịch vụ</terms> và <privacy>Chính sách quyền riêng tư</privacy>.",
+    "brand": "{appName} — Trợ lý nghiên cứu của bạn",
+    "termsOfService": "Điều khoản dịch vụ",
+    "privacyPolicy": "Chính sách bảo mật"
+  },
+  "invitation": {
+    "title": "Tham gia {appName} ngay và nhận tín dụng miễn phí!",
+    "description": "Chia sẻ liên kết mời với bạn bè và cùng nhau kiếm tín dụng.",
+    "imageAlt": "Bản xem trước lời mời {appName}"
+  },
+  "slidesPreview": {
+    "publishedLoadFailed": "Không tải được slide đã xuất bản",
+    "sharedLoadFailed": "Không tải được slide được chia sẻ",
+    "publishedEmpty": "Bộ slide đã xuất bản này hiện không có slide nào có thể xem trước.",
+    "sharedEmpty": "Bộ slide được chia sẻ này hiện không có slide nào có thể xem trước.",
+    "publishedLabel": "Đã xuất bản",
+    "sharedLabel": "Được chia sẻ",
+    "publishedMetaTitle": "Slide đã xuất bản của {appName}",
+    "publishedMetaDescription": "Xem bộ slide đã xuất bản được chia sẻ từ {appName}.",
+    "sharedMetaTitle": "Slide được chia sẻ trên {appName}",
+    "sharedMetaDescription": "Mở bộ slide được chia sẻ với bạn trên {appName}.",
+    "exampleMetaTitle": "Slide mẫu của {appName}",
+    "exampleMetaDescription": "Xem trước slide mẫu và tùy chỉnh trong {appName}."
+  },
+  "common": {
+    "cancel": "Hủy bỏ",
+    "confirmDeletion": "Xác nhận xóa?",
+    "close": "Đóng",
+    "clear": "Xóa",
+    "delete": "Xóa",
+    "rename": "Đổi tên",
+    "copy": "Sao chép",
+    "retry": "Thử lại",
+    "hello": "Xin chào,",
+    "back": "Quay lại",
+    "refresh": "Làm mới",
+    "loading": "Đang tải…",
+    "loadMore": "Tải thêm",
+    "allLoaded": "Tất cả đã bắt kịp",
+    "loadFailed": "Không tải được.",
+    "unknownError": "Lỗi không xác định",
+    "remove": "Xóa",
+    "saving": "Đang lưu...",
+    "unsavedChanges": "Những thay đổi chưa được lưu",
+    "saved": "Đã lưu",
+    "revisionConflict": "Xung đột sửa đổi",
+    "saveFailed": "Lưu không thành công",
+    "ready": "Sẵn sàng",
+    "desktopWindow": {
+      "file": "Tệp",
+      "edit": "Chỉnh sửa",
+      "view": "Xem",
+      "window": "Cửa sổ",
+      "help": "Trợ giúp",
+      "back": "Quay lại",
+      "forward": "Tiến",
+      "menuBar": "Trình đơn ứng dụng"
+    }
+  },
+  "errorBoundary": {
+    "title": "Đã xảy ra lỗi",
+    "message": "Vui lòng làm mới trang. Nếu sự cố vẫn tiếp diễn, hãy liên hệ với bộ phận hỗ trợ.",
+    "refresh": "Làm mới"
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "message": "Trang bạn mở không tồn tại hoặc đã di chuyển. Quay trở lại trang chủ để tiếp tục an toàn."
+  },
+  "quote": {
+    "expand": "Mở rộng trích dẫn",
+    "collapse": "Thu gọn trích dẫn"
+  },
+  "editor": {
+    "slashMenu": {
+      "header": "Cơ bản"
+    },
+    "slash": {
+      "ai": "Hỏi AI",
+      "text": "văn bản",
+      "h1": "Tiêu đề 1",
+      "h2": "Tiêu đề 2",
+      "h3": "Tiêu đề 3",
+      "bullet": "Danh sách có dấu đầu dòng",
+      "ordered": "Danh sách đánh số",
+      "task": "Danh sách việc cần làm",
+      "callout": "Chú thích",
+      "quote": "Trích dẫn",
+      "table": "Bảng",
+      "divider": "Dải phân cách",
+      "link": "Liên kết đến trang",
+      "code": "Khối mã",
+      "image": "Hình ảnh web",
+      "header": {
+        "basic": "Cơ bản"
+      }
+    },
+    "blockHandle": {
+      "addBelow": "Chèn một dòng mới bên dưới",
+      "turnInto": "Biến thành",
+      "turnIntoHeader": "Biến thành",
+      "copy": "Sao chép",
+      "delete": "Xóa",
+      "expandHidden": "Mở rộng khối bị ẩn",
+      "collapseHidden": "Thu gọn khối bị ẩn"
+    },
+    "aiInput": {
+      "placeholder": "Hãy hỏi AI…",
+      "thinking": "Đang suy nghĩ…",
+      "ask": "Hỏi"
+    },
+    "tableTooltip": {
+      "duplicateRow": "Hàng trùng lặp",
+      "duplicateCol": "cột trùng lặp",
+      "deleteRow": "Xóa hàng",
+      "deleteCol": "Xóa cột"
+    },
+    "placeholder": {
+      "hint": "Nhập nội dung, hoặc nhấn \"/\" để mở lệnh",
+      "toggleSummary": "Chuyển đổi"
+    },
+    "codeBlock": {
+      "copy": "Sao chép",
+      "copied": "Đã sao chép"
+    },
+    "linkHover": {
+      "copyFailed": "Không sao chép được liên kết.",
+      "open": "Mở liên kết",
+      "edit": "Chỉnh sửa liên kết",
+      "urlLabel": "Trang hoặc URL",
+      "urlPlaceholder": "https://example.com",
+      "titleLabel": "Tiêu đề liên kết",
+      "titlePlaceholder": "Tiêu đề liên kết",
+      "remove": "Xóa liên kết"
+    },
+    "table": {
+      "duplicateRow": "Hàng trùng lặp",
+      "duplicateCol": "cột trùng lặp",
+      "deleteRow": "Xóa hàng",
+      "deleteCol": "Xóa cột"
+    },
+    "callout": {
+      "note": "📝 Ghi chú",
+      "tip": "💡 Mẹo",
+      "warning": "⚠️ Cảnh báo",
+      "error": "🚫 Lỗi",
+      "success": "✅ Thành công",
+      "info": "ℹ️ Thông tin"
+    }
+  },
+  "deckwise": {
+    "toolbar": {
+      "insertTools": "Chèn công cụ",
+      "dragToInsert": "Kéo để chèn",
+      "text": "văn bản",
+      "basicBlocks": "Khối cơ bản",
+      "blocks": "Khối",
+      "images": "Hình ảnh",
+      "columns": "Cols",
+      "layouts": "Bố cục",
+      "layout": "Bố cục",
+      "chartsAndGraphs": "Biểu đồ và đồ thị",
+      "chart": "Biểu đồ",
+      "video": "Video",
+      "textFormattingToolbar": "Thanh công cụ định dạng văn bản",
+      "textStyle": "Kiểu văn bản",
+      "textStyles": "Kiểu văn bản",
+      "textSize": "Kích thước văn bản",
+      "useSmallTextSize": "Sử dụng cỡ chữ nhỏ",
+      "useDefaultTextSize": "Sử dụng kích thước văn bản mặc định",
+      "useLargeTextSize": "Sử dụng kích thước văn bản lớn",
+      "textColor": "Màu văn bản",
+      "backgroundColor": "Màu nền",
+      "defaultTextColorOption": "Màu mặc định",
+      "defaultTextBackgroundColorOption": "Màu nền mặc định",
+      "textColorOption": "{color} văn bản",
+      "textBackgroundColorOption": "{color} nền",
+      "bold": "Đậm",
+      "italic": "Nghiêng",
+      "underline": "gạch chân",
+      "strikethrough": "Gạch ngang",
+      "code": "Mã",
+      "link": "liên kết",
+      "editLink": "Chỉnh sửa liên kết",
+      "linkUrl": "URL liên kết",
+      "linkPlaceholder": "Dán liên kết rồi nhấn enter",
+      "removeLink": "Xóa liên kết",
+      "horizontalAlignment": "Căn chỉnh theo chiều ngang",
+      "defaultTextColor": "Mặc định",
+      "advanced": "Nâng cao",
+      "apply": "Áp dụng",
+      "remove": "Xóa",
+      "superscript": "Chỉ số trên",
+      "bulletList": "Danh sách dấu đầu dòng",
+      "alignLeft": "Căn trái",
+      "alignCenter": "Căn giữa",
+      "alignRight": "Căn phải",
+      "clearFormatting": "Xóa định dạng",
+      "undo": "Hoàn tác",
+      "redo": "Làm lại",
+      "addLabel": "Thêm nhãn",
+      "addParagraphBelow": "Thêm đoạn dưới đây",
+      "pageContentFull": "Trang trình bày này sắp đầy — hãy chia nội dung bổ sung thành một slide mới để nội dung được rõ ràng.",
+      "moveBlock": "Di chuyển khối",
+      "cutBlock": "Cắt",
+      "copyBlock": "Sao chép",
+      "pasteBlockBelow": "Dán bên dưới",
+      "pasteBlockUnavailable": "Cắt hoặc sao chép một khối trước",
+      "duplicateBlock": "Khối trùng lặp",
+      "deleteBlock": "Xóa khối",
+      "duplicateLayout": "Bố cục trùng lặp",
+      "deleteLayout": "Xóa bố cục",
+      "pageActions": "Hành động trên trang",
+      "pageLayout": "Bố cục trang",
+      "blank": "trống",
+      "imageTop": "Hình ảnh trên cùng",
+      "imageLeft": "Hình ảnh bên trái",
+      "imageRight": "Hình ảnh bên phải",
+      "imageBackground": "Nền ảnh",
+      "imageActions": "Hành động hình ảnh",
+      "videoActions": "Hành động video",
+      "editImage": "Chỉnh sửa hình ảnh",
+      "editVideo": "Chỉnh sửa video",
+      "imageEdge": "Cạnh hình ảnh",
+      "straightImageEdge": "thẳng",
+      "curveImageEdge": "Đường cong",
+      "slantImageEdge": "Nghiêng",
+      "waveImageEdge": "liên tục",
+      "fitImage": "Hình ảnh vừa vặn",
+      "expandImage": "Mở rộng hình ảnh",
+      "resizeLayoutImage": "Thay đổi kích thước hình ảnh bố cục",
+      "uploadImage": "Tải hình ảnh lên",
+      "uploadingImage": "Đang tải hình ảnh lên",
+      "deleteImage": "Xóa hình ảnh",
+      "deleteVideo": "Xóa video",
+      "imageInfo": "Thông tin hình ảnh",
+      "imageMetadata": "Siêu dữ liệu hình ảnh",
+      "noImageMetadata": "Không có siêu dữ liệu có sẵn.",
+      "metadataTitle": "Tiêu đề",
+      "metadataDescription": "Mô tả",
+      "metadataCredit": "Nhiếp ảnh gia",
+      "metadataSource": "Nguồn",
+      "metadataAttribution": "Ghi công",
+      "metadataImageUrl": "URL hình ảnh",
+      "metadataThumbnailUrl": "URL hình thu nhỏ",
+      "metadataDimensions": "Kích thước",
+      "metadataProviderId": "ID nhà cung cấp",
+      "chartActions": "Hành động trên biểu đồ",
+      "editChart": "Chỉnh sửa biểu đồ",
+      "columnLayoutActions": "Hành động bố trí cột",
+      "columnLayout": "Bố cục cột",
+      "columnsCount": "{count} cột",
+      "equalizeColumns": "Cân bằng cột",
+      "alignTop": "Căn chỉnh trên cùng",
+      "alignMiddle": "Căn giữa",
+      "alignBottom": "Căn chỉnh đáy",
+      "columnColor": "Màu cột",
+      "deleteColumns": "Xóa cột",
+      "columnLayouts": "Bố cục cột",
+      "columnColors": "Màu cột",
+      "calloutActions": "Hành động chú thích",
+      "calloutStyle": "Kiểu chú thích",
+      "calloutColor": "Màu chú thích",
+      "deleteCallout": "Xóa chú thích",
+      "calloutStyles": "Kiểu chú thích",
+      "calloutColors": "Màu chú thích",
+      "hideCalloutIcon": "Ẩn biểu tượng chú thích",
+      "resetToDefault": "Đặt lại về mặc định",
+      "labelActions": "Gắn nhãn hành động",
+      "addLabelBefore": "Thêm nhãn trước",
+      "addLabelAfter": "Thêm nhãn sau",
+      "deleteLabel": "Xóa nhãn",
+      "smartLayoutActions": "Hành động bố trí thông minh",
+      "addSmartLayoutItem": "Thêm mục",
+      "smartLayoutType": "Kiểu bố trí thông minh",
+      "smartLayoutColor": "Màu sắc bố cục thông minh",
+      "smartLayoutColors": "Màu sắc bố cục thông minh",
+      "smartLayoutCellSize": "Kích thước bố cục",
+      "smartLayoutCellSizeOptions": "Tùy chọn kích thước bố cục",
+      "smartLayoutCellSizeSmall": "nhỏ",
+      "smartLayoutCellSizeMedium": "Trung bình",
+      "smartLayoutCellSizeLarge": "lớn",
+      "smartLayoutCellSizeExtraLarge": "Cực lớn",
+      "useVerticalLayoutDirection": "Sử dụng hướng bố cục dọc",
+      "useHorizontalLayoutDirection": "Sử dụng hướng bố cục ngang",
+      "useOneSidedLayout": "Sử dụng bố cục một mặt",
+      "useTwoSidedLayout": "Sử dụng bố cục hai mặt",
+      "hideLayoutSideLines": "Ẩn các đường bên của bố cục",
+      "showLayoutSideLines": "Hiển thị các đường bên của bố cục",
+      "textAlignment": "Căn chỉnh văn bản",
+      "useVerticalTimelineDirection": "Sử dụng hướng dòng thời gian dọc",
+      "useHorizontalTimelineDirection": "Sử dụng hướng dòng thời gian ngang",
+      "useOneSidedTimeline": "Sử dụng dòng thời gian một chiều",
+      "useTwoSidedTimeline": "Sử dụng dòng thời gian hai mặt",
+      "hideTimelineSideLines": "Ẩn các dòng bên của dòng thời gian",
+      "showTimelineSideLines": "Hiển thị các dòng bên của dòng thời gian",
+      "timelineDirection": "Hướng",
+      "timelineSides": "Hai mặt",
+      "timelineSideLines": "Hiển thị dòng?",
+      "changeLayout": "Thay đổi bố cục",
+      "deleteSmartLayout": "Xóa bố cục thông minh",
+      "smartLayoutBlockActions": "Hành động khối bố cục thông minh",
+      "moveBlockToStart": "Di chuyển khối để bắt đầu",
+      "addItemBefore": "Thêm mục trước",
+      "addItemAfter": "Thêm mục sau",
+      "duplicate": "Nhân bản",
+      "smartLayoutBlockColor": "Màu khối bố cục thông minh",
+      "deEmphasize": "Giảm nhấn mạnh",
+      "emphasize": "Nhấn mạnh",
+      "deleteSmartLayoutBlock": "Xóa khối bố cục thông minh",
+      "smartLayoutBlockColors": "Màu sắc khối bố cục thông minh",
+      "chooseSmartLayoutIcon": "Chọn biểu tượng bố cục thông minh",
+      "smartLayoutHeroIconPanelTitle": "Biểu tượng anh hùng",
+      "smartLayoutHeroIconSearchPlaceholder": "Tìm kiếm biểu tượng {count}",
+      "smartLayoutHeroIconCategory": "Hạng mục biểu tượng anh hùng",
+      "smartLayoutHeroIconNoResults": "Không tìm thấy biểu tượng nào",
+      "smartLayoutHeroIconCategoryAll": "Tất cả",
+      "smartLayoutHeroIconCategoryArrows": "Mũi tên",
+      "smartLayoutHeroIconCategoryCommunication": "Truyền thông",
+      "smartLayoutHeroIconCategoryCommerce": "Thương mại",
+      "smartLayoutHeroIconCategoryDocuments": "Tài liệu",
+      "smartLayoutHeroIconCategoryInterface": "Giao diện",
+      "smartLayoutHeroIconCategoryMedia": "Phương tiện truyền thông",
+      "smartLayoutHeroIconCategoryPeople": "mọi người",
+      "smartLayoutHeroIconCategorySecurity": "Bảo mật",
+      "smartLayoutHeroIconCategoryTechnology": "Công nghệ",
+      "smartLayoutHeroIconCategoryGeneral": "chung",
+      "smartLayouts": "Bố cục thông minh",
+      "layoutGroups": "Nhóm bố cục",
+      "layoutsForGroup": "{group} bố cục",
+      "debugLayout": "Bố cục gỡ lỗi",
+      "layoutSubtitle": "Chọn một bố cục thông minh.",
+      "layoutPreviewMutualismHeading": "Hỗ sinh",
+      "layoutPreviewMutualismBody": "Khoảng 10.000 đến 12.000 năm trước, con người định cư ở Lưỡi liềm Màu mỡ và bắt đầu trồng ngũ cốc.",
+      "layoutPreviewSelfDomesticationHeading": "Tự thuần hóa",
+      "layoutPreviewSelfDomesticationBody": "Mèo có thể đã tự thuần hóa bằng cách thích nghi với các khu định cư của con người.",
+      "layoutPreviewBehaviorHeading": "Hành vi",
+      "layoutPreviewBehaviorBody": "Các nghiên cứu bộ gen cho thấy những thay đổi liên quan đến trí nhớ, học qua phần thưởng và kiểm soát nỗi sợ.",
+      "layoutsUnavailable": "Không có bố cục nào",
+      "style": "phong cách",
+      "styleSubtitle": "Điều chỉnh phông chữ và màu sắc cho bộ slide của bạn.",
+      "theme": "chủ đề",
+      "themeAndLayout": "Phông chữ và màu sắc",
+      "close": "Đóng",
+      "share": "Chia sẻ",
+      "shareComingSoon": "Chia sẻ sắp ra mắt",
+      "present": "hiện tại",
+      "export": "Xuất",
+      "exportDeck": "Xuất bản trình chiếu",
+      "exportPowerPoint": "PowerPoint",
+      "exportGoogleSlides": "Google Slides",
+      "exportImages": "Hình ảnh",
+      "publishSlides": "Xuất bản slide",
+      "updatePreviews": "Cập nhật bản xem trước",
+      "preparingPreviewImages": "Đang chuẩn bị ảnh xem trước...",
+      "publishingSlides": "Đang xuất bản slide...",
+      "uploadingPreviewImages": "Đang tải ảnh xem trước lên...",
+      "exportingImages": "Đang xuất hình ảnh",
+      "exportingPdf": "Đang xuất PDF",
+      "exportingPptx": "Đang xuất PPTX",
+      "exportingGoogleSlides": "Đang xuất sang Google Slides",
+      "imageExportIdle": "Xuất hình ảnh",
+      "nothingToExport": "Không có gì để xuất",
+      "imageExportFailed": "Xuất hình ảnh không thành công",
+      "imagesExported": "Đã xuất hình ảnh",
+      "localAutosaveReady": "Tự động lưu đã sẵn sàng",
+      "localAutosaveOff": "Tự động lưu đã tắt",
+      "localAutosaveSaving": "Đang lưu...",
+      "localAutosaved": "Đã tự động lưu",
+      "promoteExample": "Quảng bá ví dụ",
+      "documentSettings": "Cài đặt tài liệu",
+      "themeSource": "Nguồn chủ đề",
+      "themeSourceCatalog": "Chủ đề",
+      "themeSourceLocal": "Cục bộ",
+      "panelLoading": "Đang tải bảng điều khiển",
+      "themeCatalogUnavailable": "Danh mục chủ đề không có sẵn",
+      "themesLoading": "Đang tải chủ đề...",
+      "themesUnavailable": "Không có chủ đề nào có sẵn",
+      "moreActionsComingSoon": "Sắp có thêm hành động",
+      "cardView": "Chế độ xem slide",
+      "outlineViewComingSoon": "Sắp có chế độ xem phác thảo",
+      "viewMode": "Chế độ xem",
+      "newSlide": "Trang trình bày mới",
+      "addSlide": "Thêm slide",
+      "cardsPanelControls": "Điều khiển bảng slide",
+      "searchCards": "Tìm kiếm slide",
+      "clearSearch": "Xóa tìm kiếm",
+      "resizeCardsPanel": "Thay đổi kích thước bảng slide",
+      "showCardsPanel": "Hiển thị bảng slide",
+      "pinnedCardsPanel": "Bảng slide được ghim",
+      "cardsPanel": "Bảng slide",
+      "noSlides": "Không có slide",
+      "slideCount": "Slide {current} / {total}",
+      "scrollToSlide": "Di chuyển tới slide {slide}",
+      "chartType": "Loại biểu đồ",
+      "chartSettings": "Cài đặt biểu đồ",
+      "chartEditorTabs": "Tab trình chỉnh sửa biểu đồ",
+      "chartPreview": "Xem trước biểu đồ",
+      "data": "dữ liệu",
+      "yAxis": "Trục Y",
+      "solidColor": "Màu đặc",
+      "solidColorDescription": "Áp dụng một màu cho tất cả các mục",
+      "colorPresets": "Cài đặt trước màu",
+      "source": "Nguồn",
+      "callOut": "Kêu gọi",
+      "arrow": "Mũi tên",
+      "box": "hộp",
+      "differenceArrows": "Mũi tên khác biệt",
+      "highlight": "Đánh dấu",
+      "goal": "Mục tiêu",
+      "trend": "Xu hướng",
+      "graphOptions": "Tùy chọn biểu đồ",
+      "leaveGapInChart": "Để lại khoảng trống trong biểu đồ",
+      "legend": "Truyền thuyết",
+      "headlineNumber": "Số tiêu đề",
+      "chartDataActions": "Hành động dữ liệu biểu đồ",
+      "row": "Hàng",
+      "chartsAndGraphsMenu": "Menu biểu đồ và đồ thị",
+      "charts": "Biểu đồ",
+      "comingSoon": "Sắp có",
+      "debug": "Gỡ lỗi",
+      "titlePreview": "Tiêu đề",
+      "bodyPreview": "Thân hình",
+      "closeMediaMenu": "Đóng menu phương tiện",
+      "mediaMode": "Chế độ đa phương tiện",
+      "go": "Đi",
+      "upload": "Tải lên",
+      "dragFileOr": "Kéo một tệp hoặc",
+      "clickToUpload": "bấm vào để tải lên",
+      "imageUploadTip": "Mẹo: Bạn cũng có thể kéo hoặc dán hình ảnh vào bất kỳ đâu trong trang chiếu",
+      "uploadImageFile": "Tải lên tệp hình ảnh",
+      "webImageSearch": "Tìm kiếm hình ảnh trên web",
+      "searchWebImages": "Tìm kiếm hình ảnh trên web",
+      "imageLicense": "Giấy phép hình ảnh",
+      "allImages": "Tất cả hình ảnh",
+      "commercialUse": "sử dụng thương mại",
+      "creativeCommons": "Creative Commons",
+      "unableToLoadImages": "Không thể tải hình ảnh",
+      "imageSearchResults": "Kết quả tìm kiếm hình ảnh",
+      "imagesMenu": "Trình đơn hình ảnh",
+      "imagesDescription": "Thêm ảnh, hình minh họa, biểu tượng và phòng trưng bày.",
+      "mediaDescription": "Thêm hình ảnh tải lên hoặc URL và nhúng video.",
+      "videosAndMediaMenu": "Menu video và phương tiện",
+      "platforms": "Nền tảng",
+      "presentationPreview": "xem trước bản trình bày",
+      "addBlockMenu": "Thêm menu khối",
+      "typeSlashPrompt": "Nhập / để thêm khối hoặc...",
+      "typeSlashShortPrompt": "Nhập / hoặc...",
+      "imageLink": "Liên kết hình ảnh",
+      "videoLink": "Liên kết video",
+      "projectJson": "Dự án JSON",
+      "save": "Lưu",
+      "addCardFromTemplate": "Thêm thẻ từ mẫu",
+      "searchSlideLayouts": "Tìm kiếm bố cục slide",
+      "templateCategories": "Danh mục mẫu",
+      "noTemplatesFound": "Không tìm thấy mẫu nào",
+      "themeColors": "Màu sắc chủ đề",
+      "edit": "Chỉnh sửa",
+      "systemColors": "Màu sắc hệ thống",
+      "insertParagraph": "Chèn đoạn văn",
+      "contributors": "Người đóng góp",
+      "updatedNow": "Đã cập nhật ngay bây giờ",
+      "smartLayoutNumber": "Số bố trí thông minh",
+      "insertColumnLeft": "Chèn cột bên trái",
+      "insertColumnRight": "Chèn cột bên phải",
+      "deleteColumn": "Xóa cột",
+      "search": "Tìm kiếm",
+      "slideActions": "Thao tác trượt",
+      "generate": "Tạo",
+      "libraries": "Thư viện",
+      "media": "Phương tiện truyền thông",
+      "videoUrl": "URL video",
+      "imageUrl": "URL hình ảnh",
+      "pasteVideoUrl": "Dán URL YouTube, Vimeo, TikTok hoặc Loom",
+      "pasteImageUrl": "Dán hoặc nhập URL hình ảnh",
+      "url": "URL",
+      "webImage": "Hình ảnh trên web",
+      "useImage": "Sử dụng hình ảnh: {title}",
+      "imageUploadOrUrl": "Tải lên hình ảnh hoặc URL",
+      "tableColumnActions": "Cột bảng {column} hành động",
+      "addImageBlock": "Thêm hình ảnh",
+      "addTableBlock": "Thêm bảng",
+      "updateChartDescription": "Cập nhật loại, kiểu, trục và dữ liệu biểu đồ",
+      "closeChartEditor": "Đóng trình chỉnh sửa biểu đồ",
+      "graphTab": "đồ thị",
+      "axesTab": "Trục",
+      "visualsTab": "Hình ảnh",
+      "annotateTab": "Chú thích",
+      "visible": "Hiển thị",
+      "labels": "Nhãn",
+      "auto": "Tự động",
+      "edges": "Các cạnh",
+      "left": "trái",
+      "right": "Đúng",
+      "position": "Vị trí",
+      "scale": "quy mô",
+      "log": "Nhật ký",
+      "zero": "số không",
+      "custom": "tùy chỉnh",
+      "startFrom": "Bắt đầu từ",
+      "endAt": "Kết thúc tại",
+      "sortHighLow": "Sắp xếp từ cao đến thấp",
+      "showPoints": "Hiển thị điểm",
+      "smoothLines": "Đường nét mượt mà",
+      "dataLabels": "Nhãn dữ liệu",
+      "gridLines": "Đường lưới",
+      "lineThickness": "Độ dày đường",
+      "missingValues": "Thiếu giá trị",
+      "top": "hàng đầu",
+      "none": "không có",
+      "categoryLabels": "Nhãn danh mục",
+      "basicBlocksDescription": "Thêm danh sách, bảng, chú thích và các khối cốt lõi khác.",
+      "textBlocksDescription": "Thêm tiêu đề, tiêu đề, trích dẫn và nhãn.",
+      "titleBlock": "Tiêu đề",
+      "heading1": "Tiêu đề 1",
+      "heading2": "Tiêu đề 2",
+      "heading3": "Tiêu đề 3",
+      "heading4": "Tiêu đề 4",
+      "paragraph": "Đoạn văn",
+      "smartLayoutItemPlaceholder": "Mục",
+      "smartLayoutDescriptionPlaceholder": "Mô tả",
+      "blockQuote": "Trích dẫn khối",
+      "labelBlock": "Nhãn",
+      "tables": "Bảng",
+      "table2x2": "bảng 2x2",
+      "table3x3": "bảng 3x3",
+      "table4x4": "bảng 4x4",
+      "lists": "Danh sách",
+      "numberedList": "Danh sách đánh số",
+      "todoList": "danh sách việc cần làm",
+      "calloutBoxes": "Hộp chú thích",
+      "noteBox": "hộp ghi chú",
+      "infoBox": "Hộp thông tin",
+      "warningBox": "Hộp cảnh báo",
+      "cautionBox": "Hộp cảnh báo",
+      "successBox": "Hộp thành công",
+      "questionBox": "hộp câu hỏi",
+      "codeBlock": "Khối mã",
+      "mathBlock": "Khối toán",
+      "footnote": "chú thích cuối trang",
+      "tableOfContents": "Mục lục",
+      "divider": "Dải phân cách",
+      "other": "Khác",
+      "templateSectionBasic": "Cơ bản",
+      "templateSectionImageSlides": "Slide hình ảnh",
+      "templateSectionSlideLayouts": "Bố cục slide",
+      "templateSectionImages": "Hình ảnh",
+      "templateSectionSequences": "trình tự",
+      "templateSectionChartsData": "Biểu đồ và dữ liệu",
+      "templateSectionEmbeds": "Nhúng",
+      "templateBlankCard": "Thẻ trống",
+      "templateImageAndText": "Hình ảnh và văn bản",
+      "templateTextAndImage": "Văn bản và hình ảnh",
+      "templateTwoColumns": "Hai cột",
+      "templateTwoColumnWithHeadings": "Hai cột có tiêu đề",
+      "templateThreeColumns": "Ba cột",
+      "templateThreeColumnWithHeadings": "Ba cột có tiêu đề",
+      "templateFourColumns": "Bốn cột",
+      "templateTitleWithBullets": "Tiêu đề có dấu đầu dòng",
+      "templateTitleWithBulletsAndImage": "Tiêu đề có dấu đầu dòng và hình ảnh",
+      "templateBlankImageSlide": "Slide hình ảnh trống",
+      "templateAccentLeft": "Dấu trái",
+      "templateAccentRight": "Nhấn mạnh bên phải",
+      "templateAccentTop": "Điểm nhấn hàng đầu",
+      "templateAccentRightFit": "Nhấn mạnh bên phải (vừa vặn)",
+      "templateAccentLeftFit": "Giọng trái (vừa)",
+      "templateTwoImageColumns": "2 cột hình ảnh",
+      "templateThreeImageColumns": "3 cột hình ảnh",
+      "templateFourImageColumns": "4 cột hình ảnh",
+      "templateImagesWithText": "Hình ảnh có văn bản",
+      "templateImageGallery": "Thư viện hình ảnh",
+      "templateTeamPhotos": "Ảnh đội",
+      "templateTimeline": "Dòng thời gian",
+      "templateIconsWithText": "Biểu tượng có văn bản",
+      "templateArrows": "Mũi tên",
+      "templateFunnelWithText": "Kênh có văn bản",
+      "templateSteppedPyramid": "Kim tự tháp bậc thang",
+      "templatePyramidWithOutline": "Kim tự tháp với đường viền",
+      "templateColumnChart": "Biểu đồ cột",
+      "templateBarChart": "Biểu đồ thanh",
+      "templateLineChart": "Biểu đồ đường",
+      "templatePieChart": "Biểu đồ hình tròn",
+      "templateDonutChart": "Biểu đồ bánh rán",
+      "templateBigNumbers": "Số lớn",
+      "templateCircleStats": "Số liệu thống kê vòng kết nối",
+      "templateThreeRowTable": "bảng 3 hàng",
+      "templateLoomRecording": "Loom ghi âm",
+      "templateYouTubeVideo": "Video YouTube",
+      "colorBlack": "Đen",
+      "colorDarkGray": "Màu xám đậm",
+      "colorGray": "Màu xám",
+      "colorLightGray": "Màu xám nhạt",
+      "colorSoftGray": "Màu xám mềm",
+      "colorWhite": "trắng",
+      "colorPaleYellow": "Màu vàng nhạt",
+      "colorPeach": "đào",
+      "colorPink": "Hồng",
+      "colorLavender": "hoa oải hương",
+      "colorBlue": "Màu xanh",
+      "colorMint": "bạc hà",
+      "colorYellow": "màu vàng",
+      "colorOrange": "trái cam",
+      "colorRed": "màu đỏ",
+      "colorPurple": "Màu tím",
+      "colorRoyalBlue": "Màu xanh hoàng gia",
+      "colorGreen": "màu xanh lá cây",
+      "colorOlive": "ô liu",
+      "colorBrown": "nâu",
+      "colorDarkRed": "Màu đỏ sẫm",
+      "colorDeepPurple": "Màu tím đậm",
+      "colorNavy": "hải quân",
+      "colorForestGreen": "Rừng xanh",
+      "colorDefaultLavender": "Hoa oải hương mặc định",
+      "colorLightBlue": "Màu xanh nhạt",
+      "colorLightGreen": "Xanh nhạt",
+      "colorLightYellow": "Màu vàng nhạt",
+      "colorLightRed": "Màu đỏ nhạt",
+      "colorLightPurple": "Màu tím nhạt",
+      "themeAccentColor": "Điểm nhấn chủ đề",
+      "themeShapeColor": "Hình dạng chủ đề",
+      "themeSurfaceColor": "Bề mặt chủ đề",
+      "themeHeadingColor": "Tiêu đề chủ đề",
+      "themeBodyColor": "Nội dung chủ đề",
+      "themeBackgroundColor": "Nền chủ đề",
+      "chartSchemeDefault": "Mặc định",
+      "chartSchemeMonochrome2": "Đơn sắc 2",
+      "chartSchemeMonochrome3": "Đơn sắc 3",
+      "chartSchemeMonochrome4": "Đơn sắc 4",
+      "chartTypeLine": "dòng",
+      "chartTypeArea": "Khu vực",
+      "chartTypeColumn": "Cột",
+      "chartTypeStackedColumn": "Cột xếp chồng",
+      "chartTypeBar": "thanh",
+      "chartTypeStackedBar": "Thanh xếp chồng lên nhau",
+      "chartTypePie": "bánh",
+      "chartTypeDonut": "bánh rán",
+      "chartTypeCombo": "kết hợp",
+      "chartTypeScatter": "phân tán",
+      "chartTypeBubble": "bong bóng",
+      "chartTypeHeatmap": "Bản đồ nhiệt",
+      "chartTypeFunnel": "Kênh",
+      "chartTypeWaterfall": "thác nước",
+      "chartTypeStacked": "xếp chồng lên nhau",
+      "chartTypePercentStacked": "Xếp chồng 100%",
+      "chartTypeStackedArea": "Khu vực xếp chồng",
+      "chartTypeMekko": "Mekko",
+      "chartTypeAreaChart": "Biểu đồ vùng",
+      "chartTypeStackedColumnChart": "Biểu đồ cột xếp chồng",
+      "chartTypeStackedBarChart": "Biểu đồ thanh xếp chồng",
+      "chartTypeComboChart": "Biểu đồ kết hợp",
+      "chartTypeScatterChart": "Biểu đồ tán xạ",
+      "chartTypeBubbleChart": "Biểu đồ bong bóng",
+      "chartTypeHeatmapChart": "Biểu đồ nhiệt",
+      "chartTypeFunnelChart": "Biểu đồ phễu",
+      "chartTypeWaterfallChart": "Biểu đồ thác nước",
+      "chartTypeBlankDiagram": "Sơ đồ trống",
+      "chartTypeWeeklyCalendar": "Lịch hàng tuần",
+      "chartTypeGanttChart": "biểu đồ Gantt",
+      "chartsAndGraphsDescription": "Trực quan hóa dữ liệu bằng biểu đồ, sơ đồ và lịch trình.",
+      "chartItemPending": "{item} sẽ được kết nối sau khi phần kết xuất riêng cho biểu đồ hoàn tất",
+      "hideXAxis": "Ẩn trục x",
+      "showXAxis": "Hiển thị trục x",
+      "xAxisLabelMode": "Chế độ nhãn trục X",
+      "hideYAxis": "Ẩn trục y",
+      "showYAxis": "Hiển thị trục y",
+      "yAxisLabelMode": "Chế độ nhãn trục Y",
+      "yAxisPosition": "Vị trí trục Y",
+      "yAxisScale": "Tỷ lệ trục Y",
+      "yAxisStartValue": "Giá trị bắt đầu trục Y",
+      "yAxisEndValue": "Giá trị cuối trục Y",
+      "useTableOrder": "Sử dụng thứ tự bảng",
+      "sortChartHighLow": "Sắp xếp biểu đồ từ cao xuống thấp",
+      "hideChartPoints": "Ẩn điểm biểu đồ",
+      "showChartPoints": "Hiển thị điểm biểu đồ",
+      "hideDataLabels": "Ẩn nhãn dữ liệu",
+      "showDataLabels": "Hiển thị nhãn dữ liệu",
+      "hideGridLines": "Ẩn đường lưới",
+      "showGridLines": "Hiển thị đường lưới",
+      "legendPosition": "Vị trí huyền thoại",
+      "hideHeadlineNumber": "Ẩn số tiêu đề",
+      "showHeadlineNumber": "Hiển thị số tiêu đề",
+      "useValueDataLabels": "Sử dụng nhãn dữ liệu giá trị",
+      "usePercentageDataLabels": "Sử dụng nhãn dữ liệu phần trăm",
+      "calloutNote": "Lưu ý",
+      "calloutInfo": "Thông tin",
+      "calloutWarning": "Cảnh báo",
+      "calloutCaution": "Thận trọng",
+      "calloutSuccess": "thành công",
+      "calloutQuestion": "Câu hỏi",
+      "columnLayout2Equal": "2 cột - bằng nhau",
+      "columnLayout2Left": "2 cột - trái",
+      "columnLayout2Right": "2 cột - phải",
+      "columnLayout3": "3 cột",
+      "columnLayout4": "4 cột",
+      "videos": "Video",
+      "videosDescription": "Thêm nhúng video phong phú.",
+      "mediaItemPending": "{item} sẽ được kết nối sau khi các nút nhúng phương tiện sẵn sàng",
+      "vimeoVideos": "Vimeo video",
+      "tiktokVideos": "TikTok video",
+      "webpageOrApp": "Trang web hoặc ứng dụng",
+      "displayText": "Hiển thị",
+      "monsterText": "Quái vật",
+      "smallText": "Văn bản nhỏ",
+      "normalText": "Văn bản bình thường",
+      "largeText": "Văn bản lớn",
+      "markTodoIncomplete": "Đánh dấu việc cần làm là chưa hoàn thành",
+      "markTodoComplete": "Đánh dấu việc cần làm là hoàn thành",
+      "aiImages": "AI hình ảnh",
+      "aiInfographics": "AI đồ họa thông tin",
+      "stockPhotos": "ảnh chứng khoán",
+      "gifsFromGiphy": "Ảnh GIF từ GIPHY",
+      "pictographicIllustrations": "Hình ảnh minh họa",
+      "iconsClassic": "Biểu tượng (cổ điển)",
+      "iconsModern": "Biểu tượng (hiện đại)",
+      "qrCode": "Mã QR",
+      "accentImages": "Hình ảnh có điểm nhấn",
+      "gallery": "Thư viện ảnh",
+      "columnsDescription": "Thêm 2, 3 hoặc 4 phần cột.",
+      "columnsMenu": "Trình đơn cột",
+      "smartLayoutsMenu": "Menu bố cục thông minh",
+      "smartLayoutGroupBoxes": "Hộp",
+      "smartLayoutGroupBullets": "Đạn",
+      "smartLayoutGroupSequence": "trình tự",
+      "smartLayoutGroupImages": "Hình ảnh",
+      "smartLayoutGroupNumbers": "số",
+      "smartLayoutGroupCircles": "Vòng kết nối",
+      "smartLayoutGroupQuotes": "Báo giá",
+      "smartLayoutGroupSteps": "bước",
+      "smartLayoutGroupColumns": "Cột",
+      "smartLayoutLabel2Columns": "2 cột",
+      "smartLayoutLabel3Columns": "3 cột",
+      "smartLayoutLabel4Columns": "4 cột",
+      "smartLayoutLabelAlternatingBoxes": "Hộp thay thế",
+      "smartLayoutLabelAlternatingBoxesHorizontal": "Hộp xen kẽ ngang",
+      "smartLayoutLabelAlternatingBoxesVertical": "Hộp xen kẽ theo chiều dọc",
+      "smartLayoutLabelArrows": "Mũi tên",
+      "smartLayoutLabelArrowsHorizontal": "Mũi tên ngang",
+      "smartLayoutLabelArrowsVertical": "Mũi tên dọc",
+      "smartLayoutLabelArrowBullets": "Đạn mũi tên",
+      "smartLayoutLabelArrowSteps": "bước mũi tên",
+      "smartLayoutLabelArrowStepsHorizontal": "Mũi tên bước ngang",
+      "smartLayoutLabelArrowStepsVertical": "Mũi tên bước dọc",
+      "smartLayoutLabelBarStats": "Thống kê thanh",
+      "smartLayoutLabelBarStatsLeft": "Số liệu thống kê thanh còn lại",
+      "smartLayoutLabelBarStatsRight": "Thống kê thanh bên phải",
+      "smartLayoutLabelBoxSteps": "Hộp bước",
+      "smartLayoutLabelBoxStepsHorizontal": "Hộp bước ngang",
+      "smartLayoutLabelBoxStepsVertical": "Hộp bước dọc",
+      "smartLayoutLabelCircle": "vòng tròn",
+      "smartLayoutLabelCircleStats": "Số liệu thống kê vòng kết nối",
+      "smartLayoutLabelCircleStatsExternalLine": "Vòng tròn dòng thống kê bên ngoài",
+      "smartLayoutLabelCircleStatsMiddleLine": "Vòng tròn đường giữa số liệu thống kê",
+      "smartLayoutLabelCircleStatsWithExternalBoldLine": "Vòng tròn số liệu thống kê với dòng in đậm bên ngoài",
+      "smartLayoutLabelCircleStatsWithMiddleBoldLine": "Vòng tròn số liệu thống kê với dòng đậm ở giữa",
+      "smartLayoutLabelCycle": "chu kỳ",
+      "smartLayoutLabelDotGridStats": "Thống kê lưới điểm",
+      "smartLayoutLabelDotGridStatsLeft": "Số liệu thống kê lưới chấm còn lại",
+      "smartLayoutLabelDotGridStatsRight": "Số liệu thống kê lưới chấm bên phải",
+      "smartLayoutLabelDotLineStats": "Thống kê dòng chấm",
+      "smartLayoutLabelDotLineStatsLeft": "Số liệu thống kê dòng chấm còn lại",
+      "smartLayoutLabelDotLineStatsRight": "Thống kê dòng chấm bên phải",
+      "smartLayoutLabelFlower": "hoa",
+      "smartLayoutLabelFunnel": "Kênh",
+      "smartLayoutLabelFunnelOutsideText": "Văn bản bên ngoài kênh",
+      "smartLayoutLabelIconsWithText": "Biểu tượng có văn bản",
+      "smartLayoutLabelIconsWithTextLeft": "Biểu tượng có văn bản bên trái",
+      "smartLayoutLabelIconsWithTextTop": "Biểu tượng có văn bản trên cùng",
+      "smartLayoutLabelImagesWithText": "Hình ảnh có văn bản",
+      "smartLayoutLabelImagesWithTextCircle": "Hình ảnh có vòng tròn văn bản",
+      "smartLayoutLabelImagesWithTextSquare": "Hình ảnh có chữ vuông",
+      "smartLayoutLabelJoinedBoxes": "Hộp đã tham gia",
+      "smartLayoutLabelJoinedBoxesWithIcons": "Các hộp được nối với các biểu tượng",
+      "smartLayoutLabelLabeledBoxes": "Hộp được dán nhãn",
+      "smartLayoutLabelLabeledBoxesHorizontal": "Hộp được dán nhãn nằm ngang",
+      "smartLayoutLabelLabeledBoxesVertical": "Hộp được dán nhãn dọc",
+      "smartLayoutLabelLargeBullets": "Đạn lớn",
+      "smartLayoutLabelLargeBulletsNumbered": "Đạn lớn được đánh số",
+      "smartLayoutLabelLeafBoxes": "Hộp lá",
+      "smartLayoutLabelMinimalTimeline": "Dòng thời gian tối thiểu",
+      "smartLayoutLabelMinimalTimelineHorizontal": "Dòng thời gian tối thiểu theo chiều ngang",
+      "smartLayoutLabelMinimalTimelineTwoSidedHorizontal": "Dòng thời gian tối thiểu hai mặt ngang",
+      "smartLayoutLabelMinimalTimelineTwoSidedVertical": "Dòng thời gian tối thiểu dọc hai mặt",
+      "smartLayoutLabelMinimalTimelineVertical": "Dòng thời gian tối thiểu theo chiều dọc",
+      "smartLayoutLabelMinimalTimelineBoxesHorizontal": "Hộp dòng thời gian tối thiểu theo chiều ngang",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedHorizontal": "Hộp dòng thời gian tối thiểu hai mặt ngang",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedVertical": "Hộp dòng thời gian tối thiểu dọc hai mặt",
+      "smartLayoutLabelMinimalTimelineBoxesVertical": "Hộp dòng thời gian tối thiểu theo chiều dọc",
+      "smartLayoutLabelMinimalTimelineWithBoxes": "Dòng thời gian tối thiểu với các hộp",
+      "smartLayoutLabelOutlineBoxes": "Hộp phác thảo",
+      "smartLayoutLabelPills": "thuốc",
+      "smartLayoutLabelPillsHorizontal": "Thuốc nằm ngang",
+      "smartLayoutLabelPillsVertical": "Thuốc dọc",
+      "smartLayoutLabelProcessSteps": "Các bước xử lý",
+      "smartLayoutLabelProcessStepsNumbered": "Các bước xử lý được đánh số",
+      "smartLayoutLabelPyramid": "kim tự tháp",
+      "smartLayoutLabelPyramidOutsideText": "Văn bản bên ngoài kim tự tháp",
+      "smartLayoutLabelQuoteBoxes": "Hộp trích dẫn",
+      "smartLayoutLabelRing": "Nhẫn",
+      "smartLayoutLabelSemiCircle": "Hình bán nguyệt",
+      "smartLayoutLabelSideLineBoxes": "Hộp đường bên",
+      "smartLayoutLabelSideLineText": "Văn bản dòng bên",
+      "smartLayoutLabelSlantedLabels": "Nhãn nghiêng",
+      "smartLayoutLabelSlantedLabelsHorizontal": "Nhãn nghiêng theo chiều ngang",
+      "smartLayoutLabelSlantedLabelsVertical": "Nhãn nghiêng theo chiều dọc",
+      "smartLayoutLabelSmallBullets": "Đạn nhỏ",
+      "smartLayoutLabelSolidBoxSmallBullets": "Hộp đạn nhỏ chắc chắn",
+      "smartLayoutLabelSolidBoxes": "Hộp đặc",
+      "smartLayoutLabelSolidBoxesWithIcons": "Hộp đặc có biểu tượng",
+      "smartLayoutLabelSolidBoxesWithNumbers": "Hộp cứng có số",
+      "smartLayoutLabelSpeechBubbles": "bong bóng lời nói",
+      "smartLayoutLabelSpeechBubblesCenter": "Trung tâm bong bóng lời nói",
+      "smartLayoutLabelSpeechBubblesLeft": "Bong bóng lời thoại còn lại",
+      "smartLayoutLabelSpeechBubblesRight": "Bong bóng lời thoại bên phải",
+      "smartLayoutLabelStaircase": "Cầu thang",
+      "smartLayoutLabelStaircaseOutsideText": "Chữ bên ngoài cầu thang",
+      "smartLayoutLabelStarRating": "Xếp hạng sao",
+      "smartLayoutLabelStarRatingLeft": "Xếp hạng sao còn lại",
+      "smartLayoutLabelStarRatingRight": "Đánh giá sao đúng",
+      "smartLayoutLabelStats": "Thống kê",
+      "smartLayoutLabelSteps": "bước",
+      "smartLayoutLabelStepsHorizontal": "Bậc thang ngang",
+      "smartLayoutLabelStepsVertical": "Bước dọc",
+      "smartLayoutLabelStepsWithIcons": "Các bước có biểu tượng",
+      "smartLayoutLabelStepsWithIconsHorizontal": "Các bước có biểu tượng nằm ngang",
+      "smartLayoutLabelStepsWithIconsVertical": "Các bước có biểu tượng dọc",
+      "smartLayoutLabelTimeline": "Dòng thời gian",
+      "smartLayoutLabelTimelineHorizontal": "Dòng thời gian theo chiều ngang",
+      "smartLayoutLabelTimelineTwoSidedHorizontal": "Dòng thời gian hai mặt ngang",
+      "smartLayoutLabelTimelineTwoSidedVertical": "Dòng thời gian hai mặt dọc",
+      "smartLayoutLabelTimelineVertical": "Dòng thời gian theo chiều dọc",
+      "smartLayoutLabelTopCircleBoxes": "Hộp tròn trên cùng",
+      "smartLayoutLabelTopCircleBoxesWithNumbers": "Hộp tròn trên cùng có số",
+      "smartLayoutLabelTopLineText": "Văn bản dòng trên cùng",
+      "smartLayoutLabelVerticalFunnel": "Phễu dọc",
+      "themeNameBasicLight": "Ánh sáng cơ bản",
+      "themeNameBasicDark": "Tối cơ bản",
+      "themeNameAlabaster": "Thạch cao",
+      "themeNameAmber": "Hổ phách",
+      "themeNameAsh": "tro",
+      "themeNameBeeHappy": "con ong hạnh phúc",
+      "themeNameBlueSteel": "Thép xanh",
+      "themeNameBlueberry": "việt quất",
+      "themeNameBloom": "nở hoa",
+      "themeNameBonanHale": "Bonan Hale cổ điển",
+      "themeNameBreeze": "Gió",
+      "themeNameBubbleGum": "Kẹo cao su bong bóng",
+      "themeNameChisel": "Đục",
+      "themeNameCobalt": "coban",
+      "themeNameDewdrop": "Giọt sương",
+      "themeNameGlamour": "quyến rũ",
+      "themeNameHowlite": "đá Howlite",
+      "themeNameLinen": "vải lanh",
+      "themeNameMahogany": "gỗ gụ",
+      "themeNameMist": "sương mù",
+      "themeNameMoss": "Rêu",
+      "themeNameOnyx": "mã não",
+      "themeNameQuartz": "Thạch anh",
+      "themeNameSand": "Cát",
+      "themeNameVivid": "Sống động",
+      "themeNameKraft": "giấy kraft",
+      "themeNameCreme": "kem",
+      "themeNameMystique": "Bí ẩn",
+      "themeNameVortex": "xoáy",
+      "themeNameGoldLeaf": "Lá Vàng",
+      "themeNameTranquil": "yên tĩnh",
+      "themeNameIris": "mống mắt",
+      "themeNamePrism": "lăng kính",
+      "themeNameRush": "Vội vàng",
+      "themeNameChocolate": "sô cô la",
+      "themeNameWireframe": "Khung dây",
+      "themeNameConsultant": "tư vấn viên",
+      "themeNameCornfield": "Cánh đồng ngô",
+      "themeNameExecutiveBlue": "Màu xanh điều hành",
+      "themeNameDeckwiseWarmRetro": "Ấm áp cổ điển",
+      "themeNameDeckwiseRichPalette": "Bảng màu đậm",
+      "themeNamePetrol": "Xăng dầu",
+      "themeNameAlien": "Người ngoài hành tinh",
+      "themeNameCoal": "Than",
+      "themeNameCigar": "Xì gà",
+      "themeNameClementa": "Phong cách Clementa",
+      "themeNameCommons": "Không gian chung",
+      "themeNameCornflower": "Hoa thanh cúc",
+      "themeNameDaktilo": "Daktilo máy chữ",
+      "themeNameDawn": "Bình minh",
+      "themeNameDialogue": "Đối thoại",
+      "themeNameEditoria": "Editoria biên tập",
+      "themeNameElectric": "Điện quang",
+      "themeNameFinesse": "Tinh tế",
+      "themeNameFlax": "Sợi lanh",
+      "themeNameFluo": "Huỳnh quang",
+      "themeNameFounder": "Nhà sáng lập",
+      "themeNameDeckwise": "Cổ điển",
+      "themeNameMocha": "Mocha cà phê",
+      "themeNameIcebreaker": "Phá băng",
+      "themeNameIncandescent": "Sáng nóng",
+      "themeNameKeepsake": "Kỷ vật",
+      "themeNameLavender": "Oải hương",
+      "themeNameLeimoon": "Leimoon ánh trăng",
+      "themeNameLunaria": "Lunaria bạc",
+      "themeNameLux": "Lux ánh sáng",
+      "themeNameMarine": "Biển",
+      "themeNameMossAndMist": "Rêu và sương",
+      "themeNamePearl": "Ngọc trai",
+      "themeNamePiano": "Piano cổ điển",
+      "themeNamePistachio": "Hạt dẻ cười",
+      "themeNamePlantShop": "Tiệm cây",
+      "themeNameSage": "Xô thơm",
+      "themeNameSeafoam": "Bọt biển",
+      "themeNameSerene": "Êm dịu",
+      "themeNameSlate": "Đá phiến",
+      "themeNameTerracotta": "Đất nung",
+      "themeNameIndigo": "Chàm",
+      "themeNameVanilla": "Vani",
+      "themeNameWine": "Rượu vang",
+      "exportPptxIdle": "Xuất PPTX",
+      "exportUnavailable": "Không thể xuất",
+      "exporting": "Đang xuất...",
+      "exported": "Đã xuất",
+      "exportFailed": "Xuất thất bại",
+      "googleSlidesExportComplete": "Bản xuất Google Slides đã sẵn sàng",
+      "googleSlidesExportFailed": "Xuất Google Slides thất bại",
+      "editableExportRequiresPlus": "Tính năng xuất PowerPoint và Google Slides có thể chỉnh sửa dành cho Plus.",
+      "editableExportAccessCheckFailed": "Không thể xác minh quyền xuất của bạn. Vui lòng thử lại.",
+      "openGoogleSlides": "Mở Google Slides",
+      "exportPdfIdle": "Xuất PDF",
+      "preparingPdf": "Đang chuẩn bị PDF...",
+      "pdfExportFailed": "Xuất PDF thất bại",
+      "exportAs": "Xuất dưới dạng",
+      "exportSlidesAs": "Xuất các slide dưới dạng",
+      "exportSlideAs": "Xuất slide dưới dạng",
+      "exportImage": "Hình ảnh",
+      "keepAtLeastOneSlide": "Giữ ít nhất một slide",
+      "cutOrCopySlideFirst": "Hãy cắt hoặc sao chép một slide trước",
+      "cut": "Cắt",
+      "copy": "Sao chép",
+      "pasteBelow": "Dán bên dưới",
+      "moveSlidesUp": "Di chuyển các slide lên",
+      "moveUp": "Di chuyển lên",
+      "moveSlidesDown": "Di chuyển các slide xuống",
+      "moveDown": "Di chuyển xuống",
+      "duplicateSlides": "Nhân đôi các slide",
+      "duplicateSlide": "Nhân đôi slide",
+      "addBelowSelection": "Thêm bên dưới vùng chọn",
+      "addBelow": "Thêm bên dưới",
+      "exportSlides": "Xuất các slide",
+      "exportSlide": "Xuất slide",
+      "deleteSlides": "Xóa các slide",
+      "delete": "Xóa",
+      "tableColumn": "Cột bảng",
+      "gridColumn": "Cột lưới",
+      "columnResizeWidth": "Chiều rộng {label} {index}",
+      "selectedBlockLabel": "Đã chọn {count} khối",
+      "selectedBlocksLabel": "Đã chọn {count} khối",
+      "slideLabel": "Trang chiếu {index}",
+      "slideContextLine": "Trang chiếu {index}: {title}",
+      "blockPathsLine": "Đường dẫn khối: {paths}",
+      "selectedDeckwiseBlocksFallback": "Các khối đã chọn.",
+      "tableCellActions": "Thao tác ô bảng",
+      "cutCells": "Cắt ô",
+      "copyCells": "Sao chép ô",
+      "pasteCellsUnavailable": "Không thể dán ô",
+      "pasteCells": "Dán ô",
+      "insertColumnsLeft": "Chèn cột sang trái",
+      "insertColumnsRight": "Chèn cột sang phải",
+      "insertRowsAbove": "Chèn hàng phía trên",
+      "insertRowsBelow": "Chèn hàng phía dưới",
+      "keepAtLeastOneTableRow": "Giữ ít nhất một hàng",
+      "deleteTableRowUnavailable": "Không thể xóa hàng",
+      "keepAtLeastOneTableColumn": "Giữ ít nhất một cột",
+      "deleteTableColumnUnavailable": "Không thể xóa cột",
+      "deleteRow": "Xóa hàng",
+      "deleteSheet": "Xóa bảng",
+      "blockActions": "Thao tác với khối",
+      "elementPreviewBulletAction": "Mục hành động",
+      "elementPreviewBulletFollowUp": "Chi tiết theo dõi",
+      "elementPreviewBulletDecision": "Ghi chú quyết định",
+      "elementPreviewCallout": "Thêm ngữ cảnh cho người đọc bằng một chi tiết hỗ trợ ngắn gọn.",
+      "elementPreviewColumnOneTitle": "Cột một",
+      "elementPreviewColumnOneParagraph": "Văn bản hỗ trợ cho thấy nội dung chảy trong cột này.",
+      "elementPreviewColumnTwoTitle": "Cột hai",
+      "elementPreviewColumnTwoParagraph": "Đoạn thứ hai giúp bố cục chia cột dễ đọc.",
+      "elementPreviewColumnThreeTitle": "Cột ba",
+      "elementPreviewColumnThreeParagraph": "Nội dung ngắn giữ cột thứ ba dễ nhìn.",
+      "elementPreviewColumnFourTitle": "Cột bốn",
+      "elementPreviewColumnFourParagraph": "Văn bản gọn xem trước trạng thái cột thứ tư.",
+      "elementPreviewFootnote": "Một ghi chú hỗ trợ ngắn.",
+      "elementPreviewHeading": "Tiêu đề {level}",
+      "elementPreviewLabel": "Nhãn",
+      "elementPreviewListItem": "Mục danh sách",
+      "elementPreviewProjectUpdate": "Cập nhật dự án",
+      "elementPreviewQuote": "Một kết luận ngắn gọn nằm ở đây.",
+      "elementPreviewStepOne": "Bước một",
+      "elementPreviewStepTwo": "Bước hai",
+      "elementPreviewStepThree": "Bước ba",
+      "elementPreviewSupportingDetail": "Chi tiết hỗ trợ",
+      "elementPreviewTableMetric": "Chỉ số",
+      "elementPreviewTableStatus": "Trạng thái",
+      "elementPreviewTableOwner": "Người phụ trách",
+      "elementPreviewTableNext": "Tiếp theo",
+      "elementPreviewTableUsers": "Người dùng",
+      "elementPreviewTableTeam": "Nhóm",
+      "elementPreviewTableGrowth": "Tăng trưởng",
+      "elementPreviewTableOps": "Vận hành",
+      "elementPreviewTableLive": "Đang chạy",
+      "elementPreviewTableRisk": "Rủi ro",
+      "elementPreviewTableLow": "Thấp",
+      "elementPreviewTableDone": "Hoàn tất",
+      "elementPreviewToc": "Tổng quan phần",
+      "elementPreviewTodoTask": "Việc cần hoàn thành",
+      "elementPreviewTodoReview": "Người phụ trách duyệt",
+      "elementPreviewTodoUpdate": "Gửi cập nhật"
+    }
+  },
+  "files": {
+    "addImage": "Thêm hình ảnh",
+    "addPdf": "Thêm PDF",
+    "upload": "Tệp",
+    "uploadAction": "Tải lên",
+    "createFile": "Tạo tệp",
+    "projectDocuments": "Tài liệu dự án",
+    "dropUploadTitle": "Thả tệp vào đây để tải lên",
+    "dropUploadSubtitle": "Thả tệp vào đây để tải chúng lên danh mục Nguồn phù hợp",
+    "searchAction": "Tìm kiếm",
+    "createNote": "Tài liệu",
+    "createSlides": "Slide",
+    "slidesTemplate": "Mẫu",
+    "createNoteFailed": "Không tạo được tài liệu. Vui lòng thử lại.",
+    "createSlidesFailed": "Không tạo được slide. Vui lòng thử lại.",
+    "createSheetFailed": "Không thể tải lên bảng tính. Vui lòng thử lại.",
+    "spreadsheetUnsupported": "Tệp CSV và XLS không được hỗ trợ.",
+    "uploadUnsupportedFileType": "Loại tệp không được hỗ trợ: {names}",
+    "uploadFailedNoProject": "Vui lòng mở không gian làm việc của dự án trước.",
+    "googleDriveAuthorizationRequired": "Kết nối Google Drive để tiếp tục.",
+    "googleDriveAuthorizationPending": "Google Drive chưa được kết nối. Hãy hoàn tất uỷ quyền rồi thử lại.",
+    "googleDriveConnectFailed": "Không thể kết nối Google Drive",
+    "googleDriveImportFailed": "Không thể nhập tệp Google Drive",
+    "googleDriveImportSucceeded": "Đã nhập {count} tệp Google Drive.",
+    "googleDriveNotConfigured": "Chưa cấu hình nhập từ Google Drive.",
+    "oneDriveAuthorizationRequired": "Kết nối OneDrive để tiếp tục.",
+    "oneDriveAuthorizationPending": "OneDrive chưa được kết nối. Hãy hoàn tất ủy quyền rồi thử lại.",
+    "oneDriveConnectFailed": "Không thể kết nối OneDrive",
+    "oneDriveImportFailed": "Không thể nhập tệp OneDrive",
+    "oneDriveImportSucceeded": "Đã nhập {count} tệp OneDrive.",
+    "oneDrivePickerTitle": "Nhập từ OneDrive",
+    "oneDrivePickerDescription": "Chọn tệp từ OneDrive đã kết nối.",
+    "oneDriveSearchPlaceholder": "Tìm kiếm tệp OneDrive",
+    "oneDrivePickerLoading": "Đang tải tệp OneDrive…",
+    "oneDrivePickerLoadFailed": "Không thể tải tệp OneDrive",
+    "oneDrivePickerEmpty": "Không tìm thấy tệp OneDrive",
+    "oneDrivePickerEmptyHint": "Hãy thử thư mục khác, từ khóa khác hoặc cấp quyền chọn thêm tệp.",
+    "oneDrivePickerHint": "Thư mục sẽ mở ngay trong bộ chọn này. Chọn tệp để nhập vào dự án.",
+    "oneDrivePickerLoadMore": "Tải thêm",
+    "oneDrivePickerReconnect": "Chọn thêm tệp OneDrive",
+    "oneDrivePickerImportSelected": "Nhập {count} mục đã chọn",
+    "oneDriveUntitledFile": "Tệp OneDrive chưa đặt tên",
+    "oneDriveLastModified": "Đã sửa đổi {date}",
+    "oneDriveOpenFile": "Mở trong OneDrive",
+    "oneDriveUnknownDate": "Không rõ ngày",
+    "oneDriveFolder": "Thư mục",
+    "oneDriveFolderItem": "{count} mục",
+    "dropboxAuthorizationRequired": "Kết nối Dropbox để tiếp tục.",
+    "dropboxAuthorizationPending": "Dropbox chưa được kết nối. Hãy hoàn tất ủy quyền rồi thử lại.",
+    "dropboxConnectFailed": "Không thể kết nối Dropbox",
+    "dropboxImportFailed": "Không thể nhập tệp Dropbox",
+    "dropboxImportSucceeded": "Đã nhập {count} tệp Dropbox.",
+    "dropboxNotConfigured": "Chưa cấu hình nhập từ Dropbox.",
+    "dropboxPickerRetryRequired": "Dropbox đã kết nối. Nhấp lại vào Thêm từ Dropbox để chọn tệp.",
+    "notionAuthorizationRequired": "Kết nối Notion để tiếp tục.",
+    "notionAuthorizationPending": "Notion chưa được kết nối. Hãy hoàn tất ủy quyền rồi thử lại.",
+    "notionConnectFailed": "Không thể kết nối Notion",
+    "notionImportFailed": "Không thể nhập trang Notion",
+    "notionImportSucceeded": "Đã nhập {count} trang Notion.",
+    "notionPickerTitle": "Nhập từ Notion",
+    "notionPickerDescription": "Chọn các trang đã chia sẻ với Deckwise.",
+    "notionSearchPlaceholder": "Tìm kiếm trang",
+    "notionPickerSelectPages": "Chọn trang",
+    "notionPickerLoading": "Đang tải trang Notion…",
+    "notionPickerLoadFailed": "Không thể tải trang Notion",
+    "notionPickerEmpty": "Không tìm thấy trang Notion",
+    "notionPickerMissingAuthorizationHint": "Nếu thiếu trang, hãy chia sẻ trang đó hoặc trang cha của nó với Deckwise trong Notion.",
+    "notionPickerLoadMore": "Tải thêm",
+    "notionPickerChooseMorePages": "Chọn thêm trang",
+    "notionPickerImportSelected": "Nhập {count} mục đã chọn",
+    "notionUntitledPage": "Trang Notion chưa đặt tên",
+    "notionLastEdited": "Chỉnh sửa lần cuối {date}",
+    "notionOpenPage": "Mở trong Notion",
+    "notionUnknownDate": "Không rõ ngày",
+    "outlineReferenceMixedUnsupported": "Thêm tệp slide và tệp tham chiếu riêng biệt.",
+    "outlineReferenceLimit": "Bạn có thể đính kèm tối đa {count} tệp tham chiếu.",
+    "outlineReferenceUploadFailed": "Không thể tải lên tệp tham chiếu",
+    "all": "Tất cả",
+    "uploading": "Đang tải lên…",
+    "empty": "Không có tệp",
+    "noPreview": "Không có bản xem trước",
+    "image": "Hình ảnh",
+    "images": "Hình ảnh",
+    "outline": "phác thảo",
+    "imageGallery": "Hình ảnh",
+    "imageWallEmpty": "Chưa có hình ảnh nào",
+    "imageWallEmptyHint": "Hình ảnh được tải lên sẽ xuất hiện ở đây",
+    "file": "tệp",
+    "pdf": "PDF",
+    "note": "Tài liệu",
+    "deleteFile": "Xóa tệp",
+    "deleteFailed": "Không thể xóa tệp. Vui lòng thử lại.",
+    "uploadFailedNoCacheKey": "Tải lên không thành công: máy chủ không trả về cacheKey.",
+    "uploadImageFailed": "Không thể tải hình ảnh lên",
+    "uploadPdfFailed": "Không thể tải lên PDF",
+    "uploadOfficeFailed": "Không thể tải lên tệp Office",
+    "officeUploadDisabled": "Tính năng tải tệp Office đã bị tắt.",
+    "notesTab": "Ghi chú",
+    "filesTab": "Tệp",
+    "sourcesTipTitle": "Mẹo",
+    "sourcesTipBody": "Chọn nội dung trong {sources} bằng lasso, rồi dùng {addToChat} để chỉ thêm phần đã chọn vào ngữ cảnh của Agent.",
+    "addToChat": "Thêm vào trò chuyện",
+    "moreActions": "Thêm hành động",
+    "moveToTrash": "Chuyển vào Thùng rác",
+    "deleteAction": "Xóa",
+    "deleteTypedAction": "Xóa {type}",
+    "deleteTypedConfirmTitle": "Xóa {type} này?",
+    "deleteFileConfirmTitle": "Xóa tệp này?",
+    "deleteFileConfirmMessage": "Tệp này sẽ bị xóa khỏi không gian làm việc hiện tại.",
+    "download": "Tải xuống",
+    "downloadUnavailable": "Tệp này không có sẵn để tải xuống.",
+    "export": "Xuất",
+    "exportMarkdown": "Markdown",
+    "exportMarkdownFailed": "Không thể xuất Markdown. Vui lòng thử lại.",
+    "exportPptx": "PowerPoint",
+    "exportPptxFailed": "Không xuất được PowerPoint. Vui lòng thử lại.",
+    "exportPptxUnavailable": "Vui lòng lưu tệp slide này trước khi xuất PowerPoint.",
+    "convertToSlide": "Tạo slide",
+    "convertToSlideFailed": "Không thể chuyển đổi tài liệu thành slide. Vui lòng thử lại.",
+    "convertedSlidesSuffix": "Slide",
+    "duplicate": "Nhân bản",
+    "duplicateCopySuffix": "bản sao",
+    "duplicateFailed": "Không thể sao chép tệp. Vui lòng thử lại.",
+    "rename": "Đổi tên",
+    "renameDialogTitle": "Đổi tên tệp",
+    "renameDialogDescription": "Cập nhật tên hiển thị cho tệp này trong thanh bên.",
+    "renameInputLabel": "Tên",
+    "renamePlaceholder": "Nhập tên tệp",
+    "noteTitlePlaceholder": "Trang mới",
+    "renameEmptyName": "Tên tệp không được để trống.",
+    "renameFailed": "Không đổi tên được tệp. Vui lòng thử lại.",
+    "openInNewTab": "Mở trong tab mới",
+    "openInNewTabUnavailable": "Lưu tệp này trước khi mở nó trong tab mới.",
+    "cancelAction": "Hủy bỏ",
+    "saveAction": "Lưu",
+    "materials": "Nguồn",
+    "insertSlide": "Thêm slide",
+    "imageActions": "Thao tác với hình ảnh",
+    "copyImage": "Sao chép hình ảnh",
+    "outlineAddSlide": "Thêm slide",
+    "outlineSelectAll": "Chọn tất cả",
+    "outlineDeleteSlide": "Xóa slide",
+    "outlineSelectAndReorderSlide": "Chọn và sắp xếp lại slide {page}",
+    "outlineSlideActions": "Thao tác slide {page}",
+    "materialsSidebarWidth": "Chiều rộng thanh bên Nguồn"
+  },
+  "systemContent": {
+    "imageAlt": "Hình ảnh",
+    "imageAltN": "Hình ảnh {n}",
+    "imageName": "Hình ảnh",
+    "imageNameN": "Hình ảnh {n}",
+    "imageLoadFailed": "Không thể tải hình ảnh.",
+    "loadFailed": "Không tải được.",
+    "collapse": "Thu gọn",
+    "pdfDoc": "Tài liệu PDF"
+  },
+  "selectionToolbar": {
+    "quote": "Trích dẫn",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "copyFailed": "Sao chép không thành công",
+    "rollback": "Khôi phục",
+    "rollbackRunning": "Quay lại",
+    "rollbackRestored": "Đã khôi phục",
+    "rollbackSuccess": "Đã khôi phục về phiên bản này",
+    "rollbackUnavailable": "Không tìm thấy điểm quay lui",
+    "rollbackFailed": "Khôi phục không thành công",
+    "actions": "Thao tác với vùng chọn"
+  },
+  "codeBlock": {
+    "copyAria": "Sao chép mã",
+    "copy": "Sao chép mã",
+    "copied": "Đã sao chép",
+    "copiedToClipboard": "Đã sao chép mã vào bảng nhớ tạm"
+  },
+  "middle": {
+    "filePreview": "Xem trước",
+    "editor": "Trình chỉnh sửa",
+    "emptyHintTitle": "Bảng này có thể được sử dụng cho:",
+    "emptyHintItem1": "Phiên",
+    "emptyHintItem2": "Các mục đã lưu",
+    "emptyHintItem3": "Tệp",
+    "emptyHintItem4": "Nguồn",
+    "loadFailed": "Không tải được.",
+    "pdfLoadFailed": "Không tải được PDF.",
+    "totalPages": "{count} trang",
+    "defaultEditorContent": "# Chào mừng\n\nBắt đầu nhập hoặc nhập `/` để xem lệnh.\n\n## Tính năng\n\n- Markdown\n- Lệnh gạch chéo\n- Hỗ trợ AI\n- Tô sáng mã\n- Công thức toán\n- Bảng",
+    "newNote": "Tài liệu mới",
+    "untitledNote": "Tài liệu không có tiêu đề",
+    "pdfPreviewControls": "Điều khiển xem trước PDF",
+    "wordPreviewControls": "Điều khiển xem trước Word",
+    "toggleThumbnails": "Chuyển đổi hình thu nhỏ",
+    "pageNumberInputLabel": "Số trang hiện tại",
+    "pdfPageAlt": "Trang {page}",
+    "zoomIn": "Phóng to",
+    "zoomOut": "Thu nhỏ",
+    "downloadPdf": "Tải xuống PDF",
+    "printPdf": "In PDF",
+    "addToChat": "Thêm vào trò chuyện",
+    "copyText": "Sao chép",
+    "copied": "Đã sao chép",
+    "untitledSlides": "Trang trình bày không có tiêu đề",
+    "deckwiseSlidesFailedTitle": "Trang trình bày không mở được",
+    "deckwiseSlidesLoadFailed": "Không tải được slide.",
+    "failedToLoadExampleTargets": "Không tải được mục tiêu mẫu.",
+    "missingSlidesFileId": "Thiếu id tệp slide chẳng hạn như quảng cáo.",
+    "exampleTitleRequired": "Tiêu đề ví dụ là bắt buộc.",
+    "sortOrderInteger": "Thứ tự sắp xếp phải là số nguyên.",
+    "promoteExample": "Quảng bá ví dụ",
+    "promoteExampleDescription": "Đăng ký tệp slide đã xuất bản này vào danh mục ví dụ.",
+    "promoteExampleSuccess": "Ví dụ được quảng cáo lên thư viện.",
+    "promoteExampleFailed": "Không thể quảng cáo ví dụ về slide.",
+    "titleField": "Tiêu đề",
+    "replaceTarget": "Thay thế mục tiêu",
+    "createNewExample": "Tạo ví dụ mới",
+    "selectedExample": "Ví dụ được chọn ({id})",
+    "category": "Danh mục",
+    "tags": "Thẻ",
+    "sort": "Sắp xếp",
+    "tagsPlaceholder": "du lịch, giới thiệu",
+    "enabled": "Đã bật",
+    "promoting": "Quảng bá...",
+    "officeLoadFailed": "Không tải được tệp Office này.",
+    "missingSlidesFileIdForPreviewUpload": "Thiếu id tệp slide để tải lên bản xem trước.",
+    "uploadedPreviewImages": "Đã tải lên {count} hình ảnh xem trước.",
+    "failedToUploadPreviewImages": "Không thể tải lên hình ảnh xem trước slide.",
+    "imageUploadFailed": "Tải hình ảnh lên không thành công. Vui lòng thử lại.",
+    "missingSlidesDocumentIdForPublish": "Thiếu id tài liệu slide để xuất bản.",
+    "resolveConflictBeforePublishing": "Giải quyết xung đột sửa đổi hiện tại trước khi xuất bản.",
+    "missingSlidesDocumentIdForShare": "Thiếu id tài liệu slide để chia sẻ.",
+    "resolveConflictBeforeSharing": "Giải quyết xung đột sửa đổi hiện tại trước khi chia sẻ.",
+    "sentSlidesShareEmail": "Chia sẻ email được gửi tới {count} người nhận.",
+    "publishedPublicSlides": "Các slide đã xuất bản được công khai.",
+    "publishPublicSlidesFailed": "Không thể xuất bản các slide một cách công khai. Vui lòng thử lại.",
+    "publicSlidesLinkMissing": "Các slide đã được xuất bản nhưng thiếu liên kết công khai. Vui lòng thử lại.",
+    "unpublishedPublicSlides": "Quyền truy cập công cộng bị tắt.",
+    "unpublishPublicSlidesFailed": "Không tắt được quyền truy cập công cộng. Vui lòng thử lại.",
+    "createShareLinkFailed": "Không tạo được liên kết chia sẻ. Vui lòng thử lại.",
+    "shareLinkMissing": "Liên kết chia sẻ bị thiếu. Vui lòng thử lại.",
+    "sendShareEmailFailed": "Không gửi được email chia sẻ. Vui lòng thử lại.",
+    "publishedSlidesFile": "Tệp slide đã xuất bản {fileId}.",
+    "publishedSlides": "Các slide đã xuất bản",
+    "deckwiseSlidesReloadedLatestRemote": "{message} Đã tải lại phiên bản từ xa mới nhất.",
+    "deckwiseSlidesReloadAfterSaveFailureFailed": "Không thể tải lại slide sau khi lưu không thành công.",
+    "deckwiseSlidesRefreshAfterAgentFailed": "Không thể làm mới các slide sau khi cập nhật nhân viên hỗ trợ.",
+    "deckwiseSlidesThemeUpdateFailed": "Không cập nhật được chủ đề slide. Vui lòng thử lại.",
+    "deckwiseSlidesAgentConflict": "Tác nhân đã cập nhật slide này sau khi bạn bắt đầu chỉnh sửa cục bộ. Hãy lưu hoặc tải lại tài liệu trước khi tiếp tục.",
+    "deckwiseSlidesChangedWhileSaving": "Các slide đã thay đổi trong khi lưu."
+  },
+  "projects": {
+    "audienceReviewTrigger": "Đánh giá",
+    "audienceReviewTriggerAria": "Điểm tổng thể {score} trên 100. Mở các đề xuất đánh giá",
+    "audienceReviewTitle": "Đánh giá từ khán giả",
+    "audienceReviewDescription": "Đánh giá bản trình bày này từ góc nhìn của khán giả.",
+    "audienceReviewAgain": "Đánh giá lại",
+    "audienceReviewClose": "Đóng phần đánh giá từ khán giả",
+    "audienceReviewLoading": "Đang tải bản đánh giá mới nhất...",
+    "audienceReviewGenerating": "Đang tạo bản đánh giá từ khán giả",
+    "audienceReviewPreparingImages": "Đang chuẩn bị hình ảnh để đánh giá",
+    "audienceReviewSystemError": "Lỗi hệ thống",
+    "audienceReviewTryAgain": "Thử lại",
+    "audienceReviewUnavailable": "Chưa có bản đánh giá nào có thể sử dụng lại.",
+    "audienceReviewGenerate": "Tạo bản đánh giá",
+    "audienceReviewComplete": "Bản trình bày của bạn đã sẵn sàng để trình chiếu",
+    "audienceReviewNoSuggestions": "Không tìm thấy đề xuất đánh giá nào từ khán giả.",
+    "audienceReviewSuggestionFallback": "Đề xuất",
+    "audienceReviewFix": "Sửa",
+    "audienceReviewFixAria": "Sửa đề xuất: {title}",
+    "audienceReviewDismiss": "Bỏ qua",
+    "audienceReviewDismissAria": "Bỏ qua đề xuất: {title}",
+    "audienceReviewSlide": "Trang",
+    "audienceReviewAllSlides": "Tất cả trang chiếu",
+    "audienceReviewSlideList": "Trang chiếu {pages}",
+    "title": "Dự án",
+    "subtitle": "Gần đây đã mở đầu tiên",
+    "openingRecentProject": "Mở dự án gần đây",
+    "openingRecentProjectHint": "Trước tiên hãy kiểm tra bộ đệm cục bộ, sau đó xác nhận dự án gần đây nhất của bạn.",
+    "openingRecentProjectSlowHint": "Mạng chậm. Vẫn đang cố gắng tiếp cận dịch vụ dự án.",
+    "loadRecentTimeoutTitle": "Đã hết thời gian kết nối với dịch vụ dự án",
+    "loadRecentTimeoutMessage": "Trên mạng chậm, chúng tôi ngừng chờ đợi thay vì để trang chủ bị treo. Vui lòng thử lại.",
+    "loadRecentFailedTitle": "Không thể tải dự án gần đây của bạn",
+    "loadRecentFailedMessage": "Mạng chậm hoặc không ổn định. Vui lòng thử lại.",
+    "loadingProject": "Đang tải dự án",
+    "loadFailedTitle": "Không thể tải dự án",
+    "startTitle": "Hôm nay bạn trình bày gì?",
+    "startComposerPlaceholder": "Bắt đầu với một ý tưởng hoặc tải tệp lên",
+    "invalidProjectData": "Dịch vụ dự án trả về dữ liệu không đầy đủ. Vui lòng thử lại.",
+    "loadTimeoutMessage": "Kết nối với dịch vụ dự án đã hết thời gian chờ. Vui lòng kiểm tra mạng của bạn và thử lại.",
+    "loadNetworkErrorMessage": "Mạng chậm hoặc không ổn định nên không thể tải dự án ngay bây giờ. Vui lòng thử lại.",
+    "missingOrDeleted": "Dự án này không tồn tại hoặc đã bị xóa",
+    "recentTitle": "Dự án gần đây",
+    "recentSubtitle": "Hoạt động trong 7 ngày qua",
+    "recentEmpty": "Không có dự án gần đây",
+    "allTitle": "Tất cả",
+    "new": "Mới",
+    "newProject": "Dự án mới",
+    "myProject": "dự án của tôi",
+    "createCardSubtitle": "Tạo không gian làm việc mới",
+    "emptyTitle": "Chưa có dự án nào",
+    "emptySubtitle": "Tạo dự án đầu tiên của bạn để bắt đầu",
+    "pleaseWait": "Vui lòng đợi",
+    "createFailed": "Không thể tạo dự án. Vui lòng thử lại sau.",
+    "confirmDelete": "Bạn có chắc chắn muốn xóa dự án này?",
+    "deleteFailed": "Không thể xóa. Vui lòng thử lại sau.",
+    "renamePrompt": "Đổi tên dự án",
+    "renameEmptyName": "Tên dự án không được để trống.",
+    "renameFailed": "Không đổi tên được. Vui lòng thử lại sau.",
+    "projectNumber": "Dự án #{id}",
+    "updatedAt": "Đã cập nhật {date}",
+    "searchPlaceholder": "Tìm kiếm dự án",
+    "noResults": "Không có dự án phù hợp",
+    "timeGroups": {
+      "today": "hôm nay",
+      "yesterday": "Hôm qua",
+      "pastWeek": "Tuần trước",
+      "past30Days": "30 ngày qua",
+      "older": "Cũ hơn"
+    },
+    "outline": "phác thảo",
+    "slides": "Trang trình bày",
+    "untitledProject": "Dự án không có tiêu đề",
+    "generateSlides": "Tạo slide",
+    "generatingSlides": "Đang tạo...",
+    "generationWorkflowTitle": "Tạo slide",
+    "generationWorkflow": {
+      "outline": "Viết dàn ý",
+      "theme": "Chọn chủ đề",
+      "layout": "Lập bố cục trang",
+      "visuals": "Chọn hình ảnh",
+      "slots": "Cấu trúc nội dung slide",
+      "deck": "Dựng bản trình chiếu"
+    },
+    "customize": "Tùy chỉnh",
+    "generateSlidesSettings": "Tạo cài đặt slide",
+    "textContent": "Nội dung văn bản",
+    "textContentMode": "Chế độ nội dung văn bản",
+    "amountOfText": "Số lượng văn bản",
+    "writeFor": "Viết cho...",
+    "tone": "Giai điệu",
+    "theme": "chủ đề",
+    "viewMore": "Xem thêm",
+    "themeHelp": "Sử dụng một trong những chủ đề phổ biến của chúng tôi bên dưới hoặc xem thêm",
+    "titlePreview": "Tiêu đề",
+    "bodyLinkPreview": "Nội dung & liên kết",
+    "themePistachio": "quả hồ trăn",
+    "themeVolt": "vôn",
+    "densityMinimal": "Tối thiểu",
+    "densityConcise": "ngắn gọn",
+    "densityDetailed": "Chi tiết",
+    "densityExtensive": "Mở rộng",
+    "textModeGenerate": "Tạo",
+    "textModeCondense": "ngưng tụ",
+    "textModePreserve": "Bảo quản",
+    "audienceBusinessLabel": "Kinh doanh",
+    "audienceBusinessContent": "Các chuyên gia đang làm việc tạo ra các bài thuyết trình về kinh doanh, chiến lược, bán hàng hoặc nội bộ",
+    "audienceHighSchoolersLabel": "Học sinh trung học",
+    "audienceHighSchoolersContent": "Học sinh lớp 9-12 thực hiện các dự án, báo cáo và thuyết trình trong lớp",
+    "audienceCollegeStudentsLabel": "sinh viên đại học",
+    "audienceCollegeStudentsContent": "Sinh viên đại học hoặc sau đại học chuẩn bị khóa học, nghiên cứu hoặc thuyết trình học thuật",
+    "audienceCreativesLabel": "Quảng cáo",
+    "audienceCreativesContent": "Nhà thiết kế, nghệ sĩ, nhà tiếp thị và người sáng tạo xây dựng nội dung có tính biểu cảm trực quan",
+    "audienceTechEnthusiastsLabel": "Người đam mê công nghệ",
+    "audienceTechEnthusiastsContent": "Những người quan tâm đến công nghệ, phần mềm, công cụ AI và sản phẩm kỹ thuật số",
+    "toneProfessionalLabel": "chuyên nghiệp",
+    "toneProfessionalContent": "Văn bản trau chuốt, ngắn gọn và thuyết phục cho giao tiếp kinh doanh hoặc nơi làm việc",
+    "toneConversationalLabel": "đàm thoại",
+    "toneConversationalContent": "Lời văn thân thiện, tự nhiên, thoải mái, tạo cảm giác gần gũi và nhân văn",
+    "toneTechnicalLabel": "kỹ thuật",
+    "toneTechnicalContent": "Viết chính xác, có cấu trúc và chi tiết để giải thích, hướng dẫn hoặc tài liệu kỹ thuật",
+    "toneAcademicLabel": "học thuật",
+    "toneAcademicContent": "Viết chính thức, khách quan và tập trung vào bằng chứng cho nghiên cứu, tiểu luận hoặc công việc học thuật",
+    "toneInspirationalLabel": "truyền cảm hứng",
+    "toneInspirationalContent": "Bài viết mang tính khích lệ, tràn đầy năng lượng và nâng cao tinh thần, tạo động lực cho người đọc",
+    "toneHumorousLabel": "hài hước",
+    "toneHumorousContent": "Lối viết vui tươi, hóm hỉnh và mang tính giải trí giúp tăng thêm cá tính nhưng vẫn phù hợp",
+    "cardsBelowUpgradeAction": "Nâng cấp",
+    "cardsBelowUpgradeSuffix": "để tạo ra tất cả các thẻ",
+    "saveOutlineBeforeGenerate": "Lưu dàn bài trước khi tạo slide.",
+    "waitForImageUploadsBeforeGenerate": "Đợi quá trình tải lên hình ảnh hoàn tất trước khi tạo slide.",
+    "generateSlidesFailed": "Không tạo được slide.",
+    "firstDraftLabel": "Bản nháp đầu tiên"
+  },
+  "personalization": {
+    "title": "Cá nhân hóa",
+    "subtitle": "Quản lý bạn là ai và Deckwise ghi nhớ những gì",
+    "accountSection": "Tài khoản",
+    "account": "Tài khoản",
+    "general": "chung",
+    "models": "Mô hình",
+    "usageBilling": "Cách sử dụng & thanh toán",
+    "accountSubtitle": "Quản lý chi tiết hồ sơ và tài khoản của bạn.",
+    "generalSubtitle": "Điều chỉnh tùy chọn ứng dụng cho không gian làm việc của bạn.",
+    "usageSubtitle": "Xem lại thông tin đăng ký và thanh toán.",
+    "featuresSection": "Tính năng",
+    "mail": "Thư Deckwise",
+    "dataControls": "Kiểm soát dữ liệu",
+    "myComputer": "Máy tính của tôi",
+    "cloudBrowser": "Trình duyệt đám mây",
+    "skills": "Kỹ năng",
+    "mcp": "MCP",
+    "connectors": "Đầu nối",
+    "integrations": "Tích hợp",
+    "getHelp": "Nhận trợ giúp",
+    "profileTab": "Hồ sơ",
+    "knowledgeTab": "Kiến thức",
+    "nickname": "Biệt hiệu",
+    "nicknamePlaceholder": "Jane",
+    "occupation": "Nghề nghiệp",
+    "occupationPlaceholder": "Nhà thiết kế sản phẩm",
+    "moreAboutYou": "Thông tin thêm về bạn",
+    "aboutPlaceholder": "Tôi là một nhà phân tích có trụ sở tại New York. Tôi làm việc chủ yếu trong React và SQL.",
+    "profileHelp": "Deckwise sử dụng thông tin này để cá nhân hóa câu trả lời cho tất cả nhiệm vụ.",
+    "customInstructions": "Hướng dẫn tùy chỉnh",
+    "instructionsPlaceholder": "Hãy ngắn gọn và trực tiếp. Mặc định là Python trừ khi tôi nói khác. Khi viết tài liệu, hãy sử dụng giọng điệu chuyên nghiệp và trích dẫn nguồn.",
+    "saveProfile": "Lưu hồ sơ",
+    "savedStatus": "Đã lưu cá nhân hóa",
+    "loadFailed": "Không tải được nội dung cá nhân hóa.",
+    "saveFailed": "Không lưu được thông tin cá nhân hóa.",
+    "memoriesHeading": "Ký ức",
+    "rulesHeading": "Quy tắc",
+    "memoryTitlePlaceholder": "Tiêu đề kỷ niệm",
+    "memoryContentPlaceholder": "Điều gì đó Deckwise nên nhớ",
+    "ruleContentPlaceholder": "Deckwise nên phản hồi hoặc hành xử như thế nào",
+    "addMemory": "Thêm bộ nhớ",
+    "addRule": "Thêm quy tắc",
+    "emptyMemories": "Chưa có kỷ niệm nào được lưu.",
+    "emptyRules": "Chưa có quy tắc nào được lưu.",
+    "enabled": "Đã bật",
+    "disabled": "Đã tắt",
+    "sourceUser": "người dùng",
+    "sourceAi": "AI",
+    "personal": "cá nhân",
+    "notSignedIn": "Chưa đăng nhập",
+    "integrationsSubtitle": "Quản lý ứng dụng đã kết nối và nguồn tệp.",
+    "integrationsDescription": "Kết nối dịch vụ lưu trữ đám mây để Deckwise có thể nhập các tệp bạn chọn khi cần.",
+    "googleDriveTitle": "Google Drive",
+    "googleDriveDescription": "Nhập tệp từ Google Drive.",
+    "notionTitle": "Notion",
+    "notionDescription": "Nhập trang từ Notion.",
+    "connected": "Đã kết nối",
+    "notConnected": "Chưa kết nối",
+    "connect": "Kết nối",
+    "disconnect": "Ngắt kết nối",
+    "disconnectGoogleDrive": "Ngắt kết nối",
+    "disconnectGoogleDriveConfirmTitle": "Ngắt kết nối Google Drive?",
+    "disconnectGoogleDriveConfirmMessage": "Deckwise sẽ thu hồi token Google Drive đã lưu và ngừng dùng kết nối này. Các tệp đã nhập vào dự án vẫn sẽ nằm trong không gian làm việc của bạn.",
+    "googleDriveConnected": "Đã kết nối Google Drive.",
+    "googleDriveDisconnected": "Đã ngắt kết nối Google Drive.",
+    "googleDriveAuthorizationPending": "Hoàn tất ủy quyền Google Drive trong tab đã mở.",
+    "connectGoogleDriveFailed": "Không thể kết nối Google Drive",
+    "disconnectGoogleDriveFailed": "Không thể ngắt kết nối Google Drive",
+    "disconnectNotion": "Ngắt kết nối",
+    "disconnectNotionConfirmTitle": "Ngắt kết nối Notion?",
+    "disconnectNotionConfirmMessage": "Deckwise sẽ thu hồi token Notion đã lưu và ngừng dùng kết nối này. Các trang đã nhập vào dự án vẫn sẽ nằm trong không gian làm việc của bạn.",
+    "notionConnected": "Đã kết nối Notion.",
+    "notionDisconnected": "Đã ngắt kết nối Notion.",
+    "notionAuthorizationPending": "Hoàn tất ủy quyền Notion trong tab đã mở.",
+    "connectNotionFailed": "Không thể kết nối Notion",
+    "disconnectNotionFailed": "Không thể ngắt kết nối Notion",
+    "oneDriveTitle": "OneDrive",
+    "oneDriveDescription": "Nhập tệp từ Microsoft OneDrive.",
+    "disconnectOneDrive": "Ngắt kết nối",
+    "disconnectOneDriveConfirmTitle": "Ngắt kết nối OneDrive?",
+    "disconnectOneDriveConfirmMessage": "Deckwise sẽ thu hồi token OneDrive đã lưu và ngừng dùng kết nối này. Các tệp đã nhập vào dự án vẫn sẽ nằm trong không gian làm việc của bạn.",
+    "oneDriveConnected": "Đã kết nối OneDrive.",
+    "oneDriveDisconnected": "Đã ngắt kết nối OneDrive.",
+    "oneDriveAuthorizationPending": "Hoàn tất ủy quyền OneDrive trong tab đã mở.",
+    "connectOneDriveFailed": "Không thể kết nối OneDrive",
+    "disconnectOneDriveFailed": "Không thể ngắt kết nối OneDrive",
+    "dropboxTitle": "Dropbox",
+    "dropboxDescription": "Nhập tệp từ Dropbox.",
+    "disconnectDropbox": "Ngắt kết nối",
+    "disconnectDropboxConfirmTitle": "Ngắt kết nối Dropbox?",
+    "disconnectDropboxConfirmMessage": "Deckwise sẽ thu hồi token Dropbox đã lưu và ngừng dùng kết nối này. Các tệp đã nhập vào dự án vẫn sẽ nằm trong không gian làm việc của bạn.",
+    "dropboxConnected": "Đã kết nối Dropbox.",
+    "dropboxDisconnected": "Đã ngắt kết nối Dropbox.",
+    "dropboxAuthorizationPending": "Hoàn tất ủy quyền Dropbox trong tab đã mở.",
+    "dropboxPickerRetryRequired": "Dropbox đã kết nối. Nhấp lại vào Dropbox để chọn tệp.",
+    "connectDropboxFailed": "Không thể kết nối Dropbox",
+    "disconnectDropboxFailed": "Không thể ngắt kết nối Dropbox",
+    "integrationLoadFailed": "Không thể tải tích hợp",
+    "loadingIntegrations": "Đang tải",
+    "comingSoon": "Sắp có"
+  },
+  "shareSheet": {
+    "sharing": "Chia sẻ",
+    "searchPlaceholder": "Thêm email hoặc người",
+    "copyShareLink": "Sao chép liên kết chia sẻ",
+    "copied": "Đã sao chép",
+    "copyPublicLink": "Sao chép liên kết công khai",
+    "publishPublicSlides": "Xuất bản",
+    "updatePublicSlides": "Cập nhật",
+    "unpublishPublicSlides": "Hủy xuất bản",
+    "unpublishedPublicSlides": "Đã hủy xuất bản",
+    "sendEmail": "Gửi email",
+    "emailSent": "Đã gửi",
+    "exportType": "Loại xuất",
+    "exportPdf": "Xuất sang PDF",
+    "exportPowerPoint": "Xuất sang PowerPoint",
+    "exportGoogleSlides": "Xuất sang Google Slides",
+    "exportPngs": "Xuất dưới dạng PNG",
+    "installFonts": "Cài đặt phông chữ",
+    "installFontsDescription": "Để đảm bảo bản trình bày của bạn trông đẹp mắt trong PowerPoint, hãy cài đặt các phông chữ này trên máy tính của bạn:"
+  },
+  "marketingHeader": {
+    "ariaLabel": "Điều hướng trang tiếp thị",
+    "directLinks": {
+      "enterprise": "doanh nghiệp",
+      "overview": "Tổng quan",
+      "pricing": "Định giá"
+    },
+    "menus": {
+      "product": {
+        "label": "Sản phẩm",
+        "hero": {
+          "title": "Deckwise",
+          "description": "Không gian làm việc AI của bạn"
+        }
+      },
+      "ai": {
+        "label": "AI"
+      },
+      "solutions": {
+        "label": "giải pháp"
+      },
+      "resources": {
+        "label": "Tài nguyên"
+      }
+    },
+    "sections": {
+      "aiFeatures": "AI tính năng",
+      "browse": "Duyệt qua",
+      "companySize": "Quy mô công ty",
+      "discover": "khám phá",
+      "exploreUseCases": "Khám phá các trường hợp sử dụng",
+      "learn": "học hỏi",
+      "teams": "đội",
+      "useCases": "kịch bản sử dụng"
+    },
+    "items": {
+      "academy": {
+        "title": "đại học"
+      },
+      "agents": {
+        "title": "Tác nhân",
+        "description": "Tự động hóa các tác vụ lặp đi lặp lại"
+      },
+      "aiMeetingNotes": {
+        "title": "AI biên bản họp",
+        "description": "Sử dụng AI để viết biên bản rõ ràng"
+      },
+      "aiUseCases": {
+        "title": "AI kịch bản sử dụng"
+      },
+      "blog": {
+        "title": "Blog"
+      },
+      "connections": {
+        "title": "kết nối",
+        "description": "Kết nối ứng dụng của bạn"
+      },
+      "consultants": {
+        "title": "nhà tư vấn"
+      },
+      "customerStories": {
+        "title": "trường hợp khách hàng"
+      },
+      "deckwiseAi": {
+        "title": "Deckwise AI",
+        "description": "Công cụ làm việc AI"
+      },
+      "design": {
+        "title": "thiết kế"
+      },
+      "docs": {
+        "title": "Tài liệu",
+        "description": "Đơn giản nhưng mạnh mẽ"
+      },
+      "education": {
+        "title": "giáo dục"
+      },
+      "engProduct": {
+        "title": "Kỹ thuật và Sản phẩm"
+      },
+      "enterprise": {
+        "title": "doanh nghiệp"
+      },
+      "enterpriseSearch": {
+        "title": "Tìm kiếm doanh nghiệp",
+        "description": "Tìm câu trả lời nhanh chóng"
+      },
+      "forLife": {
+        "title": "cuộc sống"
+      },
+      "forWork": {
+        "title": "làm việc"
+      },
+      "help": {
+        "title": "giúp đỡ"
+      },
+      "it": {
+        "title": "CNTT"
+      },
+      "knowledgeBase": {
+        "title": "cơ sở tri thức",
+        "description": "Quản lý tập trung kiến thức nhóm"
+      },
+      "marketing": {
+        "title": "thị trường"
+      },
+      "personal": {
+        "title": "cá nhân"
+      },
+      "productTours": {
+        "title": "Tham quan sản phẩm"
+      },
+      "professional": {
+        "title": "chuyên gia"
+      },
+      "projects": {
+        "title": "dự án",
+        "description": "Quản lý tất cả các dự án"
+      },
+      "security": {
+        "title": "an toàn",
+        "description": "An toàn và có thể mở rộng"
+      },
+      "smallBusinesses": {
+        "title": "đội"
+      },
+      "startups": {
+        "title": "Công ty khởi nghiệp"
+      },
+      "templates": {
+        "title": "mẫu"
+      },
+      "webinars": {
+        "title": "Hội thảo trực tuyến"
+      },
+      "whatsNew": {
+        "title": "Tin tức mới nhất"
+      }
+    },
+    "footer": {
+      "productLeft": "3.5: Deckwise Nền tảng dành cho nhà phát triển. Xem có gì mới",
+      "productRight": "Tải xuống ứng dụng Deckwise"
+    }
+  },
+  "pricing": {
+    "metadata": {
+      "title": "Deckwise AI Giá cả",
+      "description": "So sánh Deckwise Free và Plus để AI soạn thảo bản trình bày, quản lý tệp dự án, quy trình làm việc nhóm và tạo bản trình bày có thể chỉnh sửa."
+    },
+    "aria": {
+      "billingOptions": "Tùy chọn thanh toán",
+      "included": "Đã bao gồm",
+      "plans": "kế hoạch",
+      "trustedTeams": "Các đội sử dụng Deckwise"
+    },
+    "hero": {
+      "title": "Định giá",
+      "logoStrip": "Các đội này đang sử dụng"
+    },
+    "billing": {
+      "monthly": "Thanh toán hàng tháng",
+      "yearly": "Thanh toán hàng năm",
+      "save": "Tiết kiệm tới 20%",
+      "pricesNote": "Giá được hiển thị bằng đô la Mỹ"
+    },
+    "groups": {
+      "essentials": {
+        "eyebrow": "Khái niệm cơ bản",
+        "title": "Thích hợp để tổ chức làm việc cá nhân và nhóm."
+      },
+      "workspace": {
+        "eyebrow": "Không gian làm việc AI",
+        "title": "Thích hợp cho việc chạy nhóm."
+      }
+    },
+    "plans": {
+      "badge": "Được đề xuất",
+      "currentCta": "Kế hoạch hiện tại",
+      "free": {
+        "name": "miễn phí",
+        "description": "Sắp xếp công việc cá nhân của bạn và thử các quy trình trình chiếu và tài liệu cơ bản.",
+        "price": "$0",
+        "priceNote": "hàng tháng",
+        "cta": "Bắt đầu",
+        "features": {
+          "feature1": "500 tín chỉ mỗi tháng",
+          "feature2": "Không gian dự án cơ bản",
+          "feature3": "Tải lên tệp hạn chế",
+          "feature4": "Mời tối đa 10 khách"
+        }
+      },
+      "plus": {
+        "name": "Cộng thêm",
+        "description": "Phù hợp với cá nhân và nhóm nhỏ sử dụng Deckwise ổn định.",
+        "price": "$12",
+        "priceNote": "hàng tháng",
+        "cta": "Bắt đầu với Plus",
+        "features": {
+          "feature1": "2.000 tín chỉ mỗi tháng",
+          "feature2": "lịch sử trang 30 ngày",
+          "feature3": "Tải lên tệp không giới hạn",
+          "feature4": "Mời tối đa 100 khách"
+        }
+      },
+      "pro": {
+        "name": "chuyên nghiệp",
+        "description": "Thích hợp cho các bài thuyết trình, thu thập dữ liệu thường xuyên hơn và quy trình công việc AI.",
+        "price": "$25",
+        "priceNote": "hàng tháng",
+        "cta": "Bắt đầu với Pro",
+        "features": {
+          "feature1": "2.000 tín chỉ mỗi tháng",
+          "feature2": "SSO SSO",
+          "feature3": "Quyền nâng cao",
+          "feature4": "Không gian riêng của nhóm"
+        }
+      },
+      "ultra": {
+        "name": "siêu",
+        "description": "Thích hợp cho sản xuất nặng, xử lý hàng loạt và quy trình làm việc nhóm có khối lượng lớn.",
+        "price": "100 USD",
+        "priceNote": "hàng tháng",
+        "cta": "Bắt đầu với Ultra",
+        "features": {
+          "feature1": "40.000 tín dụng mỗi tháng",
+          "feature2": "Người dùng tự động kích hoạt",
+          "feature3": "Nhật ký kiểm tra",
+          "feature4": "Hỗ trợ thành công tận tâm"
+        }
+      }
+    },
+    "quote": {
+      "company": "OpenAI",
+      "body": "Việc đặt tất cả công việc trên cùng một nền tảng mang lại sức mạnh to lớn.",
+      "author": "Brad Lightcap, COO"
+    },
+    "addons": {
+      "agents": {
+        "title": "Tác nhân tùy chỉnh",
+        "description": "Tự động hóa công việc dựa trên kiến thức của nhóm bạn."
+      },
+      "seats": {
+        "title": "AI chỗ ngồi",
+        "description": "Hãy để đồng đội nhận được câu trả lời nhanh chóng từ bối cảnh không gian làm việc của họ."
+      }
+    },
+    "comparison": {
+      "title": "Giải pháp và tính năng",
+      "headings": {
+        "feature": "chức năng",
+        "free": "miễn phí",
+        "plus": "Cộng thêm",
+        "pro": "chuyên nghiệp",
+        "ultra": "siêu"
+      },
+      "groups": {
+        "coreWorkspace": "không gian làm việc cốt lõi",
+        "aiCollaboration": "AI quy trình làm việc",
+        "securityAdmin": "An ninh và quản lý"
+      },
+      "rows": {
+        "pagesDocs": "Trang, slide và tài liệu",
+        "projectSpaces": "Không gian dự án được chia sẻ",
+        "fileUploads": "Tải tệp lên",
+        "versionHistory": "Lịch sử phiên bản",
+        "aiSearch": "AI tìm kiếm và viết",
+        "meetingNotes": "AI biên bản họp",
+        "customAgents": "Tác nhân tùy chỉnh",
+        "guests": "du khách",
+        "adminAnalytics": "Phân tích quản trị viên",
+        "samlSso": "SSO SSO",
+        "scim": "SCIM tự động kích hoạt",
+        "auditLog": "Nhật ký kiểm tra"
+      },
+      "values": {
+        "addOn": "mua bổ sung",
+        "advanced": "Nâng cao",
+        "custom": "tùy chỉnh",
+        "included": "Đã bao gồm",
+        "limited": "hạn chế",
+        "ninetyDays": "90 ngày",
+        "oneHundred": "100",
+        "sevenDays": "7 ngày",
+        "ten": "10",
+        "thirtyDays": "30 ngày",
+        "trial": "thử nghiệm",
+        "twoFifty": "250",
+        "unlimited": "không giới hạn"
+      }
+    },
+    "enterprise": {
+      "controls": {
+        "title": "Cần kiểm soát cấp doanh nghiệp?",
+        "body": "Đưa tính năng bảo mật, tự động cung cấp, kiểm tra và hỗ trợ vào cùng một kế hoạch triển khai."
+      },
+      "rollout": {
+        "title": "Bạn muốn triển khai cho nhiều nhóm?",
+        "body": "Chúng tôi có thể giúp lập kế hoạch cho không gian làm việc, quyền và mẫu trước khi đi vào hoạt động."
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "freeTrial": {
+        "question": "Tôi có thể dùng thử Deckwise miễn phí không?",
+        "answer": "Vâng. Gói Miễn phí cho phép bạn tạo không gian làm việc, mời các nhóm nhỏ và kiểm tra quy trình làm việc về tài liệu và trình chiếu cốt lõi trước khi nâng cấp."
+      },
+      "switchPlans": {
+        "question": "Tôi có thể chuyển đổi kế hoạch trong tương lai không?",
+        "answer": "Có. Người dùng trả phí có thể quản lý thanh toán theo tháng hoặc theo năm qua cổng do Stripe lưu trữ."
+      },
+      "aiPricing": {
+        "question": "Plus bao gồm những gì?",
+        "answer": "Free và Plus đều bao gồm quyền sử dụng AI. Plus cung cấp hạn mức hàng tuần cao hơn và mở khóa tính năng xuất PowerPoint cùng Google Slides có thể chỉnh sửa."
+      },
+      "annualBilling": {
+        "question": "Nó có hỗ trợ thanh toán hàng năm không?",
+        "answer": "Hỗ trợ. Các gói trả phí được cung cấp hàng năm và phù hợp với các nhóm yêu cầu mức sử dụng ổn định ở cấp công ty."
+      }
+    }
+  },
+  "careersPage": {
+    "metadata": {
+      "title": "Nghề nghiệp tại Deckwise: Xây dựng quy trình thuyết trình AI",
+      "description": "Tham gia Deckwise để xây dựng phần mềm trình bày AI dành cho các nhóm biến nghiên cứu, tệp và phản hồi thành các bản trình chiếu có thể chỉnh sửa."
+    },
+    "hero": {
+      "eyebrow": "Tham gia Deckwise",
+      "title": "Hãy tham gia cùng chúng tôi trong việc xây dựng thế hệ công cụ làm việc tri thức tiếp theo.",
+      "body": "Khi các nhóm có thể điều chỉnh phần mềm theo cách họ thực sự làm việc thì nhiều vấn đề sẽ được giải quyết nhanh hơn. Sứ mệnh của chúng tôi là cung cấp không gian làm việc kết nối kiến ​​thức, dự án và AI cho tất cả mọi người.",
+      "button": "Xem các vị trí mở"
+    },
+    "story": {
+      "title": "câu chuyện của chúng tôi",
+      "body1": "Deckwise nảy sinh từ một câu hỏi đơn giản: tại sao công việc nhóm trở nên rời rạc hơn khi các công cụ ngày càng nhiều? Tài liệu, tệp, cuộc trò chuyện và bản trình diễn không ngừng phát triển nhưng bối cảnh dự án thực tế thường không có nơi ở ổn định.",
+      "body2": "Chúng tôi hy vọng xây dựng một không gian làm việc mà các nhóm có thể tự do định hình: nhẹ như một tờ giấy trắng nhưng có khả năng lưu giữ các dự án phức tạp, cơ sở kiến thức, tài liệu và sự hỗ trợ AI.",
+      "body3": "Điều này đòi hỏi các nhóm sản phẩm, kỹ thuật, thiết kế, nghiên cứu, tiếp thị và khách hàng phải hợp tác chặt chẽ với nhau. Chúng tôi đang tìm kiếm những người sẵn sàng trau dồi các công cụ cơ bản trong thời gian dài."
+    },
+    "positions": {
+      "title": "vị trí mở",
+      "filterLabel": "Lọc",
+      "location": "vị trí",
+      "department": "Sở",
+      "allLocations": "Tất cả địa điểm",
+      "allDepartments": "Tất cả các phòng ban",
+      "reset": "Đặt lại bộ lọc",
+      "departments": {
+        "engineering": "Kỹ thuật",
+        "design": "thiết kế",
+        "product": "Sản phẩm",
+        "marketing": "thị trường",
+        "customer": "Nhóm tài khoản"
+      },
+      "jobs": {
+        "aiEngineer": {
+          "title": "AI kỹ sư ứng dụng",
+          "location": "Thượng Hải/từ xa",
+          "department": "kỹ thuật"
+        },
+        "frontendEngineer": {
+          "title": "Kỹ sư front-end, kinh nghiệm biên tập",
+          "location": "Bắc Kinh / từ xa",
+          "department": "kỹ thuật"
+        },
+        "productDesigner": {
+          "title": "Nhà thiết kế sản phẩm, Công cụ sáng tạo",
+          "location": "Thượng Hải",
+          "department": "thiết kế"
+        },
+        "productManager": {
+          "title": "Giám đốc sản phẩm, AI Quy trình làm việc",
+          "location": "từ xa",
+          "department": "sản phẩm"
+        },
+        "growthMarketing": {
+          "title": "Giám đốc thị trường tăng trưởng",
+          "location": "Thâm Quyến/từ xa",
+          "department": "tiếp thị"
+        },
+        "customerSuccess": {
+          "title": "Người quản lý thành công của khách hàng",
+          "location": "Bắc Kinh",
+          "department": "khách hàng"
+        }
+      }
+    },
+    "culture": {
+      "title": "Deckwise hoạt động như thế nào",
+      "body": "Chúng tôi tin rằng những sản phẩm tốt nhất đến từ việc sử dụng nhất quán, phản hồi trực tiếp và đánh giá chất lượng sắc bén. Nhóm vẫn duy trì quy mô nhỏ, tập trung và nhanh chóng giải quyết các vấn đề thực tế của người dùng.",
+      "items": {
+        "craft": {
+          "title": "Chú ý tới tay nghề",
+          "body": "Chúng tôi quan tâm đến chi tiết, hiệu suất, khả năng bảo trì và sự mượt mà mà người dùng thực sự cảm nhận được hàng ngày."
+        },
+        "speed": {
+          "title": "duy trì tốc độ",
+          "body": "Sử dụng ranh giới rõ ràng và giao tiếp trực tiếp để giảm thời gian chờ đợi và đưa những ý tưởng hay vào các sản phẩm có thể kiểm chứng được càng nhanh càng tốt."
+        },
+        "truth": {
+          "title": "theo đuổi sự thật",
+          "body": "Luôn trung thực khi đối mặt với dữ liệu, phản hồi của người dùng và các hạn chế về mặt kỹ thuật, đồng thời sử dụng bằng chứng để đưa ra quyết định."
+        }
+      }
+    },
+    "values": {
+      "title": "giá trị của chúng tôi",
+      "items": {
+        "mission": "chịu trách nhiệm về sứ mệnh",
+        "direct": "Tốt bụng và trực tiếp",
+        "users": "Bắt đầu với các vấn đề của người dùng",
+        "systems": "Xây dựng hệ thống lâu dài"
+      }
+    },
+    "benefits": {
+      "title": "Lợi ích và hỗ trợ",
+      "items": {
+        "health": "Hỗ trợ sức khỏe và bảo hiểm",
+        "setup": "Ngân sách thiết bị văn phòng",
+        "learning": "Ngân sách học tập và tăng trưởng",
+        "flex": "Sắp xếp văn phòng linh hoạt",
+        "offsite": "Đồng sáng tạo nhóm và ngoại vi"
+      }
+    },
+    "mockup": {
+      "video": "Cuộc sống hàng ngày của đội",
+      "office": "văn hóa công sở",
+      "roles": "vị trí mở",
+      "team": "nhóm đa chức năng"
+    }
+  },
+  "securityPage": {
+    "metadata": {
+      "title": "Deckwise Bảo mật: Kiểm soát quyền riêng tư cho bài thuyết trình AI",
+      "description": "Xem cách Deckwise bảo vệ các dự án thuyết trình của AI bằng các biện pháp kiểm soát quyền riêng tư, ranh giới không gian làm việc an toàn và độ tin cậy sẵn sàng cho doanh nghiệp."
+    },
+    "hero": {
+      "eyebrow": "Bảo mật và quyền riêng tư",
+      "title": "Sự an toàn, bảo mật và quyền riêng tư của bạn là ưu tiên của chúng tôi.",
+      "body": "Deckwise bảo vệ dữ liệu nhóm khỏi thiết kế sản phẩm, cơ sở hạ tầng, kiểm soát quyền và việc sử dụng AI, cho phép các công ty đưa kiến thức và dự án vào cùng một không gian làm việc một cách an toàn.",
+      "button": "Tìm hiểu về giải pháp doanh nghiệp"
+    },
+    "sections": {
+      "security": {
+        "title": "an toàn",
+        "body": "Deckwise sử dụng phương pháp bảo mật theo thiết kế để bảo vệ dữ liệu. Từ truyền tải đến lưu trữ đến xử lý, chúng tôi giảm thiểu rủi ro thông qua các biện pháp kiểm soát theo lớp.",
+        "items": {
+          "infrastructure": {
+            "title": "cơ sở hạ tầng an ninh",
+            "body": "Việc truyền và lưu trữ dữ liệu được bảo vệ bằng mã hóa và giảm thiểu khả năng hiển thị thông qua các quy trình truy cập đặc quyền tối thiểu, quản lý khóa, giám sát và khắc phục lỗ hổng."
+          },
+          "operations": {
+            "title": "An ninh vận hành",
+            "body": "Các nhóm bảo mật liên tục giám sát cơ sở hạ tầng, mạng và tài sản sản phẩm để ứng phó kịp thời với hành vi bất thường và các mối đe dọa tiềm ẩn."
+          },
+          "product": {
+            "title": "an toàn sản phẩm",
+            "body": "Quản trị viên doanh nghiệp có thể định cấu hình SSO, cấp phép thành viên, nhật ký kiểm tra, quyền truy cập của khách và các quyền chi tiết để nâng cao khả năng hiển thị và kiểm soát của tổ chức."
+          }
+        }
+      },
+      "privacy": {
+        "title": "Quyền riêng tư",
+        "body": "Deckwise cam kết xử lý dữ liệu khách hàng một cách minh bạch và có kiểm soát, đồng thời giúp khách hàng hiểu cách thu thập, sử dụng và bảo vệ dữ liệu.",
+        "items": {
+          "data": {
+            "title": "Xử lý dữ liệu",
+            "body": "Chúng tôi thiết lập các quy trình và biện pháp bảo vệ xung quanh vòng đời dữ liệu, bao gồm thu thập, xử lý, lưu trữ, truy cập và xóa."
+          },
+          "agreements": {
+            "title": "Thỏa thuận và cam kết",
+            "body": "Thỏa thuận dịch vụ, điều khoản xử lý dữ liệu và tuyên bố về quyền riêng tư của chúng tôi được cập nhật liên tục để phản ánh các quy định và thông lệ của ngành."
+          },
+          "governance": {
+            "title": "quản trị dữ liệu",
+            "body": "Giúp khách hàng giữ dữ liệu của họ an toàn, chính xác, riêng tư và có thể quản lý được thông qua các chính sách và ranh giới truy cập rõ ràng."
+          }
+        }
+      },
+      "compliance": {
+        "title": "Tuân thủ",
+        "body": "Deckwise đang xây dựng chương trình bảo mật và quyền riêng tư dành cho khách hàng doanh nghiệp để giúp các nhóm quản lý không gian làm việc của họ theo tiêu chuẩn ngành.",
+        "items": {
+          "soc": "Chuẩn bị SOC 2 Loại 2",
+          "iso": "Lập kế hoạch ISO 27001/27701",
+          "access": "Kiểm soát truy cập doanh nghiệp",
+          "audit": "Khả năng kiểm tra và ghi nhật ký"
+        }
+      },
+      "ai": {
+        "title": "Quản trị AI",
+        "body": "Các khả năng AI của Deckwise được thiết kế dựa trên độ tin cậy, khả năng giải thích và khả năng kiểm soát. Dữ liệu khách hàng sẽ không được sử dụng để đào tạo các mô hình chung và các ranh giới về quyền sẽ được tôn trọng trong quyền truy cập AI.",
+        "items": {
+          "safe": "giải phóng mặt bằng an ninh",
+          "transparent": "Hướng dẫn minh bạch",
+          "useful": "Tập trung vào giá trị người dùng",
+          "governed": "Quản trị ranh giới dữ liệu"
+        }
+      },
+      "reliability": {
+        "title": "Độ tin cậy",
+        "body": "Các nhóm cần một không gian làm việc luôn sẵn có. Deckwise cải thiện độ tin cậy của dịch vụ thông qua giám sát, sao lưu, kế hoạch khôi phục và tính minh bạch về trạng thái.",
+        "items": {
+          "uptime": "Được thiết kế để đảm bảo độ khả dụng 99,9%",
+          "backup": "Quá trình sao lưu và phục hồi",
+          "status": "Trạng thái trong suốt",
+          "resilience": "Cơ sở hạ tầng có khả năng phục hồi"
+        }
+      }
+    },
+    "cta": {
+      "title": "Cần bảo mật và kiểm soát nâng cao?",
+      "body": "Hãy cho chúng tôi biết về nhu cầu triển khai, tuân thủ hoặc quyền của doanh nghiệp bạn và chúng tôi sẽ giúp bạn lên kế hoạch cho giải pháp không gian làm việc phù hợp.",
+      "button": "liên hệ bán hàng"
+    },
+    "mockup": {
+      "trust": "Trung tâm tin cậy",
+      "permission": "Kiểm soát quyền",
+      "audit": "Nhật ký kiểm tra",
+      "encryption": "Bảo vệ mã hóa",
+      "ai": "AI ranh giới dữ liệu"
+    }
+  },
+  "blogPage": {
+    "metadata": {
+      "title": "Deckwise Blog: AI Mẹo về quy trình làm việc của bản trình bày",
+      "description": "Đọc các bài viết của Deckwise về AI quy trình trình bày, tạo bản trình bày được hỗ trợ bởi tổng đài viên, cập nhật sản phẩm và quản lý kiến thức."
+    },
+    "hero": {
+      "eyebrow": "Công cụ & Thủ công",
+      "title": "Công cụ và sự khéo léo",
+      "body": "Những quan sát về tương lai của công việc, kinh nghiệm xây dựng sản phẩm và câu chuyện về cách các nhóm biến kiến thức thành việc thực thi nhanh hơn.",
+      "categoryLabel": "Danh mục blog",
+      "latestTitle": "Bài viết mới nhất",
+      "searchLabel": "Tìm kiếm blog",
+      "searchPlaceholder": "Tìm kiếm bài viết, tác giả hoặc chủ đề"
+    },
+    "categories": {
+      "latest": "Mới nhất",
+      "hq": "Deckwise trụ sở chính",
+      "teams": "đội",
+      "inspiration": "nguồn cảm hứng",
+      "builders": "người xây dựng",
+      "pioneers": "Đội tiên phong",
+      "tech": "công nghệ",
+      "mail": "Thư"
+    },
+    "featured": {
+      "category": "Deckwise trụ sở chính",
+      "title": "Giới thiệu Nền tảng dành cho nhà phát triển Deckwise",
+      "body": "Các khả năng mới của nhà phát triển kết nối dữ liệu, công cụ và tác nhân để các nhóm có thể mở rộng quy trình, xây dựng bối cảnh và tự động hóa công việc lặp đi lặp lại trong cùng một không gian làm việc.",
+      "author": "Max Chen",
+      "role": "Chủ sở hữu sản phẩm, Deckwise"
+    },
+    "articles": {
+      "developerPlatform": {
+        "category": "Deckwise trụ sở chính",
+        "title": "Giới thiệu Nền tảng dành cho nhà phát triển Deckwise",
+        "body": "Một bộ khối xây dựng mới giúp nhà phát triển và tác nhân kết nối tự nhiên hơn với kiến thức, dự án và công cụ kinh doanh của đội ngũ.",
+        "author": "Max Chen",
+        "role": "chủ sở hữu sản phẩm"
+      },
+      "customAgentsBeta": {
+        "category": "Deckwise trụ sở chính",
+        "title": "Những điều chúng tôi học được từ bản beta Tác nhân tùy chỉnh",
+        "body": "Để một đặc vụ trở thành một đồng đội thực sự, nó không chỉ cần thực hiện các lệnh mà còn phải hiểu bối cảnh, ranh giới và nhịp độ cộng tác của nhóm.",
+        "author": "Akshay Lin",
+        "role": "Đồng sáng lập"
+      },
+      "multiRegionData": {
+        "category": "công nghệ",
+        "title": "Xây dựng hệ thống dữ liệu đa vùng",
+        "body": "Từ tìm kiếm và phân tích đến ghi nhật ký sự kiện AI, cách các nhóm có thể thiết kế cơ sở hạ tầng khu vực hóa dữ liệu có thể mở rộng.",
+        "author": "Justin Lee, Adam Hudson",
+        "role": "Đội ngũ kỹ thuật"
+      },
+      "executionTax": {
+        "category": "nguồn cảm hứng",
+        "title": "Loại bỏ thuế thực thi đội",
+        "body": "Tại sao nhiều nhóm không thiếu ý tưởng nhưng lại thiếu một tầng làm việc thống nhất để liên tục đưa ra các quyết định dẫn đến kết quả?",
+        "author": "Áine Dundas",
+        "role": "tăng trưởng và thị trường"
+      },
+      "schemaChanges": {
+        "category": "công nghệ",
+        "title": "Làm cách nào để nắm bắt các thay đổi lược đồ vi phạm trước khi đi vào hoạt động",
+        "body": "Quy trình thiết kế lan can CI và cách quy trình này giúp các nhóm kỹ thuật giảm nguy cơ hồi quy.",
+        "author": "Maya Lekhi",
+        "role": "Đội ngũ kỹ thuật"
+      },
+      "dataResidency": {
+        "category": "Deckwise trụ sở chính",
+        "title": "Khả năng lưu trữ dữ liệu được mở rộng đến nhiều khu vực hơn",
+        "body": "Khách hàng doanh nghiệp cần lưu giữ dữ liệu ở đúng khu vực và chúng tôi đang biến khả năng khu vực hóa thành khả năng nền tảng cho không gian làm việc.",
+        "author": "Khosrowshahi mờ",
+        "role": "giám đốc công nghệ"
+      },
+      "pageDesign": {
+        "category": "công nghệ",
+        "title": "Thiết kế lại các quy tắc trực quan của trang",
+        "body": "Cách chúng tôi sắp xếp lại mật độ trang, phân cấp tiêu đề và khối nội dung để đảm bảo công việc phức tạp được rõ ràng.",
+        "author": "Paul Velleux",
+        "role": "thiết kế sản phẩm"
+      },
+      "chronicleLaunch": {
+        "category": "đội",
+        "title": "Cách một nhóm sử dụng Deckwise để quản lý các bản phát hành lớn",
+        "body": "Từ việc xuất bản danh sách kiểm tra đến cộng tác đa chức năng, một không gian làm việc rõ ràng có thể giúp các nút quan trọng dễ kiểm soát hơn như thế nào.",
+        "author": "Mayuresh Patole",
+        "role": "Người sáng lập và CEO"
+      },
+      "agentSecurity": {
+        "category": "công nghệ",
+        "title": "Cách chúng tôi xây dựng mô hình bảo mật cho tác nhân",
+        "body": "Tự động hóa tác nhân càng sâu thì càng cần thiết kế nhiều quyền, kiểm tra và xác thực con người vào sản phẩm cơ bản.",
+        "author": "Sean Keenan, Jacob Brackett",
+        "role": "An toàn và Kỹ thuật"
+      }
+    },
+    "newsletter": {
+      "title": "Tiếp tục đọc để biết bước tiếp theo về cách mọi thứ hoạt động",
+      "body": "Nhận các bài viết và trường hợp mới nhất về quy trình làm việc AI, quản lý kiến thức nhóm và xây dựng sản phẩm.",
+      "button": "Bắt đầu với Deckwise"
+    }
+  },
+  "mobilePage": {
+    "metadata": {
+      "title": "Deckwise Di động: Xem lại AI Dự án thuyết trình ở mọi nơi",
+      "description": "Sử dụng Deckwise trên iOS và Android để xem xét các dự án thuyết trình AI, nắm bắt ý tưởng và chuyển tiếp công việc trình chiếu từ mọi nơi."
+    },
+    "hero": {
+      "eyebrow": "Deckwise phiên bản di động",
+      "title": "Mang theo công việc của bạn mọi lúc, mọi nơi.",
+      "body": "Xem các dự án, ghi lại ý tưởng, nhận xét về bản nháp và để AI giúp bạn chuyển ý tưởng thành sản phẩm có thể phân phối trên điện thoại của mình."
+    },
+    "storeButtons": {
+      "appStore": "Cửa hàng ứng dụng",
+      "googlePlay": "Google Chơi",
+      "downloadOn": "Đã tải xuống từ",
+      "getItOn": "Thu được từ"
+    },
+    "features": {
+      "title": "Từ máy tính đến điện thoại di động, công việc luôn được kết nối.",
+      "items": {
+        "capture": {
+          "title": "Ghi lại các ý tưởng khi chúng diễn ra",
+          "body": "Nhanh chóng đưa cảm hứng sau cuộc họp, phản hồi của khách hàng và việc cần làm vào bối cảnh dự án."
+        },
+        "review": {
+          "title": "Xem bản nháp bất kỳ lúc nào",
+          "body": "Xem lại các bài thuyết trình, tài liệu và tài liệu chính của dự án khi đang di chuyển."
+        },
+        "ai": {
+          "title": "Trợ lý di động AI",
+          "body": "Đặt câu hỏi, tóm tắt nội dung dựa trên thông tin hiện có và chuyển sang bước tiếp theo."
+        },
+        "sync": {
+          "title": "Đồng bộ hóa trên các thiết bị",
+          "body": "Các bản cập nhật trên điện thoại của bạn sẽ quay trở lại cùng một không gian làm việc, không cần phải di chuyển chúng qua lại."
+        }
+      }
+    },
+    "quote": {
+      "body": "Khi tài liệu dự án, bản nháp và các bước tiếp theo có sẵn trên thiết bị di động, các nhóm có thể tiếp tục di chuyển công việc ngay cả khi không dùng máy tính để bàn của mình.",
+      "author": "Deckwise Nhóm tài khoản"
+    },
+    "cta": {
+      "title": "Tải xuống Deckwise cho thiết bị di động.",
+      "body": "Đưa bối cảnh dự án, trợ lý AI và quy trình trình bày vào iOS và Android.",
+      "button": "Bắt đầu miễn phí"
+    },
+    "mockup": {
+      "workspace": "Kế hoạch tung ra thị trường",
+      "ai": "AI Tóm tắt",
+      "task": "Bước tiếp theo",
+      "comment": "Bình luận đã được đồng bộ hóa"
+    }
+  },
+  "desktopPage": {
+    "metadata": {
+      "title": "Deckwise Máy tính để bàn: Nhanh hơn AI Chỉnh sửa bản trình bày",
+      "description": "Tải xuống máy tính để bàn Deckwise để có không gian làm việc thuyết trình AI tập trung với khả năng truy cập dự án, ngữ cảnh tệp và quy trình làm việc slide có thể chỉnh sửa nhanh hơn."
+    },
+    "hero": {
+      "eyebrow": "Deckwise máy tính để bàn",
+      "title": "Tải xuống ứng dụng dành cho máy tính để bàn để có trải nghiệm nhanh hơn.",
+      "body": "Nhanh chóng, ngắn gọn và ít xâm phạm. Đặt các tệp dự án, trợ lý AI và trình chỉnh sửa bản trình bày vào một cửa sổ tập trung."
+    },
+    "primaryCta": "Tải xuống cho macOS",
+    "quote": {
+      "body": "Bằng cách đặt bối cảnh dự án, bản nháp và trợ lý AI vào một không gian làm việc trên máy tính để bàn, các nhóm chuyển đổi công cụ ít hơn đáng kể.",
+      "author": "Deckwise Nhóm tài khoản",
+      "role": "Giám đốc điều hành và tiếp thị"
+    },
+    "download": {
+      "title": "Tải xuống Deckwise Máy tính để bàn",
+      "subtitle": "Trải nghiệm làm việc nhanh hơn, tập trung hơn đã sẵn sàng.",
+      "items": {
+        "macUniversal": "Tải xuống macOS Universal Edition",
+        "macApple": "Tải xuống macOS Apple Phiên bản silicon",
+        "macIntel": "Tải xuống phiên bản macOS Intel",
+        "windowsX64": "Tải xuống cho Windows x64",
+        "windowsArm": "Tải xuống phiên bản Windows Arm / Arm64"
+      }
+    },
+    "features": {
+      "offline": {
+        "title": "Giảm sự phiền nhiễu của trình duyệt",
+        "body": "Giữ bản trình bày, tài liệu dự án và quy trình công việc AI trong một cửa sổ riêng biệt."
+      },
+      "fast": {
+        "title": "Trở lại làm việc nhanh hơn",
+        "body": "Mở các dự án gần đây trực tiếp từ Dock hoặc thanh tác vụ để nhanh chóng tiếp tục chỉnh sửa."
+      },
+      "sync": {
+        "title": "Đồng bộ hóa trên các thiết bị",
+        "body": "Máy tính để bàn, web và thiết bị di động có chung bối cảnh dự án."
+      }
+    },
+    "mockup": {
+      "workspace": "Workspace ra mắt sản phẩm",
+      "document": "bản thảo thuyết trình",
+      "agent": "AI trợ lý",
+      "status": "Đồng bộ hóa"
+    }
+  },
+  "enterprisePage": {
+    "metadata": {
+      "title": "Deckwise Doanh nghiệp: Bảo mật AI Workspace thuyết trình",
+      "description": "Tìm hiểu cách Deckwise cung cấp cho nhóm doanh nghiệp một không gian làm việc thuyết trình AI an toàn cho các tệp dự án, quản trị và quy trình công việc đáng tin cậy."
+    },
+    "hero": {
+      "eyebrow": "Deckwise dành cho doanh nghiệp",
+      "title": "Kiến thức và công việc được kết nối.",
+      "body": "Không gian làm việc AI an toàn giúp các nhóm doanh nghiệp tập trung kiến thức, lập kế hoạch dự án và xây dựng nhanh hơn trong cùng một bối cảnh.",
+      "primaryCta": "Bắt đầu"
+    },
+    "trust": {
+      "label": "Được tin cậy bởi các nhóm phát triển nhanh và sáng tạo"
+    },
+    "stats": {
+      "first": {
+        "value": "#1",
+        "label": "Một không gian làm việc thống nhất cho các cơ sở kiến thức, dự án và bài viết AI"
+      },
+      "second": {
+        "value": "1 nơi",
+        "label": "Tập trung kiến thức của công ty, kế hoạch dự án, dữ liệu và quyết định"
+      },
+      "third": {
+        "value": "AI-sẵn sàng",
+        "label": "Làm cho kiến thức của nhóm có thể tìm kiếm được, có thể sử dụng lại và có thể hành động được"
+      }
+    },
+    "features": {
+      "items": {
+        "knowledge": {
+          "title": "Kiến thức công ty",
+          "body": "Đưa các cẩm nang, quy trình, kế hoạch phát hành và bối cảnh của nhóm vào một trang chủ được tổ chức rõ ràng, có thể tìm kiếm và chính xác."
+        },
+        "search": {
+          "title": "Tìm kiếm doanh nghiệp",
+          "body": "Tìm câu trả lời nhanh chóng trên Deckwise và các ứng dụng được kết nối, đồng thời để kiến thức của bạn được lưu chuyển khi bạn làm việc."
+        },
+        "projects": {
+          "title": "Dự án tích hợp",
+          "body": "Lập kế hoạch nhiệm vụ, theo dõi tiến độ, sắp xếp các nhóm và kết nối các bản tóm tắt, quyết định và sản phẩm bàn giao."
+        },
+        "integrations": {
+          "title": "Quy trình làm việc và kết nối",
+          "body": "Tự động hóa các quy trình, kết nối các công cụ phổ biến và đưa các tệp, cuộc hội thoại và tín hiệu bên ngoài vào cùng một không gian làm việc."
+        }
+      }
+    },
+    "ai": {
+      "title": "Tất cả trong một AI, ngay tại nơi bạn làm việc.",
+      "items": {
+        "context": {
+          "title": "AI với ngữ cảnh phù hợp",
+          "body": "Không phải là một hộp trò chuyện chung chung khác mà là một hộp trò chuyện hiểu các câu hỏi dựa trên kiến thức, dự án và quy trình làm việc của nhóm."
+        },
+        "oneTool": {
+          "title": "Một công cụ AI cho nhiều công việc",
+          "body": "Động não, viết, tìm kiếm, tạo bản trình diễn, tổ chức cuộc họp và nâng cao quy trình, tất cả đều ở cùng một nơi."
+        },
+        "integrated": {
+          "title": "Tích hợp vào công việc hàng ngày",
+          "body": "Không cần phải chuyển ứng dụng hoặc sao chép ngữ cảnh. AI xuất hiện trực tiếp tại nơi bạn lập kế hoạch, xây dựng và theo dõi công việc."
+        },
+        "secure": {
+          "title": "Mạnh mẽ và an toàn",
+          "body": "Các biện pháp kiểm soát quản trị, bảo mật và quản lý AI cấp doanh nghiệp giúp các nhóm sử dụng AI trong một môi trường được giới hạn chặt chẽ."
+        }
+      }
+    },
+    "values": {
+      "items": {
+        "empowering": {
+          "title": "Dễ dàng bắt đầu và nhóm muốn sử dụng nó.",
+          "body": "Các công cụ doanh nghiệp cần phải mạnh mẽ nhưng chúng cũng cần có trực giác. Deckwise cho phép các nhóm sắp xếp công việc phức tạp vào các trang, dự án và thư viện quen thuộc."
+        },
+        "customizable": {
+          "title": "Tùy chỉnh linh hoạt để phát triển cùng nhóm của bạn.",
+          "body": "Workspace có thể được điều chỉnh cho phù hợp với các nhóm, quyền và quy trình khác nhau, giảm sự phổ biến của các công cụ điểm và giảm chi phí bảo trì."
+        },
+        "connected": {
+          "title": "Mọi đội luôn ở trên cùng một trang.",
+          "body": "Kết nối các công cụ, nhóm và làm việc trong không gian làm việc có thể tìm kiếm để giúp các nhóm luôn liên kết, hoạt động nhanh hơn và đưa ra quyết định tốt hơn."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Được yêu mến bởi đội ngũ đổi mới.",
+      "items": {
+        "figma": {
+          "logo": "Figma",
+          "quote": "Khi thông tin được cấu trúc rõ ràng, các nhóm có thể tìm thấy nội dung một cách trực quan hơn và ghi nhớ bối cảnh ở đâu.",
+          "person": "Marie Szuts",
+          "role": "Mọi người hoạt động"
+        },
+        "remote": {
+          "logo": "Từ xa",
+          "quote": "Kiến thức tập trung cho phép các thành viên mới tìm kiếm thông tin nhanh hơn, rút ngắn thời gian từ khi tham gia đến đầu ra thực tế.",
+          "person": "Scott Entwistle",
+          "role": "tuyển dụng"
+        },
+        "match": {
+          "logo": "Trận đấu",
+          "quote": "Workspace chung là cách quan trọng để chúng tôi hợp lý hóa quy trình làm việc và giảm giao tiếp lặp đi lặp lại.",
+          "person": "Rahim Makani",
+          "role": "sản phẩm"
+        },
+        "toyota": {
+          "logo": "Toyota",
+          "quote": "Khi chi tiết và tiến độ nhiệm vụ được đồng bộ hóa dễ dàng hơn, các nhóm có thể tiết kiệm thời gian và giảm chi phí cập nhật trạng thái.",
+          "person": "Taku Wakasugi",
+          "role": "Nghiên cứu"
+        },
+        "ramp": {
+          "logo": "Ramp",
+          "quote": "AI có thể đảm nhiệm rất nhiều công việc quản lý gọn gàng, cho phép nhóm sản phẩm tập trung lại vào những gì thực sự đang được xây dựng.",
+          "person": "Geoff Charles",
+          "role": "CPO"
+        },
+        "openai": {
+          "logo": "OpenAI",
+          "quote": "Các vấn đề trước đây phải mất hàng giờ để khắc phục giờ đây có thể được giải quyết trong vài phút bằng cách hỏi kiến thức kỹ thuật tại không gian làm việc.",
+          "person": "John Allard",
+          "role": "Kỹ thuật"
+        }
+      }
+    },
+    "product": {
+      "title": "Đơn giản hóa việc phát triển sản phẩm của bạn.",
+      "body": "Quản lý các yêu cầu, nghiên cứu, thông số kỹ thuật, lập kế hoạch phát hành và đánh giá trong một trung tâm được kết nối để giúp các nhóm xây dựng sản phẩm tốt hơn nhanh hơn.",
+      "cta": "Tìm hiểu thêm"
+    },
+    "connections": {
+      "eyebrow": "Kết nối",
+      "title": "Kết nối tất cả các công cụ quan trọng của bạn.",
+      "body": "Mang các công cụ mà nhóm của bạn sử dụng vào một nơi. Tích hợp, đồng bộ hóa, tự động hóa quy trình làm việc, nhúng thông tin phong phú và tìm câu trả lời trên các ứng dụng.",
+      "cta": "Xem tất cả tích hợp"
+    },
+    "security": {
+      "title": "Xây dựng mạnh mẽ với sự hỗ trợ và bảo mật tốt nhất.",
+      "body": "Từ lập kế hoạch triển khai đến quản lý danh tính, tuân thủ, bảo mật và quản trị AI, Deckwise cung cấp sự hỗ trợ và kiểm soát cần thiết cho việc triển khai ở quy mô doanh nghiệp.",
+      "items": {
+        "services": {
+          "title": "Dịch vụ chuyên nghiệp",
+          "body": "Thiết kế, triển khai và tự động hóa không gian làm việc của doanh nghiệp với kinh nghiệm chuyên môn."
+        },
+        "guidance": {
+          "title": "Hướng dẫn độc quyền",
+          "body": "Nhóm Thành công của Khách hàng hỗ trợ thiết lập không gian làm việc, đào tạo trực tiếp và các phương pháp hay nhất."
+        },
+        "support": {
+          "title": "Hỗ trợ cao cấp",
+          "body": "Cung cấp hỗ trợ chủ động, tùy chỉnh hơn cho các nhu cầu phức tạp hơn của nhóm."
+        },
+        "sso": {
+          "title": "Quản lý danh tính",
+          "body": "Cấp cho nhân viên quyền truy cập an toàn vào không gian làm việc với SAML SSO."
+        },
+        "scim": {
+          "title": "SCIM tự động kích hoạt",
+          "body": "Tạo, xóa, cập nhật và đồng bộ hóa người dùng và nhóm dễ dàng hơn."
+        },
+        "management": {
+          "title": "Quản lý không gian làm việc và tên miền",
+          "body": "Quản lý tập trung các cài đặt về bảo mật, tuân thủ, phân tích, kiểm tra và tên miền."
+        },
+        "compliance": {
+          "title": "Tiêu chuẩn bảo mật và tuân thủ",
+          "body": "Tổ chức các khả năng kiểm soát xung quanh các yêu cầu mua sắm của doanh nghiệp, đánh giá tuân thủ và bảo vệ dữ liệu."
+        },
+        "governance": {
+          "title": "Quản trị AI",
+          "body": "Xác định rõ ràng ranh giới dữ liệu doanh nghiệp và cách sử dụng AI để giảm rủi ro quảng cáo."
+        }
+      }
+    },
+    "resources": {
+      "title": "Tài nguyên để giúp bạn bắt đầu.",
+      "items": {
+        "report": {
+          "title": "AI đang thay đổi công việc tri thức như thế nào",
+          "body": "Hiểu cách các nhóm doanh nghiệp biến kiến thức được chia sẻ thành các quyết định và thực thi nhanh hơn.",
+          "cta": "Đọc báo cáo"
+        },
+        "hub": {
+          "title": "Trung tâm phát triển sản phẩm tập trung",
+          "body": "Tìm hiểu cách sắp xếp các yêu cầu, thông số kỹ thuật, nghiên cứu và cập nhật trạng thái vào một trung tâm có thể tìm kiếm.",
+          "cta": "Hướng dẫn đọc"
+        },
+        "tour": {
+          "title": "Trải nghiệm tự phục vụ không gian làm việc của doanh nghiệp",
+          "body": "Xem cách nhóm sử dụng Deckwise để quản lý kiến thức, dự án và quy trình làm việc AI.",
+          "cta": "Bắt đầu chuyến tham quan"
+        }
+      }
+    },
+    "cta": {
+      "title": "Không gian làm việc AI cho mọi nhóm.",
+      "body": "Nói chuyện với chuyên gia về cơ cấu tổ chức, yêu cầu bảo mật và quy trình làm việc nhóm của bạn để xem Deckwise có thể hoạt động như thế nào.",
+      "button": "Bắt đầu với Deckwise"
+    }
+  },
+  "teamsPage": {
+    "metadata": {
+      "title": "Deckwise dành cho nhóm: AI Quy trình thuyết trình",
+      "description": "Các nhóm trợ giúp sử dụng Deckwise để kết nối các tệp dự án, AI soạn thảo, slide có thể chỉnh sửa, đánh giá và quy trình làm việc trình bày được chia sẻ trong một không gian làm việc."
+    },
+    "hero": {
+      "title": "Các nhóm làm việc cùng nhau tốt hơn.",
+      "body": "Các dự án, cơ sở kiến thức và tài liệu nằm cạnh nhau trong không gian làm việc. Giữ bối cảnh rõ ràng từ các nhóm nhỏ đến các tổ chức lớn hơn.",
+      "primaryCta": "Bắt đầu miễn phí",
+      "secondaryCta": "Tìm hiểu về Phiên bản doanh nghiệp"
+    },
+    "projects": {
+      "title": "Cung cấp dự án nhanh hơn",
+      "body": "Giữ mọi người thống nhất từ khi xác định phạm vi cho đến ngày bắt đầu hoạt động. Quản lý và thực thi các dự án cấp cao với bảng Kanban, tiến trình và chế độ xem nhiệm vụ.",
+      "items": {
+        "planning": "kế hoạch dự án",
+        "tasks": "bảng nhiệm vụ",
+        "timeline": "nhịp phát hành"
+      },
+      "quote": {
+        "body": "Khi chúng tôi tiến hành nhiều dự án cùng lúc, điều quan trọng nhất là có thể xem toàn bộ bức tranh bằng cách nhấp vào bất kỳ lúc nào.",
+        "author": "Đội ngũ vận hành và tiếp thị"
+      }
+    },
+    "digitalOffice": {
+      "title": "văn phòng kỹ thuật số của bạn",
+      "body": "Nói lời tạm biệt với các thư mục lộn xộn và nhiều phiên bản của cùng một tài liệu. Đặt không gian, tài liệu và quyết định của nhóm vào một vị trí trung tâm để mọi người biết tìm câu trả lời ở đâu.",
+      "spaces": {
+        "general": "chung",
+        "engineering": "Kỹ thuật",
+        "sales": "bán hàng",
+        "marketing": "Tiếp thị",
+        "managers": "Người quản lý",
+        "operations": "Hoạt động"
+      },
+      "quote": {
+        "body": "Trước đây, rất nhiều kiến thức chỉ tồn tại trong đầu của một số ít người. Bây giờ các đội có thể tự tìm thấy nó và tiến về phía trước một cách nhanh chóng.",
+        "author": "Nhóm chiến lược đổi mới"
+      }
+    },
+    "docs": {
+      "title": "Giữ mọi người trên cùng một trang",
+      "body": "Biên bản cuộc họp, lập kế hoạch mục tiêu, tài liệu quy trình và các quyết định quan trọng đều có thể được ghi lại để cho các bên liên quan biết ai đang làm gì và khi nào.",
+      "items": {
+        "notes": "biên bản cuộc họp",
+        "goals": "lập kế hoạch mục tiêu",
+        "decisions": "quyết định quan trọng"
+      },
+      "quote": {
+        "body": "Trước đây, chúng tôi thường gửi email đánh giá cuộc họp. Bây giờ nhóm đã biết phải tìm ở đâu khi gặp vấn đề về phạm vi hoặc lịch trình.",
+        "author": "Nhóm khóa học sản phẩm"
+      }
+    },
+    "freePlan": {
+      "title": "Bắt đầu với gói miễn phí",
+      "body": "Mời các thành viên trong nhóm và tổ chức công việc trước. Không có giới hạn thời gian và không cần thẻ tín dụng nên bạn có thể dùng thử trước khi quyết định có nâng cấp hay không.",
+      "button": "Bắt đầu miễn phí",
+      "featuresTitle": "Deckwise Tính năng của nhóm",
+      "features": {
+        "collaboration": "Bối cảnh không gian làm việc chung",
+        "permissions": "Quyền tùy chỉnh",
+        "integrations": "Tích hợp API và công cụ",
+        "views": "Bảng Kanban, dòng thời gian và chế độ xem lịch",
+        "tasks": "Quản lý nhiệm vụ và dự án",
+        "wiki": "Nhóm Wiki và Cơ sở Kiến thức",
+        "docs": "Ghi chú và tài liệu đẹp",
+        "mobile": "Trải nghiệm di động hoàn chỉnh"
+      }
+    },
+    "teams": {
+      "title": "Thích hợp cho mọi loại đội",
+      "body": "Các câu hỏi khác nhau tùy theo chức năng, nhưng tất cả đều yêu cầu bối cảnh rõ ràng, kế hoạch thực thi và nền tảng kiến thức vững chắc.",
+      "items": {
+        "engineering": {
+          "title": "Kỹ thuật",
+          "body": "Đặt các nhiệm vụ chạy nước rút, thông số mã, sửa lỗi và phát hành các bài đánh giá ở một nơi để cung cấp các tính năng nhanh hơn.",
+          "cta": "Tìm hiểu thêm"
+        },
+        "product": {
+          "title": "Sản phẩm",
+          "body": "Sử dụng nghiên cứu người dùng, lộ trình và các dự án đa chức năng để chuyển ý tưởng sang phân phối thực tế nhanh hơn.",
+          "cta": "Tìm hiểu thêm"
+        },
+        "design": {
+          "title": "thiết kế",
+          "body": "Thống nhất nội dung, hướng dẫn, nguyên mẫu và hệ thống thiết kế để cho phép các nhóm thiết lập ngôn ngữ thiết kế nhất quán.",
+          "cta": "Tìm hiểu thêm"
+        }
+      }
+    },
+    "templates": {
+      "title": "Bắt đầu với một mẫu",
+      "body": "Thêm quy trình làm việc đặt trước vào không gian làm việc của nhóm và điều chỉnh nó theo quy trình riêng của nhóm.",
+      "items": {
+        "designSystem": {
+          "title": "hệ thống thiết kế",
+          "body": "Duy trì các tài nguyên thiết kế, thông số kỹ thuật và mô tả thành phần được chia sẻ.",
+          "cta": "Sử dụng mẫu"
+        },
+        "roadmap": {
+          "title": "lộ trình sản phẩm",
+          "body": "Ưu tiên các dự án lớn xung quanh các ưu tiên hàng năm để giữ cho nhóm đi theo hướng chung.",
+          "cta": "Sử dụng mẫu"
+        }
+      }
+    },
+    "reviews": {
+      "title": "Xem lý do khách hàng yêu thích Deckwise",
+      "subtitle": "Các thước đo kinh nghiệm mà nhóm quan tâm nhất",
+      "body": "Các công cụ nhóm không chỉ phải mạnh mẽ mà còn phải dễ sử dụng, dễ quản lý và có khả năng đáp ứng yêu cầu công việc thực tế.",
+      "items": {
+        "easeUse": {
+          "value": "86%",
+          "label": "Dễ sử dụng"
+        },
+        "easeAdmin": {
+          "value": "90%",
+          "label": "Dễ dàng quản lý"
+        },
+        "requirements": {
+          "value": "91%",
+          "label": "đáp ứng nhu cầu"
+        },
+        "setup": {
+          "value": "86%",
+          "label": "Dễ dàng thiết lập"
+        }
+      }
+    },
+    "cta": {
+      "title": "Hãy thử Deckwise ngay hôm nay.",
+      "body": "Bắt đầu miễn phí, sau đó xây dựng quy trình thuyết trình rõ ràng hơn cho nhóm của bạn.",
+      "button": "Bắt đầu miễn phí"
+    }
+  },
+  "personalPage": {
+    "metadata": {
+      "title": "Deckwise Cá nhân: AI Soạn thảo bài thuyết trình cho cá nhân",
+      "description": "Sử dụng Deckwise làm không gian làm việc thuyết trình AI cá nhân để sắp xếp các ý tưởng, soạn thảo các bản trình bày, quản lý ghi chú và hoàn thiện dự án nhanh hơn."
+    },
+    "hero": {
+      "title": "Deckwise có thứ gì đó dành cho tất cả mọi người.",
+      "body": "Viết ghi chú, lập kế hoạch, sắp xếp công việc và quản lý cuộc sống của bạn ở một nơi. Sử dụng cá nhân là miễn phí để bắt đầu ngay bây giờ.",
+      "button": "Đăng ký",
+      "platforms": "Hỗ trợ web, di động, Mac và Windows",
+      "cards": {
+        "notes": "Ghi chú",
+        "vacation": "kế hoạch du lịch",
+        "tasks": "Nhiệm vụ",
+        "writing": "viết",
+        "improvement": "tự cải thiện",
+        "websites": "trang web cá nhân"
+      }
+    },
+    "useCases": {
+      "title": "Xem cách Deckwise hoạt động với những người khác nhau",
+      "items": {
+        "notes": {
+          "title": "Ghi chú",
+          "body": "Nắm bắt ý tưởng một cách nhanh chóng và sắp xếp chúng theo cách riêng của bạn. Cho dù đó là việc cần làm, lời nhắc nhở hay ý tưởng lớn tiếp theo, Deckwise đều có thể giúp bạn ghi nhớ nó.",
+          "story": "Hồ sơ du lịch, nguồn cảm hứng và việc cần làm có thể được mang theo bên mình, không còn nằm rải rác trong các ứng dụng khác nhau."
+        },
+        "organized": {
+          "title": "Tổ chức cuộc sống của bạn",
+          "body": "Tất cả ngân sách, công thức nấu ăn, bài viết cần đọc và thông tin đều có thể được đặt trên một trang chủ cá nhân mà không cần phải ghép nhiều ứng dụng lại với nhau.",
+          "story": "Bằng cách kết hợp các dự án kinh doanh, du lịch và cá nhân trong một hệ thống có thể tùy chỉnh, thông tin sẽ dễ dàng được lấy lại trong tầm tay hơn."
+        },
+        "tasks": {
+          "title": "Theo dõi nhiệm vụ",
+          "body": "Mọi thứ từ yêu cầu công việc đến danh sách công việc đều có thể được thực hiện dễ dàng bằng một danh sách kiểm tra đơn giản hoặc bảng dự án chi tiết.",
+          "story": "Nhiều bản thảo, nhiều tiến trình và nhiều trạng thái có thể được theo dõi cùng lúc thay vì chuyển đổi bằng bộ nhớ."
+        },
+        "writing": {
+          "title": "bắt đầu viết",
+          "body": "Hãy trực tiếp bước vào và bỏ lại những phiền nhiễu khác phía sau. Deckwise có thể là nơi tập trung vào việc viết, sắp xếp kéo và thả cũng như chia sẻ phản hồi.",
+          "story": "Bằng cách tập hợp những suy nghĩ rải rác thành chương, trang và bản nháp, quá trình viết sẽ trở nên bền vững hơn."
+        },
+        "improvement": {
+          "title": "Tiếp tục tốt hơn",
+          "body": "Theo dõi thói quen, danh sách đọc, kế hoạch tập thể dục và đánh giá đều có thể nằm cạnh nhau trong cùng một hệ thống.",
+          "story": "Tự Cải thiện không chỉ là một ứng dụng việc cần làm khác mà còn được kết nối với các hồ sơ, kế hoạch và tài liệu hàng ngày của bạn."
+        },
+        "websites": {
+          "title": "Xây dựng một trang web",
+          "body": "Xuất bản trang dưới dạng trang web công cộng để hiển thị sơ yếu lý lịch, danh mục đầu tư hoặc trang chủ cá nhân của bạn nhằm giúp người khác khám phá bạn dễ dàng hơn.",
+          "story": "Danh mục đầu tư, sơ yếu lý lịch và mô tả dự án có thể được chuyển thành các trang có thể chia sẻ trực tiếp từ không gian làm việc cá nhân của bạn."
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Bắt đầu miễn phí mãi mãi",
+      "title": "Được thiết kế để giúp bạn làm được nhiều việc hơn.",
+      "button": "Đăng ký",
+      "items": {
+        "dragDrop": {
+          "title": "Kéo và thả để sắp xếp ý tưởng",
+          "body": "Lấy bất kỳ nội dung nào và di chuyển, kết hợp và sắp xếp nội dung đó theo cách phù hợp nhất với bạn."
+        },
+        "contentTypes": {
+          "title": "Nhiều loại nội dung",
+          "body": "Hình ảnh, video, tiêu đề, nội dung nhúng và danh sách đều có thể được đặt trực tiếp vào trang."
+        },
+        "navigation": {
+          "title": "Xóa điều hướng",
+          "body": "Các trang có thể được lồng trong các trang và có thể xem nhanh tất cả các cấp độ trong thanh bên."
+        },
+        "collaboration": {
+          "title": "Bối cảnh được chia sẻ",
+          "body": "Nhận xét, đề cập và liên kết được chia sẻ giúp bạn và những người khác hoàn thành được nhiều việc hơn."
+        }
+      }
+    },
+    "apps": {
+      "title": "bắt đầu ngay bây giờ",
+      "body": "Sử dụng cùng một không gian làm việc trên web, máy tính để bàn và thiết bị di động. Cần sử dụng nó tại nơi làm việc? Ngoài ra, hãy xem Phiên bản nhóm và Phiên bản doanh nghiệp.",
+      "items": {
+        "web": {
+          "title": "Ứng dụng web",
+          "body": "Mở trình duyệt của bạn để bắt đầu ghi, sắp xếp và chia sẻ."
+        },
+        "desktop": {
+          "title": "Máy tính để bàn",
+          "body": "Duy trì trải nghiệm làm việc tập trung hơn vào Mac và Windows."
+        },
+        "mobile": {
+          "title": "Thiết bị đầu cuối di động",
+          "body": "Luôn có cảm hứng và nhiệm vụ trên iOS và Android."
+        }
+      }
+    },
+    "templates": {
+      "title": "Bắt đầu với một mẫu",
+      "body": "Sau khi đăng ký, bạn có thể bắt đầu với các mẫu như ghi chú, nhật ký, đơn xin việc và sơ yếu lý lịch, sau đó điều chỉnh chúng cho phù hợp với hệ thống của riêng bạn.",
+      "cta": "Duyệt qua thư viện mẫu",
+      "items": {
+        "notes": "Ghi chú",
+        "journal": "nhật ký",
+        "job": "Hồ sơ tìm kiếm việc làm",
+        "resume": "Tiếp tục"
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "items": {
+        "oldPlan": {
+          "question": "Nếu tôi đang sử dụng gói cá nhân cũ thì sao?",
+          "answer": "Bạn có thể tiếp tục sử dụng nội dung hiện có của mình và sắp xếp các ghi chú, nhiệm vụ và tài liệu theo những cách mới, mang tính cá nhân."
+        },
+        "guests": {
+          "question": "Tôi có thể chia sẻ công việc của mình không?",
+          "answer": "Vâng. Bạn có thể chia sẻ hoặc xuất tác phẩm của mình khi nó sẵn sàng trong khi vẫn giữ cho bản tài liệu có thể chỉnh sửa được trong Deckwise."
+        },
+        "multipleMembers": {
+          "question": "Nếu tôi muốn sử dụng nó với nhiều người thì sao?",
+          "answer": "Khi công việc cá nhân phát triển thành quy trình làm việc của nhóm, bạn có thể chuyển sang trang nhóm để tìm hiểu thêm về các kế hoạch lớn hơn."
+        },
+        "teamTrial": {
+          "question": "Các đội có thể dùng thử miễn phí không?",
+          "answer": "Vâng. Bạn có thể tạo không gian làm việc nhóm để sắp xếp các dự án và tài liệu trước, sau đó nâng cấp chúng nếu cần."
+        }
+      }
+    },
+    "cta": {
+      "title": "Hãy thử Deckwise ngay hôm nay.",
+      "body": "Bắt đầu miễn phí và lưu giữ các ghi chú, kế hoạch, nhiệm vụ và dự án cá nhân ở một nơi.",
+      "button": "Bắt đầu miễn phí"
+    }
+  },
+  "customerStory": {
+    "openai": {
+      "metadata": {
+        "title": "OpenAI Câu chuyện của khách hàng: Quy trình làm việc trên boong nhanh hơn với Deckwise",
+        "description": "Xem cách các nhóm có thể sử dụng Deckwise để chia sẻ bối cảnh dự án, tái sử dụng kiến ​​thức, soạn thảo bản trình bày và chuyển nhanh hơn từ nghiên cứu sang các tài liệu có thể chỉnh sửa."
+      },
+      "aria": {
+        "partner": "Deckwise và OpenAI",
+        "playVideo": "Phát video trường hợp khách hàng"
+      },
+      "hero": {
+        "eyebrow": "Trường hợp nổi bật",
+        "title": "Cách OpenAI biến kiến thức được chia sẻ thành quy trình làm việc nhanh hơn với Deckwise"
+      },
+      "lede": "Đằng sau mỗi hệ thống AI là nền tảng kiến thức của con người. Nhóm OpenAI cần một nơi để nắm bắt kiến ​​thức này, sắp xếp bối cảnh dự án và biến suy nghĩ chung thành việc thực thi nhanh hơn.",
+      "sections": {
+        "centralized": {
+          "title": "Tập trung công việc vào một nơi sẽ giải phóng sức mạnh",
+          "body1": "Khi một tổ chức phát triển, việc lập kế hoạch, nghiên cứu và ra quyết định có xu hướng được trải rộng trên nhiều công cụ khác nhau. Nhóm OpenAI cần một không gian chung nơi công việc vẫn có thể được tìm kiếm và kết nối khi công ty phát triển.",
+          "body2": "Workspace này trở thành nền tảng để chuyển các ghi chú nghiên cứu, kế hoạch phát hành, bối cảnh sản phẩm và kiến thức nhóm thành hành động. Thông qua tích hợp và tìm kiếm được hỗ trợ bởi AI, ngữ cảnh phù hợp có thể trôi chảy trong công việc thay vì bị khóa trong các bộ phận riêng biệt."
+        },
+        "research": {
+          "title": "Mở đường từ nghiên cứu đến sản phẩm",
+          "body1": "Các nhóm nghiên cứu ghi lại các thí nghiệm và kế hoạch trong không gian nhóm theo thời gian thực, sau đó kết nối công việc này với các quy trình kỹ thuật và sản phẩm. Kết quả là một con đường rõ ràng hơn từ khám phá đến phát hành.",
+          "body2": "Bảng Kanban, danh sách và dòng thời gian cho phép mỗi nhóm tổ chức cùng một nền tảng kiến thức xung quanh các quy trình của riêng họ trong khi vẫn đảm bảo cộng tác viên có thể đọc được dự án lớn hơn."
+        },
+        "engineering": {
+          "title": "Bộ khuếch đại tốc độ và trợ lý luôn sẵn sàng cho các nhóm kỹ thuật",
+          "body1": "Khi các bản ghi gỡ lỗi, quyết định thiết kế và đánh giá mã được lưu giữ ở nơi đồng đội tiếp theo có thể tìm thấy chúng, kiến thức kỹ thuật tiếp tục được tổng hợp. Workspace có thể tìm kiếm làm cho những bối cảnh này trở nên hữu ích trên các múi giờ và chuyển giao.",
+          "body2": "Thay vì bắt đầu khắc phục sự cố từ đầu, các nhóm có thể xây dựng dựa trên kiến thức hiện có và yêu cầu không gian làm việc cung cấp bối cảnh phù hợp nhất khi áp lực cao nhất."
+        },
+        "data": {
+          "title": "Làm cho dữ liệu có thể truy cập được và có thể thực hiện được",
+          "body1": "Nhóm dữ liệu có thể biến báo cáo hàng tuần, trang tổng quan và số liệu hoạt động thành trung tâm báo cáo chung. Các nhà lãnh đạo có thể thấy những con số tác động đến lộ trình nhanh hơn mà không cần phải tìm kiếm thông tin trong nhiều hệ thống.",
+          "body2": "Các mẫu và bảng thông tin được nhúng giúp giảm việc chuẩn bị báo cáo lặp đi lặp lại trong khi vẫn giữ bối cảnh phân tích bên cạnh dữ liệu."
+        },
+        "gtm": {
+          "title": "Động cơ GTM toàn cầu nhanh hơn",
+          "body1": "Các nhóm GTM có thể di chuyển nhanh hơn khi tin tức về sản phẩm, câu chuyện của khách hàng, ghi chú phát hành và tài liệu hỗ trợ đều có trong một kho lưu trữ được kết nối.",
+          "body2": "Hệ thống chia sẻ này giúp các thành viên mới tham gia nhanh hơn, cập nhật các cuộc trò chuyện bán hàng và cung cấp cho các nhóm làm việc trực tiếp với khách hàng cái nhìn rõ ràng hơn về chiến lược sản phẩm."
+        },
+        "impact": {
+          "title": "Tác động của công việc và kiến thức tập trung",
+          "body1": "Bài học cốt lõi rất đơn giản: khi bối cảnh dự án và các bản thảo kết hợp với nhau thì kiến thức sẽ dễ dàng được sử dụng lại hơn. Các nhóm có thể chuyển từ ý tưởng sang quyết định phát hành mà không làm mất quá trình lấy nguồn gốc.",
+          "body2": "Nền tảng chung này giúp các nhóm tốc độ cao được liên kết trong khi vẫn cung cấp cho mỗi chức năng cấu trúc cần thiết."
+        }
+      },
+      "quotes": {
+        "brad": "Mục tiêu của chúng tôi là cung cấp cho các nhóm những công cụ giúp tăng cường năng lực chuyên môn và giúp họ tiếp tục thăng tiến.",
+        "john": "Tài liệu kỹ thuật trở nên có giá trị hơn mỗi khi đồng đội có thể tìm ra câu trả lời đúng trong vòng vài phút.",
+        "mashfir": "Việc chuyển đổi các phân tích phức tạp thành các tài liệu có thể đọc được cho phép những hiểu biết sâu sắc về kỹ thuật tiếp cận được nhiều đối tượng hơn."
+      },
+      "media": {
+        "researchProjects": "dự án nghiên cứu",
+        "deployQuestion": "Các bước cần thiết để triển khai một mô hình tinh chỉnh là gì?"
+      },
+      "aside": {
+        "insights": "người được phỏng vấn",
+        "useCases": "kịch bản sử dụng",
+        "useCasesBody": "Sử dụng trên toàn công ty, cơ sở kiến thức, quản lý dự án, quy trình làm việc được AI hỗ trợ"
+      },
+      "peopleRoles": {
+        "coo": "COO",
+        "research": "Nghiên cứu",
+        "engineering": "Kỹ thuật",
+        "dataScience": "khoa học dữ liệu",
+        "gtm": "GTM"
+      },
+      "cta": {
+        "title": "Hãy mang Deckwise đến với nhóm của bạn, bắt đầu từ hôm nay!",
+        "body": "Hãy thử Deckwise trên mọi thiết bị và xem không gian làm việc chung tăng tốc quy trình làm việc của nhóm như thế nào.",
+        "button": "Bắt đầu với Deckwise"
+      },
+      "related": {
+        "title": "Cách các nhóm khác sử dụng Deckwise",
+        "brainlabs": "Hệ điều hành Brainlabs cho công việc sâu",
+        "ramp": "Cách Ramp hoạt động dựa trên kiến thức được chia sẻ và quy trình công việc AI",
+        "storyLabel": "trường hợp khách hàng"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+/* Syntax highlighting color bindings. */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name {
+    color: rgb(var(--hl-code-keyword));
+    font-weight: bold;
+}
+
+.hljs-function,
+.hljs-title,
+.hljs-built_in {
+    color: rgb(var(--hl-code-function));
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+    color: rgb(var(--hl-code-string));
+}
+
+.hljs-number {
+    color: rgb(var(--hl-code-number));
+}
+
+.hljs-comment,
+.hljs-quote {
+    color: rgb(var(--hl-code-comment));
+    font-style: italic;
+}
+
+.hljs-type,
+.hljs-class,
+.hljs-variable {
+    color: rgb(var(--hl-code-type));
+}
+
+.hljs-attr,
+.hljs-attribute {
+    color: rgb(var(--hl-code-attr));
+}
+
+.hljs-punctuation,
+.hljs-operator {
+    color: rgb(var(--hl-code-punctuation));
+}

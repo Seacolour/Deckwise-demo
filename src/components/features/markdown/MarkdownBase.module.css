@@ -1,0 +1,38 @@
+.root {
+  overflow-x: hidden;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.root :global(pre) { overflow-x: auto; }
+
+.root :global(.katex-display),
+.root :global(.katex-display) > :global(.katex),
+.root :global(.katex-display) > :global(.katex) > :global(*) {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+.root :global(.katex:not(.katex-display)),
+.root :global(.katex:not(.katex-display)) > :global(*) {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-height: none !important;
+  height: auto !important;
+}
+
+.root :global(p:has(.katex-display)),
+.root :global(div:has(.katex-display)) {
+  overflow-y: hidden !important;
+  max-height: none !important;
+}
+
+.root :global(td .katex-display),
+.root :global(th .katex-display) { margin: 0; }
+
+.root :global(table) {
+  border-radius: 4px;
+  overflow: hidden;
+}

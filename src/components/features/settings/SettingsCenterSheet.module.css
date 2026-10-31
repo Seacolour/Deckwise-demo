@@ -1,0 +1,209 @@
+.dialog {
+  left: 50% !important;
+  top: 50% !important;
+  width: min(800px, calc(100vw - 48px)) !important;
+  height: min(800px, calc(100dvh - 48px)) !important;
+  max-height: none !important;
+  overflow: hidden;
+  border-radius: 20px !important;
+  background: rgb(var(--card));
+}
+
+.overlay {
+  background: rgb(0 0 0 / 30%);
+  backdrop-filter: blur(2px);
+}
+
+.sheet {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  background: rgb(var(--card));
+  color: rgb(var(--foreground));
+}
+
+.sheet :global(.app-centered-sheet-close-button) {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 18px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: rgb(var(--muted-foreground));
+}
+
+.sheet :global(.app-centered-sheet-close-button):hover {
+  background: rgb(var(--muted));
+  color: rgb(var(--foreground));
+}
+
+.header {
+  flex: none;
+  height: 64px;
+  padding: 21px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: 188px;
+  min-height: 0;
+  padding: 0 12px 18px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.navItem,
+.helpLink {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: rgb(var(--foreground));
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.navItem svg,
+.helpLink svg {
+  flex: none;
+  color: rgb(var(--muted-foreground));
+}
+
+.navItem:hover,
+.helpLink:hover {
+  background: rgb(var(--muted));
+}
+
+.navItemActive,
+.navItemActive:hover {
+  background: rgb(var(--muted));
+  font-weight: 600;
+}
+
+.helpLink {
+  margin-top: auto;
+}
+
+.surface {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.content {
+  width: 100%;
+  min-width: 0;
+  padding: 0 24px 28px;
+}
+
+.contentHeader {
+  margin: 2px 0 20px;
+}
+
+.contentHeader h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.contentHeader p {
+  margin: 4px 0 0;
+  color: rgb(var(--muted-foreground));
+  font-size: 13px;
+  line-height: 20px;
+}
+
+@media (max-width: 640px) {
+  .dialog {
+    width: calc(100vw - 16px) !important;
+    height: calc(100dvh - 16px) !important;
+    border-radius: 16px !important;
+  }
+
+  .header {
+    height: 56px;
+    padding: 17px 18px;
+  }
+
+  .sheet :global(.app-centered-sheet-close-button) {
+    top: 12px;
+    right: 12px;
+  }
+
+  .body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 0 12px 10px;
+    border-bottom: 1px solid rgb(var(--border));
+  }
+
+  .navigation {
+    flex-direction: row;
+    gap: 2px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  .navigation::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navItem {
+    width: auto;
+    min-height: 36px;
+    gap: 6px;
+    padding: 0 8px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .helpLink {
+    display: none;
+  }
+
+  .content {
+    padding: 18px 16px 24px;
+  }
+}

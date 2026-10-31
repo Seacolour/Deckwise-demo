@@ -1,0 +1,236 @@
+.timeline {
+  width: min(100%, 790px);
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 8px 0 20px;
+  color: #293543;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.historyLoading {
+  margin: 0 0 20px;
+  color: #7b8795;
+  font-size: 12px;
+}
+
+.userEntry,
+.assistantEntry {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.userEntry {
+  justify-content: flex-end;
+}
+
+.assistantEntry {
+  display: block;
+}
+
+.userContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 0;
+  max-width: min(82%, 650px);
+}
+
+.userBubble {
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 15px;
+  border: 1px solid #e7edf8;
+  border-radius: 16px;
+  background: #edf3fd;
+  color: #273443;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.userActions,
+.assistantActions {
+  display: flex;
+  margin-top: 5px;
+}
+
+.userActions { justify-content: flex-end; }
+.assistantActions { justify-content: flex-start; }
+
+.copyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 27px;
+  min-height: 27px;
+  padding: 2px 6px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #8994a2;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.copyButton:hover { background: #f1f3f6; color: #3d4b5a; }
+.copyButton:focus-visible { outline: 2px solid #7ba8ee; outline-offset: 2px; }
+.copyButton span { white-space: nowrap; }
+
+.assistantContent,
+.parts,
+.markdown {
+  min-width: 0;
+  width: 100%;
+}
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.markdown {
+  overflow-wrap: anywhere;
+}
+
+.markdown :global(pre) {
+  max-width: 100%;
+}
+
+.tool {
+  width: min(100%, 580px);
+  overflow: hidden;
+  border: 1px solid #e7ebf0;
+  border-radius: 12px;
+  background: #fafbfc;
+  color: #465263;
+}
+
+.toolSummary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 36px;
+  padding: 5px 11px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.toolSummary::-webkit-details-marker {
+  display: none;
+}
+
+.toolSummary:focus-visible {
+  outline: 2px solid #7ba8ee;
+  outline-offset: -3px;
+  border-radius: 12px;
+}
+
+.toolSummary:hover {
+  background: #f3f6fa;
+}
+
+.toolIcon {
+  display: grid;
+  flex: 0 0 24px;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: #edf2fa;
+  color: #52729f;
+}
+
+.toolName {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  color: #344356;
+  font-size: 12px;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toolStatus {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 5px;
+  color: #64748a;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.tool_running .toolStatus { color: #426bad; }
+.tool_completed .toolStatus { color: #4c8067; }
+.tool_error .toolStatus { color: #b45b56; }
+.tool_stopped .toolStatus { color: #8b7280; }
+
+.toolChevron {
+  flex: none;
+  color: #8a97a5;
+  transition: transform .15s ease;
+}
+
+.tool[open] .toolChevron {
+  transform: rotate(180deg);
+}
+
+.toolDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 9px 13px 11px 45px;
+  border-top: 1px solid #e7ebf0;
+  color: #788596;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.toolMetadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 3px 0 0;
+}
+
+.toolMetaItem {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.toolMetaItem dt { color: #8b97a5; }
+.toolMetaItem dd { margin: 0; color: #526377; font-variant-numeric: tabular-nums; }
+
+.pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 1px;
+  color: #72849b;
+  font-size: 12px;
+}
+
+.spin { animation: spin 1.3s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 600px) {
+  .userEntry,
+  .assistantEntry { gap: 9px; margin-bottom: 24px; }
+  .userContent { max-width: 90%; }
+  .userBubble { padding: 9px 12px; }
+  .toolSummary { gap: 7px; padding: 7px 9px; }
+  .toolDetails { padding-left: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin { animation: none; }
+  .toolChevron { transition: none; }
+}

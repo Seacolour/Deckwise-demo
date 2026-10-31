@@ -1,0 +1,3289 @@
+{
+  "app": {
+    "name": "Deckwise Demo",
+    "tagline": "AI research workspace",
+    "logIn": "Log in",
+    "getStartedForFree": "Get started",
+    "openApp": "Open app",
+    "backToWebsite": "Back to website",
+    "backToHome": "Back to home",
+    "homeAria": "{appName} home"
+  },
+  "metadata": {
+    "siteTitle": "Deckwise Demo | AI Document Workspace",
+    "siteDescription": "A workspace for collaborating with an AI agent on documents, ideas, and research."
+  },
+  "locale": {
+    "language": "Language",
+    "english": "English",
+    "chinese": "简体中文",
+    "traditionalChinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "spanish": "Español",
+    "vietnamese": "Tiếng Việt"
+  },
+  "toast": {
+    "messages": {
+      "copiedDescription": "Copied to clipboard",
+      "documentNoLongerExists": "Document no longer exists.",
+      "fileUrlMissing": "File URL is missing.",
+      "failedToLoadFiles": "Failed to load files, please try again later",
+      "exportStarted": "Export has started."
+    }
+  },
+  "nav": {
+    "backToProjects": "Back to projects",
+    "newChat": "New chat",
+    "projects": "Projects"
+  },
+  "home": {
+    "ariaHome": "Home",
+    "ariaNewProject": "New project",
+    "ariaProjects": "Projects",
+    "presentationStartTitle": "Your next presentation starts here",
+    "marketingTaskReviewerHandoff": "Upload a PowerPoint or open a recent deck, then choose Audience review in the editor.",
+    "recentProjects": "Drafts",
+    "newProject": "New Project",
+    "signIn": "Sign in",
+    "untitledProject": "Untitled",
+    "updatedAt": "Updated {date}",
+    "projectActionsAria": "Project actions for {title}",
+    "createdByUsers": "Example slides gallery",
+    "galleryCategories": "Example categories",
+    "galleryMetrics": "Views {views} / Likes {likes}",
+    "customizeExample": "Customize",
+    "publicDeckLabel": "Published",
+    "useExample": "Use template",
+    "usingExample": "Adding",
+    "useExampleAria": "Use example {title}",
+    "previewExampleAria": "Preview example {title}",
+    "examplePreviewLoading": "Loading example slides",
+    "examplePreviewFailed": "Failed to load example preview",
+    "examplePreviewEmpty": "This example has no previewable slides right now.",
+    "exampleImportSucceeded": "Example slides added.",
+    "exampleImportFailed": "Failed to add example",
+    "exampleImportMissingProject": "Import result is missing a project.",
+    "examplesUnavailable": "Examples are unavailable right now.",
+    "examplesSignInHint": "Sign in to use example slides.",
+    "examplesEmpty": "No examples available.",
+    "galleryTabs": {
+      "all": "All",
+      "ai": "AI",
+      "product": "Product",
+      "branding": "Branding",
+      "postersAds": "Posters & Ads",
+      "illustration": "Illustration",
+      "uiLayout": "UI Layout",
+      "characterDesign": "Character Design",
+      "videosStoryboards": "Videos & Storyboards",
+      "productDesign": "Product Design",
+      "architecturalDesign": "Architectural Design"
+    }
+  },
+  "chat": {
+    "delete": "Delete",
+    "new": "New chat",
+    "newChat": "New chat",
+    "history": "History",
+    "chats": "Chats",
+    "currentProject": "Current project",
+    "noSessions": "No sessions yet",
+    "untitledSession": "Untitled session",
+    "welcome": "Edit notes with Deckwise",
+    "sessionNumber": "Session #{id}",
+    "thinking": "Thinking…",
+    "newSession": "New chat",
+    "confirmDeleteSession": "Are you sure you want to delete this session?",
+    "deleteFailed": "Failed to delete. Please try again.",
+    "sendFailedNeedProject": "Send failed: please open/select a project before creating a session.",
+    "createSessionFailed": "Failed to create session.",
+    "sendFailed": "Send failed: {reason}",
+    "planningNextMoves": "Planning next moves…",
+    "dropFilesToAddToChat": "Drop files here to add to chat",
+    "resizeTray": "Resize chat tray"
+  },
+  "streamError": {
+    "timeout": "Request timed out. Please check your network or try again later.",
+    "networkError": "Network connection failed. Please check your connection and try again.",
+    "serverError": "Server error. Please try again later.",
+    "serviceUnavailable": "Service temporarily unavailable. Please try again later.",
+    "deadlineExceeded": "Request timed out. Please check your network or try again later.",
+    "connectionClosed": "Connection lost. Please try again.",
+    "otherSessionActive": "Another session is replying. Please wait and try again.",
+    "aiServiceError": "AI service error. Please try again later.",
+    "unknown": "An unknown error occurred."
+  },
+  "tool": {
+    "echo": "Testing connection…",
+    "fileList": "Fetching project files…",
+    "fileContentRead": "Reading file content…",
+    "imageRead": "Reading image…",
+    "documentRead": "Reading document…",
+    "documentLocate": "Locating content…",
+    "documentDiff": "AI is editing document…",
+    "documentSave": "Saving changes…",
+    "documentUpdateSummary": "Updating summary…",
+    "documentCreate": "Creating document…",
+    "scholarSearch": "Searching academic papers…",
+    "todoList": "Organizing tasks…",
+    "unknown": "Working…"
+  },
+  "chatInput": {
+    "placeholder": "Ask to improve this slide",
+    "addAttachment": "Add attachment",
+    "connectApps": "Connect apps",
+    "appConnectionToggle": "{app} connection",
+    "projectSlashMenuLabel": "Project actions",
+    "projectSlashPolishDeck": "Polish this deck",
+    "projectSlashMakeVisual": "Make it more visual",
+    "projectSlashCheckWeakSlides": "Check weak slides",
+    "addPhotosAndFiles": "Add photos & files",
+    "addFromGoogleDrive": "Add from Google Drive",
+    "addFromNotion": "Add from Notion",
+    "addFromOneDrive": "Add from OneDrive",
+    "addFromDropbox": "Add from Dropbox",
+    "recentFiles": "Recent files",
+    "noRecentFiles": "No recent files",
+    "addImage": "Add image",
+    "addPdf": "Add PDF",
+    "send": "Send",
+    "stop": "Stop",
+    "modeSelectLabel": "Select mode",
+    "modeAskTitle": "Ask",
+    "modeAskDesc": "Chat with the assistant",
+    "modeAgentTitle": "Agent",
+    "modeAgentDesc": "Multi-step actions & edits",
+    "model": "Model",
+    "modelsLoading": "Loading models",
+    "modelsUnavailable": "Models unavailable",
+    "chatModels": {
+      "fast": {
+        "label": "Fast",
+        "description": "Fast responses"
+      },
+      "smart": {
+        "label": "Smart",
+        "description": "Balanced editing and reasoning"
+      },
+      "expert": {
+        "label": "Expert",
+        "description": "Best for complex work"
+      }
+    },
+    "modelCreditCost": "{cost} credits",
+    "openFiles": "Open files",
+    "selectedFiles": "Selected {count} files for retrieval",
+    "attachedFiles": "Attached files",
+    "clear": "Clear",
+    "file": "File",
+    "image": "Image",
+    "pdf": "PDF",
+    "removeImage": "Remove image",
+    "removePdf": "Remove PDF",
+    "removeQuote": "Remove quote",
+    "fileFallbackName": "File {id}",
+    "materials": "Sources",
+    "outline": "Outline",
+    "slide": "Slide",
+    "slides": "Slides",
+    "decreaseSlides": "Decrease slides",
+    "increaseSlides": "Increase slides",
+    "slideCount": "Slide count",
+    "outlineWithSlides": "Outline · {count} Slides",
+    "slideCountLabel": "{count} Slides",
+    "slideCountMenuLabel": "{count} Slides",
+    "outlineSlideLimitExceeded": "Your current plan supports up to {max} slides. You selected {count} slides.",
+    "outlineSlideLimitPrompt": "Need more than {max} slides?",
+    "outlineSlideLimitUpgradeAction": "Upgrade",
+    "outlineModels": {
+      "fast": {
+        "label": "Fast",
+        "description": "Generate a complete deck faster"
+      },
+      "smart": {
+        "label": "Smart",
+        "description": "Generate a higher-quality deck with deeper reasoning"
+      },
+      "expert": {
+        "label": "Expert",
+        "description": "Highest quality for complex presentations"
+      }
+    }
+  },
+  "user": {
+    "ariaUserInfo": "User information",
+    "notSignedIn": "Not signed in",
+    "user": "User",
+    "defaultAccountName": "Your account",
+    "upgrade": "Upgrade",
+    "fullName": "Full name",
+    "freePlan": "Free",
+    "credits": "Credits",
+    "freeCredits": "Free credits",
+    "settingsShortcut": "Settings",
+    "settings": "Settings",
+    "manageAccount": "Manage Account",
+    "billing": "Billing",
+    "marketingHome": "Homepage",
+    "userGuide": "User Guide",
+    "contactUs": "Contact Us",
+    "accountInfo": "Account",
+    "accountInfoDesc": "Current signed-in user",
+    "userId": "User ID",
+    "account": "Account",
+    "phone": "Phone",
+    "email": "Email",
+    "role": "Role",
+    "createdAt": "Created",
+    "updatedAt": "Updated",
+    "appearance": "Appearance",
+    "theme": "Theme",
+    "language": "Language",
+    "communicationPreferences": "Communication preferences",
+    "browserNotifications": "Browser notifications",
+    "browserNotificationsDescription": "Get notified in your browser when there's new progress or a task is completed.",
+    "receiveProductUpdates": "Receive product updates",
+    "receiveProductUpdatesDescription": "Receive early access to feature releases and success stories to optimize your workflow.",
+    "emailQueuedTaskStarts": "Email me when my queued task starts",
+    "emailQueuedTaskStartsDescription": "When enabled, we'll send you a timely email once your task finishes queuing and begins processing.",
+    "adsAboutDeckwise": "Ads about Deckwise",
+    "adsAboutDeckwiseDescription": "When enabled, we may share personal information we collect about you with our marketing vendors to show you ads about Deckwise on other apps, websites, and platforms.",
+    "languageEnglish": "English",
+    "languageChinese": "简体中文",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeSystem": "System",
+    "dangerZone": "Danger zone",
+    "close": "Close",
+    "logout": "Sign out",
+    "logoutConfirmTitle": "Sign out?",
+    "logoutConfirmMessage": "You'll need to sign in again to access your workspace.",
+    "logoutConfirmAction": "Sign out",
+    "accountNameSaveFailed": "Failed to save account name.",
+    "deleteAccount": "Delete account",
+    "deleteAccountConfirmTitle": "Delete account?",
+    "deleteAccountConfirmMessage": "This will permanently delete your account and sign you out. This action cannot be undone.",
+    "deleteAccountConfirmAction": "Delete account",
+    "deleteAccountFailed": "Failed to delete account. Please try again.",
+    "languageTraditionalChinese": "繁體中文",
+    "languageJapanese": "日本語",
+    "languageKorean": "한국어",
+    "languageSpanish": "Español",
+    "personalization": "Personalization",
+    "inviteFriends": "Invite friends",
+    "inviteFriendsSubtitle": "Earn {credits} credits each",
+    "inviteDialogTitle": "Invite and earn credits",
+    "inviteDialogDescription": "Share your invite link with friends, get {credits} credits each.",
+    "copyInvitationLink": "Copy invite text",
+    "shareInviteOn": "Share invite on {platform}",
+    "resetInvitationLink": "Reset invitation link",
+    "invitationLinkCopied": "Invitation text copied.",
+    "invitationLinkCopyFailed": "Failed to copy invitation text.",
+    "invitationLinkLoadFailed": "Failed to load invitation link.",
+    "invitationLinkReset": "Invitation link reset.",
+    "invitationLinkResetFailed": "Failed to reset invitation link.",
+    "invitationLinkUnavailable": "Invitation link unavailable.",
+    "languageVietnamese": "Tiếng Việt"
+  },
+  "billing": {
+    "title": "Billing & Invoices",
+    "subtitle": "Review your current subscription, usage, invoice entry points, and Stripe-hosted billing actions.",
+    "settingsTitle": "Settings",
+    "settingsNavBilling": "Billing",
+    "workspaceNavTitle": "Account",
+    "workspaceNavAccount": "Account",
+    "workspaceNavSubscription": "Subscription",
+    "workspaceNavOverview": "Overview",
+    "workspaceNavUsage": "Usage",
+    "workspaceNavManagePlan": "Adjust plan",
+    "workspaceNavPayment": "Payment",
+    "workspaceNavInvoices": "Invoices",
+    "workspaceNavPortal": "Stripe portal",
+    "backToWorkspace": "Back to app",
+    "refresh": "Refresh",
+    "summaryTitle": "Billing Snapshot",
+    "summarySubtitle": "Latest subscription and billing state.",
+    "statusLabel": "Status",
+    "planLabel": "Plan",
+    "renewalLabel": "Current period ends",
+    "paymentMethodLabel": "Payment method",
+    "creditsLabel": "Available credits",
+    "reservedLabel": "Reserved credits",
+    "summaryNoPlan": "Free",
+    "plansTitle": "Plans",
+    "plansSubtitle": "Choose from the Stripe plans currently published by the backend.",
+    "currentPlan": "Current plan",
+    "planRecommended": "Recommended",
+    "planCreditsPerCycle": "{credits} credits included",
+    "planCreditsMonthly": "{credits} credits per month",
+    "planCreditsAnnual": "{credits} credits expected yearly",
+    "planCreditsIncluded": "{credits} credits included",
+    "planIntervalUnknown": "Flexible",
+    "pricingCallout": "The full plan comparison is still available on the Pricing page.",
+    "viewPricing": "View Pricing",
+    "freePlanDescription": "No paid subscription is active. You can continue on the free plan or choose a plan from Pricing.",
+    "renewalDescription": "Your subscription renews on {date}.",
+    "billingPeriodOutcomeLabel": "Current period outcome",
+    "billingPeriodAutoRenewLabel": "Auto-renew",
+    "billingPeriodAutoRenewDescription": "The next subscription cycle starts on {date}.",
+    "billingPeriodExpiresLabel": "Expires",
+    "billingPeriodExpiresDescription": "Subscription benefits end on {date}.",
+    "billingPeriodSwitchLabel": "Switch to {plan}",
+    "billingPeriodSwitchDescription": "The scheduled plan takes effect on {date}.",
+    "billingPeriodSwitchUnknownPlan": "a new plan",
+    "selectedPlanDescription": "{plan} was selected from Pricing. Continue to Stripe Checkout to subscribe.",
+    "noActivePlanDescription": "No paid plan has been selected yet. Choose a plan from Pricing to continue.",
+    "adjustPlan": "Adjust plan",
+    "adjustPlanCheckoutDescription": "Choose a plan to open Stripe Checkout and subscribe.",
+    "adjustPlanPortalDescription": "You already have an active subscription, so plan changes and management happen in the Stripe portal.",
+    "planDialogTitle": "Choose the plan that's right for you",
+    "planDialogDescription": "Choose a Deckwise plan and billing cycle.",
+    "planDialogCycleMonthly": "Monthly",
+    "planDialogCycleAnnual": "Annually · Save 20%",
+    "planDialogCycleAnnualShort": "Annually",
+    "planDialogBillingUnitMonthly": "/ month",
+    "planDialogBillingUnitAnnual": "/ month",
+    "planDialogUpgrade": "Upgrade",
+    "planDialogCurrentPlan": "Your current plan",
+    "planDialogFeatureCardsPerPrompt": "Create up to {count} cards per prompt",
+    "planDialogFeatureMonthlyCredits": "{credits} monthly credits",
+    "planDialogPlusDescription": "For creating more decks and refining them with AI",
+    "planDialogPlusIncludes": "Everything in Free",
+    "planDialogPlusFeatureCards": "Create up to 30 cards per prompt",
+    "planDialogPlusFeatureEditablePowerPoint": "Editable PowerPoint export",
+    "planDialogPlusFeatureEditableGoogleSlides": "Editable Google Slides export",
+    "planDialogPlusFeatureImageModels": "Advanced AI models",
+    "planDialogProDescription": "For advanced AI models, longer projects, and more polished presentations",
+    "planDialogProIncludes": "Everything in Plus, and:",
+    "planDialogProFeatureCards": "Create up to 60 cards per prompt",
+    "planDialogProFeatureCredits": "2,000 monthly credits",
+    "planDialogProFeatureImageModels": "Premium AI image models",
+    "planDialogProFeatureBranding": "Custom branding & fonts",
+    "planDialogProFeatureAnalytics": "Detailed analytics & advanced sharing",
+    "planDialogProFeatureDomains": "Publish up to 10 custom domains",
+    "planDialogUltraDescription": "For heavy AI usage, advanced models, and high-volume deck creation",
+    "planDialogUltraIncludes": "Everything in Pro, and:",
+    "planDialogUltraFeatureCards": "Create up to 75 cards per prompt",
+    "planDialogUltraFeatureCredits": "20,000 monthly credits",
+    "planDialogUltraFeatureModels": "Access to the most advanced AI models (text, image, video)",
+    "planDialogUltraFeatureDomains": "Publish up to 100 custom domains",
+    "planDialogUltraFeatureEarlyAccess": "Early access to new features",
+    "planDialogSecurityTitle": "Security and Compliance",
+    "planDialogSecurityDescription": "Enterprise-grade security and industry-standard certifications.",
+    "planDialogSecurityLearnMore": "Learn more",
+    "planDialogHelpPrefix": "Having a problem?",
+    "planDialogHelpLink": "Contact Us",
+    "planDialogEditBilling": "Edit billing",
+    "activePlanHint": "Current plan: {plan}",
+    "noPlansTitle": "No plans available",
+    "noPlansDescription": "The backend has not published any active Stripe plans yet.",
+    "paymentTitle": "Stripe payment management",
+    "paymentSubtitle": "Checkout collects cards, Link, and other eligible payment methods; the billing portal manages saved methods and invoices.",
+    "paymentReady": "A default payment method is ready in Stripe.",
+    "paymentMissing": "Checkout will collect a payment method when you subscribe.",
+    "paymentReadyShort": "Saved",
+    "paymentMissingShort": "Missing",
+    "paymentManage": "Open billing portal",
+    "manageInStripe": "Manage in Stripe",
+    "paymentManagedByStripe": "Managed by Stripe Checkout and Customer Portal",
+    "subscriptionTitle": "Subscription actions",
+    "subscriptionSubtitle": "Start or change a plan through Stripe Checkout, then return here for status and usage.",
+    "subscribe": "Continue to Checkout",
+    "managePortal": "Open Stripe portal",
+    "cancelSubscription": "Cancel at period end",
+    "resumeSubscription": "Resume renewal",
+    "resourceBreakdownTitle": "Credits",
+    "resourceBreakdownSubtitle": "Active credit buckets synced from the backend.",
+    "creditsPanelBreakdown": "Credit breakdown",
+    "creditsPanelFreeDescription": "Free credits refresh on the configured schedule.",
+    "creditsPanelViewUsage": "View usage",
+    "includedUsageTitle": "Included Usage",
+    "usageTypeColumn": "Type",
+    "usageAvailableColumn": "Available",
+    "usageExpiresColumn": "Expires",
+    "creditBucketFreeMonthly": "Free",
+    "creditBucketSubscriptionCycle": "Subscription",
+    "creditBucketCampaignBonus": "Subscriber bonus",
+    "creditBucketPersistent": "Persistent credits",
+    "creditBucketGeneric": "Credits bucket",
+    "usageRefreshTooltip": "Refreshes on {date}",
+    "usageRefreshTooltipUnknown": "This allowance refreshes on the next backend billing cycle.",
+    "onDemandUsageTitle": "On-Demand Usage",
+    "onDemandUsageSubtitle": "Metered billing is not enabled yet. Cost details will appear here later.",
+    "onDemandUsageTotal": "Current cycle",
+    "onDemandUsageEmpty": "No on-demand usage data found for the current cycle.",
+    "invoicesTitle": "Invoices",
+    "invoicesDescription": "Invoices and receipts are managed by Stripe Customer Portal.",
+    "cancelTitle": "Cancel",
+    "cancelDescription": "Canceling stops renewal at the end of the current billing cycle.",
+    "resumeTitle": "Resume renewal",
+    "resumeDescription": "This subscription is set to cancel at period end. You can resume renewal before then.",
+    "resourceBreakdownEmpty": "No active credit buckets yet.",
+    "bucketExpires": "Expires {date}",
+    "subscribeSuccess": "Opening Stripe Checkout.",
+    "subscribeFailed": "Failed to start Stripe Checkout.",
+    "alreadyActiveSubscription": "You already have an active subscription.",
+    "checkoutSyncFailed": "Failed to sync Checkout subscription status. Please refresh shortly.",
+    "cancelSuccess": "Subscription will cancel at the end of the current period.",
+    "cancelFailed": "Failed to update cancellation.",
+    "resumeSuccess": "Subscription renewal resumed.",
+    "resumeFailed": "Failed to resume subscription.",
+    "portalFailed": "Failed to open the Stripe portal.",
+    "refreshFailed": "Failed to load billing data.",
+    "syncing": "Waiting for Stripe webhook sync…",
+    "webhookSyncTitle": "Webhook-synced state",
+    "webhookSyncDescription": "The billing snapshot updates after Stripe webhooks land, so a short delay after subscribing or changing renewal settings is expected.",
+    "testModeTitle": "Stripe-hosted flow",
+    "testModeDescription": "Checkout owns payment collection and Link/card handling; this page focuses on subscription status, usage, and safe management links.",
+    "statusActive": "Active",
+    "statusTrialing": "Trialing",
+    "statusIncomplete": "Incomplete",
+    "statusPastDue": "Past due",
+    "statusPaused": "Paused",
+    "statusUnpaid": "Unpaid",
+    "statusCanceled": "Cancelled",
+    "statusExpired": "Expired",
+    "statusNone": "Not subscribed",
+    "planDialogBillingCycleLabel": "Billing cycle"
+  },
+  "login": {
+    "emailLabel": "Email address",
+    "codeLabel": "Verification code",
+    "sendCode": "Send code",
+    "sendingCode": "Sending...",
+    "codeSent": "Code sent. Check your inbox.",
+    "signInWithEmail": "Sign in with email",
+    "invalidEmail": "Enter a valid email address.",
+    "missingCode": "Enter the code from your email.",
+    "emailCodeFailed": "Could not send a code. Please try again.",
+    "emailLoginFailed": "Sign-in failed. Check your code and try again.",
+    "headline": "We'll sign you in, or create an account if you don't have one yet.",
+    "title": "Sign in to {appName}",
+    "subtitle": "Continue with your Google account",
+    "verifying": "Verifying sign-in…",
+    "signingIn": "Signing in...",
+    "desktopBrowserSignIn": "Continue in browser",
+    "desktopBrowserOpening": "Opening browser...",
+    "desktopBrowserWaiting": "Waiting for browser approval...",
+    "desktopBrowserRetry": "Try browser sign-in again",
+    "desktopBrowserOpenFailed": "We couldn't open your browser. Please try again.",
+    "desktopBrowserExpired": "This sign-in request expired. Please try again.",
+    "desktopBrowserSignInFailed": "Browser sign-in failed. Please try again.",
+    "desktopWelcome": {
+      "title": "Deckwise Desktop",
+      "description": "Turn ideas and documents into polished presentations, right from your desktop.",
+      "getStarted": "Get started",
+      "checkingSession": "Opening Deckwise..."
+    },
+    "desktopAuthorization": {
+      "title": "Authorize Deckwise Desktop",
+      "description": "Confirm that you want to sign in to the desktop app shown below.",
+      "loading": "Loading sign-in request...",
+      "device": "Device",
+      "platform": "Platform",
+      "version": "App version",
+      "approve": "Authorize desktop app",
+      "approving": "Authorizing...",
+      "approvedTitle": "Desktop app authorized",
+      "approvedDescription": "You can close this page and return to Deckwise Desktop.",
+      "expiredTitle": "Sign-in request expired",
+      "expiredDescription": "Return to Deckwise Desktop and start sign-in again.",
+      "errorTitle": "Unable to authorize",
+      "loadFailed": "We couldn't load this sign-in request. Please try again.",
+      "approveFailed": "We couldn't authorize the desktop app. Please try again.",
+      "invalidRequest": "This sign-in link is invalid. Return to Deckwise Desktop and try again.",
+      "retry": "Try again",
+      "unknownDevice": "Unknown"
+    },
+    "termsAcknowledgement": "By clicking \"Continue\", you agree to the <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>.",
+    "brand": "{appName} — Your research assistant",
+    "termsOfService": "Terms of service",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "invitation": {
+    "title": "Join {appName} now and claim free credits!",
+    "description": "Share your invite link with friends and earn credits together.",
+    "imageAlt": "{appName} invite preview"
+  },
+  "slidesPreview": {
+    "publishedLoadFailed": "Failed to load published slides",
+    "sharedLoadFailed": "Failed to load shared slides",
+    "publishedEmpty": "This published deck has no previewable slides right now.",
+    "sharedEmpty": "This shared deck has no previewable slides right now.",
+    "publishedLabel": "Published",
+    "sharedLabel": "Shared",
+    "publishedMetaTitle": "{appName} published slides",
+    "publishedMetaDescription": "View published slides shared from {appName}.",
+    "sharedMetaTitle": "{appName} shared slides",
+    "sharedMetaDescription": "Open a slide deck shared with you on {appName}.",
+    "exampleMetaTitle": "{appName} example slides",
+    "exampleMetaDescription": "Preview example slides and customize them in {appName}."
+  },
+  "common": {
+    "cancel": "Cancel",
+    "confirmDeletion": "Confirm deletion?",
+    "close": "Close",
+    "clear": "Clear",
+    "delete": "Delete",
+    "rename": "Rename",
+    "copy": "Copy",
+    "retry": "Retry",
+    "hello": "Hello,",
+    "back": "Back",
+    "refresh": "Refresh",
+    "loading": "Loading…",
+    "loadMore": "Load more",
+    "allLoaded": "All caught up",
+    "loadFailed": "Failed to load.",
+    "unknownError": "Unknown error",
+    "remove": "Remove",
+    "saving": "Saving...",
+    "unsavedChanges": "Unsaved changes",
+    "saved": "Saved",
+    "revisionConflict": "Revision conflict",
+    "saveFailed": "Save failed",
+    "ready": "Ready",
+    "desktopWindow": {
+      "file": "File",
+      "edit": "Edit",
+      "view": "View",
+      "window": "Window",
+      "help": "Help",
+      "back": "Back",
+      "forward": "Forward",
+      "menuBar": "Application menu"
+    }
+  },
+  "errorBoundary": {
+    "title": "Something went wrong",
+    "message": "Please refresh the page. If the problem persists, contact support.",
+    "refresh": "Refresh"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "The page you opened does not exist or has moved. Return to the home page to continue safely."
+  },
+  "quote": {
+    "expand": "Expand quote",
+    "collapse": "Collapse quote"
+  },
+  "editor": {
+    "slashMenu": {
+      "header": "Basic"
+    },
+    "slash": {
+      "ai": "Ask AI",
+      "text": "Text",
+      "h1": "Heading 1",
+      "h2": "Heading 2",
+      "h3": "Heading 3",
+      "bullet": "Bulleted list",
+      "ordered": "Numbered list",
+      "task": "To-do list",
+      "callout": "Callout",
+      "quote": "Quote",
+      "table": "Table",
+      "divider": "Divider",
+      "link": "Link to page",
+      "code": "Code block",
+      "image": "Web image",
+      "header": {
+        "basic": "Basic"
+      }
+    },
+    "blockHandle": {
+      "addBelow": "Insert a new line below",
+      "turnInto": "Turn into",
+      "turnIntoHeader": "Turn into",
+      "copy": "Copy",
+      "delete": "Delete",
+      "expandHidden": "Expand hidden block",
+      "collapseHidden": "Collapse hidden block"
+    },
+    "aiInput": {
+      "placeholder": "Ask AI…",
+      "thinking": "Thinking…",
+      "ask": "Ask"
+    },
+    "tableTooltip": {
+      "duplicateRow": "Duplicate row",
+      "duplicateCol": "Duplicate column",
+      "deleteRow": "Delete row",
+      "deleteCol": "Delete column"
+    },
+    "placeholder": {
+      "hint": "Type something, or press \"/\" for commands",
+      "toggleSummary": "Toggle"
+    },
+    "codeBlock": {
+      "copy": "Copy",
+      "copied": "Copied"
+    },
+    "linkHover": {
+      "copyFailed": "Failed to copy link.",
+      "open": "Open link",
+      "edit": "Edit link",
+      "urlLabel": "Page or URL",
+      "urlPlaceholder": "https://example.com",
+      "titleLabel": "Link title",
+      "titlePlaceholder": "Link title",
+      "remove": "Remove link"
+    },
+    "table": {
+      "duplicateRow": "Duplicate row",
+      "duplicateCol": "Duplicate column",
+      "deleteRow": "Delete row",
+      "deleteCol": "Delete column"
+    },
+    "callout": {
+      "note": "📝 Note",
+      "tip": "💡 Tip",
+      "warning": "⚠️ Warning",
+      "error": "🚫 Error",
+      "success": "✅ Success",
+      "info": "ℹ️ Info"
+    }
+  },
+  "deckwise": {
+    "toolbar": {
+      "insertTools": "Insert tools",
+      "dragToInsert": "Drag to insert",
+      "text": "Text",
+      "basicBlocks": "Basic blocks",
+      "blocks": "Blocks",
+      "images": "Images",
+      "columns": "Cols",
+      "layouts": "Layouts",
+      "layout": "Layout",
+      "chartsAndGraphs": "Charts and graphs",
+      "chart": "Chart",
+      "video": "Video",
+      "textFormattingToolbar": "Text formatting toolbar",
+      "textStyle": "Text style",
+      "textStyles": "Text styles",
+      "textSize": "Text size",
+      "useSmallTextSize": "Use small text size",
+      "useDefaultTextSize": "Use default text size",
+      "useLargeTextSize": "Use large text size",
+      "textColor": "Text color",
+      "backgroundColor": "Background color",
+      "defaultTextColorOption": "Default color",
+      "defaultTextBackgroundColorOption": "Default background color",
+      "textColorOption": "{color} text",
+      "textBackgroundColorOption": "{color} background",
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strikethrough": "Strikethrough",
+      "code": "Code",
+      "link": "Link",
+      "editLink": "Edit link",
+      "linkUrl": "Link URL",
+      "linkPlaceholder": "Paste a link, then hit enter",
+      "removeLink": "Remove link",
+      "horizontalAlignment": "Horizontal alignment",
+      "defaultTextColor": "Default",
+      "advanced": "Advanced",
+      "apply": "Apply",
+      "remove": "Remove",
+      "superscript": "Superscript",
+      "bulletList": "Bullet list",
+      "alignLeft": "Align left",
+      "alignCenter": "Align center",
+      "alignRight": "Align right",
+      "clearFormatting": "Clear formatting",
+      "undo": "Undo",
+      "redo": "Redo",
+      "addLabel": "Add label",
+      "addParagraphBelow": "Add paragraph below",
+      "pageContentFull": "This slide is getting full — split extra content into a new slide to keep it clear.",
+      "moveBlock": "Move block",
+      "cutBlock": "Cut",
+      "copyBlock": "Copy",
+      "pasteBlockBelow": "Paste below",
+      "pasteBlockUnavailable": "Cut or copy a block first",
+      "duplicateBlock": "Duplicate block",
+      "deleteBlock": "Delete block",
+      "duplicateLayout": "Duplicate layout",
+      "deleteLayout": "Delete layout",
+      "pageActions": "Page actions",
+      "pageLayout": "Page layout",
+      "blank": "Blank",
+      "imageTop": "Image top",
+      "imageLeft": "Image left",
+      "imageRight": "Image right",
+      "imageBackground": "Image background",
+      "imageActions": "Image actions",
+      "videoActions": "Video actions",
+      "editImage": "Edit image",
+      "editVideo": "Edit video",
+      "imageEdge": "Image edge",
+      "straightImageEdge": "Straight",
+      "curveImageEdge": "Curve",
+      "slantImageEdge": "Slanted",
+      "waveImageEdge": "Continuous",
+      "fitImage": "Fit image",
+      "expandImage": "Expand image",
+      "resizeLayoutImage": "Resize layout image",
+      "uploadImage": "Upload image",
+      "uploadingImage": "Uploading image",
+      "deleteImage": "Delete image",
+      "deleteVideo": "Delete video",
+      "imageInfo": "Image info",
+      "imageMetadata": "Image metadata",
+      "noImageMetadata": "No metadata available.",
+      "metadataTitle": "Title",
+      "metadataDescription": "Description",
+      "metadataCredit": "Photographer",
+      "metadataSource": "Source",
+      "metadataAttribution": "Attribution",
+      "metadataImageUrl": "Image URL",
+      "metadataThumbnailUrl": "Thumbnail URL",
+      "metadataDimensions": "Dimensions",
+      "metadataProviderId": "Provider ID",
+      "chartActions": "Chart actions",
+      "editChart": "Edit chart",
+      "columnLayoutActions": "Column layout actions",
+      "columnLayout": "Column layout",
+      "columnsCount": "{count} columns",
+      "equalizeColumns": "Equalize columns",
+      "alignTop": "Align top",
+      "alignMiddle": "Align middle",
+      "alignBottom": "Align bottom",
+      "columnColor": "Column color",
+      "deleteColumns": "Delete columns",
+      "columnLayouts": "Column layouts",
+      "columnColors": "Column colors",
+      "calloutActions": "Callout actions",
+      "calloutStyle": "Callout style",
+      "calloutColor": "Callout color",
+      "deleteCallout": "Delete callout",
+      "calloutStyles": "Callout styles",
+      "calloutColors": "Callout colors",
+      "hideCalloutIcon": "Hide callout icon",
+      "resetToDefault": "Reset to default",
+      "labelActions": "Label actions",
+      "addLabelBefore": "Add label before",
+      "addLabelAfter": "Add label after",
+      "deleteLabel": "Delete label",
+      "smartLayoutActions": "Smart layout actions",
+      "addSmartLayoutItem": "Add item",
+      "smartLayoutType": "Smart layout type",
+      "smartLayoutColor": "Smart layout color",
+      "smartLayoutColors": "Smart layout colors",
+      "smartLayoutCellSize": "Layout size",
+      "smartLayoutCellSizeOptions": "Layout size options",
+      "smartLayoutCellSizeSmall": "Small",
+      "smartLayoutCellSizeMedium": "Medium",
+      "smartLayoutCellSizeLarge": "Large",
+      "smartLayoutCellSizeExtraLarge": "Extra large",
+      "useVerticalLayoutDirection": "Use vertical layout direction",
+      "useHorizontalLayoutDirection": "Use horizontal layout direction",
+      "useOneSidedLayout": "Use one-sided layout",
+      "useTwoSidedLayout": "Use two-sided layout",
+      "hideLayoutSideLines": "Hide layout side lines",
+      "showLayoutSideLines": "Show layout side lines",
+      "textAlignment": "Text alignment",
+      "useVerticalTimelineDirection": "Use vertical timeline direction",
+      "useHorizontalTimelineDirection": "Use horizontal timeline direction",
+      "useOneSidedTimeline": "Use one-sided timeline",
+      "useTwoSidedTimeline": "Use two-sided timeline",
+      "hideTimelineSideLines": "Hide timeline side lines",
+      "showTimelineSideLines": "Show timeline side lines",
+      "timelineDirection": "Direction",
+      "timelineSides": "Two sided",
+      "timelineSideLines": "Show line?",
+      "changeLayout": "Change layout",
+      "deleteSmartLayout": "Delete smart layout",
+      "smartLayoutBlockActions": "Smart layout block actions",
+      "moveBlockToStart": "Move block to start",
+      "addItemBefore": "Add item before",
+      "addItemAfter": "Add item after",
+      "duplicate": "Duplicate",
+      "smartLayoutBlockColor": "Smart layout block color",
+      "deEmphasize": "De-emphasize",
+      "emphasize": "Emphasize",
+      "deleteSmartLayoutBlock": "Delete smart layout block",
+      "smartLayoutBlockColors": "Smart layout block colors",
+      "chooseSmartLayoutIcon": "Choose smart layout icon",
+      "smartLayoutHeroIconPanelTitle": "Heroicons",
+      "smartLayoutHeroIconSearchPlaceholder": "Search {count} icons",
+      "smartLayoutHeroIconCategory": "Heroicon category",
+      "smartLayoutHeroIconNoResults": "No icons found",
+      "smartLayoutHeroIconCategoryAll": "All",
+      "smartLayoutHeroIconCategoryArrows": "Arrows",
+      "smartLayoutHeroIconCategoryCommunication": "Communication",
+      "smartLayoutHeroIconCategoryCommerce": "Commerce",
+      "smartLayoutHeroIconCategoryDocuments": "Documents",
+      "smartLayoutHeroIconCategoryInterface": "Interface",
+      "smartLayoutHeroIconCategoryMedia": "Media",
+      "smartLayoutHeroIconCategoryPeople": "People",
+      "smartLayoutHeroIconCategorySecurity": "Security",
+      "smartLayoutHeroIconCategoryTechnology": "Technology",
+      "smartLayoutHeroIconCategoryGeneral": "General",
+      "smartLayouts": "Smart layouts",
+      "layoutGroups": "Layout groups",
+      "layoutsForGroup": "{group} layouts",
+      "debugLayout": "Debug layout",
+      "layoutSubtitle": "Choose a smart layout.",
+      "layoutPreviewMutualismHeading": "Mutualism",
+      "layoutPreviewMutualismBody": "About 10,000 to 12,000 years ago, humans settled in the Fertile Crescent and began grain farming.",
+      "layoutPreviewSelfDomesticationHeading": "Self-domestication",
+      "layoutPreviewSelfDomesticationBody": "Cats likely domesticated themselves by adapting to human settlements.",
+      "layoutPreviewBehaviorHeading": "Behavior",
+      "layoutPreviewBehaviorBody": "Genomic studies show changes linked to memory, reward learning, and fear control.",
+      "layoutsUnavailable": "No layouts available",
+      "style": "Style",
+      "styleSubtitle": "Adjust fonts and colors for your deck.",
+      "theme": "Theme",
+      "themeAndLayout": "Fonts & colors",
+      "close": "Close",
+      "share": "Share",
+      "shareComingSoon": "Share coming soon",
+      "present": "Present",
+      "export": "Export",
+      "exportDeck": "Export deck",
+      "exportPowerPoint": "PowerPoint",
+      "exportGoogleSlides": "Google Slides",
+      "exportImages": "Images",
+      "publishSlides": "Publish slides",
+      "updatePreviews": "Update previews",
+      "preparingPreviewImages": "Preparing preview images...",
+      "publishingSlides": "Publishing slides...",
+      "uploadingPreviewImages": "Uploading preview images...",
+      "exportingImages": "Exporting images",
+      "exportingPdf": "Exporting PDF",
+      "exportingPptx": "Exporting PPTX",
+      "exportingGoogleSlides": "Exporting to Google Slides",
+      "imageExportIdle": "Export images",
+      "nothingToExport": "Nothing to export",
+      "imageExportFailed": "Image export failed",
+      "imagesExported": "Images exported",
+      "localAutosaveReady": "Autosave ready",
+      "localAutosaveOff": "Autosave off",
+      "localAutosaveSaving": "Saving...",
+      "localAutosaved": "Autosaved",
+      "promoteExample": "Promote example",
+      "documentSettings": "Document settings",
+      "themeSource": "Theme source",
+      "themeSourceCatalog": "Themes",
+      "themeSourceLocal": "Local",
+      "panelLoading": "Loading panel",
+      "themeCatalogUnavailable": "Theme catalog unavailable",
+      "themesLoading": "Loading themes...",
+      "themesUnavailable": "No themes available",
+      "moreActionsComingSoon": "More actions coming soon",
+      "cardView": "Slide view",
+      "outlineViewComingSoon": "Outline view coming soon",
+      "viewMode": "View mode",
+      "newSlide": "New slide",
+      "addSlide": "Add slide",
+      "cardsPanelControls": "Slides panel controls",
+      "searchCards": "Search slides",
+      "clearSearch": "Clear search",
+      "resizeCardsPanel": "Resize slides panel",
+      "showCardsPanel": "Show slides panel",
+      "pinnedCardsPanel": "Pinned slides panel",
+      "cardsPanel": "Slides panel",
+      "noSlides": "No slides",
+      "slideCount": "Slide {current} of {total}",
+      "scrollToSlide": "Scroll to slide {slide}",
+      "chartType": "Chart type",
+      "chartSettings": "Chart settings",
+      "chartEditorTabs": "Chart editor tabs",
+      "chartPreview": "Chart preview",
+      "data": "Data",
+      "yAxis": "Y-Axis",
+      "solidColor": "Solid Color",
+      "solidColorDescription": "Apply one color to all items",
+      "colorPresets": "Color Presets",
+      "source": "Source",
+      "callOut": "Call-out",
+      "arrow": "Arrow",
+      "box": "Box",
+      "differenceArrows": "Difference arrows",
+      "highlight": "Highlight",
+      "goal": "Goal",
+      "trend": "Trend",
+      "graphOptions": "Graph options",
+      "leaveGapInChart": "Leave gap in chart",
+      "legend": "Legend",
+      "headlineNumber": "Headline number",
+      "chartDataActions": "Chart data actions",
+      "row": "Row",
+      "chartsAndGraphsMenu": "Charts and graphs menu",
+      "charts": "Charts",
+      "comingSoon": "Coming soon",
+      "debug": "Debug",
+      "titlePreview": "Title",
+      "bodyPreview": "Body",
+      "closeMediaMenu": "Close media menu",
+      "mediaMode": "Media mode",
+      "go": "Go",
+      "upload": "Upload",
+      "dragFileOr": "Drag a file or",
+      "clickToUpload": "click to upload",
+      "imageUploadTip": "Tip: You can also drag or paste images anywhere in a slide",
+      "uploadImageFile": "Upload image file",
+      "webImageSearch": "Web image search",
+      "searchWebImages": "Search web images",
+      "imageLicense": "Image license",
+      "allImages": "All images",
+      "commercialUse": "Commercial use",
+      "creativeCommons": "Creative Commons",
+      "unableToLoadImages": "Unable to load images",
+      "imageSearchResults": "Image search results",
+      "imagesMenu": "Images menu",
+      "imagesDescription": "Add photos, illustrations, icons, and galleries.",
+      "mediaDescription": "Add image uploads or URLs, and video embeds.",
+      "videosAndMediaMenu": "Videos and media menu",
+      "platforms": "Platforms",
+      "presentationPreview": "Presentation preview",
+      "addBlockMenu": "Add block menu",
+      "typeSlashPrompt": "Type / to add blocks or...",
+      "typeSlashShortPrompt": "Type / or...",
+      "imageLink": "Image link",
+      "videoLink": "Video link",
+      "projectJson": "Project JSON",
+      "save": "Save",
+      "addCardFromTemplate": "Add card from template",
+      "searchSlideLayouts": "Search slide layouts",
+      "templateCategories": "Template categories",
+      "noTemplatesFound": "No templates found",
+      "themeColors": "Theme colors",
+      "edit": "Edit",
+      "systemColors": "System colors",
+      "insertParagraph": "Insert paragraph",
+      "contributors": "Contributors",
+      "updatedNow": "Updated now",
+      "smartLayoutNumber": "Smart layout number",
+      "insertColumnLeft": "Insert column left",
+      "insertColumnRight": "Insert column right",
+      "deleteColumn": "Delete column",
+      "search": "Search",
+      "slideActions": "Slide actions",
+      "generate": "Generate",
+      "libraries": "Libraries",
+      "media": "Media",
+      "videoUrl": "Video URL",
+      "imageUrl": "Image URL",
+      "pasteVideoUrl": "Paste YouTube, Vimeo, TikTok, or Loom URL",
+      "pasteImageUrl": "Paste or enter image URL",
+      "url": "URL",
+      "webImage": "Web image",
+      "useImage": "Use image: {title}",
+      "imageUploadOrUrl": "Image upload or URL",
+      "tableColumnActions": "Table column {column} actions",
+      "addImageBlock": "Add image",
+      "addTableBlock": "Add table",
+      "updateChartDescription": "Update chart type, style, axes, and data",
+      "closeChartEditor": "Close chart editor",
+      "graphTab": "Graph",
+      "axesTab": "Axes",
+      "visualsTab": "Visuals",
+      "annotateTab": "Annotate",
+      "visible": "Visible",
+      "labels": "Labels",
+      "auto": "Auto",
+      "edges": "Edges",
+      "left": "Left",
+      "right": "Right",
+      "position": "Position",
+      "scale": "Scale",
+      "log": "Log",
+      "zero": "Zero",
+      "custom": "Custom",
+      "startFrom": "Start from",
+      "endAt": "End at",
+      "sortHighLow": "Sort high to low",
+      "showPoints": "Show points",
+      "smoothLines": "Smooth lines",
+      "dataLabels": "Data labels",
+      "gridLines": "Grid lines",
+      "lineThickness": "Line thickness",
+      "missingValues": "Missing values",
+      "top": "Top",
+      "none": "None",
+      "categoryLabels": "Category labels",
+      "basicBlocksDescription": "Add lists, tables, callouts, and other core blocks.",
+      "textBlocksDescription": "Add titles, headings, quotes, and labels.",
+      "titleBlock": "Title",
+      "heading1": "Heading 1",
+      "heading2": "Heading 2",
+      "heading3": "Heading 3",
+      "heading4": "Heading 4",
+      "paragraph": "Paragraph",
+      "smartLayoutItemPlaceholder": "Item",
+      "smartLayoutDescriptionPlaceholder": "Description",
+      "blockQuote": "Block quote",
+      "labelBlock": "Label",
+      "tables": "Tables",
+      "table2x2": "2x2 table",
+      "table3x3": "3x3 table",
+      "table4x4": "4x4 table",
+      "lists": "Lists",
+      "numberedList": "Numbered list",
+      "todoList": "Todo list",
+      "calloutBoxes": "Callout boxes",
+      "noteBox": "Note box",
+      "infoBox": "Info box",
+      "warningBox": "Warning box",
+      "cautionBox": "Caution box",
+      "successBox": "Success box",
+      "questionBox": "Question box",
+      "codeBlock": "Code block",
+      "mathBlock": "Math block",
+      "footnote": "Footnote",
+      "tableOfContents": "Table of contents",
+      "divider": "Divider",
+      "other": "Other",
+      "templateSectionBasic": "Basic",
+      "templateSectionImageSlides": "Image slides",
+      "templateSectionSlideLayouts": "Slide layouts",
+      "templateSectionImages": "Images",
+      "templateSectionSequences": "Sequences",
+      "templateSectionChartsData": "Charts and data",
+      "templateSectionEmbeds": "Embeds",
+      "templateBlankCard": "Blank card",
+      "templateImageAndText": "Image and text",
+      "templateTextAndImage": "Text and image",
+      "templateTwoColumns": "Two columns",
+      "templateTwoColumnWithHeadings": "Two column with headings",
+      "templateThreeColumns": "Three columns",
+      "templateThreeColumnWithHeadings": "Three column with headings",
+      "templateFourColumns": "Four columns",
+      "templateTitleWithBullets": "Title with bullets",
+      "templateTitleWithBulletsAndImage": "Title with bullets and image",
+      "templateBlankImageSlide": "Blank image slide",
+      "templateAccentLeft": "Accent left",
+      "templateAccentRight": "Accent right",
+      "templateAccentTop": "Accent top",
+      "templateAccentRightFit": "Accent right (fit)",
+      "templateAccentLeftFit": "Accent left (fit)",
+      "templateTwoImageColumns": "2 image columns",
+      "templateThreeImageColumns": "3 image columns",
+      "templateFourImageColumns": "4 image columns",
+      "templateImagesWithText": "Images with text",
+      "templateImageGallery": "Image gallery",
+      "templateTeamPhotos": "Team photos",
+      "templateTimeline": "Timeline",
+      "templateIconsWithText": "Icons with text",
+      "templateArrows": "Arrows",
+      "templateFunnelWithText": "Funnel with text",
+      "templateSteppedPyramid": "Stepped pyramid",
+      "templatePyramidWithOutline": "Pyramid with outline",
+      "templateColumnChart": "Column chart",
+      "templateBarChart": "Bar chart",
+      "templateLineChart": "Line chart",
+      "templatePieChart": "Pie chart",
+      "templateDonutChart": "Donut chart",
+      "templateBigNumbers": "Big numbers",
+      "templateCircleStats": "Circle stats",
+      "templateThreeRowTable": "3-row table",
+      "templateLoomRecording": "Loom recording",
+      "templateYouTubeVideo": "YouTube video",
+      "colorBlack": "Black",
+      "colorDarkGray": "Dark gray",
+      "colorGray": "Gray",
+      "colorLightGray": "Light gray",
+      "colorSoftGray": "Soft gray",
+      "colorWhite": "White",
+      "colorPaleYellow": "Pale yellow",
+      "colorPeach": "Peach",
+      "colorPink": "Pink",
+      "colorLavender": "Lavender",
+      "colorBlue": "Blue",
+      "colorMint": "Mint",
+      "colorYellow": "Yellow",
+      "colorOrange": "Orange",
+      "colorRed": "Red",
+      "colorPurple": "Purple",
+      "colorRoyalBlue": "Royal blue",
+      "colorGreen": "Green",
+      "colorOlive": "Olive",
+      "colorBrown": "Brown",
+      "colorDarkRed": "Dark red",
+      "colorDeepPurple": "Deep purple",
+      "colorNavy": "Navy",
+      "colorForestGreen": "Forest green",
+      "colorDefaultLavender": "Default lavender",
+      "colorLightBlue": "Light blue",
+      "colorLightGreen": "Light green",
+      "colorLightYellow": "Light yellow",
+      "colorLightRed": "Light red",
+      "colorLightPurple": "Light purple",
+      "themeAccentColor": "Theme accent",
+      "themeShapeColor": "Theme shape",
+      "themeSurfaceColor": "Theme surface",
+      "themeHeadingColor": "Theme heading",
+      "themeBodyColor": "Theme body",
+      "themeBackgroundColor": "Theme background",
+      "chartSchemeDefault": "Default",
+      "chartSchemeMonochrome2": "Monochrome 2",
+      "chartSchemeMonochrome3": "Monochrome 3",
+      "chartSchemeMonochrome4": "Monochrome 4",
+      "chartTypeLine": "Line",
+      "chartTypeArea": "Area",
+      "chartTypeColumn": "Column",
+      "chartTypeStackedColumn": "Stacked Column",
+      "chartTypeBar": "Bar",
+      "chartTypeStackedBar": "Stacked Bar",
+      "chartTypePie": "Pie",
+      "chartTypeDonut": "Donut",
+      "chartTypeCombo": "Combo",
+      "chartTypeScatter": "Scatter",
+      "chartTypeBubble": "Bubble",
+      "chartTypeHeatmap": "Heatmap",
+      "chartTypeFunnel": "Funnel",
+      "chartTypeWaterfall": "Waterfall",
+      "chartTypeStacked": "Stacked",
+      "chartTypePercentStacked": "100% Stacked",
+      "chartTypeStackedArea": "Stacked Area",
+      "chartTypeMekko": "Mekko",
+      "chartTypeAreaChart": "Area chart",
+      "chartTypeStackedColumnChart": "Stacked Column chart",
+      "chartTypeStackedBarChart": "Stacked Bar chart",
+      "chartTypeComboChart": "Combo chart",
+      "chartTypeScatterChart": "Scatter chart",
+      "chartTypeBubbleChart": "Bubble chart",
+      "chartTypeHeatmapChart": "Heatmap chart",
+      "chartTypeFunnelChart": "Funnel chart",
+      "chartTypeWaterfallChart": "Waterfall chart",
+      "chartTypeBlankDiagram": "Blank diagram",
+      "chartTypeWeeklyCalendar": "Weekly calendar",
+      "chartTypeGanttChart": "Gantt chart",
+      "chartsAndGraphsDescription": "Visualize data with charts, diagrams, and schedules.",
+      "chartItemPending": "{item} will be wired after chart-specific rendering lands",
+      "hideXAxis": "Hide x axis",
+      "showXAxis": "Show x axis",
+      "xAxisLabelMode": "X axis label mode",
+      "hideYAxis": "Hide y axis",
+      "showYAxis": "Show y axis",
+      "yAxisLabelMode": "Y axis label mode",
+      "yAxisPosition": "Y axis position",
+      "yAxisScale": "Y axis scale",
+      "yAxisStartValue": "Y axis start value",
+      "yAxisEndValue": "Y axis end value",
+      "useTableOrder": "Use table order",
+      "sortChartHighLow": "Sort chart high to low",
+      "hideChartPoints": "Hide chart points",
+      "showChartPoints": "Show chart points",
+      "hideDataLabels": "Hide data labels",
+      "showDataLabels": "Show data labels",
+      "hideGridLines": "Hide grid lines",
+      "showGridLines": "Show grid lines",
+      "legendPosition": "Legend position",
+      "hideHeadlineNumber": "Hide headline number",
+      "showHeadlineNumber": "Show headline number",
+      "useValueDataLabels": "Use value data labels",
+      "usePercentageDataLabels": "Use percentage data labels",
+      "calloutNote": "Note",
+      "calloutInfo": "Info",
+      "calloutWarning": "Warning",
+      "calloutCaution": "Caution",
+      "calloutSuccess": "Success",
+      "calloutQuestion": "Question",
+      "columnLayout2Equal": "2 columns - equal",
+      "columnLayout2Left": "2 columns - left",
+      "columnLayout2Right": "2 columns - right",
+      "columnLayout3": "3 columns",
+      "columnLayout4": "4 columns",
+      "videos": "Videos",
+      "videosDescription": "Add rich video embeds.",
+      "mediaItemPending": "{item} will be wired after media embed nodes land",
+      "vimeoVideos": "Vimeo videos",
+      "tiktokVideos": "TikTok videos",
+      "webpageOrApp": "Webpage or app",
+      "displayText": "Display",
+      "monsterText": "Monster",
+      "smallText": "Small text",
+      "normalText": "Normal text",
+      "largeText": "Large text",
+      "markTodoIncomplete": "Mark todo incomplete",
+      "markTodoComplete": "Mark todo complete",
+      "aiImages": "AI images",
+      "aiInfographics": "AI infographics",
+      "stockPhotos": "Stock photos",
+      "gifsFromGiphy": "GIFs from GIPHY",
+      "pictographicIllustrations": "Pictographic illustrations",
+      "iconsClassic": "Icons (classic)",
+      "iconsModern": "Icons (modern)",
+      "qrCode": "QR Code",
+      "accentImages": "Accent images",
+      "gallery": "Gallery",
+      "columnsDescription": "Add 2, 3, or 4 column sections.",
+      "columnsMenu": "Columns menu",
+      "smartLayoutsMenu": "Smart layouts menu",
+      "smartLayoutGroupBoxes": "Boxes",
+      "smartLayoutGroupBullets": "Bullets",
+      "smartLayoutGroupSequence": "Sequence",
+      "smartLayoutGroupImages": "Images",
+      "smartLayoutGroupNumbers": "Numbers",
+      "smartLayoutGroupCircles": "Circles",
+      "smartLayoutGroupQuotes": "Quotes",
+      "smartLayoutGroupSteps": "Steps",
+      "smartLayoutGroupColumns": "Columns",
+      "smartLayoutLabel2Columns": "2 columns",
+      "smartLayoutLabel3Columns": "3 columns",
+      "smartLayoutLabel4Columns": "4 columns",
+      "smartLayoutLabelAlternatingBoxes": "Alternating boxes",
+      "smartLayoutLabelAlternatingBoxesHorizontal": "Alternating boxes horizontal",
+      "smartLayoutLabelAlternatingBoxesVertical": "Alternating boxes vertical",
+      "smartLayoutLabelArrows": "Arrows",
+      "smartLayoutLabelArrowsHorizontal": "Arrows horizontal",
+      "smartLayoutLabelArrowsVertical": "Arrows vertical",
+      "smartLayoutLabelArrowBullets": "Arrow bullets",
+      "smartLayoutLabelArrowSteps": "Arrow steps",
+      "smartLayoutLabelArrowStepsHorizontal": "Arrow steps horizontal",
+      "smartLayoutLabelArrowStepsVertical": "Arrow steps vertical",
+      "smartLayoutLabelBarStats": "Bar stats",
+      "smartLayoutLabelBarStatsLeft": "Bar stats left",
+      "smartLayoutLabelBarStatsRight": "Bar stats right",
+      "smartLayoutLabelBoxSteps": "Box steps",
+      "smartLayoutLabelBoxStepsHorizontal": "Box steps horizontal",
+      "smartLayoutLabelBoxStepsVertical": "Box steps vertical",
+      "smartLayoutLabelCircle": "Circle",
+      "smartLayoutLabelCircleStats": "Circle stats",
+      "smartLayoutLabelCircleStatsExternalLine": "Circle stats external line",
+      "smartLayoutLabelCircleStatsMiddleLine": "Circle stats middle line",
+      "smartLayoutLabelCircleStatsWithExternalBoldLine": "Circle stats with external bold line",
+      "smartLayoutLabelCircleStatsWithMiddleBoldLine": "Circle stats with middle bold line",
+      "smartLayoutLabelCycle": "Cycle",
+      "smartLayoutLabelDotGridStats": "Dot grid stats",
+      "smartLayoutLabelDotGridStatsLeft": "Dot grid stats left",
+      "smartLayoutLabelDotGridStatsRight": "Dot grid stats right",
+      "smartLayoutLabelDotLineStats": "Dot line stats",
+      "smartLayoutLabelDotLineStatsLeft": "Dot line stats left",
+      "smartLayoutLabelDotLineStatsRight": "Dot line stats right",
+      "smartLayoutLabelFlower": "Flower",
+      "smartLayoutLabelFunnel": "Funnel",
+      "smartLayoutLabelFunnelOutsideText": "Funnel outside text",
+      "smartLayoutLabelIconsWithText": "Icons with text",
+      "smartLayoutLabelIconsWithTextLeft": "Icons with text left",
+      "smartLayoutLabelIconsWithTextTop": "Icons with text top",
+      "smartLayoutLabelImagesWithText": "Images with text",
+      "smartLayoutLabelImagesWithTextCircle": "Images with text circle",
+      "smartLayoutLabelImagesWithTextSquare": "Images with text square",
+      "smartLayoutLabelJoinedBoxes": "Joined boxes",
+      "smartLayoutLabelJoinedBoxesWithIcons": "Joined boxes with icons",
+      "smartLayoutLabelLabeledBoxes": "Labeled boxes",
+      "smartLayoutLabelLabeledBoxesHorizontal": "Labeled boxes horizontal",
+      "smartLayoutLabelLabeledBoxesVertical": "Labeled boxes vertical",
+      "smartLayoutLabelLargeBullets": "Large bullets",
+      "smartLayoutLabelLargeBulletsNumbered": "Large bullets numbered",
+      "smartLayoutLabelLeafBoxes": "Leaf boxes",
+      "smartLayoutLabelMinimalTimeline": "Minimal timeline",
+      "smartLayoutLabelMinimalTimelineHorizontal": "Minimal timeline horizontal",
+      "smartLayoutLabelMinimalTimelineTwoSidedHorizontal": "Minimal timeline two-sided horizontal",
+      "smartLayoutLabelMinimalTimelineTwoSidedVertical": "Minimal timeline two-sided vertical",
+      "smartLayoutLabelMinimalTimelineVertical": "Minimal timeline vertical",
+      "smartLayoutLabelMinimalTimelineBoxesHorizontal": "Minimal timeline boxes horizontal",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedHorizontal": "Minimal timeline boxes two-sided horizontal",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedVertical": "Minimal timeline boxes two-sided vertical",
+      "smartLayoutLabelMinimalTimelineBoxesVertical": "Minimal timeline boxes vertical",
+      "smartLayoutLabelMinimalTimelineWithBoxes": "Minimal timeline with boxes",
+      "smartLayoutLabelOutlineBoxes": "Outline boxes",
+      "smartLayoutLabelPills": "Pills",
+      "smartLayoutLabelPillsHorizontal": "Pills horizontal",
+      "smartLayoutLabelPillsVertical": "Pills vertical",
+      "smartLayoutLabelProcessSteps": "Process steps",
+      "smartLayoutLabelProcessStepsNumbered": "Process steps numbered",
+      "smartLayoutLabelPyramid": "Pyramid",
+      "smartLayoutLabelPyramidOutsideText": "Pyramid outside text",
+      "smartLayoutLabelQuoteBoxes": "Quote boxes",
+      "smartLayoutLabelRing": "Ring",
+      "smartLayoutLabelSemiCircle": "Semi-circle",
+      "smartLayoutLabelSideLineBoxes": "Side line boxes",
+      "smartLayoutLabelSideLineText": "Side line text",
+      "smartLayoutLabelSlantedLabels": "Slanted labels",
+      "smartLayoutLabelSlantedLabelsHorizontal": "Slanted labels horizontal",
+      "smartLayoutLabelSlantedLabelsVertical": "Slanted labels vertical",
+      "smartLayoutLabelSmallBullets": "Small bullets",
+      "smartLayoutLabelSolidBoxSmallBullets": "Solid box small bullets",
+      "smartLayoutLabelSolidBoxes": "Solid boxes",
+      "smartLayoutLabelSolidBoxesWithIcons": "Solid boxes with icons",
+      "smartLayoutLabelSolidBoxesWithNumbers": "Solid boxes with numbers",
+      "smartLayoutLabelSpeechBubbles": "Speech bubbles",
+      "smartLayoutLabelSpeechBubblesCenter": "Speech bubbles center",
+      "smartLayoutLabelSpeechBubblesLeft": "Speech bubbles left",
+      "smartLayoutLabelSpeechBubblesRight": "Speech bubbles right",
+      "smartLayoutLabelStaircase": "Staircase",
+      "smartLayoutLabelStaircaseOutsideText": "Staircase outside text",
+      "smartLayoutLabelStarRating": "Star rating",
+      "smartLayoutLabelStarRatingLeft": "Star rating left",
+      "smartLayoutLabelStarRatingRight": "Star rating right",
+      "smartLayoutLabelStats": "Stats",
+      "smartLayoutLabelSteps": "Steps",
+      "smartLayoutLabelStepsHorizontal": "Steps horizontal",
+      "smartLayoutLabelStepsVertical": "Steps vertical",
+      "smartLayoutLabelStepsWithIcons": "Steps with icons",
+      "smartLayoutLabelStepsWithIconsHorizontal": "Steps with icons horizontal",
+      "smartLayoutLabelStepsWithIconsVertical": "Steps with icons vertical",
+      "smartLayoutLabelTimeline": "Timeline",
+      "smartLayoutLabelTimelineHorizontal": "Timeline horizontal",
+      "smartLayoutLabelTimelineTwoSidedHorizontal": "Timeline two-sided horizontal",
+      "smartLayoutLabelTimelineTwoSidedVertical": "Timeline two-sided vertical",
+      "smartLayoutLabelTimelineVertical": "Timeline vertical",
+      "smartLayoutLabelTopCircleBoxes": "Top circle boxes",
+      "smartLayoutLabelTopCircleBoxesWithNumbers": "Top circle boxes with numbers",
+      "smartLayoutLabelTopLineText": "Top line text",
+      "smartLayoutLabelVerticalFunnel": "Vertical funnel",
+      "themeNameBasicLight": "Basic Light",
+      "themeNameBasicDark": "Basic Dark",
+      "themeNameAlabaster": "Alabaster",
+      "themeNameAmber": "Amber",
+      "themeNameAsh": "Ash",
+      "themeNameBeeHappy": "Bee Happy",
+      "themeNameBlueSteel": "Blue Steel",
+      "themeNameBlueberry": "Blueberry",
+      "themeNameBloom": "Bloom",
+      "themeNameBonanHale": "Bonan Hale",
+      "themeNameBreeze": "Breeze",
+      "themeNameBubbleGum": "Bubble Gum",
+      "themeNameChisel": "Chisel",
+      "themeNameCobalt": "Cobalt",
+      "themeNameDewdrop": "Dewdrop",
+      "themeNameGlamour": "Glamour",
+      "themeNameHowlite": "Howlite",
+      "themeNameLinen": "Linen",
+      "themeNameMahogany": "Mahogany",
+      "themeNameMist": "Mist",
+      "themeNameMoss": "Moss",
+      "themeNameOnyx": "Onyx",
+      "themeNameQuartz": "Quartz",
+      "themeNameSand": "Sand",
+      "themeNameVivid": "Vivid",
+      "themeNameKraft": "Kraft",
+      "themeNameCreme": "Creme",
+      "themeNameMystique": "Mystique",
+      "themeNameVortex": "Vortex",
+      "themeNameGoldLeaf": "Gold Leaf",
+      "themeNameTranquil": "Tranquil",
+      "themeNameIris": "Iris",
+      "themeNamePrism": "Prism",
+      "themeNameRush": "Rush",
+      "themeNameChocolate": "Chocolate",
+      "themeNameWireframe": "Wireframe",
+      "themeNameConsultant": "Consultant",
+      "themeNameCornfield": "Cornfield",
+      "themeNameExecutiveBlue": "Executive Blue",
+      "themeNameDeckwiseWarmRetro": "Warm Retro",
+      "themeNameDeckwiseRichPalette": "Rich Palette",
+      "themeNamePetrol": "Petrol",
+      "themeNameAlien": "Alien",
+      "themeNameCoal": "Coal",
+      "themeNameCigar": "Cigar",
+      "themeNameClementa": "Clementa",
+      "themeNameCommons": "Commons",
+      "themeNameCornflower": "Cornflower",
+      "themeNameDaktilo": "Daktilo",
+      "themeNameDawn": "Dawn",
+      "themeNameDialogue": "Dialogue",
+      "themeNameEditoria": "Editoria",
+      "themeNameElectric": "Electric",
+      "themeNameFinesse": "Finesse",
+      "themeNameFlax": "Flax",
+      "themeNameFluo": "Fluo",
+      "themeNameFounder": "Founder",
+      "themeNameDeckwise": "Classic",
+      "themeNameMocha": "Mocha",
+      "themeNameIcebreaker": "Icebreaker",
+      "themeNameIncandescent": "Incandescent",
+      "themeNameKeepsake": "Keepsake",
+      "themeNameLavender": "Lavender",
+      "themeNameLeimoon": "Leimoon",
+      "themeNameLunaria": "Lunaria",
+      "themeNameLux": "Lux",
+      "themeNameMarine": "Marine",
+      "themeNameMossAndMist": "Moss & Mist",
+      "themeNamePearl": "Pearl",
+      "themeNamePiano": "Piano",
+      "themeNamePistachio": "Pistachio",
+      "themeNamePlantShop": "Plant Shop",
+      "themeNameSage": "Sage",
+      "themeNameSeafoam": "Seafoam",
+      "themeNameSerene": "Serene",
+      "themeNameSlate": "Slate",
+      "themeNameTerracotta": "Terracotta",
+      "themeNameIndigo": "Indigo",
+      "themeNameVanilla": "Vanilla",
+      "themeNameWine": "Wine",
+      "exportPptxIdle": "Export PPTX",
+      "exportUnavailable": "Export unavailable",
+      "exporting": "Exporting...",
+      "exported": "Exported",
+      "exportFailed": "Export failed",
+      "googleSlidesExportComplete": "Google Slides export is ready",
+      "googleSlidesExportFailed": "Google Slides export failed",
+      "editableExportRequiresPlus": "Editable PowerPoint and Google Slides exports are available with Plus.",
+      "editableExportAccessCheckFailed": "Unable to verify your export access. Please try again.",
+      "openGoogleSlides": "Open Google Slides",
+      "exportPdfIdle": "Export PDF",
+      "preparingPdf": "Preparing PDF...",
+      "pdfExportFailed": "PDF export failed",
+      "exportAs": "Export as",
+      "exportSlidesAs": "Export slides as",
+      "exportSlideAs": "Export slide as",
+      "exportImage": "Image",
+      "keepAtLeastOneSlide": "Keep at least one slide",
+      "cutOrCopySlideFirst": "Cut or copy a slide first",
+      "cut": "Cut",
+      "copy": "Copy",
+      "pasteBelow": "Paste below",
+      "moveSlidesUp": "Move slides up",
+      "moveUp": "Move up",
+      "moveSlidesDown": "Move slides down",
+      "moveDown": "Move down",
+      "duplicateSlides": "Duplicate slides",
+      "duplicateSlide": "Duplicate slide",
+      "addBelowSelection": "Add below selection",
+      "addBelow": "Add below",
+      "exportSlides": "Export slides",
+      "exportSlide": "Export slide",
+      "deleteSlides": "Delete slides",
+      "delete": "Delete",
+      "tableColumn": "Table column",
+      "gridColumn": "Grid column",
+      "columnResizeWidth": "{label} {index} width",
+      "selectedBlockLabel": "{count} block selected",
+      "selectedBlocksLabel": "{count} blocks selected",
+      "slideLabel": "Slide {index}",
+      "slideContextLine": "Slide {index}: {title}",
+      "blockPathsLine": "Block paths: {paths}",
+      "selectedDeckwiseBlocksFallback": "Selected blocks.",
+      "tableCellActions": "Table cell actions",
+      "cutCells": "Cut cells",
+      "copyCells": "Copy cells",
+      "pasteCellsUnavailable": "Paste cells unavailable",
+      "pasteCells": "Paste cells",
+      "insertColumnsLeft": "Insert columns to the left",
+      "insertColumnsRight": "Insert columns to the right",
+      "insertRowsAbove": "Insert rows above",
+      "insertRowsBelow": "Insert rows below",
+      "keepAtLeastOneTableRow": "Keep at least one row",
+      "deleteTableRowUnavailable": "Delete row unavailable",
+      "keepAtLeastOneTableColumn": "Keep at least one column",
+      "deleteTableColumnUnavailable": "Delete column unavailable",
+      "deleteRow": "Delete row",
+      "deleteSheet": "Delete sheet",
+      "blockActions": "Block actions",
+      "elementPreviewBulletAction": "Action item",
+      "elementPreviewBulletFollowUp": "Follow-up detail",
+      "elementPreviewBulletDecision": "Decision note",
+      "elementPreviewCallout": "Add context for the reader with a concise supporting detail.",
+      "elementPreviewColumnOneTitle": "Column one",
+      "elementPreviewColumnOneParagraph": "Supporting text shows how content flows in this column.",
+      "elementPreviewColumnTwoTitle": "Column two",
+      "elementPreviewColumnTwoParagraph": "A second paragraph makes the layout split easy to read.",
+      "elementPreviewColumnThreeTitle": "Column three",
+      "elementPreviewColumnThreeParagraph": "Short body copy keeps the third column visible.",
+      "elementPreviewColumnFourTitle": "Column four",
+      "elementPreviewColumnFourParagraph": "Compact text previews the fourth column state.",
+      "elementPreviewFootnote": "A short supporting note.",
+      "elementPreviewHeading": "Heading {level}",
+      "elementPreviewLabel": "Label",
+      "elementPreviewListItem": "List item",
+      "elementPreviewProjectUpdate": "Project update",
+      "elementPreviewQuote": "A concise takeaway belongs here.",
+      "elementPreviewStepOne": "Step one",
+      "elementPreviewStepTwo": "Step two",
+      "elementPreviewStepThree": "Step three",
+      "elementPreviewSupportingDetail": "Supporting detail",
+      "elementPreviewTableMetric": "Metric",
+      "elementPreviewTableStatus": "Status",
+      "elementPreviewTableOwner": "Owner",
+      "elementPreviewTableNext": "Next",
+      "elementPreviewTableUsers": "Users",
+      "elementPreviewTableTeam": "Team",
+      "elementPreviewTableGrowth": "Growth",
+      "elementPreviewTableOps": "Ops",
+      "elementPreviewTableLive": "Live",
+      "elementPreviewTableRisk": "Risk",
+      "elementPreviewTableLow": "Low",
+      "elementPreviewTableDone": "Done",
+      "elementPreviewToc": "Section overview",
+      "elementPreviewTodoTask": "Task to complete",
+      "elementPreviewTodoReview": "Owner review",
+      "elementPreviewTodoUpdate": "Send update"
+    }
+  },
+  "files": {
+    "addImage": "Add image",
+    "addPdf": "Add PDF",
+    "upload": "Files",
+    "uploadAction": "Upload",
+    "createFile": "Create file",
+    "projectDocuments": "Project documents",
+    "dropUploadTitle": "Drop files here to upload",
+    "dropUploadSubtitle": "Drop files here to upload them to the matching Sources category",
+    "searchAction": "Search",
+    "createNote": "Doc",
+    "createSlides": "Slide",
+    "slidesTemplate": "Template",
+    "createNoteFailed": "Failed to create doc. Please try again.",
+    "createSlidesFailed": "Failed to create slides. Please try again.",
+    "createSheetFailed": "Failed to upload spreadsheet. Please try again.",
+    "spreadsheetUnsupported": "CSV and XLS files are not supported.",
+    "uploadUnsupportedFileType": "Unsupported file type: {names}",
+    "uploadFailedNoProject": "Please open a project workspace first.",
+    "googleDriveAuthorizationRequired": "Connect Google Drive to continue.",
+    "googleDriveAuthorizationPending": "Google Drive is not connected yet. Finish authorization and try again.",
+    "googleDriveConnectFailed": "Failed to connect Google Drive",
+    "googleDriveImportFailed": "Failed to import Google Drive file",
+    "googleDriveImportSucceeded": "Imported {count} Google Drive file(s).",
+    "googleDriveNotConfigured": "Google Drive import is not configured.",
+    "oneDriveAuthorizationRequired": "Connect OneDrive to continue.",
+    "oneDriveAuthorizationPending": "OneDrive is not connected yet. Finish authorization and try again.",
+    "oneDriveConnectFailed": "Failed to connect OneDrive",
+    "oneDriveImportFailed": "Failed to import OneDrive file",
+    "oneDriveImportSucceeded": "Imported {count} OneDrive file(s).",
+    "oneDrivePickerTitle": "Import from OneDrive",
+    "oneDrivePickerDescription": "Choose files from your connected OneDrive.",
+    "oneDriveSearchPlaceholder": "Search OneDrive files",
+    "oneDrivePickerLoading": "Loading OneDrive files…",
+    "oneDrivePickerLoadFailed": "Failed to load OneDrive files",
+    "oneDrivePickerEmpty": "No OneDrive files found",
+    "oneDrivePickerEmptyHint": "Try another folder, search term, or choose more files during authorization.",
+    "oneDrivePickerHint": "Folders open inside this picker. Select files to import them into the project.",
+    "oneDrivePickerLoadMore": "Load more",
+    "oneDrivePickerReconnect": "Choose more OneDrive files",
+    "oneDrivePickerImportSelected": "Import {count} selected",
+    "oneDriveUntitledFile": "Untitled OneDrive file",
+    "oneDriveLastModified": "Modified {date}",
+    "oneDriveOpenFile": "Open in OneDrive",
+    "oneDriveUnknownDate": "Unknown date",
+    "oneDriveFolder": "Folder",
+    "oneDriveFolderItem": "{count} item(s)",
+    "dropboxAuthorizationRequired": "Connect Dropbox to continue.",
+    "dropboxAuthorizationPending": "Dropbox is not connected yet. Finish authorization and try again.",
+    "dropboxConnectFailed": "Failed to connect Dropbox",
+    "dropboxImportFailed": "Failed to import Dropbox file",
+    "dropboxImportSucceeded": "Imported {count} Dropbox file(s).",
+    "dropboxNotConfigured": "Dropbox import is not configured.",
+    "dropboxPickerRetryRequired": "Dropbox connected. Click Add from Dropbox again to choose files.",
+    "notionAuthorizationRequired": "Connect Notion to continue.",
+    "notionAuthorizationPending": "Notion is not connected yet. Finish authorization and try again.",
+    "notionConnectFailed": "Failed to connect Notion",
+    "notionImportFailed": "Failed to import Notion page",
+    "notionImportSucceeded": "Imported {count} Notion page(s).",
+    "notionPickerTitle": "Import from Notion",
+    "notionPickerDescription": "Choose pages shared with Deckwise.",
+    "notionSearchPlaceholder": "Search pages",
+    "notionPickerSelectPages": "Select pages",
+    "notionPickerLoading": "Loading Notion pages…",
+    "notionPickerLoadFailed": "Failed to load Notion pages",
+    "notionPickerEmpty": "No Notion pages found",
+    "notionPickerMissingAuthorizationHint": "If a page is missing, share the page or its parent page with Deckwise in Notion.",
+    "notionPickerLoadMore": "Load more",
+    "notionPickerChooseMorePages": "Choose more pages",
+    "notionPickerImportSelected": "Import {count} selected",
+    "notionUntitledPage": "Untitled Notion page",
+    "notionLastEdited": "Last edited {date}",
+    "notionOpenPage": "Open in Notion",
+    "notionUnknownDate": "Unknown date",
+    "outlineReferenceMixedUnsupported": "Add slides files and reference files separately.",
+    "outlineReferenceLimit": "You can attach up to {count} reference files.",
+    "outlineReferenceUploadFailed": "Failed to upload reference files",
+    "all": "All",
+    "uploading": "Uploading…",
+    "empty": "No files",
+    "noPreview": "No preview",
+    "image": "Image",
+    "images": "Images",
+    "outline": "Outline",
+    "imageGallery": "Images",
+    "imageWallEmpty": "No images yet",
+    "imageWallEmptyHint": "Uploaded images will appear here",
+    "file": "File",
+    "pdf": "PDF",
+    "note": "Doc",
+    "deleteFile": "Delete file",
+    "deleteFailed": "Failed to delete file. Please try again.",
+    "uploadFailedNoCacheKey": "Upload failed: server did not return cacheKey.",
+    "uploadImageFailed": "Failed to upload image",
+    "uploadPdfFailed": "Failed to upload PDF",
+    "uploadOfficeFailed": "Failed to upload Office file",
+    "officeUploadDisabled": "Office upload is disabled.",
+    "notesTab": "Notes",
+    "filesTab": "Files",
+    "sourcesTipTitle": "Tip",
+    "sourcesTipBody": "Lasso-select content in {sources}, then use {addToChat} to add only that selection to the Agent context.",
+    "addToChat": "Add to Chat",
+    "moreActions": "More actions",
+    "moveToTrash": "Move to Trash",
+    "deleteAction": "Delete",
+    "deleteTypedAction": "Delete {type}",
+    "deleteTypedConfirmTitle": "Delete this {type}?",
+    "deleteFileConfirmTitle": "Delete this file?",
+    "deleteFileConfirmMessage": "This file will be removed from the current workspace.",
+    "download": "Download",
+    "downloadUnavailable": "This file is not available to download.",
+    "export": "Export",
+    "exportMarkdown": "Markdown",
+    "exportMarkdownFailed": "Failed to export Markdown. Please try again.",
+    "exportPptx": "PowerPoint",
+    "exportPptxFailed": "Failed to export PowerPoint. Please try again.",
+    "exportPptxUnavailable": "Please save this slide file before exporting PowerPoint.",
+    "convertToSlide": "Create slides",
+    "convertToSlideFailed": "Failed to convert doc to slides. Please try again.",
+    "convertedSlidesSuffix": "Slides",
+    "duplicate": "Duplicate",
+    "duplicateCopySuffix": "copy",
+    "duplicateFailed": "Failed to duplicate file. Please try again.",
+    "rename": "Rename",
+    "renameDialogTitle": "Rename file",
+    "renameDialogDescription": "Update the name shown for this file in the sidebar.",
+    "renameInputLabel": "Name",
+    "renamePlaceholder": "Enter a file name",
+    "noteTitlePlaceholder": "New page",
+    "renameEmptyName": "File name can't be empty.",
+    "renameFailed": "Failed to rename file. Please try again.",
+    "openInNewTab": "Open in new tab",
+    "openInNewTabUnavailable": "Save this file first before opening it in a new tab.",
+    "cancelAction": "Cancel",
+    "saveAction": "Save",
+    "materials": "Sources",
+    "insertSlide": "Add slide",
+    "imageActions": "Image actions",
+    "copyImage": "Copy image",
+    "outlineAddSlide": "Add slide",
+    "outlineSelectAll": "Select all",
+    "outlineDeleteSlide": "Delete slide",
+    "outlineSelectAndReorderSlide": "Select and reorder slide {page}",
+    "outlineSlideActions": "Slide {page} actions",
+    "materialsSidebarWidth": "Sources sidebar width"
+  },
+  "systemContent": {
+    "imageAlt": "Image",
+    "imageAltN": "Image {n}",
+    "imageName": "Image",
+    "imageNameN": "Image {n}",
+    "imageLoadFailed": "Failed to load image.",
+    "loadFailed": "Failed to load.",
+    "collapse": "Collapse",
+    "pdfDoc": "PDF document"
+  },
+  "selectionToolbar": {
+    "quote": "Quote",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Copy failed",
+    "rollback": "Rollback",
+    "rollbackRunning": "Rolling back",
+    "rollbackRestored": "Restored",
+    "rollbackSuccess": "Restored to this version",
+    "rollbackUnavailable": "No rollback point found",
+    "rollbackFailed": "Rollback failed",
+    "actions": "Selection actions"
+  },
+  "codeBlock": {
+    "copyAria": "Copy code",
+    "copy": "Copy code",
+    "copied": "Copied",
+    "copiedToClipboard": "Code copied to clipboard"
+  },
+  "middle": {
+    "filePreview": "Preview",
+    "editor": "Editor",
+    "emptyHintTitle": "This panel can be used for:",
+    "emptyHintItem1": "Sessions",
+    "emptyHintItem2": "Saved items",
+    "emptyHintItem3": "Files",
+    "emptyHintItem4": "Sources",
+    "loadFailed": "Failed to load.",
+    "pdfLoadFailed": "Failed to load PDF.",
+    "totalPages": "{count} pages",
+    "defaultEditorContent": "# Welcome\n\nStart typing, or type `/` to see commands.\n\n## Features\n\n- Markdown\n- Slash commands\n- AI assistance\n- Code highlighting\n- Math\n- Tables\n",
+    "newNote": "New Doc",
+    "untitledNote": "Untitled Doc",
+    "pdfPreviewControls": "PDF preview controls",
+    "wordPreviewControls": "Word preview controls",
+    "toggleThumbnails": "Toggle thumbnails",
+    "pageNumberInputLabel": "Current page number",
+    "pdfPageAlt": "Page {page}",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "downloadPdf": "Download PDF",
+    "printPdf": "Print PDF",
+    "addToChat": "Add to Chat",
+    "copyText": "Copy",
+    "copied": "Copied",
+    "untitledSlides": "Untitled Slides",
+    "deckwiseSlidesFailedTitle": "Slides failed to open",
+    "deckwiseSlidesLoadFailed": "Failed to load slides.",
+    "failedToLoadExampleTargets": "Failed to load example targets.",
+    "missingSlidesFileId": "Missing slides file id for example promotion.",
+    "exampleTitleRequired": "Example title is required.",
+    "sortOrderInteger": "Sort order must be an integer.",
+    "promoteExample": "Promote example",
+    "promoteExampleDescription": "Register this published slides file in the example catalog.",
+    "promoteExampleSuccess": "Example promoted to gallery.",
+    "promoteExampleFailed": "Failed to promote slides example.",
+    "titleField": "Title",
+    "replaceTarget": "Replace target",
+    "createNewExample": "Create new example",
+    "selectedExample": "Selected example ({id})",
+    "category": "Category",
+    "tags": "Tags",
+    "sort": "Sort",
+    "tagsPlaceholder": "travel, demo",
+    "enabled": "Enabled",
+    "promoting": "Promoting...",
+    "officeLoadFailed": "Failed to load this Office file.",
+    "missingSlidesFileIdForPreviewUpload": "Missing slides file id for preview upload.",
+    "uploadedPreviewImages": "Uploaded {count} preview images.",
+    "failedToUploadPreviewImages": "Failed to upload slide preview images.",
+    "imageUploadFailed": "Image upload failed. Please try again.",
+    "missingSlidesDocumentIdForPublish": "Missing slides document id for publish.",
+    "resolveConflictBeforePublishing": "Resolve the current revision conflict before publishing.",
+    "missingSlidesDocumentIdForShare": "Missing slides document id for sharing.",
+    "resolveConflictBeforeSharing": "Resolve the current revision conflict before sharing.",
+    "sentSlidesShareEmail": "Share email sent to {count} recipient(s).",
+    "publishedPublicSlides": "Published slides are public.",
+    "publishPublicSlidesFailed": "Failed to publish slides publicly. Please try again.",
+    "publicSlidesLinkMissing": "Published slides, but the public link is missing. Please try again.",
+    "unpublishedPublicSlides": "Public access is turned off.",
+    "unpublishPublicSlidesFailed": "Failed to turn off public access. Please try again.",
+    "createShareLinkFailed": "Failed to create share link. Please try again.",
+    "shareLinkMissing": "Share link is missing. Please try again.",
+    "sendShareEmailFailed": "Failed to send share email. Please try again.",
+    "publishedSlidesFile": "Published slides file {fileId}.",
+    "publishedSlides": "Published slides.",
+    "deckwiseSlidesReloadedLatestRemote": "{message} Reloaded the latest remote version.",
+    "deckwiseSlidesReloadAfterSaveFailureFailed": "Failed to reload slides after save failure.",
+    "deckwiseSlidesRefreshAfterAgentFailed": "Failed to refresh slides after agent updates.",
+    "deckwiseSlidesThemeUpdateFailed": "Failed to update slides theme. Please try again.",
+    "deckwiseSlidesAgentConflict": "Agent updated this slide after local edits started. Save or reload the document before continuing.",
+    "deckwiseSlidesChangedWhileSaving": "Slides changed while saving."
+  },
+  "projects": {
+    "audienceReviewTrigger": "Review",
+    "audienceReviewTriggerAria": "Overall score {score} out of 100. Open review suggestions",
+    "audienceReviewTitle": "Audience review",
+    "audienceReviewDescription": "Review this deck from the audience perspective.",
+    "audienceReviewAgain": "Review again",
+    "audienceReviewClose": "Close audience review",
+    "audienceReviewLoading": "Loading latest review...",
+    "audienceReviewGenerating": "Generating audience review",
+    "audienceReviewPreparingImages": "Preparing review images",
+    "audienceReviewSystemError": "System error",
+    "audienceReviewTryAgain": "Try again",
+    "audienceReviewUnavailable": "No reusable review is available yet.",
+    "audienceReviewGenerate": "Generate review",
+    "audienceReviewComplete": "Your presentation is ready to present",
+    "audienceReviewNoSuggestions": "No audience review suggestions found.",
+    "audienceReviewSuggestionFallback": "Suggestion",
+    "audienceReviewFix": "Fix",
+    "audienceReviewFixAria": "Fix suggestion: {title}",
+    "audienceReviewDismiss": "Dismiss",
+    "audienceReviewDismissAria": "Dismiss suggestion: {title}",
+    "audienceReviewSlide": "Slide",
+    "audienceReviewAllSlides": "All slides",
+    "audienceReviewSlideList": "Slide {pages}",
+    "title": "Projects",
+    "subtitle": "Recently opened first",
+    "openingRecentProject": "Opening recent project",
+    "openingRecentProjectHint": "Checking local cache first, then confirming your most recent project.",
+    "openingRecentProjectSlowHint": "The network is slow. Still trying to reach the project service.",
+    "loadRecentTimeoutTitle": "Connection to the project service timed out",
+    "loadRecentTimeoutMessage": "On slow networks we stop waiting instead of leaving the home page hanging. Please try again.",
+    "loadRecentFailedTitle": "Couldn't load your recent project",
+    "loadRecentFailedMessage": "The network is slow or unstable. Please try again.",
+    "loadingProject": "Loading project",
+    "loadFailedTitle": "Failed to load project",
+    "startTitle": "What are you presenting today?",
+    "startComposerPlaceholder": "Start with an idea or upload a file",
+    "invalidProjectData": "The project service returned incomplete data. Please try again.",
+    "loadTimeoutMessage": "The connection to the project service timed out. Please check your network and try again.",
+    "loadNetworkErrorMessage": "The network is slow or unstable, so the project couldn't be loaded right now. Please try again.",
+    "missingOrDeleted": "This project doesn't exist or has been deleted",
+    "recentTitle": "Recent Projects",
+    "recentSubtitle": "Active in the last 7 days",
+    "recentEmpty": "No recent projects",
+    "allTitle": "All",
+    "new": "New",
+    "newProject": "New project",
+    "myProject": "My project",
+    "createCardSubtitle": "Create a new workspace",
+    "emptyTitle": "No projects yet",
+    "emptySubtitle": "Create your first project to get started",
+    "pleaseWait": "Please wait",
+    "createFailed": "Failed to create project. Please try again later.",
+    "confirmDelete": "Are you sure you want to delete this project?",
+    "deleteFailed": "Failed to delete. Please try again later.",
+    "renamePrompt": "Rename project",
+    "renameEmptyName": "Project name can't be empty.",
+    "renameFailed": "Failed to rename. Please try again later.",
+    "projectNumber": "Project #{id}",
+    "updatedAt": "Updated {date}",
+    "searchPlaceholder": "Search projects",
+    "noResults": "No matching projects",
+    "timeGroups": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "pastWeek": "Past week",
+      "past30Days": "Past 30 days",
+      "older": "Older"
+    },
+    "outline": "Outline",
+    "slides": "Slides",
+    "untitledProject": "Untitled project",
+    "generateSlides": "Generate slides",
+    "generatingSlides": "Generating...",
+    "generationWorkflowTitle": "Generating slides",
+    "generationWorkflow": {
+      "outline": "Writing outline",
+      "theme": "Selecting theme",
+      "layout": "Planning page layouts",
+      "visuals": "Choosing images",
+      "slots": "Structuring slide content",
+      "deck": "Building slide deck"
+    },
+    "customize": "Customize",
+    "generateSlidesSettings": "Generate slides settings",
+    "textContent": "Text content",
+    "textContentMode": "Text content mode",
+    "amountOfText": "Amount of text",
+    "writeFor": "Write for...",
+    "tone": "Tone",
+    "theme": "Theme",
+    "viewMore": "View more",
+    "themeHelp": "Use one of our popular themes below or view more",
+    "titlePreview": "Title",
+    "bodyLinkPreview": "Body & link",
+    "themePistachio": "Pistachio",
+    "themeVolt": "Volt",
+    "densityMinimal": "Minimal",
+    "densityConcise": "Concise",
+    "densityDetailed": "Detailed",
+    "densityExtensive": "Extensive",
+    "textModeGenerate": "Generate",
+    "textModeCondense": "Condense",
+    "textModePreserve": "Preserve",
+    "audienceBusinessLabel": "Business",
+    "audienceBusinessContent": "Working professionals creating business, strategy, sales, or internal presentations",
+    "audienceHighSchoolersLabel": "High schoolers",
+    "audienceHighSchoolersContent": "Students in grades 9-12 working on class projects, reports, and presentations",
+    "audienceCollegeStudentsLabel": "College students",
+    "audienceCollegeStudentsContent": "Undergraduate or graduate students preparing coursework, research, or academic presentations",
+    "audienceCreativesLabel": "Creatives",
+    "audienceCreativesContent": "Designers, artists, marketers, and creators building visually expressive content",
+    "audienceTechEnthusiastsLabel": "Tech enthusiasts",
+    "audienceTechEnthusiastsContent": "People interested in technology, software, AI tools, and digital products",
+    "toneProfessionalLabel": "Professional",
+    "toneProfessionalContent": "Polished, concise, and persuasive writing for business or workplace communication",
+    "toneConversationalLabel": "Conversational",
+    "toneConversationalContent": "Friendly, natural, and easygoing writing that feels approachable and human",
+    "toneTechnicalLabel": "Technical",
+    "toneTechnicalContent": "Accurate, structured, and detail-oriented writing for technical explanations, guides, or documentation",
+    "toneAcademicLabel": "Academic",
+    "toneAcademicContent": "Formal, objective, and evidence-focused writing for research, essays, or scholarly work",
+    "toneInspirationalLabel": "Inspirational",
+    "toneInspirationalContent": "Encouraging, energetic, and uplifting writing that motivates the audience",
+    "toneHumorousLabel": "Humorous",
+    "toneHumorousContent": "Playful, witty, and entertaining writing that adds personality while staying relevant",
+    "cardsBelowUpgradeAction": "Upgrade",
+    "cardsBelowUpgradeSuffix": "to generate all cards",
+    "saveOutlineBeforeGenerate": "Save the outline before generating slides.",
+    "waitForImageUploadsBeforeGenerate": "Wait for image uploads to finish before generating slides.",
+    "generateSlidesFailed": "Failed to generate slides.",
+    "firstDraftLabel": "First draft"
+  },
+  "personalization": {
+    "title": "Personalization",
+    "subtitle": "Manage who you are and what Deckwise remembers",
+    "accountSection": "Account",
+    "account": "Account",
+    "general": "General",
+    "models": "Models",
+    "usageBilling": "Usage & Billing",
+    "accountSubtitle": "Manage your profile and account details.",
+    "generalSubtitle": "Adjust app preferences for your workspace.",
+    "usageSubtitle": "Review your subscription and billing.",
+    "featuresSection": "Features",
+    "mail": "Mail Deckwise",
+    "dataControls": "Data controls",
+    "myComputer": "My Computer",
+    "cloudBrowser": "Cloud browser",
+    "skills": "Skills",
+    "mcp": "MCP",
+    "connectors": "Connectors",
+    "integrations": "Integrations",
+    "getHelp": "Get help",
+    "profileTab": "Profile",
+    "knowledgeTab": "Knowledge",
+    "nickname": "Nickname",
+    "nicknamePlaceholder": "Jane",
+    "occupation": "Occupation",
+    "occupationPlaceholder": "Product designer",
+    "moreAboutYou": "More about you",
+    "aboutPlaceholder": "I'm an analyst based in NYC. I work mainly in React and SQL.",
+    "profileHelp": "Deckwise uses this information to personalize responses across all tasks.",
+    "customInstructions": "Custom Instructions",
+    "instructionsPlaceholder": "Be concise and direct. Default to Python unless I say otherwise. When writing docs, use a professional tone and cite sources.",
+    "saveProfile": "Save profile",
+    "savedStatus": "Personalization saved",
+    "loadFailed": "Failed to load personalization.",
+    "saveFailed": "Failed to save personalization.",
+    "memoriesHeading": "Memories",
+    "rulesHeading": "Rules",
+    "memoryTitlePlaceholder": "Memory title",
+    "memoryContentPlaceholder": "Something Deckwise should remember",
+    "ruleContentPlaceholder": "How Deckwise should respond or behave",
+    "addMemory": "Add memory",
+    "addRule": "Add rule",
+    "emptyMemories": "No saved memories yet.",
+    "emptyRules": "No saved rules yet.",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "sourceUser": "User",
+    "sourceAi": "AI",
+    "personal": "Personal",
+    "notSignedIn": "Not signed in",
+    "integrationsSubtitle": "Manage connected apps and file sources.",
+    "integrationsDescription": "Connect cloud storage providers so Deckwise can import selected files when you ask it to.",
+    "googleDriveTitle": "Google Drive",
+    "googleDriveDescription": "Import files from Google Drive.",
+    "notionTitle": "Notion",
+    "notionDescription": "Import pages from Notion.",
+    "connected": "Connected",
+    "notConnected": "Not connected",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "disconnectGoogleDrive": "Disconnect",
+    "disconnectGoogleDriveConfirmTitle": "Disconnect Google Drive?",
+    "disconnectGoogleDriveConfirmMessage": "Deckwise will revoke the stored Google Drive token and stop using this connection. Files already imported into projects will remain in your workspace.",
+    "googleDriveConnected": "Google Drive connected.",
+    "googleDriveDisconnected": "Google Drive disconnected.",
+    "googleDriveAuthorizationPending": "Finish Google Drive authorization in the opened tab.",
+    "connectGoogleDriveFailed": "Failed to connect Google Drive",
+    "disconnectGoogleDriveFailed": "Failed to disconnect Google Drive",
+    "disconnectNotion": "Disconnect",
+    "disconnectNotionConfirmTitle": "Disconnect Notion?",
+    "disconnectNotionConfirmMessage": "Deckwise will revoke the stored Notion token and stop using this connection. Pages already imported into projects will remain in your workspace.",
+    "notionConnected": "Notion connected.",
+    "notionDisconnected": "Notion disconnected.",
+    "notionAuthorizationPending": "Finish Notion authorization in the opened tab.",
+    "connectNotionFailed": "Failed to connect Notion",
+    "disconnectNotionFailed": "Failed to disconnect Notion",
+    "oneDriveTitle": "OneDrive",
+    "oneDriveDescription": "Import files from Microsoft OneDrive.",
+    "disconnectOneDrive": "Disconnect",
+    "disconnectOneDriveConfirmTitle": "Disconnect OneDrive?",
+    "disconnectOneDriveConfirmMessage": "Deckwise will revoke the stored OneDrive token and stop using this connection. Files already imported into projects will remain in your workspace.",
+    "oneDriveConnected": "OneDrive connected.",
+    "oneDriveDisconnected": "OneDrive disconnected.",
+    "oneDriveAuthorizationPending": "Finish OneDrive authorization in the opened tab.",
+    "connectOneDriveFailed": "Failed to connect OneDrive",
+    "disconnectOneDriveFailed": "Failed to disconnect OneDrive",
+    "dropboxTitle": "Dropbox",
+    "dropboxDescription": "Import files from Dropbox.",
+    "disconnectDropbox": "Disconnect",
+    "disconnectDropboxConfirmTitle": "Disconnect Dropbox?",
+    "disconnectDropboxConfirmMessage": "Deckwise will revoke the stored Dropbox token and stop using this connection. Files already imported into projects will remain in your workspace.",
+    "dropboxConnected": "Dropbox connected.",
+    "dropboxDisconnected": "Dropbox disconnected.",
+    "dropboxAuthorizationPending": "Finish Dropbox authorization in the opened tab.",
+    "dropboxPickerRetryRequired": "Dropbox connected. Click Dropbox again to choose files.",
+    "connectDropboxFailed": "Failed to connect Dropbox",
+    "disconnectDropboxFailed": "Failed to disconnect Dropbox",
+    "integrationLoadFailed": "Failed to load integrations",
+    "loadingIntegrations": "Loading",
+    "comingSoon": "Coming soon"
+  },
+  "shareSheet": {
+    "sharing": "Sharing",
+    "searchPlaceholder": "Add emails or people",
+    "copyShareLink": "Copy share link",
+    "copied": "Copied",
+    "copyPublicLink": "Copy public link",
+    "publishPublicSlides": "Publish",
+    "updatePublicSlides": "Update",
+    "unpublishPublicSlides": "Unpublish",
+    "unpublishedPublicSlides": "Unpublished",
+    "sendEmail": "Send email",
+    "emailSent": "Sent",
+    "exportType": "Export type",
+    "exportPdf": "Export to PDF",
+    "exportPowerPoint": "Export editable PowerPoint",
+    "exportGoogleSlides": "Export editable Google Slides",
+    "exportPngs": "Export as PNGs",
+    "installFonts": "Install fonts",
+    "installFontsDescription": "To ensure your presentation looks right in PowerPoint, install these fonts on your computer:"
+  },
+  "marketingHeader": {
+    "ariaLabel": "Marketing page navigation",
+    "directLinks": {
+      "enterprise": "enterprise",
+      "overview": "Overview",
+      "pricing": "Pricing"
+    },
+    "menus": {
+      "product": {
+        "label": "Products",
+        "hero": {
+          "title": "Deckwise",
+          "description": "Your AI workspace"
+        }
+      },
+      "ai": {
+        "label": "AI"
+      },
+      "solutions": {
+        "label": "solution"
+      },
+      "resources": {
+        "label": "Resources"
+      }
+    },
+    "sections": {
+      "aiFeatures": "AI features",
+      "browse": "Browse",
+      "companySize": "Company size",
+      "discover": "discover",
+      "exploreUseCases": "Explore use cases",
+      "learn": "learn",
+      "teams": "team",
+      "useCases": "Usage scenarios"
+    },
+    "items": {
+      "academy": {
+        "title": "college"
+      },
+      "agents": {
+        "title": "Agents",
+        "description": "Automate repetitive tasks"
+      },
+      "aiMeetingNotes": {
+        "title": "AI meeting minutes",
+        "description": "Use AI to write clear minutes"
+      },
+      "aiUseCases": {
+        "title": "AI usage scenarios"
+      },
+      "blog": {
+        "title": "Blog"
+      },
+      "connections": {
+        "title": "connect",
+        "description": "Connect your app"
+      },
+      "consultants": {
+        "title": "consultant"
+      },
+      "customerStories": {
+        "title": "Customer case"
+      },
+      "deckwiseAi": {
+        "title": "Deckwise AI",
+        "description": "AI tools for work"
+      },
+      "design": {
+        "title": "design"
+      },
+      "docs": {
+        "title": "Documentation",
+        "description": "Simple yet powerful"
+      },
+      "education": {
+        "title": "education"
+      },
+      "engProduct": {
+        "title": "Engineering and Products"
+      },
+      "enterprise": {
+        "title": "enterprise"
+      },
+      "enterpriseSearch": {
+        "title": "Enterprise search",
+        "description": "Find answers quickly"
+      },
+      "forLife": {
+        "title": "life"
+      },
+      "forWork": {
+        "title": "work"
+      },
+      "help": {
+        "title": "help"
+      },
+      "it": {
+        "title": "IT"
+      },
+      "knowledgeBase": {
+        "title": "knowledge base",
+        "description": "Centrally manage team knowledge"
+      },
+      "marketing": {
+        "title": "market"
+      },
+      "personal": {
+        "title": "personal"
+      },
+      "productTours": {
+        "title": "Product tour"
+      },
+      "professional": {
+        "title": "professionals"
+      },
+      "projects": {
+        "title": "Project",
+        "description": "Manage all projects"
+      },
+      "security": {
+        "title": "safe",
+        "description": "Secure and scalable"
+      },
+      "smallBusinesses": {
+        "title": "team"
+      },
+      "startups": {
+        "title": "Startup company"
+      },
+      "templates": {
+        "title": "Template"
+      },
+      "webinars": {
+        "title": "Online seminar"
+      },
+      "whatsNew": {
+        "title": "Latest news"
+      }
+    },
+    "footer": {
+      "productLeft": "3.5: Deckwise Developer Platform. See what's new",
+      "productRight": "Download the Deckwise app"
+    }
+  },
+  "pricing": {
+    "metadata": {
+      "title": "Deckwise AI Pricing",
+      "description": "Compare Deckwise Free and Plus for AI presentation drafting, project files, team workflows, and editable deck creation tools."
+    },
+    "aria": {
+      "billingOptions": "Billing options",
+      "included": "Already included",
+      "plans": "Plan",
+      "trustedTeams": "Teams using Deckwise"
+    },
+    "hero": {
+      "title": "Pricing",
+      "logoStrip": "These teams are using"
+    },
+    "billing": {
+      "monthly": "Pay monthly",
+      "yearly": "Pay annually",
+      "save": "Save up to 20%",
+      "pricesNote": "Prices are shown in US dollars"
+    },
+    "groups": {
+      "essentials": {
+        "eyebrow": "Basics",
+        "title": "Suitable for organizing personal and team work."
+      },
+      "workspace": {
+        "eyebrow": "AI workspace",
+        "title": "Suitable for running team work."
+      }
+    },
+    "plans": {
+      "badge": "Recommended",
+      "currentCta": "Current plan",
+      "free": {
+        "name": "Free",
+        "description": "Organize your personal work and try out basic document and slideshow workflows.",
+        "price": "$0",
+        "priceNote": "monthly",
+        "cta": "Get started",
+        "features": {
+          "feature1": "500 credits per month",
+          "feature2": "Basic project space",
+          "feature3": "Limited file upload",
+          "feature4": "Invite up to 10 guests"
+        }
+      },
+      "plus": {
+        "name": "Plus",
+        "description": "Suitable for individuals and small teams who use Deckwise stably.",
+        "price": "$12",
+        "priceNote": "monthly",
+        "cta": "Get started with Plus",
+        "features": {
+          "feature1": "2,000 credits per month",
+          "feature2": "30 days page history",
+          "feature3": "Unlimited file uploads",
+          "feature4": "Invite up to 100 guests"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Suitable for more frequent presentations, data collection, and AI workflows.",
+        "price": "$25",
+        "priceNote": "monthly",
+        "cta": "Get started with Pro",
+        "features": {
+          "feature1": "2,000 credits per month",
+          "feature2": "SAML SSO",
+          "feature3": "Advanced permissions",
+          "feature4": "Private team space"
+        }
+      },
+      "ultra": {
+        "name": "Ultra",
+        "description": "Suitable for heavy production, batch processing, and high-volume team workflows.",
+        "price": "$100",
+        "priceNote": "monthly",
+        "cta": "Get started with Ultra",
+        "features": {
+          "feature1": "40,000 credits per month",
+          "feature2": "User automatically activates",
+          "feature3": "Audit log",
+          "feature4": "Dedicated success support"
+        }
+      }
+    },
+    "quote": {
+      "company": "OpenAI",
+      "body": "Putting all work on the same platform brings great power.",
+      "author": "Brad Lightcap, COO"
+    },
+    "addons": {
+      "agents": {
+        "title": "Custom Agents",
+        "description": "Automate work that relies on your team's knowledge."
+      },
+      "seats": {
+        "title": "AI seats",
+        "description": "Let teammates get answers quickly from the context of their workspace."
+      }
+    },
+    "comparison": {
+      "title": "Solutions and features",
+      "headings": {
+        "feature": "Function",
+        "free": "Free",
+        "plus": "Plus",
+        "pro": "Pro",
+        "ultra": "Ultra"
+      },
+      "groups": {
+        "coreWorkspace": "core workspace",
+        "aiCollaboration": "AI workflow",
+        "securityAdmin": "Security and management"
+      },
+      "rows": {
+        "pagesDocs": "Pages, slides, and documents",
+        "projectSpaces": "Shared project space",
+        "fileUploads": "File upload",
+        "versionHistory": "Version history",
+        "aiSearch": "AI search and writing",
+        "meetingNotes": "AI meeting minutes",
+        "customAgents": "Custom Agents",
+        "guests": "visitor",
+        "adminAnalytics": "Administrator analysis",
+        "samlSso": "SAML SSO",
+        "scim": "SCIM automatically activated",
+        "auditLog": "Audit log"
+      },
+      "values": {
+        "addOn": "add-on purchase",
+        "advanced": "Advanced",
+        "custom": "Customized",
+        "included": "Already included",
+        "limited": "limited",
+        "ninetyDays": "90 days",
+        "oneHundred": "100",
+        "sevenDays": "7 days",
+        "ten": "10",
+        "thirtyDays": "30 days",
+        "trial": "trial",
+        "twoFifty": "250",
+        "unlimited": "unlimited"
+      }
+    },
+    "enterprise": {
+      "controls": {
+        "title": "Need enterprise-level control?",
+        "body": "Put security, auto-provisioning, auditing and support into the same deployment plan."
+      },
+      "rollout": {
+        "title": "Want to roll out to multiple teams?",
+        "body": "We can help plan workspaces, permissions and templates before going live."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "freeTrial": {
+        "question": "Can I try Deckwise for free?",
+        "answer": "Yes. The Free plan allows you to create workspaces, invite small teams, and test core document and slideshow workflows before upgrading."
+      },
+      "switchPlans": {
+        "question": "Can I switch plans in the future?",
+        "answer": "Yes. Paid users can manage monthly or annual billing through the Stripe-hosted portal."
+      },
+      "aiPricing": {
+        "question": "What does Plus include?",
+        "answer": "Free and Plus both include AI use. Plus provides a higher weekly allowance and unlocks editable PowerPoint and Google Slides exports."
+      },
+      "annualBilling": {
+        "question": "Does it support annual payment?",
+        "answer": "Support. Paid plans are available on an annual basis and are suitable for teams that require stable, company-level usage."
+      }
+    }
+  },
+  "careersPage": {
+    "metadata": {
+      "title": "Careers at Deckwise: Build AI Presentation Workflows",
+      "description": "Join Deckwise to build AI presentation software for teams that turn research, files, and feedback into editable slide decks."
+    },
+    "hero": {
+      "eyebrow": "Join Deckwise",
+      "title": "Join us in building the next generation of knowledge work tools.",
+      "body": "When teams can adapt software to the way they actually work, more problems get solved faster. Our mission is to make workspaces that connect knowledge, projects, and AI available to everyone.",
+      "button": "View open positions"
+    },
+    "story": {
+      "title": "our story",
+      "body1": "Deckwise grew out of a straightforward question: why does team work become more fragmented as tools multiply? Documents, files, chats, and demos keep growing, but real project context often has no stable home.",
+      "body2": "We hope to build a workspace that teams can shape freely: as light as a blank sheet of paper, but capable of holding complex projects, knowledge bases, materials, and AI assistance.",
+      "body3": "This requires product, engineering, design, research, marketing and customer teams to work closely together. We're looking for people who are willing to hone basic tools over the long term."
+    },
+    "positions": {
+      "title": "open positions",
+      "filterLabel": "Filter",
+      "location": "location",
+      "department": "Department",
+      "allLocations": "All locations",
+      "allDepartments": "All departments",
+      "reset": "Reset filter",
+      "departments": {
+        "engineering": "Engineering",
+        "design": "design",
+        "product": "Products",
+        "marketing": "market",
+        "customer": "Account Team"
+      },
+      "jobs": {
+        "aiEngineer": {
+          "title": "AI application engineer",
+          "location": "Shanghai / remote",
+          "department": "engineering"
+        },
+        "frontendEngineer": {
+          "title": "Front-end engineer, editor experience",
+          "location": "Beijing / remote",
+          "department": "engineering"
+        },
+        "productDesigner": {
+          "title": "Product Designer, Creation Tools",
+          "location": "Shanghai",
+          "department": "design"
+        },
+        "productManager": {
+          "title": "Product Manager, AI Workflow",
+          "location": "remote",
+          "department": "product"
+        },
+        "growthMarketing": {
+          "title": "Growth Market Manager",
+          "location": "Shenzhen / remote",
+          "department": "marketing"
+        },
+        "customerSuccess": {
+          "title": "Customer Success Manager",
+          "location": "Beijing",
+          "department": "customer"
+        }
+      }
+    },
+    "culture": {
+      "title": "How Deckwise works",
+      "body": "We believe the best products come from consistent use, direct feedback, and sharp quality judgment. The team stays small, focused, and fast around real user problems.",
+      "items": {
+        "craft": {
+          "title": "Pay attention to craftsmanship",
+          "body": "We care about details, performance, maintainability, and the smoothness that users truly feel every day."
+        },
+        "speed": {
+          "title": "maintain speed",
+          "body": "Use clear boundaries and direct communication to reduce waiting and get good ideas into verifiable products as quickly as possible."
+        },
+        "truth": {
+          "title": "pursue facts",
+          "body": "Stay honest in the face of data, user feedback, and technical constraints, and use evidence to drive decisions."
+        }
+      }
+    },
+    "values": {
+      "title": "our values",
+      "items": {
+        "mission": "take responsibility for mission",
+        "direct": "Kind and direct",
+        "users": "Start with user issues",
+        "systems": "Build long-term systems"
+      }
+    },
+    "benefits": {
+      "title": "Benefits and Support",
+      "items": {
+        "health": "Health and insurance support",
+        "setup": "Office equipment budget",
+        "learning": "Learning and Growth Budget",
+        "flex": "Flexible office arrangements",
+        "offsite": "Team co-creation and offsite"
+      }
+    },
+    "mockup": {
+      "video": "Team daily life",
+      "office": "office culture",
+      "roles": "open positions",
+      "team": "cross-functional team"
+    }
+  },
+  "securityPage": {
+    "metadata": {
+      "title": "Deckwise Security: Privacy Controls for AI Presentations",
+      "description": "See how Deckwise protects AI presentation projects with privacy controls, secure workspace boundaries, and enterprise-ready reliability."
+    },
+    "hero": {
+      "eyebrow": "Security and privacy",
+      "title": "Your safety, security and privacy are our priorities.",
+      "body": "Deckwise protects team data from product design, infrastructure, permission control, and AI usage, allowing companies to safely put knowledge and projects into the same workspace.",
+      "button": "Learn about enterprise solutions"
+    },
+    "sections": {
+      "security": {
+        "title": "safe",
+        "body": "Deckwise uses a security-by-design approach to protect data. From transmission to storage to processing, we reduce risk through layered controls.",
+        "items": {
+          "infrastructure": {
+            "title": "security infrastructure",
+            "body": "Data transmission and storage are protected with encryption and exposure is reduced through least privilege access, key management, monitoring and vulnerability remediation processes."
+          },
+          "operations": {
+            "title": "Operational security",
+            "body": "Security teams continuously monitor infrastructure, network and product assets to promptly respond to abnormal behavior and potential threats."
+          },
+          "product": {
+            "title": "product safety",
+            "body": "Enterprise administrators can configure SSO, member provisioning, audit logs, guest access, and fine-grained permissions to enhance organizational visibility and control."
+          }
+        }
+      },
+      "privacy": {
+        "title": "Privacy",
+        "body": "Deckwise is committed to handling customer data in a transparent and controlled manner and to letting customers understand how data is collected, used and protected.",
+        "items": {
+          "data": {
+            "title": "Data processing",
+            "body": "We establish processes and safeguards around the data lifecycle, including collection, processing, storage, access and deletion."
+          },
+          "agreements": {
+            "title": "Agreements and Commitments",
+            "body": "Our service agreement, data processing terms and privacy statement are continuously updated to reflect regulations and industry practices."
+          },
+          "governance": {
+            "title": "data governance",
+            "body": "Help customers keep their data secure, accurate, private and manageable through clear policies and access boundaries."
+          }
+        }
+      },
+      "compliance": {
+        "title": "Compliance",
+        "body": "Deckwise is building a security and privacy program for enterprise customers to help teams manage their workspaces to industry standards.",
+        "items": {
+          "soc": "SOC 2 Type 2 preparation",
+          "iso": "ISO 27001/27701 Planning",
+          "access": "Enterprise access control",
+          "audit": "Auditing and logging capabilities"
+        }
+      },
+      "ai": {
+        "title": "AI governance",
+        "body": "Deckwise’s AI capabilities are designed around trustworthiness, explainability, and controllability. Customer data will not be used to train generic models, and permission boundaries will be respected in AI access.",
+        "items": {
+          "safe": "security clearance",
+          "transparent": "Transparent instructions",
+          "useful": "Focus on user value",
+          "governed": "Data boundary governance"
+        }
+      },
+      "reliability": {
+        "title": "Reliability",
+        "body": "Teams need a workspace that is always available. Deckwise improves service reliability through monitoring, backups, recovery plans, and status transparency.",
+        "items": {
+          "uptime": "Designed for 99.9% availability",
+          "backup": "Backup and recovery process",
+          "status": "Status transparent",
+          "resilience": "Resilient infrastructure"
+        }
+      }
+    },
+    "cta": {
+      "title": "Need advanced security and controls?",
+      "body": "Tell us about your enterprise deployment, compliance or permissions needs and we'll help you plan the right workspace solution.",
+      "button": "contact sales"
+    },
+    "mockup": {
+      "trust": "Trust Center",
+      "permission": "Permission control",
+      "audit": "Audit log",
+      "encryption": "Encryption protection",
+      "ai": "AI data boundaries"
+    }
+  },
+  "blogPage": {
+    "metadata": {
+      "title": "Deckwise Blog: AI Presentation Workflow Tips",
+      "description": "Read Deckwise articles about AI presentation workflows, agent-assisted deck creation, product updates, and knowledge management."
+    },
+    "hero": {
+      "eyebrow": "Tools & Crafts",
+      "title": "Tools and ingenuity",
+      "body": "Observations on the future of work, experiences building products, and stories of how teams are turning knowledge into faster execution.",
+      "categoryLabel": "Blog categories",
+      "latestTitle": "Latest articles",
+      "searchLabel": "Search blog",
+      "searchPlaceholder": "Search for articles, authors or topics"
+    },
+    "categories": {
+      "latest": "Latest",
+      "hq": "Deckwise HQ",
+      "teams": "team",
+      "inspiration": "inspiration",
+      "builders": "builder",
+      "pioneers": "Pioneer Team",
+      "tech": "technology",
+      "mail": "Mail"
+    },
+    "featured": {
+      "category": "Deckwise HQ",
+      "title": "Introducing the Deckwise Developer Platform",
+      "body": "New developer capabilities connect data, tools, and agents so teams can extend processes, build context, and automate repetitive work in the same workspace.",
+      "author": "Max Chen",
+      "role": "Product Owner, Deckwise"
+    },
+    "articles": {
+      "developerPlatform": {
+        "category": "Deckwise HQ",
+        "title": "Introducing the Deckwise Developer Platform",
+        "body": "A new set of building blocks that allow developers and agents to more naturally connect to their team’s knowledge, projects, and business tools.",
+        "author": "Max Chen",
+        "role": "product owner"
+      },
+      "customAgentsBeta": {
+        "category": "Deckwise HQ",
+        "title": "What we learned from Custom Agents beta",
+        "body": "For an agent to become a true teammate, it needs to not only execute commands, but also understand the context, boundaries, and rhythm of the team's collaboration.",
+        "author": "Akshay Lin",
+        "role": "Co-founder"
+      },
+      "multiRegionData": {
+        "category": "technology",
+        "title": "Build a multi-region data system",
+        "body": "From search and analytics to AI event logging, how teams can design scalable data regionalization infrastructure.",
+        "author": "Justin Lee, Adam Hudson",
+        "role": "Engineering team"
+      },
+      "executionTax": {
+        "category": "inspiration",
+        "title": "Eliminate team execution tax",
+        "body": "Why do many teams not lack ideas, but lack a unified working layer to continuously advance decisions to results?",
+        "author": "Áine Dundas",
+        "role": "growth and markets"
+      },
+      "schemaChanges": {
+        "category": "technology",
+        "title": "How to catch breaking schema changes before going live",
+        "body": "A CI guardrail design process and how it helps engineering teams reduce the risk of regressions.",
+        "author": "Maya Lekhi",
+        "role": "Engineering team"
+      },
+      "dataResidency": {
+        "category": "Deckwise HQ",
+        "title": "Data residency capabilities expanded to more regions",
+        "body": "Enterprise customers need to keep data in the right region, and we are making regionalization capabilities a foundational capability for the workspace.",
+        "author": "Fuzzy Khosrowshahi",
+        "role": "chief technology officer"
+      },
+      "pageDesign": {
+        "category": "technology",
+        "title": "Redesign the visual rules of the page",
+        "body": "How we reorganized page density, heading hierarchy, and content blocks to keep complex work clear.",
+        "author": "Paul Velleux",
+        "role": "product design"
+      },
+      "chronicleLaunch": {
+        "category": "team",
+        "title": "How one team uses Deckwise to manage large releases",
+        "body": "From publishing checklists to cross-functional collaboration, how a clear workspace can make important nodes more controllable.",
+        "author": "Mayuresh Patole",
+        "role": "Founder and CEO"
+      },
+      "agentSecurity": {
+        "category": "technology",
+        "title": "How we build security models for agents",
+        "body": "The deeper agent automation goes, the more permissions, auditing, and human validation need to be designed into the underlying product.",
+        "author": "Sean Keenan, Jacob Brackett",
+        "role": "Safety and Engineering"
+      }
+    },
+    "newsletter": {
+      "title": "Continue reading for the next step in how things work",
+      "body": "Get the latest articles and cases on AI workflow, team knowledge management, and product building.",
+      "button": "Get started with Deckwise"
+    }
+  },
+  "mobilePage": {
+    "metadata": {
+      "title": "Deckwise Mobile: Review AI Presentation Projects Anywhere",
+      "description": "Use Deckwise on iOS and Android to review AI presentation projects, capture ideas, and move slide work forward from anywhere."
+    },
+    "hero": {
+      "eyebrow": "Deckwise mobile version",
+      "title": "Take your work with you anytime, anywhere.",
+      "body": "View projects, jot down ideas, comment on drafts, and let AI help you push ideas into deliverables on your phone."
+    },
+    "storeButtons": {
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "downloadOn": "Downloaded from",
+      "getItOn": "Obtained from"
+    },
+    "features": {
+      "title": "From desktop to mobile phone, work is always connected.",
+      "items": {
+        "capture": {
+          "title": "Capture ideas as they happen",
+          "body": "Quickly put post-meeting inspiration, customer feedback, and to-dos into project context."
+        },
+        "review": {
+          "title": "View drafts at any time",
+          "body": "Review presentations, documents, and key project materials on the go."
+        },
+        "ai": {
+          "title": "Mobile AI Assistant",
+          "body": "Ask questions, summarize content based on existing information, and move on to the next step."
+        },
+        "sync": {
+          "title": "Sync across devices",
+          "body": "Updates on your phone will go back to the same workspace, no need to move them back and forth."
+        }
+      }
+    },
+    "quote": {
+      "body": "When project materials, drafts, and next steps are available on mobile, teams can keep work moving even away from their desktops.",
+      "author": "Deckwise Account Team"
+    },
+    "cta": {
+      "title": "Download Deckwise for mobile.",
+      "body": "Bring project context, AI assistants, and presentation workflows to iOS and Android.",
+      "button": "Start for free"
+    },
+    "mockup": {
+      "workspace": "Market launch plan",
+      "ai": "AI Summary",
+      "task": "Next step",
+      "comment": "Comments have been synced"
+    }
+  },
+  "desktopPage": {
+    "metadata": {
+      "title": "Deckwise Desktop: Faster AI Presentation Editing",
+      "description": "Download Deckwise desktop for a focused AI presentation workspace with faster project access, file context, and editable slide workflows."
+    },
+    "hero": {
+      "eyebrow": "Deckwise desktop",
+      "title": "Download the desktop app for a faster experience.",
+      "body": "Quick, concise and less intrusive. Put project files, AI assistants, and presentation editors into one focused window."
+    },
+    "primaryCta": "Download for macOS",
+    "quote": {
+      "body": "By putting project context, drafts, and AI assistants into one desktop workspace, teams switch tools significantly less.",
+      "author": "Deckwise Account Team",
+      "role": "Operations and Marketing Manager"
+    },
+    "download": {
+      "title": "Download Deckwise Desktop",
+      "subtitle": "A faster, more focused work experience is ready.",
+      "items": {
+        "macUniversal": "Download macOS Universal Edition",
+        "macApple": "Download macOS Apple Silicon Edition",
+        "macIntel": "Download macOS Intel version",
+        "windowsX64": "Download for Windows x64",
+        "windowsArm": "Download Windows Arm / Arm64 version"
+      }
+    },
+    "features": {
+      "offline": {
+        "title": "Reduce browser distractions",
+        "body": "Keep presentations, project materials, and AI workflows in a separate window."
+      },
+      "fast": {
+        "title": "Get back to work faster",
+        "body": "Open recent projects directly from the Dock or taskbar to quickly resume editing."
+      },
+      "sync": {
+        "title": "Sync across devices",
+        "body": "Desktop, web and mobile share the same project context."
+      }
+    },
+    "mockup": {
+      "workspace": "Product launch workspace",
+      "document": "Presentation draft",
+      "agent": "AI assistant",
+      "status": "Synchronizing"
+    }
+  },
+  "enterprisePage": {
+    "metadata": {
+      "title": "Deckwise Enterprise: Secure AI Presentation Workspace",
+      "description": "Learn how Deckwise gives enterprise teams a secure AI presentation workspace for project files, governance, and reliable deck workflows."
+    },
+    "hero": {
+      "eyebrow": "Deckwise for Enterprise",
+      "title": "Knowledge and work are connected.",
+      "body": "A secure AI workspace that helps enterprise teams centralize knowledge, plan projects, and build faster within the same context.",
+      "primaryCta": "Get started"
+    },
+    "trust": {
+      "label": "Trusted by fast-growing and innovative teams"
+    },
+    "stats": {
+      "first": {
+        "value": "#1",
+        "label": "A unified workspace for knowledge bases, projects, and AI writing"
+      },
+      "second": {
+        "value": "1 place",
+        "label": "Centralize company knowledge, project plans, data and decisions"
+      },
+      "third": {
+        "value": "AI-ready",
+        "label": "Make team knowledge searchable, reusable and actionable"
+      }
+    },
+    "features": {
+      "items": {
+        "knowledge": {
+          "title": "Company knowledge",
+          "body": "Put playbooks, processes, release plans, and team context into a clearly organized, searchable, and accurate home page."
+        },
+        "search": {
+          "title": "Enterprise search",
+          "body": "Find answers quickly across Deckwise and connected apps, and let your knowledge flow as you work."
+        },
+        "projects": {
+          "title": "Integration project",
+          "body": "Plan tasks, track progress, align teams, and connect briefs, decisions, and deliverables."
+        },
+        "integrations": {
+          "title": "Workflow and connections",
+          "body": "Automate processes, connect common tools, and bring external files, conversations, and signals into the same workspace."
+        }
+      }
+    },
+    "ai": {
+      "title": "All-in-one AI, right where you work.",
+      "items": {
+        "context": {
+          "title": "AI with the right context",
+          "body": "Not another generic chat box, but one that understands questions based on team knowledge, projects, and workflows."
+        },
+        "oneTool": {
+          "title": "One AI tool for multiple jobs",
+          "body": "Brainstorm, write, search, generate demos, organize meetings, and advance processes all in one place."
+        },
+        "integrated": {
+          "title": "Integrate into daily work",
+          "body": "No need to jump apps or copy context. AI appears directly where you plan, build, and track work."
+        },
+        "secure": {
+          "title": "Powerful and secure",
+          "body": "Enterprise-grade AI governance, security, and management controls help teams use AI in a well-bounded environment."
+        }
+      }
+    },
+    "values": {
+      "items": {
+        "empowering": {
+          "title": "Easy to get started and the team wants to use it.",
+          "body": "Enterprise tools need to be powerful, but they also need intuition. Deckwise lets teams organize complex work into familiar pages, projects, and libraries."
+        },
+        "customizable": {
+          "title": "Flexible customization to grow with your team.",
+          "body": "Workspaces can be adapted to different teams, permissions and processes, reducing the proliferation of point tools and reducing maintenance costs."
+        },
+        "connected": {
+          "title": "Every team is always on the same page.",
+          "body": "Connect tools, teams, and work in a searchable workspace to keep teams aligned, move faster, and make better decisions."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Be loved by the innovation team.",
+      "items": {
+        "figma": {
+          "logo": "Figma",
+          "quote": "When information is clearly structured, teams can more intuitively find content and remember where the context is.",
+          "person": "Marie Szuts",
+          "role": "People Ops"
+        },
+        "remote": {
+          "logo": "Remote",
+          "quote": "Centralized knowledge allows new members to find information faster, shortening the time from joining to real output.",
+          "person": "Scott Entwistle",
+          "role": "Recruiting"
+        },
+        "match": {
+          "logo": "Match",
+          "quote": "Shared workspaces are a key way for us to streamline workflow and reduce repetitive communication.",
+          "person": "Rahim Makani",
+          "role": "Product"
+        },
+        "toyota": {
+          "logo": "Toyota",
+          "quote": "When task details and progress are more easily synchronized, teams can save time and reduce the cost of status updates.",
+          "person": "Taku Wakasugi",
+          "role": "Research"
+        },
+        "ramp": {
+          "logo": "Ramp",
+          "quote": "AI can take care of a lot of the administrative tidying up, allowing product teams to focus back on what is actually being built.",
+          "person": "Geoff Charles",
+          "role": "CPO"
+        },
+        "openai": {
+          "logo": "OpenAI",
+          "quote": "Issues that once took hours to troubleshoot can now be resolved in minutes by asking technical knowledge in the workspace.",
+          "person": "John Allard",
+          "role": "Engineering"
+        }
+      }
+    },
+    "product": {
+      "title": "Simplify your product development.",
+      "body": "Manage requirements, research, specifications, release planning, and reviews in one connected hub to help teams build better products faster.",
+      "cta": "Learn more"
+    },
+    "connections": {
+      "eyebrow": "Connections",
+      "title": "Connect all your key tools.",
+      "body": "Bring the tools your team relies on into one place. Integrate, sync, automate workflows, embed rich information, and find answers across apps.",
+      "cta": "View all integrations"
+    },
+    "security": {
+      "title": "Build boldly with best-in-class support and security.",
+      "body": "From deployment planning to identity management, compliance, security, and AI governance, Deckwise provides the support and control needed for enterprise-scale rollouts.",
+      "items": {
+        "services": {
+          "title": "Professional services",
+          "body": "Design, deploy, and automate enterprise workspaces with expert experience."
+        },
+        "guidance": {
+          "title": "Exclusive guidance",
+          "body": "The Customer Success team assists with workspace setup, go-live training and best practices."
+        },
+        "support": {
+          "title": "Premium support",
+          "body": "Provide more proactive, customized support for more complex team needs."
+        },
+        "sso": {
+          "title": "Identity management",
+          "body": "Give employees secure access to workspaces with SAML SSO."
+        },
+        "scim": {
+          "title": "SCIM automatically activated",
+          "body": "Create, remove, update, and synchronize users and groups more easily."
+        },
+        "management": {
+          "title": "Workspace and domain management",
+          "body": "Centrally manage security, compliance, analytics, auditing, and domain settings."
+        },
+        "compliance": {
+          "title": "Security and Compliance Standards",
+          "body": "Organize control capabilities around enterprise procurement, compliance review and data protection requirements."
+        },
+        "governance": {
+          "title": "AI governance",
+          "body": "Clearly define enterprise data boundaries and how AI is used to reduce promotion risks."
+        }
+      }
+    },
+    "resources": {
+      "title": "Resources to help you get started.",
+      "items": {
+        "report": {
+          "title": "How AI is changing knowledge work",
+          "body": "Understand how enterprise teams turn shared knowledge into faster decisions and execution.",
+          "cta": "Read the report"
+        },
+        "hub": {
+          "title": "Centralized Product Development Center",
+          "body": "Learn how to organize requirements, specifications, research, and status updates into a searchable center.",
+          "cta": "Reading Guide"
+        },
+        "tour": {
+          "title": "Self-service experience enterprise workspace",
+          "body": "See how a team uses Deckwise to manage knowledge, projects, and AI workflows.",
+          "cta": "Start tour"
+        }
+      }
+    },
+    "cta": {
+      "title": "An AI workspace for every team.",
+      "body": "Talk to an expert about your organizational structure, security requirements, and team workflows to see how Deckwise can work.",
+      "button": "Get started with Deckwise"
+    }
+  },
+  "teamsPage": {
+    "metadata": {
+      "title": "Deckwise for Teams: AI Presentation Workflows",
+      "description": "Help teams use Deckwise to connect project files, AI drafting, editable slides, reviews, and shared presentation workflows in one workspace."
+    },
+    "hero": {
+      "title": "Teams work better together.",
+      "body": "Projects, knowledge bases, and documentation sit side by side in a workspace. Keep context clear from small teams to larger organizations.",
+      "primaryCta": "Start for free",
+      "secondaryCta": "Learn about Enterprise Edition"
+    },
+    "projects": {
+      "title": "Deliver projects faster",
+      "body": "Keep everyone on the same page from scope definition to go-live day. Manage high-level projects and execution with Kanban boards, timelines, and task views.",
+      "items": {
+        "planning": "project plan",
+        "tasks": "task board",
+        "timeline": "release cadence"
+      },
+      "quote": {
+        "body": "When we are advancing many projects at the same time, the most important thing is to be able to see the whole picture by clicking in at any time.",
+        "author": "Operations and Marketing Team"
+      }
+    },
+    "digitalOffice": {
+      "title": "your digital office",
+      "body": "Say goodbye to cluttered folders and multiple versions of the same document. Put team spaces, materials, and decisions into one central location so everyone knows where to look for answers.",
+      "spaces": {
+        "general": "General",
+        "engineering": "Engineering",
+        "sales": "Sales",
+        "marketing": "Marketing",
+        "managers": "Managers",
+        "operations": "Operations"
+      },
+      "quote": {
+        "body": "In the past, a lot of knowledge only existed in the minds of a few people. Now teams can find it themselves and move forward quickly.",
+        "author": "Innovation strategy team"
+      }
+    },
+    "docs": {
+      "title": "Keep everyone on the same page",
+      "body": "Meeting minutes, goal planning, process documentation, and key decisions can all be documented to let relevant parties know who is doing what and when.",
+      "items": {
+        "notes": "meeting minutes",
+        "goals": "goal planning",
+        "decisions": "key decisions"
+      },
+      "quote": {
+        "body": "In the past, we often sent meeting review emails. Now the team knows where to look when it encounters scope or schedule issues.",
+        "author": "Product course team"
+      }
+    },
+    "freePlan": {
+      "title": "Start with the free plan",
+      "body": "Invite team members and organize the work first. There is no time limit and no credit card required, so you can try it out before deciding whether to upgrade.",
+      "button": "Start for free",
+      "featuresTitle": "Deckwise Team Features",
+      "features": {
+        "collaboration": "Shared workspace context",
+        "permissions": "Customizable permissions",
+        "integrations": "API and tool integration",
+        "views": "Kanban board, timeline and calendar views",
+        "tasks": "Task and project management",
+        "wiki": "Team Wiki and Knowledge Base",
+        "docs": "Beautiful notes and documents",
+        "mobile": "Complete mobile experience"
+      }
+    },
+    "teams": {
+      "title": "Suitable for every kind of team",
+      "body": "The questions vary from function to function, but all require clear context, an executable plan, and a solid knowledge base.",
+      "items": {
+        "engineering": {
+          "title": "Engineering",
+          "body": "Put sprint tasks, code specifications, bug fixes, and release reviews in one place to deliver features faster.",
+          "cta": "Learn more"
+        },
+        "product": {
+          "title": "Products",
+          "body": "Use user research, roadmaps, and cross-functional projects to move ideas to real delivery faster.",
+          "cta": "Learn more"
+        },
+        "design": {
+          "title": "design",
+          "body": "Unify assets, guides, prototypes, and design systems to allow teams to establish a consistent design language.",
+          "cta": "Learn more"
+        }
+      }
+    },
+    "templates": {
+      "title": "Start with a template",
+      "body": "Add the preset workflow to the team workspace and adjust it according to the team's own process.",
+      "items": {
+        "designSystem": {
+          "title": "design system",
+          "body": "Maintain shared design resources, specifications, and component descriptions.",
+          "cta": "Use templates"
+        },
+        "roadmap": {
+          "title": "product roadmap",
+          "body": "Prioritize big projects around annual priorities to keep the team on a common direction.",
+          "cta": "Use templates"
+        }
+      }
+    },
+    "reviews": {
+      "title": "See why customers love Deckwise",
+      "subtitle": "The experience metrics the team cares most about",
+      "body": "Team tools must not only be powerful, but also easy to use, easy to manage, and able to meet real work requirements.",
+      "items": {
+        "easeUse": {
+          "value": "86%",
+          "label": "Ease of use"
+        },
+        "easeAdmin": {
+          "value": "90%",
+          "label": "Easy to manage"
+        },
+        "requirements": {
+          "value": "91%",
+          "label": "meet needs"
+        },
+        "setup": {
+          "value": "86%",
+          "label": "Easy to set up"
+        }
+      }
+    },
+    "cta": {
+      "title": "Try Deckwise today.",
+      "body": "Get started for free, then build a clearer presentation workflow for your team.",
+      "button": "Start for free"
+    }
+  },
+  "personalPage": {
+    "metadata": {
+      "title": "Deckwise Personal: AI Presentation Drafting for Individuals",
+      "description": "Use Deckwise as a personal AI presentation workspace to organize ideas, draft slide decks, manage notes, and polish projects faster."
+    },
+    "hero": {
+      "title": "Deckwise has something for everyone.",
+      "body": "Write notes, plan, organize tasks and manage your life in one place. Personal use is free to start now.",
+      "button": "Register",
+      "platforms": "Supports web, mobile, Mac and Windows",
+      "cards": {
+        "notes": "Notes",
+        "vacation": "travel plans",
+        "tasks": "Task",
+        "writing": "writing",
+        "improvement": "self-improvement",
+        "websites": "personal website"
+      }
+    },
+    "useCases": {
+      "title": "See how Deckwise works for different people",
+      "items": {
+        "notes": {
+          "title": "Take notes",
+          "body": "Capture ideas quickly and organize them your own way. Whether it’s a to-do, a reminder, or the next big idea, Deckwise can help you remember it.",
+          "story": "Travel records, inspiration and to-dos can be carried with you, no longer scattered in different applications."
+        },
+        "organized": {
+          "title": "Organize your life",
+          "body": "Budgets, recipes, to-read articles and information can all be placed on one personal homepage, without the need to piece together multiple apps.",
+          "story": "By bringing business, travel and personal projects together in one customizable system, information is easier to get back at hand."
+        },
+        "tasks": {
+          "title": "Track tasks",
+          "body": "Everything from work requests to chore lists can be facilitated with a simple checklist or a detailed project board.",
+          "story": "Multiple manuscripts, multiple progresses, and multiple statuses can be tracked at the same time instead of switching by memory."
+        },
+        "writing": {
+          "title": "start writing",
+          "body": "Enter directly and leave other distractions behind. Deckwise can be a place to focus on writing, drag and drop organizing, and share feedback.",
+          "story": "By gathering scattered thoughts into chapters, pages, and drafts, the writing process becomes more sustainable."
+        },
+        "improvement": {
+          "title": "Keep getting better",
+          "body": "Habit tracking, reading lists, fitness plans and reviews can all sit side by side in the same system.",
+          "story": "Self-Improvement is not just another to-do app, but connected to your daily records, plans and materials."
+        },
+        "websites": {
+          "title": "Build a website",
+          "body": "Publish the page as a public website to display your resume, portfolio or personal homepage to make it easier for others to discover you.",
+          "story": "Portfolio, resume and project descriptions can be turned into shareable pages directly from your personal workspace."
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Start free forever",
+      "title": "Designed to help you get more done.",
+      "button": "Register",
+      "items": {
+        "dragDrop": {
+          "title": "Drag and drop to organize ideas",
+          "body": "Grab any content and move, combine and organize it the way that works best for you."
+        },
+        "contentTypes": {
+          "title": "Multiple content types",
+          "body": "Images, videos, titles, embeds and listings can all be placed directly into the page."
+        },
+        "navigation": {
+          "title": "Clear navigation",
+          "body": "Pages can be nested within pages, and all levels can be seen at a glance in the sidebar."
+        },
+        "collaboration": {
+          "title": "Shared context",
+          "body": "Comments, mentions, and shared links help you and others accomplish more."
+        }
+      }
+    },
+    "apps": {
+      "title": "start now",
+      "body": "Use the same workspace on web, desktop, and mobile. Need to use it at work? Also check out the Team Edition and Enterprise Edition.",
+      "items": {
+        "web": {
+          "title": "Web app",
+          "body": "Open your browser to start recording, organizing and sharing."
+        },
+        "desktop": {
+          "title": "Desktop",
+          "body": "Maintain a more focused work experience on Mac and Windows."
+        },
+        "mobile": {
+          "title": "Mobile terminal",
+          "body": "Keep inspiration and tasks on hand on iOS and Android."
+        }
+      }
+    },
+    "templates": {
+      "title": "Start with a template",
+      "body": "After registering, you can start with templates such as notes, diaries, job applications, and resumes, and then adjust them to your own system.",
+      "cta": "Browse template gallery",
+      "items": {
+        "notes": "Notes",
+        "journal": "diary",
+        "job": "Job search record",
+        "resume": "Resume"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": {
+        "oldPlan": {
+          "question": "What if I'm already on an old personal plan?",
+          "answer": "You can continue to use your existing content and organize your notes, tasks, and materials in new, personal ways."
+        },
+        "guests": {
+          "question": "Can I share my work?",
+          "answer": "Yes. You can share or export your work when it is ready, while keeping the deck editable in Deckwise."
+        },
+        "multipleMembers": {
+          "question": "What if I want to use it with multiple people?",
+          "answer": "When personal work grows into a team workflow, you can switch to the team page to learn more about larger plans."
+        },
+        "teamTrial": {
+          "question": "Can teams try it for free?",
+          "answer": "Yes. You can create team workspaces to organize projects and documents first, and then upgrade them as needed."
+        }
+      }
+    },
+    "cta": {
+      "title": "Try Deckwise today.",
+      "body": "Get started for free and keep notes, plans, tasks, and personal projects in one place.",
+      "button": "Start for free"
+    }
+  },
+  "customerStory": {
+    "openai": {
+      "metadata": {
+        "title": "OpenAI Customer Story: Faster Deck Workflows with Deckwise",
+        "description": "See how teams can use Deckwise to share project context, reuse knowledge, draft presentations, and move faster from research to editable decks."
+      },
+      "aria": {
+        "partner": "Deckwise and OpenAI",
+        "playVideo": "Play customer case video"
+      },
+      "hero": {
+        "eyebrow": "Featured Cases",
+        "title": "How OpenAI turns shared knowledge into faster workflows with Deckwise"
+      },
+      "lede": "Behind every AI system is the foundation of human knowledge. The OpenAI team needed a place to capture this knowledge, organize project context, and turn shared thinking into faster execution.",
+      "sections": {
+        "centralized": {
+          "title": "Centralizing work in one place releases power",
+          "body1": "As an organization grows, planning, research, and decision-making tend to be spread across different tools. The OpenAI team needed a shared space where work would remain searchable and connectable as the company grew.",
+          "body2": "This workspace becomes the foundation for translating research notes, release plans, product context, and team knowledge into action. Through integrations and AI-assisted search, the right context can flow with the work rather than being locked away in silos."
+        },
+        "research": {
+          "title": "Open up the pipeline from research to products",
+          "body1": "Research teams document experiments and plans in real-time team spaces, then connect this work to engineering and product processes. The result is a clearer path from discovery to release.",
+          "body2": "Kanban boards, lists, and timelines allow each team to organize the same knowledge base around their own processes while keeping the larger project readable to collaborators."
+        },
+        "engineering": {
+          "title": "Speed amplifier and always-on assistant for engineering teams",
+          "body1": "When debugging records, design decisions, and code reviews are kept where the next teammate can find them, engineering knowledge continues to compound. Searchable workspaces make these contexts useful across time zones and handoffs.",
+          "body2": "Rather than starting from scratch to troubleshoot issues, teams can build on existing knowledge and ask the workspace for the most relevant context when pressure is highest."
+        },
+        "data": {
+          "title": "Make data accessible and actionable",
+          "body1": "Data teams can turn weekly reports, dashboards, and operational metrics into a shared reporting hub. Leaders can see numbers that impact the roadmap faster without having to hunt for information in multiple systems.",
+          "body2": "Templates and embedded dashboards reduce repetitive report preparation while keeping analytical context next to the data."
+        },
+        "gtm": {
+          "title": "Faster global GTM engine",
+          "body1": "GTM teams can move faster when product news, customer stories, release notes and enabling materials are in one connected repository.",
+          "body2": "This shared system helps new members onboard faster, keeps sales conversations current, and gives customer-facing teams a clearer view of product strategy."
+        },
+        "impact": {
+          "title": "The impact of centralized work and knowledge",
+          "body1": "The core lesson is simple: when project context and drafts stay together, knowledge is more easily reused. Teams can move from idea to decision to release without losing the derivation process.",
+          "body2": "This shared foundation keeps high-velocity teams aligned while still giving each function the structure it needs."
+        }
+      },
+      "quotes": {
+        "brad": "Our goal is to provide teams with tools that accelerate professional capabilities and help them continue to advance.",
+        "john": "Technical documentation becomes more valuable every time a teammate can find the right answer within a few minutes.",
+        "mashfir": "Converting complex analysis into readable documents allows technical insights to reach a wider audience."
+      },
+      "media": {
+        "researchProjects": "research project",
+        "deployQuestion": "What are the steps required to deploy a fine-tuned model?"
+      },
+      "aside": {
+        "insights": "Interviewee",
+        "useCases": "Usage scenarios",
+        "useCasesBody": "Company-wide use, knowledge base, project management, AI-assisted workflow"
+      },
+      "peopleRoles": {
+        "coo": "COO",
+        "research": "Research",
+        "engineering": "Engineering",
+        "dataScience": "data science",
+        "gtm": "GTM"
+      },
+      "cta": {
+        "title": "Bring Deckwise to your team, starting today!",
+        "body": "Try Deckwise on any device and see how shared workspaces speed up team workflows.",
+        "button": "Get started with Deckwise"
+      },
+      "related": {
+        "title": "How other teams use Deckwise",
+        "brainlabs": "Brainlabs operating system for deep work",
+        "ramp": "How Ramp works on shared knowledge and AI workflows",
+        "storyLabel": "Customer case"
+      }
+    }
+  }
+}

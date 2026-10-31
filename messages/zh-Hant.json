@@ -1,0 +1,3289 @@
+{
+  "app": {
+    "name": "Deckwise Demo",
+    "tagline": "人工智慧研究工作區",
+    "logIn": "登入",
+    "getStartedForFree": "免費開始使用",
+    "openApp": "進入應用",
+    "backToWebsite": "返回網站",
+    "backToHome": "返回首頁",
+    "homeAria": "{appName} 首頁"
+  },
+  "metadata": {
+    "siteTitle": "Deckwise Demo | AI 文件工作台",
+    "siteDescription": "與 AI Agent 協作整理材料、撰寫和維護文件的工作台。"
+  },
+  "locale": {
+    "language": "語言",
+    "english": "英文",
+    "chinese": "简体中文",
+    "traditionalChinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "spanish": "Español",
+    "vietnamese": "Tiếng Việt"
+  },
+  "toast": {
+    "messages": {
+      "copiedDescription": "已複製到剪貼簿",
+      "documentNoLongerExists": "文件已不存在。",
+      "fileUrlMissing": "檔案 URL 遺失。",
+      "failedToLoadFiles": "載入檔案失敗，請稍後再試",
+      "exportStarted": "已開始匯出。"
+    }
+  },
+  "nav": {
+    "backToProjects": "返回專案",
+    "newChat": "新聊天",
+    "projects": "專案"
+  },
+  "home": {
+    "ariaHome": "首頁",
+    "ariaNewProject": "新專案",
+    "ariaProjects": "專案",
+    "presentationStartTitle": "你的下一份簡報從這裡開始",
+    "marketingTaskReviewerHandoff": "上傳 PowerPoint 或開啟最近的簡報，然後在編輯器中選擇「觀眾檢視」。",
+    "recentProjects": "草稿",
+    "newProject": "新專案",
+    "signIn": "登入",
+    "untitledProject": "無題",
+    "updatedAt": "{date} 更新",
+    "projectActionsAria": "{title} 的專案操作",
+    "createdByUsers": "範例投影片庫",
+    "galleryCategories": "類別範例",
+    "galleryMetrics": "觀看次數 {views} / 喜歡 {likes}",
+    "customizeExample": "客製化",
+    "publicDeckLabel": "已發表",
+    "useExample": "使用範例",
+    "usingExample": "正在新增",
+    "useExampleAria": "使用範例 {title}",
+    "previewExampleAria": "預覽範例 {title}",
+    "examplePreviewLoading": "載入範例投影片",
+    "examplePreviewFailed": "無法載入範例預覽",
+    "examplePreviewEmpty": "此範例目前沒有可預覽的投影片。",
+    "exampleImportSucceeded": "已新增範例投影片。",
+    "exampleImportFailed": "新增範例失敗",
+    "exampleImportMissingProject": "匯入結果缺少專案。",
+    "examplesUnavailable": "目前無法提供範例。",
+    "examplesSignInHint": "登入以使用範例投影片。",
+    "examplesEmpty": "沒有可用的範例。",
+    "galleryTabs": {
+      "all": "全部",
+      "ai": "人工智慧",
+      "product": "產品展示",
+      "branding": "品牌推廣",
+      "postersAds": "海報和廣告",
+      "illustration": "插圖",
+      "uiLayout": "使用者介面佈局",
+      "characterDesign": "角色設計",
+      "videosStoryboards": "影片和故事板",
+      "productDesign": "產品設計",
+      "architecturalDesign": "建築設計"
+    }
+  },
+  "chat": {
+    "delete": "刪除",
+    "new": "新聊天",
+    "newChat": "新聊天",
+    "history": "聊天記錄",
+    "chats": "聊天記錄",
+    "currentProject": "目前專案",
+    "noSessions": "還沒有聊天",
+    "untitledSession": "無標題聊天",
+    "welcome": "使用 Deckwise 編輯筆記",
+    "sessionNumber": "聊天 #{id}",
+    "thinking": "思考…",
+    "newSession": "新聊天",
+    "confirmDeleteSession": "確定要刪除此聊天嗎？",
+    "deleteFailed": "刪除失敗。請再試一次。",
+    "sendFailedNeedProject": "傳送失敗：請在建立聊天前先開啟或選擇一個專案。",
+    "createSessionFailed": "建立聊天失敗。",
+    "sendFailed": "傳送失敗：{reason}",
+    "planningNextMoves": "正在規劃下一步…",
+    "dropFilesToAddToChat": "將檔案拖放到此處以加入聊天",
+    "resizeTray": "調整聊天面板大小"
+  },
+  "streamError": {
+    "timeout": "請求逾時。請檢查網路或稍後再試。",
+    "networkError": "網路連線失敗。請檢查網路後重試。",
+    "serverError": "伺服器發生錯誤。請稍後重試。",
+    "serviceUnavailable": "服務暫時無法使用。請稍後重試。",
+    "deadlineExceeded": "請求逾時。請檢查網路或稍後再試。",
+    "connectionClosed": "連線遺失。請再試一次。",
+    "otherSessionActive": "另一個會話正在回覆。請等待並重試。",
+    "aiServiceError": "AI 服務錯誤。請稍後再試。",
+    "unknown": "發生未知錯誤。"
+  },
+  "tool": {
+    "echo": "測試連線...",
+    "fileList": "正在取得專案檔案...",
+    "fileContentRead": "正在讀取檔案內容...",
+    "imageRead": "讀取影像...",
+    "documentRead": "正在讀取文件...",
+    "documentLocate": "正在尋找內容...",
+    "documentDiff": "AI 正在編輯文件...",
+    "documentSave": "正在儲存變更...",
+    "documentUpdateSummary": "更新摘要...",
+    "documentCreate": "正在建立文件...",
+    "scholarSearch": "搜尋學術論文...",
+    "todoList": "組織任務...",
+    "unknown": "工作…"
+  },
+  "chatInput": {
+    "placeholder": "讓 AI 改進這頁投影片",
+    "addAttachment": "新增附件",
+    "connectApps": "連接應用程式",
+    "appConnectionToggle": "{app} 連線",
+    "projectSlashMenuLabel": "專案操作",
+    "projectSlashPolishDeck": "潤色這份簡報",
+    "projectSlashMakeVisual": "讓它更有視覺感",
+    "projectSlashCheckWeakSlides": "檢查薄弱投影片",
+    "addPhotosAndFiles": "新增照片和檔案",
+    "addFromGoogleDrive": "從 Google Drive 加入",
+    "addFromNotion": "從 Notion 加入",
+    "addFromOneDrive": "從 OneDrive 加入",
+    "addFromDropbox": "從 Dropbox 加入",
+    "recentFiles": "最近檔案",
+    "noRecentFiles": "沒有最近檔案",
+    "addImage": "新增圖片",
+    "addPdf": "新增PDF",
+    "send": "傳送",
+    "stop": "停止",
+    "modeSelectLabel": "選擇模式",
+    "modeAskTitle": "詢問",
+    "modeAskDesc": "與助理聊天",
+    "modeAgentTitle": "代理商",
+    "modeAgentDesc": "多步驟操作和編輯",
+    "model": "型號",
+    "modelsLoading": "載入模型",
+    "modelsUnavailable": "型號不可用",
+    "chatModels": {
+      "fast": {
+        "label": "快速",
+        "description": "快速回應"
+      },
+      "smart": {
+        "label": "智慧",
+        "description": "平衡編輯與推理"
+      },
+      "expert": {
+        "label": "專家",
+        "description": "適合複雜內容"
+      }
+    },
+    "modelCreditCost": "{cost} 積分",
+    "openFiles": "開啟檔案",
+    "selectedFiles": "已選取 {count} 個檔案用於檢索",
+    "attachedFiles": "已附加的檔案",
+    "clear": "清除",
+    "file": "檔案",
+    "image": "圖片",
+    "pdf": "PDF",
+    "removeImage": "刪除影像",
+    "removePdf": "刪除 PDF",
+    "removeQuote": "移除引用",
+    "fileFallbackName": "檔案 {id}",
+    "materials": "資料",
+    "outline": "大綱",
+    "slide": "投影片",
+    "slides": "投影片",
+    "decreaseSlides": "減少投影片數",
+    "increaseSlides": "增加投影片數",
+    "slideCount": "投影片數",
+    "outlineWithSlides": "大綱 · {count} 張投影片",
+    "slideCountLabel": "{count} 張投影片",
+    "slideCountMenuLabel": "{count} 張投影片",
+    "outlineSlideLimitExceeded": "目前訂閱最多支援生成 {max} 張投影片。你選擇了 {count} 張。",
+    "outlineSlideLimitPrompt": "需要生成超過 {max} 張投影片？",
+    "outlineSlideLimitUpgradeAction": "升級",
+    "outlineModels": {
+      "fast": {
+        "label": "快速",
+        "description": "快速產生完整簡報"
+      },
+      "smart": {
+        "label": "智慧",
+        "description": "深入推理，產生更高品質的簡報"
+      },
+      "expert": {
+        "label": "專家",
+        "description": "以最高品質產生複雜簡報"
+      }
+    }
+  },
+  "user": {
+    "ariaUserInfo": "使用者資訊",
+    "notSignedIn": "未登入",
+    "user": "使用者",
+    "defaultAccountName": "您的帳戶",
+    "upgrade": "升級",
+    "fullName": "全名",
+    "freePlan": "免費",
+    "credits": "額度",
+    "freeCredits": "免費額度",
+    "settingsShortcut": "設定",
+    "settings": "設定",
+    "manageAccount": "管理帳戶",
+    "billing": "計費",
+    "marketingHome": "主頁",
+    "userGuide": "使用者指南",
+    "contactUs": "聯絡我們",
+    "accountInfo": "帳戶",
+    "accountInfoDesc": "目前登入用戶",
+    "userId": "使用者ID",
+    "account": "帳戶",
+    "phone": "電話",
+    "email": "電子郵件",
+    "role": "角色",
+    "createdAt": "已建立",
+    "updatedAt": "已更新",
+    "appearance": "外觀",
+    "theme": "主題",
+    "language": "語言",
+    "communicationPreferences": "通知偏好",
+    "browserNotifications": "瀏覽器通知",
+    "browserNotificationsDescription": "當有新的進度或任務完成時，在瀏覽器中通知你。",
+    "receiveProductUpdates": "接收產品更新",
+    "receiveProductUpdatesDescription": "接收功能發布的早期存取、成功案例和最佳化工作流程的建議。",
+    "emailQueuedTaskStarts": "排隊任務開始時寄信給我",
+    "emailQueuedTaskStartsDescription": "開啟後，當你的任務結束排隊並開始處理時，我們會即時向你寄送電子郵件。",
+    "adsAboutDeckwise": "關於 Deckwise 的廣告",
+    "adsAboutDeckwiseDescription": "開啟後，我們可能會與行銷服務商分享收集到的你的個人資訊，用於在其他應用程式、網站和平台上向你顯示關於 Deckwise 的廣告。",
+    "languageEnglish": "英文",
+    "languageChinese": "简体中文",
+    "themeLight": "光",
+    "themeDark": "黑暗",
+    "themeSystem": "系統",
+    "dangerZone": "危險區域",
+    "close": "關閉",
+    "logout": "退出",
+    "logoutConfirmTitle": "退出？",
+    "logoutConfirmMessage": "您需要重新登入才能存取您的工作區。",
+    "logoutConfirmAction": "退出",
+    "accountNameSaveFailed": "帳戶名稱儲存失敗。",
+    "deleteAccount": "刪除帳戶",
+    "deleteAccountConfirmTitle": "刪除帳戶？",
+    "deleteAccountConfirmMessage": "這將永久刪除您的帳戶並讓您退出。此操作無法撤銷。",
+    "deleteAccountConfirmAction": "刪除帳戶",
+    "deleteAccountFailed": "刪除帳戶失敗，請再試一次。",
+    "languageTraditionalChinese": "繁體中文",
+    "languageJapanese": "日本語",
+    "languageKorean": "한국어",
+    "languageSpanish": "Español",
+    "personalization": "個人化",
+    "inviteFriends": "邀請好友",
+    "inviteFriendsSubtitle": "雙方各得 {credits} 積分",
+    "inviteDialogTitle": "邀請賺取積分",
+    "inviteDialogDescription": "分享邀請連結給朋友，雙方各得 {credits} 積分。",
+    "copyInvitationLink": "複製邀請文案",
+    "shareInviteOn": "在 {platform} 分享邀請",
+    "resetInvitationLink": "重置邀請連結",
+    "invitationLinkCopied": "邀請文案已複製。",
+    "invitationLinkCopyFailed": "複製邀請文案失敗。",
+    "invitationLinkLoadFailed": "邀請連結載入失敗。",
+    "invitationLinkReset": "邀請連結已重置。",
+    "invitationLinkResetFailed": "重置邀請連結失敗。",
+    "invitationLinkUnavailable": "邀請連結不可用。",
+    "languageVietnamese": "Tiếng Việt"
+  },
+  "billing": {
+    "title": "帳單和發票",
+    "subtitle": "查看您目前的訂閱、使用情況、發票入口點和 Stripe 託管的計費操作。",
+    "settingsTitle": "設定",
+    "settingsNavBilling": "訂閱與付款",
+    "workspaceNavTitle": "帳戶",
+    "workspaceNavAccount": "帳戶",
+    "workspaceNavSubscription": "訂閱",
+    "workspaceNavOverview": "概述",
+    "workspaceNavUsage": "用途",
+    "workspaceNavManagePlan": "調整計劃",
+    "workspaceNavPayment": "付款方式",
+    "workspaceNavInvoices": "發票",
+    "workspaceNavPortal": "條紋門戶",
+    "backToWorkspace": "返回應用",
+    "refresh": "重新整理",
+    "summaryTitle": "帳單快照",
+    "summarySubtitle": "查看最新的訂閱與帳單狀態。",
+    "statusLabel": "狀態",
+    "planLabel": "計劃",
+    "renewalLabel": "本期結束",
+    "paymentMethodLabel": "付款方式",
+    "creditsLabel": "可用學分",
+    "reservedLabel": "預留學分",
+    "summaryNoPlan": "免費",
+    "plansTitle": "計劃",
+    "plansSubtitle": "從後端目前發布的 Stripe 計劃中進行選擇。",
+    "currentPlan": "目前計劃",
+    "planRecommended": "推薦",
+    "planCreditsPerCycle": "包含 {credits} 積分",
+    "planCreditsMonthly": "每月 {credits} 積分",
+    "planCreditsAnnual": "預計每年獲得 {credits} 積分",
+    "planCreditsIncluded": "包含 {credits} 積分",
+    "planIntervalUnknown": "靈活",
+    "pricingCallout": "完整的計劃比較仍然可以在定價頁面上找到。",
+    "viewPricing": "查看定價",
+    "freePlanDescription": "沒有有效的付費訂閱。您可以繼續使用免費方案或從定價中選擇一個方案。",
+    "renewalDescription": "您的訂閱在 {date} 上續訂。",
+    "billingPeriodOutcomeLabel": "目前週期結束後動作",
+    "billingPeriodAutoRenewLabel": "自動續訂",
+    "billingPeriodAutoRenewDescription": "將在 {date} 開啟下一個訂閱週期。",
+    "billingPeriodExpiresLabel": "到期",
+    "billingPeriodExpiresDescription": "訂閱權益將在 {date} 到期。",
+    "billingPeriodSwitchLabel": "切換為 {plan} 方案",
+    "billingPeriodSwitchDescription": "將在 {date} 執行新的訂閱方案。",
+    "billingPeriodSwitchUnknownPlan": "新",
+    "selectedPlanDescription": "從定價中選擇了 {plan}。繼續前往 Stripe Checkout 進行訂閱。",
+    "noActivePlanDescription": "尚未選擇付費方案。從定價中選擇一個計劃以繼續。",
+    "adjustPlan": "調整計劃",
+    "adjustPlanCheckoutDescription": "選擇一個計劃以開啟 Stripe Checkout 並訂閱。",
+    "adjustPlanPortalDescription": "您已經擁有有效的訂閱，因此計劃變更和管理將在 Stripe 入口網站中進行。",
+    "planDialogTitle": "選擇適合您的計劃",
+    "planDialogDescription": "選擇 Deckwise 方案與計費週期。",
+    "planDialogCycleMonthly": "每月",
+    "planDialogCycleAnnual": "每年 · 節省 20%",
+    "planDialogCycleAnnualShort": "每年",
+    "planDialogBillingUnitMonthly": "/月",
+    "planDialogBillingUnitAnnual": "/月",
+    "planDialogUpgrade": "升級",
+    "planDialogCurrentPlan": "您目前的計劃",
+    "planDialogFeatureCardsPerPrompt": "每個提示最多可建立 {count} 張卡片",
+    "planDialogFeatureMonthlyCredits": "每月 {credits} 個積分",
+    "planDialogPlusDescription": "適合建立更多簡報，並用 AI 持續打磨",
+    "planDialogPlusIncludes": "Free 的所有功能",
+    "planDialogPlusFeatureCards": "每個提示最多可建立 30 張卡片",
+    "planDialogPlusFeatureEditablePowerPoint": "匯出可編輯的 PowerPoint",
+    "planDialogPlusFeatureEditableGoogleSlides": "匯出可編輯的 Google 簡報",
+    "planDialogPlusFeatureImageModels": "先進的 AI 模型",
+    "planDialogProDescription": "適用於高級 AI 模型、更長的專案和更精美的演示",
+    "planDialogProIncludes": "Plus 中的所有內容，以及：",
+    "planDialogProFeatureCards": "每個提示最多可建立 60 張卡片",
+    "planDialogProFeatureCredits": "2,000 每月積分",
+    "planDialogProFeatureImageModels": "優質AI圖像模型",
+    "planDialogProFeatureBranding": "客製化品牌和字體",
+    "planDialogProFeatureAnalytics": "詳細分析和進階共享",
+    "planDialogProFeatureDomains": "發布最多 10 個自訂網域",
+    "planDialogUltraDescription": "適合高頻 AI 使用、高階模型和大批量簡報建立",
+    "planDialogUltraIncludes": "Pro 中的所有內容，以及：",
+    "planDialogUltraFeatureCards": "每個提示最多可建立 75 張卡片",
+    "planDialogUltraFeatureCredits": "每月 20,000 個積分",
+    "planDialogUltraFeatureModels": "訪問最先進的人工智慧模型（文字、圖像、影片）",
+    "planDialogUltraFeatureDomains": "發布最多 100 個自訂網域",
+    "planDialogUltraFeatureEarlyAccess": "搶先體驗新功能",
+    "planDialogSecurityTitle": "安全與合規性",
+    "planDialogSecurityDescription": "企業級安全和行業標準認證。",
+    "planDialogSecurityLearnMore": "了解更多",
+    "planDialogHelpPrefix": "有問題嗎？",
+    "planDialogHelpLink": "聯絡我們",
+    "planDialogEditBilling": "編輯帳單",
+    "activePlanHint": "目前計劃：{plan}",
+    "noPlansTitle": "沒有可用的計劃",
+    "noPlansDescription": "後端尚未發布任何有效的 Stripe 計劃。",
+    "paymentTitle": "條紋支付管理",
+    "paymentSubtitle": "Checkout 收集卡、連結和其他符合資格的付款方式；計費入口網站管理已儲存的方法和發票。",
+    "paymentReady": "Stripe 中已準備好預設付款方式。",
+    "paymentMissing": "當您訂閱時，Checkout 將收集付款方式。",
+    "paymentReadyShort": "已儲存",
+    "paymentMissingShort": "失蹤",
+    "paymentManage": "開啟計費門戶",
+    "manageInStripe": "在 Stripe 中管理",
+    "paymentManagedByStripe": "由 Stripe Checkout 和客戶入口網站管理",
+    "subscriptionTitle": "訂閱操作",
+    "subscriptionSubtitle": "透過 Stripe Checkout 啟動或變更計劃，然後返回此處以了解狀態和使用情況。",
+    "subscribe": "繼續結帳",
+    "managePortal": "開啟 Stripe 門戶",
+    "cancelSubscription": "期末取消",
+    "resumeSubscription": "履歷續訂",
+    "resourceBreakdownTitle": "製作人員",
+    "resourceBreakdownSubtitle": "從後端同步的活動信用儲存桶。",
+    "creditsPanelBreakdown": "信用崩潰",
+    "creditsPanelFreeDescription": "免費積分按照配置的時間表刷新。",
+    "creditsPanelViewUsage": "查看使用情況",
+    "includedUsageTitle": "包含的用途",
+    "usageTypeColumn": "類型",
+    "usageAvailableColumn": "可用",
+    "usageExpiresColumn": "過期",
+    "creditBucketFreeMonthly": "免費",
+    "creditBucketSubscriptionCycle": "訂閱",
+    "creditBucketCampaignBonus": "訂戶獎金",
+    "creditBucketPersistent": "持久積分",
+    "creditBucketGeneric": "積分桶",
+    "usageRefreshTooltip": "{date} 上的刷新",
+    "usageRefreshTooltipUnknown": "此限額將在下一個後端計費週期刷新。",
+    "onDemandUsageTitle": "按需使用",
+    "onDemandUsageSubtitle": "尚未啟用計量計費。費用詳細資訊稍後將顯示在此。",
+    "onDemandUsageTotal": "當前週期",
+    "onDemandUsageEmpty": "找不到當前週期的按需使用資料。",
+    "invoicesTitle": "發票",
+    "invoicesDescription": "發票和收據由 Stripe 客戶入口網站管理。",
+    "cancelTitle": "取消",
+    "cancelDescription": "取消將在目前計費週期結束時停止續約。",
+    "resumeTitle": "履歷續訂",
+    "resumeDescription": "此訂閱設定為在期末取消。您可以在此之前恢復續訂。",
+    "resourceBreakdownEmpty": "還沒有活躍的信用桶。",
+    "bucketExpires": "過期 {date}",
+    "subscribeSuccess": "開啟 Stripe 結帳。",
+    "subscribeFailed": "無法啟動 Stripe Checkout。",
+    "alreadyActiveSubscription": "你已有有效訂閱。",
+    "checkoutSyncFailed": "無法同步 Checkout 訂閱狀態。請盡快刷新。",
+    "cancelSuccess": "訂閱將在本期結束時取消。",
+    "cancelFailed": "更新取消失敗。",
+    "resumeSuccess": "訂閱續訂已恢復。",
+    "resumeFailed": "無法恢復訂閱。",
+    "portalFailed": "無法開啟 Stripe 入口網站。",
+    "refreshFailed": "無法載入賬單資料。",
+    "syncing": "正在等待 Stripe webhook 同步...",
+    "webhookSyncTitle": "Webhook 同步狀態",
+    "webhookSyncDescription": "計費快照在 Stripe webhooks 登陸後更新，因此訂閱或更改續訂設定後預計會出現短暫延遲。",
+    "testModeTitle": "Stripe 託管流程",
+    "testModeDescription": "Checkout 擁有收款和連結/卡片處理功能；此頁面重點介紹訂閱狀態、使用情況和安全管理連結。",
+    "statusActive": "活躍",
+    "statusTrialing": "試用",
+    "statusIncomplete": "不完整",
+    "statusPastDue": "逾期",
+    "statusPaused": "已暫停",
+    "statusUnpaid": "未付款",
+    "statusCanceled": "取消",
+    "statusExpired": "已過期",
+    "statusNone": "未訂閱",
+    "planDialogBillingCycleLabel": "计费周期"
+  },
+  "login": {
+    "emailLabel": "電子郵件地址",
+    "codeLabel": "電子郵件驗證碼",
+    "sendCode": "傳送驗證碼",
+    "sendingCode": "傳送中...",
+    "codeSent": "驗證碼已傳送，請檢查信箱。",
+    "signInWithEmail": "使用電子郵件登入",
+    "invalidEmail": "請輸入有效的電子郵件地址。",
+    "missingCode": "請輸入郵件中的驗證碼。",
+    "emailCodeFailed": "驗證碼傳送失敗，請重試。",
+    "emailLoginFailed": "登入失敗，請檢查驗證碼後重試。",
+    "headline": "我們會為你登入；如果你還沒有帳號，會為你建立一個。",
+    "title": "登入{appName}",
+    "subtitle": "繼續使用您的 Google 帳戶",
+    "verifying": "正在驗證登入...",
+    "signingIn": "正在登入...",
+    "desktopBrowserSignIn": "在瀏覽器中繼續",
+    "desktopBrowserOpening": "正在開啟瀏覽器...",
+    "desktopBrowserWaiting": "正在等待瀏覽器授權...",
+    "desktopBrowserRetry": "重新在瀏覽器中登入",
+    "desktopBrowserOpenFailed": "無法開啟瀏覽器，請再試一次。",
+    "desktopBrowserExpired": "此登入請求已過期，請再試一次。",
+    "desktopBrowserSignInFailed": "瀏覽器登入失敗，請再試一次。",
+    "desktopWelcome": {
+      "title": "Deckwise 桌面版",
+      "description": "讓靈感與文件直接在桌面端變成出色的簡報。",
+      "getStarted": "開始使用",
+      "checkingSession": "正在開啟 Deckwise..."
+    },
+    "desktopAuthorization": {
+      "title": "授權 Deckwise 桌面應用程式",
+      "description": "請確認你要登入下方顯示的桌面應用程式。",
+      "loading": "正在載入登入請求...",
+      "device": "裝置",
+      "platform": "平台",
+      "version": "應用程式版本",
+      "approve": "授權桌面應用程式",
+      "approving": "正在授權...",
+      "approvedTitle": "桌面應用程式已授權",
+      "approvedDescription": "你可以關閉此頁面並返回 Deckwise 桌面應用程式。",
+      "expiredTitle": "登入請求已過期",
+      "expiredDescription": "請返回 Deckwise 桌面應用程式並重新開始登入。",
+      "errorTitle": "無法完成授權",
+      "loadFailed": "無法載入此登入請求，請再試一次。",
+      "approveFailed": "無法授權桌面應用程式，請再試一次。",
+      "invalidRequest": "此登入連結無效，請返回 Deckwise 桌面應用程式後重試。",
+      "retry": "再試一次",
+      "unknownDevice": "未知"
+    },
+    "termsAcknowledgement": "點擊「繼續」即表示你同意<terms>服務條款</terms>和<privacy>隱私權政策</privacy>。",
+    "brand": "{appName} — 您的研究助手",
+    "termsOfService": "服務條款",
+    "privacyPolicy": "隱私權政策"
+  },
+  "invitation": {
+    "title": "立即加入 {appName} 並領取免費積分！",
+    "description": "把你的邀請連結分享給朋友，一起賺取積分。",
+    "imageAlt": "{appName} 邀請預覽"
+  },
+  "slidesPreview": {
+    "publishedLoadFailed": "載入已發布投影片失敗",
+    "sharedLoadFailed": "載入共享投影片失敗",
+    "publishedEmpty": "這份已發布簡報目前沒有可預覽的投影片。",
+    "sharedEmpty": "這份共享簡報目前沒有可預覽的投影片。",
+    "publishedLabel": "已發布",
+    "sharedLabel": "共享",
+    "publishedMetaTitle": "{appName} 已發布投影片",
+    "publishedMetaDescription": "查看從 {appName} 分享的已發布投影片。",
+    "sharedMetaTitle": "{appName} 共享投影片",
+    "sharedMetaDescription": "開啟在 {appName} 上與你共享的投影片。",
+    "exampleMetaTitle": "{appName} 範例投影片",
+    "exampleMetaDescription": "預覽範例投影片，並在 {appName} 中自訂。"
+  },
+  "common": {
+    "cancel": "取消",
+    "confirmDeletion": "確認刪除？",
+    "close": "關閉",
+    "clear": "清除",
+    "delete": "刪除",
+    "rename": "重新命名",
+    "copy": "複製",
+    "retry": "重試",
+    "hello": "你好，",
+    "back": "返回",
+    "refresh": "重新整理",
+    "loading": "加載中...",
+    "loadMore": "加載更多",
+    "allLoaded": "全部都追上了",
+    "loadFailed": "加載失敗。",
+    "unknownError": "未知錯誤",
+    "remove": "移除",
+    "saving": "儲存中...",
+    "unsavedChanges": "未儲存的變更",
+    "saved": "已儲存",
+    "revisionConflict": "版本衝突",
+    "saveFailed": "儲存失敗",
+    "ready": "就緒",
+    "desktopWindow": {
+      "file": "檔案",
+      "edit": "編輯",
+      "view": "檢視",
+      "window": "視窗",
+      "help": "說明",
+      "back": "返回",
+      "forward": "前進",
+      "menuBar": "應用程式選單"
+    }
+  },
+  "errorBoundary": {
+    "title": "出了點問題",
+    "message": "請刷新頁面。如果問題仍然存在，請聯絡支援人員。",
+    "refresh": "重新整理"
+  },
+  "notFound": {
+    "title": "頁面不存在",
+    "message": "你開啟的頁面不存在，或已經移動。請返回首頁繼續使用。"
+  },
+  "quote": {
+    "expand": "展開引用",
+    "collapse": "收合引用"
+  },
+  "editor": {
+    "slashMenu": {
+      "header": "基礎"
+    },
+    "slash": {
+      "ai": "詢問人工智慧",
+      "text": "文字",
+      "h1": "標題 1",
+      "h2": "標題 2",
+      "h3": "標題 3",
+      "bullet": "項目符號列表",
+      "ordered": "編號列表",
+      "task": "待辦事項清單",
+      "callout": "標註",
+      "quote": "引用",
+      "table": "表格",
+      "divider": "分音器",
+      "link": "連結到頁面",
+      "code": "程式碼區塊",
+      "image": "網頁圖片",
+      "header": {
+        "basic": "基礎"
+      }
+    },
+    "blockHandle": {
+      "addBelow": "在下方插入新行",
+      "turnInto": "變成",
+      "turnIntoHeader": "變成",
+      "copy": "複製",
+      "delete": "刪除",
+      "expandHidden": "展開隱藏區塊",
+      "collapseHidden": "收合隱藏區塊"
+    },
+    "aiInput": {
+      "placeholder": "問人工智慧...",
+      "thinking": "思考…",
+      "ask": "詢問"
+    },
+    "tableTooltip": {
+      "duplicateRow": "重複行",
+      "duplicateCol": "重複列",
+      "deleteRow": "刪除行",
+      "deleteCol": "刪除列"
+    },
+    "placeholder": {
+      "hint": "輸入內容，或按「/」開啟命令",
+      "toggleSummary": "切換"
+    },
+    "codeBlock": {
+      "copy": "複製",
+      "copied": "已複製"
+    },
+    "linkHover": {
+      "copyFailed": "複製連結失敗。",
+      "open": "開啟連結",
+      "edit": "編輯連結",
+      "urlLabel": "頁面或 URL",
+      "urlPlaceholder": "https://example.com",
+      "titleLabel": "連結標題",
+      "titlePlaceholder": "連結標題",
+      "remove": "移除連結"
+    },
+    "table": {
+      "duplicateRow": "重複行",
+      "duplicateCol": "重複列",
+      "deleteRow": "刪除行",
+      "deleteCol": "刪除列"
+    },
+    "callout": {
+      "note": "📝 備註",
+      "tip": "💡 提示",
+      "warning": "⚠️ 警告",
+      "error": "🚫 錯誤",
+      "success": "✅ 成功",
+      "info": "ℹ️ 資訊"
+    }
+  },
+  "deckwise": {
+    "toolbar": {
+      "insertTools": "插入工具",
+      "dragToInsert": "拖曳以插入",
+      "text": "文字",
+      "basicBlocks": "基本區塊",
+      "blocks": "積木",
+      "images": "圖片",
+      "columns": "科爾斯",
+      "layouts": "佈局",
+      "layout": "佈局",
+      "chartsAndGraphs": "圖表和圖表",
+      "chart": "圖表",
+      "video": "影片",
+      "textFormattingToolbar": "文字格式工具列",
+      "textStyle": "文字樣式",
+      "textStyles": "文字樣式",
+      "textSize": "文字大小",
+      "useSmallTextSize": "使用較小的文字尺寸",
+      "useDefaultTextSize": "使用預設文字大小",
+      "useLargeTextSize": "使用大字體",
+      "textColor": "文字顏色",
+      "backgroundColor": "背景顏色",
+      "defaultTextColorOption": "預設顏色",
+      "defaultTextBackgroundColorOption": "預設背景顏色",
+      "textColorOption": "{color}文字",
+      "textBackgroundColorOption": "{color}背景",
+      "bold": "大膽",
+      "italic": "斜體",
+      "underline": "底線",
+      "strikethrough": "刪除線",
+      "code": "程式碼",
+      "link": "連結",
+      "editLink": "編輯連結",
+      "linkUrl": "連結網址",
+      "linkPlaceholder": "貼上連結，然後按 Enter",
+      "removeLink": "移除連結",
+      "horizontalAlignment": "水平對齊",
+      "defaultTextColor": "預設",
+      "advanced": "進階",
+      "apply": "申請",
+      "remove": "刪除",
+      "superscript": "上標",
+      "bulletList": "項目符號清單",
+      "alignLeft": "左對齊",
+      "alignCenter": "居中對齊",
+      "alignRight": "右對齊",
+      "clearFormatting": "清除格式",
+      "undo": "復原",
+      "redo": "重做",
+      "addParagraphBelow": "加入下面的段落",
+      "pageContentFull": "這張投影片快放滿了，請把多出的內容拆到新的投影片，保持版面清晰。",
+      "moveBlock": "移動方塊",
+      "cutBlock": "剪下",
+      "copyBlock": "複製",
+      "pasteBlockBelow": "貼到下方",
+      "pasteBlockUnavailable": "請先剪下或複製一個區塊",
+      "duplicateBlock": "複製區塊",
+      "deleteBlock": "刪除區塊",
+      "duplicateLayout": "複製版面",
+      "deleteLayout": "刪除版面",
+      "pageActions": "頁面操作",
+      "pageLayout": "頁面版面",
+      "blank": "空白",
+      "imageTop": "圖片頂部",
+      "imageLeft": "左圖",
+      "imageRight": "右圖",
+      "imageBackground": "影像背景",
+      "imageActions": "影像動作",
+      "videoActions": "影片動作",
+      "editImage": "編輯影像",
+      "editVideo": "編輯影片",
+      "imageEdge": "圖片邊緣",
+      "straightImageEdge": "直邊",
+      "curveImageEdge": "弧邊",
+      "slantImageEdge": "斜邊",
+      "waveImageEdge": "連續弧邊",
+      "fitImage": "適合影像",
+      "expandImage": "展開圖片",
+      "resizeLayoutImage": "調整佈局影像的大小",
+      "uploadImage": "上傳圖片",
+      "uploadingImage": "上傳圖片",
+      "deleteImage": "刪除影像",
+      "deleteVideo": "刪除影片",
+      "imageInfo": "圖片資訊",
+      "imageMetadata": "圖片元資料",
+      "noImageMetadata": "暫無元資料。",
+      "metadataTitle": "標題",
+      "metadataDescription": "描述",
+      "metadataCredit": "作者",
+      "metadataSource": "來源",
+      "metadataAttribution": "署名連結",
+      "metadataImageUrl": "圖片 URL",
+      "metadataThumbnailUrl": "縮圖 URL",
+      "metadataDimensions": "尺寸",
+      "metadataProviderId": "來源 ID",
+      "chartActions": "圖表操作",
+      "editChart": "編輯圖表",
+      "columnLayoutActions": "列佈局操作",
+      "columnLayout": "欄位佈局",
+      "columnsCount": "{count} 柱",
+      "equalizeColumns": "均衡列",
+      "alignTop": "頂部對齊",
+      "alignMiddle": "中間對齊",
+      "alignBottom": "對齊底部",
+      "columnColor": "列顏色",
+      "deleteColumns": "刪除列",
+      "columnLayouts": "列佈局",
+      "columnColors": "列顏色",
+      "calloutActions": "標註操作",
+      "calloutStyle": "標註樣式",
+      "calloutColor": "標註顏色",
+      "deleteCallout": "刪除標註",
+      "calloutStyles": "標註樣式",
+      "calloutColors": "標註顏色",
+      "hideCalloutIcon": "隱藏標註圖標",
+      "resetToDefault": "重設為預設值",
+      "smartLayoutActions": "智慧佈局操作",
+      "addSmartLayoutItem": "新增項目",
+      "smartLayoutType": "智慧佈局類型",
+      "smartLayoutColor": "智慧佈局顏色",
+      "smartLayoutColors": "智慧佈局顏色",
+      "smartLayoutCellSize": "佈局大小",
+      "smartLayoutCellSizeOptions": "佈局大小選項",
+      "smartLayoutCellSizeSmall": "小",
+      "smartLayoutCellSizeMedium": "中",
+      "smartLayoutCellSizeLarge": "大",
+      "smartLayoutCellSizeExtraLarge": "特大",
+      "useVerticalLayoutDirection": "使用垂直佈局",
+      "useHorizontalLayoutDirection": "使用水平佈局",
+      "useOneSidedLayout": "使用單側佈局",
+      "useTwoSidedLayout": "使用雙側佈局",
+      "hideLayoutSideLines": "隱藏佈局側線",
+      "showLayoutSideLines": "顯示佈局側線",
+      "textAlignment": "文字對齊",
+      "useVerticalTimelineDirection": "使用垂直時間軸方向",
+      "useHorizontalTimelineDirection": "使用水平時間軸方向",
+      "useOneSidedTimeline": "使用單邊時間線",
+      "useTwoSidedTimeline": "使用兩側時間軸",
+      "hideTimelineSideLines": "隱藏時間軸側線",
+      "showTimelineSideLines": "顯示時間軸側線",
+      "timelineDirection": "方向",
+      "timelineSides": "兩側",
+      "timelineSideLines": "顯示線路？",
+      "changeLayout": "更改版面",
+      "deleteSmartLayout": "刪除智慧版面配置",
+      "smartLayoutBlockActions": "智慧佈局區塊操作",
+      "moveBlockToStart": "移到開頭",
+      "addItemBefore": "在前方新增項目",
+      "addItemAfter": "在後方新增項目",
+      "duplicate": "複製",
+      "smartLayoutBlockColor": "智慧佈局區塊顏色",
+      "deEmphasize": "不再強調",
+      "emphasize": "強調",
+      "deleteSmartLayoutBlock": "刪除智慧佈局區塊",
+      "smartLayoutBlockColors": "智慧佈局區塊顏色",
+      "smartLayouts": "智慧版面配置",
+      "layoutGroups": "版面群組",
+      "layoutsForGroup": "{group} 版面",
+      "debugLayout": "偵錯版面",
+      "layoutSubtitle": "選擇智慧版面配置。",
+      "layoutPreviewMutualismHeading": "互惠共生",
+      "layoutPreviewMutualismBody": "約 10,000 到 12,000 年前，人類在新月沃地定居並開始種植穀物。",
+      "layoutPreviewSelfDomesticationHeading": "自我馴化",
+      "layoutPreviewSelfDomesticationBody": "貓可能透過適應人類聚落而完成了自我馴化。",
+      "layoutPreviewBehaviorHeading": "行為",
+      "layoutPreviewBehaviorBody": "基因組研究顯示，出現了與記憶、獎勵學習和恐懼控制相關的變化。",
+      "layoutsUnavailable": "沒有可用的佈局",
+      "style": "樣式",
+      "styleSubtitle": "調整這份簡報的字體和顏色。",
+      "theme": "主題",
+      "themeAndLayout": "字體與顏色",
+      "close": "關閉",
+      "share": "分享",
+      "shareComingSoon": "分享即將推出",
+      "present": "現在",
+      "export": "匯出",
+      "exportDeck": "匯出簡報",
+      "exportPowerPoint": "PowerPoint",
+      "exportGoogleSlides": "Google 簡報",
+      "exportImages": "圖片",
+      "publishSlides": "發布投影片",
+      "updatePreviews": "更新預覽",
+      "preparingPreviewImages": "正在準備預覽圖...",
+      "publishingSlides": "正在發布投影片...",
+      "uploadingPreviewImages": "正在上傳預覽圖...",
+      "exportingImages": "正在匯出圖片",
+      "exportingPdf": "正在匯出 PDF",
+      "exportingPptx": "正在匯出 PPTX",
+      "exportingGoogleSlides": "正在匯出到 Google 簡報",
+      "imageExportIdle": "匯出圖片",
+      "nothingToExport": "沒有可匯出的內容",
+      "imageExportFailed": "圖片匯出失敗",
+      "imagesExported": "圖片已匯出",
+      "localAutosaveReady": "自動儲存就緒",
+      "localAutosaveOff": "自動儲存已關閉",
+      "localAutosaveSaving": "正在儲存...",
+      "localAutosaved": "已自動儲存",
+      "promoteExample": "推廣範例",
+      "documentSettings": "文件設定",
+      "themeSource": "主題來源",
+      "themeSourceCatalog": "主題",
+      "themeSourceLocal": "本機",
+      "panelLoading": "正在載入面板",
+      "themeCatalogUnavailable": "主題目錄無法使用",
+      "themesLoading": "正在載入主題...",
+      "themesUnavailable": "沒有可用的主題",
+      "moreActionsComingSoon": "更多行動即將推出",
+      "cardView": "投影片檢視",
+      "outlineViewComingSoon": "大綱檢視即將推出",
+      "viewMode": "檢視模式",
+      "newSlide": "新投影片",
+      "addSlide": "新增投影片",
+      "cardsPanelControls": "投影片面板控制項",
+      "searchCards": "搜尋投影片",
+      "clearSearch": "清除搜尋",
+      "resizeCardsPanel": "調整投影片面板大小",
+      "showCardsPanel": "顯示投影片面板",
+      "pinnedCardsPanel": "固定投影片面板",
+      "cardsPanel": "投影片面板",
+      "noSlides": "沒有投影片",
+      "slideCount": "投影片 {current} / {total}",
+      "scrollToSlide": "捲動至投影片 {slide}",
+      "chartType": "圖表類型",
+      "chartSettings": "圖表设置",
+      "chartEditorTabs": "圖表编辑標籤",
+      "chartPreview": "圖表预览",
+      "data": "資料",
+      "yAxis": "Y 軸",
+      "solidColor": "纯色",
+      "solidColorDescription": "将一种颜色應用程式到所有项目",
+      "colorPresets": "颜色预设",
+      "source": "原始碼",
+      "callOut": "標註",
+      "arrow": "箭頭",
+      "box": "方框",
+      "differenceArrows": "差异箭頭",
+      "highlight": "高亮",
+      "goal": "目标",
+      "trend": "趋势",
+      "graphOptions": "圖表选项",
+      "leaveGapInChart": "圖表中留出间隔",
+      "legend": "圖例",
+      "headlineNumber": "標題数字",
+      "chartDataActions": "圖表資料操作",
+      "row": "行",
+      "chartsAndGraphsMenu": "圖表菜单",
+      "charts": "圖表",
+      "comingSoon": "即将推出",
+      "debug": "偵錯",
+      "titlePreview": "標題預覽",
+      "bodyPreview": "內文預覽",
+      "closeMediaMenu": "關閉媒體選單",
+      "mediaMode": "媒體模式",
+      "go": "開啟",
+      "upload": "上傳",
+      "dragFileOr": "拖入檔案或",
+      "clickToUpload": "點擊上傳",
+      "imageUploadTip": "提示：也可以將圖片拖入或貼上到任意投影片中",
+      "uploadImageFile": "上傳圖片檔案",
+      "webImageSearch": "網頁圖片搜尋",
+      "searchWebImages": "搜尋網頁圖片",
+      "imageLicense": "圖片授權",
+      "allImages": "所有圖片",
+      "commercialUse": "可商用",
+      "creativeCommons": "Creative Commons",
+      "unableToLoadImages": "無法載入圖片",
+      "imageSearchResults": "圖片搜尋結果",
+      "imagesMenu": "圖片菜单",
+      "imagesDescription": "加入照片、插画、圖示和图库。",
+      "mediaDescription": "加入圖片上傳或 URL，以及影片嵌入。",
+      "videosAndMediaMenu": "影片和媒體菜单",
+      "platforms": "平臺",
+      "presentationPreview": "演示预览",
+      "addBlockMenu": "加入块菜单",
+      "typeSlashPrompt": "输入 / 加入块或...",
+      "typeSlashShortPrompt": "输入 / 或...",
+      "imageLink": "圖片链接",
+      "videoLink": "影片链接",
+      "projectJson": "项目 JSON",
+      "save": "儲存",
+      "addCardFromTemplate": "从模板加入页面",
+      "searchSlideLayouts": "搜尋投影片版面",
+      "templateCategories": "模板分类",
+      "noTemplatesFound": "未找到模板",
+      "themeColors": "主題色",
+      "edit": "编辑",
+      "systemColors": "系统色",
+      "insertParagraph": "插入段落",
+      "contributors": "贡献者",
+      "updatedNow": "剛剛更新",
+      "smartLayoutNumber": "智能版面編號",
+      "insertColumnLeft": "向左插入列",
+      "insertColumnRight": "向右插入列",
+      "deleteColumn": "刪除欄",
+      "search": "搜尋",
+      "slideActions": "投影片操作",
+      "generate": "生成",
+      "libraries": "素材庫",
+      "media": "媒體",
+      "videoUrl": "影片 URL",
+      "imageUrl": "圖片 URL",
+      "pasteVideoUrl": "貼上 YouTube、Vimeo、TikTok 或 Loom 連結",
+      "pasteImageUrl": "貼上或輸入圖片 URL",
+      "url": "URL",
+      "webImage": "網頁圖片",
+      "useImage": "使用圖片：{title}",
+      "imageUploadOrUrl": "上傳圖片或輸入 URL",
+      "tableColumnActions": "表格第 {column} 欄操作",
+      "addImageBlock": "新增圖片",
+      "addTableBlock": "新增表格",
+      "updateChartDescription": "更新圖表類型、樣式、座標軸和資料",
+      "closeChartEditor": "關閉圖表編輯器",
+      "graphTab": "圖表",
+      "axesTab": "座標軸",
+      "visualsTab": "視覺",
+      "annotateTab": "標註",
+      "visible": "可見",
+      "labels": "標籤",
+      "auto": "自動",
+      "edges": "邊緣",
+      "left": "左側",
+      "right": "右側",
+      "position": "位置",
+      "scale": "刻度",
+      "log": "對數",
+      "zero": "零",
+      "custom": "自訂",
+      "startFrom": "起始值",
+      "endAt": "結束值",
+      "sortHighLow": "從高到低排序",
+      "showPoints": "顯示點",
+      "smoothLines": "平滑線條",
+      "dataLabels": "資料標籤",
+      "gridLines": "網格線",
+      "lineThickness": "線條粗細",
+      "missingValues": "缺漏值",
+      "top": "頂部",
+      "none": "無",
+      "categoryLabels": "分類標籤",
+      "basicBlocksDescription": "加入清單、表格、標註框和其他基礎區塊。",
+      "textBlocksDescription": "加入標題、各級標題、引用和標籤。",
+      "titleBlock": "標題",
+      "heading1": "一級標題",
+      "heading2": "二級標題",
+      "heading3": "三級標題",
+      "heading4": "四級標題",
+      "paragraph": "段落",
+      "smartLayoutItemPlaceholder": "項目",
+      "smartLayoutDescriptionPlaceholder": "描述",
+      "blockQuote": "引用區塊",
+      "labelBlock": "標籤",
+      "tables": "表格",
+      "table2x2": "2x2 表格",
+      "table3x3": "3x3 表格",
+      "table4x4": "4x4 表格",
+      "lists": "清單",
+      "numberedList": "編號清單",
+      "todoList": "待辦清單",
+      "calloutBoxes": "標註框",
+      "noteBox": "備註框",
+      "infoBox": "資訊框",
+      "warningBox": "警告框",
+      "cautionBox": "注意框",
+      "successBox": "成功框",
+      "questionBox": "問題框",
+      "codeBlock": "程式碼區塊",
+      "mathBlock": "公式區塊",
+      "footnote": "註腳",
+      "tableOfContents": "目錄",
+      "divider": "分隔線",
+      "other": "其他",
+      "templateSectionBasic": "基础",
+      "templateSectionImageSlides": "圖片投影片",
+      "templateSectionSlideLayouts": "投影片版面",
+      "templateSectionImages": "圖片",
+      "templateSectionSequences": "流程",
+      "templateSectionChartsData": "圖表与資料",
+      "templateSectionEmbeds": "嵌入",
+      "templateBlankCard": "空白卡片",
+      "templateImageAndText": "圖片和文字",
+      "templateTextAndImage": "文字和圖片",
+      "templateTwoColumns": "兩欄",
+      "templateTwoColumnWithHeadings": "带標題的兩欄",
+      "templateThreeColumns": "三欄",
+      "templateThreeColumnWithHeadings": "带標題的三欄",
+      "templateFourColumns": "四欄",
+      "templateTitleWithBullets": "標題加項目符號",
+      "templateTitleWithBulletsAndImage": "標題、項目符號和圖片",
+      "templateBlankImageSlide": "空白圖片页",
+      "templateAccentLeft": "左侧強調",
+      "templateAccentRight": "右侧強調",
+      "templateAccentTop": "顶部強調",
+      "templateAccentRightFit": "右侧強調（適配）",
+      "templateAccentLeftFit": "左侧強調（適配）",
+      "templateTwoImageColumns": "2 列圖片",
+      "templateThreeImageColumns": "3 列圖片",
+      "templateFourImageColumns": "4 列圖片",
+      "templateImagesWithText": "圖片加文字",
+      "templateImageGallery": "圖片画廊",
+      "templateTeamPhotos": "團隊照片",
+      "templateTimeline": "時間軸",
+      "templateIconsWithText": "圖示加文字",
+      "templateArrows": "箭頭",
+      "templateFunnelWithText": "漏斗加文字",
+      "templateSteppedPyramid": "階梯金字塔",
+      "templatePyramidWithOutline": "带大綱的金字塔",
+      "templateColumnChart": "柱狀圖",
+      "templateBarChart": "長條圖",
+      "templateLineChart": "折線圖",
+      "templatePieChart": "圓餅圖",
+      "templateDonutChart": "環圈圖",
+      "templateBigNumbers": "大數字",
+      "templateCircleStats": "圓形統計",
+      "templateThreeRowTable": "3 清單格",
+      "templateLoomRecording": "Loom 錄製",
+      "templateYouTubeVideo": "YouTube 影片",
+      "colorBlack": "黑色",
+      "colorDarkGray": "深灰色",
+      "colorGray": "灰色",
+      "colorLightGray": "淺灰色",
+      "colorSoftGray": "柔和灰色",
+      "colorWhite": "白色",
+      "colorPaleYellow": "淺黃色",
+      "colorPeach": "桃色",
+      "colorPink": "粉色",
+      "colorLavender": "薰衣草紫",
+      "colorBlue": "藍色",
+      "colorMint": "薄荷綠",
+      "colorYellow": "黃色",
+      "colorOrange": "橘色",
+      "colorRed": "紅色",
+      "colorPurple": "紫色",
+      "colorRoyalBlue": "寶藍色",
+      "colorGreen": "綠色",
+      "colorOlive": "橄欖色",
+      "colorBrown": "棕色",
+      "colorDarkRed": "深紅色",
+      "colorDeepPurple": "深紫色",
+      "colorNavy": "海军藍",
+      "colorForestGreen": "森林綠",
+      "colorDefaultLavender": "預設薰衣草紫",
+      "colorLightBlue": "淺藍色",
+      "colorLightGreen": "淺綠色",
+      "colorLightYellow": "淺黃色",
+      "colorLightRed": "淺紅色",
+      "colorLightPurple": "淺紫色",
+      "themeAccentColor": "主題強調色",
+      "themeShapeColor": "主題形狀色",
+      "themeSurfaceColor": "主題表面色",
+      "themeHeadingColor": "主題標題色",
+      "themeBodyColor": "主題內文色",
+      "themeBackgroundColor": "主題背景色",
+      "chartSchemeDefault": "預設",
+      "chartSchemeMonochrome2": "單色 2",
+      "chartSchemeMonochrome3": "單色 3",
+      "chartSchemeMonochrome4": "單色 4",
+      "chartTypeLine": "折線",
+      "chartTypeArea": "面積",
+      "chartTypeColumn": "柱狀",
+      "chartTypeStackedColumn": "堆疊柱狀",
+      "chartTypeBar": "長條",
+      "chartTypeStackedBar": "堆疊長條",
+      "chartTypePie": "圓餅圖",
+      "chartTypeDonut": "環圈圖",
+      "chartTypeCombo": "组合",
+      "chartTypeScatter": "散點",
+      "chartTypeBubble": "氣泡",
+      "chartTypeHeatmap": "熱力圖",
+      "chartTypeFunnel": "漏斗",
+      "chartTypeWaterfall": "瀑布",
+      "chartTypeStacked": "堆疊",
+      "chartTypePercentStacked": "100% 堆疊",
+      "chartTypeStackedArea": "堆疊面積",
+      "chartTypeMekko": "Mekko",
+      "chartTypeAreaChart": "面積图",
+      "chartTypeStackedColumnChart": "堆疊柱狀圖",
+      "chartTypeStackedBarChart": "堆疊長條圖",
+      "chartTypeComboChart": "组合图",
+      "chartTypeScatterChart": "散點图",
+      "chartTypeBubbleChart": "氣泡图",
+      "chartTypeHeatmapChart": "熱力圖",
+      "chartTypeFunnelChart": "漏斗图",
+      "chartTypeWaterfallChart": "瀑布图",
+      "chartTypeBlankDiagram": "空白圖示",
+      "chartTypeWeeklyCalendar": "週曆",
+      "chartTypeGanttChart": "甘特圖",
+      "chartsAndGraphsDescription": "用圖表、圖示和行程視覺化資料。",
+      "chartItemPending": "{item} 的專用渲染串接後可用",
+      "hideXAxis": "隱藏 X 軸",
+      "showXAxis": "顯示 X 軸",
+      "xAxisLabelMode": "X 軸標籤模式",
+      "hideYAxis": "隱藏 Y 軸",
+      "showYAxis": "顯示 Y 軸",
+      "yAxisLabelMode": "Y 軸標籤模式",
+      "yAxisPosition": "Y 軸位置",
+      "yAxisScale": "Y 軸比例",
+      "yAxisStartValue": "Y 軸起始值",
+      "yAxisEndValue": "Y 軸結束值",
+      "useTableOrder": "使用表格順序",
+      "sortChartHighLow": "按从高到低排序圖表",
+      "hideChartPoints": "隱藏圖表点",
+      "showChartPoints": "顯示圖表点",
+      "hideDataLabels": "隱藏資料標籤",
+      "showDataLabels": "顯示資料標籤",
+      "hideGridLines": "隱藏格線",
+      "showGridLines": "顯示格線",
+      "legendPosition": "圖例位置",
+      "hideHeadlineNumber": "隱藏主要數字",
+      "showHeadlineNumber": "顯示主要數字",
+      "useValueDataLabels": "使用數值資料標籤",
+      "usePercentageDataLabels": "使用百分比資料標籤",
+      "calloutNote": "備註",
+      "calloutInfo": "資訊",
+      "calloutWarning": "警告",
+      "calloutCaution": "注意",
+      "calloutSuccess": "成功",
+      "calloutQuestion": "問題",
+      "columnLayout2Equal": "2 欄 - 等寬",
+      "columnLayout2Left": "2 列 - 左寬",
+      "columnLayout2Right": "2 列 - 右寬",
+      "columnLayout3": "3 列",
+      "columnLayout4": "4 列",
+      "videos": "影片",
+      "videosDescription": "加入豐富的影片嵌入。",
+      "mediaItemPending": "{item} 的媒體嵌入節點串接後可用",
+      "vimeoVideos": "Vimeo 影片",
+      "tiktokVideos": "TikTok 影片",
+      "webpageOrApp": "網頁或應用程式",
+      "displayText": "展示文字",
+      "monsterText": "超大文字",
+      "smallText": "小字",
+      "normalText": "一般文字",
+      "largeText": "大字",
+      "markTodoIncomplete": "標記待辦未完成",
+      "markTodoComplete": "標記待辦完成",
+      "aiImages": "AI 圖片",
+      "aiInfographics": "AI 資訊圖表",
+      "stockPhotos": "素材照片",
+      "gifsFromGiphy": "GIPHY 動圖",
+      "pictographicIllustrations": "圖形化插圖",
+      "iconsClassic": "圖示（經典）",
+      "iconsModern": "圖示（現代）",
+      "qrCode": "QR 碼",
+      "accentImages": "強調圖片",
+      "gallery": "圖庫",
+      "addLabel": "新增標籤",
+      "labelActions": "標籤操作",
+      "addLabelBefore": "在前方新增標籤",
+      "addLabelAfter": "在後方新增標籤",
+      "deleteLabel": "刪除標籤",
+      "chooseSmartLayoutIcon": "選擇智慧版面圖示",
+      "smartLayoutHeroIconPanelTitle": "Heroicons",
+      "smartLayoutHeroIconSearchPlaceholder": "搜尋 {count} 個圖示",
+      "smartLayoutHeroIconCategory": "Heroicon 分類",
+      "smartLayoutHeroIconNoResults": "找不到圖示",
+      "smartLayoutHeroIconCategoryAll": "全部",
+      "smartLayoutHeroIconCategoryArrows": "箭頭",
+      "smartLayoutHeroIconCategoryCommunication": "溝通",
+      "smartLayoutHeroIconCategoryCommerce": "商務",
+      "smartLayoutHeroIconCategoryDocuments": "文件",
+      "smartLayoutHeroIconCategoryInterface": "介面",
+      "smartLayoutHeroIconCategoryMedia": "媒體",
+      "smartLayoutHeroIconCategoryPeople": "人物",
+      "smartLayoutHeroIconCategorySecurity": "安全",
+      "smartLayoutHeroIconCategoryTechnology": "技術",
+      "smartLayoutHeroIconCategoryGeneral": "通用",
+      "columnsDescription": "加入 2、3 或 4 欄分欄。",
+      "columnsMenu": "分欄選單",
+      "smartLayoutsMenu": "智慧佈局選單",
+      "smartLayoutGroupBoxes": "盒子",
+      "smartLayoutGroupBullets": "項目符號",
+      "smartLayoutGroupSequence": "序列",
+      "smartLayoutGroupImages": "圖片",
+      "smartLayoutGroupNumbers": "數字",
+      "smartLayoutGroupCircles": "圓形",
+      "smartLayoutGroupQuotes": "引用",
+      "smartLayoutGroupSteps": "步驟",
+      "smartLayoutGroupColumns": "分欄",
+      "smartLayoutLabel2Columns": "2 欄",
+      "smartLayoutLabel3Columns": "3 欄",
+      "smartLayoutLabel4Columns": "4 欄",
+      "smartLayoutLabelAlternatingBoxes": "交錯盒子",
+      "smartLayoutLabelAlternatingBoxesHorizontal": "水平交錯盒子",
+      "smartLayoutLabelAlternatingBoxesVertical": "垂直交錯盒子",
+      "smartLayoutLabelArrows": "箭頭",
+      "smartLayoutLabelArrowsHorizontal": "水平箭頭",
+      "smartLayoutLabelArrowsVertical": "垂直箭頭",
+      "smartLayoutLabelArrowBullets": "箭頭項目符號",
+      "smartLayoutLabelArrowSteps": "箭頭步驟",
+      "smartLayoutLabelArrowStepsHorizontal": "水平箭頭步驟",
+      "smartLayoutLabelArrowStepsVertical": "垂直箭頭步驟",
+      "smartLayoutLabelBarStats": "條形統計",
+      "smartLayoutLabelBarStatsLeft": "左側條形統計",
+      "smartLayoutLabelBarStatsRight": "右側條形統計",
+      "smartLayoutLabelBoxSteps": "盒式步驟",
+      "smartLayoutLabelBoxStepsHorizontal": "水平盒式步驟",
+      "smartLayoutLabelBoxStepsVertical": "垂直盒式步驟",
+      "smartLayoutLabelCircle": "圓形",
+      "smartLayoutLabelCircleStats": "圓形統計",
+      "smartLayoutLabelCircleStatsExternalLine": "外側線圓形統計",
+      "smartLayoutLabelCircleStatsMiddleLine": "中線圓形統計",
+      "smartLayoutLabelCircleStatsWithExternalBoldLine": "外側粗線圓形統計",
+      "smartLayoutLabelCircleStatsWithMiddleBoldLine": "中間粗線圓形統計",
+      "smartLayoutLabelCycle": "循環",
+      "smartLayoutLabelDotGridStats": "點陣統計",
+      "smartLayoutLabelDotGridStatsLeft": "左側點陣統計",
+      "smartLayoutLabelDotGridStatsRight": "右側點陣統計",
+      "smartLayoutLabelDotLineStats": "點線統計",
+      "smartLayoutLabelDotLineStatsLeft": "左側點線統計",
+      "smartLayoutLabelDotLineStatsRight": "右側點線統計",
+      "smartLayoutLabelFlower": "花瓣",
+      "smartLayoutLabelFunnel": "漏斗",
+      "smartLayoutLabelFunnelOutsideText": "外置文字漏斗",
+      "smartLayoutLabelIconsWithText": "圖示加文字",
+      "smartLayoutLabelIconsWithTextLeft": "左側圖示加文字",
+      "smartLayoutLabelIconsWithTextTop": "頂部圖示加文字",
+      "smartLayoutLabelImagesWithText": "圖片加文字",
+      "smartLayoutLabelImagesWithTextCircle": "圓形圖片加文字",
+      "smartLayoutLabelImagesWithTextSquare": "方形圖片加文字",
+      "smartLayoutLabelJoinedBoxes": "組合盒子",
+      "smartLayoutLabelJoinedBoxesWithIcons": "帶圖示組合盒子",
+      "smartLayoutLabelLabeledBoxes": "標籤盒子",
+      "smartLayoutLabelLabeledBoxesHorizontal": "水平標籤盒子",
+      "smartLayoutLabelLabeledBoxesVertical": "垂直標籤盒子",
+      "smartLayoutLabelLargeBullets": "大號項目符號",
+      "smartLayoutLabelLargeBulletsNumbered": "帶編號大號項目符號",
+      "smartLayoutLabelLeafBoxes": "葉片盒子",
+      "smartLayoutLabelMinimalTimeline": "極簡時間線",
+      "smartLayoutLabelMinimalTimelineHorizontal": "水平極簡時間線",
+      "smartLayoutLabelMinimalTimelineTwoSidedHorizontal": "雙側水平極簡時間線",
+      "smartLayoutLabelMinimalTimelineTwoSidedVertical": "雙側垂直極簡時間線",
+      "smartLayoutLabelMinimalTimelineVertical": "垂直極簡時間線",
+      "smartLayoutLabelMinimalTimelineBoxesHorizontal": "水平極簡時間線盒子",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedHorizontal": "雙側水平極簡時間線盒子",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedVertical": "雙側垂直極簡時間線盒子",
+      "smartLayoutLabelMinimalTimelineBoxesVertical": "垂直極簡時間線盒子",
+      "smartLayoutLabelMinimalTimelineWithBoxes": "帶盒子極簡時間線",
+      "smartLayoutLabelOutlineBoxes": "描邊盒子",
+      "smartLayoutLabelPills": "膠囊",
+      "smartLayoutLabelPillsHorizontal": "水平膠囊",
+      "smartLayoutLabelPillsVertical": "垂直膠囊",
+      "smartLayoutLabelProcessSteps": "流程步驟",
+      "smartLayoutLabelProcessStepsNumbered": "帶編號流程步驟",
+      "smartLayoutLabelPyramid": "金字塔",
+      "smartLayoutLabelPyramidOutsideText": "外置文字金字塔",
+      "smartLayoutLabelQuoteBoxes": "引用盒子",
+      "smartLayoutLabelRing": "環形",
+      "smartLayoutLabelSemiCircle": "半圓",
+      "smartLayoutLabelSideLineBoxes": "側線盒子",
+      "smartLayoutLabelSideLineText": "側線文字",
+      "smartLayoutLabelSlantedLabels": "傾斜標籤",
+      "smartLayoutLabelSlantedLabelsHorizontal": "水平傾斜標籤",
+      "smartLayoutLabelSlantedLabelsVertical": "垂直傾斜標籤",
+      "smartLayoutLabelSmallBullets": "小號項目符號",
+      "smartLayoutLabelSolidBoxSmallBullets": "實心盒小項目符號",
+      "smartLayoutLabelSolidBoxes": "實心盒子",
+      "smartLayoutLabelSolidBoxesWithIcons": "帶圖示實心盒子",
+      "smartLayoutLabelSolidBoxesWithNumbers": "帶編號實心盒子",
+      "smartLayoutLabelSpeechBubbles": "對話氣泡",
+      "smartLayoutLabelSpeechBubblesCenter": "置中對話氣泡",
+      "smartLayoutLabelSpeechBubblesLeft": "左側對話氣泡",
+      "smartLayoutLabelSpeechBubblesRight": "右側對話氣泡",
+      "smartLayoutLabelStaircase": "階梯",
+      "smartLayoutLabelStaircaseOutsideText": "外置文字階梯",
+      "smartLayoutLabelStarRating": "星級評分",
+      "smartLayoutLabelStarRatingLeft": "左側星級評分",
+      "smartLayoutLabelStarRatingRight": "右側星級評分",
+      "smartLayoutLabelStats": "統計數字",
+      "smartLayoutLabelSteps": "步驟",
+      "smartLayoutLabelStepsHorizontal": "水平步驟",
+      "smartLayoutLabelStepsVertical": "垂直步驟",
+      "smartLayoutLabelStepsWithIcons": "帶圖示步驟",
+      "smartLayoutLabelStepsWithIconsHorizontal": "水平帶圖示步驟",
+      "smartLayoutLabelStepsWithIconsVertical": "垂直帶圖示步驟",
+      "smartLayoutLabelTimeline": "時間線",
+      "smartLayoutLabelTimelineHorizontal": "水平時間線",
+      "smartLayoutLabelTimelineTwoSidedHorizontal": "雙側水平時間線",
+      "smartLayoutLabelTimelineTwoSidedVertical": "雙側垂直時間線",
+      "smartLayoutLabelTimelineVertical": "垂直時間線",
+      "smartLayoutLabelTopCircleBoxes": "頂部圓點盒子",
+      "smartLayoutLabelTopCircleBoxesWithNumbers": "帶編號頂部圓點盒子",
+      "smartLayoutLabelTopLineText": "頂線文字",
+      "smartLayoutLabelVerticalFunnel": "垂直漏斗",
+      "themeNameBasicLight": "基礎淺色",
+      "themeNameBasicDark": "基礎深色",
+      "themeNameAlabaster": "雪花石",
+      "themeNameAmber": "琥珀",
+      "themeNameAsh": "灰燼",
+      "themeNameBeeHappy": "快樂蜜蜂",
+      "themeNameBlueSteel": "藍鋼",
+      "themeNameBlueberry": "藍莓",
+      "themeNameBloom": "盛放",
+      "themeNameBonanHale": "博南黑爾",
+      "themeNameBreeze": "微風",
+      "themeNameBubbleGum": "泡泡糖",
+      "themeNameChisel": "鑿刻",
+      "themeNameCobalt": "鈷藍",
+      "themeNameDewdrop": "露滴",
+      "themeNameGlamour": "魅影",
+      "themeNameHowlite": "白松石",
+      "themeNameLinen": "亞麻",
+      "themeNameMahogany": "桃花心木",
+      "themeNameMist": "薄霧",
+      "themeNameMoss": "苔蘚",
+      "themeNameOnyx": "縞瑪瑙",
+      "themeNameQuartz": "石英",
+      "themeNameSand": "沙色",
+      "themeNameVivid": "鮮明",
+      "themeNameKraft": "牛皮紙",
+      "themeNameCreme": "奶油",
+      "themeNameMystique": "神秘",
+      "themeNameVortex": "漩渦",
+      "themeNameGoldLeaf": "金箔",
+      "themeNameTranquil": "靜謐",
+      "themeNameIris": "鳶尾",
+      "themeNamePrism": "稜鏡",
+      "themeNameRush": "疾速",
+      "themeNameChocolate": "巧克力",
+      "themeNameWireframe": "線框",
+      "themeNameConsultant": "顧問",
+      "themeNameCornfield": "玉米田",
+      "themeNameExecutiveBlue": "商務藍",
+      "themeNameDeckwiseWarmRetro": "暖調復古",
+      "themeNameDeckwiseRichPalette": "濃郁調色板",
+      "themeNamePetrol": "石油藍",
+      "themeNameAlien": "異星",
+      "themeNameCoal": "煤黑",
+      "themeNameCigar": "雪茄",
+      "themeNameClementa": "克萊門塔",
+      "themeNameCommons": "公共空間",
+      "themeNameCornflower": "矢車菊",
+      "themeNameDaktilo": "打字機",
+      "themeNameDawn": "黎明",
+      "themeNameDialogue": "對話",
+      "themeNameEditoria": "編輯風",
+      "themeNameElectric": "電光",
+      "themeNameFinesse": "精緻",
+      "themeNameFlax": "亞麻纖維",
+      "themeNameFluo": "螢光",
+      "themeNameFounder": "創辦人",
+      "themeNameDeckwise": "經典",
+      "themeNameMocha": "摩卡",
+      "themeNameIcebreaker": "破冰",
+      "themeNameIncandescent": "白熾",
+      "themeNameKeepsake": "紀念",
+      "themeNameLavender": "薰衣草",
+      "themeNameLeimoon": "萊月",
+      "themeNameLunaria": "銀扇草",
+      "themeNameLux": "光奢",
+      "themeNameMarine": "海洋",
+      "themeNameMossAndMist": "苔蘚與薄霧",
+      "themeNamePearl": "珍珠",
+      "themeNamePiano": "鋼琴",
+      "themeNamePistachio": "開心果",
+      "themeNamePlantShop": "植物店",
+      "themeNameSage": "鼠尾草",
+      "themeNameSeafoam": "海沫",
+      "themeNameSerene": "寧靜",
+      "themeNameSlate": "石板",
+      "themeNameTerracotta": "陶土",
+      "themeNameIndigo": "靛藍",
+      "themeNameVanilla": "香草",
+      "themeNameWine": "葡萄酒",
+      "exportPptxIdle": "匯出 PPTX",
+      "exportUnavailable": "無法匯出",
+      "exporting": "正在匯出...",
+      "exported": "已匯出",
+      "exportFailed": "匯出失敗",
+      "googleSlidesExportComplete": "Google 簡報匯出已完成",
+      "googleSlidesExportFailed": "Google 簡報匯出失敗",
+      "editableExportRequiresPlus": "可編輯的 PowerPoint 與 Google 簡報匯出僅適用於 Plus。",
+      "editableExportAccessCheckFailed": "無法驗證匯出權限，請再試一次。",
+      "openGoogleSlides": "開啟 Google 簡報",
+      "exportPdfIdle": "匯出 PDF",
+      "preparingPdf": "正在準備 PDF...",
+      "pdfExportFailed": "PDF 匯出失敗",
+      "exportAs": "匯出為",
+      "exportSlidesAs": "將投影片匯出為",
+      "exportSlideAs": "將投影片匯出為",
+      "exportImage": "圖片",
+      "keepAtLeastOneSlide": "至少保留一張投影片",
+      "cutOrCopySlideFirst": "請先剪下或複製一張投影片",
+      "cut": "剪下",
+      "copy": "複製",
+      "pasteBelow": "貼到下方",
+      "moveSlidesUp": "上移投影片",
+      "moveUp": "上移",
+      "moveSlidesDown": "下移投影片",
+      "moveDown": "下移",
+      "duplicateSlides": "複製投影片",
+      "duplicateSlide": "複製投影片",
+      "addBelowSelection": "新增到選取項目下方",
+      "addBelow": "新增到下方",
+      "exportSlides": "匯出投影片",
+      "exportSlide": "匯出投影片",
+      "deleteSlides": "刪除投影片",
+      "delete": "刪除",
+      "tableColumn": "表格欄",
+      "gridColumn": "網格欄",
+      "columnResizeWidth": "{label} {index} 寬度",
+      "selectedBlockLabel": "已選取 {count} 個區塊",
+      "selectedBlocksLabel": "已選取 {count} 個區塊",
+      "slideLabel": "第 {index} 張投影片",
+      "slideContextLine": "第 {index} 張投影片：{title}",
+      "blockPathsLine": "區塊路徑：{paths}",
+      "selectedDeckwiseBlocksFallback": "已選取的區塊。",
+      "tableCellActions": "表格儲存格操作",
+      "cutCells": "剪下儲存格",
+      "copyCells": "複製儲存格",
+      "pasteCellsUnavailable": "無法貼上儲存格",
+      "pasteCells": "貼上儲存格",
+      "insertColumnsLeft": "在左側插入欄",
+      "insertColumnsRight": "在右側插入欄",
+      "insertRowsAbove": "在上方插入列",
+      "insertRowsBelow": "在下方插入列",
+      "keepAtLeastOneTableRow": "至少保留一列",
+      "deleteTableRowUnavailable": "無法刪除列",
+      "keepAtLeastOneTableColumn": "至少保留一欄",
+      "deleteTableColumnUnavailable": "無法刪除欄",
+      "deleteRow": "刪除列",
+      "deleteSheet": "刪除表格",
+      "blockActions": "區塊動作",
+      "elementPreviewBulletAction": "行動項目",
+      "elementPreviewBulletFollowUp": "追蹤細節",
+      "elementPreviewBulletDecision": "決策記錄",
+      "elementPreviewCallout": "用簡短的補充細節為讀者加入脈絡。",
+      "elementPreviewColumnOneTitle": "第一欄",
+      "elementPreviewColumnOneParagraph": "輔助文字展示內容如何在這一欄中流動。",
+      "elementPreviewColumnTwoTitle": "第二欄",
+      "elementPreviewColumnTwoParagraph": "第二段讓分欄版面更容易閱讀。",
+      "elementPreviewColumnThreeTitle": "第三欄",
+      "elementPreviewColumnThreeParagraph": "簡短正文讓第三欄保持清楚可見。",
+      "elementPreviewColumnFourTitle": "第四欄",
+      "elementPreviewColumnFourParagraph": "精簡文字預覽第四欄狀態。",
+      "elementPreviewFootnote": "一則簡短的補充說明。",
+      "elementPreviewHeading": "{level} 級標題",
+      "elementPreviewLabel": "標籤",
+      "elementPreviewListItem": "清單項目",
+      "elementPreviewProjectUpdate": "專案更新",
+      "elementPreviewQuote": "這裡放一句簡潔要點。",
+      "elementPreviewStepOne": "第一步",
+      "elementPreviewStepTwo": "第二步",
+      "elementPreviewStepThree": "第三步",
+      "elementPreviewSupportingDetail": "補充細節",
+      "elementPreviewTableMetric": "指標",
+      "elementPreviewTableStatus": "狀態",
+      "elementPreviewTableOwner": "負責人",
+      "elementPreviewTableNext": "下一步",
+      "elementPreviewTableUsers": "使用者",
+      "elementPreviewTableTeam": "團隊",
+      "elementPreviewTableGrowth": "成長",
+      "elementPreviewTableOps": "營運",
+      "elementPreviewTableLive": "進行中",
+      "elementPreviewTableRisk": "風險",
+      "elementPreviewTableLow": "低",
+      "elementPreviewTableDone": "完成",
+      "elementPreviewToc": "章節概覽",
+      "elementPreviewTodoTask": "待完成任務",
+      "elementPreviewTodoReview": "負責人審核",
+      "elementPreviewTodoUpdate": "傳送更新"
+    }
+  },
+  "files": {
+    "addImage": "新增圖片",
+    "addPdf": "新增 PDF",
+    "upload": "檔案",
+    "uploadAction": "上傳",
+    "createFile": "建立檔案",
+    "projectDocuments": "專案文件",
+    "dropUploadTitle": "將檔案拖到這裡上傳",
+    "dropUploadSubtitle": "將檔案拖到這裡，上傳到對應的資料分類",
+    "searchAction": "搜尋",
+    "createNote": "文件",
+    "createSlides": "投影片",
+    "slidesTemplate": "範本",
+    "createNoteFailed": "建立文件失敗。請再試一次。",
+    "createSlidesFailed": "建立投影片失敗。請再試一次。",
+    "createSheetFailed": "上傳電子表格失敗。請再試一次。",
+    "spreadsheetUnsupported": "不支援 CSV 和 XLS 檔案。",
+    "uploadUnsupportedFileType": "不支援此檔案類型：{names}",
+    "uploadFailedNoProject": "請先開啟專案工作區。",
+    "googleDriveAuthorizationRequired": "請先連接 Google Drive。",
+    "googleDriveAuthorizationPending": "Google Drive 尚未連接，請完成授權後重試。",
+    "googleDriveConnectFailed": "連接 Google Drive 失敗",
+    "googleDriveImportFailed": "匯入 Google Drive 檔案失敗",
+    "googleDriveImportSucceeded": "已匯入 {count} 個 Google Drive 檔案",
+    "googleDriveNotConfigured": "Google Drive 匯入尚未設定。",
+    "oneDriveAuthorizationRequired": "請先連接 OneDrive。",
+    "oneDriveAuthorizationPending": "OneDrive 尚未連接，請完成授權後重試。",
+    "oneDriveConnectFailed": "連接 OneDrive 失敗",
+    "oneDriveImportFailed": "匯入 OneDrive 檔案失敗",
+    "oneDriveImportSucceeded": "已匯入 {count} 個 OneDrive 檔案",
+    "oneDrivePickerTitle": "從 OneDrive 匯入",
+    "oneDrivePickerDescription": "從已連接的 OneDrive 中選擇檔案。",
+    "oneDriveSearchPlaceholder": "搜尋 OneDrive 檔案",
+    "oneDrivePickerLoading": "正在載入 OneDrive 檔案…",
+    "oneDrivePickerLoadFailed": "OneDrive 檔案載入失敗",
+    "oneDrivePickerEmpty": "找不到 OneDrive 檔案",
+    "oneDrivePickerEmptyHint": "可以切換資料夾、調整搜尋詞，或重新授權選擇更多檔案。",
+    "oneDrivePickerHint": "可以在此選擇器中開啟資料夾。選取檔案後會匯入到目前專案。",
+    "oneDrivePickerLoadMore": "載入更多",
+    "oneDrivePickerReconnect": "選擇更多 OneDrive 檔案",
+    "oneDrivePickerImportSelected": "匯入已選取的 {count} 個",
+    "oneDriveUntitledFile": "未命名 OneDrive 檔案",
+    "oneDriveLastModified": "修改於 {date}",
+    "oneDriveOpenFile": "在 OneDrive 中開啟",
+    "oneDriveUnknownDate": "未知日期",
+    "oneDriveFolder": "資料夾",
+    "oneDriveFolderItem": "{count} 個項目",
+    "dropboxAuthorizationRequired": "請先連接 Dropbox。",
+    "dropboxAuthorizationPending": "Dropbox 尚未連接，請完成授權後重試。",
+    "dropboxConnectFailed": "連接 Dropbox 失敗",
+    "dropboxImportFailed": "匯入 Dropbox 檔案失敗",
+    "dropboxImportSucceeded": "已匯入 {count} 個 Dropbox 檔案",
+    "dropboxNotConfigured": "Dropbox 匯入尚未設定。",
+    "dropboxPickerRetryRequired": "Dropbox 已連接。請再次點擊從 Dropbox 加入來選擇檔案。",
+    "notionAuthorizationRequired": "請先連接 Notion。",
+    "notionAuthorizationPending": "Notion 尚未連接，請完成授權後重試。",
+    "notionConnectFailed": "連接 Notion 失敗",
+    "notionImportFailed": "匯入 Notion 頁面失敗",
+    "notionImportSucceeded": "已匯入 {count} 個 Notion 頁面",
+    "notionPickerTitle": "從 Notion 匯入",
+    "notionPickerDescription": "選擇已分享給 Deckwise 的 Notion 頁面。",
+    "notionSearchPlaceholder": "搜尋頁面",
+    "notionPickerSelectPages": "選擇頁面",
+    "notionPickerLoading": "正在載入 Notion 頁面…",
+    "notionPickerLoadFailed": "Notion 頁面載入失敗",
+    "notionPickerEmpty": "找不到 Notion 頁面",
+    "notionPickerMissingAuthorizationHint": "如果頁面沒有出現，請在 Notion 中將該頁面或父頁面分享給 Deckwise。",
+    "notionPickerLoadMore": "載入更多",
+    "notionPickerChooseMorePages": "選擇更多頁面",
+    "notionPickerImportSelected": "匯入已選擇的 {count} 個",
+    "notionUntitledPage": "未命名 Notion 頁面",
+    "notionLastEdited": "最後編輯於 {date}",
+    "notionOpenPage": "在 Notion 中開啟",
+    "notionUnknownDate": "未知日期",
+    "outlineReferenceMixedUnsupported": "請分開新增幻燈片檔案與參考檔案。",
+    "outlineReferenceLimit": "最多可附加 {count} 個參考檔案。",
+    "outlineReferenceUploadFailed": "參考檔案上傳失敗",
+    "all": "全部",
+    "uploading": "正在上傳...",
+    "empty": "沒有檔案",
+    "noPreview": "無預覽",
+    "image": "圖片",
+    "images": "圖片",
+    "outline": "大綱",
+    "imageGallery": "圖片庫",
+    "imageWallEmpty": "還沒有圖片",
+    "imageWallEmptyHint": "上傳的圖片會顯示在這裡",
+    "file": "檔案",
+    "pdf": "PDF",
+    "note": "文件",
+    "deleteFile": "刪除檔案",
+    "deleteFailed": "刪除檔案失敗。請再試一次。",
+    "uploadFailedNoCacheKey": "上傳失敗：伺服器未回傳 cacheKey。",
+    "uploadImageFailed": "圖片上傳失敗",
+    "uploadPdfFailed": "上傳 PDF 失敗",
+    "uploadOfficeFailed": "Office 檔案上傳失敗",
+    "officeUploadDisabled": "Office 上傳已停用。",
+    "notesTab": "筆記",
+    "filesTab": "檔案",
+    "sourcesTipTitle": "提示",
+    "sourcesTipBody": "可以用套索選中 {sources} 裡的內容，再透過 {addToChat} 只把選中的片段加入 Agent 上下文。",
+    "addToChat": "加入聊天",
+    "moreActions": "更多行動",
+    "moveToTrash": "移至垃圾箱",
+    "deleteAction": "刪除",
+    "deleteTypedAction": "刪除{type}",
+    "deleteTypedConfirmTitle": "刪除這個{type}嗎？",
+    "deleteFileConfirmTitle": "刪除這個檔案嗎？",
+    "deleteFileConfirmMessage": "該檔案將從目前工作區中刪除。",
+    "download": "下載",
+    "downloadUnavailable": "這個檔案目前無法下載。",
+    "export": "匯出",
+    "exportMarkdown": "Markdown",
+    "exportMarkdownFailed": "匯出 Markdown 失敗。請再試一次。",
+    "exportPptx": "PowerPoint",
+    "exportPptxFailed": "匯出 PowerPoint 失敗。請再試一次。",
+    "exportPptxUnavailable": "請在匯出 PowerPoint 之前儲存此投影片檔案。",
+    "convertToSlide": "建立投影片",
+    "convertToSlideFailed": "無法將文件轉換為投影片。請再試一次。",
+    "convertedSlidesSuffix": "投影片",
+    "duplicate": "複製",
+    "duplicateCopySuffix": "副本",
+    "duplicateFailed": "複製文件失敗。請再試一次。",
+    "rename": "重新命名",
+    "renameDialogTitle": "重新命名檔案",
+    "renameDialogDescription": "更新此檔案在側邊欄中的顯示名稱。",
+    "renameInputLabel": "名稱",
+    "renamePlaceholder": "輸入檔名",
+    "noteTitlePlaceholder": "新頁面",
+    "renameEmptyName": "檔案名稱不能為空。",
+    "renameFailed": "重新命名檔案失敗。請再試一次。",
+    "openInNewTab": "在新分頁中開啟",
+    "openInNewTabUnavailable": "請先儲存此文件，再在新分頁中開啟。",
+    "cancelAction": "取消",
+    "saveAction": "儲存",
+    "materials": "資料",
+    "insertSlide": "插入投影片",
+    "imageActions": "圖片操作",
+    "copyImage": "複製圖片",
+    "outlineAddSlide": "新增投影片",
+    "outlineSelectAll": "全選",
+    "outlineDeleteSlide": "刪除投影片",
+    "outlineSelectAndReorderSlide": "選取並重新排序第 {page} 張投影片",
+    "outlineSlideActions": "第 {page} 張投影片動作",
+    "materialsSidebarWidth": "來源側邊欄寬度"
+  },
+  "systemContent": {
+    "imageAlt": "圖片",
+    "imageAltN": "影像 {n}",
+    "imageName": "圖片",
+    "imageNameN": "影像 {n}",
+    "imageLoadFailed": "載入圖片失敗。",
+    "loadFailed": "加載失敗。",
+    "collapse": "收合",
+    "pdfDoc": "PDF 文件"
+  },
+  "selectionToolbar": {
+    "quote": "引用",
+    "copy": "複製",
+    "copied": "已複製",
+    "copyFailed": "複製失敗",
+    "rollback": "回滾",
+    "rollbackRunning": "正在回滾",
+    "rollbackRestored": "已回滾",
+    "rollbackSuccess": "已回滾到此版本",
+    "rollbackUnavailable": "沒有可回滾的版本節點",
+    "rollbackFailed": "回滾失敗",
+    "actions": "選取動作"
+  },
+  "codeBlock": {
+    "copyAria": "複製程式碼",
+    "copy": "複製程式碼",
+    "copied": "已複製",
+    "copiedToClipboard": "代碼已複製到剪貼簿"
+  },
+  "middle": {
+    "filePreview": "預覽",
+    "editor": "編輯器",
+    "emptyHintTitle": "此面板可用於：",
+    "emptyHintItem1": "工作階段",
+    "emptyHintItem2": "已儲存的項目",
+    "emptyHintItem3": "檔案",
+    "emptyHintItem4": "資料",
+    "loadFailed": "載入失敗。",
+    "pdfLoadFailed": "無法載入 PDF。",
+    "totalPages": "共 {count} 頁",
+    "defaultEditorContent": "# 歡迎\n\n開始輸入，或輸入 `/` 查看命令。\n\n## 功能\n\n- Markdown\n- 斜線指令\n- AI 輔助\n- 程式碼高亮\n- 數學公式\n- 表格",
+    "newNote": "新文件",
+    "untitledNote": "無標題文件",
+    "pdfPreviewControls": "PDF 預覽控制項",
+    "wordPreviewControls": "Word 預覽控制項",
+    "toggleThumbnails": "切換縮圖",
+    "pageNumberInputLabel": "目前頁碼",
+    "pdfPageAlt": "第 {page} 頁",
+    "zoomIn": "放大",
+    "zoomOut": "縮小",
+    "downloadPdf": "下載PDF",
+    "printPdf": "列印 PDF",
+    "addToChat": "加入聊天",
+    "copyText": "複製",
+    "copied": "已複製",
+    "untitledSlides": "無標題投影片",
+    "deckwiseSlidesFailedTitle": "投影片開啟失敗",
+    "deckwiseSlidesLoadFailed": "投影片載入失敗。",
+    "failedToLoadExampleTargets": "範例目標載入失敗。",
+    "missingSlidesFileId": "缺少用於推薦範例的投影片檔案 ID。",
+    "exampleTitleRequired": "範例標題不能為空。",
+    "sortOrderInteger": "排序必须是整数。",
+    "promoteExample": "推薦範例",
+    "promoteExampleDescription": "將這份已發布的投影片檔案加入範例庫。",
+    "promoteExampleSuccess": "範例已加入圖庫。",
+    "promoteExampleFailed": "推薦投影片範例失敗。",
+    "titleField": "标题",
+    "replaceTarget": "替换目标",
+    "createNewExample": "建立新範例",
+    "selectedExample": "已選範例（{id}）",
+    "category": "分类",
+    "tags": "标签",
+    "sort": "排序",
+    "tagsPlaceholder": "旅行，演示",
+    "enabled": "啟用",
+    "promoting": "推薦中...",
+    "officeLoadFailed": "Office 檔案載入失敗。",
+    "missingSlidesFileIdForPreviewUpload": "缺少用於上傳預覽圖的投影片檔案 ID。",
+    "uploadedPreviewImages": "已上傳 {count} 張預覽圖。",
+    "failedToUploadPreviewImages": "上傳投影片預覽圖失敗。",
+    "imageUploadFailed": "圖片上傳失敗，請再試一次。",
+    "missingSlidesDocumentIdForPublish": "缺少用於發佈的投影片文件 ID。",
+    "resolveConflictBeforePublishing": "請先解決目前版本衝突，再發佈。",
+    "missingSlidesDocumentIdForShare": "缺少用於分享的投影片文件 ID。",
+    "resolveConflictBeforeSharing": "請先解決目前版本衝突，再分享。",
+    "sentSlidesShareEmail": "已向 {count} 位收件人傳送分享郵件。",
+    "publishedPublicSlides": "已公開發布投影片。",
+    "publishPublicSlidesFailed": "公開發布投影片失敗，請再試一次。",
+    "publicSlidesLinkMissing": "投影片已發布，但缺少公開連結，請再試一次。",
+    "unpublishedPublicSlides": "公開存取已關閉。",
+    "unpublishPublicSlidesFailed": "關閉公開存取失敗，請再試一次。",
+    "createShareLinkFailed": "建立分享連結失敗，請再試一次。",
+    "shareLinkMissing": "缺少分享連結，請再試一次。",
+    "sendShareEmailFailed": "分享郵件傳送失敗，請再試一次。",
+    "publishedSlidesFile": "已發佈投影片檔案 {fileId}。",
+    "publishedSlides": "投影片已發佈。",
+    "deckwiseSlidesReloadedLatestRemote": "{message} 已重新載入最新遠端版本。",
+    "deckwiseSlidesReloadAfterSaveFailureFailed": "儲存失敗後重新載入幻燈片失敗。",
+    "deckwiseSlidesRefreshAfterAgentFailed": "Agent 更新後重新整理幻燈片失敗。",
+    "deckwiseSlidesThemeUpdateFailed": "更新投影片主題失敗，請再試一次。",
+    "deckwiseSlidesAgentConflict": "本機編輯開始後，Agent 更新了這張幻燈片。請先儲存或重新載入文件再繼續。",
+    "deckwiseSlidesChangedWhileSaving": "儲存時幻燈片發生了變更。"
+  },
+  "projects": {
+    "audienceReviewTrigger": "檢視",
+    "audienceReviewTriggerAria": "總分 {score}/100。開啟觀眾檢視建議",
+    "audienceReviewTitle": "觀眾檢視",
+    "audienceReviewDescription": "從觀眾角度檢視這份簡報。",
+    "audienceReviewAgain": "重新檢視",
+    "audienceReviewClose": "關閉觀眾檢視",
+    "audienceReviewLoading": "正在載入最新檢視…",
+    "audienceReviewGenerating": "正在產生觀眾檢視",
+    "audienceReviewPreparingImages": "正在準備檢視圖片",
+    "audienceReviewSystemError": "系統錯誤",
+    "audienceReviewTryAgain": "再試一次",
+    "audienceReviewUnavailable": "目前沒有可重複使用的檢視結果。",
+    "audienceReviewGenerate": "產生檢視",
+    "audienceReviewComplete": "您的簡報已準備好，可以開始簡報",
+    "audienceReviewNoSuggestions": "找不到觀眾檢視建議。",
+    "audienceReviewSuggestionFallback": "建議",
+    "audienceReviewFix": "修正",
+    "audienceReviewFixAria": "修正建議：{title}",
+    "audienceReviewDismiss": "忽略",
+    "audienceReviewDismissAria": "忽略建議：{title}",
+    "audienceReviewSlide": "頁",
+    "audienceReviewAllSlides": "所有投影片",
+    "audienceReviewSlideList": "投影片 {pages}",
+    "title": "專案",
+    "subtitle": "最近先開的",
+    "openingRecentProject": "開啟最近的項目",
+    "openingRecentProjectHint": "首先檢查本地緩存，然後確認您最近的項目。",
+    "openingRecentProjectSlowHint": "網路很慢。仍在嘗試聯繫專案服務。",
+    "loadRecentTimeoutTitle": "與專案服務的連結逾時",
+    "loadRecentTimeoutMessage": "在慢速網路上，我們停止等待，而不是讓主頁掛起。請再試一次。",
+    "loadRecentFailedTitle": "無法加載您最近的項目",
+    "loadRecentFailedMessage": "網路速度慢或不穩定。請再試一次。",
+    "loadingProject": "載入項目",
+    "loadFailedTitle": "無法載入項目",
+    "startTitle": "今天您要介紹什麼？",
+    "startComposerPlaceholder": "從一個想法開始，或上傳檔案",
+    "invalidProjectData": "項目服務傳回的資料不完整。請再試一次。",
+    "loadTimeoutMessage": "與專案服務的連線逾時。請檢查您的網路並重試。",
+    "loadNetworkErrorMessage": "網路速度慢或不穩定，因此目前無法載入該項目。請再試一次。",
+    "missingOrDeleted": "該項目不存在或已刪除",
+    "recentTitle": "最近的項目",
+    "recentSubtitle": "過去 7 天內活躍",
+    "recentEmpty": "沒有最近的項目",
+    "allTitle": "全部",
+    "new": "新",
+    "newProject": "新專案",
+    "myProject": "我的項目",
+    "createCardSubtitle": "建立一個新工作區",
+    "emptyTitle": "還沒有專案",
+    "emptySubtitle": "建立您的第一個專案以開始使用",
+    "pleaseWait": "請稍候",
+    "createFailed": "建立專案失敗。請稍後重試。",
+    "confirmDelete": "你確定要刪除此專案嗎？",
+    "deleteFailed": "刪除失敗。請稍後重試。",
+    "renamePrompt": "重新命名專案",
+    "renameEmptyName": "專案名稱不能為空。",
+    "renameFailed": "重新命名失敗。請稍後重試。",
+    "projectNumber": "專案 #{id}",
+    "updatedAt": "{date}更新",
+    "searchPlaceholder": "搜尋專案",
+    "noResults": "沒有符合的專案",
+    "timeGroups": {
+      "today": "今天",
+      "yesterday": "昨天",
+      "pastWeek": "過去一週",
+      "past30Days": "過去 30 天",
+      "older": "更早"
+    },
+    "outline": "大綱",
+    "slides": "投影片",
+    "untitledProject": "未命名專案",
+    "generateSlides": "生成投影片",
+    "generatingSlides": "生成中...",
+    "generationWorkflowTitle": "正在生成投影片",
+    "generationWorkflow": {
+      "outline": "正在撰寫大綱",
+      "theme": "正在選擇主題",
+      "layout": "正在安排每頁版面",
+      "visuals": "正在決定圖片使用",
+      "slots": "正在整理頁面內容結構",
+      "deck": "正在生成投影片"
+    },
+    "customize": "自訂",
+    "generateSlidesSettings": "生成投影片設定",
+    "textContent": "文字內容",
+    "textContentMode": "文字內容模式",
+    "amountOfText": "文字量",
+    "writeFor": "写给...",
+    "tone": "语气",
+    "theme": "主题",
+    "viewMore": "查看更多",
+    "themeHelp": "使用下方热门主题，或查看更多",
+    "titlePreview": "标题",
+    "bodyLinkPreview": "正文与链接",
+    "themePistachio": "开心果",
+    "themeVolt": "电光",
+    "densityMinimal": "极简",
+    "densityConcise": "简洁",
+    "densityDetailed": "详细",
+    "densityExtensive": "丰富",
+    "textModeGenerate": "生成",
+    "textModeCondense": "压缩",
+    "textModePreserve": "保留",
+    "audienceBusinessLabel": "商务",
+    "audienceBusinessContent": "为职场人士创建商业、战略、销售或内部汇报演示",
+    "audienceHighSchoolersLabel": "高中生",
+    "audienceHighSchoolersContent": "为 9-12 年级学生制作课堂项目、报告和展示",
+    "audienceCollegeStudentsLabel": "大学生",
+    "audienceCollegeStudentsContent": "为本科生或研究生准备课程、研究或学术展示",
+    "audienceCreativesLabel": "创意工作者",
+    "audienceCreativesContent": "为设计师、艺术家、市场人和创作者制作更具视觉表达力的内容",
+    "audienceTechEnthusiastsLabel": "科技爱好者",
+    "audienceTechEnthusiastsContent": "为关注技术、软件、AI 工具和数字产品的人群撰写",
+    "toneProfessionalLabel": "专业",
+    "toneProfessionalContent": "适合商业或职场沟通的精炼、有说服力表达",
+    "toneConversationalLabel": "自然对话",
+    "toneConversationalContent": "友好、自然、轻松，读起来更有人味",
+    "toneTechnicalLabel": "技术",
+    "toneTechnicalContent": "準確、有結構、注重細節，適合技術解釋、指南或文件",
+    "toneAcademicLabel": "学术",
+    "toneAcademicContent": "正式、客观、重视证据，适合研究、论文或学术内容",
+    "toneInspirationalLabel": "鼓舞人心",
+    "toneInspirationalContent": "积极、有能量、能激励观众的表达",
+    "toneHumorousLabel": "幽默",
+    "toneHumorousContent": "轻松、机智、有趣，同时保持相关性",
+    "cardsBelowUpgradeAction": "升級",
+    "cardsBelowUpgradeSuffix": "以生成全部頁面",
+    "saveOutlineBeforeGenerate": "請先儲存大綱，再生成投影片。",
+    "waitForImageUploadsBeforeGenerate": "請等待圖片上傳完成後再生成投影片。",
+    "generateSlidesFailed": "生成投影片失敗。",
+    "firstDraftLabel": "初稿"
+  },
+  "personalization": {
+    "title": "個人化",
+    "subtitle": "管理你是誰，以及 Deckwise 應該記住什麼",
+    "accountSection": "帳號",
+    "account": "帳號",
+    "general": "一般",
+    "models": "模型",
+    "usageBilling": "用量與計費",
+    "accountSubtitle": "管理你的個人資料和帳號資訊。",
+    "generalSubtitle": "調整工作區的應用偏好。",
+    "usageSubtitle": "查看訂閱與帳單資訊。",
+    "featuresSection": "功能",
+    "mail": "Deckwise 郵件",
+    "dataControls": "資料控制",
+    "myComputer": "我的電腦",
+    "cloudBrowser": "雲端瀏覽器",
+    "skills": "技能",
+    "mcp": "MCP",
+    "connectors": "連接器",
+    "integrations": "整合",
+    "getHelp": "取得協助",
+    "profileTab": "個人資料",
+    "knowledgeTab": "知識",
+    "nickname": "暱稱",
+    "nicknamePlaceholder": "Jane",
+    "occupation": "職業",
+    "occupationPlaceholder": "產品設計師",
+    "moreAboutYou": "更多關於你",
+    "aboutPlaceholder": "我是一名常駐紐約的分析師，主要使用 React 和 SQL 工作。",
+    "profileHelp": "Deckwise 會使用這些資訊，在所有任務中個人化回應。",
+    "customInstructions": "自訂指令",
+    "instructionsPlaceholder": "保持簡潔直接。除非我另有說明，預設使用 Python。撰寫文件時使用專業語氣並標註來源。",
+    "saveProfile": "儲存資料",
+    "savedStatus": "個人化設定已儲存",
+    "loadFailed": "個人化設定載入失敗。",
+    "saveFailed": "個人化設定儲存失敗。",
+    "memoriesHeading": "記憶",
+    "rulesHeading": "規則",
+    "memoryTitlePlaceholder": "記憶標題",
+    "memoryContentPlaceholder": "Deckwise 應該記住的內容",
+    "ruleContentPlaceholder": "Deckwise 應該如何回應或行動",
+    "addMemory": "新增記憶",
+    "addRule": "新增規則",
+    "emptyMemories": "尚未儲存任何記憶。",
+    "emptyRules": "尚未儲存任何規則。",
+    "enabled": "已啟用",
+    "disabled": "已停用",
+    "sourceUser": "使用者",
+    "sourceAi": "AI",
+    "personal": "個人",
+    "notSignedIn": "未登入",
+    "integrationsSubtitle": "管理已連線的應用程式和檔案來源。",
+    "integrationsDescription": "連接雲端儲存服務後，Deckwise 可以在你選擇檔案時將其匯入簡報和專案資料。",
+    "googleDriveTitle": "Google Drive",
+    "googleDriveDescription": "從 Google Drive 匯入檔案。",
+    "notionTitle": "Notion",
+    "notionDescription": "從 Notion 匯入頁面。",
+    "connected": "已連線",
+    "notConnected": "未連線",
+    "connect": "連線",
+    "disconnect": "中斷連線",
+    "disconnectGoogleDrive": "中斷連線",
+    "disconnectGoogleDriveConfirmTitle": "中斷 Google Drive 連線？",
+    "disconnectGoogleDriveConfirmMessage": "Deckwise 會撤銷已儲存的 Google Drive 授權令牌，並停止使用這個連線。已匯入專案的檔案會繼續保留。",
+    "googleDriveConnected": "Google Drive 已連線。",
+    "googleDriveDisconnected": "Google Drive 已中斷連線。",
+    "googleDriveAuthorizationPending": "請在開啟的分頁中完成 Google Drive 授權。",
+    "connectGoogleDriveFailed": "Google Drive 連線失敗",
+    "disconnectGoogleDriveFailed": "Google Drive 中斷連線失敗",
+    "disconnectNotion": "中斷連線",
+    "disconnectNotionConfirmTitle": "中斷 Notion 連線？",
+    "disconnectNotionConfirmMessage": "Deckwise 會撤銷已儲存的 Notion 授權令牌，並停止使用這個連線。已匯入專案的頁面會繼續保留。",
+    "notionConnected": "Notion 已連線。",
+    "notionDisconnected": "Notion 已中斷連線。",
+    "notionAuthorizationPending": "請在開啟的分頁中完成 Notion 授權。",
+    "connectNotionFailed": "Notion 連線失敗",
+    "disconnectNotionFailed": "Notion 中斷連線失敗",
+    "oneDriveTitle": "OneDrive",
+    "oneDriveDescription": "從 Microsoft OneDrive 匯入檔案。",
+    "disconnectOneDrive": "中斷連線",
+    "disconnectOneDriveConfirmTitle": "中斷 OneDrive 連線？",
+    "disconnectOneDriveConfirmMessage": "Deckwise 會撤銷已儲存的 OneDrive 授權令牌，並停止使用這個連線。已匯入專案的檔案會繼續保留。",
+    "oneDriveConnected": "OneDrive 已連線。",
+    "oneDriveDisconnected": "OneDrive 已中斷連線。",
+    "oneDriveAuthorizationPending": "請在開啟的分頁中完成 OneDrive 授權。",
+    "connectOneDriveFailed": "OneDrive 連線失敗",
+    "disconnectOneDriveFailed": "OneDrive 中斷連線失敗",
+    "dropboxTitle": "Dropbox",
+    "dropboxDescription": "從 Dropbox 匯入檔案。",
+    "disconnectDropbox": "中斷連線",
+    "disconnectDropboxConfirmTitle": "中斷 Dropbox 連線？",
+    "disconnectDropboxConfirmMessage": "Deckwise 會撤銷已儲存的 Dropbox 授權令牌，並停止使用這個連線。已匯入專案的檔案會繼續保留。",
+    "dropboxConnected": "Dropbox 已連線。",
+    "dropboxDisconnected": "Dropbox 已中斷連線。",
+    "dropboxAuthorizationPending": "請在開啟的分頁中完成 Dropbox 授權。",
+    "dropboxPickerRetryRequired": "Dropbox 已連線。請再次點擊 Dropbox 來選擇檔案。",
+    "connectDropboxFailed": "Dropbox 連線失敗",
+    "disconnectDropboxFailed": "Dropbox 中斷連線失敗",
+    "integrationLoadFailed": "整合載入失敗",
+    "loadingIntegrations": "載入中",
+    "comingSoon": "即將推出"
+  },
+  "shareSheet": {
+    "sharing": "分享",
+    "searchPlaceholder": "新增電子郵件或聯絡人",
+    "copyShareLink": "複製分享連結",
+    "copied": "已複製",
+    "copyPublicLink": "複製公開連結",
+    "publishPublicSlides": "發布",
+    "updatePublicSlides": "更新",
+    "unpublishPublicSlides": "取消發布",
+    "unpublishedPublicSlides": "已取消發布",
+    "sendEmail": "傳送郵件",
+    "emailSent": "已傳送",
+    "exportType": "匯出類型",
+    "exportPdf": "匯出為 PDF",
+    "exportPowerPoint": "匯出為 PowerPoint",
+    "exportGoogleSlides": "匯出到 Google 簡報",
+    "exportPngs": "匯出為 PNG",
+    "installFonts": "安裝字體",
+    "installFontsDescription": "為了確保簡報在 PowerPoint 中顯示正確，請在電腦上安裝這些字體："
+  },
+  "marketingHeader": {
+    "ariaLabel": "行銷頁面導航",
+    "directLinks": {
+      "enterprise": "企業",
+      "overview": "概覽",
+      "pricing": "價格"
+    },
+    "menus": {
+      "product": {
+        "label": "產品",
+        "hero": {
+          "title": "Deckwise",
+          "description": "你的 AI 工作區"
+        }
+      },
+      "ai": {
+        "label": "AI"
+      },
+      "solutions": {
+        "label": "解決方案"
+      },
+      "resources": {
+        "label": "資源"
+      }
+    },
+    "sections": {
+      "aiFeatures": "AI 功能",
+      "browse": "瀏覽",
+      "companySize": "公司規模",
+      "discover": "發現",
+      "exploreUseCases": "探索用例",
+      "learn": "學習",
+      "teams": "團隊",
+      "useCases": "使用場景"
+    },
+    "items": {
+      "academy": {
+        "title": "學院"
+      },
+      "agents": {
+        "title": "Agents",
+        "description": "自動處理重複工作"
+      },
+      "aiMeetingNotes": {
+        "title": "AI 會議紀要",
+        "description": "用 AI 寫出清晰紀要"
+      },
+      "aiUseCases": {
+        "title": "AI 使用場景"
+      },
+      "blog": {
+        "title": "部落格"
+      },
+      "connections": {
+        "title": "連接",
+        "description": "連結你的應用"
+      },
+      "consultants": {
+        "title": "顧問"
+      },
+      "customerStories": {
+        "title": "客戶案例"
+      },
+      "deckwiseAi": {
+        "title": "Deckwise AI",
+        "description": "面向工作的 AI 工具"
+      },
+      "design": {
+        "title": "設計"
+      },
+      "docs": {
+        "title": "文件",
+        "description": "簡單而強大"
+      },
+      "education": {
+        "title": "教育"
+      },
+      "engProduct": {
+        "title": "工程與產品"
+      },
+      "enterprise": {
+        "title": "企業"
+      },
+      "enterpriseSearch": {
+        "title": "企業搜尋",
+        "description": "快速找到答案"
+      },
+      "forLife": {
+        "title": "生活"
+      },
+      "forWork": {
+        "title": "工作"
+      },
+      "help": {
+        "title": "幫助"
+      },
+      "it": {
+        "title": "IT"
+      },
+      "knowledgeBase": {
+        "title": "知識庫",
+        "description": "集中管理團隊知識"
+      },
+      "marketing": {
+        "title": "市場"
+      },
+      "personal": {
+        "title": "個人"
+      },
+      "productTours": {
+        "title": "產品導覽"
+      },
+      "professional": {
+        "title": "專業人士"
+      },
+      "projects": {
+        "title": "專案",
+        "description": "管理所有項目"
+      },
+      "security": {
+        "title": "安全",
+        "description": "安全且可擴展"
+      },
+      "smallBusinesses": {
+        "title": "團隊"
+      },
+      "startups": {
+        "title": "創業公司"
+      },
+      "templates": {
+        "title": "範本"
+      },
+      "webinars": {
+        "title": "線上研討會"
+      },
+      "whatsNew": {
+        "title": "最新動態"
+      }
+    },
+    "footer": {
+      "productLeft": "3.5：Deckwise 開發者平台。查看新功能",
+      "productRight": "下載 Deckwise 應用"
+    }
+  },
+  "pricing": {
+    "metadata": {
+      "title": "Deckwise AI 定價",
+      "description": "比較 Deckwise Free 與 Plus 方案，了解 AI 簡報起草、專案文件、團隊工作流和可編輯投影片創作能力。"
+    },
+    "aria": {
+      "billingOptions": "計費選項",
+      "included": "已包含",
+      "plans": "方案",
+      "trustedTeams": "使用 Deckwise 的團隊"
+    },
+    "hero": {
+      "title": "定價",
+      "logoStrip": "這些團隊正在使用"
+    },
+    "billing": {
+      "monthly": "按月付費",
+      "yearly": "按年付費",
+      "save": "最高節省 20%",
+      "pricesNote": "價格以美元顯示"
+    },
+    "groups": {
+      "essentials": {
+        "eyebrow": "基礎",
+        "title": "適合整理個人和團隊工作。"
+      },
+      "workspace": {
+        "eyebrow": "AI 工作區",
+        "title": "適合把團隊工作跑起來。"
+      }
+    },
+    "plans": {
+      "badge": "推薦",
+      "currentCta": "目前計劃",
+      "free": {
+        "name": "Free",
+        "description": "整理個人工作，並試用基礎文件和投影片工作流程。",
+        "price": "$0",
+        "priceNote": "每月",
+        "cta": "開始使用",
+        "features": {
+          "feature1": "每月 500 credits",
+          "feature2": "基礎專案空間",
+          "feature3": "有限文件上傳",
+          "feature4": "最多邀請 10 位訪客"
+        }
+      },
+      "plus": {
+        "name": "Plus",
+        "description": "適合穩定使用 Deckwise 的個人和小團隊。",
+        "price": "$12",
+        "priceNote": "每月",
+        "cta": "開始使用 Plus",
+        "features": {
+          "feature1": "每月 2,000 credits",
+          "feature2": "30 天頁面歷史",
+          "feature3": "無限文件上傳",
+          "feature4": "最多邀請 100 位訪客"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "適合更高頻的簡報、資料整理和 AI 工作流程。",
+        "price": "$25",
+        "priceNote": "每月",
+        "cta": "開始使用 Pro",
+        "features": {
+          "feature1": "每月 2,000 credits",
+          "feature2": "SAML SSO",
+          "feature3": "進階權限",
+          "feature4": "私有團隊空間"
+        }
+      },
+      "ultra": {
+        "name": "Ultra",
+        "description": "適合重度生成、批次處理和高容量團隊工作流。",
+        "price": "$100",
+        "priceNote": "每月",
+        "cta": "開始使用 Ultra",
+        "features": {
+          "feature1": "每月 40,000 credits",
+          "feature2": "用戶自動開通",
+          "feature3": "審計日誌",
+          "feature4": "專屬成功支持"
+        }
+      }
+    },
+    "quote": {
+      "company": "OpenAI",
+      "body": "把所有工作放在同一個平台裡，會帶來很強的力量。",
+      "author": "Brad Lightcap，COO"
+    },
+    "addons": {
+      "agents": {
+        "title": "自訂 Agents",
+        "description": "自動處理依賴團隊知識的工作。"
+      },
+      "seats": {
+        "title": "AI 席位",
+        "description": "讓隊友從工作區上下文中快速獲得答案。"
+      }
+    },
+    "comparison": {
+      "title": "方案和功能",
+      "headings": {
+        "feature": "功能",
+        "free": "Free",
+        "plus": "Plus",
+        "pro": "Pro",
+        "ultra": "Ultra"
+      },
+      "groups": {
+        "coreWorkspace": "核心工作區",
+        "aiCollaboration": "AI 工作流",
+        "securityAdmin": "安全與管理"
+      },
+      "rows": {
+        "pagesDocs": "頁面、投影片和文檔",
+        "projectSpaces": "共享專案空間",
+        "fileUploads": "文件上傳",
+        "versionHistory": "版本歷史",
+        "aiSearch": "AI 搜尋與寫作",
+        "meetingNotes": "AI 會議紀要",
+        "customAgents": "自訂 Agents",
+        "guests": "訪客",
+        "adminAnalytics": "管理員分析",
+        "samlSso": "SAML SSO",
+        "scim": "SCIM 自動開通",
+        "auditLog": "審計日誌"
+      },
+      "values": {
+        "addOn": "附加購買",
+        "advanced": "進階",
+        "custom": "客製化",
+        "included": "已包含",
+        "limited": "有限",
+        "ninetyDays": "90 天",
+        "oneHundred": "100",
+        "sevenDays": "7 天",
+        "ten": "10",
+        "thirtyDays": "30 天",
+        "trial": "試用",
+        "twoFifty": "250",
+        "unlimited": "無限"
+      }
+    },
+    "enterprise": {
+      "controls": {
+        "title": "需要企業級管控？",
+        "body": "把安全、自動開通、審計和支援放進同一個部署計畫。"
+      },
+      "rollout": {
+        "title": "要推廣到多個團隊？",
+        "body": "我們可以在上線前幫忙規劃工作區、權限和範本。"
+      }
+    },
+    "faq": {
+      "title": "常見問題",
+      "freeTrial": {
+        "question": "我可以免費試用 Deckwise 嗎？",
+        "answer": "可以。 Free 方案可以建立工作區、邀請小團隊，並在升級前測試核心文件和投影片工作流程。"
+      },
+      "switchPlans": {
+        "question": "以後可以切換方案嗎？",
+        "answer": "可以。付費用戶可以透過 Stripe 託管入口管理月付或年付訂閱。"
+      },
+      "aiPricing": {
+        "question": "Plus 包含哪些權益？",
+        "answer": "Free 和 Plus 均可使用 AI；Plus 提供更高的每週使用額度，並解鎖可編輯的 PowerPoint 與 Google 簡報匯出。"
+      },
+      "annualBilling": {
+        "question": "支持按年付費嗎？",
+        "answer": "支持。付費方案可以按年付費，適合需要穩定、公司級使用方式的團隊。"
+      }
+    }
+  },
+  "careersPage": {
+    "metadata": {
+      "title": "加入 Deckwise：一起打造 AI 簡報工作流",
+      "description": "加入 Deckwise，和我們一起打造面向團隊的 AI 簡報軟體，把研究資料、專案文件和回饋變成可編輯投影片。"
+    },
+    "hero": {
+      "eyebrow": "加入 Deckwise",
+      "title": "和我們一起建構下一代知識工作工具。",
+      "body": "當團隊可以根據真實工作方式調整軟體，更多問題就能被更快解決。我們的使命是讓連接知識、專案和 AI 的工作區，成為每個人都可以使用的現實。",
+      "button": "查看開放職位"
+    },
+    "story": {
+      "title": "我們的故事",
+      "body1": "Deckwise 源於一個直接的問題：為什麼工具越多，團隊工作反而越碎片化？文件、檔案、聊天和簡報不斷增加，但真正的專案情境常常沒有一個穩定的位置。",
+      "body2": "我們希望建構一個可由團隊自由塑形的工作區：像一張白紙一樣輕巧，也能承載複雜專案、知識庫、資料和 AI 輔助。",
+      "body3": "這需要產品、工程、設計、研究、市場和客戶團隊緊密合作。我們正在尋找願意長期打磨基礎工具的人。"
+    },
+    "positions": {
+      "title": "開放職位",
+      "filterLabel": "篩選",
+      "location": "地點",
+      "department": "部門",
+      "allLocations": "全部地點",
+      "allDepartments": "全部部門",
+      "reset": "重置篩選",
+      "departments": {
+        "engineering": "工程",
+        "design": "設計",
+        "product": "產品",
+        "marketing": "市場",
+        "customer": "客戶團隊"
+      },
+      "jobs": {
+        "aiEngineer": {
+          "title": "AI 應用工程師",
+          "location": "上海 / 遠程",
+          "department": "engineering"
+        },
+        "frontendEngineer": {
+          "title": "前端工程師，編輯器體驗",
+          "location": "北京 / 遠程",
+          "department": "engineering"
+        },
+        "productDesigner": {
+          "title": "產品設計師，創作工具",
+          "location": "上海",
+          "department": "design"
+        },
+        "productManager": {
+          "title": "產品經理，AI 工作流程",
+          "location": "遠端",
+          "department": "product"
+        },
+        "growthMarketing": {
+          "title": "成長市場經理",
+          "location": "深圳 / 遠程",
+          "department": "marketing"
+        },
+        "customerSuccess": {
+          "title": "客戶成功經理",
+          "location": "北京",
+          "department": "customer"
+        }
+      }
+    },
+    "culture": {
+      "title": "Deckwise 的工作方式",
+      "body": "我們相信，最好的產品來自持續使用、直接回饋和嚴格的品質判斷。團隊保持小而專注，並圍繞真實使用者問題快速迭代。",
+      "items": {
+        "craft": {
+          "title": "重視手藝",
+          "body": "我們關心細節、效能、可維護性，也關心使用者每天真實感受到的流暢度。"
+        },
+        "speed": {
+          "title": "保持速度",
+          "body": "用清晰邊界和直接溝通減少等待，讓好點子盡快進入可驗證的產品。"
+        },
+        "truth": {
+          "title": "追求事實",
+          "body": "面對數據、使用者回饋和技術約束時保持誠實，並用證據推動決策。"
+        }
+      }
+    },
+    "values": {
+      "title": "我們的價值觀",
+      "items": {
+        "mission": "為使命負責",
+        "direct": "善意而直接",
+        "users": "從使用者問題出發",
+        "systems": "建構長期系統"
+      }
+    },
+    "benefits": {
+      "title": "福利與支持",
+      "items": {
+        "health": "健康與保險支持",
+        "setup": "辦公設備預算",
+        "learning": "學習與成長預算",
+        "flex": "彈性辦公安排",
+        "offsite": "團隊共創和 offsite"
+      }
+    },
+    "mockup": {
+      "video": "團隊日常",
+      "office": "辦公室文化",
+      "roles": "開放職位",
+      "team": "跨職能團隊"
+    }
+  },
+  "securityPage": {
+    "metadata": {
+      "title": "Deckwise 安全：AI 簡報專案的隱私控制",
+      "description": "了解 Deckwise 如何透過隱私控制、安全工作區邊界和企業級可靠性，保護 AI 簡報專案和檔案。"
+    },
+    "hero": {
+      "eyebrow": "安全與隱私",
+      "title": "你的安全、可靠和隱私是我們的優先順序。",
+      "body": "Deckwise 從產品設計、基礎設施、權限控制和 AI 使用方式上保護團隊數據，讓企業可以放心地將知識和專案放進同一個工作區。",
+      "button": "了解企業方案"
+    },
+    "sections": {
+      "security": {
+        "title": "安全",
+        "body": "Deckwise 採用 security-by-design 的方式保護資料。從傳輸、儲存到處理，我們都透過分層控制降低風險。",
+        "items": {
+          "infrastructure": {
+            "title": "安全基礎設施",
+            "body": "資料傳輸和儲存採用加密保護，並透過最小權限存取、金鑰管理、監控和漏洞修復流程減少暴露面。"
+          },
+          "operations": {
+            "title": "營運安全",
+            "body": "安全團隊持續監控基礎設施、網路和產品資產，及時回應異常行為和潛在威脅。"
+          },
+          "product": {
+            "title": "產品安全",
+            "body": "企業管理員可以設定 SSO、成員開通、稽核日誌、訪客存取和細粒度權限，增強組織可見度和控制力。"
+          }
+        }
+      },
+      "privacy": {
+        "title": "隱私",
+        "body": "Deckwise 致力於以透明、可控的方式處理客戶數據，並讓客戶了解數據如何被收集、使用和保護。",
+        "items": {
+          "data": {
+            "title": "資料處理",
+            "body": "我們圍繞資料生命週期建立流程和保護措施，包括收集、處理、儲存、存取和刪除。"
+          },
+          "agreements": {
+            "title": "協議與承諾",
+            "body": "我們的服務協議、資料處理條款和隱私權說明會隨著法規和產業實務持續更新。"
+          },
+          "governance": {
+            "title": "資料治理",
+            "body": "透過清晰政策和存取邊界，幫助客戶保持資料安全、準確、私密且可管理。"
+          }
+        }
+      },
+      "compliance": {
+        "title": "合規",
+        "body": "Deckwise 正在建立企業客戶的安全和隱私計劃，幫助團隊按照行業標準管理工作區。",
+        "items": {
+          "soc": "SOC 2 Type 2 準備",
+          "iso": "ISO 27001 / 27701 規劃",
+          "access": "企業存取控制",
+          "audit": "審計與日誌能力"
+        }
+      },
+      "ai": {
+        "title": "AI 治理",
+        "body": "Deckwise 的 AI 功能圍繞著可信賴、可解釋和可控設計。客戶資料不會被用於訓練通用模型，權限邊界也會在 AI 存取中被尊重。",
+        "items": {
+          "safe": "安全審查",
+          "transparent": "透明說明",
+          "useful": "以用戶價值為中心",
+          "governed": "資料邊界治理"
+        }
+      },
+      "reliability": {
+        "title": "可靠性",
+        "body": "團隊需要一個隨時可用的工作區。 Deckwise 透過監控、備份、復原計畫和狀態透明度來提高服務可靠性。",
+        "items": {
+          "uptime": "面向 99.9% 可用性設計",
+          "backup": "備份和復原流程",
+          "status": "狀態透明",
+          "resilience": "彈性基礎設施"
+        }
+      }
+    },
+    "cta": {
+      "title": "需要高級安全和管控？",
+      "body": "告訴我們你的企業部署、合規或權限需求，我們會幫助你規劃合適的工作區方案。",
+      "button": "聯繫銷售"
+    },
+    "mockup": {
+      "trust": "Trust Center",
+      "permission": "權限控制",
+      "audit": "審計日誌",
+      "encryption": "加密保護",
+      "ai": "AI 資料邊界"
+    }
+  },
+  "blogPage": {
+    "metadata": {
+      "title": "Deckwise 部落格：AI 簡報工作流指南",
+      "description": "閱讀 Deckwise 關於 AI 簡報工作流、智慧代理輔助創作、產品更新和知識管理的文章。"
+    },
+    "hero": {
+      "eyebrow": "Tools & Craft",
+      "title": "工具與匠心",
+      "body": "關於未來工作方式的觀察、產品建置經驗，以及團隊如何把知識變成更快執行的故事。",
+      "categoryLabel": "部落格分類",
+      "latestTitle": "最新文章",
+      "searchLabel": "搜尋部落格",
+      "searchPlaceholder": "搜尋文章、作者或主題"
+    },
+    "categories": {
+      "latest": "最新",
+      "hq": "Deckwise HQ",
+      "teams": "團隊",
+      "inspiration": "靈感",
+      "builders": "建構者",
+      "pioneers": "先鋒團隊",
+      "tech": "科技",
+      "mail": "郵件"
+    },
+    "featured": {
+      "category": "Deckwise HQ",
+      "title": "介紹 Deckwise 開發者平台",
+      "body": "新的開發者能力把數據、工具和智慧體連結在一起，讓團隊可以在同一個工作空間擴展流程、沉澱上下文，並把重複工作自動化。",
+      "author": "Max Chen",
+      "role": "產品負責人，Deckwise"
+    },
+    "articles": {
+      "developerPlatform": {
+        "category": "Deckwise HQ",
+        "title": "介紹 Deckwise 開發者平台",
+        "body": "一組新的建置模組，讓開發者和智慧體更自然地連結團隊的知識、專案和業務工具。",
+        "author": "Max Chen",
+        "role": "產品負責人"
+      },
+      "customAgentsBeta": {
+        "category": "Deckwise HQ",
+        "title": "我們從 Custom Agents beta 學到了什麼",
+        "body": "智能體要成為真正的隊友，不只是執行指令，還需要理解情境、邊界和團隊的協作節奏。",
+        "author": "Akshay Lin",
+        "role": "共同創辦人"
+      },
+      "multiRegionData": {
+        "category": "科技",
+        "title": "建構多區域資料系統",
+        "body": "從搜尋、分析到 AI 事件日誌，團隊如何設計可擴展的資料區域化基礎架構。",
+        "author": "Justin Lee, Adam Hudson",
+        "role": "工程團隊"
+      },
+      "executionTax": {
+        "category": "靈感",
+        "title": "消除團隊的執行稅",
+        "body": "為什麼很多團隊不是缺少想法，而是缺少把決策持續推進到結果的統一工作層。",
+        "author": "Áine Dundas",
+        "role": "成長與市場"
+      },
+      "schemaChanges": {
+        "category": "科技",
+        "title": "如何在上線前捕捉破壞性 schema 變更",
+        "body": "一個 CI 防護欄的設計過程，以及它如何幫助工程團隊降低迴歸風險。",
+        "author": "Maya Lekhi",
+        "role": "工程團隊"
+      },
+      "dataResidency": {
+        "category": "Deckwise HQ",
+        "title": "數據駐留能力擴展到更多區域",
+        "body": "企業客戶需要在適當的地區保存數據，我們正在把區域化能力變成工作空間的基礎能力。",
+        "author": "Fuzzy Khosrowshahi",
+        "role": "首席技術長"
+      },
+      "pageDesign": {
+        "category": "科技",
+        "title": "重新設計頁面的視覺規則",
+        "body": "我們如何重新整理頁面密度、標題層級和內容區塊，讓複雜工作也保持清晰。",
+        "author": "Paul Velleux",
+        "role": "產品設計"
+      },
+      "chronicleLaunch": {
+        "category": "團隊",
+        "title": "一個團隊如何用 Deckwise 管理大型發布",
+        "body": "從發布清單到跨職能合作，一個清晰的工作空間如何讓重要節點更可控。",
+        "author": "Mayuresh Patole",
+        "role": "創辦人兼 CEO"
+      },
+      "agentSecurity": {
+        "category": "科技",
+        "title": "我們如何為智能體建構安全模型",
+        "body": "智能體自動化越深入，權限、稽核和人工確認就越需要設計進產品底層。",
+        "author": "Sean Keenan, Jacob Brackett",
+        "role": "安全與工程"
+      }
+    },
+    "newsletter": {
+      "title": "繼續閱讀工作方式的下一步",
+      "body": "取得有關 AI 工作流程、團隊知識管理和產品建立的最新文章與案例。",
+      "button": "開始使用 Deckwise"
+    }
+  },
+  "mobilePage": {
+    "metadata": {
+      "title": "Deckwise 行動端：隨時查看 AI 簡報專案",
+      "description": "在 iOS 和 Android 上使用 Deckwise，隨時查看 AI 簡報專案、記錄想法，並繼續推進投影片工作。"
+    },
+    "hero": {
+      "eyebrow": "Deckwise 行動端",
+      "title": "隨時隨地，把工作帶在身邊。",
+      "body": "在手機上查看項目、記錄想法、評論草稿，並讓 AI 幫你把靈感繼續推進成可交付內容。"
+    },
+    "storeButtons": {
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "downloadOn": "下載於",
+      "getItOn": "獲取於"
+    },
+    "features": {
+      "title": "從桌面到手機，工作不斷線。",
+      "items": {
+        "capture": {
+          "title": "隨手捕捉想法",
+          "body": "把會議後的靈感、客戶回饋和待辦事項快速放進專案情境。"
+        },
+        "review": {
+          "title": "隨時查看草稿",
+          "body": "在路上檢查簡報、文件和關鍵項目材料。"
+        },
+        "ai": {
+          "title": "行動端 AI 助手",
+          "body": "基於已有資料提問、總結內容，並繼續前進下一步。"
+        },
+        "sync": {
+          "title": "跨裝置同步",
+          "body": "手機上的更新會回到同一個工作區，不需要來回搬運。"
+        }
+      }
+    },
+    "quote": {
+      "body": "當專案資料、草稿和下一步都能在手機上開啟時，即使離開桌面，團隊也能繼續推進工作。",
+      "author": "Deckwise 客戶團隊"
+    },
+    "cta": {
+      "title": "下載 Deckwise 行動裝置。",
+      "body": "把專案上下文、AI 助理和簡報工作流程帶到 iOS 與 Android。",
+      "button": "免費開始"
+    },
+    "mockup": {
+      "workspace": "市場發布計劃",
+      "ai": "AI 總結",
+      "task": "下一步",
+      "comment": "評論已同步"
+    }
+  },
+  "desktopPage": {
+    "metadata": {
+      "title": "Deckwise 桌面端：更快編輯 AI 簡報",
+      "description": "下載 Deckwise 桌面端，在更專注的 AI 簡報工作台中存取專案、引用文件脈絡並編輯投影片。"
+    },
+    "hero": {
+      "eyebrow": "Deckwise 桌面端",
+      "title": "下載桌面應用，獲得更快體驗。",
+      "body": "快速、簡潔、少打擾。把專案文件、AI 助理和簡報編輯放進一個專注視窗。"
+    },
+    "primaryCta": "下載 macOS 版",
+    "quote": {
+      "body": "把專案上下文、草稿和 AI 助理放進一個桌面工作區後，團隊切換工具的次數明顯少了。",
+      "author": "Deckwise 客戶團隊",
+      "role": "營運與市場負責人"
+    },
+    "download": {
+      "title": "下載 Deckwise 桌面端",
+      "subtitle": "更快、更專注的工作體驗已經準備好。",
+      "items": {
+        "macUniversal": "下載 macOS 通用版",
+        "macApple": "下載 macOS Apple Silicon 版",
+        "macIntel": "下載 macOS Intel 版",
+        "windowsX64": "下載 Windows x64 版",
+        "windowsArm": "下載 Windows Arm / Arm64 版"
+      }
+    },
+    "features": {
+      "offline": {
+        "title": "減少瀏覽器幹擾",
+        "body": "把簡報、專案資料和 AI 工作流程留在一個獨立視窗。"
+      },
+      "fast": {
+        "title": "更快回到工作",
+        "body": "從 Dock 或工作列直接開啟最近項目，快速繼續編輯。"
+      },
+      "sync": {
+        "title": "跨裝置同步",
+        "body": "桌面端、網頁端和行動端共用同一個專案上下文。"
+      }
+    },
+    "mockup": {
+      "workspace": "產品發布工作區",
+      "document": "演示草稿",
+      "agent": "AI 助理",
+      "status": "正在同步"
+    }
+  },
+  "enterprisePage": {
+    "metadata": {
+      "title": "Deckwise 企業版：安全的 AI 簡報工作區",
+      "description": "了解 Deckwise 如何為企業團隊提供安全的 AI 簡報工作區，支援專案文件、治理和可靠的簡報工作流。"
+    },
+    "hero": {
+      "eyebrow": "Deckwise for Enterprise",
+      "title": "知識和工作，連結在一起。",
+      "body": "一個安全的 AI 工作區，協助企業團隊集中知識、規劃專案，並在同一份上下文中更快推進。",
+      "primaryCta": "開始使用"
+    },
+    "trust": {
+      "label": "被高速成長和創新團隊信賴"
+    },
+    "stats": {
+      "first": {
+        "value": "#1",
+        "label": "知識庫、專案和 AI 寫作的統一工作區"
+      },
+      "second": {
+        "value": "1 個地方",
+        "label": "集中公司知識、專案計畫、資料和決策"
+      },
+      "third": {
+        "value": "AI-ready",
+        "label": "讓團隊知識可搜尋、可重複使用、可行動"
+      }
+    },
+    "features": {
+      "items": {
+        "knowledge": {
+          "title": "公司知識",
+          "body": "把手冊、流程、發布計劃和團隊上下文放到一個組織清晰、可搜尋、可保持準確的主頁。"
+        },
+        "search": {
+          "title": "企業搜尋",
+          "body": "跨 Deckwise 和連結應用快速找到答案，讓知識跟著工作流動。"
+        },
+        "projects": {
+          "title": "整合專案",
+          "body": "規劃任務、追蹤進度、對齊團隊，把 brief、決策和交付物連成一條線。"
+        },
+        "integrations": {
+          "title": "工作流程與連接",
+          "body": "自動化流程，連結常用工具，把外部文件、對話和訊號帶進同一個工作區。"
+        }
+      }
+    },
+    "ai": {
+      "title": "一體化 AI，就在你工作的地方。",
+      "items": {
+        "context": {
+          "title": "帶著正確情境的 AI",
+          "body": "不是另一個通用聊天框，而是基於團隊知識、專案和工作流程理解問題。"
+        },
+        "oneTool": {
+          "title": "一個 AI 工具處理多種工作",
+          "body": "腦力激盪、寫作、搜尋、產生演示、整理會議和推進流程都在同一個地方完成。"
+        },
+        "integrated": {
+          "title": "融入日常工作",
+          "body": "不需要跳轉應用程式或複製上下文，AI 直接出現在計劃、建立和追蹤工作的位置。"
+        },
+        "secure": {
+          "title": "強大且安全",
+          "body": "企業級 AI 治理、安全和管理控制，幫助團隊在邊界清晰的環境中使用 AI。"
+        }
+      }
+    },
+    "values": {
+      "items": {
+        "empowering": {
+          "title": "容易開始，團隊願意使用。",
+          "body": "企業工具需要強大，也需要直覺。 Deckwise 讓團隊用熟悉的頁面、專案和資料庫組織複雜工作。"
+        },
+        "customizable": {
+          "title": "靈活定制，隨團隊成長。",
+          "body": "工作區可以適應不同團隊、權限和流程，減少點狀工具擴散，也降低維護成本。"
+        },
+        "connected": {
+          "title": "每個團隊始終在同一頁。",
+          "body": "把工具、團隊和工作連結在可搜尋的工作區中，讓團隊保持對齊、行動更快、決策更好。"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "被創新團隊喜愛。",
+      "items": {
+        "figma": {
+          "logo": "Figma",
+          "quote": "當資訊結構夠清晰，團隊就能更直觀地找到內容並記住上下文在哪裡。",
+          "person": "Marie Szuts",
+          "role": "People Ops"
+        },
+        "remote": {
+          "logo": "Remote",
+          "quote": "集中式知識可以讓新成員更快找到訊息，縮短從加入到真正產出的時間。",
+          "person": "Scott Entwistle",
+          "role": "Recruiting"
+        },
+        "match": {
+          "logo": "Match",
+          "quote": "共享工作區是我們簡化工作流程、減少重複溝通的關鍵方式。",
+          "person": "Rahim Makani",
+          "role": "Product"
+        },
+        "toyota": {
+          "logo": "Toyota",
+          "quote": "當任務細節和進度更容易保持同步，團隊可以節省時間並減少狀態更新成本。",
+          "person": "Taku Wakasugi",
+          "role": "Research"
+        },
+        "ramp": {
+          "logo": "Ramp",
+          "quote": "AI 可以承擔許多行政性整理工作，讓產品團隊把注意力放回真正要建造的東西上。",
+          "person": "Geoff Charles",
+          "role": "CPO"
+        },
+        "openai": {
+          "logo": "OpenAI",
+          "quote": "以前需要數小時排查的問題，現在可以透過詢問工作區裡的技術知識在幾分鐘內解決。",
+          "person": "John Allard",
+          "role": "Engineering"
+        }
+      }
+    },
+    "product": {
+      "title": "簡化你的產品開發。",
+      "body": "在一個連結式中心管理需求、研究、規格、發布計畫和複盤，幫助團隊更快建立更好的產品。",
+      "cta": "了解更多"
+    },
+    "connections": {
+      "eyebrow": "Connections",
+      "title": "連接所有關鍵工具。",
+      "body": "把團隊依賴的工具帶到一個地方。整合、同步、自動化工作流程，嵌入豐富訊息，並跨應用程式找到答案。",
+      "cta": "查看所有集成"
+    },
+    "security": {
+      "title": "用一流支援和安全大膽構建。",
+      "body": "從部署規劃到身分管理、合規、安全和 AI 治理，Deckwise 為企業級推廣提供所需的支援和控制能力。",
+      "items": {
+        "services": {
+          "title": "專業服務",
+          "body": "用專家經驗設計、部署和自動化企業工作區。"
+        },
+        "guidance": {
+          "title": "專屬指導",
+          "body": "客戶成功團隊協助工作區建置、上線培訓和最佳實務。"
+        },
+        "support": {
+          "title": "高級支援",
+          "body": "為更複雜的團隊需求提供更主動、更客製化的支援。"
+        },
+        "sso": {
+          "title": "身分管理",
+          "body": "透過 SAML SSO 讓員工安全地存取工作區。"
+        },
+        "scim": {
+          "title": "SCIM 自動開通",
+          "body": "更輕鬆地建立、移除、更新和同步使用者與使用者群組。"
+        },
+        "management": {
+          "title": "工作區和網域管理",
+          "body": "集中管理安全、合規、分析、稽核和網域設定。"
+        },
+        "compliance": {
+          "title": "安全和合規標準",
+          "body": "圍繞企業採購、合規審查和資料保護要求組織控制能力。"
+        },
+        "governance": {
+          "title": "AI 治理",
+          "body": "清楚定義企業資料邊界和 AI 使用方式，降低推廣風險。"
+        }
+      }
+    },
+    "resources": {
+      "title": "幫助你開始的資源。",
+      "items": {
+        "report": {
+          "title": "AI 如何改變知識工作",
+          "body": "理解企業團隊如何把共享知識變成更快的決策和執行。",
+          "cta": "閱讀報告"
+        },
+        "hub": {
+          "title": "集中式產品開發中心",
+          "body": "學習如何把需求、規格、研究和狀態更新組織到一個可搜尋中心。",
+          "cta": "閱讀指南"
+        },
+        "tour": {
+          "title": "自助體驗企業工作區",
+          "body": "看看一個團隊如何用 Deckwise 管理知識、專案和 AI 工作流程。",
+          "cta": "開始導覽"
+        }
+      }
+    },
+    "cta": {
+      "title": "一個 AI 工作區，適合每個團隊。",
+      "body": "和專家聊聊你的組織結構、安全要求和團隊工作流程，看看 Deckwise 可以如何落地。",
+      "button": "開始使用 Deckwise"
+    }
+  },
+  "teamsPage": {
+    "metadata": {
+      "title": "Deckwise 團隊版：AI 簡報工作流",
+      "description": "用 Deckwise 連接專案文件、AI 起草、可編輯投影片、審閱和共享簡報工作流，讓團隊在同一工作區完成創作。"
+    },
+    "hero": {
+      "title": "團隊在一起工作，才會更好。",
+      "body": "專案、知識庫和文件並排放在一個工作區。從小團隊到更大的組織，都可以保持上下文清晰。",
+      "primaryCta": "免費開始",
+      "secondaryCta": "了解企業版"
+    },
+    "projects": {
+      "title": "更快交付項目",
+      "body": "從範圍定義到上線當天，讓每個人保持同步。用看板、時間軸和任務視圖管理高階專案與具體執行。",
+      "items": {
+        "planning": "專案計劃",
+        "tasks": "任務看板",
+        "timeline": "發布節奏"
+      },
+      "quote": {
+        "body": "我們同時推進許多專案時，最重要的是隨時點進去就能看到全貌。",
+        "author": "營運與市場團隊"
+      }
+    },
+    "digitalOffice": {
+      "title": "你的數位辦公室",
+      "body": "告別混亂資料夾和多個版本的同一份文件。把團隊空間、資料和決策放進一個中心位置，讓大家知道要去哪裡找答案。",
+      "spaces": {
+        "general": "General",
+        "engineering": "Engineering",
+        "sales": "Sales",
+        "marketing": "Marketing",
+        "managers": "Managers",
+        "operations": "Operations"
+      },
+      "quote": {
+        "body": "以前很多知識只存在少數人的腦子裡。現在團隊可以自助尋找並快速推進。",
+        "author": "創新策略團隊"
+      }
+    },
+    "docs": {
+      "title": "讓所有人保持一致的文檔",
+      "body": "會議記錄、目標規劃、流程文件和關鍵決策都可以沉澱下來，讓相關方知道誰在做什麼、什麼時候完成。",
+      "items": {
+        "notes": "會議紀要",
+        "goals": "目標規劃",
+        "decisions": "關鍵決策"
+      },
+      "quote": {
+        "body": "以前我們常發會議回顧郵件。現在團隊知道遇到範圍或進度問題應該去哪裡看。",
+        "author": "產品課程團隊"
+      }
+    },
+    "freePlan": {
+      "title": "從免費方案開始",
+      "body": "邀請團隊成員，先把工作整理起來。沒有時間限制，也不需要信用卡，可以先試用再決定是否要升級。",
+      "button": "免費開始",
+      "featuresTitle": "Deckwise 團隊功能",
+      "features": {
+        "collaboration": "共享工作區上下文",
+        "permissions": "可自訂權限",
+        "integrations": "API 和工具集成",
+        "views": "看板、時間軸和日曆視圖",
+        "tasks": "任務和專案管理",
+        "wiki": "團隊 Wiki 和知識庫",
+        "docs": "漂亮的筆記和文檔",
+        "mobile": "行動端完整體驗"
+      }
+    },
+    "teams": {
+      "title": "適合每種團隊",
+      "body": "不同職能的問題不同，但都需要清晰的脈絡、可執行的計畫和可靠的知識庫。",
+      "items": {
+        "engineering": {
+          "title": "工程",
+          "body": "把 sprint 任務、程式碼規格、缺陷修復和發布複盤放在同一個地方，更快交付功能。",
+          "cta": "了解更多"
+        },
+        "product": {
+          "title": "產品",
+          "body": "用使用者研究、路線圖和跨職能專案把想法更快推向真實交付。",
+          "cta": "了解更多"
+        },
+        "design": {
+          "title": "設計",
+          "body": "统一资产、指南、原型和设计系统，让团队建立一致的设计语言。",
+          "cta": "了解更多"
+        }
+      }
+    },
+    "templates": {
+      "title": "從模板開始",
+      "body": "把预置工作流加入团队工作区，再根据团队自己的流程调整。",
+      "items": {
+        "designSystem": {
+          "title": "設計系統",
+          "body": "維護共享設計資源、規範和元件說明。",
+          "cta": "使用模板"
+        },
+        "roadmap": {
+          "title": "產品路線圖",
+          "body": "圍繞年度重點排序大型專案，讓團隊保持共同方向。",
+          "cta": "使用模板"
+        }
+      }
+    },
+    "reviews": {
+      "title": "看看客戶為什麼喜歡 Deckwise",
+      "subtitle": "團隊最關心的體驗指標",
+      "body": "团队工具不仅要强大，也要容易上手、容易管理、能满足真实工作要求。",
+      "items": {
+        "easeUse": {
+          "value": "86%",
+          "label": "易用性"
+        },
+        "easeAdmin": {
+          "value": "90%",
+          "label": "易於管理"
+        },
+        "requirements": {
+          "value": "91%",
+          "label": "滿足需求"
+        },
+        "setup": {
+          "value": "86%",
+          "label": "易設定"
+        }
+      }
+    },
+    "cta": {
+      "title": "今天就試試 Deckwise。",
+      "body": "免費開始，然後為團隊建立更清晰的簡報工作流。",
+      "button": "免費開始"
+    }
+  },
+  "personalPage": {
+    "metadata": {
+      "title": "Deckwise 個人版：個人 AI 簡報創作工作區",
+      "description": "把 Deckwise 用作個人 AI 簡報工作區，整理想法、起草投影片、管理筆記，並更快打磨專案。"
+    },
+    "hero": {
+      "title": "Deckwise 適合每個人。",
+      "body": "在一個地方寫下筆記、做計畫、整理任務和管理生活。個人使用現在可以免費開始。",
+      "button": "註冊",
+      "platforms": "支援網頁、行動端、Mac 和 Windows",
+      "cards": {
+        "notes": "筆記",
+        "vacation": "旅行計劃",
+        "tasks": "任務",
+        "writing": "寫作",
+        "improvement": "自我提升",
+        "websites": "個人網站"
+      }
+    },
+    "useCases": {
+      "title": "看看 Deckwise 如何適合不同的人",
+      "items": {
+        "notes": {
+          "title": "記錄筆記",
+          "body": "快速捕捉想法，並以自己的方式組織。無論是待辦、提醒或下一個大想法，Deckwise 都能幫你記住。",
+          "story": "旅行記錄、靈感和待辦事項可以隨身攜帶，不再散落在不同應用裡。"
+        },
+        "organized": {
+          "title": "整理生活",
+          "body": "預算、食譜、待讀文章和資料都可以放在一個個人主頁裡，不需要用多個應用程式拼湊。",
+          "story": "把公司、旅行和個人專案放在一個可自訂系統裡，資訊就更容易回到手邊。"
+        },
+        "tasks": {
+          "title": "追蹤任務",
+          "body": "從工作請求到家務清單，都可以用簡單 checklist 或詳細項目看板來推進。",
+          "story": "多篇稿件、多條進度和多種狀態可以同時跟踪，而不是靠記憶切換。"
+        },
+        "writing": {
+          "title": "開始寫作",
+          "body": "直接輸入，其他幹擾退到後面。 Deckwise 可以是一個專注寫作、拖曳整理和分享回饋的地方。",
+          "story": "把零散思考收集成章節、頁面和草稿，寫作過程會更容易持續。"
+        },
+        "improvement": {
+          "title": "持續變好",
+          "body": "習慣追蹤、閱讀清單、健身計畫和複盤都可以並排放在同一個系統中。",
+          "story": "自我提升不是另一個待辦應用，而是與你每天的記錄、計畫和資料連結在一起。"
+        },
+        "websites": {
+          "title": "建置網站",
+          "body": "把頁面發佈成公開網站，展示履歷、作品集或個人首頁，讓別人更容易發現你。",
+          "story": "作品、履歷和專案說明可以直接從你的個人工作區變成可分享頁面。"
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "永久免費開始",
+      "title": "為你完成更多事而設計。",
+      "button": "註冊",
+      "items": {
+        "dragDrop": {
+          "title": "拖曳整理思路",
+          "body": "抓住任何內容，以最適合你的方式移動、組合和組織。"
+        },
+        "contentTypes": {
+          "title": "多種內容類型",
+          "body": "圖片、影片、標題、嵌入和清單都可以直接放進頁面。"
+        },
+        "navigation": {
+          "title": "清晰導航",
+          "body": "頁面可以嵌套在頁面裡，在側邊欄中一眼看到所有層級。"
+        },
+        "collaboration": {
+          "title": "共享上下文",
+          "body": "評論、提及和分享連結能幫助你和其他人一起完成更多事。"
+        }
+      }
+    },
+    "apps": {
+      "title": "現在就開始",
+      "body": "在網頁、桌面和行動裝置上使用同一個工作區。需要在工作中使用？也可以了解團隊版和企業版。",
+      "items": {
+        "web": {
+          "title": "Web app",
+          "body": "開啟瀏覽器即可開始錄音、整理與分享。"
+        },
+        "desktop": {
+          "title": "桌面端",
+          "body": "在 Mac 和 Windows 上保持更專注的工作體驗。"
+        },
+        "mobile": {
+          "title": "行動端",
+          "body": "在 iOS 和 Android 上隨手記錄靈感和任務。"
+        }
+      }
+    },
+    "templates": {
+      "title": "用模板開始",
+      "body": "註冊後可以從筆記、日記、求職和履歷等範本開始，再調整成自己的系統。",
+      "cta": "瀏覽範本庫",
+      "items": {
+        "notes": "筆記",
+        "journal": "日記",
+        "job": "求職記錄",
+        "resume": "履歷"
+      }
+    },
+    "faq": {
+      "title": "常見問題",
+      "items": {
+        "oldPlan": {
+          "question": "如果我已經在使用舊的個人方案怎麼辦？",
+          "answer": "你可以繼續使用現有內容，並以新的個人使用方式管理筆記、任務和資料。"
+        },
+        "guests": {
+          "question": "我可以分享自己的作品嗎？",
+          "answer": "可以。你可以在內容準備好後分享或匯出，同時繼續在 Deckwise 中編輯。"
+        },
+        "multipleMembers": {
+          "question": "如果我想跟多人一起用怎麼辦？",
+          "answer": "當個人工作發展成團隊工作流，可以切換到團隊頁了解更適合更大規模使用的方案。"
+        },
+        "teamTrial": {
+          "question": "團隊可以免費試用嗎？",
+          "answer": "可以。你可以建立團隊工作區，先組織專案和文檔，再根據需要升級。"
+        }
+      }
+    },
+    "cta": {
+      "title": "今天就試試 Deckwise。",
+      "body": "免費開始，把筆記、計畫、任務和個人專案放到一個地方。",
+      "button": "免費開始"
+    }
+  },
+  "customerStory": {
+    "openai": {
+      "metadata": {
+        "title": "OpenAI 客戶故事：用 Deckwise 加快簡報工作流",
+        "description": "了解團隊如何用 Deckwise 共享專案脈絡、複用知識、起草簡報，並更快從研究資料走向可編輯投影片。"
+      },
+      "aria": {
+        "partner": "Deckwise 和 OpenAI",
+        "playVideo": "播放客户案例视频"
+      },
+      "hero": {
+        "eyebrow": "精选案例",
+        "title": "OpenAI 如何用 Deckwise 把共享知識轉化為更快的工作流程"
+      },
+      "lede": "每個 AI 系統背後，都是人類知識的基礎。 OpenAI 團隊需要一個地方來捕捉這些知識、組織專案上下文，並將共享思考轉化為更快的執行。",
+      "sections": {
+        "centralized": {
+          "title": "把工作集中在一個地方會釋放力量",
+          "body1": "隨著組織規模成長，計劃、研究和決策容易分散到不同工具。 OpenAI 團隊需要一個共享空間，讓工作在公司成長過程中依然可搜尋、可連結。",
+          "body2": "這個工作區成為把研究記錄、發布計劃、產品上下文和團隊知識轉化為行動的基礎。透過整合和 AI 輔助搜索，正確上下文可以跟隨工作流動，而不是被鎖在孤島裡。"
+        },
+        "research": {
+          "title": "打通研究到產品的管線",
+          "body1": "研究團隊在即時團隊空間中記錄實驗和計劃，再把這些工作連接到工程與產品流程。結果是從探索到發布的路徑更清晰。",
+          "body2": "看板、清單和時間軸讓每個團隊可以圍繞自己的流程組織同一個知識庫，同時讓更大的專案對協作者保持可讀。"
+        },
+        "engineering": {
+          "title": "工程團隊的速度放大器和隨時在線助手",
+          "body1": "當調試記錄、設計決策和程式碼審查被保存在下一個隊友能找到的地方，工程知識會持續複利。可搜尋的工作區讓這些上下文跨時區和交接都變得有用。",
+          "body2": "團隊不必從頭開始排查問題，而是可以基於已有知識繼續推進，並在壓力最高時向工作區詢問最相關的背景。"
+        },
+        "data": {
+          "title": "讓資料變得可存取、可行動",
+          "body1": "數據團隊可以把周報、儀表板和營運指標轉成共享報告中心。領導者不必在多個系統中尋找訊息，就能更快看到影響路線圖的數字。",
+          "body2": "範本和嵌入式儀錶板減少重複報告準備，同時讓分析上下文保留在資料旁邊。"
+        },
+        "gtm": {
+          "title": "更快的全球 GTM 引擎",
+          "body1": "當產品訊息、客戶案例、發布說明和賦能材料放在一個連結式資料庫裡，GTM 團隊就能更快行動。",
+          "body2": "這個共享系統能幫助新成員更快上手，讓銷售溝通保持最新，也讓面向客戶的團隊更清楚地理解產品策略。"
+        },
+        "impact": {
+          "title": "集中式工作與知識的影響",
+          "body1": "核心經驗很簡單：當專案上下文和草稿留在一起，知識就更容易被重複使用。團隊可以從想法到決策再到發布，而不會失去推導過程。",
+          "body2": "這個共享基礎讓高速團隊保持一致，同時仍給予每個職能所需的結構。"
+        }
+      },
+      "quotes": {
+        "brad": "我們的目標是提供團隊能加速專業能力、幫助他們持續前進的工具。",
+        "john": "每當隊友能在幾分鐘內找到正確答案，技術文件就會變得更有價值。",
+        "mashfir": "把複雜分析轉成可讀文檔，能讓技術洞察觸達更廣大的受眾。"
+      },
+      "media": {
+        "researchProjects": "研究項目",
+        "deployQuestion": "部署一個微調模型需要哪些步驟？"
+      },
+      "aside": {
+        "insights": "訪談對象",
+        "useCases": "使用場景",
+        "useCasesBody": "全公司使用、知識庫、專案管理、AI 輔助工作流程"
+      },
+      "peopleRoles": {
+        "coo": "COO",
+        "research": "研究",
+        "engineering": "工程",
+        "dataScience": "數據科學",
+        "gtm": "GTM"
+      },
+      "cta": {
+        "title": "把 Deckwise 帶給你的團隊，從今天開始！",
+        "body": "在任何裝置上試用 Deckwise，看看共享工作區如何加速團隊工作流程。",
+        "button": "開始使用 Deckwise"
+      },
+      "related": {
+        "title": "其他團隊如何使用 Deckwise",
+        "brainlabs": "Brainlabs 面向深度工作的營運系統",
+        "ramp": "Ramp 如何運作在共享知識和 AI 工作流程上",
+        "storyLabel": "客戶案例"
+      }
+    }
+  }
+}

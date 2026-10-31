@@ -1,0 +1,67 @@
+# IDE settings
+.idea/
+.vscode/
+
+# Local agent/tooling config
+.claude/
+.codex/
+.cursor/rules/
+
+# dependencies
+/node_modules/
+/desktop/node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Next.js
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Build
+/build
+/dist
+/desktop/dist
+/desktop/out
+/tests/renderer-parity/dist/
+
+# Coverage
+/coverage
+
+# Playwright runtime artifacts
+/.playwright-cli/
+/test-results/
+/playwright-report/
+/artifacts/
+/output/playwright/
+/public/vendor/pdfjs/
+
+# Vercel
+.vercel
+
+# Misc
+*.pem
+
+# Env files (keep secrets/config out of git)
+.env
+.env.*
+!.env.example
+
+PaperPuppy-iOS-onlyforRef/

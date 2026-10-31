@@ -1,0 +1,226 @@
+@media (prefers-reduced-motion: reduce) {
+    .file-chip-enter {
+        animation: none;
+    }
+
+    .deckwise-menu-popover[data-state="open"],
+    .deckwise-menu-popover[data-state="closed"],
+    .deckwise-menu-popover[data-menu-state="open"],
+    .deckwise-menu-popover[data-menu-state="closing"],
+    .deckwise-menu-motion {
+        animation: none;
+        transform: none;
+    }
+}
+
+/* Shared menu animations for Radix popovers and custom Deckwise menus. */
+.deckwise-menu-popover,
+.deckwise-menu-motion {
+    --menu-motion-translate-y: -6px;
+}
+
+.deckwise-menu-popover[data-side="top"],
+.deckwise-menu-popover[data-menu-placement="above"],
+.deckwise-menu-motion[data-side="top"],
+.deckwise-menu-motion[data-menu-placement="above"] {
+    --menu-motion-translate-y: 6px;
+}
+
+.deckwise-menu-popover[data-side="bottom"],
+.deckwise-menu-popover[data-menu-placement="below"],
+.deckwise-menu-motion[data-side="bottom"],
+.deckwise-menu-motion[data-menu-placement="below"] {
+    --menu-motion-translate-y: -6px;
+}
+
+@keyframes menu-motion-enter {
+    from {
+        opacity: 0;
+        transform: translate3d(0, var(--menu-motion-translate-y, -6px), 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes menu-motion-exit {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, var(--menu-motion-translate-y, -6px), 0);
+    }
+}
+
+.deckwise-menu-popover[data-state="open"],
+.deckwise-menu-popover[data-menu-state="open"] {
+    animation: menu-motion-enter var(--menu-motion-enter-duration) var(--menu-motion-enter-easing) both;
+}
+
+.deckwise-menu-popover[data-state="closed"],
+.deckwise-menu-popover[data-menu-state="closing"] {
+    pointer-events: none;
+    animation: menu-motion-exit var(--menu-motion-exit-duration) var(--menu-motion-exit-easing) both;
+}
+
+.deckwise-menu-popover:focus,
+.deckwise-menu-popover:focus-visible {
+    outline: none;
+}
+
+/*
+ * Keep one visual "active" item in Deckwise menus even when Radix clears its
+ * highlighted state while the pointer is between rows.
+ *
+ * Single source of truth for menu item active surfaces:
+ * hover / keyboard highlight / open submenu / persisted hover should all read
+ * the same background token instead of drifting across component-local classes.
+ */
+.deckwise-menu-item {
+    --deckwise-menu-item-font-size: 14px;
+    --deckwise-menu-item-font-weight: 500;
+    --deckwise-menu-item-line-height: 20px;
+    font-family: var(--font-body-stack) !important;
+    font-size: var(--deckwise-menu-item-font-size) !important;
+    font-weight: var(--deckwise-menu-item-font-weight) !important;
+    line-height: var(--deckwise-menu-item-line-height) !important;
+}
+
+.deckwise-menu-item > .deckwise-menu-label,
+.deckwise-menu-item .deckwise-menu-label {
+    display: block;
+    font-family: var(--font-body-stack) !important;
+    font-size: var(--deckwise-menu-item-font-size) !important;
+    font-weight: var(--deckwise-menu-item-font-weight) !important;
+    line-height: var(--deckwise-menu-item-line-height) !important;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.deckwise-menu-item:focus,
+.deckwise-menu-item:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+.deckwise-menu-item:hover,
+.deckwise-menu-item:focus-visible,
+.deckwise-menu-item[data-highlighted],
+.deckwise-menu-item[data-state="open"],
+.deckwise-menu-item[data-menu-persisted="true"] {
+    background-color: var(--menu-item-active-bg) !important;
+}
+
+/*
+ * Disabled menu rows should mute only their actionable label/icon. Shortcut
+ * hints are an always-gray affordance, so avoid parent opacity that would make
+ * them drift when the action is disabled.
+ */
+.deckwise-menu-item-disabled,
+.deckwise-menu-item-disabled .deckwise-menu-label,
+.deckwise-menu-item-disabled .deckwise-menu-icon {
+    color: rgb(var(--muted-foreground)) !important;
+}
+
+.deckwise-menu-item-disabled [data-menu-shortcut] {
+    color: rgba(var(--muted-foreground), 0.72) !important;
+}
+
+.deckwise-menu-item-destructive[data-menu-persisted="true"] {
+    color: rgb(var(--destructive));
+}
+
+.deckwise-menu-item-destructive[data-menu-persisted="true"] .deckwise-menu-icon {
+    color: rgb(var(--destructive));
+}
+
+/*
+ * Pitfall:
+ * destructive dropdown items do not always render their label as the root text node.
+ * Some menus wrap the label in `.deckwise-menu-label`, while the shared Radix item shell
+ * can also re-apply highlighted foreground colors at the item root. If we only recolor
+ * the icon or rely on the root text color, we get the "icon turns red but label stays
+ * neutral" regression. Keep the destructive color contract centralized here and drive
+ * both the root item and the nested `.deckwise-menu-label` / `.deckwise-menu-icon` nodes.
+ */
+.deckwise-menu-item-destructive,
+.deckwise-menu-item-destructive .deckwise-menu-label,
+.deckwise-menu-item-destructive .deckwise-menu-icon {
+    transition:
+        color 150ms ease-out,
+        background-color 150ms ease-out;
+}
+
+.deckwise-menu-item-destructive:hover,
+.deckwise-menu-item-destructive:focus-visible,
+.deckwise-menu-item-destructive[data-highlighted],
+.deckwise-menu-item-destructive[data-state="open"] {
+    color: rgb(var(--destructive)) !important;
+}
+
+.deckwise-menu-item-destructive:hover .deckwise-menu-label,
+.deckwise-menu-item-destructive:focus-visible .deckwise-menu-label,
+.deckwise-menu-item-destructive[data-highlighted] .deckwise-menu-label,
+.deckwise-menu-item-destructive[data-state="open"] .deckwise-menu-label,
+.deckwise-menu-item-destructive[data-menu-persisted="true"] .deckwise-menu-label {
+    color: inherit !important;
+}
+
+.deckwise-menu-item-destructive:hover .deckwise-menu-icon,
+.deckwise-menu-item-destructive:focus-visible .deckwise-menu-icon,
+.deckwise-menu-item-destructive[data-highlighted] .deckwise-menu-icon,
+.deckwise-menu-item-destructive[data-state="open"] .deckwise-menu-icon,
+.deckwise-menu-item-destructive[data-menu-persisted="true"] .deckwise-menu-icon {
+    color: inherit !important;
+}
+
+.deckwise-menu-item-disabled.deckwise-menu-item-destructive,
+.deckwise-menu-item-disabled.deckwise-menu-item-destructive .deckwise-menu-label,
+.deckwise-menu-item-disabled.deckwise-menu-item-destructive .deckwise-menu-icon {
+    color: rgb(var(--muted-foreground)) !important;
+}
+/* ==================== Shared menu switch styles ==================== */
+.deckwise-menu-switch {
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.deckwise-menu-switch-track {
+    position: relative;
+    display: inline-flex;
+    height: 1.25rem;
+    width: 2rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-color: rgb(var(--accent));
+    transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out;
+}
+
+.deckwise-menu-switch-track-active {
+    background-color: rgb(59, 130, 246);
+}
+
+.deckwise-menu-switch-thumb {
+    pointer-events: none;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 9999px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 200ms ease-in-out;
+    transform: translateX(0);
+}
+
+.deckwise-menu-switch-thumb-active {
+    transform: translateX(0.75rem);
+}

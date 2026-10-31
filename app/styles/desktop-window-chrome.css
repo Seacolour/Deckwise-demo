@@ -1,0 +1,155 @@
+:root {
+  --desktop-window-titlebar-height: 36px;
+}
+
+/* The wrappers have no layout effect in a browser. Electron's preload marks
+   the root during loading, and the React frame reinforces it after hydration. */
+.desktop-window-frame,
+.desktop-window-content {
+  display: contents;
+}
+
+.desktop-window-chrome {
+  display: none;
+}
+
+html[data-deckwise-desktop="true"] body {
+  overflow: hidden;
+}
+
+html[data-deckwise-desktop="true"] .desktop-window-frame {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-rows: var(--desktop-window-titlebar-height) minmax(0, 1fr);
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background: rgb(var(--workspace-canvas));
+}
+
+html[data-deckwise-desktop="true"] .desktop-window-content {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  transform: translateZ(0);
+}
+
+html[data-deckwise-desktop="true"] .desktop-window-content .h-dvh {
+  height: 100%;
+}
+
+html[data-deckwise-desktop="true"] .desktop-window-content .min-h-dvh,
+html[data-deckwise-desktop="true"] .app-viewport-width-shell {
+  min-height: 100%;
+}
+
+html[data-deckwise-desktop="true"] .desktop-window-chrome {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  min-width: 0;
+  height: var(--desktop-window-titlebar-height);
+  align-items: center;
+  padding: 0 138px 0 8px;
+  border-bottom: 1px solid var(--chrome-line-subtle);
+  background: rgb(var(--workspace-canvas));
+  color: rgb(var(--foreground));
+  font-family: var(--font-ui-stack);
+  user-select: none;
+  -webkit-app-region: drag;
+}
+
+html[data-deckwise-desktop="true"][data-deckwise-platform="darwin"]
+  .desktop-window-chrome {
+  padding-right: 10px;
+  padding-left: 78px;
+}
+
+.desktop-window-controls-cluster,
+.desktop-window-menu-bar {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  align-items: center;
+}
+
+.desktop-window-controls-cluster {
+  flex: none;
+  gap: 2px;
+  -webkit-app-region: no-drag;
+}
+
+.desktop-window-brand {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.desktop-window-icon-button,
+.desktop-window-menu-button {
+  display: inline-flex;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: rgba(var(--foreground), 0.68);
+  letter-spacing: 0;
+  outline: none;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.desktop-window-icon-button:hover,
+.desktop-window-menu-button:hover {
+  background: rgb(var(--accent));
+  color: rgb(var(--foreground));
+}
+
+.desktop-window-icon-button:focus-visible,
+.desktop-window-menu-button:focus-visible {
+  box-shadow: 0 0 0 2px rgba(var(--ring), 0.3);
+  color: rgb(var(--foreground));
+}
+
+.desktop-window-icon-button {
+  width: 28px;
+  flex: none;
+}
+
+.desktop-window-icon-button svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 1.7;
+}
+
+.desktop-window-menu-bar {
+  margin-left: 4px;
+  gap: 1px;
+}
+
+.desktop-window-menu-button {
+  padding: 0 8px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+html[data-deckwise-desktop="true"]:not([data-deckwise-platform="darwin"])
+  .desktop-window-menu-button[data-desktop-menu-id="window"] {
+  display: none;
+}
+
+.desktop-window-drag-region {
+  min-width: 24px;
+  height: 100%;
+  flex: 1;
+}

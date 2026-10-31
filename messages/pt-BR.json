@@ -1,0 +1,3289 @@
+{
+  "app": {
+    "name": "Deckwise Demo",
+    "tagline": "Workspace de apresentações com IA",
+    "logIn": "Entrar",
+    "getStartedForFree": "Comece grátis",
+    "openApp": "Abrir app",
+    "backToWebsite": "Voltar ao site",
+    "backToHome": "Voltar ao início",
+    "homeAria": "Página inicial do {appName}"
+  },
+  "metadata": {
+    "siteTitle": "Deckwise Demo | Espaço de documentos com IA",
+    "siteDescription": "Um espaço para colaborar com um agente de IA em documentos, ideias e pesquisas."
+  },
+  "locale": {
+    "language": "Idioma",
+    "english": "Inglês",
+    "chinese": "简体中文",
+    "traditionalChinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "spanish": "Espanhol",
+    "vietnamese": "Tiếng Việt"
+  },
+  "toast": {
+    "messages": {
+      "copiedDescription": "Copiado para a área de transferência",
+      "documentNoLongerExists": "O documento não existe mais.",
+      "fileUrlMissing": "A URL do arquivo está ausente.",
+      "failedToLoadFiles": "Falha ao carregar arquivos, tente novamente mais tarde",
+      "exportStarted": "A exportação começou."
+    }
+  },
+  "nav": {
+    "backToProjects": "Voltar aos projetos",
+    "newChat": "Novo bate-papo",
+    "projects": "Projetos"
+  },
+  "home": {
+    "ariaHome": "Início",
+    "ariaNewProject": "Novo projeto",
+    "ariaProjects": "Projetos",
+    "presentationStartTitle": "Sua próxima apresentação começa aqui",
+    "marketingTaskReviewerHandoff": "Envie um PowerPoint ou abra um deck recente e selecione Revisão do público no editor.",
+    "recentProjects": "Rascunhos",
+    "newProject": "Novo Projeto",
+    "signIn": "Entrar",
+    "untitledProject": "Sem título",
+    "updatedAt": "{date} atualizado",
+    "projectActionsAria": "Ações do projeto para {title}",
+    "createdByUsers": "Galeria de slides de exemplo",
+    "galleryCategories": "Categorias de exemplo",
+    "galleryMetrics": "Visualizações {views} / Curtidas {likes}",
+    "customizeExample": "Personalizar",
+    "publicDeckLabel": "Publicado",
+    "useExample": "Usar modelo",
+    "usingExample": "Adicionando",
+    "useExampleAria": "Use o exemplo {title}",
+    "previewExampleAria": "Exemplo de visualização {title}",
+    "examplePreviewLoading": "Carregando slides de exemplo",
+    "examplePreviewFailed": "Falha ao carregar a visualização do exemplo",
+    "examplePreviewEmpty": "Este exemplo não possui slides pré-visualizáveis ​​no momento.",
+    "exampleImportSucceeded": "Slides de exemplo adicionados.",
+    "exampleImportFailed": "Falha ao adicionar exemplo",
+    "exampleImportMissingProject": "O resultado da importação está faltando um projeto.",
+    "examplesUnavailable": "Os exemplos não estão disponíveis no momento.",
+    "examplesSignInHint": "Faça login para usar slides de exemplo.",
+    "examplesEmpty": "Nenhum exemplo disponível.",
+    "galleryTabs": {
+      "all": "Todos",
+      "ai": "IA",
+      "product": "Produto",
+      "branding": "Marca",
+      "postersAds": "Cartazes e anúncios",
+      "illustration": "Ilustração",
+      "uiLayout": "Layout da IU",
+      "characterDesign": "Design de personagens",
+      "videosStoryboards": "Vídeos e storyboards",
+      "productDesign": "Design de Produto",
+      "architecturalDesign": "Projeto Arquitetônico"
+    }
+  },
+  "chat": {
+    "delete": "Excluir",
+    "new": "Novo bate-papo",
+    "newChat": "Novo bate-papo",
+    "history": "História",
+    "chats": "Bate-papos",
+    "currentProject": "Projeto atual",
+    "noSessions": "Ainda não há sessões",
+    "untitledSession": "Sessão sem título",
+    "welcome": "Edite notas com Deckwise",
+    "sessionNumber": "Sessão #{id}",
+    "thinking": "Pensamento…",
+    "newSession": "Novo bate-papo",
+    "confirmDeleteSession": "Tem certeza de que deseja excluir esta sessão?",
+    "deleteFailed": "Falha ao excluir. Por favor, tente novamente.",
+    "sendFailedNeedProject": "Falha no envio: abra/selecione um projeto antes de criar uma sessão.",
+    "createSessionFailed": "Falha ao criar sessão.",
+    "sendFailed": "Falha no envio: {reason}",
+    "planningNextMoves": "Planejando os próximos movimentos…",
+    "dropFilesToAddToChat": "Solte os arquivos aqui para adicionar ao bate-papo",
+    "resizeTray": "Redimensionar bandeja de bate-papo"
+  },
+  "streamError": {
+    "timeout": "A solicitação expirou. Verifique sua rede ou tente novamente mais tarde.",
+    "networkError": "A conexão de rede falhou. Verifique sua conexão e tente novamente.",
+    "serverError": "Erro no servidor. Por favor, tente novamente mais tarde.",
+    "serviceUnavailable": "Serviço temporariamente indisponível. Por favor, tente novamente mais tarde.",
+    "deadlineExceeded": "A solicitação expirou. Verifique sua rede ou tente novamente mais tarde.",
+    "connectionClosed": "Conexão perdida. Por favor, tente novamente.",
+    "otherSessionActive": "Outra sessão está respondendo. Aguarde e tente novamente.",
+    "aiServiceError": "Erro no serviço de IA. Tente novamente mais tarde.",
+    "unknown": "Ocorreu um erro desconhecido."
+  },
+  "tool": {
+    "echo": "Testando conexão…",
+    "fileList": "Buscando arquivos do projeto…",
+    "fileContentRead": "Lendo o conteúdo do arquivo…",
+    "imageRead": "Lendo imagem…",
+    "documentRead": "Lendo documento…",
+    "documentLocate": "Localizando conteúdo…",
+    "documentDiff": "A IA está editando o documento…",
+    "documentSave": "Salvando alterações…",
+    "documentUpdateSummary": "Atualizando resumo…",
+    "documentCreate": "Criando documento…",
+    "scholarSearch": "Procurando trabalhos acadêmicos…",
+    "todoList": "Organizando tarefas…",
+    "unknown": "Trabalhando…"
+  },
+  "chatInput": {
+    "placeholder": "Peça para melhorar este slide",
+    "addAttachment": "Adicionar anexo",
+    "connectApps": "Conectar apps",
+    "appConnectionToggle": "Conexão do {app}",
+    "projectSlashMenuLabel": "Ações do projeto",
+    "projectSlashPolishDeck": "Refinar este deck",
+    "projectSlashMakeVisual": "Deixar mais visual",
+    "projectSlashCheckWeakSlides": "Verificar slides fracos",
+    "addPhotosAndFiles": "Adicione fotos e arquivos",
+    "addFromGoogleDrive": "Adicionar do Google Drive",
+    "addFromNotion": "Adicionar do Notion",
+    "addFromOneDrive": "Adicionar do OneDrive",
+    "addFromDropbox": "Adicionar do Dropbox",
+    "recentFiles": "Arquivos recentes",
+    "noRecentFiles": "Nenhum arquivo recente",
+    "addImage": "Adicionar imagem",
+    "addPdf": "Adicionar PDF",
+    "send": "Enviar",
+    "stop": "Parar",
+    "modeSelectLabel": "Selecione o modo",
+    "modeAskTitle": "Perguntar",
+    "modeAskDesc": "Converse com o assistente",
+    "modeAgentTitle": "Agente",
+    "modeAgentDesc": "Ações e edições em várias etapas",
+    "model": "Modelo",
+    "modelsLoading": "Carregando modelos",
+    "modelsUnavailable": "Modelos indisponíveis",
+    "chatModels": {
+      "fast": {
+        "label": "Rápido",
+        "description": "Respostas rápidas"
+      },
+      "smart": {
+        "label": "Inteligente",
+        "description": "Edição e raciocínio equilibrados"
+      },
+      "expert": {
+        "label": "Especialista",
+        "description": "Para conteúdo complexo"
+      }
+    },
+    "modelCreditCost": "Créditos {cost}",
+    "openFiles": "Abrir arquivos",
+    "selectedFiles": "Arquivos {count} selecionados para recuperação",
+    "attachedFiles": "Arquivos anexados",
+    "clear": "Limpar",
+    "file": "Arquivo",
+    "image": "Imagem",
+    "pdf": "PDF",
+    "removeImage": "Remover imagem",
+    "removePdf": "Remover PDF",
+    "removeQuote": "Remover cotação",
+    "fileFallbackName": "Arquivo {id}",
+    "materials": "Fontes",
+    "outline": "Esboço",
+    "slide": "Slide",
+    "slides": "Slides",
+    "decreaseSlides": "Diminuir slides",
+    "increaseSlides": "Aumentar slides",
+    "slideCount": "Contagem de slides",
+    "outlineWithSlides": "Esboço · {count} slides",
+    "slideCountLabel": "{count} slides",
+    "slideCountMenuLabel": "{count} slides",
+    "outlineSlideLimitExceeded": "Seu plano atual permite até {max} slides. Você selecionou {count} slides.",
+    "outlineSlideLimitPrompt": "Precisa de mais de {max} slides?",
+    "outlineSlideLimitUpgradeAction": "Fazer upgrade",
+    "outlineModels": {
+      "fast": {
+        "label": "Rápido",
+        "description": "Gere uma apresentação completa mais rápido"
+      },
+      "smart": {
+        "label": "Inteligente",
+        "description": "Gere uma apresentação de maior qualidade com raciocínio mais profundo"
+      },
+      "expert": {
+        "label": "Especialista",
+        "description": "Qualidade máxima para apresentações complexas"
+      }
+    }
+  },
+  "user": {
+    "ariaUserInfo": "Informações do usuário",
+    "notSignedIn": "Não conectado",
+    "user": "Usuário",
+    "defaultAccountName": "Sua conta",
+    "upgrade": "Fazer upgrade",
+    "fullName": "Nome completo",
+    "freePlan": "Grátis",
+    "credits": "Créditos",
+    "freeCredits": "Créditos Free",
+    "settingsShortcut": "Configurações",
+    "settings": "Configurações",
+    "manageAccount": "Gerenciar conta",
+    "billing": "Cobrança",
+    "marketingHome": "Página inicial",
+    "userGuide": "Guia do usuário",
+    "contactUs": "Contate-nos",
+    "accountInfo": "Conta",
+    "accountInfoDesc": "Usuário conectado atual",
+    "userId": "ID do usuário",
+    "account": "Conta",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "role": "Papel",
+    "createdAt": "Criado",
+    "updatedAt": "Atualizado",
+    "appearance": "Aparência",
+    "theme": "Tema",
+    "language": "Idioma",
+    "communicationPreferences": "Preferências de comunicação",
+    "browserNotifications": "Notificações do navegador",
+    "browserNotificationsDescription": "Seja notificado em seu navegador quando houver um novo progresso ou uma tarefa for concluída.",
+    "receiveProductUpdates": "Receba atualizações de produtos",
+    "receiveProductUpdatesDescription": "Receba acesso antecipado a lançamentos de recursos e histórias de sucesso para otimizar seu fluxo de trabalho.",
+    "emailQueuedTaskStarts": "Envie-me um e-mail quando minha tarefa na fila começar",
+    "emailQueuedTaskStartsDescription": "Quando ativado, enviaremos um e-mail em tempo hábil assim que sua tarefa terminar na fila e começar a ser processada.",
+    "adsAboutDeckwise": "Anúncios sobre Deckwise",
+    "adsAboutDeckwiseDescription": "Quando ativado, poderemos compartilhar informações pessoais que coletamos sobre você com nossos fornecedores de marketing para exibir anúncios sobre Deckwise em outros aplicativos, sites e plataformas.",
+    "languageEnglish": "Inglês",
+    "languageChinese": "简体中文",
+    "themeLight": "Luz",
+    "themeDark": "Escuro",
+    "themeSystem": "Sistema",
+    "dangerZone": "Zona de perigo",
+    "close": "Fechar",
+    "logout": "sair",
+    "logoutConfirmTitle": "Sair?",
+    "logoutConfirmMessage": "Você precisará fazer login novamente para acessar seu espaço de trabalho.",
+    "logoutConfirmAction": "sair",
+    "accountNameSaveFailed": "Falha ao salvar o nome da conta.",
+    "deleteAccount": "Excluir conta",
+    "deleteAccountConfirmTitle": "Excluir conta?",
+    "deleteAccountConfirmMessage": "Isso excluirá permanentemente sua conta e desconectará você. Esta ação não pode ser desfeita.",
+    "deleteAccountConfirmAction": "Excluir conta",
+    "deleteAccountFailed": "Falha ao excluir conta. Por favor, tente novamente.",
+    "languageTraditionalChinese": "繁體中文",
+    "languageJapanese": "日本語",
+    "languageKorean": "한국어",
+    "languageSpanish": "Espanhol",
+    "personalization": "Personalização",
+    "inviteFriends": "Convidar amigos",
+    "inviteFriendsSubtitle": "Ganhem {credits} credits cada",
+    "inviteDialogTitle": "Convide e ganhe créditos",
+    "inviteDialogDescription": "Compartilhe seu link de convite e ganhem {credits} credits cada.",
+    "copyInvitationLink": "Copiar texto do convite",
+    "shareInviteOn": "Compartilhar convite no {platform}",
+    "resetInvitationLink": "Redefinir link de convite",
+    "invitationLinkCopied": "Texto do convite copiado.",
+    "invitationLinkCopyFailed": "Não foi possível copiar o texto do convite.",
+    "invitationLinkLoadFailed": "Não foi possível carregar o link de convite.",
+    "invitationLinkReset": "Link de convite redefinido.",
+    "invitationLinkResetFailed": "Não foi possível redefinir o link de convite.",
+    "invitationLinkUnavailable": "Link de convite indisponível.",
+    "languageVietnamese": "Tiếng Việt"
+  },
+  "billing": {
+    "title": "Faturamento e faturas",
+    "subtitle": "Revise sua assinatura atual, uso, atalhos de fatura e ações de cobrança hospedadas pela Stripe.",
+    "settingsTitle": "Configurações",
+    "settingsNavBilling": "Cobrança",
+    "workspaceNavTitle": "Conta",
+    "workspaceNavAccount": "Conta",
+    "workspaceNavSubscription": "Subscrição",
+    "workspaceNavOverview": "Visão geral",
+    "workspaceNavUsage": "Uso",
+    "workspaceNavManagePlan": "Ajustar plano",
+    "workspaceNavPayment": "Pagamento",
+    "workspaceNavInvoices": "Faturas",
+    "workspaceNavPortal": "Portal da Stripe",
+    "backToWorkspace": "Voltar ao aplicativo",
+    "refresh": "Atualizar",
+    "summaryTitle": "Instantâneo de cobrança",
+    "summarySubtitle": "Status mais recente da assinatura e da cobrança.",
+    "statusLabel": "Status",
+    "planLabel": "Plano",
+    "renewalLabel": "O período atual termina",
+    "paymentMethodLabel": "Método de pagamento",
+    "creditsLabel": "Créditos disponíveis",
+    "reservedLabel": "Créditos reservados",
+    "summaryNoPlan": "Grátis",
+    "plansTitle": "Planos",
+    "plansSubtitle": "Escolha entre os planos da Stripe atualmente publicados pelo backend.",
+    "currentPlan": "Plano atual",
+    "planRecommended": "Recomendado",
+    "planCreditsPerCycle": "Créditos {credits} incluídos",
+    "planCreditsMonthly": "Créditos {credits} por mês",
+    "planCreditsAnnual": "Créditos {credits} esperados anualmente",
+    "planCreditsIncluded": "Créditos {credits} incluídos",
+    "planIntervalUnknown": "Flexível",
+    "pricingCallout": "A comparação completa do plano ainda está disponível na página de preços.",
+    "viewPricing": "Ver preços",
+    "freePlanDescription": "Nenhuma assinatura paga está ativa. Você pode continuar com o plano gratuito ou escolher um plano em Preços.",
+    "renewalDescription": "Sua assinatura é renovada em {date}.",
+    "billingPeriodOutcomeLabel": "Resultado do período atual",
+    "billingPeriodAutoRenewLabel": "Renovação automática",
+    "billingPeriodAutoRenewDescription": "O próximo ciclo de assinatura começa em {date}.",
+    "billingPeriodExpiresLabel": "Expira",
+    "billingPeriodExpiresDescription": "Os benefícios da assinatura terminam em {date}.",
+    "billingPeriodSwitchLabel": "Mudar para {plan}",
+    "billingPeriodSwitchDescription": "O plano agendado entra em vigor em {date}.",
+    "billingPeriodSwitchUnknownPlan": "um novo plano",
+    "selectedPlanDescription": "{plan} foi selecionado em Preços. Continue para o Stripe Checkout para assinar.",
+    "noActivePlanDescription": "Nenhum plano pago foi selecionado ainda. Escolha um plano em Preços para continuar.",
+    "adjustPlan": "Ajustar plano",
+    "adjustPlanCheckoutDescription": "Escolha um plano para abrir o Stripe Checkout e assinar.",
+    "adjustPlanPortalDescription": "Você já tem uma assinatura ativa, então alterações e gerenciamento do plano acontecem no portal da Stripe.",
+    "planDialogTitle": "Escolha o plano certo para você",
+    "planDialogDescription": "Escolha um plano Deckwise e um ciclo de faturamento.",
+    "planDialogCycleMonthly": "Mensal",
+    "planDialogCycleAnnual": "Anualmente · Economize 20%",
+    "planDialogCycleAnnualShort": "Anualmente",
+    "planDialogBillingUnitMonthly": "/ mês",
+    "planDialogBillingUnitAnnual": "/ mês",
+    "planDialogUpgrade": "Atualizar",
+    "planDialogCurrentPlan": "Seu plano atual",
+    "planDialogFeatureCardsPerPrompt": "Crie até cartões {count} por prompt",
+    "planDialogFeatureMonthlyCredits": "Créditos mensais {credits}",
+    "planDialogPlusDescription": "Para criar mais apresentações e refiná-las com IA",
+    "planDialogPlusIncludes": "Tudo no Free",
+    "planDialogPlusFeatureCards": "Crie até 30 cartões por prompt",
+    "planDialogPlusFeatureEditablePowerPoint": "Exportação editável para PowerPoint",
+    "planDialogPlusFeatureEditableGoogleSlides": "Exportação editável para Google Slides",
+    "planDialogPlusFeatureImageModels": "Modelos de IA avançados",
+    "planDialogProDescription": "Para modelos de IA avançados, projetos mais longos e apresentações mais refinadas",
+    "planDialogProIncludes": "Tudo em Plus e:",
+    "planDialogProFeatureCards": "Crie até 60 cartões por prompt",
+    "planDialogProFeatureCredits": "2.000 créditos mensais",
+    "planDialogProFeatureImageModels": "Modelos premium de imagem de IA",
+    "planDialogProFeatureBranding": "Marca e fontes personalizadas",
+    "planDialogProFeatureAnalytics": "Análise detalhada e compartilhamento avançado",
+    "planDialogProFeatureDomains": "Publique até 10 domínios personalizados",
+    "planDialogUltraDescription": "Para uso intenso de IA, modelos avançados e criação de apresentações em alto volume",
+    "planDialogUltraIncludes": "Tudo em Pro e:",
+    "planDialogUltraFeatureCards": "Crie até 75 cartões por prompt",
+    "planDialogUltraFeatureCredits": "20.000 créditos mensais",
+    "planDialogUltraFeatureModels": "Acesso aos modelos de IA mais avançados (texto, imagem, vídeo)",
+    "planDialogUltraFeatureDomains": "Publique até 100 domínios personalizados",
+    "planDialogUltraFeatureEarlyAccess": "Acesso antecipado a novos recursos",
+    "planDialogSecurityTitle": "Segurança e Conformidade",
+    "planDialogSecurityDescription": "Segurança de nível empresarial e certificações padrão do setor.",
+    "planDialogSecurityLearnMore": "Saber mais",
+    "planDialogHelpPrefix": "Está com algum problema?",
+    "planDialogHelpLink": "Contate-nos",
+    "planDialogEditBilling": "Editar faturamento",
+    "activePlanHint": "Plano atual: {plan}",
+    "noPlansTitle": "Nenhum plano disponível",
+    "noPlansDescription": "O backend ainda não publicou nenhum plano Stripe ativo.",
+    "paymentTitle": "Gerenciamento de pagamentos Stripe",
+    "paymentSubtitle": "O Checkout coleta cartões, Link e outros métodos de pagamento elegíveis; o portal de cobrança gerencia métodos e faturas salvas.",
+    "paymentReady": "Um método de pagamento padrão está pronto na Stripe.",
+    "paymentMissing": "O Checkout coletará uma forma de pagamento quando você se inscrever.",
+    "paymentReadyShort": "Salvo",
+    "paymentMissingShort": "Ausente",
+    "paymentManage": "Abra o portal de cobrança",
+    "manageInStripe": "Gerenciar na Stripe",
+    "paymentManagedByStripe": "Gerenciado pelo Stripe Checkout e pelo Customer Portal",
+    "subscriptionTitle": "Ações de assinatura",
+    "subscriptionSubtitle": "Inicie ou altere um plano pelo Stripe Checkout e volte aqui para ver status e uso.",
+    "subscribe": "Continuar para finalizar a compra",
+    "managePortal": "Abrir portal da Stripe",
+    "cancelSubscription": "Cancelar no final do período",
+    "resumeSubscription": "Retomar renovação",
+    "resourceBreakdownTitle": "Créditos",
+    "resourceBreakdownSubtitle": "Buckets de crédito ativos sincronizados do back-end.",
+    "creditsPanelBreakdown": "Detalhamento do crédito",
+    "creditsPanelFreeDescription": "Os créditos Free são atualizados na programação configurada.",
+    "creditsPanelViewUsage": "Ver uso",
+    "includedUsageTitle": "Uso incluído",
+    "usageTypeColumn": "Tipo",
+    "usageAvailableColumn": "Disponível",
+    "usageExpiresColumn": "Expira",
+    "creditBucketFreeMonthly": "Grátis",
+    "creditBucketSubscriptionCycle": "Subscrição",
+    "creditBucketCampaignBonus": "Bônus de assinante",
+    "creditBucketPersistent": "Créditos persistentes",
+    "creditBucketGeneric": "Balde de créditos",
+    "usageRefreshTooltip": "Atualizações em {date}",
+    "usageRefreshTooltipUnknown": "Esse subsídio é atualizado no próximo ciclo de faturamento de back-end.",
+    "onDemandUsageTitle": "Uso sob demanda",
+    "onDemandUsageSubtitle": "O faturamento medido ainda não está ativado. Os detalhes dos custos aparecerão aqui mais tarde.",
+    "onDemandUsageTotal": "Ciclo atual",
+    "onDemandUsageEmpty": "Nenhum dado de uso sob demanda encontrado para o ciclo atual.",
+    "invoicesTitle": "Faturas",
+    "invoicesDescription": "As faturas e recibos são gerenciados pelo Portal do Cliente Stripe.",
+    "cancelTitle": "Cancelar",
+    "cancelDescription": "O cancelamento interrompe a renovação no final do ciclo de faturamento atual.",
+    "resumeTitle": "Retomar renovação",
+    "resumeDescription": "Esta assinatura está definida para ser cancelada no final do período. Você pode retomar a renovação antes disso.",
+    "resourceBreakdownEmpty": "Ainda não há saldos de crédito ativos.",
+    "bucketExpires": "Expira {date}",
+    "subscribeSuccess": "Abrindo o Stripe Checkout.",
+    "subscribeFailed": "Falha ao iniciar o Stripe Checkout.",
+    "alreadyActiveSubscription": "Você já tem uma assinatura ativa.",
+    "checkoutSyncFailed": "Falha ao sincronizar o status da assinatura do Checkout. Atualize em breve.",
+    "cancelSuccess": "A assinatura será cancelada no final do período atual.",
+    "cancelFailed": "Falha ao atualizar o cancelamento.",
+    "resumeSuccess": "A renovação da assinatura foi retomada.",
+    "resumeFailed": "Falha ao retomar a assinatura.",
+    "portalFailed": "Falha ao abrir o portal da Stripe.",
+    "refreshFailed": "Falha ao carregar dados de faturamento.",
+    "syncing": "Aguardando sincronização do webhook da Stripe…",
+    "webhookSyncTitle": "Estado sincronizado com webhook",
+    "webhookSyncDescription": "O resumo de faturamento é atualizado depois que os webhooks da Stripe chegam, portanto é esperado um breve atraso após assinar ou alterar configurações de renovação.",
+    "testModeTitle": "Fluxo hospedado pela Stripe",
+    "testModeDescription": "O Checkout gerencia a cobrança e o processamento de Link/cartão; esta página se concentra no status da assinatura, no uso e em links seguros de gerenciamento.",
+    "statusActive": "Ativo",
+    "statusTrialing": "Teste",
+    "statusIncomplete": "Incompleto",
+    "statusPastDue": "Vencido",
+    "statusPaused": "Pausado",
+    "statusUnpaid": "Não pago",
+    "statusCanceled": "Cancelado",
+    "statusExpired": "Expirado",
+    "statusNone": "Não inscrito",
+    "planDialogBillingCycleLabel": "Ciclo de faturamento"
+  },
+  "login": {
+    "emailLabel": "Endereço de e-mail",
+    "codeLabel": "Código de verificação",
+    "sendCode": "Enviar código",
+    "sendingCode": "Enviando...",
+    "codeSent": "Código enviado. Confira seu e-mail.",
+    "signInWithEmail": "Entrar com e-mail",
+    "invalidEmail": "Digite um e-mail válido.",
+    "missingCode": "Digite o código enviado por e-mail.",
+    "emailCodeFailed": "Não foi possível enviar o código. Tente novamente.",
+    "emailLoginFailed": "Falha ao entrar. Confira o código e tente novamente.",
+    "headline": "Faremos seu login ou criaremos uma conta, caso ainda não tenha uma.",
+    "title": "Faça login em {appName}",
+    "subtitle": "Continue com sua conta Google",
+    "verifying": "Verificando login…",
+    "signingIn": "Fazendo login...",
+    "desktopBrowserSignIn": "Continuar no navegador",
+    "desktopBrowserOpening": "Abrindo o navegador...",
+    "desktopBrowserWaiting": "Aguardando autorização no navegador...",
+    "desktopBrowserRetry": "Entrar novamente no navegador",
+    "desktopBrowserOpenFailed": "Não foi possível abrir o navegador. Tente novamente.",
+    "desktopBrowserExpired": "Esta solicitação de login expirou. Tente novamente.",
+    "desktopBrowserSignInFailed": "O login no navegador falhou. Tente novamente.",
+    "desktopWelcome": {
+      "title": "Deckwise Desktop",
+      "description": "Transforme ideias e documentos em apresentações refinadas direto do desktop.",
+      "getStarted": "Começar",
+      "checkingSession": "Abrindo o Deckwise..."
+    },
+    "desktopAuthorization": {
+      "title": "Autorizar o Deckwise Desktop",
+      "description": "Confirme que deseja entrar no aplicativo para desktop exibido abaixo.",
+      "loading": "Carregando solicitação de login...",
+      "device": "Dispositivo",
+      "platform": "Plataforma",
+      "version": "Versão do aplicativo",
+      "approve": "Autorizar aplicativo",
+      "approving": "Autorizando...",
+      "approvedTitle": "Aplicativo autorizado",
+      "approvedDescription": "Você pode fechar esta página e voltar ao Deckwise Desktop.",
+      "expiredTitle": "A solicitação de login expirou",
+      "expiredDescription": "Volte ao Deckwise Desktop e inicie o login novamente.",
+      "errorTitle": "Não foi possível autorizar",
+      "loadFailed": "Não foi possível carregar esta solicitação. Tente novamente.",
+      "approveFailed": "Não foi possível autorizar o aplicativo. Tente novamente.",
+      "invalidRequest": "Este link de login é inválido. Volte ao Deckwise Desktop e tente novamente.",
+      "retry": "Tentar novamente",
+      "unknownDevice": "Desconhecido"
+    },
+    "termsAcknowledgement": "Ao clicar em \"Continuar\", você concorda com os <terms>Termos de Serviço</terms> e a <privacy>Política de Privacidade</privacy>.",
+    "brand": "{appName} — Seu assistente de pesquisa",
+    "termsOfService": "Termos de serviço",
+    "privacyPolicy": "política de Privacidade"
+  },
+  "invitation": {
+    "title": "Entre no {appName} agora e resgate créditos grátis!",
+    "description": "Compartilhe seu link de convite com amigos e ganhem créditos juntos.",
+    "imageAlt": "Prévia do convite do {appName}"
+  },
+  "slidesPreview": {
+    "publishedLoadFailed": "Não foi possível carregar os slides publicados",
+    "sharedLoadFailed": "Não foi possível carregar os slides compartilhados",
+    "publishedEmpty": "Este deck publicado não tem slides que possam ser pré-visualizados no momento.",
+    "sharedEmpty": "Este deck compartilhado não tem slides que possam ser pré-visualizados no momento.",
+    "publishedLabel": "Publicado",
+    "sharedLabel": "Compartilhado",
+    "publishedMetaTitle": "Slides publicados do {appName}",
+    "publishedMetaDescription": "Veja slides publicados compartilhados a partir do {appName}.",
+    "sharedMetaTitle": "Slides compartilhados do {appName}",
+    "sharedMetaDescription": "Abra um deck de slides compartilhado com você no {appName}.",
+    "exampleMetaTitle": "Slides de exemplo do {appName}",
+    "exampleMetaDescription": "Pré-visualize slides de exemplo e personalize-os no {appName}."
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "confirmDeletion": "Confirmar exclusão?",
+    "close": "Fechar",
+    "clear": "Claro",
+    "delete": "Excluir",
+    "rename": "Renomear",
+    "copy": "Cópia",
+    "retry": "Tentar novamente",
+    "hello": "Olá,",
+    "back": "Voltar",
+    "refresh": "Atualizar",
+    "loading": "Carregando…",
+    "loadMore": "Carregar mais",
+    "allLoaded": "Todos apanhados",
+    "loadFailed": "Falha ao carregar.",
+    "unknownError": "Erro desconhecido",
+    "remove": "Remover",
+    "saving": "Salvando...",
+    "unsavedChanges": "Alterações não salvas",
+    "saved": "Salvo",
+    "revisionConflict": "Conflito de revisão",
+    "saveFailed": "Falha ao salvar",
+    "ready": "Preparar",
+    "desktopWindow": {
+      "file": "Arquivo",
+      "edit": "Editar",
+      "view": "Exibir",
+      "window": "Janela",
+      "help": "Ajuda",
+      "back": "Voltar",
+      "forward": "Avançar",
+      "menuBar": "Menu do aplicativo"
+    }
+  },
+  "errorBoundary": {
+    "title": "Algo deu errado",
+    "message": "Atualize a página. Se o problema persistir, entre em contato com o suporte.",
+    "refresh": "Atualizar"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "message": "A página que você abriu não existe ou foi movida. Volte à página inicial para continuar com segurança."
+  },
+  "quote": {
+    "expand": "Expandir cotação",
+    "collapse": "Recolher citação"
+  },
+  "editor": {
+    "slashMenu": {
+      "header": "Básico"
+    },
+    "slash": {
+      "ai": "Pergunte à IA",
+      "text": "Texto",
+      "h1": "Título 1",
+      "h2": "Título 2",
+      "h3": "Título 3",
+      "bullet": "Lista com marcadores",
+      "ordered": "Lista numerada",
+      "task": "Lista de tarefas",
+      "callout": "Chamar",
+      "quote": "Citar",
+      "table": "Mesa",
+      "divider": "Divisor",
+      "link": "Link para a página",
+      "code": "Bloco de código",
+      "image": "Imagem da web",
+      "header": {
+        "basic": "Básico"
+      }
+    },
+    "blockHandle": {
+      "addBelow": "Inserir uma nova linha abaixo",
+      "turnInto": "Transforme-se em",
+      "turnIntoHeader": "Transforme-se em",
+      "copy": "Cópia",
+      "delete": "Excluir",
+      "expandHidden": "Expandir bloco oculto",
+      "collapseHidden": "Recolher bloco oculto"
+    },
+    "aiInput": {
+      "placeholder": "Pergunte à IA…",
+      "thinking": "Pensamento…",
+      "ask": "Perguntar"
+    },
+    "tableTooltip": {
+      "duplicateRow": "Linha duplicada",
+      "duplicateCol": "Coluna duplicada",
+      "deleteRow": "Excluir linha",
+      "deleteCol": "Excluir coluna"
+    },
+    "placeholder": {
+      "hint": "Digite algo ou pressione \"/\" para comandos",
+      "toggleSummary": "Alternar"
+    },
+    "codeBlock": {
+      "copy": "Cópia",
+      "copied": "Copiado"
+    },
+    "linkHover": {
+      "copyFailed": "Falha ao copiar o link.",
+      "open": "Abrir link",
+      "edit": "Editar link",
+      "urlLabel": "Página ou URL",
+      "urlPlaceholder": "https://example.com",
+      "titleLabel": "Título do link",
+      "titlePlaceholder": "Título do link",
+      "remove": "Remover link"
+    },
+    "table": {
+      "duplicateRow": "Linha duplicada",
+      "duplicateCol": "Coluna duplicada",
+      "deleteRow": "Excluir linha",
+      "deleteCol": "Excluir coluna"
+    },
+    "callout": {
+      "note": "📝 Nota",
+      "tip": "💡 Dica",
+      "warning": "⚠️ Aviso",
+      "error": "🚫 Erro",
+      "success": "✅ Sucesso",
+      "info": "ℹ️ Informação"
+    }
+  },
+  "deckwise": {
+    "toolbar": {
+      "insertTools": "Inserir ferramentas",
+      "dragToInsert": "Arraste para inserir",
+      "text": "Texto",
+      "basicBlocks": "Blocos básicos",
+      "blocks": "Blocos",
+      "images": "Imagens",
+      "columns": "Colunas",
+      "layouts": "Layouts",
+      "layout": "Disposição",
+      "chartsAndGraphs": "Tabelas e gráficos",
+      "chart": "Gráfico",
+      "video": "Vídeo",
+      "textFormattingToolbar": "Barra de ferramentas de formatação de texto",
+      "textStyle": "Estilo de texto",
+      "textStyles": "Estilos de texto",
+      "textSize": "Tamanho do texto",
+      "useSmallTextSize": "Use tamanho de texto pequeno",
+      "useDefaultTextSize": "Usar tamanho de texto padrão",
+      "useLargeTextSize": "Use tamanho de texto grande",
+      "textColor": "Cor do texto",
+      "backgroundColor": "Cor de fundo",
+      "defaultTextColorOption": "Cor padrão",
+      "defaultTextBackgroundColorOption": "Cor de fundo padrão",
+      "textColorOption": "Texto {color}",
+      "textBackgroundColorOption": "Plano de fundo {color}",
+      "bold": "Audacioso",
+      "italic": "itálico",
+      "underline": "Sublinhado",
+      "strikethrough": "Tachado",
+      "code": "Código",
+      "link": "Link",
+      "editLink": "Editar link",
+      "linkUrl": "URL do link",
+      "linkPlaceholder": "Cole um link e pressione Enter",
+      "removeLink": "Remover link",
+      "horizontalAlignment": "Alinhamento horizontal",
+      "defaultTextColor": "Padrão",
+      "advanced": "Avançado",
+      "apply": "Aplicar",
+      "remove": "Remover",
+      "superscript": "Sobrescrito",
+      "bulletList": "Lista com marcadores",
+      "alignLeft": "Alinhar à esquerda",
+      "alignCenter": "Alinhar centro",
+      "alignRight": "Alinhar à direita",
+      "clearFormatting": "Limpar formatação",
+      "undo": "Desfazer",
+      "redo": "Refazer",
+      "addLabel": "Adicionar rótulo",
+      "addParagraphBelow": "Adicione o parágrafo abaixo",
+      "pageContentFull": "Este slide está ficando cheio. Divida o conteúdo extra em um novo slide para mantê-lo claro.",
+      "moveBlock": "Mover bloco",
+      "cutBlock": "Corte",
+      "copyBlock": "Cópia",
+      "pasteBlockBelow": "Cole abaixo",
+      "pasteBlockUnavailable": "Corte ou copie um bloco primeiro",
+      "duplicateBlock": "Bloco duplicado",
+      "deleteBlock": "Excluir bloco",
+      "duplicateLayout": "Layout duplicado",
+      "deleteLayout": "Excluir layout",
+      "pageActions": "Ações da página",
+      "pageLayout": "Layout da página",
+      "blank": "Em branco",
+      "imageTop": "Topo da imagem",
+      "imageLeft": "Imagem à esquerda",
+      "imageRight": "Imagem à direita",
+      "imageBackground": "Fundo da imagem",
+      "imageActions": "Ações de imagem",
+      "videoActions": "Ações de vídeo",
+      "editImage": "Editar imagem",
+      "editVideo": "Editar vídeo",
+      "imageEdge": "Borda da imagem",
+      "straightImageEdge": "Borda reta",
+      "curveImageEdge": "Borda curva",
+      "slantImageEdge": "Borda inclinada",
+      "waveImageEdge": "Curva contínua",
+      "fitImage": "Ajustar imagem",
+      "expandImage": "Expandir imagem",
+      "resizeLayoutImage": "Redimensionar imagem de layout",
+      "uploadImage": "Carregar imagem",
+      "uploadingImage": "Fazendo upload da imagem",
+      "deleteImage": "Excluir imagem",
+      "deleteVideo": "Excluir vídeo",
+      "imageInfo": "Informações da imagem",
+      "imageMetadata": "Metadados de imagem",
+      "noImageMetadata": "Nenhum metadado disponível.",
+      "metadataTitle": "Título",
+      "metadataDescription": "Descrição",
+      "metadataCredit": "Fotógrafo",
+      "metadataSource": "Fonte",
+      "metadataAttribution": "Atribuição",
+      "metadataImageUrl": "URL da imagem",
+      "metadataThumbnailUrl": "URL da miniatura",
+      "metadataDimensions": "Dimensões",
+      "metadataProviderId": "ID do provedor",
+      "chartActions": "Ações do gráfico",
+      "editChart": "Editar gráfico",
+      "columnLayoutActions": "Ações de layout de coluna",
+      "columnLayout": "Layout da coluna",
+      "columnsCount": "Colunas {count}",
+      "equalizeColumns": "Equalizar colunas",
+      "alignTop": "Alinhar topo",
+      "alignMiddle": "Alinhar meio",
+      "alignBottom": "Alinhar parte inferior",
+      "columnColor": "Cor da coluna",
+      "deleteColumns": "Excluir colunas",
+      "columnLayouts": "Layouts de coluna",
+      "columnColors": "Cores da coluna",
+      "calloutActions": "Ações de frase de destaque",
+      "calloutStyle": "Estilo de frase de destaque",
+      "calloutColor": "Cor da frase de destaque",
+      "deleteCallout": "Excluir frase de destaque",
+      "calloutStyles": "Estilos de frase de destaque",
+      "calloutColors": "Cores da frase de destaque",
+      "hideCalloutIcon": "Ocultar ícone de texto explicativo",
+      "resetToDefault": "Redefinir para o padrão",
+      "labelActions": "Ações de rótulo",
+      "addLabelBefore": "Adicionar rótulo antes",
+      "addLabelAfter": "Adicionar rótulo depois",
+      "deleteLabel": "Excluir rótulo",
+      "smartLayoutActions": "Ações de layout inteligente",
+      "addSmartLayoutItem": "Adicionar item",
+      "smartLayoutType": "Tipo de layout inteligente",
+      "smartLayoutColor": "Cor do layout inteligente",
+      "smartLayoutColors": "Cores de layout inteligente",
+      "smartLayoutCellSize": "Tamanho do layout",
+      "smartLayoutCellSizeOptions": "Opções de tamanho de layout",
+      "smartLayoutCellSizeSmall": "Pequeno",
+      "smartLayoutCellSizeMedium": "Médio",
+      "smartLayoutCellSizeLarge": "Grande",
+      "smartLayoutCellSizeExtraLarge": "Extra grande",
+      "useVerticalLayoutDirection": "Use a direção vertical do layout",
+      "useHorizontalLayoutDirection": "Use a direção horizontal do layout",
+      "useOneSidedLayout": "Use um layout unilateral",
+      "useTwoSidedLayout": "Use um layout de dois lados",
+      "hideLayoutSideLines": "Ocultar linhas laterais do layout",
+      "showLayoutSideLines": "Mostrar linhas laterais do layout",
+      "textAlignment": "Alinhamento de texto",
+      "useVerticalTimelineDirection": "Use a direção vertical da linha do tempo",
+      "useHorizontalTimelineDirection": "Use a direção horizontal da linha do tempo",
+      "useOneSidedTimeline": "Use uma linha do tempo unilateral",
+      "useTwoSidedTimeline": "Use uma linha do tempo frente e verso",
+      "hideTimelineSideLines": "Ocultar linhas laterais da linha do tempo",
+      "showTimelineSideLines": "Mostrar linhas laterais da linha do tempo",
+      "timelineDirection": "Direção",
+      "timelineSides": "Dois lados",
+      "timelineSideLines": "Mostrar linha?",
+      "changeLayout": "Alterar layout",
+      "deleteSmartLayout": "Excluir layout inteligente",
+      "smartLayoutBlockActions": "Ações de bloqueio de layout inteligente",
+      "moveBlockToStart": "Mova o bloco para começar",
+      "addItemBefore": "Adicionar item antes",
+      "addItemAfter": "Adicionar item depois",
+      "duplicate": "Duplicar",
+      "smartLayoutBlockColor": "Cor do bloco de layout inteligente",
+      "deEmphasize": "Desenfatizar",
+      "emphasize": "Enfatizar",
+      "deleteSmartLayoutBlock": "Excluir bloco de layout inteligente",
+      "smartLayoutBlockColors": "Cores de bloco de layout inteligente",
+      "chooseSmartLayoutIcon": "Escolha o ícone de layout inteligente",
+      "smartLayoutHeroIconPanelTitle": "Heroicons",
+      "smartLayoutHeroIconSearchPlaceholder": "Pesquisar ícones {count}",
+      "smartLayoutHeroIconCategory": "Categoria heróico",
+      "smartLayoutHeroIconNoResults": "Nenhum ícone encontrado",
+      "smartLayoutHeroIconCategoryAll": "Todos",
+      "smartLayoutHeroIconCategoryArrows": "Setas",
+      "smartLayoutHeroIconCategoryCommunication": "Comunicação",
+      "smartLayoutHeroIconCategoryCommerce": "Comércio",
+      "smartLayoutHeroIconCategoryDocuments": "Documentos",
+      "smartLayoutHeroIconCategoryInterface": "Interface",
+      "smartLayoutHeroIconCategoryMedia": "Mídia",
+      "smartLayoutHeroIconCategoryPeople": "Pessoas",
+      "smartLayoutHeroIconCategorySecurity": "Segurança",
+      "smartLayoutHeroIconCategoryTechnology": "Tecnologia",
+      "smartLayoutHeroIconCategoryGeneral": "Em geral",
+      "smartLayouts": "Layouts inteligentes",
+      "layoutGroups": "Grupos de layouts",
+      "layoutsForGroup": "Layouts {group}",
+      "debugLayout": "Layout de depuração",
+      "layoutSubtitle": "Escolha um layout inteligente.",
+      "layoutPreviewMutualismHeading": "Mutualismo",
+      "layoutPreviewMutualismBody": "Há cerca de 10.000 a 12.000 anos, humanos se estabeleceram no Crescente Fértil e começaram a cultivar grãos.",
+      "layoutPreviewSelfDomesticationHeading": "Autodomesticação",
+      "layoutPreviewSelfDomesticationBody": "Os gatos provavelmente se autodomesticaram ao se adaptar aos assentamentos humanos.",
+      "layoutPreviewBehaviorHeading": "Comportamento",
+      "layoutPreviewBehaviorBody": "Estudos genômicos mostram mudanças ligadas à memória, ao aprendizado por recompensa e ao controle do medo.",
+      "layoutsUnavailable": "Nenhum layout disponível",
+      "style": "Estilo",
+      "styleSubtitle": "Ajuste fontes e cores para sua apresentação.",
+      "theme": "Tema",
+      "themeAndLayout": "Fontes e cores",
+      "close": "Fechar",
+      "share": "Compartilhar",
+      "shareComingSoon": "Compartilhe em breve",
+      "present": "Presente",
+      "export": "Exportar",
+      "exportDeck": "Plataforma de exportação",
+      "exportPowerPoint": "PowerPoint",
+      "exportGoogleSlides": "Apresentações Google",
+      "exportImages": "Imagens",
+      "publishSlides": "Publicar slides",
+      "updatePreviews": "Atualizar visualizações",
+      "preparingPreviewImages": "Preparando imagens de prévia...",
+      "publishingSlides": "Publicando slides...",
+      "uploadingPreviewImages": "Enviando imagens de prévia...",
+      "exportingImages": "Exportando imagens",
+      "exportingPdf": "Exportando PDF",
+      "exportingPptx": "Exportando PPTX",
+      "exportingGoogleSlides": "Exportando para Apresentações Google",
+      "imageExportIdle": "Exportar imagens",
+      "nothingToExport": "Nada para exportar",
+      "imageExportFailed": "Falha ao exportar imagens",
+      "imagesExported": "Imagens exportadas",
+      "localAutosaveReady": "Salvamento automático pronto",
+      "localAutosaveOff": "Salvamento automático desativado",
+      "localAutosaveSaving": "Salvando...",
+      "localAutosaved": "Salvo automaticamente",
+      "promoteExample": "Promova exemplo",
+      "documentSettings": "Configurações do documento",
+      "themeSource": "Fonte do tema",
+      "themeSourceCatalog": "Temas",
+      "themeSourceLocal": "Local do documento",
+      "themeCatalogUnavailable": "Catálogo de temas indisponível",
+      "themesLoading": "Carregando temas...",
+      "themesUnavailable": "Nenhum tema disponível",
+      "moreActionsComingSoon": "Mais ações em breve",
+      "cardView": "Visualização de slides",
+      "outlineViewComingSoon": "Visualização de esboço em breve",
+      "viewMode": "Modo de visualização",
+      "newSlide": "Novo slide",
+      "addSlide": "Adicionar slide",
+      "cardsPanelControls": "Controles do painel Slides",
+      "searchCards": "Pesquisar slides",
+      "clearSearch": "Limpar pesquisa",
+      "resizeCardsPanel": "Painel de redimensionamento de slides",
+      "showCardsPanel": "Mostrar painel de slides",
+      "pinnedCardsPanel": "Painel de slides fixados",
+      "cardsPanel": "Painel de slides",
+      "noSlides": "Sem slides",
+      "slideCount": "Slide {current} de {total}",
+      "scrollToSlide": "Role até o slide {slide}",
+      "chartType": "Tipo de gráfico",
+      "chartSettings": "Configurações do gráfico",
+      "chartEditorTabs": "Guias do editor de gráfico",
+      "chartPreview": "Visualização do gráfico",
+      "data": "Dados",
+      "yAxis": "Eixo Y",
+      "solidColor": "Cor Sólida",
+      "solidColorDescription": "Aplique uma cor a todos os itens",
+      "colorPresets": "Predefinições de cores",
+      "source": "Fonte",
+      "callOut": "Chamar",
+      "arrow": "Seta",
+      "box": "Caixa",
+      "differenceArrows": "Setas de diferença",
+      "highlight": "Destaque",
+      "goal": "Meta",
+      "trend": "Tendência",
+      "graphOptions": "Opções de gráfico",
+      "leaveGapInChart": "Deixe lacuna no gráfico",
+      "legend": "Lenda",
+      "headlineNumber": "Número do título",
+      "chartDataActions": "Ações de dados do gráfico",
+      "row": "Linha",
+      "chartsAndGraphsMenu": "Menu de tabelas e gráficos",
+      "charts": "Gráficos",
+      "comingSoon": "Em breve",
+      "debug": "Depurar",
+      "titlePreview": "Título",
+      "bodyPreview": "Corpo",
+      "closeMediaMenu": "Fechar menu de mídia",
+      "mediaMode": "Modo de mídia",
+      "go": "Ir",
+      "upload": "Carregar",
+      "dragFileOr": "Arraste um arquivo ou",
+      "clickToUpload": "clique para carregar",
+      "imageUploadTip": "Dica: você também pode arrastar ou colar imagens em qualquer lugar de um slide",
+      "uploadImageFile": "Carregar arquivo de imagem",
+      "webImageSearch": "Pesquisa de imagens na web",
+      "searchWebImages": "Pesquisar imagens da web",
+      "imageLicense": "Licença de imagem",
+      "allImages": "Todas as imagens",
+      "commercialUse": "Uso comercial",
+      "creativeCommons": "Creative Commons",
+      "unableToLoadImages": "Não foi possível carregar imagens",
+      "imageSearchResults": "Resultados da pesquisa de imagens",
+      "imagesMenu": "Menu de imagens",
+      "imagesDescription": "Adicione fotos, ilustrações, ícones e galerias.",
+      "mediaDescription": "Adicione uploads de imagens ou URLs e incorporações de vídeos.",
+      "videosAndMediaMenu": "Menu de vídeos e mídia",
+      "platforms": "Plataformas",
+      "presentationPreview": "Visualização da apresentação",
+      "addBlockMenu": "Adicionar menu de bloqueio",
+      "typeSlashPrompt": "Digite / para adicionar blocos ou...",
+      "typeSlashShortPrompt": "Digite / ou...",
+      "imageLink": "Link da imagem",
+      "videoLink": "Link do vídeo",
+      "projectJson": "Projeto JSON",
+      "save": "Salvar",
+      "addCardFromTemplate": "Adicionar cartão do modelo",
+      "searchSlideLayouts": "Pesquisar layouts de slides",
+      "templateCategories": "Categorias de modelo",
+      "noTemplatesFound": "Nenhum modelo encontrado",
+      "themeColors": "Cores do tema",
+      "edit": "Editar",
+      "systemColors": "Cores do sistema",
+      "insertParagraph": "Inserir parágrafo",
+      "contributors": "Colaboradores",
+      "updatedNow": "Atualizado agora",
+      "smartLayoutNumber": "Número de layout inteligente",
+      "insertColumnLeft": "Inserir coluna à esquerda",
+      "insertColumnRight": "Inserir coluna à direita",
+      "deleteColumn": "Excluir coluna",
+      "search": "Procurar",
+      "slideActions": "Ações do slide",
+      "generate": "Gerar",
+      "libraries": "Bibliotecas",
+      "media": "Mídia",
+      "videoUrl": "URL do vídeo",
+      "imageUrl": "URL da imagem",
+      "pasteVideoUrl": "Cole uma URL do YouTube, Vimeo, TikTok ou Loom",
+      "pasteImageUrl": "Cole ou insira a URL da imagem",
+      "url": "URL",
+      "webImage": "Imagem da web",
+      "useImage": "Usar imagem: {title}",
+      "imageUploadOrUrl": "Upload de imagem ou URL",
+      "tableColumnActions": "Coluna da tabela Ações {column}",
+      "addImageBlock": "Adicionar imagem",
+      "addTableBlock": "Adicionar tabela",
+      "updateChartDescription": "Atualizar tipo, estilo, eixos e dados do gráfico",
+      "closeChartEditor": "Fechar editor de gráfico",
+      "graphTab": "Gráfico",
+      "axesTab": "Eixos",
+      "visualsTab": "Visuais",
+      "annotateTab": "Anotar",
+      "visible": "Visível",
+      "labels": "Etiquetas",
+      "auto": "Automático",
+      "edges": "Bordas",
+      "left": "Esquerda",
+      "right": "Certo",
+      "position": "Posição",
+      "scale": "Escala",
+      "log": "Registro",
+      "zero": "Zero",
+      "custom": "Personalizado",
+      "startFrom": "Começar de",
+      "endAt": "Terminar em",
+      "sortHighLow": "Classifique de cima para baixo",
+      "showPoints": "Mostrar pontos",
+      "smoothLines": "Linhas suaves",
+      "dataLabels": "Rótulos de dados",
+      "gridLines": "Linhas de grade",
+      "lineThickness": "Espessura da linha",
+      "missingValues": "Valores ausentes",
+      "top": "Principal",
+      "none": "Nenhum",
+      "categoryLabels": "Rótulos de categoria",
+      "basicBlocksDescription": "Adicione listas, tabelas, textos explicativos e outros blocos principais.",
+      "textBlocksDescription": "Adicione títulos, cabeçalhos, citações e rótulos.",
+      "titleBlock": "Título",
+      "heading1": "Título 1",
+      "heading2": "Título 2",
+      "heading3": "Título 3",
+      "heading4": "Título 4",
+      "paragraph": "Parágrafo",
+      "smartLayoutItemPlaceholder": "Elemento",
+      "smartLayoutDescriptionPlaceholder": "Descrição",
+      "blockQuote": "Citação em bloco",
+      "labelBlock": "Rótulo",
+      "tables": "Tabelas",
+      "table2x2": "mesa 2x2",
+      "table3x3": "mesa 3x3",
+      "table4x4": "mesa 4x4",
+      "lists": "Listas",
+      "numberedList": "Lista numerada",
+      "todoList": "Lista de tarefas",
+      "calloutBoxes": "Caixas de texto explicativo",
+      "noteBox": "Caixa de notas",
+      "infoBox": "Caixa de informações",
+      "warningBox": "Caixa de aviso",
+      "cautionBox": "Caixa de cuidado",
+      "successBox": "Caixa de sucesso",
+      "questionBox": "Caixa de perguntas",
+      "codeBlock": "Bloco de código",
+      "mathBlock": "Bloco matemático",
+      "footnote": "Nota de rodapé",
+      "tableOfContents": "Índice",
+      "divider": "Divisor",
+      "other": "Outro",
+      "templateSectionBasic": "Básico",
+      "templateSectionImageSlides": "Slides de imagem",
+      "templateSectionSlideLayouts": "Layouts de slides",
+      "templateSectionImages": "Imagens",
+      "templateSectionSequences": "Sequências",
+      "templateSectionChartsData": "Gráficos e dados",
+      "templateSectionEmbeds": "Incorporações",
+      "templateBlankCard": "Cartão em branco",
+      "templateImageAndText": "Imagem e texto",
+      "templateTextAndImage": "Texto e imagem",
+      "templateTwoColumns": "Duas colunas",
+      "templateTwoColumnWithHeadings": "Duas colunas com títulos",
+      "templateThreeColumns": "Três colunas",
+      "templateThreeColumnWithHeadings": "Três colunas com títulos",
+      "templateFourColumns": "Quatro colunas",
+      "templateTitleWithBullets": "Título com marcadores",
+      "templateTitleWithBulletsAndImage": "Título com marcadores e imagem",
+      "templateBlankImageSlide": "Slide de imagem em branco",
+      "templateAccentLeft": "Acento à esquerda",
+      "templateAccentRight": "Acento à direita",
+      "templateAccentTop": "Topo de destaque",
+      "templateAccentRightFit": "Acento à direita (ajuste)",
+      "templateAccentLeftFit": "Acento à esquerda (ajuste)",
+      "templateTwoImageColumns": "2 colunas de imagem",
+      "templateThreeImageColumns": "3 colunas de imagem",
+      "templateFourImageColumns": "4 colunas de imagem",
+      "templateImagesWithText": "Imagens com texto",
+      "templateImageGallery": "Galeria de imagens",
+      "templateTeamPhotos": "Fotos da equipe",
+      "templateTimeline": "Linha do tempo",
+      "templateIconsWithText": "Ícones com texto",
+      "templateArrows": "Setas",
+      "templateFunnelWithText": "Funil com texto",
+      "templateSteppedPyramid": "Pirâmide escalonada",
+      "templatePyramidWithOutline": "Pirâmide com contorno",
+      "templateColumnChart": "Gráfico de colunas",
+      "templateBarChart": "Gráfico de barras",
+      "templateLineChart": "Gráfico de linhas",
+      "templatePieChart": "Gráfico de pizza",
+      "templateDonutChart": "Gráfico de rosca",
+      "templateBigNumbers": "Grandes números",
+      "templateCircleStats": "Estatísticas do círculo",
+      "templateThreeRowTable": "Tabela de 3 linhas",
+      "templateLoomRecording": "Gravação do Loom",
+      "templateYouTubeVideo": "Vídeo do YouTube",
+      "colorBlack": "Preto",
+      "colorDarkGray": "Cinza escuro",
+      "colorGray": "Cinza",
+      "colorLightGray": "Cinza claro",
+      "colorSoftGray": "Cinza suave",
+      "colorWhite": "Branco",
+      "colorPaleYellow": "Amarelo pálido",
+      "colorPeach": "Pêssego",
+      "colorPink": "Rosa",
+      "colorLavender": "Lavanda",
+      "colorBlue": "Azul",
+      "colorMint": "Hortelã",
+      "colorYellow": "Amarelo",
+      "colorOrange": "Laranja",
+      "colorRed": "Vermelho",
+      "colorPurple": "Roxo",
+      "colorRoyalBlue": "Azul real",
+      "colorGreen": "Verde",
+      "colorOlive": "Azeitona",
+      "colorBrown": "Marrom",
+      "colorDarkRed": "Vermelho escuro",
+      "colorDeepPurple": "Roxo profundo",
+      "colorNavy": "Marinha",
+      "colorForestGreen": "Verde floresta",
+      "colorDefaultLavender": "Lavanda padrão",
+      "colorLightBlue": "Azul claro",
+      "colorLightGreen": "Verde claro",
+      "colorLightYellow": "Amarelo claro",
+      "colorLightRed": "Vermelho claro",
+      "colorLightPurple": "Roxo claro",
+      "themeAccentColor": "Sotaque temático",
+      "themeShapeColor": "Formato do tema",
+      "themeSurfaceColor": "Superfície temática",
+      "themeHeadingColor": "Título do tema",
+      "themeBodyColor": "Corpo do tema",
+      "themeBackgroundColor": "Plano de fundo do tema",
+      "chartSchemeDefault": "Padrão",
+      "chartSchemeMonochrome2": "Monocromático 2",
+      "chartSchemeMonochrome3": "Monocromático 3",
+      "chartSchemeMonochrome4": "Monocromático 4",
+      "chartTypeLine": "Linha",
+      "chartTypeArea": "Área",
+      "chartTypeColumn": "Coluna",
+      "chartTypeStackedColumn": "Coluna Empilhada",
+      "chartTypeBar": "Barras",
+      "chartTypeStackedBar": "Barra empilhada",
+      "chartTypePie": "Torta",
+      "chartTypeDonut": "Rosquinha",
+      "chartTypeCombo": "Combinação",
+      "chartTypeScatter": "Dispersão",
+      "chartTypeBubble": "Bolha",
+      "chartTypeHeatmap": "Mapa de calor",
+      "chartTypeFunnel": "Funil",
+      "chartTypeWaterfall": "Cachoeira",
+      "chartTypeStacked": "Empilhado",
+      "chartTypePercentStacked": "100% empilhado",
+      "chartTypeStackedArea": "Área empilhada",
+      "chartTypeMekko": "Mekko",
+      "chartTypeAreaChart": "Gráfico de área",
+      "chartTypeStackedColumnChart": "Gráfico de colunas empilhadas",
+      "chartTypeStackedBarChart": "Gráfico de barras empilhadas",
+      "chartTypeComboChart": "Gráfico combinado",
+      "chartTypeScatterChart": "Gráfico de dispersão",
+      "chartTypeBubbleChart": "Gráfico de bolhas",
+      "chartTypeHeatmapChart": "Gráfico de mapa de calor",
+      "chartTypeFunnelChart": "Gráfico de funil",
+      "chartTypeWaterfallChart": "Gráfico em cascata",
+      "chartTypeBlankDiagram": "Diagrama em branco",
+      "chartTypeWeeklyCalendar": "Calendário semanal",
+      "chartTypeGanttChart": "Gráfico de Gantt",
+      "chartsAndGraphsDescription": "Visualize dados com gráficos, diagramas e programações.",
+      "chartItemPending": "{item} será conectado após a renderização específica do gráfico chegar",
+      "hideXAxis": "Ocultar eixo x",
+      "showXAxis": "Mostrar eixo x",
+      "xAxisLabelMode": "Modo de rótulo do eixo X",
+      "hideYAxis": "Ocultar eixo y",
+      "showYAxis": "Mostrar eixo y",
+      "yAxisLabelMode": "Modo de rótulo do eixo Y",
+      "yAxisPosition": "Posição do eixo Y",
+      "yAxisScale": "Escala do eixo Y",
+      "yAxisStartValue": "Valor inicial do eixo Y",
+      "yAxisEndValue": "Valor final do eixo Y",
+      "useTableOrder": "Usar ordem de mesa",
+      "sortChartHighLow": "Classifique o gráfico de cima para baixo",
+      "hideChartPoints": "Ocultar pontos do gráfico",
+      "showChartPoints": "Mostrar pontos do gráfico",
+      "hideDataLabels": "Ocultar rótulos de dados",
+      "showDataLabels": "Mostrar rótulos de dados",
+      "hideGridLines": "Ocultar linhas de grade",
+      "showGridLines": "Mostrar linhas de grade",
+      "legendPosition": "Posição da legenda",
+      "hideHeadlineNumber": "Ocultar número do título",
+      "showHeadlineNumber": "Mostrar número do título",
+      "useValueDataLabels": "Use rótulos de dados de valor",
+      "usePercentageDataLabels": "Use rótulos de dados percentuais",
+      "calloutNote": "Observação",
+      "calloutInfo": "Informações",
+      "calloutWarning": "Aviso",
+      "calloutCaution": "Cuidado",
+      "calloutSuccess": "Sucesso",
+      "calloutQuestion": "Pergunta",
+      "columnLayout2Equal": "2 colunas - iguais",
+      "columnLayout2Left": "2 colunas - esquerda",
+      "columnLayout2Right": "2 colunas - direita",
+      "columnLayout3": "3 colunas",
+      "columnLayout4": "4 colunas",
+      "videos": "Vídeos",
+      "videosDescription": "Adicione incorporações de vídeo avançadas.",
+      "mediaItemPending": "{item} será conectado após os nós de incorporação de mídia pousarem",
+      "vimeoVideos": "Vídeos do Vimeo",
+      "tiktokVideos": "Vídeos do TikTok",
+      "webpageOrApp": "Página da web ou aplicativo",
+      "displayText": "Mostrar",
+      "monsterText": "Monstro",
+      "smallText": "Texto pequeno",
+      "normalText": "Texto normal",
+      "largeText": "Texto grande",
+      "markTodoIncomplete": "Marcar tarefa como incompleta",
+      "markTodoComplete": "Marcar tarefa como concluída",
+      "aiImages": "Imagens com IA",
+      "aiInfographics": "Infográficos com IA",
+      "stockPhotos": "Banco de fotos",
+      "gifsFromGiphy": "GIFs do GIPHY",
+      "pictographicIllustrations": "Ilustrações pictográficas",
+      "iconsClassic": "Ícones (clássico)",
+      "iconsModern": "Ícones (modernos)",
+      "qrCode": "Código QR",
+      "accentImages": "Imagens de destaque",
+      "gallery": "Galeria",
+      "columnsDescription": "Adicione seções com 2, 3 ou 4 colunas.",
+      "columnsMenu": "Menu de colunas",
+      "smartLayoutsMenu": "Menu de layouts inteligentes",
+      "smartLayoutGroupBoxes": "Caixas",
+      "smartLayoutGroupBullets": "Marcadores",
+      "smartLayoutGroupSequence": "Sequência",
+      "smartLayoutGroupImages": "Imagens",
+      "smartLayoutGroupNumbers": "Números",
+      "smartLayoutGroupCircles": "Círculos",
+      "smartLayoutGroupQuotes": "Citações",
+      "smartLayoutGroupSteps": "Etapas",
+      "smartLayoutGroupColumns": "Colunas",
+      "smartLayoutLabel2Columns": "2 colunas",
+      "smartLayoutLabel3Columns": "3 colunas",
+      "smartLayoutLabel4Columns": "4 colunas",
+      "smartLayoutLabelAlternatingBoxes": "Caixas alternadas",
+      "smartLayoutLabelAlternatingBoxesHorizontal": "Caixas alternadas horizontais",
+      "smartLayoutLabelAlternatingBoxesVertical": "Caixas alternadas verticais",
+      "smartLayoutLabelArrows": "Setas",
+      "smartLayoutLabelArrowsHorizontal": "Setas horizontais",
+      "smartLayoutLabelArrowsVertical": "Setas verticais",
+      "smartLayoutLabelArrowBullets": "Marcadores com seta",
+      "smartLayoutLabelArrowSteps": "Etapas com seta",
+      "smartLayoutLabelArrowStepsHorizontal": "Etapas com seta horizontais",
+      "smartLayoutLabelArrowStepsVertical": "Etapas com seta verticais",
+      "smartLayoutLabelBarStats": "Estatísticas em barras",
+      "smartLayoutLabelBarStatsLeft": "Estatísticas em barras à esquerda",
+      "smartLayoutLabelBarStatsRight": "Estatísticas em barras à direita",
+      "smartLayoutLabelBoxSteps": "Etapas em caixas",
+      "smartLayoutLabelBoxStepsHorizontal": "Etapas em caixas horizontais",
+      "smartLayoutLabelBoxStepsVertical": "Etapas em caixas verticais",
+      "smartLayoutLabelCircle": "Círculo",
+      "smartLayoutLabelCircleStats": "Estatísticas circulares",
+      "smartLayoutLabelCircleStatsExternalLine": "Estatísticas circulares com linha externa",
+      "smartLayoutLabelCircleStatsMiddleLine": "Estatísticas circulares com linha central",
+      "smartLayoutLabelCircleStatsWithExternalBoldLine": "Estatísticas circulares com linha externa grossa",
+      "smartLayoutLabelCircleStatsWithMiddleBoldLine": "Estatísticas circulares com linha central grossa",
+      "smartLayoutLabelCycle": "Ciclo",
+      "smartLayoutLabelDotGridStats": "Estatísticas em grade de pontos",
+      "smartLayoutLabelDotGridStatsLeft": "Grade de pontos à esquerda",
+      "smartLayoutLabelDotGridStatsRight": "Grade de pontos à direita",
+      "smartLayoutLabelDotLineStats": "Estatísticas em linha de pontos",
+      "smartLayoutLabelDotLineStatsLeft": "Linha de pontos à esquerda",
+      "smartLayoutLabelDotLineStatsRight": "Linha de pontos à direita",
+      "smartLayoutLabelFlower": "Flor",
+      "smartLayoutLabelFunnel": "Funil",
+      "smartLayoutLabelFunnelOutsideText": "Funil com texto externo",
+      "smartLayoutLabelIconsWithText": "Ícones com texto",
+      "smartLayoutLabelIconsWithTextLeft": "Ícones com texto à esquerda",
+      "smartLayoutLabelIconsWithTextTop": "Ícones com texto acima",
+      "smartLayoutLabelImagesWithText": "Imagens com texto",
+      "smartLayoutLabelImagesWithTextCircle": "Imagens circulares com texto",
+      "smartLayoutLabelImagesWithTextSquare": "Imagens quadradas com texto",
+      "smartLayoutLabelJoinedBoxes": "Caixas unidas",
+      "smartLayoutLabelJoinedBoxesWithIcons": "Caixas unidas com ícones",
+      "smartLayoutLabelLabeledBoxes": "Caixas com rótulos",
+      "smartLayoutLabelLabeledBoxesHorizontal": "Caixas com rótulos horizontais",
+      "smartLayoutLabelLabeledBoxesVertical": "Caixas com rótulos verticais",
+      "smartLayoutLabelLargeBullets": "Marcadores grandes",
+      "smartLayoutLabelLargeBulletsNumbered": "Marcadores grandes numerados",
+      "smartLayoutLabelLeafBoxes": "Caixas em folha",
+      "smartLayoutLabelMinimalTimeline": "Linha do tempo minimalista",
+      "smartLayoutLabelMinimalTimelineHorizontal": "Linha do tempo minimalista horizontal",
+      "smartLayoutLabelMinimalTimelineTwoSidedHorizontal": "Linha do tempo minimalista horizontal em dois lados",
+      "smartLayoutLabelMinimalTimelineTwoSidedVertical": "Linha do tempo minimalista vertical em dois lados",
+      "smartLayoutLabelMinimalTimelineVertical": "Linha do tempo minimalista vertical",
+      "smartLayoutLabelMinimalTimelineBoxesHorizontal": "Caixas de linha do tempo minimalista horizontais",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedHorizontal": "Caixas de linha do tempo minimalista horizontais em dois lados",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedVertical": "Caixas de linha do tempo minimalista verticais em dois lados",
+      "smartLayoutLabelMinimalTimelineBoxesVertical": "Caixas de linha do tempo minimalista verticais",
+      "smartLayoutLabelMinimalTimelineWithBoxes": "Linha do tempo minimalista com caixas",
+      "smartLayoutLabelOutlineBoxes": "Caixas com contorno",
+      "smartLayoutLabelPills": "Pílulas",
+      "smartLayoutLabelPillsHorizontal": "Pílulas horizontais",
+      "smartLayoutLabelPillsVertical": "Pílulas verticais",
+      "smartLayoutLabelProcessSteps": "Etapas do processo",
+      "smartLayoutLabelProcessStepsNumbered": "Etapas do processo numeradas",
+      "smartLayoutLabelPyramid": "Pirâmide",
+      "smartLayoutLabelPyramidOutsideText": "Pirâmide com texto externo",
+      "smartLayoutLabelQuoteBoxes": "Caixas de citação",
+      "smartLayoutLabelRing": "Anel",
+      "smartLayoutLabelSemiCircle": "Semicírculo",
+      "smartLayoutLabelSideLineBoxes": "Caixas com linha lateral",
+      "smartLayoutLabelSideLineText": "Texto com linha lateral",
+      "smartLayoutLabelSlantedLabels": "Rótulos inclinados",
+      "smartLayoutLabelSlantedLabelsHorizontal": "Rótulos inclinados horizontais",
+      "smartLayoutLabelSlantedLabelsVertical": "Rótulos inclinados verticais",
+      "smartLayoutLabelSmallBullets": "Marcadores pequenos",
+      "smartLayoutLabelSolidBoxSmallBullets": "Marcadores pequenos em caixa sólida",
+      "smartLayoutLabelSolidBoxes": "Caixas sólidas",
+      "smartLayoutLabelSolidBoxesWithIcons": "Caixas sólidas com ícones",
+      "smartLayoutLabelSolidBoxesWithNumbers": "Caixas sólidas numeradas",
+      "smartLayoutLabelSpeechBubbles": "Balões de fala",
+      "smartLayoutLabelSpeechBubblesCenter": "Balões de fala centralizados",
+      "smartLayoutLabelSpeechBubblesLeft": "Balões de fala à esquerda",
+      "smartLayoutLabelSpeechBubblesRight": "Balões de fala à direita",
+      "smartLayoutLabelStaircase": "Escada",
+      "smartLayoutLabelStaircaseOutsideText": "Escada com texto externo",
+      "smartLayoutLabelStarRating": "Avaliação por estrelas",
+      "smartLayoutLabelStarRatingLeft": "Avaliação por estrelas à esquerda",
+      "smartLayoutLabelStarRatingRight": "Avaliação por estrelas à direita",
+      "smartLayoutLabelStats": "Estatísticas",
+      "smartLayoutLabelSteps": "Etapas",
+      "smartLayoutLabelStepsHorizontal": "Etapas horizontais",
+      "smartLayoutLabelStepsVertical": "Etapas verticais",
+      "smartLayoutLabelStepsWithIcons": "Etapas com ícones",
+      "smartLayoutLabelStepsWithIconsHorizontal": "Etapas com ícones horizontais",
+      "smartLayoutLabelStepsWithIconsVertical": "Etapas com ícones verticais",
+      "smartLayoutLabelTimeline": "Linha do tempo",
+      "smartLayoutLabelTimelineHorizontal": "Linha do tempo horizontal",
+      "smartLayoutLabelTimelineTwoSidedHorizontal": "Linha do tempo horizontal em dois lados",
+      "smartLayoutLabelTimelineTwoSidedVertical": "Linha do tempo vertical em dois lados",
+      "smartLayoutLabelTimelineVertical": "Linha do tempo vertical",
+      "smartLayoutLabelTopCircleBoxes": "Caixas com círculos superiores",
+      "smartLayoutLabelTopCircleBoxesWithNumbers": "Caixas com círculos superiores numerados",
+      "smartLayoutLabelTopLineText": "Texto com linha superior",
+      "smartLayoutLabelVerticalFunnel": "Funil vertical",
+      "themeNameBasicLight": "Claro básico",
+      "themeNameBasicDark": "Escuro básico",
+      "themeNameAlabaster": "Alabastro",
+      "themeNameAmber": "Âmbar",
+      "themeNameAsh": "Cinza",
+      "themeNameBeeHappy": "Abelha feliz",
+      "themeNameBlueSteel": "Aço azul",
+      "themeNameBlueberry": "Mirtilo",
+      "themeNameBloom": "Florescer",
+      "themeNameBonanHale": "Bonan Hale clássico",
+      "themeNameBreeze": "Brisa",
+      "themeNameBubbleGum": "Chiclete",
+      "themeNameChisel": "Cinzel",
+      "themeNameCobalt": "Cobalto",
+      "themeNameDewdrop": "Gota de orvalho",
+      "themeNameGlamour": "Charme",
+      "themeNameHowlite": "Howlita",
+      "themeNameLinen": "Linho",
+      "themeNameMahogany": "Mogno",
+      "themeNameMist": "Névoa",
+      "themeNameMoss": "Musgo",
+      "themeNameOnyx": "Ônix",
+      "themeNameQuartz": "Quartzo",
+      "themeNameSand": "Areia",
+      "themeNameVivid": "Vívido",
+      "panelLoading": "Carregando painel",
+      "themeNameKraft": "Papel kraft",
+      "themeNameCreme": "Creme suave",
+      "themeNameMystique": "Mística",
+      "themeNameVortex": "Vórtice",
+      "themeNameGoldLeaf": "Folha de ouro",
+      "themeNameTranquil": "Tranquilo",
+      "themeNameIris": "Íris",
+      "themeNamePrism": "Prisma",
+      "themeNameRush": "Impulso",
+      "themeNameChocolate": "Chocolate intenso",
+      "themeNameWireframe": "Estrutura aramada",
+      "themeNameConsultant": "Consultor",
+      "themeNameCornfield": "Milharal",
+      "themeNameExecutiveBlue": "Azul executivo",
+      "themeNameDeckwiseWarmRetro": "Retrô quente",
+      "themeNameDeckwiseRichPalette": "Paleta rica",
+      "themeNamePetrol": "Petróleo",
+      "themeNameAlien": "Alienígena",
+      "themeNameCoal": "Carvão",
+      "themeNameCigar": "Charuto",
+      "themeNameClementa": "Clementa clássico",
+      "themeNameCommons": "Comuns",
+      "themeNameCornflower": "Centáurea",
+      "themeNameDaktilo": "Daktilo máquina",
+      "themeNameDawn": "Amanhecer",
+      "themeNameDialogue": "Diálogo",
+      "themeNameEditoria": "Estilo Editoria",
+      "themeNameElectric": "Elétrico",
+      "themeNameFinesse": "Finesse refinado",
+      "themeNameFlax": "Fibra de linho",
+      "themeNameFluo": "Fluo brilhante",
+      "themeNameFounder": "Fundador",
+      "themeNameDeckwise": "Clássico",
+      "themeNameMocha": "Mocha café",
+      "themeNameIcebreaker": "Quebra-gelo",
+      "themeNameIncandescent": "Incandescente",
+      "themeNameKeepsake": "Lembrança",
+      "themeNameLavender": "Lavanda",
+      "themeNameLeimoon": "Leimoon lunar",
+      "themeNameLunaria": "Lunaria prateada",
+      "themeNameLux": "Lux luminoso",
+      "themeNameMarine": "Marinho",
+      "themeNameMossAndMist": "Musgo e névoa",
+      "themeNamePearl": "Pérola",
+      "themeNamePiano": "Piano clássico",
+      "themeNamePistachio": "Pistache",
+      "themeNamePlantShop": "Loja de plantas",
+      "themeNameSage": "Sálvia",
+      "themeNameSeafoam": "Espuma do mar",
+      "themeNameSerene": "Sereno",
+      "themeNameSlate": "Ardósia",
+      "themeNameTerracotta": "Terracota",
+      "themeNameIndigo": "Índigo",
+      "themeNameVanilla": "Baunilha",
+      "themeNameWine": "Vinho",
+      "exportPptxIdle": "Exportar PPTX",
+      "exportUnavailable": "Exportação indisponível",
+      "exporting": "Exportando...",
+      "exported": "Exportado",
+      "exportFailed": "Falha ao exportar",
+      "googleSlidesExportComplete": "A exportação para Apresentações Google está pronta",
+      "googleSlidesExportFailed": "Falha ao exportar para Apresentações Google",
+      "editableExportRequiresPlus": "As exportações editáveis para PowerPoint e Google Slides estão disponíveis no Plus.",
+      "editableExportAccessCheckFailed": "Não foi possível verificar seu acesso à exportação. Tente novamente.",
+      "openGoogleSlides": "Abrir Apresentações Google",
+      "exportPdfIdle": "Exportar PDF",
+      "preparingPdf": "Preparando PDF...",
+      "pdfExportFailed": "Falha ao exportar PDF",
+      "exportAs": "Exportar como",
+      "exportSlidesAs": "Exportar slides como",
+      "exportSlideAs": "Exportar slide como",
+      "exportImage": "Imagem",
+      "keepAtLeastOneSlide": "Mantenha pelo menos um slide",
+      "cutOrCopySlideFirst": "Recorte ou copie um slide primeiro",
+      "cut": "Recortar",
+      "copy": "Copiar",
+      "pasteBelow": "Colar abaixo",
+      "moveSlidesUp": "Mover slides para cima",
+      "moveUp": "Mover para cima",
+      "moveSlidesDown": "Mover slides para baixo",
+      "moveDown": "Mover para baixo",
+      "duplicateSlides": "Duplicar slides",
+      "duplicateSlide": "Duplicar slide",
+      "addBelowSelection": "Adicionar abaixo da seleção",
+      "addBelow": "Adicionar abaixo",
+      "exportSlides": "Exportar slides",
+      "exportSlide": "Exportar slide",
+      "deleteSlides": "Excluir slides",
+      "delete": "Excluir",
+      "tableColumn": "Coluna da tabela",
+      "gridColumn": "Coluna da grade",
+      "columnResizeWidth": "Largura de {label} {index}",
+      "selectedBlockLabel": "{count} bloco selecionado",
+      "selectedBlocksLabel": "{count} blocos selecionados",
+      "slideLabel": "Slide {index}",
+      "slideContextLine": "Slide {index}: {title}",
+      "blockPathsLine": "Caminhos dos blocos: {paths}",
+      "selectedDeckwiseBlocksFallback": "Blocos selecionados.",
+      "tableCellActions": "Ações de célula da tabela",
+      "cutCells": "Recortar células",
+      "copyCells": "Copiar células",
+      "pasteCellsUnavailable": "Não é possível colar células",
+      "pasteCells": "Colar células",
+      "insertColumnsLeft": "Inserir colunas à esquerda",
+      "insertColumnsRight": "Inserir colunas à direita",
+      "insertRowsAbove": "Inserir linhas acima",
+      "insertRowsBelow": "Inserir linhas abaixo",
+      "keepAtLeastOneTableRow": "Mantenha pelo menos uma linha",
+      "deleteTableRowUnavailable": "Não é possível excluir a linha",
+      "keepAtLeastOneTableColumn": "Mantenha pelo menos uma coluna",
+      "deleteTableColumnUnavailable": "Não é possível excluir a coluna",
+      "deleteRow": "Excluir linha",
+      "deleteSheet": "Excluir tabela",
+      "blockActions": "Ações do bloco",
+      "elementPreviewBulletAction": "Item de ação",
+      "elementPreviewBulletFollowUp": "Detalhe de acompanhamento",
+      "elementPreviewBulletDecision": "Nota de decisão",
+      "elementPreviewCallout": "Adicione contexto para o leitor com um detalhe de apoio conciso.",
+      "elementPreviewColumnOneTitle": "Coluna um",
+      "elementPreviewColumnOneParagraph": "O texto de apoio mostra como o conteúdo flui nesta coluna.",
+      "elementPreviewColumnTwoTitle": "Coluna dois",
+      "elementPreviewColumnTwoParagraph": "Um segundo parágrafo torna o layout dividido fácil de ler.",
+      "elementPreviewColumnThreeTitle": "Coluna três",
+      "elementPreviewColumnThreeParagraph": "Um texto curto mantém a terceira coluna visível.",
+      "elementPreviewColumnFourTitle": "Coluna quatro",
+      "elementPreviewColumnFourParagraph": "Texto compacto pré-visualiza o estado da quarta coluna.",
+      "elementPreviewFootnote": "Uma breve nota de apoio.",
+      "elementPreviewHeading": "Título {level}",
+      "elementPreviewLabel": "Rótulo",
+      "elementPreviewListItem": "Item de lista",
+      "elementPreviewProjectUpdate": "Atualização do projeto",
+      "elementPreviewQuote": "Uma conclusão concisa fica aqui.",
+      "elementPreviewStepOne": "Etapa um",
+      "elementPreviewStepTwo": "Etapa dois",
+      "elementPreviewStepThree": "Etapa três",
+      "elementPreviewSupportingDetail": "Detalhe de apoio",
+      "elementPreviewTableMetric": "Métrica",
+      "elementPreviewTableStatus": "Status",
+      "elementPreviewTableOwner": "Responsável",
+      "elementPreviewTableNext": "Próximo",
+      "elementPreviewTableUsers": "Usuários",
+      "elementPreviewTableTeam": "Equipe",
+      "elementPreviewTableGrowth": "Crescimento",
+      "elementPreviewTableOps": "Operações",
+      "elementPreviewTableLive": "Ativo",
+      "elementPreviewTableRisk": "Risco",
+      "elementPreviewTableLow": "Baixo",
+      "elementPreviewTableDone": "Concluído",
+      "elementPreviewToc": "Visão geral da seção",
+      "elementPreviewTodoTask": "Tarefa a concluir",
+      "elementPreviewTodoReview": "Revisão do responsável",
+      "elementPreviewTodoUpdate": "Enviar atualização"
+    }
+  },
+  "files": {
+    "addImage": "Adicionar imagem",
+    "addPdf": "Adicionar PDF",
+    "upload": "Arquivos",
+    "uploadAction": "Carregar",
+    "createFile": "Criar arquivo",
+    "projectDocuments": "Documentos do projeto",
+    "dropUploadTitle": "Solte arquivos aqui para fazer upload",
+    "dropUploadSubtitle": "Solte os arquivos aqui para enviá-los à categoria de Fontes correspondente",
+    "searchAction": "Procurar",
+    "createNote": "Documento",
+    "createSlides": "Slide",
+    "slidesTemplate": "Modelo",
+    "createNoteFailed": "Falha ao criar o documento. Por favor, tente novamente.",
+    "createSlidesFailed": "Falha ao criar slides. Por favor, tente novamente.",
+    "createSheetFailed": "Falha ao fazer upload da planilha. Por favor, tente novamente.",
+    "spreadsheetUnsupported": "Arquivos CSV e XLS não são suportados.",
+    "uploadUnsupportedFileType": "Tipo de arquivo não suportado: {names}",
+    "uploadFailedNoProject": "Abra um espaço de trabalho do projeto primeiro.",
+    "googleDriveAuthorizationRequired": "Conecte o Google Drive para continuar.",
+    "googleDriveAuthorizationPending": "O Google Drive ainda não está conectado. Conclua a autorização e tente novamente.",
+    "googleDriveConnectFailed": "Falha ao conectar o Google Drive",
+    "googleDriveImportFailed": "Falha ao importar o arquivo do Google Drive",
+    "googleDriveImportSucceeded": "{count} arquivo(s) do Google Drive importado(s).",
+    "googleDriveNotConfigured": "A importação do Google Drive não está configurada.",
+    "oneDriveAuthorizationRequired": "Conecte o OneDrive para continuar.",
+    "oneDriveAuthorizationPending": "O OneDrive ainda não está conectado. Conclua a autorização e tente novamente.",
+    "oneDriveConnectFailed": "Falha ao conectar o OneDrive",
+    "oneDriveImportFailed": "Falha ao importar o arquivo do OneDrive",
+    "oneDriveImportSucceeded": "{count} arquivo(s) do OneDrive importado(s).",
+    "oneDrivePickerTitle": "Importar do OneDrive",
+    "oneDrivePickerDescription": "Escolha arquivos do OneDrive conectado.",
+    "oneDriveSearchPlaceholder": "Buscar arquivos do OneDrive",
+    "oneDrivePickerLoading": "Carregando arquivos do OneDrive…",
+    "oneDrivePickerLoadFailed": "Falha ao carregar arquivos do OneDrive",
+    "oneDrivePickerEmpty": "Nenhum arquivo do OneDrive encontrado",
+    "oneDrivePickerEmptyHint": "Tente outra pasta, outro termo de busca ou autorize mais arquivos.",
+    "oneDrivePickerHint": "As pastas abrem dentro deste seletor. Selecione arquivos para importá-los ao projeto.",
+    "oneDrivePickerLoadMore": "Carregar mais",
+    "oneDrivePickerReconnect": "Escolher mais arquivos do OneDrive",
+    "oneDrivePickerImportSelected": "Importar {count} selecionados",
+    "oneDriveUntitledFile": "Arquivo sem título do OneDrive",
+    "oneDriveLastModified": "Modificado em {date}",
+    "oneDriveOpenFile": "Abrir no OneDrive",
+    "oneDriveUnknownDate": "Data desconhecida",
+    "oneDriveFolder": "Pasta",
+    "oneDriveFolderItem": "{count} item(ns)",
+    "dropboxAuthorizationRequired": "Conecte o Dropbox para continuar.",
+    "dropboxAuthorizationPending": "O Dropbox ainda não está conectado. Conclua a autorização e tente novamente.",
+    "dropboxConnectFailed": "Falha ao conectar o Dropbox",
+    "dropboxImportFailed": "Falha ao importar o arquivo do Dropbox",
+    "dropboxImportSucceeded": "{count} arquivo(s) do Dropbox importado(s).",
+    "dropboxNotConfigured": "A importação do Dropbox não está configurada.",
+    "dropboxPickerRetryRequired": "Dropbox conectado. Clique em Adicionar do Dropbox novamente para escolher arquivos.",
+    "notionAuthorizationRequired": "Conecte o Notion para continuar.",
+    "notionAuthorizationPending": "O Notion ainda não está conectado. Conclua a autorização e tente novamente.",
+    "notionConnectFailed": "Falha ao conectar o Notion",
+    "notionImportFailed": "Falha ao importar a página do Notion",
+    "notionImportSucceeded": "{count} página(s) do Notion importada(s).",
+    "notionPickerTitle": "Importar do Notion",
+    "notionPickerDescription": "Escolha páginas compartilhadas com o Deckwise.",
+    "notionSearchPlaceholder": "Buscar páginas",
+    "notionPickerSelectPages": "Selecionar páginas",
+    "notionPickerLoading": "Carregando páginas do Notion…",
+    "notionPickerLoadFailed": "Falha ao carregar páginas do Notion",
+    "notionPickerEmpty": "Nenhuma página do Notion encontrada",
+    "notionPickerMissingAuthorizationHint": "Se uma página não aparecer, compartilhe a página ou a página pai com o Deckwise no Notion.",
+    "notionPickerLoadMore": "Carregar mais",
+    "notionPickerChooseMorePages": "Escolher mais páginas",
+    "notionPickerImportSelected": "Importar {count} selecionadas",
+    "notionUntitledPage": "Página sem título do Notion",
+    "notionLastEdited": "Última edição em {date}",
+    "notionOpenPage": "Abrir no Notion",
+    "notionUnknownDate": "Data desconhecida",
+    "outlineReferenceMixedUnsupported": "Adicione arquivos de slides e arquivos de referência separadamente.",
+    "outlineReferenceLimit": "Você pode anexar até {count} arquivos de referência.",
+    "outlineReferenceUploadFailed": "Falha ao carregar arquivos de referência",
+    "all": "Todos",
+    "uploading": "Fazendo upload…",
+    "empty": "Nenhum arquivo",
+    "noPreview": "Sem visualização",
+    "image": "Imagem",
+    "images": "Imagens",
+    "outline": "Contorno",
+    "imageGallery": "Imagens",
+    "imageWallEmpty": "Ainda não há imagens",
+    "imageWallEmptyHint": "As imagens enviadas aparecerão aqui",
+    "file": "Arquivo",
+    "pdf": "PDF",
+    "note": "Documento",
+    "deleteFile": "Excluir arquivo",
+    "deleteFailed": "Falha ao excluir o arquivo. Por favor, tente novamente.",
+    "uploadFailedNoCacheKey": "Falha no upload: o servidor não retornou cacheKey.",
+    "uploadImageFailed": "Falha ao carregar a imagem",
+    "uploadPdfFailed": "Falha ao carregar PDF",
+    "uploadOfficeFailed": "Falha ao carregar o arquivo do Office",
+    "officeUploadDisabled": "O upload do Office está desativado.",
+    "notesTab": "Notas",
+    "filesTab": "Arquivos",
+    "sourcesTipTitle": "Dica",
+    "sourcesTipBody": "Selecione conteúdo em {sources} com o laço e use {addToChat} para adicionar apenas essa seleção ao contexto do Agent.",
+    "addToChat": "Adicionar ao bate-papo",
+    "moreActions": "Mais ações",
+    "moveToTrash": "Mover para a lixeira",
+    "deleteAction": "Excluir",
+    "deleteTypedAction": "Excluir {type}",
+    "deleteTypedConfirmTitle": "Excluir este {type}?",
+    "deleteFileConfirmTitle": "Excluir este arquivo?",
+    "deleteFileConfirmMessage": "Este arquivo será removido do espaço de trabalho atual.",
+    "download": "Baixar",
+    "downloadUnavailable": "Este arquivo não está disponível para download.",
+    "export": "Exportar",
+    "exportMarkdown": "Markdown",
+    "exportMarkdownFailed": "Falha ao exportar Markdown. Por favor, tente novamente.",
+    "exportPptx": "PowerPoint",
+    "exportPptxFailed": "Falha ao exportar PowerPoint. Por favor, tente novamente.",
+    "exportPptxUnavailable": "Salve este arquivo de slide antes de exportar PowerPoint.",
+    "convertToSlide": "Crie slides",
+    "convertToSlideFailed": "Falha ao converter documento em slides. Por favor, tente novamente.",
+    "convertedSlidesSuffix": "Slides",
+    "duplicate": "Duplicar",
+    "duplicateCopySuffix": "cópia",
+    "duplicateFailed": "Falha ao duplicar arquivo. Por favor, tente novamente.",
+    "rename": "Renomear",
+    "renameDialogTitle": "Renomear arquivo",
+    "renameDialogDescription": "Atualize o nome mostrado para este arquivo na barra lateral.",
+    "renameInputLabel": "Nome",
+    "renamePlaceholder": "Digite um nome de arquivo",
+    "noteTitlePlaceholder": "Nova página",
+    "renameEmptyName": "O nome do arquivo não pode ficar vazio.",
+    "renameFailed": "Falha ao renomear arquivo. Por favor, tente novamente.",
+    "openInNewTab": "Abrir em nova aba",
+    "openInNewTabUnavailable": "Salve este arquivo antes de abri-lo em uma nova guia.",
+    "cancelAction": "Cancelar",
+    "saveAction": "Salvar",
+    "materials": "Fontes",
+    "insertSlide": "Adicionar slide",
+    "imageActions": "Ações da imagem",
+    "copyImage": "Copiar imagem",
+    "outlineAddSlide": "Adicionar slide",
+    "outlineSelectAll": "Selecionar tudo",
+    "outlineDeleteSlide": "Excluir slide",
+    "outlineSelectAndReorderSlide": "Selecionar e reordenar o slide {page}",
+    "outlineSlideActions": "Ações do slide {page}",
+    "materialsSidebarWidth": "Largura da barra lateral de fontes"
+  },
+  "systemContent": {
+    "imageAlt": "Imagem",
+    "imageAltN": "Imagem {n}",
+    "imageName": "Imagem",
+    "imageNameN": "Imagem {n}",
+    "imageLoadFailed": "Falha ao carregar a imagem.",
+    "loadFailed": "Falha ao carregar.",
+    "collapse": "Recolher",
+    "pdfDoc": "Documento PDF"
+  },
+  "selectionToolbar": {
+    "quote": "Citar",
+    "copy": "Cópia",
+    "copied": "Copiado",
+    "copyFailed": "Falha na cópia",
+    "rollback": "Restaurar",
+    "rollbackRunning": "Restaurando",
+    "rollbackRestored": "Restaurado",
+    "rollbackSuccess": "Versão restaurada",
+    "rollbackUnavailable": "Nenhum ponto de restauração encontrado",
+    "rollbackFailed": "Falha ao restaurar",
+    "actions": "Ações de seleção"
+  },
+  "codeBlock": {
+    "copyAria": "Copiar código",
+    "copy": "Copiar código",
+    "copied": "Copiado",
+    "copiedToClipboard": "Código copiado para a área de transferência"
+  },
+  "middle": {
+    "filePreview": "Visualização",
+    "editor": "Editor",
+    "emptyHintTitle": "Este painel pode ser usado para:",
+    "emptyHintItem1": "Sessões",
+    "emptyHintItem2": "Itens salvos",
+    "emptyHintItem3": "Arquivos",
+    "emptyHintItem4": "Fontes",
+    "loadFailed": "Falha ao carregar.",
+    "pdfLoadFailed": "Falha ao carregar PDF.",
+    "totalPages": "Páginas {count}",
+    "defaultEditorContent": "# Bem-vindo\n\nComece a digitar ou digite `/` para ver os comandos.\n\n## Recursos\n\n- Markdown\n- Comandos de barra\n- Assistência de IA\n- Destaque de código\n- Matemática\n- Tabelas",
+    "newNote": "Novo documento",
+    "untitledNote": "Documento sem título",
+    "pdfPreviewControls": "Controles de prévia do PDF",
+    "wordPreviewControls": "Controles de prévia do Word",
+    "toggleThumbnails": "Alternar miniaturas",
+    "pageNumberInputLabel": "Número da página atual",
+    "pdfPageAlt": "Página {page}",
+    "zoomIn": "Ampliar",
+    "zoomOut": "Diminuir zoom",
+    "downloadPdf": "Baixar PDF",
+    "printPdf": "Imprimir PDF",
+    "addToChat": "Adicionar ao bate-papo",
+    "copyText": "Cópia",
+    "copied": "Copiado",
+    "untitledSlides": "Slides sem título",
+    "deckwiseSlidesFailedTitle": "Não foi possível abrir os slides",
+    "deckwiseSlidesLoadFailed": "Falha ao carregar os slides.",
+    "failedToLoadExampleTargets": "Falha ao carregar destinos de exemplo.",
+    "missingSlidesFileId": "ID do arquivo de slides ausente para promover o exemplo.",
+    "exampleTitleRequired": "O título de exemplo é obrigatório.",
+    "sortOrderInteger": "A ordem de classificação deve ser um número inteiro.",
+    "promoteExample": "Promova exemplo",
+    "promoteExampleDescription": "Registre este arquivo de slides publicados no catálogo de exemplos.",
+    "promoteExampleSuccess": "Exemplo promovido para galeria.",
+    "promoteExampleFailed": "Falha ao promover exemplo de slides.",
+    "titleField": "Título",
+    "replaceTarget": "Substituir alvo",
+    "createNewExample": "Criar novo exemplo",
+    "selectedExample": "Exemplo selecionado ({id})",
+    "category": "Categoria",
+    "tags": "Etiquetas",
+    "sort": "Organizar",
+    "tagsPlaceholder": "viagem, demonstração",
+    "enabled": "Habilitado",
+    "promoting": "Promovendo...",
+    "officeLoadFailed": "Falha ao carregar este arquivo do Office.",
+    "missingSlidesFileIdForPreviewUpload": "Falta o ID do arquivo de slides para upload de visualização.",
+    "uploadedPreviewImages": "Imagens de visualização {count} carregadas.",
+    "failedToUploadPreviewImages": "Falha ao carregar imagens de visualização de slides.",
+    "imageUploadFailed": "Falha ao carregar a imagem. Tente novamente.",
+    "missingSlidesDocumentIdForPublish": "ID do documento de slides ausente para publicação.",
+    "resolveConflictBeforePublishing": "Resolva o conflito de revisão atual antes de publicar.",
+    "missingSlidesDocumentIdForShare": "Falta o ID do documento dos slides para compartilhamento.",
+    "resolveConflictBeforeSharing": "Resolva o conflito de revisão atual antes de compartilhar.",
+    "sentSlidesShareEmail": "E-mail de compartilhamento enviado para {count} destinatário(s).",
+    "publishedPublicSlides": "Os slides publicados estão públicos.",
+    "publishPublicSlidesFailed": "Falha ao publicar os slides publicamente. Tente novamente.",
+    "publicSlidesLinkMissing": "Os slides foram publicados, mas o link público está ausente. Tente novamente.",
+    "unpublishedPublicSlides": "O acesso público foi desativado.",
+    "unpublishPublicSlidesFailed": "Falha ao desativar o acesso público. Tente novamente.",
+    "createShareLinkFailed": "Falha ao criar link de compartilhamento. Tente novamente.",
+    "shareLinkMissing": "O link de compartilhamento está ausente. Tente novamente.",
+    "sendShareEmailFailed": "Falha ao enviar email de compartilhamento. Tente novamente.",
+    "publishedSlidesFile": "Arquivo de slides publicados {fileId}.",
+    "publishedSlides": "Slides publicados.",
+    "deckwiseSlidesReloadedLatestRemote": "{message} Recarregou a versão remota mais recente.",
+    "deckwiseSlidesReloadAfterSaveFailureFailed": "Falha ao recarregar os slides após falha ao salvar.",
+    "deckwiseSlidesRefreshAfterAgentFailed": "Falha ao atualizar os slides após as alterações do agente.",
+    "deckwiseSlidesThemeUpdateFailed": "Falha ao atualizar o tema dos slides. Tente novamente.",
+    "deckwiseSlidesAgentConflict": "O agente atualizou este slide após o início das edições locais. Salve ou recarregue o documento antes de continuar.",
+    "deckwiseSlidesChangedWhileSaving": "Os slides foram alterados durante o salvamento."
+  },
+  "projects": {
+    "audienceReviewTrigger": "Revisão",
+    "audienceReviewTriggerAria": "Pontuação geral: {score} de 100. Abrir sugestões de revisão",
+    "audienceReviewTitle": "Revisão do público",
+    "audienceReviewDescription": "Revise esta apresentação pela perspectiva do público.",
+    "audienceReviewAgain": "Revisar novamente",
+    "audienceReviewClose": "Fechar revisão do público",
+    "audienceReviewLoading": "Carregando a revisão mais recente...",
+    "audienceReviewGenerating": "Gerando revisão do público",
+    "audienceReviewPreparingImages": "Preparando imagens para a revisão",
+    "audienceReviewSystemError": "Erro do sistema",
+    "audienceReviewTryAgain": "Tentar novamente",
+    "audienceReviewUnavailable": "Ainda não há uma revisão reutilizável disponível.",
+    "audienceReviewGenerate": "Gerar revisão",
+    "audienceReviewComplete": "Sua apresentação está pronta para ser apresentada",
+    "audienceReviewNoSuggestions": "Nenhuma sugestão de revisão do público foi encontrada.",
+    "audienceReviewSuggestionFallback": "Sugestão",
+    "audienceReviewFix": "Corrigir",
+    "audienceReviewFixAria": "Corrigir sugestão: {title}",
+    "audienceReviewDismiss": "Descartar",
+    "audienceReviewDismissAria": "Descartar sugestão: {title}",
+    "audienceReviewSlide": "Slide",
+    "audienceReviewAllSlides": "Todos os slides",
+    "audienceReviewSlideList": "Slide {pages}",
+    "title": "Projetos",
+    "subtitle": "Recentemente inaugurado primeiro",
+    "openingRecentProject": "Abrindo projeto recente",
+    "openingRecentProjectHint": "Verificando primeiro o cache local e depois confirmando seu projeto mais recente.",
+    "openingRecentProjectSlowHint": "A rede está lenta. Ainda tentando acessar o serviço do projeto.",
+    "loadRecentTimeoutTitle": "A conexão com o serviço do projeto expirou",
+    "loadRecentTimeoutMessage": "Em redes lentas, paramos de esperar em vez de deixar a página inicial suspensa. Por favor, tente novamente.",
+    "loadRecentFailedTitle": "Não foi possível carregar seu projeto recente",
+    "loadRecentFailedMessage": "A rede está lenta ou instável. Por favor, tente novamente.",
+    "loadingProject": "Carregando projeto",
+    "loadFailedTitle": "Falha ao carregar o projeto",
+    "startTitle": "O que você está apresentando hoje?",
+    "startComposerPlaceholder": "Comece com uma ideia ou envie um arquivo",
+    "invalidProjectData": "O serviço do projeto retornou dados incompletos. Por favor, tente novamente.",
+    "loadTimeoutMessage": "A conexão com o serviço do projeto expirou. Verifique sua rede e tente novamente.",
+    "loadNetworkErrorMessage": "A rede está lenta ou instável, por isso não foi possível carregar o projeto no momento. Por favor, tente novamente.",
+    "missingOrDeleted": "Este projeto não existe ou foi excluído",
+    "recentTitle": "Projetos recentes",
+    "recentSubtitle": "Ativo nos últimos 7 dias",
+    "recentEmpty": "Nenhum projeto recente",
+    "allTitle": "Todos",
+    "new": "Novo",
+    "newProject": "Novo projeto",
+    "myProject": "Meu projeto",
+    "createCardSubtitle": "Crie um novo espaço de trabalho",
+    "emptyTitle": "Ainda não há projetos",
+    "emptySubtitle": "Crie seu primeiro projeto para começar",
+    "pleaseWait": "Por favor, aguarde",
+    "createFailed": "Falha ao criar projeto. Por favor, tente novamente mais tarde.",
+    "confirmDelete": "Tem certeza de que deseja excluir este projeto?",
+    "deleteFailed": "Falha ao excluir. Por favor, tente novamente mais tarde.",
+    "renamePrompt": "Renomear projeto",
+    "renameEmptyName": "O nome do projeto não pode ficar vazio.",
+    "renameFailed": "Falha ao renomear. Por favor, tente novamente mais tarde.",
+    "projectNumber": "Projeto #{id}",
+    "updatedAt": "Atualizado {date}",
+    "searchPlaceholder": "Pesquisar projetos",
+    "noResults": "Nenhum projeto correspondente",
+    "timeGroups": {
+      "today": "Hoje",
+      "yesterday": "Ontem",
+      "pastWeek": "Semana passada",
+      "past30Days": "Últimos 30 dias",
+      "older": "Mais velho"
+    },
+    "outline": "Esboço",
+    "slides": "Slides",
+    "untitledProject": "Projeto sem título",
+    "generateSlides": "Gerar slides",
+    "generatingSlides": "Gerando...",
+    "generationWorkflowTitle": "Gerando slides",
+    "generationWorkflow": {
+      "outline": "Escrevendo o roteiro",
+      "theme": "Selecionando tema",
+      "layout": "Planejando layouts de página",
+      "visuals": "Escolhendo imagens",
+      "slots": "Estruturando o conteúdo do slide",
+      "deck": "Construindo a apresentação"
+    },
+    "customize": "Personalizar",
+    "generateSlidesSettings": "Gerar configurações de slides",
+    "textContent": "Conteúdo de texto",
+    "textContentMode": "Modo de conteúdo de texto",
+    "amountOfText": "Quantidade de texto",
+    "writeFor": "Escreva para...",
+    "tone": "Tom",
+    "theme": "Tema",
+    "viewMore": "Ver mais",
+    "themeHelp": "Use um de nossos temas populares abaixo ou veja mais",
+    "titlePreview": "Título",
+    "bodyLinkPreview": "Corpo e link",
+    "themePistachio": "Pistache",
+    "themeVolt": "Voltagem",
+    "densityMinimal": "Mínimo",
+    "densityConcise": "Conciso",
+    "densityDetailed": "Detalhado",
+    "densityExtensive": "Extenso",
+    "textModeGenerate": "Gerar",
+    "textModeCondense": "Condensar",
+    "textModePreserve": "Preservar",
+    "audienceBusinessLabel": "Negócios",
+    "audienceBusinessContent": "Profissionais que trabalham criando negócios, estratégias, vendas ou apresentações internas",
+    "audienceHighSchoolersLabel": "Alunos do ensino médio",
+    "audienceHighSchoolersContent": "Alunos do 9º ao 12º ano trabalhando em projetos de aula, relatórios e apresentações",
+    "audienceCollegeStudentsLabel": "Estudantes universitários",
+    "audienceCollegeStudentsContent": "Alunos de graduação ou pós-graduação preparando cursos, pesquisas ou apresentações acadêmicas",
+    "audienceCreativesLabel": "Criativos",
+    "audienceCreativesContent": "Designers, artistas, profissionais de marketing e criadores que criam conteúdo visualmente expressivo",
+    "audienceTechEnthusiastsLabel": "Entusiastas de tecnologia",
+    "audienceTechEnthusiastsContent": "Pessoas interessadas em tecnologia, software, ferramentas de IA e produtos digitais",
+    "toneProfessionalLabel": "Profissional",
+    "toneProfessionalContent": "Redação refinada, concisa e persuasiva para comunicação empresarial ou no local de trabalho",
+    "toneConversationalLabel": "Conversacional",
+    "toneConversationalContent": "Escrita amigável, natural e descontraída que parece acessível e humana",
+    "toneTechnicalLabel": "Técnico",
+    "toneTechnicalContent": "Redação precisa, estruturada e detalhada para explicações técnicas, guias ou documentação",
+    "toneAcademicLabel": "Acadêmico",
+    "toneAcademicContent": "Redação formal, objetiva e focada em evidências para pesquisas, ensaios ou trabalhos acadêmicos",
+    "toneInspirationalLabel": "Inspirador",
+    "toneInspirationalContent": "Escrita encorajadora, enérgica e edificante que motiva o público",
+    "toneHumorousLabel": "Bem-humorado",
+    "toneHumorousContent": "Escrita lúdica, espirituosa e divertida que acrescenta personalidade e ao mesmo tempo permanece relevante",
+    "cardsBelowUpgradeAction": "Atualizar",
+    "cardsBelowUpgradeSuffix": "para gerar todos os cartões",
+    "saveOutlineBeforeGenerate": "Salve o esboço antes de gerar slides.",
+    "waitForImageUploadsBeforeGenerate": "Aguarde o término do upload das imagens antes de gerar os slides.",
+    "generateSlidesFailed": "Falha ao gerar slides.",
+    "firstDraftLabel": "Primeiro rascunho"
+  },
+  "personalization": {
+    "title": "Personalização",
+    "subtitle": "Gerencie quem você é e o que Deckwise lembra",
+    "accountSection": "Conta",
+    "account": "Conta",
+    "general": "Em geral",
+    "models": "Modelos",
+    "usageBilling": "Uso e cobrança",
+    "accountSubtitle": "Gerencie seu perfil e detalhes da conta.",
+    "generalSubtitle": "Ajuste as preferências do aplicativo para seu espaço de trabalho.",
+    "usageSubtitle": "Revise sua assinatura e cobrança.",
+    "featuresSection": "Características",
+    "mail": "Correio Deckwise",
+    "dataControls": "Controles de dados",
+    "myComputer": "Meu computador",
+    "cloudBrowser": "Navegador na nuvem",
+    "skills": "Habilidades",
+    "mcp": "MCP",
+    "connectors": "Conectores",
+    "integrations": "Integrações",
+    "getHelp": "Obtenha ajuda",
+    "profileTab": "Perfil",
+    "knowledgeTab": "Conhecimento",
+    "nickname": "Apelido",
+    "nicknamePlaceholder": "Jane",
+    "occupation": "Ocupação",
+    "occupationPlaceholder": "Designer de produto",
+    "moreAboutYou": "Mais sobre você",
+    "aboutPlaceholder": "Sou analista baseado em Nova York. Trabalho principalmente em React e SQL.",
+    "profileHelp": "Deckwise usa essas informações para personalizar respostas em todas as tarefas.",
+    "customInstructions": "Instruções personalizadas",
+    "instructionsPlaceholder": "Seja conciso e direto. O padrão é Python, a menos que eu diga o contrário. Ao escrever documentos, use um tom profissional e cite as fontes.",
+    "saveProfile": "Salvar perfil",
+    "savedStatus": "Personalização salva",
+    "loadFailed": "Falha ao carregar a personalização.",
+    "saveFailed": "Falha ao salvar a personalização.",
+    "memoriesHeading": "Memórias",
+    "rulesHeading": "Regras",
+    "memoryTitlePlaceholder": "Título de memória",
+    "memoryContentPlaceholder": "Algo que Deckwise deveria lembrar",
+    "ruleContentPlaceholder": "Como Deckwise deve responder ou se comportar",
+    "addMemory": "Adicionar memória",
+    "addRule": "Adicionar regra",
+    "emptyMemories": "Nenhuma memória salva ainda.",
+    "emptyRules": "Ainda não há regras salvas.",
+    "enabled": "Habilitado",
+    "disabled": "Desabilitado",
+    "sourceUser": "Usuário",
+    "sourceAi": "IA",
+    "personal": "Pessoal",
+    "notSignedIn": "Não conectado",
+    "integrationsSubtitle": "Gerencie apps conectados e fontes de arquivos.",
+    "integrationsDescription": "Conecte provedores de armazenamento em nuvem para que o Deckwise importe os arquivos selecionados quando você pedir.",
+    "googleDriveTitle": "Google Drive",
+    "googleDriveDescription": "Importe arquivos do Google Drive.",
+    "notionTitle": "Notion",
+    "notionDescription": "Importe páginas do Notion.",
+    "connected": "Conectado",
+    "notConnected": "Não conectado",
+    "connect": "Conectar",
+    "disconnect": "Desconectar",
+    "disconnectGoogleDrive": "Desconectar",
+    "disconnectGoogleDriveConfirmTitle": "Desconectar o Google Drive?",
+    "disconnectGoogleDriveConfirmMessage": "O Deckwise revogará o token salvo do Google Drive e deixará de usar esta conexão. Os arquivos já importados para projetos permanecerão no seu workspace.",
+    "googleDriveConnected": "Google Drive conectado.",
+    "googleDriveDisconnected": "Google Drive desconectado.",
+    "googleDriveAuthorizationPending": "Conclua a autorização do Google Drive na aba aberta.",
+    "connectGoogleDriveFailed": "Falha ao conectar o Google Drive",
+    "disconnectGoogleDriveFailed": "Falha ao desconectar o Google Drive",
+    "disconnectNotion": "Desconectar",
+    "disconnectNotionConfirmTitle": "Desconectar o Notion?",
+    "disconnectNotionConfirmMessage": "O Deckwise revogará o token salvo do Notion e deixará de usar esta conexão. As páginas já importadas para projetos permanecerão no seu workspace.",
+    "notionConnected": "Notion conectado.",
+    "notionDisconnected": "Notion desconectado.",
+    "notionAuthorizationPending": "Conclua a autorização do Notion na aba aberta.",
+    "connectNotionFailed": "Falha ao conectar o Notion",
+    "disconnectNotionFailed": "Falha ao desconectar o Notion",
+    "oneDriveTitle": "OneDrive",
+    "oneDriveDescription": "Importe arquivos do Microsoft OneDrive.",
+    "disconnectOneDrive": "Desconectar",
+    "disconnectOneDriveConfirmTitle": "Desconectar o OneDrive?",
+    "disconnectOneDriveConfirmMessage": "O Deckwise revogará o token salvo do OneDrive e deixará de usar esta conexão. Os arquivos já importados para projetos permanecerão no seu workspace.",
+    "oneDriveConnected": "OneDrive conectado.",
+    "oneDriveDisconnected": "OneDrive desconectado.",
+    "oneDriveAuthorizationPending": "Conclua a autorização do OneDrive na aba aberta.",
+    "connectOneDriveFailed": "Falha ao conectar o OneDrive",
+    "disconnectOneDriveFailed": "Falha ao desconectar o OneDrive",
+    "dropboxTitle": "Dropbox",
+    "dropboxDescription": "Importe arquivos do Dropbox.",
+    "disconnectDropbox": "Desconectar",
+    "disconnectDropboxConfirmTitle": "Desconectar o Dropbox?",
+    "disconnectDropboxConfirmMessage": "O Deckwise revogará o token salvo do Dropbox e deixará de usar esta conexão. Os arquivos já importados para projetos permanecerão no seu workspace.",
+    "dropboxConnected": "Dropbox conectado.",
+    "dropboxDisconnected": "Dropbox desconectado.",
+    "dropboxAuthorizationPending": "Conclua a autorização do Dropbox na aba aberta.",
+    "dropboxPickerRetryRequired": "Dropbox conectado. Clique em Dropbox novamente para escolher arquivos.",
+    "connectDropboxFailed": "Falha ao conectar o Dropbox",
+    "disconnectDropboxFailed": "Falha ao desconectar o Dropbox",
+    "integrationLoadFailed": "Falha ao carregar integrações",
+    "loadingIntegrations": "Carregando",
+    "comingSoon": "Em breve"
+  },
+  "shareSheet": {
+    "sharing": "Compartilhamento",
+    "searchPlaceholder": "Adicione e-mails ou pessoas",
+    "copyShareLink": "Copiar link de compartilhamento",
+    "copied": "Copiado",
+    "copyPublicLink": "Copiar link público",
+    "publishPublicSlides": "Publicar",
+    "updatePublicSlides": "Atualizar",
+    "unpublishPublicSlides": "Cancelar publicação",
+    "unpublishedPublicSlides": "Não publicado",
+    "sendEmail": "Enviar e-mail",
+    "emailSent": "Enviado",
+    "exportType": "Tipo de exportação",
+    "exportPdf": "Exportar para PDF",
+    "exportPowerPoint": "Exportar para PowerPoint",
+    "exportGoogleSlides": "Exportar para Apresentações Google",
+    "exportPngs": "Exportar como PNG",
+    "installFonts": "Instalar fontes",
+    "installFontsDescription": "Para garantir que sua apresentação fique correta em PowerPoint, instale estas fontes em seu computador:"
+  },
+  "marketingHeader": {
+    "ariaLabel": "Navegação na página de marketing",
+    "directLinks": {
+      "enterprise": "empresa",
+      "overview": "Visão geral",
+      "pricing": "Preços"
+    },
+    "menus": {
+      "product": {
+        "label": "Produtos",
+        "hero": {
+          "title": "Deckwise",
+          "description": "Seu workspace de IA"
+        }
+      },
+      "ai": {
+        "label": "IA"
+      },
+      "solutions": {
+        "label": "solução"
+      },
+      "resources": {
+        "label": "Recursos"
+      }
+    },
+    "sections": {
+      "aiFeatures": "Recursos de IA",
+      "browse": "Navegar",
+      "companySize": "Tamanho da empresa",
+      "discover": "descobrir",
+      "exploreUseCases": "Explore casos de uso",
+      "learn": "aprender",
+      "teams": "equipe",
+      "useCases": "Cenários de uso"
+    },
+    "items": {
+      "academy": {
+        "title": "faculdade"
+      },
+      "agents": {
+        "title": "Agentes",
+        "description": "Automatize tarefas repetitivas"
+      },
+      "aiMeetingNotes": {
+        "title": "Atas de reunião com IA",
+        "description": "Use a IA para escrever atas claras"
+      },
+      "aiUseCases": {
+        "title": "Cenários de uso de IA"
+      },
+      "blog": {
+        "title": "Blogue"
+      },
+      "connections": {
+        "title": "conectar",
+        "description": "Conecte seu aplicativo"
+      },
+      "consultants": {
+        "title": "consultor"
+      },
+      "customerStories": {
+        "title": "Caso do cliente"
+      },
+      "deckwiseAi": {
+        "title": "IA do Deckwise",
+        "description": "Ferramentas de IA para o trabalho"
+      },
+      "design": {
+        "title": "projeto"
+      },
+      "docs": {
+        "title": "Documentação",
+        "description": "Simples, mas poderoso"
+      },
+      "education": {
+        "title": "educação"
+      },
+      "engProduct": {
+        "title": "Engenharia e Produtos"
+      },
+      "enterprise": {
+        "title": "empresa"
+      },
+      "enterpriseSearch": {
+        "title": "Pesquisa empresarial",
+        "description": "Encontre respostas rapidamente"
+      },
+      "forLife": {
+        "title": "vida"
+      },
+      "forWork": {
+        "title": "trabalhar"
+      },
+      "help": {
+        "title": "ajuda"
+      },
+      "it": {
+        "title": "IT"
+      },
+      "knowledgeBase": {
+        "title": "base de conhecimento",
+        "description": "Gerencie centralmente o conhecimento da equipe"
+      },
+      "marketing": {
+        "title": "mercado"
+      },
+      "personal": {
+        "title": "pessoal"
+      },
+      "productTours": {
+        "title": "Tour do produto"
+      },
+      "professional": {
+        "title": "profissionais"
+      },
+      "projects": {
+        "title": "Projeto",
+        "description": "Gerencie todos os projetos"
+      },
+      "security": {
+        "title": "seguro",
+        "description": "Seguro e escalável"
+      },
+      "smallBusinesses": {
+        "title": "equipe"
+      },
+      "startups": {
+        "title": "Empresa iniciante"
+      },
+      "templates": {
+        "title": "Modelo"
+      },
+      "webinars": {
+        "title": "Seminário on-line"
+      },
+      "whatsNew": {
+        "title": "Últimas notícias"
+      }
+    },
+    "footer": {
+      "productLeft": "3.5: Plataforma de desenvolvedor Deckwise. Veja o que há de novo",
+      "productRight": "Baixe o aplicativo Deckwise"
+    }
+  },
+  "pricing": {
+    "metadata": {
+      "title": "Preços IA do Deckwise",
+      "description": "Compare o Deckwise Free e o Plus para criar apresentações com IA, arquivos de projeto, fluxos de equipe e apresentações editáveis."
+    },
+    "aria": {
+      "billingOptions": "Opções de faturamento",
+      "included": "Já incluído",
+      "plans": "Plano",
+      "trustedTeams": "Equipes usando Deckwise"
+    },
+    "hero": {
+      "title": "Preços",
+      "logoStrip": "Essas equipes estão usando"
+    },
+    "billing": {
+      "monthly": "Pague mensalmente",
+      "yearly": "Pague anualmente",
+      "save": "Economize até 20%",
+      "pricesNote": "Os preços são mostrados em dólares americanos"
+    },
+    "groups": {
+      "essentials": {
+        "eyebrow": "Noções básicas",
+        "title": "Adequado para organizar o trabalho pessoal e em equipe."
+      },
+      "workspace": {
+        "eyebrow": "Workspace com IA",
+        "title": "Adequado para execução de trabalho em equipe."
+      }
+    },
+    "plans": {
+      "badge": "Recomendado",
+      "currentCta": "Plano atual",
+      "free": {
+        "name": "Free",
+        "description": "Organize seu trabalho pessoal e experimente fluxos de trabalho básicos de documentos e apresentações de slides.",
+        "price": "$0",
+        "priceNote": "mensal",
+        "cta": "Comece",
+        "features": {
+          "feature1": "500 créditos por mês",
+          "feature2": "Espaço básico do projeto",
+          "feature3": "Upload de arquivo limitado",
+          "feature4": "Convide até 10 pessoas"
+        }
+      },
+      "plus": {
+        "name": "Plus",
+        "description": "Adequado para indivíduos e pequenas equipes que usam Deckwise de forma estável.",
+        "price": "$12",
+        "priceNote": "mensal",
+        "cta": "Comece com Plus",
+        "features": {
+          "feature1": "2.000 créditos por mês",
+          "feature2": "Histórico de página de 30 dias",
+          "feature3": "Uploads ilimitados de arquivos",
+          "feature4": "Convide até 100 convidados"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "Adequado para apresentações mais frequentes, coleta de dados e fluxos de trabalho com IA.",
+        "price": "$25",
+        "priceNote": "mensal",
+        "cta": "Comece com Pro",
+        "features": {
+          "feature1": "2.000 créditos por mês",
+          "feature2": "SAML SSO",
+          "feature3": "Permissões avançadas",
+          "feature4": "Espaço privado para equipe"
+        }
+      },
+      "ultra": {
+        "name": "Ultra",
+        "description": "Adequado para produção pesada, processamento em lote e fluxos de trabalho de equipe de alto volume.",
+        "price": "$100",
+        "priceNote": "mensal",
+        "cta": "Comece com Ultra",
+        "features": {
+          "feature1": "40.000 créditos por mês",
+          "feature2": "O usuário ativa automaticamente",
+          "feature3": "Registro de auditoria",
+          "feature4": "Suporte dedicado ao sucesso"
+        }
+      }
+    },
+    "quote": {
+      "company": "OpenAI",
+      "body": "Colocar todo o trabalho na mesma plataforma traz grande poder.",
+      "author": "Brad Lightcap, COO"
+    },
+    "addons": {
+      "agents": {
+        "title": "Agentes personalizados",
+        "description": "Automatize o trabalho que depende do conhecimento da sua equipe."
+      },
+      "seats": {
+        "title": "Licenças de IA",
+        "description": "Permita que os colegas de equipe obtenham respostas rapidamente no contexto do seu espaço de trabalho."
+      }
+    },
+    "comparison": {
+      "title": "Soluções e recursos",
+      "headings": {
+        "feature": "Função",
+        "free": "Free",
+        "plus": "Plus",
+        "pro": "Pro",
+        "ultra": "Ultra"
+      },
+      "groups": {
+        "coreWorkspace": "espaço de trabalho principal",
+        "aiCollaboration": "Fluxo de trabalho com IA",
+        "securityAdmin": "Segurança e gerenciamento"
+      },
+      "rows": {
+        "pagesDocs": "Páginas, slides e documentos",
+        "projectSpaces": "Espaço de projeto compartilhado",
+        "fileUploads": "Carregamento de arquivo",
+        "versionHistory": "Histórico de versões",
+        "aiSearch": "Pesquisa e escrita com IA",
+        "meetingNotes": "Ata de reunião com IA",
+        "customAgents": "Agentes personalizados",
+        "guests": "Visitante",
+        "adminAnalytics": "Análise do administrador",
+        "samlSso": "SAML SSO",
+        "scim": "SCIM ativado automaticamente",
+        "auditLog": "Registro de auditoria"
+      },
+      "values": {
+        "addOn": "compra complementar",
+        "advanced": "Avançado",
+        "custom": "Personalizado",
+        "included": "Já incluído",
+        "limited": "limitado",
+        "ninetyDays": "90 dias",
+        "oneHundred": "100",
+        "sevenDays": "7 dias",
+        "ten": "10",
+        "thirtyDays": "30 dias",
+        "trial": "julgamento",
+        "twoFifty": "250",
+        "unlimited": "ilimitado"
+      }
+    },
+    "enterprise": {
+      "controls": {
+        "title": "Precisa de controle de nível empresarial?",
+        "body": "Coloque segurança, provisionamento automático, auditoria e suporte no mesmo plano de implantação."
+      },
+      "rollout": {
+        "title": "Quer implementar para várias equipes?",
+        "body": "Podemos ajudar a planejar espaços de trabalho, permissões e modelos antes de entrar no ar."
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "freeTrial": {
+        "question": "Posso experimentar o Deckwise gratuitamente?",
+        "answer": "Sim. O plano Free permite criar workspaces, convidar equipes pequenas e testar os principais fluxos de documentos e apresentações antes de fazer upgrade."
+      },
+      "switchPlans": {
+        "question": "Posso mudar de plano no futuro?",
+        "answer": "Sim. Usuários pagantes podem gerenciar a cobrança mensal ou anual pelo portal hospedado da Stripe."
+      },
+      "aiPricing": {
+        "question": "O que está incluído no Plus?",
+        "answer": "Free e Plus incluem uso de IA. O Plus oferece um limite semanal maior e libera exportações editáveis para PowerPoint e Google Slides."
+      },
+      "annualBilling": {
+        "question": "Suporta pagamento anual?",
+        "answer": "Apoiar. Os planos pagos estão disponíveis anualmente e são adequados para equipes que exigem uso estável em nível empresarial."
+      }
+    }
+  },
+  "careersPage": {
+    "metadata": {
+      "title": "Carreiras na Deckwise: Crie fluxos de trabalho de apresentação com IA",
+      "description": "Junte-se ao Deckwise para criar o software de apresentação com IA para equipes que transformam pesquisas, arquivos e feedback em apresentações de slides editáveis."
+    },
+    "hero": {
+      "eyebrow": "Junte-se a Deckwise",
+      "title": "Junte-se a nós na construção da próxima geração de ferramentas de trabalho do conhecimento.",
+      "body": "Quando as equipes podem adaptar o software ao modo como realmente trabalham, mais problemas são resolvidos com mais rapidez. Nossa missão é tornar workspaces que conectam conhecimento, projetos e IA disponíveis para todos.",
+      "button": "Ver vagas abertas"
+    },
+    "story": {
+      "title": "nossa história",
+      "body1": "O Deckwise nasceu de uma pergunta simples: por que o trabalho em equipe fica mais fragmentado à medida que as ferramentas se multiplicam? Documentos, arquivos, chats e demos continuam crescendo, mas o verdadeiro contexto do projeto muitas vezes não tem um lugar estável.",
+      "body2": "Esperamos criar um workspace que a equipe possa moldar livremente: leve como uma folha em branco, mas capaz de acomodar projetos complexos, bases de conhecimento, materiais e assistência com IA.",
+      "body3": "Isso exige que as equipes de produto, engenharia, design, pesquisa, marketing e clientes trabalhem em estreita colaboração. Procuramos pessoas que estejam dispostas a aprimorar ferramentas básicas a longo prazo."
+    },
+    "positions": {
+      "title": "posições abertas",
+      "filterLabel": "Filtro",
+      "location": "localização",
+      "department": "Departamento",
+      "allLocations": "Todos os locais",
+      "allDepartments": "Todos os departamentos",
+      "reset": "Redefinir filtro",
+      "departments": {
+        "engineering": "Engenharia",
+        "design": "projeto",
+        "product": "Produtos",
+        "marketing": "mercado",
+        "customer": "Equipe de conta"
+      },
+      "jobs": {
+        "aiEngineer": {
+          "title": "Engenheiro de aplicações de IA",
+          "location": "Xangai / remoto",
+          "department": "engenharia"
+        },
+        "frontendEngineer": {
+          "title": "Engenheiro front-end, experiência em editor",
+          "location": "Pequim / remoto",
+          "department": "engenharia"
+        },
+        "productDesigner": {
+          "title": "Designer de Produto, Ferramentas de Criação",
+          "location": "Xangai",
+          "department": "projeto"
+        },
+        "productManager": {
+          "title": "Gerente de Produto, Fluxos com IA",
+          "location": "remoto",
+          "department": "produto"
+        },
+        "growthMarketing": {
+          "title": "Gerente de Mercado de Crescimento",
+          "location": "Shenzhen/remoto",
+          "department": "marketing"
+        },
+        "customerSuccess": {
+          "title": "Gerente de sucesso do cliente",
+          "location": "Pequim",
+          "department": "cliente"
+        }
+      }
+    },
+    "culture": {
+      "title": "Como funciona Deckwise",
+      "body": "Acreditamos que os melhores produtos nascem do uso constante, de feedback direto e de um critério de qualidade exigente. A equipe permanece pequena, focada e rápida diante de problemas reais dos usuários.",
+      "items": {
+        "craft": {
+          "title": "Preste atenção ao artesanato",
+          "body": "Nós nos preocupamos com os detalhes, o desempenho, a facilidade de manutenção e a suavidade que os usuários realmente sentem todos os dias."
+        },
+        "speed": {
+          "title": "manter a velocidade",
+          "body": "Use limites claros e comunicação direta para reduzir a espera e transformar boas ideias em produtos verificáveis ​​o mais rápido possível."
+        },
+        "truth": {
+          "title": "perseguir fatos",
+          "body": "Seja honesto diante dos dados, do feedback dos usuários e das restrições técnicas e use evidências para orientar decisões."
+        }
+      }
+    },
+    "values": {
+      "title": "nossos valores",
+      "items": {
+        "mission": "assumir a responsabilidade pela missão",
+        "direct": "Gentil e direto",
+        "users": "Comece com os problemas do usuário",
+        "systems": "Construa sistemas de longo prazo"
+      }
+    },
+    "benefits": {
+      "title": "Benefícios e Suporte",
+      "items": {
+        "health": "Apoio à saúde e seguros",
+        "setup": "Orçamento de equipamento de escritório",
+        "learning": "Orçamento de Aprendizagem e Crescimento",
+        "flex": "Arranjos de escritório flexíveis",
+        "offsite": "Cocriação de equipe e offsite"
+      }
+    },
+    "mockup": {
+      "video": "Cotidiano da equipe",
+      "office": "cultura de escritório",
+      "roles": "posições abertas",
+      "team": "equipe multifuncional"
+    }
+  },
+  "securityPage": {
+    "metadata": {
+      "title": "Segurança Deckwise: controles de privacidade para apresentações com IA",
+      "description": "Veja como o Deckwise protege os projetos de apresentação com IA com controles de privacidade, limites seguros do espaço de trabalho e confiabilidade empresarial."
+    },
+    "hero": {
+      "eyebrow": "Segurança e privacidade",
+      "title": "Sua segurança, proteção e privacidade são nossas prioridades.",
+      "body": "O Deckwise protege dados da equipe em design de produto, infraestrutura, controle de permissões e uso de IA, permitindo que empresas reúnam conhecimento e projetos com segurança no mesmo workspace.",
+      "button": "Saiba mais sobre soluções empresariais"
+    },
+    "sections": {
+      "security": {
+        "title": "seguro",
+        "body": "Deckwise usa uma abordagem de segurança desde o design para proteger os dados. Da transmissão ao armazenamento e ao processamento, reduzimos o risco através de controles em camadas.",
+        "items": {
+          "infrastructure": {
+            "title": "infraestrutura de segurança",
+            "body": "A transmissão e o armazenamento de dados são protegidos com criptografia e a exposição é reduzida por meio de acesso com privilégios mínimos, gerenciamento de chaves, monitoramento e processos de correção de vulnerabilidades."
+          },
+          "operations": {
+            "title": "Segurança operacional",
+            "body": "As equipes de segurança monitoram continuamente a infraestrutura, a rede e os ativos de produtos para responder prontamente a comportamentos anormais e ameaças potenciais."
+          },
+          "product": {
+            "title": "segurança do produto",
+            "body": "Os administradores corporativos podem configurar SSO, provisionamento de membros, registros de auditoria, acesso de convidados e permissões refinadas para aprimorar a visibilidade e o controle organizacional."
+          }
+        }
+      },
+      "privacy": {
+        "title": "Privacidade",
+        "body": "O Deckwise se compromete a tratar dados de clientes de forma transparente e controlada, ajudando clientes a entender como os dados são coletados, usados e protegidos.",
+        "items": {
+          "data": {
+            "title": "Processamento de dados",
+            "body": "Estabelecemos processos e proteções para todo o ciclo de vida dos dados, incluindo coleta, processamento, armazenamento, acesso e exclusão."
+          },
+          "agreements": {
+            "title": "Acordos e Compromissos",
+            "body": "Nosso contrato de serviço, termos de processamento de dados e declaração de privacidade são continuamente atualizados para refletir regulamentos e práticas do setor."
+          },
+          "governance": {
+            "title": "governança de dados",
+            "body": "Ajudamos clientes a manter seus dados seguros, precisos, privados e gerenciáveis por meio de políticas claras e limites de acesso."
+          }
+        }
+      },
+      "compliance": {
+        "title": "Conformidade",
+        "body": "O Deckwise está construindo um programa de segurança e privacidade para clientes corporativos, ajudando equipes a gerenciar workspaces de acordo com padrões do setor.",
+        "items": {
+          "soc": "Preparação SOC 2 Tipo 2",
+          "iso": "Planejamento ISO 27001/27701",
+          "access": "Controle de acesso corporativo",
+          "audit": "Recursos de auditoria e registro"
+        }
+      },
+      "ai": {
+        "title": "Governança de IA",
+        "body": "Os recursos de IA do Deckwise são projetados em torno de confiabilidade, explicabilidade e controle. Os dados do cliente não serão usados para treinar modelos genéricos, e os limites de permissão serão respeitados no acesso por IA.",
+        "items": {
+          "safe": "habilitação de segurança",
+          "transparent": "Instruções transparentes",
+          "useful": "Concentre-se no valor do usuário",
+          "governed": "Governança de limites de dados"
+        }
+      },
+      "reliability": {
+        "title": "Confiabilidade",
+        "body": "As equipes precisam de um espaço de trabalho que esteja sempre disponível. Deckwise melhora a confiabilidade do serviço por meio de monitoramento, backups, planos de recuperação e transparência de status.",
+        "items": {
+          "uptime": "Projetado para disponibilidade de 99,9%",
+          "backup": "Processo de backup e recuperação",
+          "status": "Status transparente",
+          "resilience": "Infraestrutura resiliente"
+        }
+      }
+    },
+    "cta": {
+      "title": "Precisa de segurança e controles avançados?",
+      "body": "Conte-nos sobre suas necessidades de implantação corporativa, conformidade ou permissões e nós o ajudaremos a planejar a solução de espaço de trabalho certa.",
+      "button": "entre em contato com vendas"
+    },
+    "mockup": {
+      "trust": "Central de Confiança",
+      "permission": "Controle de permissão",
+      "audit": "Registro de auditoria",
+      "encryption": "Proteção de criptografia",
+      "ai": "Limites de dados de IA"
+    }
+  },
+  "blogPage": {
+    "metadata": {
+      "title": "Blog do Deckwise: dicas para fluxos de apresentação com IA",
+      "description": "Leia artigos Deckwise sobre fluxos de trabalho de apresentação com IA, criação de deck assistido por agente, atualizações de produtos e gerenciamento de conhecimento."
+    },
+    "hero": {
+      "eyebrow": "Ferramentas e artesanato",
+      "title": "Ferramentas e engenhosidade",
+      "body": "Observações sobre o futuro do trabalho, experiências de construção de produtos e histórias de como as equipes estão transformando conhecimento em execução mais rápida.",
+      "categoryLabel": "Categorias de blogs",
+      "latestTitle": "Artigos mais recentes",
+      "searchLabel": "Pesquisar blog",
+      "searchPlaceholder": "Pesquise artigos, autores ou tópicos"
+    },
+    "categories": {
+      "latest": "Mais recente",
+      "hq": "QG Deckwise",
+      "teams": "equipe",
+      "inspiration": "inspiração",
+      "builders": "construtor",
+      "pioneers": "Equipe Pioneira",
+      "tech": "tecnologia",
+      "mail": "Correspondência"
+    },
+    "featured": {
+      "category": "QG Deckwise",
+      "title": "Apresentando a plataforma de desenvolvedor Deckwise",
+      "body": "Novos recursos de desenvolvedor conectam dados, ferramentas e agentes para que as equipes possam ampliar processos, criar contexto e automatizar trabalhos repetitivos no mesmo espaço de trabalho.",
+      "author": "Max Chen",
+      "role": "Proprietário do produto, Deckwise"
+    },
+    "articles": {
+      "developerPlatform": {
+        "category": "QG Deckwise",
+        "title": "Apresentando a plataforma de desenvolvedor Deckwise",
+        "body": "Um novo conjunto de blocos de construção que permite que desenvolvedores e agentes se conectem de maneira mais natural ao conhecimento, aos projetos e às ferramentas de negócios de suas equipes.",
+        "author": "Max Chen",
+        "role": "proprietário do produto"
+      },
+      "customAgentsBeta": {
+        "category": "QG Deckwise",
+        "title": "O que aprendemos com a versão beta dos agentes personalizados",
+        "body": "Para que um agente se torne um verdadeiro companheiro de equipe, ele precisa não apenas executar comandos, mas também compreender o contexto, os limites e o ritmo da colaboração da equipe.",
+        "author": "Akshay Lin",
+        "role": "Cofundador"
+      },
+      "multiRegionData": {
+        "category": "tecnologia",
+        "title": "Crie um sistema de dados multirregional",
+        "body": "Da busca e análise ao registro de eventos de IA, como equipes podem projetar uma infraestrutura escalável de regionalização de dados.",
+        "author": "Justin Lee, Adam Hudson",
+        "role": "Equipe de engenharia"
+      },
+      "executionTax": {
+        "category": "inspiração",
+        "title": "Elimine a taxa de execução da equipe",
+        "body": "Por que muitas equipes não carecem de ideias, mas sim de uma camada de trabalho unificada para avançar continuamente nas decisões para obter resultados?",
+        "author": "Áine Dundas",
+        "role": "crescimento e mercados"
+      },
+      "schemaChanges": {
+        "category": "tecnologia",
+        "title": "Como detectar alterações significativas no esquema antes de ir ao ar",
+        "body": "Um processo de design de guardrail de CI e como ele ajuda as equipes de engenharia a reduzir o risco de regressões.",
+        "author": "Maya Lekhi",
+        "role": "Equipe de engenharia"
+      },
+      "dataResidency": {
+        "category": "QG Deckwise",
+        "title": "Capacidades de residência de dados expandidas para mais regiões",
+        "body": "Os clientes corporativos precisam manter os dados na região certa e estamos tornando os recursos de regionalização um recurso fundamental para o espaço de trabalho.",
+        "author": "Fuzzy Khosrowshahi",
+        "role": "diretor de tecnologia"
+      },
+      "pageDesign": {
+        "category": "tecnologia",
+        "title": "Redesenhe as regras visuais da página",
+        "body": "Como reorganizamos a densidade da página, a hierarquia de títulos e os blocos de conteúdo para manter claro o trabalho complexo.",
+        "author": "Paulo Velleux",
+        "role": "design de produto"
+      },
+      "chronicleLaunch": {
+        "category": "equipe",
+        "title": "Como uma equipe usa Deckwise para gerenciar grandes lançamentos",
+        "body": "Da publicação de listas de verificação à colaboração multifuncional, como um espaço de trabalho claro pode tornar nós importantes mais controláveis.",
+        "author": "Mayuresh Patole",
+        "role": "Fundador e CEO"
+      },
+      "agentSecurity": {
+        "category": "tecnologia",
+        "title": "Como construímos modelos de segurança para agentes",
+        "body": "Quanto mais profunda for a automação do agente, mais permissões, auditoria e validação humana precisarão ser projetadas no produto subjacente.",
+        "author": "Sean Keenan, Jacob Brackett",
+        "role": "Segurança e Engenharia"
+      }
+    },
+    "newsletter": {
+      "title": "Continue lendo para a próxima etapa de como as coisas funcionam",
+      "body": "Receba os artigos e casos mais recentes sobre fluxos de trabalho com IA, gestão de conhecimento em equipe e criação de produtos.",
+      "button": "Comece com Deckwise"
+    }
+  },
+  "mobilePage": {
+    "metadata": {
+      "title": "Deckwise Mobile: revise projetos de apresentação com IA em qualquer lugar",
+      "description": "Use o Deckwise no iOS e Android para revisar projetos de apresentação com IA, capturar ideias e avançar nas apresentações de qualquer lugar."
+    },
+    "hero": {
+      "eyebrow": "Versão móvel Deckwise",
+      "title": "Leve seu trabalho com você a qualquer hora e em qualquer lugar.",
+      "body": "Veja projetos, anote ideias, comente rascunhos e deixe a IA ajudar você a transformar ideias em entregáveis pelo celular."
+    },
+    "storeButtons": {
+      "appStore": "Loja de aplicativos",
+      "googlePlay": "Google Reproduzir",
+      "downloadOn": "Baixado de",
+      "getItOn": "Obtido de"
+    },
+    "features": {
+      "title": "Do desktop ao celular, o trabalho está sempre conectado.",
+      "items": {
+        "capture": {
+          "title": "Capture ideias à medida que elas acontecem",
+          "body": "Coloque rapidamente a inspiração pós-reunião, o feedback do cliente e as tarefas pendentes no contexto do projeto."
+        },
+        "review": {
+          "title": "Veja rascunhos a qualquer momento",
+          "body": "Revise apresentações, documentos e materiais importantes do projeto em qualquer lugar."
+        },
+        "ai": {
+          "title": "Assistente móvel de IA",
+          "body": "Faça perguntas, resuma o conteúdo com base nas informações existentes e passe para a próxima etapa."
+        },
+        "sync": {
+          "title": "Sincronize entre dispositivos",
+          "body": "As atualizações no seu telefone voltarão para o mesmo espaço de trabalho, sem necessidade de movê-las para frente e para trás."
+        }
+      }
+    },
+    "quote": {
+      "body": "Quando materiais de projeto, rascunhos e próximos passos estão disponíveis no celular, as equipes conseguem continuar avançando mesmo longe do desktop.",
+      "author": "Equipe de conta Deckwise"
+    },
+    "cta": {
+      "title": "Baixe Deckwise para celular.",
+      "body": "Leve contexto de projeto, assistentes de IA e fluxos de apresentação para iOS e Android.",
+      "button": "Comece de graça"
+    },
+    "mockup": {
+      "workspace": "Plano de lançamento no mercado",
+      "ai": "Resumo com IA",
+      "task": "Próxima etapa",
+      "comment": "Os comentários foram sincronizados"
+    }
+  },
+  "desktopPage": {
+    "metadata": {
+      "title": "Deckwise Desktop: edição mais rápida de apresentações com IA",
+      "description": "Baixe o desktop Deckwise para obter um espaço de trabalho de apresentação com IA focado com acesso mais rápido ao projeto, contexto de arquivo e fluxos de trabalho de slides editáveis."
+    },
+    "hero": {
+      "eyebrow": "Área de trabalho Deckwise",
+      "title": "Baixe o aplicativo de desktop para uma experiência mais rápida.",
+      "body": "Rápido, conciso e menos intrusivo. Reúna arquivos de projeto, assistentes de IA e editores de apresentação em uma janela dedicada."
+    },
+    "primaryCta": "Baixar para macOS",
+    "quote": {
+      "body": "Ao reunir contexto do projeto, rascunhos e assistentes de IA em um workspace no desktop, as equipes alternam muito menos entre ferramentas.",
+      "author": "Equipe de conta Deckwise",
+      "role": "Gerente de Operações e Marketing"
+    },
+    "download": {
+      "title": "Baixar Deckwise Desktop",
+      "subtitle": "Uma experiência de trabalho mais rápida e focada está pronta.",
+      "items": {
+        "macUniversal": "Baixe o macOS Edição Universal",
+        "macApple": "Baixe o macOS Apple Silicon Edition",
+        "macIntel": "Baixe a versão macOS Intel",
+        "windowsX64": "Baixar para Windows x64",
+        "windowsArm": "Baixe a versão Windows Arm / Arm64"
+      }
+    },
+    "features": {
+      "offline": {
+        "title": "Reduza as distrações do navegador",
+        "body": "Mantenha apresentações, materiais de projeto e fluxos de trabalho com IA em uma janela separada."
+      },
+      "fast": {
+        "title": "Volte ao trabalho mais rápido",
+        "body": "Abra projetos recentes diretamente do Dock ou da barra de tarefas para retomar rapidamente a edição."
+      },
+      "sync": {
+        "title": "Sincronize entre dispositivos",
+        "body": "Desktop, web e mobile compartilham o mesmo contexto de projeto."
+      }
+    },
+    "mockup": {
+      "workspace": "Espaço de trabalho de lançamento de produto",
+      "document": "Rascunho de apresentação",
+      "agent": "Assistente de IA",
+      "status": "Sincronizando"
+    }
+  },
+  "enterprisePage": {
+    "metadata": {
+      "title": "Deckwise Enterprise: workspace seguro para apresentações com IA",
+      "description": "Saiba como o Deckwise oferece às equipes corporativas um espaço de trabalho de apresentação com IA seguro para arquivos de projeto, governança e fluxos de trabalho confiáveis."
+    },
+    "hero": {
+      "eyebrow": "Deckwise para empresas",
+      "title": "Conhecimento e trabalho estão conectados.",
+      "body": "Um workspace seguro com IA que ajuda equipes corporativas a centralizar conhecimento, planejar projetos e avançar mais rápido dentro do mesmo contexto.",
+      "primaryCta": "Comece"
+    },
+    "trust": {
+      "label": "Aprovado por equipes inovadoras e de rápido crescimento"
+    },
+    "stats": {
+      "first": {
+        "value": "#1",
+        "label": "Um workspace unificado para bases de conhecimento, projetos e escrita com IA"
+      },
+      "second": {
+        "value": "1 lugar",
+        "label": "Centralize o conhecimento da empresa, planos de projetos, dados e decisões"
+      },
+      "third": {
+        "value": "Pronto para IA",
+        "label": "Torne o conhecimento da equipe pesquisável, reutilizável e acionável"
+      }
+    },
+    "features": {
+      "items": {
+        "knowledge": {
+          "title": "Conhecimento da empresa",
+          "body": "Coloque manuais, processos, planos de lançamento e contexto da equipe em uma página inicial claramente organizada, pesquisável e precisa."
+        },
+        "search": {
+          "title": "Pesquisa empresarial",
+          "body": "Encontre respostas rapidamente no Deckwise e em aplicativos conectados e deixe seu conhecimento fluir enquanto você trabalha."
+        },
+        "projects": {
+          "title": "Projeto de integração",
+          "body": "Planeje tarefas, acompanhe o progresso, alinhe equipes e conecte resumos, decisões e resultados."
+        },
+        "integrations": {
+          "title": "Fluxo de trabalho e conexões",
+          "body": "Automatize processos, conecte ferramentas comuns e reúna arquivos, conversas e sinais externos no mesmo espaço de trabalho."
+        }
+      }
+    },
+    "ai": {
+      "title": "IA multifuncional, exatamente onde você trabalha.",
+      "items": {
+        "context": {
+          "title": "IA com o contexto certo",
+          "body": "Não é outra caixa de bate-papo genérica, mas uma que entende questões com base no conhecimento da equipe, projetos e fluxos de trabalho."
+        },
+        "oneTool": {
+          "title": "Uma ferramenta IA para vários trabalhos",
+          "body": "Faça brainstorming, escreva, pesquise, gere demonstrações, organize reuniões e avance processos, tudo em um só lugar."
+        },
+        "integrated": {
+          "title": "Integre-se ao trabalho diário",
+          "body": "Não é preciso alternar entre aplicativos nem copiar contexto. A IA aparece diretamente onde você planeja, constrói e acompanha o trabalho."
+        },
+        "secure": {
+          "title": "Poderoso e seguro",
+          "body": "Os controles de governança, segurança e gerenciamento da IA de nível empresarial ajudam as equipes a usar a IA em um ambiente bem delimitado."
+        }
+      }
+    },
+    "values": {
+      "items": {
+        "empowering": {
+          "title": "Fácil de começar e a equipe deseja usá-lo.",
+          "body": "As ferramentas empresariais precisam ser poderosas, mas também precisam de intuição. Deckwise permite que as equipes organizem trabalhos complexos em páginas, projetos e bibliotecas familiares."
+        },
+        "customizable": {
+          "title": "Personalização flexível para crescer com sua equipe.",
+          "body": "Os espaços de trabalho podem ser adaptados a diferentes equipas, permissões e processos, reduzindo a proliferação de ferramentas pontuais e reduzindo os custos de manutenção."
+        },
+        "connected": {
+          "title": "Cada equipe está sempre na mesma página.",
+          "body": "Conecte ferramentas, equipes e trabalho em um workspace pesquisável para manter as equipes alinhadas, avançar mais rápido e tomar decisões melhores."
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Seja amado pela equipe de inovação.",
+      "items": {
+        "figma": {
+          "logo": "Figura",
+          "quote": "Quando as informações estão claramente estruturadas, as equipes podem encontrar o conteúdo de forma mais intuitiva e lembrar onde está o contexto.",
+          "person": "Marie Szuts",
+          "role": "Operações de pessoas"
+        },
+        "remote": {
+          "logo": "Remoto",
+          "quote": "O conhecimento centralizado permite que novos membros encontrem informações mais rapidamente, encurtando o tempo desde a adesão até a produção real.",
+          "person": "Scott Entwistle",
+          "role": "Recrutamento"
+        },
+        "match": {
+          "logo": "Corresponder",
+          "quote": "Os espaços de trabalho compartilhados são uma forma fundamental de agilizar o fluxo de trabalho e reduzir a comunicação repetitiva.",
+          "person": "Rahim Makani",
+          "role": "Produto"
+        },
+        "toyota": {
+          "logo": "Toyota",
+          "quote": "Quando os detalhes e o progresso das tarefas são sincronizados com mais facilidade, as equipes podem economizar tempo e reduzir o custo das atualizações de status.",
+          "person": "Taku Wakasugi",
+          "role": "Pesquisar"
+        },
+        "ramp": {
+          "logo": "Rampa",
+          "quote": "A IA pode cuidar de grande parte da organização administrativa, permitindo que as equipes de produto se concentrem novamente no que realmente está sendo construído.",
+          "person": "Geoff Charles",
+          "role": "CPO"
+        },
+        "openai": {
+          "logo": "OpenAI",
+          "quote": "Problemas que antes levavam horas para diagnosticar agora podem ser resolvidos em minutos ao consultar conhecimento técnico no workspace.",
+          "person": "John Allard",
+          "role": "Engenharia"
+        }
+      }
+    },
+    "product": {
+      "title": "Simplifique o desenvolvimento do seu produto.",
+      "body": "Gerencie requisitos, pesquisas, especificações, planejamento de lançamento e análises em um hub conectado para ajudar as equipes a criar produtos melhores com mais rapidez.",
+      "cta": "Saber mais"
+    },
+    "connections": {
+      "eyebrow": "Conexões",
+      "title": "Conecte todas as suas principais ferramentas.",
+      "body": "Reúna as ferramentas das quais sua equipe depende em um só lugar. Integre, sincronize, automatize fluxos de trabalho, incorpore informações valiosas e encontre respostas em aplicativos.",
+      "cta": "Veja todas as integrações"
+    },
+    "security": {
+      "title": "Crie com ousadia com o melhor suporte e segurança da categoria.",
+      "body": "Do planejamento de implantação ao gerenciamento de identidade, conformidade, segurança e governança de IA, o Deckwise fornece o suporte e o controle necessários para implantações corporativas em escala.",
+      "items": {
+        "services": {
+          "title": "Serviços profissionais",
+          "body": "Projete, implante e automatize espaços de trabalho empresariais com experiência especializada."
+        },
+        "guidance": {
+          "title": "Orientação exclusiva",
+          "body": "A equipe de sucesso do cliente auxilia na configuração do espaço de trabalho, no treinamento de entrada em operação e nas melhores práticas."
+        },
+        "support": {
+          "title": "Suporte premium",
+          "body": "Forneça suporte mais proativo e personalizado para necessidades de equipe mais complexas."
+        },
+        "sso": {
+          "title": "Gerenciamento de identidade",
+          "body": "Dê aos funcionários acesso seguro aos espaços de trabalho com SAML SSO."
+        },
+        "scim": {
+          "title": "SCIM ativado automaticamente",
+          "body": "Crie, remova, atualize e sincronize usuários e grupos com mais facilidade."
+        },
+        "management": {
+          "title": "Gerenciamento de espaço de trabalho e domínio",
+          "body": "Gerencie centralmente configurações de segurança, conformidade, análise, auditoria e domínio."
+        },
+        "compliance": {
+          "title": "Padrões de segurança e conformidade",
+          "body": "Organize recursos de controle em torno de compras empresariais, revisão de conformidade e requisitos de proteção de dados."
+        },
+        "governance": {
+          "title": "Governança de IA",
+          "body": "Defina claramente os limites dos dados corporativos e como a IA é usada para reduzir riscos de prompt."
+        }
+      }
+    },
+    "resources": {
+      "title": "Recursos para ajudá-lo a começar.",
+      "items": {
+        "report": {
+          "title": "Como a IA está mudando o trabalho do conhecimento",
+          "body": "Entenda como as equipes empresariais transformam o conhecimento compartilhado em decisões e execuções mais rápidas.",
+          "cta": "Leia o relatório"
+        },
+        "hub": {
+          "title": "Centro centralizado de desenvolvimento de produtos",
+          "body": "Aprenda como organizar requisitos, especificações, pesquisas e atualizações de status em um centro pesquisável.",
+          "cta": "Guia de leitura"
+        },
+        "tour": {
+          "title": "Espaço de trabalho empresarial com experiência de autoatendimento",
+          "body": "Veja como uma equipe usa Deckwise para gerenciar conhecimento, projetos e fluxos de trabalho com IA.",
+          "cta": "Iniciar passeio"
+        }
+      }
+    },
+    "cta": {
+      "title": "Um workspace com IA para cada equipe.",
+      "body": "Converse com um especialista sobre sua estrutura organizacional, requisitos de segurança e fluxos de equipe para ver como o Deckwise pode atender às suas necessidades.",
+      "button": "Comece com Deckwise"
+    }
+  },
+  "teamsPage": {
+    "metadata": {
+      "title": "Deckwise para equipes: fluxos de apresentação com IA",
+      "description": "Ajude equipes a usar o Deckwise para conectar arquivos de projeto, rascunhos com IA, slides editáveis, revisões e fluxos de apresentação compartilhados em um único workspace."
+    },
+    "hero": {
+      "title": "As equipes trabalham melhor juntas.",
+      "body": "Projetos, bases de conhecimento e documentação ficam lado a lado em um espaço de trabalho. Mantenha o contexto claro, desde equipes pequenas até organizações maiores.",
+      "primaryCta": "Comece de graça",
+      "secondaryCta": "Saiba mais sobre a Edição Enterprise"
+    },
+    "projects": {
+      "title": "Entregue projetos com mais rapidez",
+      "body": "Mantenha todos na mesma página desde a definição do escopo até o dia de entrada em operação. Gerencie projetos e execução de alto nível com quadros Kanban, cronogramas e visualizações de tarefas.",
+      "items": {
+        "planning": "plano do projeto",
+        "tasks": "quadro de tarefas",
+        "timeline": "cadência de liberação"
+      },
+      "quote": {
+        "body": "Quando avançamos em muitos projetos ao mesmo tempo, o mais importante é poder ver o quadro completo clicando a qualquer momento.",
+        "author": "Equipe de Operações e Marketing"
+      }
+    },
+    "digitalOffice": {
+      "title": "seu escritório digital",
+      "body": "Diga adeus às pastas desordenadas e às múltiplas versões do mesmo documento. Coloque espaços de equipe, materiais e decisões em um local central para que todos saibam onde procurar respostas.",
+      "spaces": {
+        "general": "Em geral",
+        "engineering": "Engenharia",
+        "sales": "Vendas",
+        "marketing": "Marketing",
+        "managers": "Gerentes",
+        "operations": "Operações"
+      },
+      "quote": {
+        "body": "No passado, muito conhecimento só existia na mente de poucas pessoas. Agora as equipes podem descobrir por si mesmas e avançar rapidamente.",
+        "author": "Equipe de estratégia de inovação"
+      }
+    },
+    "docs": {
+      "title": "Mantenha todos na mesma página",
+      "body": "Atas de reuniões, planejamento de metas, documentação de processos e decisões importantes podem ser documentadas para que as partes relevantes saibam quem está fazendo o quê e quando.",
+      "items": {
+        "notes": "ata da reunião",
+        "goals": "planejamento de metas",
+        "decisions": "decisões-chave"
+      },
+      "quote": {
+        "body": "No passado, muitas vezes enviávamos e-mails de revisão de reuniões. Agora a equipe sabe onde procurar quando encontrar problemas de escopo ou cronograma.",
+        "author": "Equipe do curso de produto"
+      }
+    },
+    "freePlan": {
+      "title": "Comece com o plano gratuito",
+      "body": "Convide membros da equipe e organize o trabalho primeiro. Não há limite de tempo nem necessidade de cartão de crédito, então você pode experimentar antes de decidir se deseja fazer upgrade.",
+      "button": "Comece de graça",
+      "featuresTitle": "Recursos da equipe Deckwise",
+      "features": {
+        "collaboration": "Contexto do espaço de trabalho compartilhado",
+        "permissions": "Permissões personalizáveis",
+        "integrations": "API e integração de ferramentas",
+        "views": "Visualizações de quadro Kanban, linha do tempo e calendário",
+        "tasks": "Gerenciamento de tarefas e projetos",
+        "wiki": "Wiki da equipe e base de conhecimento",
+        "docs": "Belas notas e documentos",
+        "mobile": "Experiência móvel completa"
+      }
+    },
+    "teams": {
+      "title": "Adequado para todo tipo de equipe",
+      "body": "As questões variam de função para função, mas todas exigem um contexto claro, um plano executável e uma base de conhecimento sólida.",
+      "items": {
+        "engineering": {
+          "title": "Engenharia",
+          "body": "Coloque tarefas de sprint, especificações de código, correções de bugs e revisões de lançamento em um só lugar para fornecer recursos com mais rapidez.",
+          "cta": "Saber mais"
+        },
+        "product": {
+          "title": "Produtos",
+          "body": "Use pesquisas de usuários, roteiros e projetos multifuncionais para levar ideias à entrega real com mais rapidez.",
+          "cta": "Saber mais"
+        },
+        "design": {
+          "title": "projeto",
+          "body": "Unifique ativos, guias, protótipos e sistemas de design para permitir que as equipes estabeleçam uma linguagem de design consistente.",
+          "cta": "Saber mais"
+        }
+      }
+    },
+    "templates": {
+      "title": "Comece com um modelo",
+      "body": "Adicione o fluxo de trabalho predefinido ao espaço de trabalho da equipe e ajuste-o de acordo com o processo da própria equipe.",
+      "items": {
+        "designSystem": {
+          "title": "sistema de design",
+          "body": "Mantenha recursos de design, especificações e descrições de componentes compartilhados.",
+          "cta": "Usar modelos"
+        },
+        "roadmap": {
+          "title": "roteiro do produto",
+          "body": "Priorize grandes projetos em torno das prioridades anuais para manter a equipe em uma direção comum.",
+          "cta": "Usar modelos"
+        }
+      }
+    },
+    "reviews": {
+      "title": "Veja por que os clientes adoram Deckwise",
+      "subtitle": "As métricas de experiência com as quais a equipe mais se preocupa",
+      "body": "As ferramentas de equipe não devem ser apenas poderosas, mas também fáceis de usar, fáceis de gerenciar e capazes de atender aos requisitos reais de trabalho.",
+      "items": {
+        "easeUse": {
+          "value": "86%",
+          "label": "Facilidade de uso"
+        },
+        "easeAdmin": {
+          "value": "90%",
+          "label": "Fácil de gerenciar"
+        },
+        "requirements": {
+          "value": "91%",
+          "label": "atender às necessidades"
+        },
+        "setup": {
+          "value": "86%",
+          "label": "Fácil de configurar"
+        }
+      }
+    },
+    "cta": {
+      "title": "Experimente Deckwise hoje.",
+      "body": "Comece gratuitamente e crie um fluxo de trabalho de apresentação mais claro para sua equipe.",
+      "button": "Comece de graça"
+    }
+  },
+  "personalPage": {
+    "metadata": {
+      "title": "Deckwise Personal: rascunhos de apresentação com IA para indivíduos",
+      "description": "Use o Deckwise como um workspace pessoal de apresentações com IA para organizar ideias, rascunhar decks, gerenciar notas e aprimorar projetos com mais rapidez."
+    },
+    "hero": {
+      "title": "Deckwise tem algo para todos.",
+      "body": "Escreva notas, planeje, organize tarefas e gerencie sua vida em um só lugar. O uso pessoal é gratuito para começar agora.",
+      "button": "Cadastre-se",
+      "platforms": "Suporta web, celular, Mac e Windows",
+      "cards": {
+        "notes": "Notas",
+        "vacation": "planos de viagem",
+        "tasks": "Tarefa",
+        "writing": "escrita",
+        "improvement": "autoaperfeiçoamento",
+        "websites": "site pessoal"
+      }
+    },
+    "useCases": {
+      "title": "Veja como Deckwise funciona para pessoas diferentes",
+      "items": {
+        "notes": {
+          "title": "Faça anotações",
+          "body": "Capture ideias rapidamente e organize-as do seu jeito. Quer seja uma tarefa, um lembrete ou a próxima grande ideia, Deckwise pode ajudá-lo a lembrar-se disso.",
+          "story": "Registros de viagens, inspirações e tarefas podem ser levados com você, não mais espalhados em diferentes aplicativos."
+        },
+        "organized": {
+          "title": "Organize sua vida",
+          "body": "Orçamentos, receitas, artigos para leitura e informações podem ser colocados em uma página pessoal, sem a necessidade de reunir vários aplicativos.",
+          "story": "Ao reunir projetos de negócios, viagens e pessoais em um sistema personalizável, é mais fácil ter informações à mão."
+        },
+        "tasks": {
+          "title": "Rastrear tarefas",
+          "body": "Tudo, desde solicitações de trabalho até listas de tarefas, pode ser facilitado com uma simples lista de verificação ou um quadro de projeto detalhado.",
+          "story": "Vários manuscritos, vários progressos e vários status podem ser rastreados ao mesmo tempo, em vez de alternar pela memória."
+        },
+        "writing": {
+          "title": "comece a escrever",
+          "body": "Entre diretamente e deixe outras distrações para trás. Deckwise pode ser um lugar para se concentrar na escrita, arrastar e soltar, organizar e compartilhar feedback.",
+          "story": "Ao reunir pensamentos dispersos em capítulos, páginas e rascunhos, o processo de escrita torna-se mais sustentável."
+        },
+        "improvement": {
+          "title": "Continue melhorando",
+          "body": "Rastreamento de hábitos, listas de leitura, planos de condicionamento físico e avaliações podem ficar lado a lado no mesmo sistema.",
+          "story": "O Self-Improvement não é apenas mais um aplicativo de tarefas, mas está conectado aos seus registros, planos e materiais diários."
+        },
+        "websites": {
+          "title": "Construa um site",
+          "body": "Publique a página como um site público para exibir seu currículo, portfólio ou página inicial pessoal e facilitar que outras pessoas descubram você.",
+          "story": "Descrições de portfólio, currículo e projeto podem ser transformadas em páginas compartilháveis ​​diretamente de seu espaço de trabalho pessoal."
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Comece gratuitamente para sempre",
+      "title": "Projetado para ajudá-lo a fazer mais.",
+      "button": "Cadastre-se",
+      "items": {
+        "dragDrop": {
+          "title": "Arraste e solte para organizar ideias",
+          "body": "Pegue qualquer conteúdo e mova, combine e organize-o da maneira que funcionar melhor para você."
+        },
+        "contentTypes": {
+          "title": "Vários tipos de conteúdo",
+          "body": "Imagens, vídeos, títulos, incorporações e listagens podem ser colocados diretamente na página."
+        },
+        "navigation": {
+          "title": "Navegação clara",
+          "body": "As páginas podem ser aninhadas dentro de páginas e todos os níveis podem ser vistos rapidamente na barra lateral."
+        },
+        "collaboration": {
+          "title": "Contexto compartilhado",
+          "body": "Comentários, menções e links compartilhados ajudam você e outras pessoas a realizar mais."
+        }
+      }
+    },
+    "apps": {
+      "title": "comece agora",
+      "body": "Use o mesmo espaço de trabalho na Web, no desktop e no celular. Precisa usá-lo no trabalho? Confira também a Team Edition e a Enterprise Edition.",
+      "items": {
+        "web": {
+          "title": "Aplicativo da web",
+          "body": "Abra seu navegador para começar a gravar, organizar e compartilhar."
+        },
+        "desktop": {
+          "title": "Área de trabalho",
+          "body": "Mantenha uma experiência de trabalho mais focada em Mac e Windows."
+        },
+        "mobile": {
+          "title": "Terminal móvel",
+          "body": "Mantenha a inspiração e as tarefas em mãos no iOS e Android."
+        }
+      }
+    },
+    "templates": {
+      "title": "Comece com um modelo",
+      "body": "Após o registro, você pode começar com modelos como notas, diários, formulários de emprego e currículos e, em seguida, ajustá-los ao seu próprio sistema.",
+      "cta": "Navegar na galeria de modelos",
+      "items": {
+        "notes": "Notas",
+        "journal": "diário",
+        "job": "Registro de procura de emprego",
+        "resume": "Retomar"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": {
+        "oldPlan": {
+          "question": "E se eu já estiver em um plano pessoal antigo?",
+          "answer": "Você pode continuar a usar o conteúdo existente e organizar suas anotações, tarefas e materiais de maneiras novas e pessoais."
+        },
+        "guests": {
+          "question": "Posso compartilhar meu trabalho?",
+          "answer": "Sim. Você pode compartilhar ou exportar seu trabalho quando estiver pronto, mantendo o apresentação editável em Deckwise."
+        },
+        "multipleMembers": {
+          "question": "E se eu quiser usá-lo com várias pessoas?",
+          "answer": "Quando o trabalho pessoal se transforma em um fluxo de trabalho de equipe, você pode mudar para a página da equipe para saber mais sobre planos maiores."
+        },
+        "teamTrial": {
+          "question": "As equipes podem experimentá-lo gratuitamente?",
+          "answer": "Sim. Você pode criar espaços de trabalho de equipe para organizar projetos e documentos primeiro e depois atualizá-los conforme necessário."
+        }
+      }
+    },
+    "cta": {
+      "title": "Experimente Deckwise hoje.",
+      "body": "Comece gratuitamente e mantenha anotações, planos, tarefas e projetos pessoais em um só lugar.",
+      "button": "Comece de graça"
+    }
+  },
+  "customerStory": {
+    "openai": {
+      "metadata": {
+        "title": "História de cliente OpenAI: fluxos de deck mais rápidos com Deckwise",
+        "description": "Veja como as equipes podem usar o Deckwise para compartilhar o contexto do projeto, reutilizar conhecimento, redigir apresentações e passar mais rapidamente da pesquisa para apresentações editáveis."
+      },
+      "aria": {
+        "partner": "Deckwise e OpenAI",
+        "playVideo": "Reproduzir vídeo do caso do cliente"
+      },
+      "hero": {
+        "eyebrow": "Casos em destaque",
+        "title": "Como OpenAI transforma conhecimento compartilhado em fluxos de trabalho mais rápidos com Deckwise"
+      },
+      "lede": "Por trás de cada sistema de IA está a base do conhecimento humano. A equipe da OpenAI precisava de um lugar para capturar esse conhecimento, organizar o contexto do projeto e transformar ideias compartilhadas em execução mais rápida.",
+      "sections": {
+        "centralized": {
+          "title": "Centralizar o trabalho em um só lugar libera energia",
+          "body1": "À medida que uma organização cresce, o planejamento, a pesquisa e a tomada de decisões tendem a ser distribuídos por diferentes ferramentas. A equipe da OpenAI precisava de um espaço compartilhado onde o trabalho permanecesse pesquisável e conectável à medida que a empresa crescia.",
+          "body2": "Este espaço de trabalho se torna a base para traduzir notas de pesquisa, planos de lançamento, contexto do produto e conhecimento da equipe em ação. Por meio de integrações e pesquisa assistida por IA, o contexto certo pode fluir com o trabalho, em vez de ficar trancado em silos."
+        },
+        "research": {
+          "title": "Abra o pipeline da pesquisa aos produtos",
+          "body1": "As equipes de pesquisa documentam experimentos e planos em espaços de equipe em tempo real e, em seguida, conectam esse trabalho aos processos de engenharia e de produto. O resultado é um caminho mais claro desde a descoberta até o lançamento.",
+          "body2": "Quadros, listas e cronogramas Kanban permitem que cada equipe organize a mesma base de conhecimento em torno de seus próprios processos, mantendo o projeto maior legível para os colaboradores."
+        },
+        "engineering": {
+          "title": "Amplificador de velocidade e assistente sempre ativo para equipes de engenharia",
+          "body1": "Quando registros de depuração, decisões de design e revisões de código são mantidos onde o próximo colega de equipe pode encontrá-los, o conhecimento de engenharia continua a aumentar. Os espaços de trabalho pesquisáveis ​​tornam esses contextos úteis em fusos horários e transferências.",
+          "body2": "Em vez de começar do zero para solucionar problemas, as equipes podem aproveitar o conhecimento existente e solicitar ao espaço de trabalho o contexto mais relevante quando a pressão for maior."
+        },
+        "data": {
+          "title": "Torne os dados acessíveis e acionáveis",
+          "body1": "As equipes de dados podem transformar relatórios semanais, painéis e métricas operacionais em um centro de relatórios compartilhado. Os líderes podem ver números que impactam o roteiro com mais rapidez, sem precisar procurar informações em vários sistemas.",
+          "body2": "Modelos e painéis incorporados reduzem a preparação repetitiva de relatórios, mantendo o contexto analítico próximo aos dados."
+        },
+        "gtm": {
+          "title": "Motor GTM global mais rápido",
+          "body1": "As equipes de GTM podem avançar mais rapidamente quando notícias de produtos, histórias de clientes, notas de lançamento e materiais de capacitação estão em um repositório conectado.",
+          "body2": "Esse sistema compartilhado ajuda novos membros a se integrarem mais rápido, mantém as conversas de vendas atualizadas e dá às equipes voltadas ao cliente uma visão mais clara da estratégia de produto."
+        },
+        "impact": {
+          "title": "O impacto do trabalho e do conhecimento centralizados",
+          "body1": "A lição principal é simples: quando o contexto do projeto e os rascunhos permanecem juntos, o conhecimento é reutilizado mais facilmente. As equipes podem passar da ideia à decisão e ao lançamento sem perder o processo de derivação.",
+          "body2": "Essa base compartilhada mantém as equipes de alta velocidade alinhadas e, ao mesmo tempo, dá a cada função a estrutura necessária."
+        }
+      },
+      "quotes": {
+        "brad": "Nosso objetivo é fornecer às equipes ferramentas que acelerem as capacidades profissionais e as ajudem a continuar avançando.",
+        "john": "A documentação técnica se torna mais valiosa cada vez que um colega de equipe consegue encontrar a resposta certa em poucos minutos.",
+        "mashfir": "A conversão de análises complexas em documentos legíveis permite que os insights técnicos alcancem um público mais amplo."
+      },
+      "media": {
+        "researchProjects": "projeto de pesquisa",
+        "deployQuestion": "Quais são as etapas necessárias para implantar um modelo ajustado?"
+      },
+      "aside": {
+        "insights": "Entrevistado",
+        "useCases": "Cenários de uso",
+        "useCasesBody": "Uso em toda a empresa, base de conhecimento, gerenciamento de projetos, fluxo de trabalho assistido por IA"
+      },
+      "peopleRoles": {
+        "coo": "COO",
+        "research": "Pesquisar",
+        "engineering": "Engenharia",
+        "dataScience": "ciência de dados",
+        "gtm": "GTM"
+      },
+      "cta": {
+        "title": "Traga Deckwise para sua equipe, a partir de hoje!",
+        "body": "Experimente o Deckwise em qualquer dispositivo e veja como os espaços de trabalho compartilhados aceleram os fluxos de trabalho da equipe.",
+        "button": "Comece com Deckwise"
+      },
+      "related": {
+        "title": "Como outras equipes usam Deckwise",
+        "brainlabs": "Sistema operacional Brainlabs para trabalho profundo",
+        "ramp": "Como o Ramp funciona em conhecimento compartilhado e fluxos de trabalho com IA",
+        "storyLabel": "Caso do cliente"
+      }
+    }
+  }
+}

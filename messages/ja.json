@@ -1,0 +1,3289 @@
+{
+  "app": {
+    "name": "Deckwise Demo",
+    "tagline": "AI研究ワークスペース",
+    "logIn": "ログイン",
+    "getStartedForFree": "無料で始める",
+    "openApp": "アプリを開く",
+    "backToWebsite": "ウェブサイトに戻る",
+    "backToHome": "ホームへ戻る",
+    "homeAria": "{appName} ホーム"
+  },
+  "metadata": {
+    "siteTitle": "Deckwise Demo | AIドキュメントワークスペース",
+    "siteDescription": "AIエージェントと一緒に資料を整理し、文書を作成・編集するためのワークスペースです。"
+  },
+  "locale": {
+    "language": "言語",
+    "english": "英語",
+    "chinese": "简体中文",
+    "traditionalChinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어",
+    "spanish": "Español",
+    "vietnamese": "Tiếng Việt"
+  },
+  "toast": {
+    "messages": {
+      "copiedDescription": "クリップボードにコピーされました",
+      "documentNoLongerExists": "文書はもう存在しません。",
+      "fileUrlMissing": "ファイルの URL がありません。",
+      "failedToLoadFiles": "ファイルのロードに失敗しました。後でもう一度お試しください",
+      "exportStarted": "エクスポートが開始されました。"
+    }
+  },
+  "nav": {
+    "backToProjects": "プロジェクトに戻る",
+    "newChat": "新規チャット",
+    "projects": "プロジェクト"
+  },
+  "home": {
+    "ariaHome": "ホーム",
+    "ariaNewProject": "新しいプロジェクト",
+    "ariaProjects": "プロジェクト",
+    "presentationStartTitle": "アイデアからスライドを作成",
+    "marketingTaskReviewerHandoff": "PowerPoint をアップロードするか最近のデッキを開き、エディターで「オーディエンスレビュー」を選択してください。",
+    "recentProjects": "最近の下書き",
+    "newProject": "新しいプロジェクト",
+    "signIn": "サインイン",
+    "untitledProject": "無題",
+    "updatedAt": "{date}を更新しました",
+    "projectActionsAria": "{title} のプロジェクト アクション",
+    "createdByUsers": "サンプルスライドギャラリー",
+    "galleryCategories": "カテゴリの例",
+    "galleryMetrics": "閲覧数 {views} / いいね! {likes}",
+    "customizeExample": "カスタマイズ",
+    "publicDeckLabel": "発行済み",
+    "useExample": "テンプレートを使用する",
+    "usingExample": "追加",
+    "useExampleAria": "使用例 {title}",
+    "previewExampleAria": "プレビュー例 {title}",
+    "examplePreviewLoading": "サンプルスライドを読み込んでいます",
+    "examplePreviewFailed": "サンプルのプレビューをロードできませんでした",
+    "examplePreviewEmpty": "現在、この例にはプレビュー可能なスライドがありません。",
+    "exampleImportSucceeded": "サンプルスライドを追加しました。",
+    "exampleImportFailed": "例の追加に失敗しました",
+    "exampleImportMissingProject": "インポート結果にプロジェクトがありません。",
+    "examplesUnavailable": "現在、例は利用できません。",
+    "examplesSignInHint": "サンプル スライドを使用するにはサインインしてください。",
+    "examplesEmpty": "利用可能な例はありません。",
+    "galleryTabs": {
+      "all": "すべて",
+      "ai": "AI",
+      "product": "製品",
+      "branding": "ブランディング",
+      "postersAds": "ポスターと広告",
+      "illustration": "イラストレーション",
+      "uiLayout": "UIレイアウト",
+      "characterDesign": "キャラクターデザイン",
+      "videosStoryboards": "ビデオとストーリーボード",
+      "productDesign": "プロダクトデザイン",
+      "architecturalDesign": "建築設計"
+    }
+  },
+  "chat": {
+    "delete": "削除",
+    "new": "新規チャット",
+    "newChat": "新規チャット",
+    "history": "歴史",
+    "chats": "チャット",
+    "currentProject": "現在のプロジェクト",
+    "noSessions": "まだセッションはありません",
+    "untitledSession": "無題のセッション",
+    "welcome": "Deckwise でノートを編集する",
+    "sessionNumber": "セッション #{id}",
+    "thinking": "考え中…",
+    "newSession": "新規チャット",
+    "confirmDeleteSession": "このセッションを削除してもよろしいですか?",
+    "deleteFailed": "削除に失敗しました。もう一度試してください。",
+    "sendFailedNeedProject": "送信失敗: セッションを作成する前にプロジェクトを開いて選択してください。",
+    "createSessionFailed": "セッションの作成に失敗しました。",
+    "sendFailed": "送信失敗: {reason}",
+    "planningNextMoves": "次の動きを計画中…",
+    "dropFilesToAddToChat": "ここにファイルをドロップしてチャットに追加します",
+    "resizeTray": "チャットトレイのサイズ変更"
+  },
+  "streamError": {
+    "timeout": "リクエストがタイムアウトしました。ネットワークを確認するか、後でもう一度試してください。",
+    "networkError": "ネットワーク接続に失敗しました。接続を確認してからもう一度お試しください。",
+    "serverError": "サーバーエラーが発生しました。後でもう一度お試しください。",
+    "serviceUnavailable": "サービスが一時的に利用できなくなりました。後でもう一度試してください。",
+    "deadlineExceeded": "リクエストがタイムアウトしました。ネットワークを確認するか、後でもう一度試してください。",
+    "connectionClosed": "接続が失われました。もう一度試してください。",
+    "otherSessionActive": "別のセッションが応答中です。しばらく待ってからもう一度お試しください。",
+    "aiServiceError": "AIサービスエラー。後でもう一度試してください。",
+    "unknown": "不明なエラーが発生しました。"
+  },
+  "tool": {
+    "echo": "接続をテスト中…",
+    "fileList": "プロジェクト ファイルを取得しています…",
+    "fileContentRead": "ファイルの内容を読み取り中…",
+    "imageRead": "画像を読んでいます…",
+    "documentRead": "文書を読んでいます…",
+    "documentLocate": "コンテンツを探しています…",
+    "documentDiff": "AI がドキュメントを編集しています…",
+    "documentSave": "変更を保存中…",
+    "documentUpdateSummary": "概要を更新中…",
+    "documentCreate": "ドキュメントを作成中…",
+    "scholarSearch": "学術論文を検索中…",
+    "todoList": "タスクを整理中…",
+    "unknown": "働いています…"
+  },
+  "chatInput": {
+    "placeholder": "このスライドを改善する",
+    "addAttachment": "添付ファイルを追加する",
+    "connectApps": "アプリを接続",
+    "appConnectionToggle": "{app} の接続",
+    "projectSlashMenuLabel": "プロジェクト操作",
+    "projectSlashPolishDeck": "このデッキを磨く",
+    "projectSlashMakeVisual": "よりビジュアルにする",
+    "projectSlashCheckWeakSlides": "弱いスライドを確認",
+    "addPhotosAndFiles": "画像やファイルを追加",
+    "addFromGoogleDrive": "Google Drive から追加",
+    "addFromNotion": "Notion から追加",
+    "addFromOneDrive": "OneDrive から追加",
+    "addFromDropbox": "Dropbox から追加",
+    "recentFiles": "最近のファイル",
+    "noRecentFiles": "最近のファイルはありません",
+    "addImage": "画像を追加",
+    "addPdf": "PDFを追加",
+    "send": "送信",
+    "stop": "停止",
+    "modeSelectLabel": "モード選択",
+    "modeAskTitle": "尋ねる",
+    "modeAskDesc": "アシスタントとチャットする",
+    "modeAgentTitle": "エージェント",
+    "modeAgentDesc": "複数ステップのアクションと編集",
+    "model": "モデル",
+    "modelsLoading": "モデルの読み込み",
+    "modelsUnavailable": "利用できないモデル",
+    "chatModels": {
+      "fast": {
+        "label": "高速",
+        "description": "すばやく応答"
+      },
+      "smart": {
+        "label": "スマート",
+        "description": "バランスよく編集"
+      },
+      "expert": {
+        "label": "エキスパート",
+        "description": "複雑な内容にも対応"
+      }
+    },
+    "modelCreditCost": "{cost} クレジット",
+    "openFiles": "ファイルを開く",
+    "selectedFiles": "取得するために選択した {count} ファイル",
+    "attachedFiles": "添付ファイル",
+    "clear": "クリア",
+    "file": "ファイル",
+    "image": "画像",
+    "pdf": "PDF",
+    "removeImage": "画像を削除",
+    "removePdf": "PDF を削除する",
+    "removeQuote": "引用を削除する",
+    "fileFallbackName": "ファイル{id}",
+    "materials": "資料",
+    "outline": "アウトライン",
+    "slide": "スライド",
+    "slides": "スライド",
+    "decreaseSlides": "スライド数を減らす",
+    "increaseSlides": "スライド数を増やす",
+    "slideCount": "スライド数",
+    "outlineWithSlides": "アウトライン · {count}枚のスライド",
+    "slideCountLabel": "{count}枚のスライド",
+    "slideCountMenuLabel": "{count}枚のスライド",
+    "outlineSlideLimitExceeded": "現在のプランでは最大 {max} 枚のスライドを生成できます。{count} 枚が選択されています。",
+    "outlineSlideLimitPrompt": "{max} 枚を超えるスライドが必要ですか？",
+    "outlineSlideLimitUpgradeAction": "アップグレード",
+    "outlineModels": {
+      "fast": {
+        "label": "高速",
+        "description": "スライド一式をすばやく生成"
+      },
+      "smart": {
+        "label": "スマート",
+        "description": "より深く考えて高品質なスライド一式を生成"
+      },
+      "expert": {
+        "label": "エキスパート",
+        "description": "複雑なスライドも最高品質で生成"
+      }
+    }
+  },
+  "user": {
+    "ariaUserInfo": "ユーザー情報",
+    "notSignedIn": "サインインしていません",
+    "user": "アカウント",
+    "defaultAccountName": "あなたのアカウント",
+    "upgrade": "アップグレード",
+    "fullName": "名前",
+    "freePlan": "無料プラン",
+    "credits": "クレジット",
+    "freeCredits": "無料クレジット",
+    "settingsShortcut": "設定",
+    "settings": "設定",
+    "manageAccount": "アカウントの管理",
+    "billing": "お支払い",
+    "marketingHome": "ホーム",
+    "userGuide": "ユーザーガイド",
+    "contactUs": "お問い合わせ",
+    "accountInfo": "アカウント",
+    "accountInfoDesc": "現在サインインしているユーザー",
+    "userId": "ユーザーID",
+    "account": "アカウント",
+    "phone": "電話",
+    "email": "メールアドレス",
+    "role": "役割",
+    "createdAt": "作成されました",
+    "updatedAt": "更新されました",
+    "appearance": "外観",
+    "theme": "テーマ",
+    "language": "言語",
+    "communicationPreferences": "コミュニケーション設定",
+    "browserNotifications": "ブラウザ通知",
+    "browserNotificationsDescription": "新しい進行状況がある場合やタスクが完了した場合に、ブラウザで通知を受け取ります。",
+    "receiveProductUpdates": "製品アップデートを受け取る",
+    "receiveProductUpdatesDescription": "機能リリースの早期アクセス、成功事例、ワークフロー最適化のヒントを受け取ります。",
+    "emailQueuedTaskStarts": "キュー内のタスクが開始したらメールで通知する",
+    "emailQueuedTaskStartsDescription": "有効にすると、タスクのキュー待ちが終わり処理が開始された時点でメールを送信します。",
+    "adsAboutDeckwise": "Deckwise に関する広告",
+    "adsAboutDeckwiseDescription": "有効にすると、他のアプリ、Web サイト、プラットフォームで Deckwise の広告を表示するため、収集した個人情報をマーケティングベンダーと共有する場合があります。",
+    "languageEnglish": "英語",
+    "languageChinese": "简体中文",
+    "themeLight": "ライト",
+    "themeDark": "暗い",
+    "themeSystem": "システム",
+    "dangerZone": "危険地帯",
+    "close": "閉じる",
+    "logout": "サインアウト",
+    "logoutConfirmTitle": "サインアウトしますか?",
+    "logoutConfirmMessage": "ワークスペースにアクセスするには、再度サインインする必要があります。",
+    "logoutConfirmAction": "サインアウト",
+    "accountNameSaveFailed": "アカウント名を保存できませんでした。",
+    "deleteAccount": "アカウントを削除する",
+    "deleteAccountConfirmTitle": "アカウントを削除しますか?",
+    "deleteAccountConfirmMessage": "これにより、アカウントが完全に削除され、サインアウトされます。この操作は元に戻せません。",
+    "deleteAccountConfirmAction": "アカウントを削除する",
+    "deleteAccountFailed": "アカウントの削除に失敗しました。もう一度試してください。",
+    "languageTraditionalChinese": "繁體中文",
+    "languageJapanese": "日本語",
+    "languageKorean": "한국어",
+    "languageSpanish": "Español",
+    "personalization": "パーソナライズ",
+    "inviteFriends": "友だちを招待",
+    "inviteFriendsSubtitle": "双方に{credits}クレジット付与",
+    "inviteDialogTitle": "招待してクレジットを獲得",
+    "inviteDialogDescription": "招待リンクを友だちに共有すると、双方に{credits}クレジットが付与されます。",
+    "copyInvitationLink": "招待文をコピー",
+    "shareInviteOn": "{platform} で招待を共有",
+    "resetInvitationLink": "招待リンクをリセット",
+    "invitationLinkCopied": "招待文をコピーしました。",
+    "invitationLinkCopyFailed": "招待文をコピーできませんでした。",
+    "invitationLinkLoadFailed": "招待リンクを読み込めませんでした。",
+    "invitationLinkReset": "招待リンクをリセットしました。",
+    "invitationLinkResetFailed": "招待リンクをリセットできませんでした。",
+    "invitationLinkUnavailable": "招待リンクを利用できません。",
+    "languageVietnamese": "Tiếng Việt"
+  },
+  "billing": {
+    "title": "請求書と請求書",
+    "subtitle": "現在のサブスクリプション、使用状況、請求書のエントリ ポイント、Stripe がホストする請求アクションを確認します。",
+    "settingsTitle": "設定",
+    "settingsNavBilling": "サブスクリプションと支払い",
+    "workspaceNavTitle": "アカウント",
+    "workspaceNavAccount": "アカウント",
+    "workspaceNavSubscription": "定期購入",
+    "workspaceNavOverview": "概要",
+    "workspaceNavUsage": "使用法",
+    "workspaceNavManagePlan": "計画を調整する",
+    "workspaceNavPayment": "お支払い",
+    "workspaceNavInvoices": "請求書",
+    "workspaceNavPortal": "ストライプポータル",
+    "backToWorkspace": "アプリに戻る",
+    "refresh": "リフレッシュ",
+    "summaryTitle": "請求スナップショット",
+    "summarySubtitle": "最新のサブスクリプションと請求状況を確認します。",
+    "statusLabel": "ステータス",
+    "planLabel": "計画",
+    "renewalLabel": "現在の期間が終了します",
+    "paymentMethodLabel": "お支払い方法",
+    "creditsLabel": "利用可能なクレジット",
+    "reservedLabel": "予約済みクレジット",
+    "summaryNoPlan": "無料",
+    "plansTitle": "計画",
+    "plansSubtitle": "バックエンドによって現在公開されている Stripe プランから選択します。",
+    "currentPlan": "現在の計画",
+    "planRecommended": "おすすめ",
+    "planCreditsPerCycle": "{credits} クレジットが含まれています",
+    "planCreditsMonthly": "毎月 {credits} クレジット",
+    "planCreditsAnnual": "{credits} クレジットは毎年期待されます",
+    "planCreditsIncluded": "{credits} クレジットが含まれています",
+    "planIntervalUnknown": "柔軟な",
+    "pricingCallout": "完全なプランの比較は、引き続き「価格」ページでご覧いただけます。",
+    "viewPricing": "価格を見る",
+    "freePlanDescription": "アクティブな有料サブスクリプションはありません。無料プランを継続することも、価格設定からプランを選択することもできます。",
+    "renewalDescription": "サブスクリプションは {date} に更新されます。",
+    "billingPeriodOutcomeLabel": "現在の期間終了後の動作",
+    "billingPeriodAutoRenewLabel": "自動更新",
+    "billingPeriodAutoRenewDescription": "{date} に次のサブスクリプションサイクルが開始されます。",
+    "billingPeriodExpiresLabel": "期限切れ",
+    "billingPeriodExpiresDescription": "{date} にサブスクリプション特典が終了します。",
+    "billingPeriodSwitchLabel": "{plan} プランに切り替え",
+    "billingPeriodSwitchDescription": "{date} に予定されたプランが適用されます。",
+    "billingPeriodSwitchUnknownPlan": "新しい",
+    "selectedPlanDescription": "価格設定から{plan}を選択しました。 Stripe Checkout に進み、購読してください。",
+    "noActivePlanDescription": "有料プランはまだ選択されていません。 [価格] からプランを選択して続行します。",
+    "adjustPlan": "計画を調整する",
+    "adjustPlanCheckoutDescription": "プランを選択して Stripe Checkout を開き、購読します。",
+    "adjustPlanPortalDescription": "すでにアクティブなサブスクリプションがあるため、プランの変更と管理は Stripe ポータルで行われます。",
+    "planDialogTitle": "あなたに合ったプランをお選びください",
+    "planDialogDescription": "Deckwise プランと請求サイクルを選択します。",
+    "planDialogCycleMonthly": "毎月",
+    "planDialogCycleAnnual": "年払い・20%オフ",
+    "planDialogCycleAnnualShort": "年払い",
+    "planDialogBillingUnitMonthly": "/月",
+    "planDialogBillingUnitAnnual": "/月",
+    "planDialogUpgrade": "アップグレード",
+    "planDialogCurrentPlan": "現在のプラン",
+    "planDialogFeatureCardsPerPrompt": "1回のプロンプトで最大{count}枚のスライドを作成",
+    "planDialogFeatureMonthlyCredits": "月間{credits}クレジット",
+    "planDialogPlusDescription": "より多くのプレゼン資料を作成し、AIで磨き込みたい方向け",
+    "planDialogPlusIncludes": "Free のすべて",
+    "planDialogPlusFeatureCards": "1回のプロンプトで最大30枚のスライドを作成",
+    "planDialogPlusFeatureEditablePowerPoint": "編集可能な PowerPoint の書き出し",
+    "planDialogPlusFeatureEditableGoogleSlides": "編集可能な Google スライドの書き出し",
+    "planDialogPlusFeatureImageModels": "高度なAIモデル",
+    "planDialogProDescription": "高度なAIモデルや長期プロジェクト向け",
+    "planDialogProIncludes": "Plus のすべてに加えて：",
+    "planDialogProFeatureCards": "1回のプロンプトで最大40枚のスライドを作成",
+    "planDialogProFeatureCredits": "月間1,000クレジット",
+    "planDialogProFeatureImageModels": "プレミアムAI画像モデル",
+    "planDialogProFeatureBranding": "カスタムブランディングとフォント",
+    "planDialogProFeatureAnalytics": "詳細な分析機能と高度な共有設定",
+    "planDialogProFeatureDomains": "最大10個のカスタムドメインを利用可能",
+    "planDialogUltraDescription": "AIを多用し、大量のプレゼン資料を作成したい方向け",
+    "planDialogUltraIncludes": "Pro のすべてに加えて：",
+    "planDialogUltraFeatureCards": "1回のプロンプトで最大60枚のスライドを作成",
+    "planDialogUltraFeatureCredits": "月間10,000クレジット",
+    "planDialogUltraFeatureModels": "最上位のAIモデルへのアクセス",
+    "planDialogUltraFeatureDomains": "最大100個のカスタムドメインを利用可能",
+    "planDialogUltraFeatureEarlyAccess": "新機能への早期アクセス",
+    "planDialogSecurityTitle": "セキュリティとコンプライアンス",
+    "planDialogSecurityDescription": "エンタープライズ グレードのセキュリティと業界標準の認定。",
+    "planDialogSecurityLearnMore": "さらに詳しく",
+    "planDialogHelpPrefix": "お困りですか？",
+    "planDialogHelpLink": "お問い合わせ",
+    "planDialogEditBilling": "請求情報を編集",
+    "activePlanHint": "現在のプラン: {plan}",
+    "noPlansTitle": "利用可能なプランはありません",
+    "noPlansDescription": "バックエンドはアクティブな Stripe プランをまだ公開していません。",
+    "paymentTitle": "Stripe の支払い管理",
+    "paymentSubtitle": "Checkout はカード、リンク、その他の対象となる支払い方法を収集します。請求ポータルは、保存された方法と請求書を管理します。",
+    "paymentReady": "Stripe にはデフォルトの支払い方法が用意されています。",
+    "paymentMissing": "Checkout は購読時に支払い方法を収集します。",
+    "paymentReadyShort": "保存されました",
+    "paymentMissingShort": "行方不明",
+    "paymentManage": "請求ポータルを開く",
+    "manageInStripe": "Stripe で管理する",
+    "paymentManagedByStripe": "Stripe Checkout とカスタマーポータルによって管理されます",
+    "subscriptionTitle": "サブスクリプションアクション",
+    "subscriptionSubtitle": "Stripe Checkout を通じてプランを開始または変更してから、ここに戻ってステータスと使用状況を確認してください。",
+    "subscribe": "チェックアウトに進む",
+    "managePortal": "Stripe ポータルを開く",
+    "cancelSubscription": "期間終了時にキャンセルする",
+    "resumeSubscription": "更新を再開する",
+    "resourceBreakdownTitle": "クレジット",
+    "resourceBreakdownSubtitle": "バックエンドから同期されたアクティブなクレジット バケット。",
+    "creditsPanelBreakdown": "信用の内訳",
+    "creditsPanelFreeDescription": "無料クレジットは、設定されたスケジュールに従って更新されます。",
+    "creditsPanelViewUsage": "使用状況を表示する",
+    "includedUsageTitle": "含まれる使用法",
+    "usageTypeColumn": "種類",
+    "usageAvailableColumn": "利用可能",
+    "usageExpiresColumn": "有効期限が切れます",
+    "creditBucketFreeMonthly": "無料",
+    "creditBucketSubscriptionCycle": "定期購入",
+    "creditBucketCampaignBonus": "購読者ボーナス",
+    "creditBucketPersistent": "永続的なクレジット",
+    "creditBucketGeneric": "クレジットバケット",
+    "usageRefreshTooltip": "{date} で更新",
+    "usageRefreshTooltipUnknown": "この許容量は、次のバックエンド請求サイクルで更新されます。",
+    "onDemandUsageTitle": "オンデマンドでの使用",
+    "onDemandUsageSubtitle": "従量制課金はまだ有効になっていません。費用の詳細は後ほどここに表示されます。",
+    "onDemandUsageTotal": "現在のサイクル",
+    "onDemandUsageEmpty": "現在のサイクルのオンデマンド使用量データが見つかりません。",
+    "invoicesTitle": "請求書",
+    "invoicesDescription": "請求書と領収書は Stripe カスタマーポータルで管理されます。",
+    "cancelTitle": "キャンセル",
+    "cancelDescription": "キャンセルすると、現在の請求サイクルの終了時に更新が停止されます。",
+    "resumeTitle": "更新を再開する",
+    "resumeDescription": "このサブスクリプションは期間終了時にキャンセルされるように設定されています。それまでに更新を再開できます。",
+    "resourceBreakdownEmpty": "アクティブなクレジット バケットはまだありません。",
+    "bucketExpires": "有効期限は{date}です",
+    "subscribeSuccess": "Stripe チェックアウトを開きます。",
+    "subscribeFailed": "Stripe Checkout の開始に失敗しました。",
+    "alreadyActiveSubscription": "有効なサブスクリプションがあります。",
+    "checkoutSyncFailed": "チェックアウトのサブスクリプション ステータスを同期できませんでした。すぐに更新してください。",
+    "cancelSuccess": "サブスクリプションは現在の期間の終了時にキャンセルされます。",
+    "cancelFailed": "キャンセルの更新に失敗しました。",
+    "resumeSuccess": "サブスクリプションの更新が再開されました。",
+    "resumeFailed": "サブスクリプションを再開できませんでした。",
+    "portalFailed": "Stripe ポータルを開けませんでした。",
+    "refreshFailed": "課金データの読み込みに失敗しました。",
+    "syncing": "Stripe Webhook の同期を待っています…",
+    "webhookSyncTitle": "Webhook同期状態",
+    "webhookSyncDescription": "請求スナップショットは、Stripe Webhook が到着した後に更新されるため、サブスクライブまたは更新設定の変更後に短い遅延が予想されます。",
+    "testModeTitle": "ストライプホスト型フロー",
+    "testModeDescription": "Checkout は支払いの回収とリンク/カードの処理を担当します。このページでは、サブスクリプションのステータス、使用状況、安全な管理リンクに焦点を当てています。",
+    "statusActive": "アクティブ",
+    "statusTrialing": "トライアル中",
+    "statusIncomplete": "不完全",
+    "statusPastDue": "期限を過ぎた",
+    "statusPaused": "一時停止中",
+    "statusUnpaid": "未払い",
+    "statusCanceled": "キャンセルされました",
+    "statusExpired": "期限切れ",
+    "statusNone": "購読していません",
+    "planDialogBillingCycleLabel": "請求サイクル"
+  },
+  "login": {
+    "emailLabel": "メールアドレス",
+    "codeLabel": "認証コード",
+    "sendCode": "コードを送信",
+    "sendingCode": "送信中...",
+    "codeSent": "コードを送信しました。メールをご確認ください。",
+    "signInWithEmail": "メールでログイン",
+    "invalidEmail": "有効なメールアドレスを入力してください。",
+    "missingCode": "メールに届いたコードを入力してください。",
+    "emailCodeFailed": "コードを送信できませんでした。再試行してください。",
+    "emailLoginFailed": "ログインできませんでした。コードを確認して再試行してください。",
+    "headline": "ログイン\n\nアカウントをお持ちでない場合は、自動的に作成されます。",
+    "title": "{appName}にログイン",
+    "subtitle": "Google アカウントで続行",
+    "verifying": "ログインを確認しています…",
+    "signingIn": "ログイン中...",
+    "desktopBrowserSignIn": "ブラウザで続行",
+    "desktopBrowserOpening": "ブラウザを開いています...",
+    "desktopBrowserWaiting": "ブラウザでの承認を待っています...",
+    "desktopBrowserRetry": "ブラウザで再度ログイン",
+    "desktopBrowserOpenFailed": "ブラウザを開けませんでした。もう一度お試しください。",
+    "desktopBrowserExpired": "このログイン要求は期限切れです。もう一度お試しください。",
+    "desktopBrowserSignInFailed": "ブラウザでのログインに失敗しました。もう一度お試しください。",
+    "desktopWelcome": {
+      "title": "Deckwise デスクトップ",
+      "description": "アイデアや資料を、デスクトップから洗練されたプレゼンテーションに。",
+      "getStarted": "はじめる",
+      "checkingSession": "Deckwise を開いています..."
+    },
+    "desktopAuthorization": {
+      "title": "Deckwise デスクトップを承認",
+      "description": "以下のデスクトップアプリへのログインを確認してください。",
+      "loading": "ログイン要求を読み込んでいます...",
+      "device": "デバイス",
+      "platform": "プラットフォーム",
+      "version": "アプリのバージョン",
+      "approve": "デスクトップアプリを承認",
+      "approving": "承認しています...",
+      "approvedTitle": "デスクトップアプリを承認しました",
+      "approvedDescription": "このページを閉じて Deckwise デスクトップに戻れます。",
+      "expiredTitle": "ログイン要求の期限が切れました",
+      "expiredDescription": "Deckwise デスクトップに戻り、ログインをやり直してください。",
+      "errorTitle": "承認できません",
+      "loadFailed": "ログイン要求を読み込めませんでした。もう一度お試しください。",
+      "approveFailed": "デスクトップアプリを承認できませんでした。もう一度お試しください。",
+      "invalidRequest": "このログインリンクは無効です。Deckwise デスクトップに戻ってやり直してください。",
+      "retry": "もう一度試す",
+      "unknownDevice": "不明"
+    },
+    "termsAcknowledgement": "「続行」をクリックすると、<terms>利用規約</terms>および<privacy>プライバシーポリシー</privacy>に同意したことになります。",
+    "brand": "{appName} — あなたの研究アシスタント",
+    "termsOfService": "利用規約",
+    "privacyPolicy": "プライバシーポリシー"
+  },
+  "invitation": {
+    "title": "今すぐ {appName} に参加して無料クレジットを獲得しましょう！",
+    "description": "招待リンクを友だちに共有して、一緒にクレジットを獲得しましょう。",
+    "imageAlt": "{appName} 招待プレビュー"
+  },
+  "slidesPreview": {
+    "publishedLoadFailed": "公開済みスライドを読み込めませんでした",
+    "sharedLoadFailed": "共有スライドを読み込めませんでした",
+    "publishedEmpty": "この公開済みデッキには、現在プレビューできるスライドがありません。",
+    "sharedEmpty": "この共有デッキには、現在プレビューできるスライドがありません。",
+    "publishedLabel": "公開済み",
+    "sharedLabel": "共有",
+    "publishedMetaTitle": "{appName} の公開済みスライド",
+    "publishedMetaDescription": "{appName} から共有された公開済みスライドを表示します。",
+    "sharedMetaTitle": "{appName} の共有スライド",
+    "sharedMetaDescription": "{appName} であなたに共有されたスライドデッキを開きます。",
+    "exampleMetaTitle": "{appName} のサンプルスライド",
+    "exampleMetaDescription": "サンプルスライドをプレビューし、{appName} でカスタマイズします。"
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "confirmDeletion": "削除を確認しますか?",
+    "close": "閉じる",
+    "clear": "クリア",
+    "delete": "削除",
+    "rename": "名前の変更",
+    "copy": "コピー",
+    "retry": "再試行",
+    "hello": "こんにちは。",
+    "back": "戻る",
+    "refresh": "リフレッシュ",
+    "loading": "読み込み中…",
+    "loadMore": "さらにロードする",
+    "allLoaded": "全部追いついた",
+    "loadFailed": "ロードに失敗しました。",
+    "unknownError": "不明なエラー",
+    "remove": "削除",
+    "saving": "保存中...",
+    "unsavedChanges": "未保存の変更",
+    "saved": "保存済み",
+    "revisionConflict": "リビジョンの競合",
+    "saveFailed": "保存に失敗しました",
+    "ready": "準備完了",
+    "desktopWindow": {
+      "file": "ファイル",
+      "edit": "編集",
+      "view": "表示",
+      "window": "ウインドウ",
+      "help": "ヘルプ",
+      "back": "戻る",
+      "forward": "進む",
+      "menuBar": "アプリケーションメニュー"
+    }
+  },
+  "errorBoundary": {
+    "title": "何か問題が発生しました",
+    "message": "ページを更新してください。問題が解決しない場合は、サポートにお問い合わせください。",
+    "refresh": "リフレッシュ"
+  },
+  "notFound": {
+    "title": "ページが見つかりません",
+    "message": "開いたページは存在しないか、移動された可能性があります。ホームに戻って続行してください。"
+  },
+  "quote": {
+    "expand": "見積を展開する",
+    "collapse": "引用を折りたたむ"
+  },
+  "editor": {
+    "slashMenu": {
+      "header": "基本"
+    },
+    "slash": {
+      "ai": "AIに聞く",
+      "text": "テキスト",
+      "h1": "見出し1",
+      "h2": "見出し2",
+      "h3": "見出し3",
+      "bullet": "箇条書きリスト",
+      "ordered": "番号付きリスト",
+      "task": "やることリスト",
+      "callout": "吹き出し",
+      "quote": "引用",
+      "table": "表",
+      "divider": "区切り線",
+      "link": "ページへのリンク",
+      "code": "コードブロック",
+      "image": "Web画像",
+      "header": {
+        "basic": "基本"
+      }
+    },
+    "blockHandle": {
+      "addBelow": "下に新しい行を挿入",
+      "turnInto": "に変わる",
+      "turnIntoHeader": "に変わる",
+      "copy": "コピー",
+      "delete": "削除",
+      "expandHidden": "非表示ブロックを展開",
+      "collapseHidden": "非表示ブロックを折りたたむ"
+    },
+    "aiInput": {
+      "placeholder": "AIに聞いて…",
+      "thinking": "考え中…",
+      "ask": "尋ねる"
+    },
+    "tableTooltip": {
+      "duplicateRow": "重複した行",
+      "duplicateCol": "重複した列",
+      "deleteRow": "行の削除",
+      "deleteCol": "列の削除"
+    },
+    "placeholder": {
+      "hint": "入力するか、「/」でコマンドを開きます",
+      "toggleSummary": "切り替え"
+    },
+    "codeBlock": {
+      "copy": "コピー",
+      "copied": "コピーされました"
+    },
+    "linkHover": {
+      "copyFailed": "リンクをコピーできませんでした。",
+      "open": "リンクを開く",
+      "edit": "リンクを編集",
+      "urlLabel": "ページまたはURL",
+      "urlPlaceholder": "https://example.com",
+      "titleLabel": "リンクタイトル",
+      "titlePlaceholder": "リンクタイトル",
+      "remove": "リンクを削除"
+    },
+    "table": {
+      "duplicateRow": "重複した行",
+      "duplicateCol": "重複した列",
+      "deleteRow": "行の削除",
+      "deleteCol": "列の削除"
+    },
+    "callout": {
+      "note": "📝 メモ",
+      "tip": "💡 ヒント",
+      "warning": "⚠️ 警告",
+      "error": "🚫 エラー",
+      "success": "✅ 成功",
+      "info": "ℹ️ 情報"
+    }
+  },
+  "deckwise": {
+    "toolbar": {
+      "insertTools": "インサートツール",
+      "dragToInsert": "ドラッグして挿入",
+      "text": "文字",
+      "basicBlocks": "基本ブロック",
+      "blocks": "ブロック",
+      "images": "画像",
+      "columns": "列",
+      "layouts": "配置",
+      "layout": "配置",
+      "chartsAndGraphs": "グラフ",
+      "chart": "グラフ",
+      "video": "動画",
+      "textFormattingToolbar": "テキスト書式設定ツールバー",
+      "textStyle": "テキストスタイル",
+      "textStyles": "テキストスタイル",
+      "textSize": "文字サイズ",
+      "useSmallTextSize": "小さなテキストサイズを使用する",
+      "useDefaultTextSize": "デフォルトのテキスト サイズを使用する",
+      "useLargeTextSize": "大きなテキストサイズを使用する",
+      "textColor": "文字の色",
+      "backgroundColor": "背景色",
+      "defaultTextColorOption": "デフォルトの色",
+      "defaultTextBackgroundColorOption": "デフォルトの背景色",
+      "textColorOption": "{color}の文字",
+      "textBackgroundColorOption": "{color}の背景",
+      "bold": "太字",
+      "italic": "イタリック体",
+      "underline": "下線",
+      "strikethrough": "取り消し線",
+      "code": "コード",
+      "link": "リンク",
+      "editLink": "リンクを編集",
+      "linkUrl": "リンクURL",
+      "linkPlaceholder": "リンクを貼り付けて Enter を押す",
+      "removeLink": "リンクを削除",
+      "horizontalAlignment": "水平揃え",
+      "defaultTextColor": "デフォルト",
+      "advanced": "詳細",
+      "apply": "申し込む",
+      "remove": "削除",
+      "superscript": "上付き文字",
+      "bulletList": "箇条書きリスト",
+      "alignLeft": "左揃え",
+      "alignCenter": "中央揃え",
+      "alignRight": "右揃え",
+      "clearFormatting": "書式をクリアする",
+      "undo": "元に戻す",
+      "redo": "やり直し",
+      "addParagraphBelow": "以下に段落を追加",
+      "pageContentFull": "このスライドはいっぱいになりました。わかりやすくするために、余分なコンテンツを新しいスライドに分割してください。",
+      "moveBlock": "ブロックを移動する",
+      "cutBlock": "切り取り",
+      "copyBlock": "コピー",
+      "pasteBlockBelow": "下に貼り付け",
+      "pasteBlockUnavailable": "先にブロックを切り取りまたはコピーしてください",
+      "duplicateBlock": "重複ブロック",
+      "deleteBlock": "ブロックの削除",
+      "duplicateLayout": "レイアウトの重複",
+      "deleteLayout": "レイアウトの削除",
+      "pageActions": "ページアクション",
+      "pageLayout": "ページレイアウト",
+      "blank": "空白",
+      "imageTop": "画像トップ",
+      "imageLeft": "画像左",
+      "imageRight": "画像右",
+      "imageBackground": "画像の背景",
+      "imageActions": "画像アクション",
+      "videoActions": "ビデオアクション",
+      "editImage": "画像の編集",
+      "editVideo": "ビデオを編集する",
+      "imageEdge": "画像の縁",
+      "straightImageEdge": "直線エッジ",
+      "curveImageEdge": "曲線エッジ",
+      "slantImageEdge": "斜めエッジ",
+      "waveImageEdge": "連続カーブ",
+      "fitImage": "画像に合わせる",
+      "expandImage": "画像を拡大する",
+      "resizeLayoutImage": "レイアウト画像のサイズを変更する",
+      "uploadImage": "画像をアップロードする",
+      "uploadingImage": "画像をアップロードしています",
+      "deleteImage": "画像の削除",
+      "deleteVideo": "ビデオを削除する",
+      "imageInfo": "画像情報",
+      "imageMetadata": "画像メタデータ",
+      "noImageMetadata": "メタデータはありません。",
+      "metadataTitle": "タイトル",
+      "metadataDescription": "説明",
+      "metadataCredit": "撮影者",
+      "metadataSource": "ソース",
+      "metadataAttribution": "帰属リンク",
+      "metadataImageUrl": "画像 URL",
+      "metadataThumbnailUrl": "サムネイル URL",
+      "metadataDimensions": "サイズ",
+      "metadataProviderId": "提供元 ID",
+      "chartActions": "チャートアクション",
+      "editChart": "チャートの編集",
+      "columnLayoutActions": "列レイアウトのアクション",
+      "columnLayout": "列のレイアウト",
+      "columnsCount": "{count}列",
+      "equalizeColumns": "列を均等化する",
+      "alignTop": "上揃え",
+      "alignMiddle": "中央揃え",
+      "alignBottom": "下揃え",
+      "columnColor": "列の色",
+      "deleteColumns": "列の削除",
+      "columnLayouts": "列のレイアウト",
+      "columnColors": "列の色",
+      "calloutActions": "コールアウトアクション",
+      "calloutStyle": "吹き出しスタイル",
+      "calloutColor": "吹き出しの色",
+      "deleteCallout": "吹き出しの削除",
+      "calloutStyles": "吹き出しスタイル",
+      "calloutColors": "吹き出しの色",
+      "hideCalloutIcon": "吹き出しアイコンを非表示にする",
+      "resetToDefault": "デフォルトにリセットする",
+      "smartLayoutActions": "スマートなレイアウトアクション",
+      "addSmartLayoutItem": "項目を追加",
+      "smartLayoutType": "スマートレイアウトタイプ",
+      "smartLayoutColor": "スマートレイアウトの色",
+      "smartLayoutColors": "スマートレイアウトの色",
+      "smartLayoutCellSize": "レイアウトサイズ",
+      "smartLayoutCellSizeOptions": "レイアウトサイズオプション",
+      "smartLayoutCellSizeSmall": "小",
+      "smartLayoutCellSizeMedium": "中",
+      "smartLayoutCellSizeLarge": "大",
+      "smartLayoutCellSizeExtraLarge": "特大",
+      "useVerticalLayoutDirection": "垂直レイアウト方向を使用する",
+      "useHorizontalLayoutDirection": "水平レイアウト方向を使用する",
+      "useOneSidedLayout": "片側レイアウトを使用する",
+      "useTwoSidedLayout": "両側レイアウトを使用する",
+      "hideLayoutSideLines": "レイアウトのサイドラインを非表示にする",
+      "showLayoutSideLines": "レイアウトのサイドラインを表示する",
+      "textAlignment": "テキストの配置",
+      "useVerticalTimelineDirection": "垂直タイムライン方向を使用する",
+      "useHorizontalTimelineDirection": "水平タイムライン方向を使用する",
+      "useOneSidedTimeline": "片面タイムラインを使用する",
+      "useTwoSidedTimeline": "両面タイムラインを使用する",
+      "hideTimelineSideLines": "タイムラインのサイドラインを非表示にする",
+      "showTimelineSideLines": "タイムラインのサイドラインを表示する",
+      "timelineDirection": "方向",
+      "timelineSides": "両面",
+      "timelineSideLines": "ラインを表示しますか？",
+      "changeLayout": "レイアウトの変更",
+      "deleteSmartLayout": "スマートレイアウトの削除",
+      "smartLayoutBlockActions": "スマート レイアウト ブロック アクション",
+      "moveBlockToStart": "ブロックを開始位置に移動",
+      "addItemBefore": "前に項目を追加",
+      "addItemAfter": "後に項目を追加",
+      "duplicate": "複製",
+      "smartLayoutBlockColor": "スマートレイアウトのブロックカラー",
+      "deEmphasize": "強調を軽減する",
+      "emphasize": "強調する",
+      "deleteSmartLayoutBlock": "スマート レイアウト ブロックを削除する",
+      "smartLayoutBlockColors": "スマート レイアウト ブロックの色",
+      "smartLayouts": "スマートなレイアウト",
+      "layoutGroups": "レイアウトグループ",
+      "layoutsForGroup": "{group} レイアウト",
+      "debugLayout": "デバッグレイアウト",
+      "layoutSubtitle": "スマートレイアウトを選択します。",
+      "layoutPreviewMutualismHeading": "相利共生",
+      "layoutPreviewMutualismBody": "約1万から1万2000年前、人類は肥沃な三日月地帯に定住し、穀物栽培を始めました。",
+      "layoutPreviewSelfDomesticationHeading": "自己家畜化",
+      "layoutPreviewSelfDomesticationBody": "猫は人間の集落に適応することで、自ら家畜化していった可能性があります。",
+      "layoutPreviewBehaviorHeading": "行動",
+      "layoutPreviewBehaviorBody": "ゲノム研究では、記憶、報酬学習、恐怖制御に関連する変化が示されています。",
+      "layoutsUnavailable": "利用可能なレイアウトがありません",
+      "style": "スタイル",
+      "styleSubtitle": "デッキのフォントと色を調整します。",
+      "theme": "テーマ",
+      "themeAndLayout": "フォントと色",
+      "close": "閉じる",
+      "share": "シェアする",
+      "shareComingSoon": "近日共有予定",
+      "present": "プレゼン開始",
+      "export": "書き出し",
+      "exportDeck": "プレゼンテーションを書き出す",
+      "exportPowerPoint": "PowerPoint",
+      "exportGoogleSlides": "Google スライド",
+      "exportImages": "画像",
+      "publishSlides": "スライドを公開",
+      "updatePreviews": "プレビューを更新",
+      "preparingPreviewImages": "プレビュー画像を準備中...",
+      "publishingSlides": "スライドを公開中...",
+      "uploadingPreviewImages": "プレビュー画像をアップロード中...",
+      "exportingImages": "画像を書き出し中",
+      "exportingPdf": "PDFを書き出し中",
+      "exportingPptx": "PPTXを書き出し中",
+      "exportingGoogleSlides": "Google スライドに書き出し中",
+      "imageExportIdle": "画像を書き出す",
+      "nothingToExport": "書き出す内容がありません",
+      "imageExportFailed": "画像の書き出しに失敗しました",
+      "imagesExported": "画像を書き出しました",
+      "localAutosaveReady": "自動保存の準備完了",
+      "localAutosaveOff": "自動保存オフ",
+      "localAutosaveSaving": "保存中...",
+      "localAutosaved": "自動保存済み",
+      "promoteExample": "プロモーション用サンプル",
+      "documentSettings": "ドキュメント設定",
+      "themeSource": "テーマソース",
+      "themeSourceCatalog": "テーマ",
+      "themeSourceLocal": "ローカル",
+      "themeCatalogUnavailable": "テーマカタログは利用できません",
+      "themesLoading": "テーマを読み込んでいます...",
+      "themesUnavailable": "利用可能なテーマがありません",
+      "moreActionsComingSoon": "さらなるアクションも近日公開予定",
+      "cardView": "スライドビュー",
+      "outlineViewComingSoon": "概要ビューは近日公開予定",
+      "viewMode": "ビューモード",
+      "newSlide": "新しいスライド",
+      "addSlide": "スライド",
+      "cardsPanelControls": "スライドパネルコントロール",
+      "searchCards": "スライドを検索する",
+      "clearSearch": "検索をクリア",
+      "resizeCardsPanel": "スライドのサイズ変更パネル",
+      "showCardsPanel": "スライドパネルを表示",
+      "pinnedCardsPanel": "固定されたスライド パネル",
+      "cardsPanel": "スライドパネル",
+      "noSlides": "スライドなし",
+      "slideCount": "{current} / {total} スライド",
+      "scrollToSlide": "スクロールしてスライド {slide}",
+      "chartType": "グラフの種類",
+      "chartSettings": "グラフ設定",
+      "chartEditorTabs": "チャート編集タブ",
+      "chartPreview": "グラフプレビュー",
+      "data": "データ",
+      "yAxis": "Y軸",
+      "solidColor": "単色",
+      "solidColorDescription": "すべての項目に1色を適用",
+      "colorPresets": "カラープリセット",
+      "source": "ソース",
+      "callOut": "コールアウト",
+      "arrow": "矢印",
+      "box": "ボックス",
+      "differenceArrows": "差分矢印",
+      "highlight": "ハイライト",
+      "goal": "目標",
+      "trend": "トレンド",
+      "graphOptions": "グラフオプション",
+      "leaveGapInChart": "チャートに間隔を残す",
+      "legend": "凡例",
+      "headlineNumber": "見出し番号",
+      "chartDataActions": "チャートデータ操作",
+      "row": "行",
+      "chartsAndGraphsMenu": "チャートとグラフメニュー",
+      "charts": "グラフ",
+      "comingSoon": "近日公開",
+      "debug": "デバッグ",
+      "titlePreview": "タイトル",
+      "bodyPreview": "本文",
+      "closeMediaMenu": "メディアメニューを閉じる",
+      "mediaMode": "メディアモード",
+      "go": "実行",
+      "upload": "アップロード",
+      "dragFileOr": "ファイルをドラッグするか",
+      "clickToUpload": "クリックしてアップロード",
+      "imageUploadTip": "ヒント: スライド内のどこにでも画像をドラッグまたは貼り付けできます",
+      "uploadImageFile": "画像ファイルをアップロード",
+      "webImageSearch": "Web画像検索",
+      "searchWebImages": "Web画像を検索",
+      "imageLicense": "画像ライセンス",
+      "allImages": "すべての画像",
+      "commercialUse": "商用利用",
+      "creativeCommons": "クリエイティブ・コモンズ",
+      "unableToLoadImages": "画像を読み込めません",
+      "imageSearchResults": "画像検索結果",
+      "imagesMenu": "画像メニュー",
+      "imagesDescription": "写真、イラスト、アイコン、ギャラリーを追加します。",
+      "mediaDescription": "画像アップロードまたはURL、動画埋め込みを追加します。",
+      "videosAndMediaMenu": "動画とメディアメニュー",
+      "platforms": "プラットフォーム",
+      "presentationPreview": "プレゼンテーションプレビュー",
+      "addBlockMenu": "ブロック追加メニュー",
+      "typeSlashPrompt": "/ を入力してブロックを追加、または...",
+      "typeSlashShortPrompt": "/ を入力、または...",
+      "imageLink": "画像リンク",
+      "videoLink": "動画リンク",
+      "projectJson": "プロジェクト JSON",
+      "save": "保存",
+      "addCardFromTemplate": "テンプレートからカードを追加",
+      "searchSlideLayouts": "スライドレイアウトを検索",
+      "templateCategories": "テンプレートカテゴリ",
+      "noTemplatesFound": "テンプレートが見つかりません",
+      "themeColors": "テーマカラー",
+      "edit": "編集",
+      "systemColors": "システムカラー",
+      "insertParagraph": "段落を挿入",
+      "contributors": "共同編集者",
+      "updatedNow": "今更新",
+      "smartLayoutNumber": "スマートレイアウト番号",
+      "insertColumnLeft": "左に列を挿入",
+      "insertColumnRight": "右に列を挿入",
+      "deleteColumn": "列を削除",
+      "search": "検索",
+      "slideActions": "スライド操作",
+      "generate": "生成",
+      "libraries": "ライブラリ",
+      "media": "メディア",
+      "videoUrl": "動画 URL",
+      "imageUrl": "画像 URL",
+      "pasteVideoUrl": "YouTube、Vimeo、TikTok、Loom の URL を貼り付け",
+      "pasteImageUrl": "画像 URL を貼り付けまたは入力",
+      "url": "URL",
+      "webImage": "Web 画像",
+      "useImage": "画像を使用: {title}",
+      "imageUploadOrUrl": "画像をアップロード、またはURLから追加",
+      "tableColumnActions": "表の列 {column} の操作",
+      "addImageBlock": "画像を追加",
+      "addTableBlock": "表を追加",
+      "updateChartDescription": "グラフの種類、スタイル、軸、データを更新",
+      "closeChartEditor": "グラフエディターを閉じる",
+      "graphTab": "グラフ",
+      "axesTab": "軸",
+      "visualsTab": "ビジュアル",
+      "annotateTab": "注釈",
+      "visible": "表示",
+      "labels": "ラベル",
+      "auto": "自動",
+      "edges": "端",
+      "left": "左",
+      "right": "右",
+      "position": "位置",
+      "scale": "スケール",
+      "log": "ログ",
+      "zero": "ゼロ",
+      "custom": "カスタム",
+      "startFrom": "開始値",
+      "endAt": "終了値",
+      "sortHighLow": "高い順に並べ替え",
+      "showPoints": "点を表示",
+      "smoothLines": "線を滑らかにする",
+      "dataLabels": "データラベル",
+      "gridLines": "グリッド線",
+      "lineThickness": "線の太さ",
+      "missingValues": "欠損値",
+      "top": "上",
+      "none": "なし",
+      "categoryLabels": "カテゴリラベル",
+      "basicBlocksDescription": "リスト、表、コールアウトなどの基本ブロックを追加します。",
+      "textBlocksDescription": "タイトル、見出し、引用、ラベルを追加します。",
+      "titleBlock": "タイトル",
+      "heading1": "見出し1",
+      "heading2": "見出し2",
+      "heading3": "見出し3",
+      "heading4": "見出し4",
+      "paragraph": "段落",
+      "smartLayoutItemPlaceholder": "項目",
+      "smartLayoutDescriptionPlaceholder": "説明",
+      "blockQuote": "引用ブロック",
+      "labelBlock": "ラベル",
+      "tables": "表",
+      "table2x2": "2×2の表",
+      "table3x3": "3×3の表",
+      "table4x4": "4×4の表",
+      "lists": "リスト",
+      "numberedList": "番号付きリスト",
+      "todoList": "ToDoリスト",
+      "calloutBoxes": "コールアウト",
+      "noteBox": "メモ",
+      "infoBox": "情報",
+      "warningBox": "警告",
+      "cautionBox": "注意",
+      "successBox": "成功",
+      "questionBox": "質問",
+      "codeBlock": "コードブロック",
+      "mathBlock": "数式ブロック",
+      "footnote": "脚注",
+      "tableOfContents": "目次",
+      "divider": "区切り線",
+      "other": "その他",
+      "templateSectionBasic": "基本",
+      "templateSectionImageSlides": "画像スライド",
+      "templateSectionSlideLayouts": "スライドレイアウト",
+      "templateSectionImages": "画像",
+      "templateSectionSequences": "シーケンス",
+      "templateSectionChartsData": "グラフとデータ",
+      "templateSectionEmbeds": "埋め込み",
+      "templateBlankCard": "空白スライド",
+      "templateImageAndText": "画像とテキスト",
+      "templateTextAndImage": "テキストと画像",
+      "templateTwoColumns": "2列",
+      "templateTwoColumnWithHeadings": "見出し付き2列",
+      "templateThreeColumns": "3列",
+      "templateThreeColumnWithHeadings": "見出し付き3列",
+      "templateFourColumns": "4列",
+      "templateTitleWithBullets": "タイトルと箇条書き",
+      "templateTitleWithBulletsAndImage": "タイトル、箇条書き、画像",
+      "templateBlankImageSlide": "空白の画像スライド",
+      "templateAccentLeft": "左アクセント",
+      "templateAccentRight": "右アクセント",
+      "templateAccentTop": "上アクセント",
+      "templateAccentRightFit": "右アクセント（フィット）",
+      "templateAccentLeftFit": "左アクセント（フィット）",
+      "templateTwoImageColumns": "画像2列",
+      "templateThreeImageColumns": "画像3列",
+      "templateFourImageColumns": "画像4列",
+      "templateImagesWithText": "画像とテキスト",
+      "templateImageGallery": "画像ギャラリー",
+      "templateTeamPhotos": "チーム写真",
+      "templateTimeline": "タイムライン",
+      "templateIconsWithText": "アイコンとテキスト",
+      "templateArrows": "矢印",
+      "templateFunnelWithText": "ファネルとテキスト",
+      "templateSteppedPyramid": "階段型ピラミッド",
+      "templatePyramidWithOutline": "アウトライン付きピラミッド",
+      "templateColumnChart": "縦棒グラフ",
+      "templateBarChart": "横棒グラフ",
+      "templateLineChart": "折れ線グラフ",
+      "templatePieChart": "円グラフ",
+      "templateDonutChart": "ドーナツグラフ",
+      "templateBigNumbers": "大きな数値",
+      "templateCircleStats": "円形統計",
+      "templateThreeRowTable": "3行の表",
+      "templateLoomRecording": "Loom録画",
+      "templateYouTubeVideo": "YouTube動画",
+      "colorBlack": "黒",
+      "colorDarkGray": "濃いグレー",
+      "colorGray": "グレー",
+      "colorLightGray": "薄いグレー",
+      "colorSoftGray": "ソフトグレー",
+      "colorWhite": "白",
+      "colorPaleYellow": "淡い黄色",
+      "colorPeach": "ピーチ",
+      "colorPink": "ピンク",
+      "colorLavender": "ラベンダー",
+      "colorBlue": "青",
+      "colorMint": "ミント",
+      "colorYellow": "黄色",
+      "colorOrange": "オレンジ",
+      "colorRed": "赤",
+      "colorPurple": "紫",
+      "colorRoyalBlue": "ロイヤルブルー",
+      "colorGreen": "緑",
+      "colorOlive": "オリーブ",
+      "colorBrown": "茶色",
+      "colorDarkRed": "濃い赤",
+      "colorDeepPurple": "濃い紫",
+      "colorNavy": "ネイビー",
+      "colorForestGreen": "フォレストグリーン",
+      "colorDefaultLavender": "デフォルトのラベンダー",
+      "colorLightBlue": "薄い青",
+      "colorLightGreen": "薄い緑",
+      "colorLightYellow": "薄い黄色",
+      "colorLightRed": "薄い赤",
+      "colorLightPurple": "薄い紫",
+      "themeAccentColor": "テーマのアクセント",
+      "themeShapeColor": "テーマの図形",
+      "themeSurfaceColor": "テーマのサーフェス",
+      "themeHeadingColor": "テーマの見出し",
+      "themeBodyColor": "テーマの本文",
+      "themeBackgroundColor": "テーマの背景",
+      "chartSchemeDefault": "デフォルト",
+      "chartSchemeMonochrome2": "モノクロ 2",
+      "chartSchemeMonochrome3": "モノクロ 3",
+      "chartSchemeMonochrome4": "モノクロ 4",
+      "chartTypeLine": "折れ線",
+      "chartTypeArea": "面",
+      "chartTypeColumn": "縦棒",
+      "chartTypeStackedColumn": "積み上げ縦棒",
+      "chartTypeBar": "横棒",
+      "chartTypeStackedBar": "積み上げ横棒",
+      "chartTypePie": "円",
+      "chartTypeDonut": "ドーナツ",
+      "chartTypeCombo": "複合",
+      "chartTypeScatter": "散布図",
+      "chartTypeBubble": "バブル",
+      "chartTypeHeatmap": "ヒートマップ",
+      "chartTypeFunnel": "ファネル",
+      "chartTypeWaterfall": "ウォーターフォール",
+      "chartTypeStacked": "積み上げ",
+      "chartTypePercentStacked": "100% 積み上げ",
+      "chartTypeStackedArea": "積み上げ面",
+      "chartTypeMekko": "Mekko",
+      "chartTypeAreaChart": "面グラフ",
+      "chartTypeStackedColumnChart": "積み上げ縦棒グラフ",
+      "chartTypeStackedBarChart": "積み上げ横棒グラフ",
+      "chartTypeComboChart": "複合グラフ",
+      "chartTypeScatterChart": "散布図",
+      "chartTypeBubbleChart": "バブルチャート",
+      "chartTypeHeatmapChart": "ヒートマップ",
+      "chartTypeFunnelChart": "ファネルチャート",
+      "chartTypeWaterfallChart": "ウォーターフォールチャート",
+      "chartTypeBlankDiagram": "空白図",
+      "chartTypeWeeklyCalendar": "週間カレンダー",
+      "chartTypeGanttChart": "ガントチャート",
+      "chartsAndGraphsDescription": "グラフ、図、スケジュールでデータを可視化します。",
+      "chartItemPending": "{item} はグラフ専用レンダリングの接続後に利用できます",
+      "hideXAxis": "X 軸を非表示",
+      "showXAxis": "X 軸を表示",
+      "xAxisLabelMode": "X 軸ラベルモード",
+      "hideYAxis": "Y 軸を非表示",
+      "showYAxis": "Y 軸を表示",
+      "yAxisLabelMode": "Y 軸ラベルモード",
+      "yAxisPosition": "Y 軸の位置",
+      "yAxisScale": "Y 軸のスケール",
+      "yAxisStartValue": "Y 軸の開始値",
+      "yAxisEndValue": "Y 軸の終了値",
+      "useTableOrder": "表の順序を使用",
+      "sortChartHighLow": "グラフを高い順に並べ替え",
+      "hideChartPoints": "グラフの点を非表示",
+      "showChartPoints": "グラフの点を表示",
+      "hideDataLabels": "データラベルを非表示",
+      "showDataLabels": "データラベルを表示",
+      "hideGridLines": "グリッド線を非表示",
+      "showGridLines": "グリッド線を表示",
+      "legendPosition": "凡例の位置",
+      "hideHeadlineNumber": "ヘッドライン数値を非表示",
+      "showHeadlineNumber": "ヘッドライン数値を表示",
+      "useValueDataLabels": "値のデータラベルを使用",
+      "usePercentageDataLabels": "割合のデータラベルを使用",
+      "calloutNote": "メモ",
+      "calloutInfo": "情報",
+      "calloutWarning": "警告",
+      "calloutCaution": "注意",
+      "calloutSuccess": "成功",
+      "calloutQuestion": "質問",
+      "columnLayout2Equal": "2列 - 均等",
+      "columnLayout2Left": "2列 - 左広め",
+      "columnLayout2Right": "2列 - 右広め",
+      "columnLayout3": "3列",
+      "columnLayout4": "4列",
+      "videos": "動画",
+      "videosDescription": "リッチな動画埋め込みを追加します。",
+      "mediaItemPending": "{item} は動画埋め込みノードの接続後に利用できます",
+      "vimeoVideos": "Vimeo動画",
+      "tiktokVideos": "TikTok動画",
+      "webpageOrApp": "Web ページまたはアプリ",
+      "displayText": "ディスプレイ",
+      "monsterText": "超特大タイトル",
+      "smallText": "小さいテキスト",
+      "normalText": "通常テキスト",
+      "largeText": "大きいテキスト",
+      "markTodoIncomplete": "ToDo を未完了にする",
+      "markTodoComplete": "ToDo を完了にする",
+      "aiImages": "AI画像",
+      "aiInfographics": "AIインフォグラフィック",
+      "stockPhotos": "ストックフォト",
+      "gifsFromGiphy": "GIPHY の GIF",
+      "pictographicIllustrations": "ピクトグラフィックイラスト",
+      "iconsClassic": "アイコン（クラシック）",
+      "iconsModern": "アイコン（モダン）",
+      "qrCode": "QRコード",
+      "accentImages": "アクセント画像",
+      "gallery": "ギャラリー",
+      "addLabel": "ラベルを追加",
+      "labelActions": "ラベル操作",
+      "addLabelBefore": "前にラベルを追加",
+      "addLabelAfter": "後にラベルを追加",
+      "deleteLabel": "ラベルを削除",
+      "chooseSmartLayoutIcon": "スマートレイアウトのアイコンを選択",
+      "smartLayoutHeroIconPanelTitle": "Heroicons",
+      "smartLayoutHeroIconSearchPlaceholder": "{count}個のアイコンを検索",
+      "smartLayoutHeroIconCategory": "Heroiconカテゴリー",
+      "smartLayoutHeroIconNoResults": "アイコンが見つかりません",
+      "smartLayoutHeroIconCategoryAll": "すべて",
+      "smartLayoutHeroIconCategoryArrows": "矢印",
+      "smartLayoutHeroIconCategoryCommunication": "コミュニケーション",
+      "smartLayoutHeroIconCategoryCommerce": "コマース",
+      "smartLayoutHeroIconCategoryDocuments": "ドキュメント",
+      "smartLayoutHeroIconCategoryInterface": "インターフェース",
+      "smartLayoutHeroIconCategoryMedia": "メディア",
+      "smartLayoutHeroIconCategoryPeople": "人物",
+      "smartLayoutHeroIconCategorySecurity": "セキュリティ",
+      "smartLayoutHeroIconCategoryTechnology": "テクノロジー",
+      "smartLayoutHeroIconCategoryGeneral": "一般",
+      "columnsDescription": "2、3、4列のセクションを追加します。",
+      "columnsMenu": "列メニュー",
+      "smartLayoutsMenu": "スマートレイアウトメニュー",
+      "smartLayoutGroupBoxes": "ボックス",
+      "smartLayoutGroupBullets": "箇条書き",
+      "smartLayoutGroupSequence": "シーケンス",
+      "smartLayoutGroupImages": "画像",
+      "smartLayoutGroupNumbers": "数値",
+      "smartLayoutGroupCircles": "円形",
+      "smartLayoutGroupQuotes": "引用",
+      "smartLayoutGroupSteps": "ステップ",
+      "smartLayoutGroupColumns": "列",
+      "smartLayoutLabel2Columns": "2列",
+      "smartLayoutLabel3Columns": "3列",
+      "smartLayoutLabel4Columns": "4列",
+      "smartLayoutLabelAlternatingBoxes": "交互配置ボックス",
+      "smartLayoutLabelAlternatingBoxesHorizontal": "横方向の交互配置ボックス",
+      "smartLayoutLabelAlternatingBoxesVertical": "縦方向の交互配置ボックス",
+      "smartLayoutLabelArrows": "矢印",
+      "smartLayoutLabelArrowsHorizontal": "横方向の矢印",
+      "smartLayoutLabelArrowsVertical": "縦方向の矢印",
+      "smartLayoutLabelArrowBullets": "矢印付き箇条書き",
+      "smartLayoutLabelArrowSteps": "矢印付きステップ",
+      "smartLayoutLabelArrowStepsHorizontal": "横方向の矢印付きステップ",
+      "smartLayoutLabelArrowStepsVertical": "縦方向の矢印付きステップ",
+      "smartLayoutLabelBarStats": "棒グラフ付き数値",
+      "smartLayoutLabelBarStatsLeft": "左寄せ棒グラフ付き数値",
+      "smartLayoutLabelBarStatsRight": "右寄せ棒グラフ付き数値",
+      "smartLayoutLabelBoxSteps": "ボックス型ステップ",
+      "smartLayoutLabelBoxStepsHorizontal": "横方向のボックス型ステップ",
+      "smartLayoutLabelBoxStepsVertical": "縦方向のボックス型ステップ",
+      "smartLayoutLabelCircle": "円",
+      "smartLayoutLabelCircleStats": "円形の数値",
+      "smartLayoutLabelCircleStatsExternalLine": "外周ライン付き円形数値",
+      "smartLayoutLabelCircleStatsMiddleLine": "中央ライン付き円形数値",
+      "smartLayoutLabelCircleStatsWithExternalBoldLine": "外周ライン付き円形数値",
+      "smartLayoutLabelCircleStatsWithMiddleBoldLine": "中央ライン付き円形数値",
+      "smartLayoutLabelCycle": "サイクル",
+      "smartLayoutLabelDotGridStats": "ドットグリッド付き数値",
+      "smartLayoutLabelDotGridStatsLeft": "左寄せドットグリッド付き数値",
+      "smartLayoutLabelDotGridStatsRight": "右寄せドットグリッド付き数値",
+      "smartLayoutLabelDotLineStats": "ドットライン付き数値",
+      "smartLayoutLabelDotLineStatsLeft": "左寄せドットライン付き数値",
+      "smartLayoutLabelDotLineStatsRight": "右寄せドットライン付き数値",
+      "smartLayoutLabelFlower": "花形",
+      "smartLayoutLabelFunnel": "ファネル",
+      "smartLayoutLabelFunnelOutsideText": "外側テキスト付きファネル",
+      "smartLayoutLabelIconsWithText": "アイコンとテキスト",
+      "smartLayoutLabelIconsWithTextLeft": "左アイコンとテキスト",
+      "smartLayoutLabelIconsWithTextTop": "上アイコンとテキスト",
+      "smartLayoutLabelImagesWithText": "画像とテキスト",
+      "smartLayoutLabelImagesWithTextCircle": "円形画像とテキスト",
+      "smartLayoutLabelImagesWithTextSquare": "正方形画像とテキスト",
+      "smartLayoutLabelJoinedBoxes": "連結ボックス",
+      "smartLayoutLabelJoinedBoxesWithIcons": "アイコン付き連結ボックス",
+      "smartLayoutLabelLabeledBoxes": "ラベル付きボックス",
+      "smartLayoutLabelLabeledBoxesHorizontal": "横方向のラベル付きボックス",
+      "smartLayoutLabelLabeledBoxesVertical": "縦方向のラベル付きボックス",
+      "smartLayoutLabelLargeBullets": "大きな箇条書き",
+      "smartLayoutLabelLargeBulletsNumbered": "番号付き大きな箇条書き",
+      "smartLayoutLabelLeafBoxes": "リーフ型ボックス",
+      "smartLayoutLabelMinimalTimeline": "ミニマルタイムライン",
+      "smartLayoutLabelMinimalTimelineHorizontal": "横方向のミニマルタイムライン",
+      "smartLayoutLabelMinimalTimelineTwoSidedHorizontal": "両側横方向のミニマルタイムライン",
+      "smartLayoutLabelMinimalTimelineTwoSidedVertical": "両側縦方向のミニマルタイムライン",
+      "smartLayoutLabelMinimalTimelineVertical": "縦方向のミニマルタイムライン",
+      "smartLayoutLabelMinimalTimelineBoxesHorizontal": "横方向のミニマルタイムラインボックス",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedHorizontal": "両側横方向のミニマルタイムラインボックス",
+      "smartLayoutLabelMinimalTimelineBoxesTwoSidedVertical": "両側縦方向のミニマルタイムラインボックス",
+      "smartLayoutLabelMinimalTimelineBoxesVertical": "縦方向のミニマルタイムラインボックス",
+      "smartLayoutLabelMinimalTimelineWithBoxes": "ボックス付きミニマルタイムライン",
+      "smartLayoutLabelOutlineBoxes": "アウトラインボックス",
+      "smartLayoutLabelPills": "ピル型",
+      "smartLayoutLabelPillsHorizontal": "横方向のピル型",
+      "smartLayoutLabelPillsVertical": "縦方向のピル型",
+      "smartLayoutLabelProcessSteps": "プロセスステップ",
+      "smartLayoutLabelProcessStepsNumbered": "番号付きプロセスステップ",
+      "smartLayoutLabelPyramid": "ピラミッド",
+      "smartLayoutLabelPyramidOutsideText": "外側テキスト付きピラミッド",
+      "smartLayoutLabelQuoteBoxes": "引用ボックス",
+      "smartLayoutLabelRing": "リング",
+      "smartLayoutLabelSemiCircle": "半円",
+      "smartLayoutLabelSideLineBoxes": "サイドライン付きボックス",
+      "smartLayoutLabelSideLineText": "サイドライン付きテキスト",
+      "smartLayoutLabelSlantedLabels": "斜めラベル",
+      "smartLayoutLabelSlantedLabelsHorizontal": "横方向の斜めラベル",
+      "smartLayoutLabelSlantedLabelsVertical": "縦方向の斜めラベル",
+      "smartLayoutLabelSmallBullets": "小さな箇条書き",
+      "smartLayoutLabelSolidBoxSmallBullets": "小さな箇条書きボックス",
+      "smartLayoutLabelSolidBoxes": "塗りつぶしボックス",
+      "smartLayoutLabelSolidBoxesWithIcons": "アイコン付きボックス",
+      "smartLayoutLabelSolidBoxesWithNumbers": "番号付き塗りつぶしボックス",
+      "smartLayoutLabelSpeechBubbles": "吹き出し",
+      "smartLayoutLabelSpeechBubblesCenter": "中央の吹き出し",
+      "smartLayoutLabelSpeechBubblesLeft": "左の吹き出し",
+      "smartLayoutLabelSpeechBubblesRight": "右の吹き出し",
+      "smartLayoutLabelStaircase": "階段",
+      "smartLayoutLabelStaircaseOutsideText": "外側テキスト付き階段",
+      "smartLayoutLabelStarRating": "星評価",
+      "smartLayoutLabelStarRatingLeft": "左寄せ星評価",
+      "smartLayoutLabelStarRatingRight": "右寄せ星評価",
+      "smartLayoutLabelStats": "統計",
+      "smartLayoutLabelSteps": "ステップ",
+      "smartLayoutLabelStepsHorizontal": "横方向のステップ",
+      "smartLayoutLabelStepsVertical": "縦方向のステップ",
+      "smartLayoutLabelStepsWithIcons": "アイコン付きステップ",
+      "smartLayoutLabelStepsWithIconsHorizontal": "横方向のアイコン付きステップ",
+      "smartLayoutLabelStepsWithIconsVertical": "縦方向のアイコン付きステップ",
+      "smartLayoutLabelTimeline": "タイムライン",
+      "smartLayoutLabelTimelineHorizontal": "横方向のタイムライン",
+      "smartLayoutLabelTimelineTwoSidedHorizontal": "両側横方向のタイムライン",
+      "smartLayoutLabelTimelineTwoSidedVertical": "両側縦方向のタイムライン",
+      "smartLayoutLabelTimelineVertical": "縦方向のタイムライン",
+      "smartLayoutLabelTopCircleBoxes": "上部に円付きボックス",
+      "smartLayoutLabelTopCircleBoxesWithNumbers": "上部に番号付き円のボックス",
+      "smartLayoutLabelTopLineText": "上線付きテキスト",
+      "smartLayoutLabelVerticalFunnel": "縦型ファネル",
+      "themeNameBasicLight": "ベーシック・ライト",
+      "themeNameBasicDark": "ベーシック・ダーク",
+      "themeNameAlabaster": "アラバスター",
+      "themeNameAmber": "アンバー",
+      "themeNameAsh": "アッシュ",
+      "themeNameBeeHappy": "ビー・ハッピー",
+      "themeNameBlueSteel": "スチールブルー",
+      "themeNameBlueberry": "ブルーベリー",
+      "themeNameBloom": "ブルーム",
+      "themeNameBonanHale": "ボナン・ヘイル",
+      "themeNameBreeze": "ブリーズ",
+      "themeNameBubbleGum": "バブルガム",
+      "themeNameChisel": "チゼル",
+      "themeNameCobalt": "コバルト",
+      "themeNameDewdrop": "朝露",
+      "themeNameGlamour": "グラマラス",
+      "themeNameHowlite": "ハウライト",
+      "themeNameLinen": "リネン",
+      "themeNameMahogany": "マホガニー",
+      "themeNameMist": "ミスト",
+      "themeNameMoss": "モス",
+      "themeNameOnyx": "オニキス",
+      "themeNameQuartz": "クォーツ",
+      "themeNameSand": "サンド",
+      "themeNameVivid": "ビビッド",
+      "panelLoading": "パネルを読み込み中",
+      "themeNameKraft": "クラフト",
+      "themeNameCreme": "クリーム",
+      "themeNameMystique": "ミスティーク",
+      "themeNameVortex": "ボルテックス",
+      "themeNameGoldLeaf": "金箔",
+      "themeNameTranquil": "静けさ",
+      "themeNameIris": "アイリス",
+      "themeNamePrism": "プリズム",
+      "themeNameRush": "疾走感",
+      "themeNameChocolate": "チョコレート",
+      "themeNameWireframe": "ワイヤーフレーム",
+      "themeNameConsultant": "コンサルタント",
+      "themeNameCornfield": "コーンフィールド",
+      "themeNameExecutiveBlue": "エグゼクティブ・ブルー",
+      "themeNameDeckwiseWarmRetro": "ウォーム・レトロ",
+      "themeNameDeckwiseRichPalette": "リッチ・パレット",
+      "themeNamePetrol": "ペトロールブルー",
+      "themeNameAlien": "エイリアン",
+      "themeNameCoal": "チャコール",
+      "themeNameCigar": "シガー",
+      "themeNameClementa": "クレメンタイン",
+      "themeNameCommons": "コモンズ",
+      "themeNameCornflower": "ヤグルマギク",
+      "themeNameDaktilo": "タイプライター",
+      "themeNameDawn": "夜明け",
+      "themeNameDialogue": "ダイアローグ",
+      "themeNameEditoria": "エディトリアル",
+      "themeNameElectric": "エレクトリック",
+      "themeNameFinesse": "フィネス",
+      "themeNameFlax": "亜麻",
+      "themeNameFluo": "ネオン",
+      "themeNameFounder": "ファウンダー",
+      "themeNameDeckwise": "クラシック",
+      "themeNameMocha": "モカ",
+      "themeNameIcebreaker": "アイスブレイク",
+      "themeNameIncandescent": "グロー",
+      "themeNameKeepsake": "メメント",
+      "themeNameLavender": "ラベンダー",
+      "themeNameLeimoon": "レイ・ムーン",
+      "themeNameLunaria": "ルナリア",
+      "themeNameLux": "リュクス",
+      "themeNameMarine": "マリン",
+      "themeNameMossAndMist": "苔と霧",
+      "themeNamePearl": "パール",
+      "themeNamePiano": "ピアノ",
+      "themeNamePistachio": "ピスタチオ",
+      "themeNamePlantShop": "ボタニカル",
+      "themeNameSage": "セージ",
+      "themeNameSeafoam": "シーフォーム",
+      "themeNameSerene": "カーム",
+      "themeNameSlate": "スレート",
+      "themeNameTerracotta": "テラコッタ",
+      "themeNameIndigo": "インディゴ",
+      "themeNameVanilla": "バニラ",
+      "themeNameWine": "ワイン",
+      "exportPptxIdle": "PPTXを書き出す",
+      "exportUnavailable": "書き出しできません",
+      "exporting": "書き出し中...",
+      "exported": "書き出しました",
+      "exportFailed": "書き出しに失敗しました",
+      "googleSlidesExportComplete": "Google スライドへの書き出しが完了しました",
+      "googleSlidesExportFailed": "Google スライドの書き出しに失敗しました",
+      "editableExportRequiresPlus": "編集可能な PowerPoint と Google スライドの書き出しは Plus で利用できます。",
+      "editableExportAccessCheckFailed": "書き出し権限を確認できませんでした。もう一度お試しください。",
+      "openGoogleSlides": "Google スライドを開く",
+      "exportPdfIdle": "PDFを書き出す",
+      "preparingPdf": "PDF を準備中...",
+      "pdfExportFailed": "PDFの書き出しに失敗しました",
+      "exportAs": "書き出し形式を選択",
+      "exportSlidesAs": "スライドを書き出し",
+      "exportSlideAs": "スライドを書き出し",
+      "exportImage": "画像",
+      "keepAtLeastOneSlide": "少なくとも 1 枚のスライドを残してください",
+      "cutOrCopySlideFirst": "先にスライドを切り取りまたはコピーしてください",
+      "cut": "切り取り",
+      "copy": "コピー",
+      "pasteBelow": "下に貼り付け",
+      "moveSlidesUp": "スライドを上へ移動",
+      "moveUp": "上へ移動",
+      "moveSlidesDown": "スライドを下へ移動",
+      "moveDown": "下へ移動",
+      "duplicateSlides": "スライドを複製",
+      "duplicateSlide": "スライドを複製",
+      "addBelowSelection": "選択範囲の下に追加",
+      "addBelow": "下に追加",
+      "exportSlides": "スライドを書き出し",
+      "exportSlide": "スライドを書き出し",
+      "deleteSlides": "スライドを削除",
+      "delete": "削除",
+      "tableColumn": "表の列",
+      "gridColumn": "グリッド列",
+      "columnResizeWidth": "{label} {index} の幅",
+      "selectedBlockLabel": "{count} 個のブロックを選択済み",
+      "selectedBlocksLabel": "{count} 個のブロックを選択済み",
+      "slideLabel": "スライド {index}",
+      "slideContextLine": "スライド {index}: {title}",
+      "blockPathsLine": "ブロックパス: {paths}",
+      "selectedDeckwiseBlocksFallback": "選択したブロック。",
+      "tableCellActions": "表セルの操作",
+      "cutCells": "セルを切り取り",
+      "copyCells": "セルをコピー",
+      "pasteCellsUnavailable": "セルを貼り付けできません",
+      "pasteCells": "セルを貼り付け",
+      "insertColumnsLeft": "左に列を挿入",
+      "insertColumnsRight": "右に列を挿入",
+      "insertRowsAbove": "上に行を挿入",
+      "insertRowsBelow": "下に行を挿入",
+      "keepAtLeastOneTableRow": "少なくとも 1 行を残してください",
+      "deleteTableRowUnavailable": "行を削除できません",
+      "keepAtLeastOneTableColumn": "少なくとも 1 列を残してください",
+      "deleteTableColumnUnavailable": "列を削除できません",
+      "deleteRow": "行を削除",
+      "deleteSheet": "表を削除",
+      "blockActions": "ブロック操作",
+      "elementPreviewBulletAction": "アクション項目",
+      "elementPreviewBulletFollowUp": "フォローアップ詳細",
+      "elementPreviewBulletDecision": "決定メモ",
+      "elementPreviewCallout": "読者に向けて簡潔な補足情報を追加します。",
+      "elementPreviewColumnOneTitle": "列 1",
+      "elementPreviewColumnOneParagraph": "補足テキストでこの列の流れを示します。",
+      "elementPreviewColumnTwoTitle": "列 2",
+      "elementPreviewColumnTwoParagraph": "2つ目の段落で分割レイアウトを読みやすくします。",
+      "elementPreviewColumnThreeTitle": "列 3",
+      "elementPreviewColumnThreeParagraph": "短い本文で3列目を見やすく保ちます。",
+      "elementPreviewColumnFourTitle": "列 4",
+      "elementPreviewColumnFourParagraph": "コンパクトなテキストで4列目の状態を示します。",
+      "elementPreviewFootnote": "短い補足メモ。",
+      "elementPreviewHeading": "見出し {level}",
+      "elementPreviewLabel": "ラベル",
+      "elementPreviewListItem": "リスト項目",
+      "elementPreviewProjectUpdate": "プロジェクト更新",
+      "elementPreviewQuote": "簡潔な要点をここに置きます。",
+      "elementPreviewStepOne": "ステップ 1",
+      "elementPreviewStepTwo": "ステップ 2",
+      "elementPreviewStepThree": "ステップ 3",
+      "elementPreviewSupportingDetail": "補足情報",
+      "elementPreviewTableMetric": "指標",
+      "elementPreviewTableStatus": "ステータス",
+      "elementPreviewTableOwner": "担当者",
+      "elementPreviewTableNext": "次へ",
+      "elementPreviewTableUsers": "ユーザー",
+      "elementPreviewTableTeam": "チーム",
+      "elementPreviewTableGrowth": "成長",
+      "elementPreviewTableOps": "運用",
+      "elementPreviewTableLive": "進行中",
+      "elementPreviewTableRisk": "リスク",
+      "elementPreviewTableLow": "低",
+      "elementPreviewTableDone": "完了",
+      "elementPreviewToc": "セクション概要",
+      "elementPreviewTodoTask": "完了するタスク",
+      "elementPreviewTodoReview": "担当者レビュー",
+      "elementPreviewTodoUpdate": "更新を送信"
+    }
+  },
+  "files": {
+    "addImage": "画像を追加",
+    "addPdf": "PDFを追加",
+    "upload": "ファイル",
+    "uploadAction": "アップロード",
+    "createFile": "ファイルの作成",
+    "projectDocuments": "プロジェクト文書",
+    "dropUploadTitle": "何でも追加",
+    "dropUploadSubtitle": "ここにファイルをドロップすると、対応するソースカテゴリにアップロードされます",
+    "searchAction": "検索",
+    "createNote": "ドキュメント",
+    "createSlides": "スライド",
+    "slidesTemplate": "テンプレート",
+    "createNoteFailed": "ドキュメントの作成に失敗しました。もう一度試してください。",
+    "createSlidesFailed": "スライドの作成に失敗しました。もう一度試してください。",
+    "createSheetFailed": "スプレッドシートのアップロードに失敗しました。もう一度試してください。",
+    "spreadsheetUnsupported": "CSV および XLS ファイルはサポートされていません。",
+    "uploadUnsupportedFileType": "このファイル形式はサポートされていません: {names}",
+    "uploadFailedNoProject": "まずプロジェクトのワークスペースを開いてください。",
+    "googleDriveAuthorizationRequired": "続行するには Google Drive を接続してください。",
+    "googleDriveAuthorizationPending": "Google Drive はまだ接続されていません。認可を完了してから再試行してください。",
+    "googleDriveConnectFailed": "Google Drive の接続に失敗しました",
+    "googleDriveImportFailed": "Google Drive ファイルのインポートに失敗しました",
+    "googleDriveImportSucceeded": "{count} 件の Google Drive ファイルをインポートしました",
+    "googleDriveNotConfigured": "Google Drive のインポートが設定されていません。",
+    "oneDriveAuthorizationRequired": "続行するには OneDrive を接続してください。",
+    "oneDriveAuthorizationPending": "OneDrive はまだ接続されていません。認可を完了してから再試行してください。",
+    "oneDriveConnectFailed": "OneDrive の接続に失敗しました",
+    "oneDriveImportFailed": "OneDrive ファイルのインポートに失敗しました",
+    "oneDriveImportSucceeded": "{count} 件の OneDrive ファイルをインポートしました",
+    "oneDrivePickerTitle": "OneDrive からインポート",
+    "oneDrivePickerDescription": "接続済みの OneDrive からファイルを選択します。",
+    "oneDriveSearchPlaceholder": "OneDrive ファイルを検索",
+    "oneDrivePickerLoading": "OneDrive ファイルを読み込み中…",
+    "oneDrivePickerLoadFailed": "OneDrive ファイルを読み込めませんでした",
+    "oneDrivePickerEmpty": "OneDrive ファイルが見つかりません",
+    "oneDrivePickerEmptyHint": "別のフォルダーや検索語を試すか、認可で選択できるファイルを追加してください。",
+    "oneDrivePickerHint": "フォルダーはこの選択画面内で開きます。ファイルを選択するとプロジェクトにインポートされます。",
+    "oneDrivePickerLoadMore": "さらに読み込む",
+    "oneDrivePickerReconnect": "OneDrive ファイルをさらに選択",
+    "oneDrivePickerImportSelected": "選択した {count} 件をインポート",
+    "oneDriveUntitledFile": "無題の OneDrive ファイル",
+    "oneDriveLastModified": "更新日: {date}",
+    "oneDriveOpenFile": "OneDrive で開く",
+    "oneDriveUnknownDate": "日付不明",
+    "oneDriveFolder": "フォルダー",
+    "oneDriveFolderItem": "{count} 件の項目",
+    "dropboxAuthorizationRequired": "続行するには Dropbox を接続してください。",
+    "dropboxAuthorizationPending": "Dropbox はまだ接続されていません。認可を完了してから再試行してください。",
+    "dropboxConnectFailed": "Dropbox の接続に失敗しました",
+    "dropboxImportFailed": "Dropbox ファイルのインポートに失敗しました",
+    "dropboxImportSucceeded": "{count} 件の Dropbox ファイルをインポートしました",
+    "dropboxNotConfigured": "Dropbox のインポートが設定されていません。",
+    "dropboxPickerRetryRequired": "Dropbox が接続されました。ファイルを選ぶには「Dropbox から追加」をもう一度クリックしてください。",
+    "notionAuthorizationRequired": "続行するには Notion を接続してください。",
+    "notionAuthorizationPending": "Notion はまだ接続されていません。認可を完了してから再試行してください。",
+    "notionConnectFailed": "Notion の接続に失敗しました",
+    "notionImportFailed": "Notion ページのインポートに失敗しました",
+    "notionImportSucceeded": "{count} 件の Notion ページをインポートしました",
+    "notionPickerTitle": "Notion からインポート",
+    "notionPickerDescription": "Deckwise と共有されているページを選択します。",
+    "notionSearchPlaceholder": "ページを検索",
+    "notionPickerSelectPages": "ページを選択",
+    "notionPickerLoading": "Notion ページを読み込み中…",
+    "notionPickerLoadFailed": "Notion ページを読み込めませんでした",
+    "notionPickerEmpty": "Notion ページが見つかりません",
+    "notionPickerMissingAuthorizationHint": "ページが見つからない場合は、Notion でそのページまたは親ページを Deckwise と共有してください。",
+    "notionPickerLoadMore": "さらに読み込む",
+    "notionPickerChooseMorePages": "さらにページを選択",
+    "notionPickerImportSelected": "選択した {count} 件をインポート",
+    "notionUntitledPage": "無題の Notion ページ",
+    "notionLastEdited": "最終編集日: {date}",
+    "notionOpenPage": "Notion で開く",
+    "notionUnknownDate": "日付不明",
+    "outlineReferenceMixedUnsupported": "スライドファイルと参考ファイルは別々に追加してください。",
+    "outlineReferenceLimit": "参考ファイルは最大 {count} 件まで添付できます。",
+    "outlineReferenceUploadFailed": "参考ファイルのアップロードに失敗しました",
+    "all": "すべて",
+    "uploading": "アップロード中…",
+    "empty": "ファイルがありません",
+    "noPreview": "プレビューなし",
+    "image": "画像",
+    "images": "画像",
+    "outline": "アウトライン",
+    "imageGallery": "画像",
+    "imageWallEmpty": "まだ画像がありません",
+    "imageWallEmptyHint": "アップロードした画像がここに表示されます",
+    "file": "ファイル",
+    "pdf": "PDF",
+    "note": "ドキュメント",
+    "deleteFile": "ファイルの削除",
+    "deleteFailed": "ファイルの削除に失敗しました。もう一度試してください。",
+    "uploadFailedNoCacheKey": "アップロードに失敗しました: サーバーがキャッシュキーを返しませんでした。",
+    "uploadImageFailed": "画像のアップロードに失敗しました",
+    "uploadPdfFailed": "PDFのアップロードに失敗しました",
+    "uploadOfficeFailed": "Office ファイルのアップロードに失敗しました",
+    "officeUploadDisabled": "Office のアップロードが無効になっています。",
+    "notesTab": "ノート",
+    "filesTab": "ファイル",
+    "sourcesTipTitle": "ヒント",
+    "sourcesTipBody": "{sources}内のコンテンツをラッソ選択し、{addToChat}で選択部分だけをAgentのコンテキストに追加できます。",
+    "addToChat": "チャットに追加",
+    "moreActions": "さらなるアクション",
+    "moveToTrash": "ゴミ箱に移動",
+    "deleteAction": "削除",
+    "deleteTypedAction": "{type}を削除",
+    "deleteTypedConfirmTitle": "この{type}を削除しますか?",
+    "deleteFileConfirmTitle": "このファイルを削除しますか?",
+    "deleteFileConfirmMessage": "このファイルは現在のワークスペースから削除されます。",
+    "download": "ダウンロード",
+    "downloadUnavailable": "このファイルはダウンロードできません。",
+    "export": "エクスポート",
+    "exportMarkdown": "Markdown",
+    "exportMarkdownFailed": "マークダウンのエクスポートに失敗しました。もう一度試してください。",
+    "exportPptx": "PowerPoint",
+    "exportPptxFailed": "PowerPoint のエクスポートに失敗しました。もう一度試してください。",
+    "exportPptxUnavailable": "PowerPoint をエクスポートする前に、このスライド ファイルを保存してください。",
+    "convertToSlide": "スライドを作成する",
+    "convertToSlideFailed": "ドキュメントをスライドに変換できませんでした。もう一度試してください。",
+    "convertedSlidesSuffix": "スライド",
+    "duplicate": "複製",
+    "duplicateCopySuffix": "コピー",
+    "duplicateFailed": "ファイルの複製に失敗しました。もう一度試してください。",
+    "rename": "名前の変更",
+    "renameDialogTitle": "ファイル名の変更",
+    "renameDialogDescription": "サイドバーに表示されるこのファイルの名前を更新します。",
+    "renameInputLabel": "名前",
+    "renamePlaceholder": "ファイル名を入力してください",
+    "noteTitlePlaceholder": "新しいページ",
+    "renameEmptyName": "ファイル名を空にすることはできません。",
+    "renameFailed": "ファイル名の変更に失敗しました。もう一度試してください。",
+    "openInNewTab": "新しいタブで開く",
+    "openInNewTabUnavailable": "新しいタブで開く前に、まずこのファイルを保存してください。",
+    "cancelAction": "キャンセル",
+    "saveAction": "保存",
+    "materials": "資料",
+    "insertSlide": "スライドを挿入",
+    "imageActions": "画像操作",
+    "copyImage": "画像をコピー",
+    "outlineAddSlide": "スライドを追加",
+    "outlineSelectAll": "すべて選択",
+    "outlineDeleteSlide": "スライドを削除",
+    "outlineSelectAndReorderSlide": "スライド {page} を選択して並べ替え",
+    "outlineSlideActions": "スライド {page} の操作",
+    "materialsSidebarWidth": "ソースサイドバーの幅"
+  },
+  "systemContent": {
+    "imageAlt": "画像",
+    "imageAltN": "画像 {n}",
+    "imageName": "画像",
+    "imageNameN": "画像 {n}",
+    "imageLoadFailed": "画像の読み込みに失敗しました。",
+    "loadFailed": "ロードに失敗しました。",
+    "collapse": "折りたたむ",
+    "pdfDoc": "PDF ドキュメント"
+  },
+  "selectionToolbar": {
+    "quote": "引用",
+    "copy": "コピー",
+    "copied": "コピーされました",
+    "copyFailed": "コピーに失敗しました",
+    "rollback": "ロールバック",
+    "rollbackRunning": "ロールバック中",
+    "rollbackRestored": "復元済み",
+    "rollbackSuccess": "このバージョンに復元しました",
+    "rollbackUnavailable": "復元できるバージョンが見つかりません",
+    "rollbackFailed": "ロールバックに失敗しました",
+    "actions": "選択操作"
+  },
+  "codeBlock": {
+    "copyAria": "コードをコピーする",
+    "copy": "コードをコピーする",
+    "copied": "コピーされました",
+    "copiedToClipboard": "コードをクリップボードにコピーしました"
+  },
+  "middle": {
+    "filePreview": "プレビュー",
+    "editor": "エディター",
+    "emptyHintTitle": "このパネルは次の用途に使用できます。",
+    "emptyHintItem1": "セッション",
+    "emptyHintItem2": "保存されたアイテム",
+    "emptyHintItem3": "ファイル",
+    "emptyHintItem4": "資料",
+    "loadFailed": "ロードに失敗しました。",
+    "pdfLoadFailed": "PDFの読み込みに失敗しました。",
+    "totalPages": "{count} ページ",
+    "defaultEditorContent": "# ようこそ\n\n入力を開始するか、`/` を入力してコマンドを表示します。\n\n## 機能\n\n- Markdown\n- スラッシュコマンド\n- AI 支援\n- コードハイライト\n- 数式\n- テーブル",
+    "newNote": "新しいドキュメント",
+    "untitledNote": "無題のドキュメント",
+    "pdfPreviewControls": "PDFプレビューコントロール",
+    "wordPreviewControls": "Wordプレビューコントロール",
+    "toggleThumbnails": "サムネイルの切り替え",
+    "pageNumberInputLabel": "現在のページ番号",
+    "pdfPageAlt": "{page} ページ",
+    "zoomIn": "ズームイン",
+    "zoomOut": "ズームアウト",
+    "downloadPdf": "PDFをダウンロード",
+    "printPdf": "PDFを印刷する",
+    "addToChat": "チャットに追加",
+    "copyText": "コピー",
+    "copied": "コピーされました",
+    "untitledSlides": "無題のスライド",
+    "deckwiseSlidesFailedTitle": "スライドを開けませんでした",
+    "deckwiseSlidesLoadFailed": "スライドの読み込みに失敗しました。",
+    "failedToLoadExampleTargets": "サンプル対象の読み込みに失敗しました。",
+    "missingSlidesFileId": "サンプル登録用のスライドファイル ID がありません。",
+    "exampleTitleRequired": "サンプルのタイトルは必須です。",
+    "sortOrderInteger": "並び順は整数である必要があります。",
+    "promoteExample": "サンプルに登録",
+    "promoteExampleDescription": "公開済みスライドをサンプルカタログに登録します。",
+    "promoteExampleSuccess": "サンプルをギャラリーに追加しました。",
+    "promoteExampleFailed": "スライドサンプルの登録に失敗しました。",
+    "titleField": "タイトル",
+    "replaceTarget": "置き換え先",
+    "createNewExample": "新しいサンプルを作成",
+    "selectedExample": "選択中のサンプル（{id}）",
+    "category": "カテゴリ",
+    "tags": "タグ",
+    "sort": "並び順",
+    "tagsPlaceholder": "旅行, デモ",
+    "enabled": "有効",
+    "promoting": "登録中...",
+    "officeLoadFailed": "Office ファイルの読み込みに失敗しました。",
+    "missingSlidesFileIdForPreviewUpload": "プレビューアップロード用のスライドファイル ID がありません。",
+    "uploadedPreviewImages": "{count} 枚のプレビュー画像をアップロードしました。",
+    "failedToUploadPreviewImages": "スライドのプレビュー画像のアップロードに失敗しました。",
+    "imageUploadFailed": "画像のアップロードに失敗しました。もう一度お試しください。",
+    "missingSlidesDocumentIdForPublish": "公開用のスライドドキュメント ID がありません。",
+    "resolveConflictBeforePublishing": "公開する前に現在のリビジョン競合を解決してください。",
+    "missingSlidesDocumentIdForShare": "共有用のスライドドキュメント ID がありません。",
+    "resolveConflictBeforeSharing": "共有する前に現在のリビジョン競合を解決してください。",
+    "sentSlidesShareEmail": "{count} 件の宛先に共有メールを送信しました。",
+    "publishedPublicSlides": "公開済みスライドは一般公開されています。",
+    "publishPublicSlidesFailed": "スライドを一般公開できませんでした。もう一度お試しください。",
+    "publicSlidesLinkMissing": "スライドは公開されましたが、公開リンクが見つかりません。もう一度お試しください。",
+    "unpublishedPublicSlides": "公開アクセスをオフにしました。",
+    "unpublishPublicSlidesFailed": "公開アクセスをオフにできませんでした。もう一度お試しください。",
+    "createShareLinkFailed": "共有リンクを作成できませんでした。もう一度お試しください。",
+    "shareLinkMissing": "共有リンクが見つかりません。もう一度お試しください。",
+    "sendShareEmailFailed": "共有メールを送信できませんでした。もう一度お試しください。",
+    "publishedSlidesFile": "スライドファイル {fileId} を公開しました。",
+    "publishedSlides": "スライドを公開しました。",
+    "deckwiseSlidesReloadedLatestRemote": "{message} 最新のリモート版を再読み込みしました。",
+    "deckwiseSlidesReloadAfterSaveFailureFailed": "保存失敗後にスライドを再読み込みできませんでした。",
+    "deckwiseSlidesRefreshAfterAgentFailed": "Agent の更新後にスライドを更新できませんでした。",
+    "deckwiseSlidesThemeUpdateFailed": "スライドテーマを更新できませんでした。もう一度お試しください。",
+    "deckwiseSlidesAgentConflict": "ローカル編集の開始後に Agent がこのスライドを更新しました。続行する前に保存するか、ドキュメントを再読み込みしてください。",
+    "deckwiseSlidesChangedWhileSaving": "保存中にスライドが変更されました。"
+  },
+  "projects": {
+    "audienceReviewTrigger": "レビュー",
+    "audienceReviewTriggerAria": "総合スコアは100点中{score}点です。レビューの提案を開く",
+    "audienceReviewTitle": "オーディエンスレビュー",
+    "audienceReviewDescription": "このプレゼンテーションを視聴者の観点からレビューします。",
+    "audienceReviewAgain": "もう一度レビュー",
+    "audienceReviewClose": "オーディエンスレビューを閉じる",
+    "audienceReviewLoading": "最新のレビューを読み込んでいます...",
+    "audienceReviewGenerating": "オーディエンスレビューを生成中",
+    "audienceReviewPreparingImages": "レビュー用画像を準備中",
+    "audienceReviewSystemError": "システムエラー",
+    "audienceReviewTryAgain": "もう一度試す",
+    "audienceReviewUnavailable": "再利用できるレビューはまだありません。",
+    "audienceReviewGenerate": "レビューを生成",
+    "audienceReviewComplete": "プレゼンテーションを開始する準備ができました",
+    "audienceReviewNoSuggestions": "オーディエンスレビューの提案はありません。",
+    "audienceReviewSuggestionFallback": "提案",
+    "audienceReviewFix": "修正",
+    "audienceReviewFixAria": "提案を修正：{title}",
+    "audienceReviewDismiss": "却下",
+    "audienceReviewDismissAria": "提案を却下：{title}",
+    "audienceReviewSlide": "頁",
+    "audienceReviewAllSlides": "すべてのスライド",
+    "audienceReviewSlideList": "スライド {pages}",
+    "title": "プロジェクト",
+    "subtitle": "最近オープンしたものが一番",
+    "openingRecentProject": "最近のプロジェクトを開く",
+    "openingRecentProjectHint": "まずローカル キャッシュを確認してから、最新のプロジェクトを確認します。",
+    "openingRecentProjectSlowHint": "ネットワークが遅いです。まだプロジェクト サービスにアクセスしようとしています。",
+    "loadRecentTimeoutTitle": "プロジェクト サービスへの接続がタイムアウトしました",
+    "loadRecentTimeoutMessage": "遅いネットワークでは、ホームページがハングしたままになるのではなく、待機を停止します。もう一度試してください。",
+    "loadRecentFailedTitle": "最近のプロジェクトを読み込めませんでした",
+    "loadRecentFailedMessage": "ネットワークが遅いか不安定です。もう一度試してください。",
+    "loadingProject": "プロジェクトをロード中",
+    "loadFailedTitle": "プロジェクトのロードに失敗しました",
+    "startTitle": "今日は何を紹介しますか?",
+    "startComposerPlaceholder": "アイデアを入力するか、ファイルをアップロード",
+    "invalidProjectData": "プロジェクト サービスが不完全なデータを返しました。もう一度試してください。",
+    "loadTimeoutMessage": "プロジェクト サービスへの接続がタイムアウトしました。ネットワークを確認して、もう一度試してください。",
+    "loadNetworkErrorMessage": "ネットワークが遅いか不安定なので、現在プロジェクトを読み込むことができません。もう一度試してください。",
+    "missingOrDeleted": "このプロジェクトは存在しないか、削除されました",
+    "recentTitle": "最近のプロジェクト",
+    "recentSubtitle": "過去 7 日間にアクティブでした",
+    "recentEmpty": "最近のプロジェクトはありません",
+    "allTitle": "すべて",
+    "new": "新しい",
+    "newProject": "新しいプロジェクト",
+    "myProject": "私のプロジェクト",
+    "createCardSubtitle": "新しいワークスペースを作成する",
+    "emptyTitle": "まだプロジェクトはありません",
+    "emptySubtitle": "最初のプロジェクトを作成して開始します",
+    "pleaseWait": "お待ちください",
+    "createFailed": "プロジェクトの作成に失敗しました。後でもう一度試してください。",
+    "confirmDelete": "このプロジェクトを削除してもよろしいですか?",
+    "deleteFailed": "削除に失敗しました。後でもう一度試してください。",
+    "renamePrompt": "プロジェクト名の変更",
+    "renameEmptyName": "プロジェクト名を空にすることはできません。",
+    "renameFailed": "名前の変更に失敗しました。後でもう一度試してください。",
+    "projectNumber": "プロジェクト #{id}",
+    "updatedAt": "{date}に更新",
+    "searchPlaceholder": "プロジェクトを検索する",
+    "noResults": "一致するプロジェクトはありません",
+    "timeGroups": {
+      "today": "今日",
+      "yesterday": "昨日",
+      "pastWeek": "過去 1 週間",
+      "past30Days": "過去 30 日間",
+      "older": "古い"
+    },
+    "outline": "アウトライン",
+    "slides": "スライド",
+    "untitledProject": "無題のプロジェクト",
+    "generateSlides": "スライドを生成",
+    "generatingSlides": "生成中...",
+    "generationWorkflowTitle": "スライドを生成中",
+    "generationWorkflow": {
+      "outline": "アウトラインを作成中",
+      "theme": "テーマを選択中",
+      "layout": "ページレイアウトを計画中",
+      "visuals": "画像の使用を決定中",
+      "slots": "ページ構造を整理中",
+      "deck": "スライドファイルを生成中"
+    },
+    "customize": "カスタマイズ",
+    "generateSlidesSettings": "スライド生成設定",
+    "textContent": "テキスト内容",
+    "textContentMode": "テキスト内容モード",
+    "amountOfText": "テキスト量",
+    "writeFor": "対象読者...",
+    "tone": "トーン",
+    "theme": "テーマ",
+    "viewMore": "もっと見る",
+    "themeHelp": "下の人気テーマを使うか、さらに表示します",
+    "titlePreview": "タイトル",
+    "bodyLinkPreview": "本文とリンク",
+    "themePistachio": "ピスタチオ",
+    "themeVolt": "ボルト",
+    "densityMinimal": "最小",
+    "densityConcise": "簡潔",
+    "densityDetailed": "詳細",
+    "densityExtensive": "豊富",
+    "textModeGenerate": "生成",
+    "textModeCondense": "要約",
+    "textModePreserve": "保持",
+    "audienceBusinessLabel": "ビジネス",
+    "audienceBusinessContent": "ビジネス、戦略、営業、社内向けプレゼンを作る実務担当者向け",
+    "audienceHighSchoolersLabel": "高校生",
+    "audienceHighSchoolersContent": "授業課題、レポート、発表に取り組む高校生向け",
+    "audienceCollegeStudentsLabel": "大学生",
+    "audienceCollegeStudentsContent": "授業、研究、学術発表を準備する大学生・大学院生向け",
+    "audienceCreativesLabel": "クリエイター",
+    "audienceCreativesContent": "デザイナー、アーティスト、マーケター、クリエイター向けの視覚表現",
+    "audienceTechEnthusiastsLabel": "テック好き",
+    "audienceTechEnthusiastsContent": "技術、ソフトウェア、AI ツール、デジタル製品に関心がある人向け",
+    "toneProfessionalLabel": "プロフェッショナル",
+    "toneProfessionalContent": "ビジネスや職場で使いやすい、洗練された簡潔で説得力のある文体",
+    "toneConversationalLabel": "会話調",
+    "toneConversationalContent": "親しみやすく自然で、人間らしく読める文体",
+    "toneTechnicalLabel": "技術的",
+    "toneTechnicalContent": "技術説明、ガイド、ドキュメント向けの正確で構造的な文体",
+    "toneAcademicLabel": "学術的",
+    "toneAcademicContent": "研究、論文、学術用途向けの正式で客観的、根拠重視の文体",
+    "toneInspirationalLabel": "インスピレーショナル",
+    "toneInspirationalContent": "聴衆を動かす前向きでエネルギーのある文体",
+    "toneHumorousLabel": "ユーモラス",
+    "toneHumorousContent": "関連性を保ちながら個性を加える、軽快で楽しい文体",
+    "cardsBelowUpgradeAction": "アップグレード",
+    "cardsBelowUpgradeSuffix": "してすべてのカードを生成",
+    "saveOutlineBeforeGenerate": "スライドを生成する前にアウトラインを保存してください。",
+    "waitForImageUploadsBeforeGenerate": "画像のアップロードが完了してからスライドを生成してください。",
+    "generateSlidesFailed": "スライドの生成に失敗しました。",
+    "firstDraftLabel": "初稿"
+  },
+  "personalization": {
+    "title": "パーソナライズ",
+    "subtitle": "あなた自身と Deckwise が覚えておく内容を管理します",
+    "accountSection": "アカウント",
+    "account": "アカウント",
+    "general": "一般",
+    "models": "モデル",
+    "usageBilling": "利用状況と請求",
+    "accountSubtitle": "プロフィールとアカウント情報を管理します。",
+    "generalSubtitle": "ワークスペースのアプリ設定を調整します。",
+    "usageSubtitle": "サブスクリプションと請求情報を確認します。",
+    "featuresSection": "機能",
+    "mail": "Deckwise メール",
+    "dataControls": "データ管理",
+    "myComputer": "マイコンピューター",
+    "cloudBrowser": "クラウドブラウザー",
+    "skills": "スキル",
+    "mcp": "MCP",
+    "connectors": "コネクター",
+    "integrations": "連携",
+    "getHelp": "ヘルプ",
+    "profileTab": "プロフィール",
+    "knowledgeTab": "ナレッジ",
+    "nickname": "ニックネーム",
+    "nicknamePlaceholder": "Jane",
+    "occupation": "職業",
+    "occupationPlaceholder": "プロダクトデザイナー",
+    "moreAboutYou": "あなたについて",
+    "aboutPlaceholder": "私はニューヨーク在住のアナリストで、主に React と SQL を使っています。",
+    "profileHelp": "Deckwise はこの情報を使って、すべてのタスクで応答をパーソナライズします。",
+    "customInstructions": "カスタム指示",
+    "instructionsPlaceholder": "簡潔で直接的に。指定がない限り Python を既定にしてください。ドキュメントを書くときは専門的なトーンで、出典を示してください。",
+    "saveProfile": "プロフィールを保存",
+    "savedStatus": "パーソナライズを保存しました",
+    "loadFailed": "パーソナライズを読み込めませんでした。",
+    "saveFailed": "パーソナライズを保存できませんでした。",
+    "memoriesHeading": "メモリ",
+    "rulesHeading": "ルール",
+    "memoryTitlePlaceholder": "メモリのタイトル",
+    "memoryContentPlaceholder": "Deckwise に覚えてほしいこと",
+    "ruleContentPlaceholder": "Deckwise の応答や振る舞い",
+    "addMemory": "メモリを追加",
+    "addRule": "ルールを追加",
+    "emptyMemories": "保存されたメモリはまだありません。",
+    "emptyRules": "保存されたルールはまだありません。",
+    "enabled": "有効",
+    "disabled": "無効",
+    "sourceUser": "ユーザー",
+    "sourceAi": "AI",
+    "personal": "個人",
+    "notSignedIn": "未ログイン",
+    "integrationsSubtitle": "接続済みアプリとファイルソースを管理します。",
+    "integrationsDescription": "クラウドストレージを接続すると、必要なときに選択したファイルを Deckwise にインポートできます。",
+    "googleDriveTitle": "Google Drive",
+    "googleDriveDescription": "Google Drive からファイルをインポートします。",
+    "notionTitle": "Notion",
+    "notionDescription": "Notion からページをインポートします。",
+    "connected": "接続済み",
+    "notConnected": "未接続",
+    "connect": "接続",
+    "disconnect": "接続解除",
+    "disconnectGoogleDrive": "接続解除",
+    "disconnectGoogleDriveConfirmTitle": "Google Drive の接続を解除しますか？",
+    "disconnectGoogleDriveConfirmMessage": "Deckwise は保存済みの Google Drive トークンを取り消し、この接続の使用を停止します。すでにプロジェクトにインポートされたファイルはワークスペースに残ります。",
+    "googleDriveConnected": "Google Drive に接続しました。",
+    "googleDriveDisconnected": "Google Drive の接続を解除しました。",
+    "googleDriveAuthorizationPending": "開いたタブで Google Drive の認可を完了してください。",
+    "connectGoogleDriveFailed": "Google Drive に接続できませんでした",
+    "disconnectGoogleDriveFailed": "Google Drive の接続を解除できませんでした",
+    "disconnectNotion": "接続解除",
+    "disconnectNotionConfirmTitle": "Notion の接続を解除しますか？",
+    "disconnectNotionConfirmMessage": "Deckwise は保存済みの Notion トークンを取り消し、この接続の使用を停止します。すでにプロジェクトにインポートされたページはワークスペースに残ります。",
+    "notionConnected": "Notion に接続しました。",
+    "notionDisconnected": "Notion の接続を解除しました。",
+    "notionAuthorizationPending": "開いたタブで Notion の認可を完了してください。",
+    "connectNotionFailed": "Notion に接続できませんでした",
+    "disconnectNotionFailed": "Notion の接続を解除できませんでした",
+    "oneDriveTitle": "OneDrive",
+    "oneDriveDescription": "Microsoft OneDrive からファイルをインポートします。",
+    "disconnectOneDrive": "接続解除",
+    "disconnectOneDriveConfirmTitle": "OneDrive の接続を解除しますか？",
+    "disconnectOneDriveConfirmMessage": "Deckwise は保存済みの OneDrive トークンを取り消し、この接続の使用を停止します。すでにプロジェクトにインポートされたファイルはワークスペースに残ります。",
+    "oneDriveConnected": "OneDrive に接続しました。",
+    "oneDriveDisconnected": "OneDrive の接続を解除しました。",
+    "oneDriveAuthorizationPending": "開いたタブで OneDrive の認可を完了してください。",
+    "connectOneDriveFailed": "OneDrive に接続できませんでした",
+    "disconnectOneDriveFailed": "OneDrive の接続を解除できませんでした",
+    "dropboxTitle": "Dropbox",
+    "dropboxDescription": "Dropbox からファイルをインポートします。",
+    "disconnectDropbox": "接続解除",
+    "disconnectDropboxConfirmTitle": "Dropbox の接続を解除しますか？",
+    "disconnectDropboxConfirmMessage": "Deckwise は保存済みの Dropbox トークンを取り消し、この接続の使用を停止します。すでにプロジェクトにインポートされたファイルはワークスペースに残ります。",
+    "dropboxConnected": "Dropbox に接続しました。",
+    "dropboxDisconnected": "Dropbox の接続を解除しました。",
+    "dropboxAuthorizationPending": "開いたタブで Dropbox の認可を完了してください。",
+    "dropboxPickerRetryRequired": "Dropbox に接続しました。ファイルを選ぶには Dropbox をもう一度クリックしてください。",
+    "connectDropboxFailed": "Dropbox に接続できませんでした",
+    "disconnectDropboxFailed": "Dropbox の接続を解除できませんでした",
+    "integrationLoadFailed": "連携を読み込めませんでした",
+    "loadingIntegrations": "読み込み中",
+    "comingSoon": "近日対応"
+  },
+  "shareSheet": {
+    "sharing": "共有",
+    "searchPlaceholder": "メールアドレスまたはユーザー名を入力",
+    "copyShareLink": "共有リンクをコピー",
+    "copied": "コピーしました",
+    "copyPublicLink": "公開リンクをコピー",
+    "publishPublicSlides": "公開",
+    "updatePublicSlides": "更新",
+    "unpublishPublicSlides": "公開を停止",
+    "unpublishedPublicSlides": "公開停止済み",
+    "sendEmail": "メールで送信",
+    "emailSent": "送信済み",
+    "exportType": "書き出し形式",
+    "exportPdf": "PDFとして書き出し",
+    "exportPowerPoint": "PowerPoint形式で書き出し",
+    "exportGoogleSlides": "Google スライドに書き出し",
+    "exportPngs": "PNGとして書き出し",
+    "installFonts": "フォントをインストール",
+    "installFontsDescription": "PowerPoint でこのプレゼンテーションを正しく表示するには、以下のフォントをコンピューターにインストールしてください。"
+  },
+  "marketingHeader": {
+    "ariaLabel": "マーケティングページのナビゲーション",
+    "directLinks": {
+      "enterprise": "企業",
+      "overview": "概要",
+      "pricing": "価格"
+    },
+    "menus": {
+      "product": {
+        "label": "製品",
+        "hero": {
+          "title": "デッキワイズ",
+          "description": "AI ワークスペース"
+        }
+      },
+      "ai": {
+        "label": "AI"
+      },
+      "solutions": {
+        "label": "解決策"
+      },
+      "resources": {
+        "label": "リソース"
+      }
+    },
+    "sections": {
+      "aiFeatures": "AI機能",
+      "browse": "閲覧する",
+      "companySize": "企業規模",
+      "discover": "発見する",
+      "exploreUseCases": "ユースケースを調べる",
+      "learn": "学ぶ",
+      "teams": "チーム",
+      "useCases": "使用シナリオ"
+    },
+    "items": {
+      "academy": {
+        "title": "大学"
+      },
+      "agents": {
+        "title": "エージェント",
+        "description": "反復的なタスクを自動化する"
+      },
+      "aiMeetingNotes": {
+        "title": "AI会議議事録",
+        "description": "AI を使用して明確な議事録を作成する"
+      },
+      "aiUseCases": {
+        "title": "AIの活用シナリオ"
+      },
+      "blog": {
+        "title": "ブログ"
+      },
+      "connections": {
+        "title": "接続する",
+        "description": "アプリを接続する"
+      },
+      "consultants": {
+        "title": "コンサルタント"
+      },
+      "customerStories": {
+        "title": "お客様の事例"
+      },
+      "deckwiseAi": {
+        "title": "デッキワイズAI",
+        "description": "仕事のためのAIツール"
+      },
+      "design": {
+        "title": "デザイン"
+      },
+      "docs": {
+        "title": "ドキュメント",
+        "description": "シンプルでありながら強力な"
+      },
+      "education": {
+        "title": "教育"
+      },
+      "engProduct": {
+        "title": "エンジニアリングと製品"
+      },
+      "enterprise": {
+        "title": "企業"
+      },
+      "enterpriseSearch": {
+        "title": "エンタープライズ検索",
+        "description": "答えをすぐに見つける"
+      },
+      "forLife": {
+        "title": "人生"
+      },
+      "forWork": {
+        "title": "仕事"
+      },
+      "help": {
+        "title": "助けて"
+      },
+      "it": {
+        "title": "IT"
+      },
+      "knowledgeBase": {
+        "title": "知識ベース",
+        "description": "チームの知識を一元管理"
+      },
+      "marketing": {
+        "title": "市場"
+      },
+      "personal": {
+        "title": "個人的な"
+      },
+      "productTours": {
+        "title": "製品ツアー"
+      },
+      "professional": {
+        "title": "専門家"
+      },
+      "projects": {
+        "title": "プロジェクト",
+        "description": "すべてのプロジェクトを管理する"
+      },
+      "security": {
+        "title": "安全な",
+        "description": "安全でスケーラブル"
+      },
+      "smallBusinesses": {
+        "title": "チーム"
+      },
+      "startups": {
+        "title": "スタートアップ企業"
+      },
+      "templates": {
+        "title": "テンプレート"
+      },
+      "webinars": {
+        "title": "オンラインセミナー"
+      },
+      "whatsNew": {
+        "title": "最新ニュース"
+      }
+    },
+    "footer": {
+      "productLeft": "3.5: Deckwise 開発者プラットフォーム。新機能を見る",
+      "productRight": "Deckwise アプリをダウンロードする"
+    }
+  },
+  "pricing": {
+    "metadata": {
+      "title": "Deckwise AI 料金",
+      "description": "Deckwise Free と Plus を比較し、AI プレゼン作成、プロジェクト資料、チームワークフロー、編集可能なスライド機能を確認できます。"
+    },
+    "aria": {
+      "billingOptions": "請求オプション",
+      "included": "すでに含まれています",
+      "plans": "計画",
+      "trustedTeams": "Deckwise を使用しているチーム"
+    },
+    "hero": {
+      "title": "価格設定",
+      "logoStrip": "これらのチームが使用しているのは、"
+    },
+    "billing": {
+      "monthly": "毎月支払う",
+      "yearly": "年払い",
+      "save": "最大 20% 割引",
+      "pricesNote": "価格は米ドルで表示されています"
+    },
+    "groups": {
+      "essentials": {
+        "eyebrow": "基本",
+        "title": "個人作業やチーム作業の整理に適しています。"
+      },
+      "workspace": {
+        "eyebrow": "AI ワークスペース",
+        "title": "チームワークを実行するのに適しています。"
+      }
+    },
+    "plans": {
+      "badge": "おすすめ",
+      "currentCta": "現在の計画",
+      "free": {
+        "name": "無料",
+        "description": "個人の仕事を整理し、基本的なドキュメントとスライドショーのワークフローを試してください。",
+        "price": "$0",
+        "priceNote": "毎月",
+        "cta": "始めましょう",
+        "features": {
+          "feature1": "毎月 500 クレジット",
+          "feature2": "基本的なプロジェクトスペース",
+          "feature3": "制限されたファイルのアップロード",
+          "feature4": "最大10名のゲストを招待"
+        }
+      },
+      "plus": {
+        "name": "プラス",
+        "description": "Deckwise を安定して使用する個人および小規模チームに適しています。",
+        "price": "12ドル",
+        "priceNote": "毎月",
+        "cta": "Plus を始めましょう",
+        "features": {
+          "feature1": "1 か月あたり 2,000 クレジット",
+          "feature2": "30日間のページ履歴",
+          "feature3": "無制限のファイルアップロード",
+          "feature4": "最大100人のゲストを招待"
+        }
+      },
+      "pro": {
+        "name": "プロ",
+        "description": "より頻繁なプレゼンテーション、データ収集、AI ワークフローに適しています。",
+        "price": "25ドル",
+        "priceNote": "毎月",
+        "cta": "プロを始めましょう",
+        "features": {
+          "feature1": "1 か月あたり 2,000 クレジット",
+          "feature2": "SAML SSO",
+          "feature3": "高度な権限",
+          "feature4": "プライベートチームスペース"
+        }
+      },
+      "ultra": {
+        "name": "ウルトラ",
+        "description": "大量生成、バッチ処理、ボリュームの大きいチームワークフローに適しています。",
+        "price": "100ドル",
+        "priceNote": "毎月",
+        "cta": "ウルトラを始めましょう",
+        "features": {
+          "feature1": "毎月 40,000 クレジット",
+          "feature2": "ユーザーが自動的にアクティブ化する",
+          "feature3": "監査ログ",
+          "feature4": "献身的な成功サポート"
+        }
+      }
+    },
+    "quote": {
+      "company": "OpenAI",
+      "body": "すべての作業を同じプラットフォーム上に置くと、大きな力が生まれます。",
+      "author": "ブラッド・ライトキャップ、COO"
+    },
+    "addons": {
+      "agents": {
+        "title": "カスタムエージェント",
+        "description": "チームの知識に依存する作業を自動化します。"
+      },
+      "seats": {
+        "title": "AIシート",
+        "description": "チームメイトがワークスペースのコンテキストからすぐに答えを取得できるようにします。"
+      }
+    },
+    "comparison": {
+      "title": "ソリューションと機能",
+      "headings": {
+        "feature": "機能",
+        "free": "無料",
+        "plus": "プラス",
+        "pro": "プロ",
+        "ultra": "ウルトラ"
+      },
+      "groups": {
+        "coreWorkspace": "コアワークスペース",
+        "aiCollaboration": "AIワークフロー",
+        "securityAdmin": "セキュリティと管理"
+      },
+      "rows": {
+        "pagesDocs": "ページ、スライド、ドキュメント",
+        "projectSpaces": "共有プロジェクトスペース",
+        "fileUploads": "ファイルのアップロード",
+        "versionHistory": "バージョン履歴",
+        "aiSearch": "AIによる検索と書き込み",
+        "meetingNotes": "AI会議議事録",
+        "customAgents": "カスタムエージェント",
+        "guests": "訪問者",
+        "adminAnalytics": "管理者の分析",
+        "samlSso": "SAML SSO",
+        "scim": "SCIM は自動的にアクティブ化されます",
+        "auditLog": "監査ログ"
+      },
+      "values": {
+        "addOn": "追加購入",
+        "advanced": "上級者向け",
+        "custom": "カスタマイズされた",
+        "included": "すでに含まれています",
+        "limited": "限られた",
+        "ninetyDays": "90日",
+        "oneHundred": "100",
+        "sevenDays": "7日間",
+        "ten": "10",
+        "thirtyDays": "30日",
+        "trial": "裁判",
+        "twoFifty": "250",
+        "unlimited": "無制限"
+      }
+    },
+    "enterprise": {
+      "controls": {
+        "title": "エンタープライズレベルの制御が必要ですか?",
+        "body": "セキュリティ、自動プロビジョニング、監査、サポートを同じ導入計画に組み込みます。"
+      },
+      "rollout": {
+        "title": "複数のチームに展開したいですか?",
+        "body": "稼働前にワークスペース、権限、テンプレートの計画をお手伝いします。"
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "freeTrial": {
+        "question": "Deckwise を無料で試すことはできますか?",
+        "answer": "はい。無料プランでは、アップグレード前にワークスペースを作成し、小規模なチームを招待し、主要なドキュメントとスライドショーのワークフローをテストできます。"
+      },
+      "switchPlans": {
+        "question": "将来的にプランを変更することはできますか?",
+        "answer": "はい。有料ユーザーは Stripe のホスト型ポータルで月払いまたは年払いを管理できます。"
+      },
+      "aiPricing": {
+        "question": "Plus には何が含まれますか?",
+        "answer": "Free と Plus はどちらも AI を利用できます。Plus では週ごとの使用枠が増え、編集可能な PowerPoint と Google スライドの書き出しが利用できます。"
+      },
+      "annualBilling": {
+        "question": "年払いには対応していますか?",
+        "answer": "サポートします。有料プランは年間ベースで利用でき、企業レベルでの安定した使用を必要とするチームに適しています。"
+      }
+    }
+  },
+  "careersPage": {
+    "metadata": {
+      "title": "Deckwise 採用情報：AI プレゼンワークフローをつくる",
+      "description": "Deckwise に参加し、調査資料、ファイル、フィードバックを編集可能なスライドに変えるチーム向け AI プレゼンソフトウェアを一緒に作りましょう。"
+    },
+    "hero": {
+      "eyebrow": "デッキワイズに参加する",
+      "title": "次世代のナレッジ ワーク ツールの構築に参加してください。",
+      "body": "チームが実際の働き方に合わせてソフトウェアを調整できれば、より多くの問題をより速く解決できます。私たちのミッションは、知識、プロジェクト、AI をつなぐワークスペースを誰もが使えるものにすることです。",
+      "button": "オープンポジションを表示"
+    },
+    "story": {
+      "title": "私たちの物語",
+      "body1": "Deckwise は、シンプルな問いから始まりました。ツールが増えるほど、なぜチームの仕事は分断されやすくなるのか。ドキュメント、ファイル、チャット、デモは増え続ける一方で、本当に必要なプロジェクトの文脈は安定した置き場を持てないことがよくあります。",
+      "body2": "私たちは、チームが自由に形づくれるワークスペースを作りたいと考えています。白紙のように軽く、それでいて複雑なプロジェクト、ナレッジベース、資料、AI 支援を受け止められる場所です。",
+      "body3": "これには、製品、エンジニアリング、設計、研究、マーケティング、顧客の各チームが緊密に連携する必要があります。長期的に基礎ツールを磨き続けていただける方を求めています。"
+    },
+    "positions": {
+      "title": "オープンポジション",
+      "filterLabel": "フィルター",
+      "location": "場所",
+      "department": "部門",
+      "allLocations": "すべての場所",
+      "allDepartments": "すべての部門",
+      "reset": "フィルターをリセットする",
+      "departments": {
+        "engineering": "エンジニアリング",
+        "design": "デザイン",
+        "product": "製品",
+        "marketing": "市場",
+        "customer": "アカウントチーム"
+      },
+      "jobs": {
+        "aiEngineer": {
+          "title": "AIアプリケーションエンジニア",
+          "location": "上海 / 遠隔地",
+          "department": "エンジニアリング"
+        },
+        "frontendEngineer": {
+          "title": "フロントエンドエンジニア、エディター経験",
+          "location": "北京 / 遠隔地",
+          "department": "エンジニアリング"
+        },
+        "productDesigner": {
+          "title": "プロダクトデザイナー、作成ツール",
+          "location": "上海",
+          "department": "デザイン"
+        },
+        "productManager": {
+          "title": "プロダクト マネージャー、AI ワークフロー",
+          "location": "リモート",
+          "department": "製品"
+        },
+        "growthMarketing": {
+          "title": "成長市場マネージャー",
+          "location": "深セン / 遠隔地",
+          "department": "マーケティング"
+        },
+        "customerSuccess": {
+          "title": "カスタマーサクセスマネージャー",
+          "location": "北京",
+          "department": "顧客"
+        }
+      }
+    },
+    "culture": {
+      "title": "Deckwise の仕組み",
+      "body": "私たちは、優れたプロダクトは継続的な利用、率直なフィードバック、厳しい品質判断から生まれると考えています。チームは小さく集中したまま、実際のユーザー課題に素早く向き合います。",
+      "items": {
+        "craft": {
+          "title": "職人技に注目",
+          "body": "私たちは細部、性能、メンテナンス性、そしてユーザーが毎日実感する滑らかさを大切にしています。"
+        },
+        "speed": {
+          "title": "速度を維持する",
+          "body": "明確な境界線と直接的なコミュニケーションを使用して待ち時間を短縮し、良いアイデアをできるだけ早く検証可能な製品に落とし込みます。"
+        },
+        "truth": {
+          "title": "事実を追求する",
+          "body": "データ、ユーザーからのフィードバック、技術的な制約に対して誠実であり続け、証拠を使用して意思決定を推進します。"
+        }
+      }
+    },
+    "values": {
+      "title": "私たちの価値観",
+      "items": {
+        "mission": "使命に責任を持つ",
+        "direct": "優しくて真っ直ぐ",
+        "users": "ユーザーの問題から始める",
+        "systems": "長期的なシステムを構築する"
+      }
+    },
+    "benefits": {
+      "title": "特典とサポート",
+      "items": {
+        "health": "健康と保険のサポート",
+        "setup": "オフィス機器の予算",
+        "learning": "学習と成長の予算",
+        "flex": "柔軟なオフィス配置",
+        "offsite": "チームの共同制作とオフサイト"
+      }
+    },
+    "mockup": {
+      "video": "チームの日常",
+      "office": "オフィス文化",
+      "roles": "オープンポジション",
+      "team": "部門横断的なチーム"
+    }
+  },
+  "securityPage": {
+    "metadata": {
+      "title": "Deckwise セキュリティ：AI プレゼンのプライバシー管理",
+      "description": "Deckwise がプライバシー管理、安全なワークスペース境界、企業向け信頼性で AI プレゼンプロジェクトを保護する方法を紹介します。"
+    },
+    "hero": {
+      "eyebrow": "セキュリティとプライバシー",
+      "title": "お客様の安全、セキュリティ、プライバシーは当社の優先事項です。",
+      "body": "Deckwise は、チームのデータを製品設計、インフラストラクチャ、権限制御、AI の使用から保護し、企業が知識とプロジェクトを同じワークスペースに安全に配置できるようにします。",
+      "button": "エンタープライズ ソリューションについて学ぶ"
+    },
+    "sections": {
+      "security": {
+        "title": "安全な",
+        "body": "Deckwise は、セキュリティバイデザインのアプローチを使用してデータを保護します。送信から保管、処理に至るまで、階層的な制御を通じてリスクを軽減します。",
+        "items": {
+          "infrastructure": {
+            "title": "セキュリティインフラストラクチャ",
+            "body": "データの送信と保存は暗号化で保護され、最小限の特権アクセス、キー管理、監視、脆弱性修復プロセスを通じて暴露が軽減されます。"
+          },
+          "operations": {
+            "title": "運用上のセキュリティ",
+            "body": "セキュリティ チームはインフラストラクチャ、ネットワーク、製品資産を継続的に監視し、異常な動作や潜在的な脅威に迅速に対応します。"
+          },
+          "product": {
+            "title": "製品の安全性",
+            "body": "企業管理者は、SSO、メンバー プロビジョニング、監査ログ、ゲスト アクセス、および詳細な権限を構成して、組織の可視性と制御を強化できます。"
+          }
+        }
+      },
+      "privacy": {
+        "title": "プライバシー",
+        "body": "Deckwise は、顧客データを透過的かつ制御された方法で処理し、データがどのように収集、使用、保護されるかを顧客に理解してもらうことに取り組んでいます。",
+        "items": {
+          "data": {
+            "title": "データ処理",
+            "body": "当社は、収集、処理、保管、アクセス、削除など、データのライフサイクル全体にわたるプロセスと保護手段を確立します。"
+          },
+          "agreements": {
+            "title": "合意と約束",
+            "body": "当社のサービス契約、データ処理条件、およびプライバシーに関する声明は、規制や業界慣行を反映するために継続的に更新されます。"
+          },
+          "governance": {
+            "title": "データガバナンス",
+            "body": "明確なポリシーとアクセス境界を通じて、顧客がデータを安全、正確、プライベートに保ち、管理しやすくできるように支援します。"
+          }
+        }
+      },
+      "compliance": {
+        "title": "コンプライアンス",
+        "body": "Deckwise は、チームが業界標準に合わせてワークスペースを管理できるように、企業顧客向けのセキュリティとプライバシー プログラムを構築しています。",
+        "items": {
+          "soc": "SOC 2 タイプ 2 の準備",
+          "iso": "ISO 27001/27701計画",
+          "access": "エンタープライズアクセス制御",
+          "audit": "監査およびロギング機能"
+        }
+      },
+      "ai": {
+        "title": "AI ガバナンス",
+        "body": "Deckwise の AI 機能は、信頼性、説明可能性、制御可能性を中心に設計されています。顧客データは汎用モデルのトレーニングには使用されず、AI アクセスでは権限の境界が尊重されます。",
+        "items": {
+          "safe": "セキュリティクリアランス",
+          "transparent": "透明性のある指示",
+          "useful": "ユーザー価値を重視する",
+          "governed": "データ境界ガバナンス"
+        }
+      },
+      "reliability": {
+        "title": "信頼性",
+        "body": "チームには、いつでも利用できるワークスペースが必要です。 Deckwise は、モニタリング、バックアップ、復旧計画、ステータスの透明性を通じてサービスの信頼性を向上させます。",
+        "items": {
+          "uptime": "99.9% の可用性を実現する設計",
+          "backup": "バックアップとリカバリのプロセス",
+          "status": "ステータスが透明",
+          "resilience": "回復力のあるインフラストラクチャ"
+        }
+      }
+    },
+    "cta": {
+      "title": "高度なセキュリティと制御が必要ですか?",
+      "body": "企業の導入、コンプライアンス、権限のニーズについてお知らせください。適切なワークスペース ソリューションの計画をお手伝いします。",
+      "button": "営業担当者に問い合わせる"
+    },
+    "mockup": {
+      "trust": "トラストセンター",
+      "permission": "権限制御",
+      "audit": "監査ログ",
+      "encryption": "暗号化保護",
+      "ai": "AI データの境界"
+    }
+  },
+  "blogPage": {
+    "metadata": {
+      "title": "Deckwise ブログ：AI プレゼンワークフローのヒント",
+      "description": "AIプレゼンワークフロー、エージェント支援のデッキ作成、製品アップデート、ナレッジ管理に関する Deckwise の記事を読めます。"
+    },
+    "hero": {
+      "eyebrow": "道具と工芸品",
+      "title": "道具と工夫",
+      "body": "仕事の未来に関する観察、製品構築の経験、チームが知識をより迅速な実行にどのように変換しているかについてのストーリー。",
+      "categoryLabel": "ブログのカテゴリー",
+      "latestTitle": "最新記事",
+      "searchLabel": "ブログを検索",
+      "searchPlaceholder": "記事、著者、トピックを検索する"
+    },
+    "categories": {
+      "latest": "最新の",
+      "hq": "デッキワイズ本部",
+      "teams": "チーム",
+      "inspiration": "インスピレーション",
+      "builders": "ビルダー",
+      "pioneers": "パイオニアチーム",
+      "tech": "テクノロジー",
+      "mail": "メール"
+    },
+    "featured": {
+      "category": "デッキワイズ本部",
+      "title": "Deckwise 開発者プラットフォームの紹介",
+      "body": "新しい開発者機能によりデータ、ツール、エージェントが接続されるため、チームはプロセスを拡張し、コンテキストを構築し、同じワークスペースでの反復作業を自動化できます。",
+      "author": "マックス・チェン",
+      "role": "プロダクトオーナー、デッキワイズ"
+    },
+    "articles": {
+      "developerPlatform": {
+        "category": "デッキワイズ本部",
+        "title": "Deckwise 開発者プラットフォームの紹介",
+        "body": "開発者とエージェントがより自然にチームの知識、プロジェクト、ビジネス ツールに接続できるようにする新しい構成要素のセット。",
+        "author": "マックス・チェン",
+        "role": "プロダクトオーナー"
+      },
+      "customAgentsBeta": {
+        "category": "デッキワイズ本部",
+        "title": "カスタム エージェントのベータ版から学んだこと",
+        "body": "エージェントが真のチームメイトになるには、コマンドを実行するだけでなく、チームのコラボレーションのコンテキスト、境界、リズムを理解する必要があります。",
+        "author": "アクシャイ・リン",
+        "role": "共同創設者"
+      },
+      "multiRegionData": {
+        "category": "テクノロジー",
+        "title": "マルチリージョンのデータ システムを構築する",
+        "body": "検索や分析から AI イベント ログに至るまで、チームがスケーラブルなデータの地域化インフラストラクチャをどのように設計できるか。",
+        "author": "ジャスティン・リー、アダム・ハドソン",
+        "role": "エンジニアリングチーム"
+      },
+      "executionTax": {
+        "category": "インスピレーション",
+        "title": "チーム執行税を廃止する",
+        "body": "なぜ多くのチームにはアイデアがないわけではないのに、継続的に意思決定を進めて結果を出すための統一された作業層が欠けているのでしょうか?",
+        "author": "アイネ・ダンダス",
+        "role": "成長と市場"
+      },
+      "schemaChanges": {
+        "category": "テクノロジー",
+        "title": "公開前に重大なスキーマ変更を検出する方法",
+        "body": "CI ガードレール設計プロセスと、それがエンジニアリング チームによる回帰リスクの軽減にどのように役立つか。",
+        "author": "マヤ・レキ",
+        "role": "エンジニアリングチーム"
+      },
+      "dataResidency": {
+        "category": "デッキワイズ本部",
+        "title": "データ常駐機能がより多くのリージョンに拡張されました",
+        "body": "企業顧客はデータを適切なリージョンに保持する必要があるため、私たちはリージョン対応機能をワークスペースの基礎機能にしています。",
+        "author": "ファジー・コスロシャヒ",
+        "role": "最高技術責任者"
+      },
+      "pageDesign": {
+        "category": "テクノロジー",
+        "title": "ページの視覚的なルールを再設計する",
+        "body": "複雑な作業を明確にするために、ページ密度、見出し階層、コンテンツ ブロックをどのように再編成したか。",
+        "author": "ポール・ヴェルー",
+        "role": "プロダクトデザイン"
+      },
+      "chronicleLaunch": {
+        "category": "チーム",
+        "title": "あるチームが Deckwise を使用して大規模リリースを管理する方法",
+        "body": "チェックリストの公開から部門を超えたコラボレーションまで、明確なワークスペースによって重要なノードをより制御しやすくする方法について説明します。",
+        "author": "マユレシュ・パトール",
+        "role": "創設者兼CEO"
+      },
+      "agentSecurity": {
+        "category": "テクノロジー",
+        "title": "エージェントのセキュリティ モデルを構築する方法",
+        "body": "エージェントの自動化が深くなるほど、より多くの権限、監査、人間による検証を基盤となる製品に設計する必要があります。",
+        "author": "ショーン・キーナン、ジェイコブ・ブラケット",
+        "role": "安全性とエンジニアリング"
+      }
+    },
+    "newsletter": {
+      "title": "仕組みの次のステップについては読み続けてください",
+      "body": "AI ワークフロー、チームのナレッジ管理、製品構築に関する最新の記事や事例を入手してください。",
+      "button": "Deckwise を始めましょう"
+    }
+  },
+  "mobilePage": {
+    "metadata": {
+      "title": "Deckwise モバイル：AI プレゼンプロジェクトをどこでも確認",
+      "description": "iOS と Android で Deckwise を使い、AI プレゼンプロジェクトの確認、アイデアの記録、スライド作業の継続ができます。"
+    },
+    "hero": {
+      "eyebrow": "Deckwise モバイル版",
+      "title": "いつでもどこでも仕事を持ち運べます。",
+      "body": "スマートフォン上でプロジェクトを表示し、アイデアを書き留め、下書きにコメントし、AI がアイデアを成果物に押し込むのを支援します。"
+    },
+    "storeButtons": {
+      "appStore": "アプリストア",
+      "googlePlay": "Google Play",
+      "downloadOn": "ダウンロード元",
+      "getItOn": "から取得"
+    },
+    "features": {
+      "title": "デスクトップから携帯電話まで、仕事は常につながっています。",
+      "items": {
+        "capture": {
+          "title": "アイデアを思いついたままにキャプチャする",
+          "body": "会議後のインスピレーション、顧客からのフィードバック、ToDo をプロジェクトのコンテキストにすばやく反映します。"
+        },
+        "review": {
+          "title": "いつでも下書きを表示",
+          "body": "プレゼンテーション、ドキュメント、主要なプロジェクト資料を外出先で確認できます。"
+        },
+        "ai": {
+          "title": "モバイルAIアシスタント",
+          "body": "質問し、既存の情報に基づいて内容を要約し、次のステップに進みます。"
+        },
+        "sync": {
+          "title": "デバイス間で同期する",
+          "body": "携帯電話上のアップデートは同じワークスペースに戻るため、前後に移動する必要はありません。"
+        }
+      }
+    },
+    "quote": {
+      "body": "プロジェクト資料、下書き、次のアクションをモバイルで確認できれば、デスクから離れていても作業を進められます。",
+      "author": "Deckwise アカウントチーム"
+    },
+    "cta": {
+      "title": "モバイル用の Deckwise をダウンロードしてください。",
+      "body": "プロジェクト コンテキスト、AI アシスタント、プレゼンテーション ワークフローを iOS と Android に導入します。",
+      "button": "無料で始める"
+    },
+    "mockup": {
+      "workspace": "市場投入計画",
+      "ai": "AIの概要",
+      "task": "次のステップ",
+      "comment": "コメントが同期されました"
+    }
+  },
+  "desktopPage": {
+    "metadata": {
+      "title": "Deckwise デスクトップ：AI プレゼン編集をより速く",
+      "description": "Deckwise デスクトップをダウンロードし、集中できる AI プレゼンワークスペースでプロジェクト、資料コンテキスト、編集作業を扱えます。"
+    },
+    "hero": {
+      "eyebrow": "デッキワイズデスクトップ",
+      "title": "デスクトップ アプリをダウンロードすると、より高速なエクスペリエンスが得られます。",
+      "body": "素早く、簡潔で、煩わしさがありません。プロジェクト ファイル、AI アシスタント、プレゼンテーション エディターを 1 つの集中ウィンドウに配置します。"
+    },
+    "primaryCta": "macOS 用のダウンロード",
+    "quote": {
+      "body": "プロジェクトのコンテキスト、ドラフト、AI アシスタントを 1 つのデスクトップ ワークスペースに配置することで、チームがツールを切り替えることが大幅に減ります。",
+      "author": "Deckwise アカウントチーム",
+      "role": "運営およびマーケティングマネージャー"
+    },
+    "download": {
+      "title": "Deckwise デスクトップをダウンロード",
+      "subtitle": "より速く、より集中した作業体験が用意されています。",
+      "items": {
+        "macUniversal": "macOS ユニバーサル エディションをダウンロード",
+        "macApple": "macOS Apple Silicon Edition をダウンロード",
+        "macIntel": "macOSインテル版をダウンロード",
+        "windowsX64": "Windows x64 用のダウンロード",
+        "windowsArm": "Windows Arm / Arm64 バージョンをダウンロード"
+      }
+    },
+    "features": {
+      "offline": {
+        "title": "ブラウザの気を散らす要素を減らす",
+        "body": "プレゼンテーション、プロジェクト資料、AI ワークフローを別のウィンドウに表示します。"
+      },
+      "fast": {
+        "title": "より早く仕事に戻れる",
+        "body": "Dock またはタスクバーから最近のプロジェクトを直接開くと、編集をすぐに再開できます。"
+      },
+      "sync": {
+        "title": "デバイス間で同期する",
+        "body": "デスクトップ、Web、モバイルは同じプロジェクト コンテキストを共有します。"
+      }
+    },
+    "mockup": {
+      "workspace": "製品発売ワークスペース",
+      "document": "プレゼンテーション草案",
+      "agent": "AIアシスタント",
+      "status": "同期中"
+    }
+  },
+  "enterprisePage": {
+    "metadata": {
+      "title": "Deckwise Enterprise：安全な AI プレゼンワークスペース",
+      "description": "Deckwise が企業チームに、プロジェクトファイル、ガバナンス、信頼できるデッキワークフローのための安全なAIプレゼンワークスペースを提供する方法を紹介します。"
+    },
+    "hero": {
+      "eyebrow": "エンタープライズ向けのデッキワイズ",
+      "title": "知識と仕事はつながっています。",
+      "body": "企業チームが知識を集約し、プロジェクトを計画し、同じコンテキスト内でより速く進めるための安全なAIワークスペースです。",
+      "primaryCta": "始めましょう"
+    },
+    "trust": {
+      "label": "急成長する革新的なチームからの信頼"
+    },
+    "stats": {
+      "first": {
+        "value": "#1",
+        "label": "ナレッジベース、プロジェクト、AI ライティングのための統合ワークスペース"
+      },
+      "second": {
+        "value": "1か所",
+        "label": "会社の知識、プロジェクト計画、データ、意思決定を一元化"
+      },
+      "third": {
+        "value": "AI対応",
+        "label": "チームの知識を検索、再利用、実行可能にします"
+      }
+    },
+    "features": {
+      "items": {
+        "knowledge": {
+          "title": "会社の知識",
+          "body": "プレイブック、プロセス、リリース計画、チームのコンテキストを、明確に整理され、検索可能で正確なホームページに組み込みます。"
+        },
+        "search": {
+          "title": "エンタープライズ検索",
+          "body": "Deckwise アプリや接続されたアプリ全体で答えをすばやく見つけて、作業しながら知識を深めましょう。"
+        },
+        "projects": {
+          "title": "統合プロジェクト",
+          "body": "タスクを計画し、進捗状況を追跡し、チームを調整し、概要、決定事項、成果物を結び付けます。"
+        },
+        "integrations": {
+          "title": "ワークフローと接続",
+          "body": "プロセスを自動化し、共通ツールを接続し、外部ファイル、会話、信号を同じワークスペースに取り込みます。"
+        }
+      }
+    },
+    "ai": {
+      "title": "オールインワン AI をあなたの職場で。",
+      "items": {
+        "context": {
+          "title": "適切なコンテキストを備えた AI",
+          "body": "別の一般的なチャット ボックスではなく、チームの知識、プロジェクト、ワークフローに基づいて質問を理解するチャット ボックスです。"
+        },
+        "oneTool": {
+          "title": "1 つの AI ツールで複数のジョブを実行",
+          "body": "ブレーンストーミング、執筆、検索、デモの生成、会議の開催、プロセスの進行をすべて 1 か所で行えます。"
+        },
+        "integrated": {
+          "title": "日常業務に組み込む",
+          "body": "アプリを切り替えたりコンテキストをコピーしたりする必要はありません。AIは、計画、作成、進捗確認を行う場所に直接表示されます。"
+        },
+        "secure": {
+          "title": "強力かつ安全",
+          "body": "エンタープライズ グレードの AI ガバナンス、セキュリティ、管理制御は、チームが適切に制限された環境で AI を使用するのに役立ちます。"
+        }
+      }
+    },
+    "values": {
+      "items": {
+        "empowering": {
+          "title": "簡単に始めることができ、チームはそれを使用したいと考えています。",
+          "body": "エンタープライズ ツールは強力である必要がありますが、直感も必要です。 Deckwise を使用すると、チームは複雑な作業を使い慣れたページ、プロジェクト、ライブラリに整理できます。"
+        },
+        "customizable": {
+          "title": "チームとともに成長するための柔軟なカスタマイズ。",
+          "body": "ワークスペースはさまざまなチーム、権限、プロセスに適応できるため、ポイント ツールの急増を抑え、メンテナンス コストを削減できます。"
+        },
+        "connected": {
+          "title": "どのチームも常に同じ認識を持っています。",
+          "body": "ツール、チームを接続し、検索可能なワークスペースで作業することで、チームの連携を維持し、より迅速に行動し、より適切な意思決定を行うことができます。"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "イノベーションチームに愛される。",
+      "items": {
+        "figma": {
+          "logo": "フィグマ",
+          "quote": "情報が明確に構造化されていると、チームはより直観的にコンテンツを見つけ、そのコンテキストがどこにあるかを思い出すことができます。",
+          "person": "マリー・ズッツ",
+          "role": "人材運用"
+        },
+        "remote": {
+          "logo": "リモート",
+          "quote": "知識が一元化されているため、新しいメンバーは情報をより早く見つけることができ、参加してから実際の成果が得られるまでの時間が短縮されます。",
+          "person": "スコット・エントウィッスル",
+          "role": "人材募集"
+        },
+        "match": {
+          "logo": "一致",
+          "quote": "共有ワークスペースは、ワークフローを合理化し、反復的なコミュニケーションを減らすための重要な方法です。",
+          "person": "ラヒム・マカニ",
+          "role": "製品"
+        },
+        "toyota": {
+          "logo": "トヨタ",
+          "quote": "タスクの詳細と進捗状況がより簡単に同期されると、チームは時間を節約し、ステータス更新のコストを削減できます。",
+          "person": "若杉拓",
+          "role": "研究"
+        },
+        "ramp": {
+          "logo": "ランプ",
+          "quote": "AI は管理上の整理整頓の多くを処理できるため、製品チームは実際に構築されているものに再び集中できるようになります。",
+          "person": "ジェフ・チャールズ",
+          "role": "CPO"
+        },
+        "openai": {
+          "logo": "OpenAI",
+          "quote": "かつてはトラブルシューティングに何時間もかかっていた問題も、ワークスペースで技術的な知識を求めることで数分で解決できるようになりました。",
+          "person": "ジョン・アラード",
+          "role": "エンジニアリング"
+        }
+      }
+    },
+    "product": {
+      "title": "製品開発を簡素化します。",
+      "body": "要件、リサーチ、仕様、リリース計画、レビューを 1 つの接続されたハブで管理し、チームがより良い製品をより迅速に構築できるようにします。",
+      "cta": "さらに詳しく"
+    },
+    "connections": {
+      "eyebrow": "接続",
+      "title": "すべての主要なツールを接続します。",
+      "body": "チームが依存するツールを 1 か所にまとめます。ワークフローを統合、同期、自動化し、豊富な情報を埋め込み、アプリ間で答えを見つけます。",
+      "cta": "すべての統合を表示"
+    },
+    "security": {
+      "title": "クラス最高のサポートとセキュリティを備えた大胆な構築。",
+      "body": "導入計画からアイデンティティ管理、コンプライアンス、セキュリティ、AI ガバナンスに至るまで、Deckwise はエンタープライズ規模の展開に必要なサポートと制御を提供します。",
+      "items": {
+        "services": {
+          "title": "プロフェッショナルサービス",
+          "body": "専門家の経験を活かしてエンタープライズ ワークスペースを設計、展開、自動化します。"
+        },
+        "guidance": {
+          "title": "専属指導",
+          "body": "カスタマー サクセス チームは、ワークスペースのセットアップ、本番稼働トレーニング、ベスト プラクティスを支援します。"
+        },
+        "support": {
+          "title": "プレミアムサポート",
+          "body": "より複雑なチームのニーズに対して、よりプロアクティブでカスタマイズされたサポートを提供します。"
+        },
+        "sso": {
+          "title": "アイデンティティ管理",
+          "body": "SAML SSO を使用して従業員にワークスペースへの安全なアクセスを提供します。"
+        },
+        "scim": {
+          "title": "SCIM は自動的にアクティブ化されます",
+          "body": "ユーザーとグループをより簡単に作成、削除、更新、同期します。"
+        },
+        "management": {
+          "title": "ワークスペースとドメインの管理",
+          "body": "セキュリティ、コンプライアンス、分析、監査、ドメイン設定を一元管理します。"
+        },
+        "compliance": {
+          "title": "セキュリティとコンプライアンスの基準",
+          "body": "企業調達、コンプライアンスレビュー、データ保護要件に関する制御機能を組織します。"
+        },
+        "governance": {
+          "title": "AI ガバナンス",
+          "body": "企業データの境界と、プロモーションのリスクを軽減するために AI を使用する方法を明確に定義します。"
+        }
+      }
+    },
+    "resources": {
+      "title": "始めるのに役立つリソース。",
+      "items": {
+        "report": {
+          "title": "AI がナレッジワークをどのように変えるか",
+          "body": "企業チームが共有された知識を迅速な意思決定と実行にどのように変換するかを理解します。",
+          "cta": "レポートを読む"
+        },
+        "hub": {
+          "title": "集中製品開発センター",
+          "body": "要件、仕様、調査、およびステータスの更新を検索可能なセンターに整理する方法を学びます。",
+          "cta": "読書ガイド"
+        },
+        "tour": {
+          "title": "セルフサービス エクスペリエンス エンタープライズ ワークスペース",
+          "body": "チームが Deckwise を使用してナレッジ、プロジェクト、AI ワークフローを管理する方法をご覧ください。",
+          "cta": "ツアーを開始します"
+        }
+      }
+    },
+    "cta": {
+      "title": "すべてのチームのための AI ワークスペース。",
+      "body": "組織構造、セキュリティ要件、チームのワークフローについて専門家に相談し、Deckwise がどのように機能するかを確認してください。",
+      "button": "Deckwise を始めましょう"
+    }
+  },
+  "teamsPage": {
+    "metadata": {
+      "title": "Deckwise for Teams：AIプレゼンワークフロー",
+      "description": "Deckwise でプロジェクトファイル、AI 下書き、編集可能なスライド、レビュー、共有ワークフローを一つのワークスペースにつなげます。"
+    },
+    "hero": {
+      "title": "チームはより良く連携します。",
+      "body": "プロジェクト、ナレッジベース、ドキュメントを同じワークスペースに並べて管理できます。小規模チームから大きな組織まで、文脈を明確に保てます。",
+      "primaryCta": "無料で始める",
+      "secondaryCta": "Enterprise Edition について学ぶ"
+    },
+    "projects": {
+      "title": "プロジェクトをより迅速に提供する",
+      "body": "範囲の定義から運用開始日まで、全員が同じ認識を保ちます。カンバン ボード、タイムライン、タスク ビューを使用して、高レベルのプロジェクトと実行を管理します。",
+      "items": {
+        "planning": "プロジェクト計画",
+        "tasks": "タスクボード",
+        "timeline": "リリースのリズム"
+      },
+      "quote": {
+        "body": "多くのプロジェクトを同時に進めていく場合、いつでもクリックするだけで全体像が見られることが最も重要です。",
+        "author": "運営およびマーケティングチーム"
+      }
+    },
+    "digitalOffice": {
+      "title": "あなたのデジタルオフィス",
+      "body": "乱雑なフォルダーや同じドキュメントの複数のバージョンに別れを告げましょう。チームのスペース、資料、意思決定を 1 か所にまとめて、どこに答えを探せばよいかを全員が把握できるようにします。",
+      "spaces": {
+        "general": "一般",
+        "engineering": "エンジニアリング",
+        "sales": "販売",
+        "marketing": "マーケティング",
+        "managers": "マネージャー",
+        "operations": "運営"
+      },
+      "quote": {
+        "body": "以前は、多くの知識は少数の人々の頭の中にのみ存在していました。チームは自分たちでそれを見つけて、迅速に前進できるようになりました。",
+        "author": "イノベーション戦略チーム"
+      }
+    },
+    "docs": {
+      "title": "全員が同じ認識を持てるようにする",
+      "body": "会議の議事録、目標計画、プロセスの文書化、主要な決定事項をすべて文書化して、関係者に誰がいつ何を行うかを知らせることができます。",
+      "items": {
+        "notes": "会議議事録",
+        "goals": "目標計画",
+        "decisions": "重要な決定"
+      },
+      "quote": {
+        "body": "以前は、会議のレビューメールを頻繁に送信していました。これで、チームは範囲やスケジュールの問題が発生した場合にどこを参照すればよいかを理解できるようになりました。",
+        "author": "製品コースチーム"
+      }
+    },
+    "freePlan": {
+      "title": "まずは無料プランから",
+      "body": "チームメンバーを招待し、最初に作業を整理します。期限はなく、クレジット カードも必要ないため、アップグレードするかどうかを決める前に試してみることができます。",
+      "button": "無料で始める",
+      "featuresTitle": "Deckwise チームの特徴",
+      "features": {
+        "collaboration": "共有ワークスペースの文脈",
+        "permissions": "カスタマイズ可能な権限",
+        "integrations": "APIとツールの統合",
+        "views": "カンバン ボード、タイムライン、カレンダー ビュー",
+        "tasks": "タスクとプロジェクトの管理",
+        "wiki": "チーム Wiki とナレッジベース",
+        "docs": "美しいメモや書類",
+        "mobile": "完全なモバイル体験"
+      }
+    },
+    "teams": {
+      "title": "あらゆる種類のチームに適しています",
+      "body": "質問は職務によって異なりますが、いずれも明確なコンテキスト、実行可能な計画、および強固な知識ベースが必要です。",
+      "items": {
+        "engineering": {
+          "title": "エンジニアリング",
+          "body": "スプリント タスク、コード仕様、バグ修正、リリース レビューを 1 か所にまとめて、機能をより迅速に提供します。",
+          "cta": "さらに詳しく"
+        },
+        "product": {
+          "title": "製品",
+          "body": "ユーザー調査、ロードマップ、部門横断的なプロジェクトを使用して、アイデアをより迅速に実際の実現に移します。",
+          "cta": "さらに詳しく"
+        },
+        "design": {
+          "title": "デザイン",
+          "body": "アセット、ガイド、プロトタイプ、設計システムを統合して、チームが一貫した設計言語を確立できるようにします。",
+          "cta": "さらに詳しく"
+        }
+      }
+    },
+    "templates": {
+      "title": "テンプレートから始める",
+      "body": "プリセット ワークフローをチーム ワークスペースに追加し、チーム独自のプロセスに従って調整します。",
+      "items": {
+        "designSystem": {
+          "title": "デザインシステム",
+          "body": "共有デザインリソース、仕様、コンポーネント説明を維持できます。",
+          "cta": "テンプレートを使用する"
+        },
+        "roadmap": {
+          "title": "製品ロードマップ",
+          "body": "チームが共通の方向を向くように、年間の優先事項に基づいて大きなプロジェクトに優先順位を付けます。",
+          "cta": "テンプレートを使用する"
+        }
+      }
+    },
+    "reviews": {
+      "title": "お客様が Deckwise を愛用する理由をご覧ください",
+      "subtitle": "チームが最も重視するエクスペリエンス指標",
+      "body": "チーム ツールは強力であるだけでなく、使いやすく、管理しやすく、実際の作業要件を満たすことができなければなりません。",
+      "items": {
+        "easeUse": {
+          "value": "86%",
+          "label": "使いやすさ"
+        },
+        "easeAdmin": {
+          "value": "90%",
+          "label": "管理が簡単"
+        },
+        "requirements": {
+          "value": "91%",
+          "label": "ニーズを満たす"
+        },
+        "setup": {
+          "value": "86%",
+          "label": "セットアップが簡単"
+        }
+      }
+    },
+    "cta": {
+      "title": "今すぐデッキワイズを試してみてください。",
+      "body": "無料で始めて、チームのプレゼン作成フローをより明確にしましょう。",
+      "button": "無料で始める"
+    }
+  },
+  "personalPage": {
+    "metadata": {
+      "title": "Deckwise Personal：個人向け AI プレゼン下書き",
+      "description": "Deckwise を個人用 AI プレゼンワークスペースとして使い、アイデア整理、スライド下書き、メモ管理、プロジェクトの仕上げを速めます。"
+    },
+    "hero": {
+      "title": "Deckwise には誰にとっても何かがあります。",
+      "body": "メモを書き、計画を立て、タスクを整理し、生活を 1 か所で管理します。個人利用は今すぐ無料で始められます。",
+      "button": "登録する",
+      "platforms": "Web、モバイル、Mac、Windows をサポート",
+      "cards": {
+        "notes": "注意事項",
+        "vacation": "旅行計画",
+        "tasks": "タスク",
+        "writing": "書く",
+        "improvement": "自己改善",
+        "websites": "個人のウェブサイト"
+      }
+    },
+    "useCases": {
+      "title": "Deckwise がさまざまな人にどのように機能するかを確認する",
+      "items": {
+        "notes": {
+          "title": "メモを取る",
+          "body": "アイデアをすばやく捉え、独自の方法で整理します。 To Do、リマインダー、次の大きなアイデアなど、Deckwise はそれを思い出すのに役立ちます。",
+          "story": "旅行の記録、インスピレーション、やるべきことを持ち歩くことができ、別のアプリケーションに散らばることがなくなります。"
+        },
+        "organized": {
+          "title": "生活を整理する",
+          "body": "予算、レシピ、読みたい記事や情報をすべて 1 つの個人ホームページに配置でき、複数のアプリを組み合わせる必要はありません。",
+          "story": "ビジネス、旅行、個人のプロジェクトを 1 つのカスタマイズ可能なシステムにまとめることで、情報を簡単に入手できるようになります。"
+        },
+        "tasks": {
+          "title": "タスクを追跡する",
+          "body": "仕事の依頼から雑用リストまで、すべてをシンプルなチェックリストや詳細なプロジェクトボードで円滑に行うことができます。",
+          "story": "複数の原稿、複数の進捗、複数のステータスを記憶で切り替えるのではなく、同時に追跡できます。"
+        },
+        "writing": {
+          "title": "書き始める",
+          "body": "他の気を散らすものは残して、直接入ってください。 Deckwise は、執筆に集中したり、ドラッグ アンド ドロップで整理したり、フィードバックを共有したりできる場所です。",
+          "story": "散らばった考えを章、ページ、下書きにまとめることで、執筆プロセスがより持続可能なものになります。"
+        },
+        "improvement": {
+          "title": "どんどん良くなっていきましょう",
+          "body": "習慣の追跡、読書リスト、フィットネス プラン、レビューはすべて同じシステム内に並べて配置できます。",
+          "story": "Self- Improvement は単なる To Do アプリではなく、毎日の記録、計画、資料と結びついています。"
+        },
+        "websites": {
+          "title": "ウェブサイトを構築する",
+          "body": "ページを公開 Web サイトとして公開して、履歴書、ポートフォリオ、または個人のホームページを表示すると、他の人があなたを見つけやすくなります。",
+          "story": "ポートフォリオ、履歴書、プロジェクトの説明は、個人のワークスペースから直接共有可能なページに変換できます。"
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "永久に無料で始める",
+      "title": "より多くのことを達成できるように設計されています。",
+      "button": "登録する",
+      "items": {
+        "dragDrop": {
+          "title": "ドラッグ アンド ドロップでアイデアを整理する",
+          "body": "あらゆるコンテンツを取得し、自分にとって最適な方法で移動、結合、整理します。"
+        },
+        "contentTypes": {
+          "title": "複数のコンテンツタイプ",
+          "body": "画像、ビデオ、タイトル、埋め込み、リストはすべてページに直接配置できます。"
+        },
+        "navigation": {
+          "title": "明確なナビゲーション",
+          "body": "ページ内でページをネストすることができ、サイドバーですべてのレベルを一目で確認できます。"
+        },
+        "collaboration": {
+          "title": "共有コンテキスト",
+          "body": "コメント、メンション、共有リンクは、あなたや他の人がより多くのことを達成するのに役立ちます。"
+        }
+      }
+    },
+    "apps": {
+      "title": "今すぐ始めてください",
+      "body": "Web、デスクトップ、モバイルで同じワークスペースを使用します。仕事で使用する必要がありますか? Team Edition と Enterprise Edition もチェックしてください。",
+      "items": {
+        "web": {
+          "title": "ウェブアプリ",
+          "body": "ブラウザを開いて、記録、整理、共有を開始します。"
+        },
+        "desktop": {
+          "title": "デスクトップ",
+          "body": "Mac と Windows で、より集中した作業環境を維持できます。"
+        },
+        "mobile": {
+          "title": "携帯端末",
+          "body": "iOS と Android でインスピレーションやタスクを手元に置いておけます。"
+        }
+      }
+    },
+    "templates": {
+      "title": "テンプレートから始める",
+      "body": "登録後は、メモ、日記、求人応募書、履歴書などのテンプレートから始めて、独自のシステムに合わせて調整できます。",
+      "cta": "テンプレートギャラリーを参照する",
+      "items": {
+        "notes": "注意事項",
+        "journal": "日記",
+        "job": "就職活動実績",
+        "resume": "再開"
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "items": {
+        "oldPlan": {
+          "question": "すでに古い個人プランを利用している場合はどうなりますか?",
+          "answer": "既存のコンテンツを引き続き使用し、メモ、タスク、資料を新しい個人的な方法で整理できます。"
+        },
+        "guests": {
+          "question": "作成した内容を共有できますか？",
+          "answer": "はい。完成した内容は共有またはエクスポートでき、Deckwise 上では引き続き編集できます。"
+        },
+        "multipleMembers": {
+          "question": "複数人で使いたい場合はどうすればいいですか？",
+          "answer": "個人の作業がチーム向けのワークフローに広がった場合は、チームページでより大きなプランを確認できます。"
+        },
+        "teamTrial": {
+          "question": "チームは無料で試すことができますか?",
+          "answer": "はい。チーム ワークスペースを作成して、最初にプロジェクトとドキュメントを整理し、必要に応じてアップグレードできます。"
+        }
+      }
+    },
+    "cta": {
+      "title": "今すぐデッキワイズを試してみてください。",
+      "body": "無料で始めて、メモ、計画、タスク、個人プロジェクトを 1 か所に保管してください。",
+      "button": "無料で始める"
+    }
+  },
+  "customerStory": {
+    "openai": {
+      "metadata": {
+        "title": "OpenAI 顧客事例：Deckwise でデッキ作成を高速化",
+        "description": "チームが Deckwise でプロジェクト文脈を共有し、知識を再利用し、プレゼンを下書きし、調査から編集可能なデッキへ速く進む方法を紹介します。"
+      },
+      "aria": {
+        "partner": "Deckwise と OpenAI",
+        "playVideo": "お客様事例のビデオを再生する"
+      },
+      "hero": {
+        "eyebrow": "注目の事例",
+        "title": "OpenAI が Deckwise を使用して共有知識をより高速なワークフローに変える方法"
+      },
+      "lede": "すべての AI システムの背後には、人間の知識の基盤があります。 OpenAI チームは、この知識を取得し、プロジェクトのコンテキストを整理し、共有された思考をより迅速な実行に変えるための場所を必要としていました。",
+      "sections": {
+        "centralized": {
+          "title": "作業を 1 か所に集中させることでパワーを解放",
+          "body1": "組織が成長するにつれて、計画、調査、意思決定がさまざまなツールに分散される傾向があります。 OpenAI チームは、会社が成長しても仕事を検索したり接続したりできる共有スペースを必要としていました。",
+          "body2": "このワークスペースは、リサーチ ノート、リリース計画、製品コンテキスト、チームの知識を行動に移すための基盤となります。統合と AI 支援検索により、適切なコンテキストがサイロに閉じ込められるのではなく、作業とともに流れるようになります。"
+        },
+        "research": {
+          "title": "研究から製品までのパイプラインをオープンにする",
+          "body1": "研究チームは、リアルタイムのチームスペースで実験と計画を文書化し、この作業をエンジニアリングおよび製品プロセスに結び付けます。その結果、発見からリリースまでのパスがより明確になります。",
+          "body2": "カンバン ボード、リスト、タイムラインを使用すると、各チームが自分たちのプロセスに関する同じ知識ベースを整理しながら、より大きなプロジェクトを共同作業者が読みやすい状態に保つことができます。"
+        },
+        "engineering": {
+          "title": "エンジニアリングチーム向けのスピードアンプと常時稼働アシスタント",
+          "body1": "デバッグ記録、設計上の決定、コード レビューが次のチームメイトが見つけられる場所に保存されると、エンジニアリングの知識はさらに複雑になります。検索可能なワークスペースにより、これらのコンテキストはタイム ゾーンやハンドオフを越えて便利になります。",
+          "body2": "問題のトラブルシューティングを最初から始めるのではなく、チームは既存の知識を基にして、プレッシャーが最も高まったときに最も関連性の高いコンテキストをワークスペースに問い合わせることができます。"
+        },
+        "data": {
+          "title": "データにアクセスし、すぐに使用できるようにする",
+          "body1": "データ チームは、週次レポート、ダッシュボード、運用指標を共有レポート ハブに変えることができます。リーダーは、複数のシステムで情報を探すことなく、ロードマップに影響を与える数値をより早く確認できます。",
+          "body2": "テンプレートと埋め込みダッシュボードにより、データの隣に分析コンテキストを維持しながら、繰り返しのレポート作成が軽減されます。"
+        },
+        "gtm": {
+          "title": "より高速なグローバル GTM エンジン",
+          "body1": "製品ニュース、顧客事例、リリース ノート、有効化資料が 1 つの接続されたリポジトリにあると、GTM チームはより迅速に行動できるようになります。",
+          "body2": "この共有システムにより、新しいメンバーのオンボーディングが速くなり、営業会話を最新に保ち、顧客対応チームがプロダクト戦略をより明確に理解できるようになります。"
+        },
+        "impact": {
+          "title": "集中化された作業と知識の影響",
+          "body1": "核となる教訓は単純です。プロジェクトのコンテキストとドラフトが一緒に保たれていれば、知識はより簡単に再利用できるということです。チームは、派生プロセスを失うことなく、アイデアから意思決定、リリースへと移行できます。",
+          "body2": "この共有基盤により、各機能に必要な構造が与えられながら、高速チームの連携が維持されます。"
+        }
+      },
+      "quotes": {
+        "brad": "私たちの目標は、プロフェッショナルな能力を加速し、チームが進歩し続けるのに役立つツールをチームに提供することです。",
+        "john": "チームメイトが数分以内に正しい答えを見つけることができるたびに、技術文書の価値が高まります。",
+        "mashfir": "複雑な分析を読みやすい文書に変換することで、技術的な洞察をより幅広い聴衆に届けることができます。"
+      },
+      "media": {
+        "researchProjects": "研究プロジェクト",
+        "deployQuestion": "微調整されたモデルをデプロイするにはどのような手順が必要ですか?"
+      },
+      "aside": {
+        "insights": "インタビュー対象者",
+        "useCases": "使用シナリオ",
+        "useCasesBody": "全社利用、ナレッジベース、プロジェクト管理、AI支援ワークフロー"
+      },
+      "peopleRoles": {
+        "coo": "COO",
+        "research": "研究",
+        "engineering": "エンジニアリング",
+        "dataScience": "データサイエンス",
+        "gtm": "GTM"
+      },
+      "cta": {
+        "title": "今日から Deckwise をチームに取り入れましょう!",
+        "body": "任意のデバイスで Deckwise を試し、共有ワークスペースがチームのワークフローをいかにスピードアップするかを確認してください。",
+        "button": "Deckwise を始めましょう"
+      },
+      "related": {
+        "title": "他のチームが Deckwise をどのように使用しているか",
+        "brainlabs": "深い作業のための Brainlabs オペレーティング システム",
+        "ramp": "Ramp が共有知識と AI ワークフローにどのように取り組むか",
+        "storyLabel": "お客様の事例"
+      }
+    }
+  }
+}

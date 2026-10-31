@@ -1,0 +1,52 @@
+.app-viewport-width-shell {
+    position: relative;
+    min-height: 100dvh;
+    background: rgb(var(--workspace-canvas));
+}
+
+.app-viewport-width-content {
+    height: 100%;
+    width: 100%;
+}
+
+/*
+ * Rounded preview panels frequently clip live iframes. Give that clip its own
+ * paint/compositing context so the corners stay smoother in both the inline
+ * slides preview card and the floating preview window.
+ */
+.app-preview-rounded-shell {
+    border-radius: var(--panel-radius);
+    overflow: hidden;
+    isolation: isolate;
+    contain: paint;
+    clip-path: inset(0 round var(--panel-radius));
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.app-preview-rounded-shell iframe,
+.app-preview-rounded-shell [data-preview-iframe-shell="true"] {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+/* Utility: section/title typography */
+.font-display {
+    font-family: var(--font-display-stack);
+}
+
+/* Utility: enable text selection */
+.select-text {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+/* Opt-in wrapper for Virtuoso scrollers that should behave like chat. */
+.virtuoso-scrollbar-capsule [data-virtuoso-scroller] {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+}

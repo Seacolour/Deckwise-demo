@@ -1,0 +1,1 @@
+export const CODE_BLOCK_COPY_FEEDBACK_MS = 1000;

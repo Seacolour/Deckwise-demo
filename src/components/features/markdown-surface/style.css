@@ -1,0 +1,237 @@
+.deckwise-surface-secondary {
+  background-color: rgb(var(--surface-secondary-rgb));
+}
+
+.deckwise-code-surface {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--deckwise-lasso-radius, 4px);
+  background: rgb(var(--code-bg)) !important;
+}
+
+.deckwise-code-surface__scroller {
+  margin: 0;
+  /* Keep read-only markdown and editor code blocks on the same static vertical
+     geometry. Fall back to the old values outside `.deckwise-editor-root` so shared
+     markdown-surface consumers do not lose padding. */
+  padding-top: calc(var(--deckwise-code-block-padding, 1.12rem) + var(--deckwise-selection-optical-lift-body, 0px));
+  padding-right: 1rem;
+  padding-bottom: max(0px, calc(var(--deckwise-code-block-padding, 1.12rem) - var(--deckwise-selection-optical-lift-body, 0px)));
+  padding-left: 1rem;
+  padding-right: 2.75rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  color: rgb(var(--foreground));
+  font-family: var(--font-mono-stack);
+  font-size: 14px;
+  line-height: 1.6;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.deckwise-code-surface code,
+.deckwise-code-surface .hljs {
+  display: block;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+.deckwise-code-surface code {
+  color: rgb(var(--foreground));
+  font-family: var(--font-mono-stack);
+}
+
+.deckwise-code-surface__copy,
+.deckwise-editor-root .ProseMirror .deckwise-code-copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #94a3b8;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.deckwise-code-surface:hover .deckwise-code-surface__copy,
+.deckwise-editor-root .ProseMirror pre:hover .deckwise-code-copy-btn,
+.deckwise-code-surface__copy:focus-visible,
+.deckwise-editor-root .ProseMirror .deckwise-code-copy-btn:focus-visible,
+.deckwise-code-surface__copy[data-state="copied"],
+.deckwise-editor-root .ProseMirror .deckwise-code-copy-btn[data-state="copied"] {
+  opacity: 1;
+}
+
+.deckwise-code-surface__copy:hover,
+.deckwise-editor-root .ProseMirror .deckwise-code-copy-btn:hover {
+  background: rgba(15, 23, 42, 0.08);
+  color: #475569;
+}
+
+.deckwise-code-surface__copy:focus-visible,
+.deckwise-editor-root .ProseMirror .deckwise-code-copy-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(var(--deckwise-accent-rgb), 0.3);
+}
+
+.deckwise-code-surface__copy svg {
+  pointer-events: none;
+}
+
+.deckwise-inline-code,
+.deckwise-editor-root .ProseMirror :not(pre) > code {
+  border-radius: 4px;
+  background-color: rgb(var(--code-bg));
+  padding: 2px 6px;
+  color: rgb(var(--code-accent-rgb));
+  font-family: var(--font-mono-stack);
+  font-size: 0.85em;
+}
+
+.deckwise-table-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  border: 1px solid rgba(var(--surface-table-border-rgb), 0.92);
+  border-radius: 10px;
+  background: rgb(var(--card));
+}
+
+.deckwise-table {
+  min-width: 100%;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.deckwise-editor-root .ProseMirror table {
+  table-layout: auto !important;
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+  border-collapse: collapse;
+  position: relative;
+  overflow: visible;
+  font-size: 0.85em;
+  border-radius: 4px;
+}
+
+.deckwise-table-header,
+.deckwise-editor-root .ProseMirror table th,
+.deckwise-editor-root .ProseMirror table td {
+  border: 1px solid rgb(var(--surface-table-border-rgb));
+}
+
+.deckwise-table-header {
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: rgba(var(--surface-table-border-rgb), 0.92);
+  background-color: rgba(var(--surface-secondary-rgb), 0.68);
+  padding: 9px 12px;
+  color: rgb(var(--surface-table-header-text-rgb));
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.deckwise-editor-root .ProseMirror th {
+  background-color: rgb(var(--surface-secondary-rgb));
+  padding: 4px 6px;
+  color: rgb(var(--surface-table-header-text-rgb));
+  font-weight: 600;
+  font-size: 12px;
+  text-align: left;
+}
+
+.deckwise-table-cell {
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: rgba(var(--surface-table-border-rgb), 0.72);
+  padding: 8px 12px;
+  color: rgb(var(--surface-table-cell-text-rgb));
+  vertical-align: top;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.deckwise-table tbody tr:nth-child(even) .deckwise-table-cell {
+  background-color: rgba(var(--surface-secondary-rgb), 0.28);
+}
+
+.deckwise-table tbody tr:last-child .deckwise-table-cell {
+  border-bottom-width: 0;
+}
+
+.deckwise-table-header:last-child,
+.deckwise-table-cell:last-child {
+  border-right-width: 0;
+}
+
+.deckwise-editor-root .ProseMirror td {
+  padding: 1px 6px;
+  color: rgb(var(--surface-table-cell-text-rgb));
+  vertical-align: top;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.deckwise-table-header *,
+.deckwise-table-cell *,
+.deckwise-editor-root .ProseMirror table th *,
+.deckwise-editor-root .ProseMirror table td * {
+  color: inherit !important;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .deckwise-code-surface__copy,
+  .deckwise-editor-root .ProseMirror .deckwise-code-copy-btn {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.9);
+    color: #475569;
+  }
+}
+
+:root[data-theme-resolved="dark"] .deckwise-code-surface__copy,
+:root[data-theme-resolved="dark"] .deckwise-editor-root .ProseMirror .deckwise-code-copy-btn {
+  color: rgb(var(--muted-foreground));
+}
+
+:root[data-theme-resolved="dark"] .deckwise-code-surface {
+  background: rgb(var(--workspace-canvas)) !important;
+}
+
+:root[data-theme-resolved="dark"] .deckwise-table-scroll {
+  background: rgb(var(--workspace-canvas));
+}
+
+:root[data-theme-resolved="dark"] .deckwise-table-header,
+:root[data-theme-resolved="dark"] .deckwise-editor-root .ProseMirror th {
+  background-color: rgb(var(--workspace-canvas));
+}
+
+:root[data-theme-resolved="dark"] .deckwise-code-surface__copy:hover,
+:root[data-theme-resolved="dark"] .deckwise-editor-root .ProseMirror .deckwise-code-copy-btn:hover {
+  background: rgba(var(--accent), 0.84);
+  color: rgb(var(--foreground));
+}
+
+@media (hover: none), (pointer: coarse) {
+  :root[data-theme-resolved="dark"] .deckwise-code-surface__copy,
+  :root[data-theme-resolved="dark"] .deckwise-editor-root .ProseMirror .deckwise-code-copy-btn {
+    background: rgba(var(--card), 0.92);
+    color: rgb(var(--muted-foreground));
+  }
+}

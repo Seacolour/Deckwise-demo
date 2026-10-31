@@ -1,0 +1,216 @@
+/* ==================== Deckwise utility styles ==================== */
+
+/* Glass surface effects. */
+.glass {
+    background-color: rgba(var(--card), 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--chrome-line);
+}
+
+.glass-dark {
+    background-color: rgba(var(--foreground), 0.9);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--chrome-line);
+}
+
+/* Card shadow system. */
+.card-shadow-sm {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card-shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Layered shadow depth effect. */
+.layered-shadow {
+    position: relative;
+}
+
+.layered-shadow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(var(--background));
+    border: 1px solid var(--chrome-line);
+    border-radius: inherit;
+    z-index: -1;
+    transform: translate(4px, 4px);
+    transition: transform 0.3s ease;
+}
+
+.layered-shadow:hover::before {
+    transform: translate(6px, 6px);
+}
+
+/* Hover lift effect. */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon button containers. */
+.icon-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+}
+
+.icon-btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background-color: rgb(var(--primary));
+    color: rgb(var(--primary-foreground));
+    transition: all 0.2s;
+}
+
+.icon-btn-primary:hover {
+    background-color: color-mix(in srgb, rgb(var(--primary)) 82%, rgb(var(--background)));
+    transform: scale(1.05);
+}
+
+.icon-btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background-color: rgb(var(--secondary));
+    color: rgb(var(--secondary-foreground));
+    transition: all 0.2s;
+}
+
+.icon-btn-secondary:hover {
+    background-color: rgb(var(--accent));
+}
+
+/* Badge styles. */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-default {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgb(var(--muted));
+    color: rgb(var(--foreground));
+}
+
+.badge-success {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgb(var(--success-surface));
+    color: rgb(var(--success));
+}
+
+.badge-warning {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgb(var(--warning-surface));
+    color: rgb(var(--warning));
+}
+
+.badge-error {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: color-mix(in srgb, rgb(var(--destructive)) 14%, rgb(var(--card)));
+    color: rgb(var(--destructive));
+}
+
+.badge-info {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background-color: rgb(var(--info-surface));
+    color: rgb(var(--info));
+}
+
+/* Smooth transitions. */
+.transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus ring styles. */
+.focus-ring:focus-visible {
+    outline: 2px solid rgb(var(--ring));
+    outline-offset: 2px;
+}
+
+/* Loading skeletons. */
+.skeleton {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    background-color: rgb(var(--accent));
+    border-radius: 0.375rem;
+}
+
+/* Responsive containers. */
+.container-responsive {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container-responsive {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Gradient background utility. */
+.gradient-overlay {
+    background: linear-gradient(
+        to bottom,
+        rgb(var(--background)),
+        rgb(var(--muted))
+    );
+}

@@ -1,0 +1,137 @@
+/* Color utilities. */
+/* Background color utilities. */
+.bg-background {
+    background-color: rgb(var(--background));
+}
+
+.bg-card {
+    background-color: rgb(var(--card));
+}
+
+.bg-message {
+    background-color: rgb(var(--message-bg));
+}
+
+.bg-history {
+    background-color: rgb(var(--history-bg));
+}
+
+/* Foreground color utilities. */
+.text-foreground {
+    color: rgb(var(--foreground));
+}
+
+.text-muted {
+    color: rgb(var(--muted-foreground));
+}
+
+/* Theme color utilities. */
+.text-theme {
+    color: rgb(var(--theme-color));
+}
+
+.bg-theme {
+    background-color: rgb(var(--theme-color));
+}
+
+:root[data-theme-resolved="dark"] [class~="text-stone-900"],
+:root[data-theme-resolved="dark"] [class~="text-stone-800"] {
+    color: rgb(var(--foreground)) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="text-stone-700"] {
+    color: rgba(var(--foreground), 0.92) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="text-stone-600"],
+:root[data-theme-resolved="dark"] [class~="text-stone-500"],
+:root[data-theme-resolved="dark"] [class~="text-stone-400"] {
+    color: rgb(var(--muted-foreground)) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-white"] {
+    background-color: rgb(var(--card)) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-white/96"] {
+    background-color: rgba(var(--card), 0.96) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-white/92"] {
+    background-color: rgba(var(--card), 0.92) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-white/90"] {
+    background-color: rgba(var(--card), 0.9) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-white/70"] {
+    background-color: rgba(var(--card), 0.7) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-50"] {
+    background-color: rgb(var(--surface-soft-rgb)) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-50/80"] {
+    background-color: rgba(var(--surface-soft-rgb), 0.8) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-100"] {
+    background-color: rgb(var(--surface-soft-strong-rgb)) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-100/80"] {
+    background-color: rgba(var(--surface-soft-strong-rgb), 0.8) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-200"] {
+    background-color: rgb(var(--surface-soft-emphasis-rgb)) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-200/40"] {
+    background-color: rgba(var(--surface-soft-emphasis-rgb), 0.4) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-200/50"] {
+    background-color: rgba(var(--surface-soft-emphasis-rgb), 0.5) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-200/60"] {
+    background-color: rgba(var(--surface-soft-emphasis-rgb), 0.6) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="bg-stone-200/80"] {
+    background-color: rgba(var(--surface-soft-emphasis-rgb), 0.8) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="from-stone-100"] {
+    --tw-gradient-from: rgb(var(--surface-soft-strong-rgb)) var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: rgb(var(--surface-soft-strong-rgb) / 0) var(--tw-gradient-to-position) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="to-stone-200"] {
+    --tw-gradient-to: rgb(var(--surface-soft-emphasis-rgb)) var(--tw-gradient-to-position) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-50"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-50/80"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-100"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-100/80"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-200/40"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-200/50"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-200/60"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:bg-stone-200/80"]:hover {
+    background-color: rgba(var(--accent), 0.84) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="hover:text-stone-600"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:text-stone-700"]:hover,
+:root[data-theme-resolved="dark"] [class~="hover:text-stone-900"]:hover {
+    color: rgb(var(--foreground)) !important;
+}
+
+:root[data-theme-resolved="dark"] [class~="data-[highlighted]:text-stone-900"][data-highlighted],
+:root[data-theme-resolved="dark"] [class~="data-[state=open]:text-stone-900"][data-state="open"] {
+    color: rgb(var(--foreground)) !important;
+}

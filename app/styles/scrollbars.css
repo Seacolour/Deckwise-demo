@@ -1,0 +1,163 @@
+/* ==================== Deckwise shared styles ==================== */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Remove native scrollbar arrow buttons so only the thumb/track remain. */
+*::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+*::-webkit-scrollbar-button:single-button,
+*::-webkit-scrollbar-button:single-button:vertical:decrement,
+*::-webkit-scrollbar-button:single-button:vertical:increment,
+*::-webkit-scrollbar-button:single-button:horizontal:decrement,
+*::-webkit-scrollbar-button:single-button:horizontal:increment {
+    display: block;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+/* Unified visible scrollbar style across app surfaces. */
+
+.virtuoso-scrollbar-capsule [data-virtuoso-scroller] {
+    scrollbar-gutter: stable both-edges;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .scrollbar-capsule,
+    .scrollbar-unified,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller] {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-opacity)) transparent;
+    }
+
+    .scrollbar-capsule-light {
+        scrollbar-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-light-opacity)) transparent;
+    }
+
+}
+
+@supports selector(::-webkit-scrollbar) {
+    .scrollbar-capsule,
+    .scrollbar-unified,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller] {
+        scrollbar-width: auto;
+        scrollbar-color: auto;
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar,
+    .scrollbar-unified::-webkit-scrollbar,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar {
+        width: var(--scrollbar-size);
+        height: var(--scrollbar-size);
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-track,
+    .scrollbar-unified::-webkit-scrollbar-track,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Keep native scrollbar thumbs off rounded container edges instead of running full height. */
+    .scrollbar-capsule::-webkit-scrollbar-track:vertical,
+    .scrollbar-unified::-webkit-scrollbar-track:vertical,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-track:vertical {
+        margin-block: var(--scrollbar-edge-gap);
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-track:horizontal,
+    .scrollbar-unified::-webkit-scrollbar-track:horizontal,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-track:horizontal {
+        margin-inline: var(--scrollbar-edge-gap);
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-track-piece,
+    .scrollbar-unified::-webkit-scrollbar-track-piece,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-track-piece {
+        background: transparent;
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-corner,
+    .scrollbar-unified::-webkit-scrollbar-corner,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-corner {
+        background: transparent;
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-thumb,
+    .scrollbar-unified::-webkit-scrollbar-thumb,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-thumb {
+        background-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-opacity));
+        border-radius: 9999px;
+        border: var(--scrollbar-thumb-inset) solid transparent;
+        background-clip: content-box;
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-thumb:hover,
+    .scrollbar-unified::-webkit-scrollbar-thumb:hover,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-hover-opacity));
+    }
+
+    .scrollbar-capsule-light::-webkit-scrollbar-thumb {
+        background-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-light-opacity));
+    }
+
+    .scrollbar-capsule-light::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-light-hover-opacity));
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-button,
+    .scrollbar-unified::-webkit-scrollbar-button,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-button {
+        display: none;
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+
+    .scrollbar-capsule::-webkit-scrollbar-button:single-button,
+    .scrollbar-capsule::-webkit-scrollbar-button:single-button:vertical:decrement,
+    .scrollbar-capsule::-webkit-scrollbar-button:single-button:vertical:increment,
+    .scrollbar-capsule::-webkit-scrollbar-button:single-button:horizontal:decrement,
+    .scrollbar-capsule::-webkit-scrollbar-button:single-button:horizontal:increment,
+    .scrollbar-unified::-webkit-scrollbar-button:single-button,
+    .scrollbar-unified::-webkit-scrollbar-button:single-button:vertical:decrement,
+    .scrollbar-unified::-webkit-scrollbar-button:single-button:vertical:increment,
+    .scrollbar-unified::-webkit-scrollbar-button:single-button:horizontal:decrement,
+    .scrollbar-unified::-webkit-scrollbar-button:single-button:horizontal:increment,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-button:single-button,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-button:single-button:vertical:decrement,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-button:single-button:vertical:increment,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-button:single-button:horizontal:decrement,
+    .virtuoso-scrollbar-capsule [data-virtuoso-scroller]::-webkit-scrollbar-button:single-button:horizontal:increment {
+        display: block;
+        width: 0;
+        height: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+}
+
+.deckwise-scrollbar-thumb {
+    background-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-opacity));
+    transition: background-color 160ms ease;
+}
+
+.deckwise-scrollbar-thumb:hover {
+    background-color: rgba(var(--scrollbar-thumb-rgb), var(--scrollbar-thumb-hover-opacity));
+}

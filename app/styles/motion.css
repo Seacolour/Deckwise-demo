@@ -1,0 +1,222 @@
+/* Animation utilities. */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes tooltipIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes tooltipOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(4px) scale(0.96);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes sheetOverlayEnter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes sheetOverlayExit {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes centerSheetEnter {
+    from {
+        opacity: 0;
+        transform: translate3d(
+            var(--center-sheet-translate-x, -50%),
+            calc(var(--center-sheet-translate-y, -50%) + var(--center-sheet-enter-offset-y, 8px)),
+            0
+        ) scale(var(--center-sheet-enter-scale, 0.97));
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(
+            var(--center-sheet-translate-x, -50%),
+            var(--center-sheet-translate-y, -50%),
+            0
+        ) scale(1);
+    }
+}
+
+@keyframes centerSheetExit {
+    from {
+        opacity: 1;
+        transform: translate3d(
+            var(--center-sheet-translate-x, -50%),
+            var(--center-sheet-translate-y, -50%),
+            0
+        ) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(
+            var(--center-sheet-translate-x, -50%),
+            calc(var(--center-sheet-translate-y, -50%) + var(--center-sheet-exit-offset-y, 8px)),
+            0
+        ) scale(var(--center-sheet-exit-scale, 0.97));
+    }
+}
+
+[data-slot="sheet-overlay"][data-state="open"] {
+    animation: sheetOverlayEnter 180ms ease-out both;
+}
+
+[data-slot="sheet-overlay"][data-state="closed"] {
+    animation: sheetOverlayExit 140ms ease-in both;
+}
+
+[data-slot="sheet-content"][data-sheet-side="center"] {
+    --center-sheet-left: 50%;
+    --center-sheet-top: 50%;
+    --center-sheet-translate-x: -50%;
+    --center-sheet-translate-y: -50%;
+    --center-sheet-enter-offset-y: 8px;
+    --center-sheet-exit-offset-y: 8px;
+    --center-sheet-enter-scale: 0.97;
+    --center-sheet-exit-scale: 0.97;
+    left: var(--center-sheet-left) !important;
+    top: var(--center-sheet-top) !important;
+    transform-origin: center;
+    transform: translate3d(
+        var(--center-sheet-translate-x, -50%),
+        var(--center-sheet-translate-y, -50%),
+        0
+    ) scale(1);
+}
+
+[data-slot="sheet-content"][data-sheet-side="center"][data-state="open"] {
+    animation: centerSheetEnter 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+[data-slot="sheet-content"][data-sheet-side="center"][data-state="closed"] {
+    animation: centerSheetExit 160ms ease-in both;
+}
+
+@keyframes fileChipEnter {
+    from {
+        opacity: 0;
+        transform: translateY(4px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.file-chip-enter {
+    animation: fileChipEnter 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+/* Mode pill: animate label/icon on mode switch */
+@keyframes modePillSwap {
+    from {
+        opacity: 0;
+        transform: translateY(4px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes chatUserMessageEnter {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 10px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.chat-user-message-enter {
+    animation: chatUserMessageEnter 180ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    backface-visibility: hidden;
+}
+
+.chat-session-reveal-surface {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 160ms ease-out;
+    backface-visibility: hidden;
+}
+
+.chat-session-reveal-surface[data-hidden="true"],
+.chat-session-reveal-surface[data-restoring="true"] {
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 0ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-slot="sheet-overlay"][data-state],
+    [data-slot="sheet-content"][data-sheet-side="center"][data-state],
+    .chat-user-message-enter,
+    .chat-session-reveal-surface {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+    animation: slideUp 0.4s ease-out;
+}
+
+.animate-scaleIn {
+    animation: scaleIn 0.2s ease-out;
+}
