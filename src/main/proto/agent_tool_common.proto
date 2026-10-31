@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package paperpuppy.backendintl.agent.tool;
+
+option java_multiple_files = true;
+option java_package = "com.xiaoyuan.paperpuppyagent.grpc.backend";
+option java_outer_classname = "BackendToolCommonProto";
+
+// 用户规则、记忆与系统工具书等跨领域协议。
+
+message ManageUserRulesRequest {
+  int64 user_id = 1;
+  string action = 2;            // "add" | "update" | "remove" | "list"
+  int64 rule_id = 3;            // update/remove 时必填
+  string content = 4;           // add/update 时必填
+}
+message ManageUserRulesResponse {
+  bool success = 1;
+  string message = 2;
+  repeated UserRuleItem rules = 3;
+}
+
+message UserRuleItem {
+  int64 rule_id = 1;
+  string content = 2;
+  bool enabled = 3;
+  string source = 4;
+  string created_at = 5;
+}
+
+// ======== ManageUserMemory（用户记忆管理）========
+
+message ManageUserMemoryRequest {
+  int64 user_id = 1;
+  string action = 2;            // "create" | "update" | "delete" | "list"
+  int64 memory_id = 3;          // update/delete 时必填
+  string title = 4;             // create/update 时必填
+  string content = 5;           // create/update 时必填
+}
+
+message ManageUserMemoryResponse {
+  bool success = 1;
+  string message = 2;
+  repeated UserMemoryItem memories = 3;
+}
+
+message UserMemoryItem {
+  int64 memory_id = 1;
+  string title = 2;
+  string content = 3;
+  string source = 4;
+  string created_at = 5;
+  string updated_at = 6;
+}
+
+// ======== ReadToolBook（系统工具书读取）========
+
+message ReadToolBookRequest {
+  int64 user_id = 1;
+  int64 project_id = 2;
+  string book_key = 3;
+  string mode = 4;             // "list_books" | "read_toc" | "read_node"
+  string node_key = 5;         // mode=read_node 时可填
+  int32 max_chars = 6;         // mode=read_node 时可填
+}
+
+message ReadToolBookResponse {
+  bool success = 1;
+  string mode = 2;
+  string book_key = 3;
+  string result_json = 4;      // DTO 序列化后的 JSON
+  string error = 5;
+}

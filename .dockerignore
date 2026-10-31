@@ -1,0 +1,12 @@
+.git
+.idea
+.vscode
+target
+**/target
+*.iml
+*.log
+
+# secrets / local env
+.env
+.env.*
+

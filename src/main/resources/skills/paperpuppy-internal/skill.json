@@ -1,0 +1,799 @@
+{
+  "id": "paperpuppy.internal",
+  "version": "1.0.0",
+  "title": "PaperPuppy Internal Skills",
+  "description": "PaperPuppy Agent 内置技能（仅项目内部工具）。",
+  "functions": [
+    {
+      "name": "file_list",
+      "description": "列出当前项目文件及可选的 document_id、页数和 composite_tools。根据文件实际类型选择工具：PDF/docx/xlsx 等二进制文件优先 file_read_url，Markdown 协作文档使用 document_read/document_save，图片使用 image_read；普通 JSON 文件可用 json_structure_read/json_subtree_read。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "file_content_read",
+      "description": "读取文件的原始内容（如 PDF 文档解析后的文本），支持按“切片窗口”分页读取。参数 file_id 可从 file_list 工具返回的 file_id 字段获取。注意：对于 Markdown 等可编辑文档，请使用 document_read 获取最新内容。本次获取的内容为物理格式，并不能完全作为编辑工具的依据。分页策略：首次读取建议 start_fragment=1；工具会返回 start_fragment/end_fragment/total_fragments。若需下一页，将 start_fragment 设置为 end_fragment+1（保持 max_fragments 不变或按需调整）。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "integer",
+            "description": "文件 ID（从 file_list 工具返回的 file_id 字段获取）"
+          },
+          "max_fragments": {
+            "type": "integer",
+            "description": "最大返回切片数（默认 10，最大 50）。数值越大，返回内容越多、成本越高。"
+          },
+          "start_fragment": {
+            "type": "integer",
+            "description": "起始切片（1-based，建议首屏传 1）。例如 start_fragment=11 表示从第 11 块开始读取；下一页可用 start_fragment=end_fragment+1。"
+          }
+        },
+        "required": [
+          "file_id",
+          "max_fragments",
+          "start_fragment"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "image_read",
+      "description": "读取图片文件并返回可访问的 image_url。用于让模型以多模态方式理解图片内容：拿到 image_url 后，应将其作为 Responses API 的 input_image 注入到下一轮输入（而不是只把 URL 当文本）。参数 file_id 可从 file_list 工具返回的 file_id 字段获取。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "integer",
+            "description": "图片文件 ID（从 file_list 工具返回的 file_id 字段获取）"
+          }
+        },
+        "required": [
+          "file_id"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "file_read_url",
+      "description": "获取文件的 AI 可访问 URL，用于让模型以多模态方式原生解析 PDF、docx 等文档内容。适用于参考阅读场景（用户意图是阅读/提问文件内容，而非编辑文件）：拿到 file_url 后，应将其作为 Responses API 的 input_file 注入到下一轮输入，由模型直接读取完整文件，而不是通过 file_content_read 分片注入文本。参数 file_id 可从 file_list 工具返回的 file_id 字段获取。支持 public URL 与 backend 颁发的私有资源 token URL；若失败，请退化使用 file_content_read 工具。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "integer",
+            "description": "文件 ID（从 file_list 工具返回的 file_id 字段获取）"
+          }
+        },
+        "required": [
+          "file_id"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "todo_list",
+      "description": "记录任务备忘清单。当面对较复杂的多步骤任务时，可以使用此工具在开始前列出需要完成的事项，作为备忘参考。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "todos": {
+            "type": "array",
+            "description": "任务备忘列表",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "任务唯一标识（如 1、2、3）"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "任务描述"
+                },
+                "status": {
+                  "type": "string",
+                  "description": "任务状态：pending（待办）| in_progress（进行中）| completed（已完成）"
+                },
+                "priority": {
+                  "type": "string",
+                  "description": "优先级：high | medium | low"
+                }
+              },
+              "required": [
+                "id",
+                "content",
+                "status",
+                "priority"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "todos"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": false,
+        "requires_project": false,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "agent_ledger_update",
+      "description": "更新当前 Agent run 的轻量工作记忆。用于记录后续步骤需要持续记住的 todo、fact、decision、artifact/revision；不要写长文本，不要把原始工具结果复制进 ledger。常用 op：add_todo、mark_todo_done、mark_todo_in_progress、mark_todo_blocked、add_fact、add_decision、add_artifact。sourceCallId/source_call_id 可引用当前 run 内已存在的工具 call_id。",
+      "strict": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "updates": {
+            "type": "array",
+            "description": "本次 ledger 更新列表，每项必须包含 op，并保持短小",
+            "items": {
+              "type": "object",
+              "properties": {
+                "op": {
+                  "type": "string",
+                  "description": "更新操作：add_todo | mark_todo_done | mark_todo_in_progress | mark_todo_blocked | add_fact | add_decision | add_artifact"
+                },
+                "id": {
+                  "type": "string",
+                  "description": "可选 todo id；add_todo 不传时系统生成"
+                },
+                "todo_id": {
+                  "type": "string",
+                  "description": "要更新的 todo id"
+                },
+                "todoId": {
+                  "type": "string",
+                  "description": "todo_id 的 camelCase 兼容字段"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "todo/fact/decision 文本，必须简短"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "todo 文本的兼容字段"
+                },
+                "status": {
+                  "type": "string",
+                  "description": "add_todo 可选状态：pending | in_progress | done | blocked"
+                },
+                "note": {
+                  "type": "string",
+                  "description": "todo 状态变化的简短说明"
+                },
+                "reason": {
+                  "type": "string",
+                  "description": "decision 的简短原因"
+                },
+                "sourceCallId": {
+                  "type": "string",
+                  "description": "可选，当前 run 内作为依据的工具 call_id"
+                },
+                "source_call_id": {
+                  "type": "string",
+                  "description": "sourceCallId 的 snake_case 兼容字段"
+                },
+                "evidenceCallId": {
+                  "type": "string",
+                  "description": "sourceCallId 的兼容字段"
+                },
+                "kind": {
+                  "type": "string",
+                  "description": "artifact 类型，例如 document、file"
+                },
+                "document_id": {
+                  "type": "integer",
+                  "description": "相关 document_id"
+                },
+                "documentId": {
+                  "type": "integer",
+                  "description": "document_id 的 camelCase 兼容字段"
+                },
+                "file_id": {
+                  "type": "integer",
+                  "description": "相关 file_id"
+                },
+                "fileId": {
+                  "type": "integer",
+                  "description": "file_id 的 camelCase 兼容字段"
+                },
+                "path": {
+                  "type": "string",
+                  "description": "相关 JSON Pointer、文件路径或内容路径"
+                },
+                "entry_path": {
+                  "type": "string",
+                  "description": "path 的兼容字段"
+                },
+                "revision": {
+                  "type": "string",
+                  "description": "相关 artifact revision"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "updates"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": false,
+        "requires_project": false,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "agent_tool_result_open",
+      "description": "打开当前 Agent run 内某次历史工具调用保存的原始结果或局部结果。仅当上一轮工具结果提示 _compacted_for_model=true、can_open_with=agent_tool_result_open，且你确实需要被省略的细节时使用；优先用 mode=summary 查看字段，再用 mode=path 和 JSON Pointer 打开具体路径。不要用它替代更窄的业务读取/定位工具，也不要请求超大 detail。",
+      "strict": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "call_id": {
+            "type": "string",
+            "description": "要打开的工具调用 call_id，来自 compacted tool result 的 call_id/raw_result_ref"
+          },
+          "mode": {
+            "type": "string",
+            "description": "打开模式：summary（默认，概览字段和值预览）| path（按 JSON Pointer 打开局部）| detail（受 max_chars 限制的根结果预览）"
+          },
+          "path": {
+            "type": "string",
+            "description": "mode=path 时使用的 JSON Pointer，例如 /model/data/document/content/0"
+          },
+          "max_chars": {
+            "type": "integer",
+            "description": "本次最多返回字符数，服务端会应用硬上限"
+          }
+        },
+        "required": [
+          "call_id"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": false,
+        "requires_project": false,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "agent_artifact_view_open",
+      "description": "打开 backend 持久化的 artifact view projection/detail。用于复用 Persisted Artifact Projection 中 activeViews 给出的 view_key/read_key，而不是重新读取整份文档。优先 mode=summary；需要细节时 mode=detail；需要 JSON Pointer 局部时 mode=path。若返回 reopen_hint，按提示调用更窄的 read/search 工具。",
+      "strict": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "view_key": {
+            "type": "string",
+            "description": "Persisted Artifact Projection activeViews 中的 viewId/view_key/read_key"
+          },
+          "document_id": {
+            "type": "integer",
+            "description": "可选 document_id；无 view_key 时用于打开该文档最近的 view"
+          },
+          "view_type": {
+            "type": "string",
+            "description": "可选 view 类型，如 json_subtree"
+          },
+          "mode": {
+            "type": "string",
+            "description": "打开模式：summary | detail | path"
+          },
+          "path": {
+            "type": "string",
+            "description": "mode=path 时的 JSON Pointer"
+          },
+          "max_chars": {
+            "type": "integer",
+            "description": "最大返回字符数"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": true
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "document_read",
+      "description": "读取指定 Markdown 文档的内容。当需要查看文档全文或回答关于文档内容的问题时使用。参数 document_id 可从 file_list 工具返回的结果中获取。注意：如果正在编辑该文档（已调用 document_diff），此工具会返回最新的工作副本内容，确保行号正确。此工具仅适用于 MARKDOWN 类型文档。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "integer",
+            "description": "文档 ID（从 file_list 工具返回的 document_id 字段获取）"
+          },
+          "read_draft": {
+            "type": "boolean",
+            "description": "是否读取草稿版本（默认 true）"
+          }
+        },
+        "required": [
+          "document_id",
+          "read_draft"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "document_diff",
+      "description": "对 Markdown 文档应用差异修改。支持两种模式：(1) 行号模式：提供 start_line/end_line；(2) 无行号模式：start_line和end_line均传 0，系统会通过 before 内容在全文中进行唯一匹配定位。推荐工作流程：先调用 document_locate 获取精确的 before_lines，再使用 document_diff。重要：修改只是临时保存在内存中，完成后必须调用 document_save 持久化。此工具仅适用于 MARKDOWN 类型文档。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "integer",
+            "description": "文档 ID"
+          },
+          "hunks": {
+            "type": "array",
+            "description": "差异块数组。每个 hunk 包含 op、start_line、end_line、before、after、reason",
+            "items": {
+              "type": "object",
+              "properties": {
+                "hunk_id": {
+                  "type": "string",
+                  "description": "Hunk 标识符"
+                },
+                "op": {
+                  "type": "string",
+                  "description": "操作类型：INSERT | DELETE | REPLACE"
+                },
+                "start_line": {
+                  "type": "integer",
+                  "description": "起始行号（1-based）。传 0 表示无行号模式（由 before 内容自动定位）"
+                },
+                "end_line": {
+                  "type": "integer",
+                  "description": "结束行号（1-based）。传 0 表示无行号模式（由 before 内容自动定位）"
+                },
+                "before": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "原始内容行数组（DELETE/REPLACE 必填）"
+                },
+                "after": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "新内容行数组（INSERT/REPLACE 必填）"
+                },
+                "reason": {
+                  "type": "string",
+                  "description": "修改理由"
+                }
+              },
+              "required": [
+                "hunk_id",
+                "op",
+                "start_line",
+                "end_line",
+                "before",
+                "after",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "document_id",
+          "hunks"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": true
+      },
+      "safety": {
+        "writes_data": true,
+        "idempotent": false
+      }
+    },
+    {
+      "name": "document_save",
+      "description": "保存 Markdown 文档的当前修改到数据库。在完成 document_diff 修改后，必须调用此工具才能将修改持久化，否则修改只存在于临时内存中。保存后，前端可以看到最新的文档内容。此工具仅适用于 MARKDOWN 类型文档。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "integer",
+            "description": "文档 ID"
+          },
+          "message": {
+            "type": "string",
+            "description": "保存说明（可选）"
+          }
+        },
+        "required": [
+          "document_id",
+          "message"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": true
+      },
+      "safety": {
+        "writes_data": true,
+        "idempotent": false
+      }
+    },
+    {
+      "name": "document_locate",
+      "description": "在文档中定位指定内容。返回匹配位置的精确行号以及两类文本片段：(1) before_lines：尽量短且唯一、可直接用于 document_diff 的权威原文片段；(2) context_lines：仅用于阅读确认的上下文（不建议直接用它做替换）。编辑文档前，强烈建议先使用此工具定位目标内容，然后将返回的 start_line、end_line 和 before_lines 直接用于 document_diff，可显著提高编辑成功率。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "integer",
+            "description": "文档 ID（从 file_list 工具返回的 document_id 字段获取）"
+          },
+          "query": {
+            "type": "string",
+            "description": "要定位的文本内容（关键词或短片段，大小写不敏感）"
+          },
+          "max_results": {
+            "type": "integer",
+            "description": "最大返回匹配数（默认 3，最大 10）"
+          },
+          "context_lines": {
+            "type": "integer",
+            "description": "每个匹配返回的上下文行数（默认 3，用于阅读确认；before_lines 会尽量缩短为唯一片段）"
+          }
+        },
+        "required": [
+          "document_id",
+          "query",
+          "max_results",
+          "context_lines"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": true
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "document_update_summary",
+      "description": "更新文档的摘要信息。当发现文档无摘要或摘要已过时时，读取文档内容后调用此工具更新。摘要应简洁概括文档核心内容（建议 100-200 字符）。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "document_id": {
+            "type": "integer",
+            "description": "文档 ID（从 file_list 工具返回的 document_id 字段获取）"
+          },
+          "summary": {
+            "type": "string",
+            "description": "文档摘要（建议 100-200 字符，最大 500 字符）"
+          }
+        },
+        "required": [
+          "document_id",
+          "summary"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": true
+      },
+      "safety": {
+        "writes_data": true,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "document_create",
+      "description": "在当前项目中创建一个新的 Markdown 文档。当用户要求创建笔记、写文章、生成报告等需要新建文档的场景时使用。创建后会返回 document_id，可以继续使用 document_diff + document_save 对文档进行编辑，或使用 document_read 读取内容。注意：title 是必填的，content 可选（可以先创建空文档再编辑）。",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "文档标题（必填，最大 200 字符）"
+          },
+          "content": {
+            "type": "string",
+            "description": "初始 Markdown 内容（可选，可以为空字符串）"
+          }
+        },
+        "required": [
+          "title",
+          "content"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": true,
+        "idempotent": false
+      }
+    },
+    {
+      "name": "manage_user_rules",
+      "description": "Manage user persistent rules. Rules take effect as strong constraints in all subsequent conversations. Only use this tool when the user explicitly requests it (e.g. 'always reply in Chinese', 'add a rule for me', 'delete that rule'). Do not infer user preferences to add rules on your own.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "add",
+              "update",
+              "remove",
+              "list"
+            ],
+            "description": "Action type: add=add new rule, update=update existing rule, remove=delete rule, list=list all rules"
+          },
+          "rule_id": {
+            "type": "integer",
+            "description": "Rule ID (required for update/remove, get from list result)"
+          },
+          "content": {
+            "type": "string",
+            "description": "Rule content (required for add/update, e.g. 'reply in Chinese')"
+          }
+        },
+        "required": [
+          "action",
+          "rule_id",
+          "content"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": false,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": true,
+        "idempotent": false
+      }
+    },
+    {
+      "name": "manage_user_memory",
+      "description": "Manage user persistent memories. Memories are factual information about the user (e.g. research direction, tech stack, preferences) that will be provided as background knowledge in subsequent conversations. You can proactively extract valuable information and save it as memory. Before creating, list first to check if a similar memory already exists; if so, update instead of creating a duplicate.",
+      "strict": true,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "create",
+              "update",
+              "delete",
+              "list"
+            ],
+            "description": "Action type: create=create new memory, update=update existing memory, delete=delete memory, list=list all memories"
+          },
+          "memory_id": {
+            "type": "integer",
+            "description": "Memory ID (required for update/delete, get from list result)"
+          },
+          "title": {
+            "type": "string",
+            "description": "Memory title (required for create/update, short description like 'tech stack')"
+          },
+          "content": {
+            "type": "string",
+            "description": "Memory content (required for create/update)"
+          }
+        },
+        "required": [
+          "action",
+          "memory_id",
+          "title",
+          "content"
+        ],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": false,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": true,
+        "idempotent": false
+      }
+    },
+    {
+      "name": "json_structure_read",
+      "description": "读取 JSON 资源的结构骨架。适用于普通未知 JSON 文件，或需要在不读取整份 JSON 的前提下快速理解 key 分布、层级和节点类型的场景。优先工作流是：先 file_list，确认目标文件后调用本工具看 skeleton 和 children，再决定是否继续用 json_subtree_read 深入。对于普通上传的 JSON 文件，应优先使用本工具而不是直接把整份内容塞进上下文。",
+      "strict": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "integer",
+            "description": "普通 JSON 文件的 file_id。与 document_id 二选一。"
+          },
+          "document_id": {
+            "type": "integer",
+            "description": "canonical JSON 文档的 document_id。与 file_id 二选一。"
+          },
+          "path": {
+            "type": "string",
+            "description": "JSON Pointer 路径；传 / 表示根节点；不传默认为 /"
+          },
+          "max_depth": {
+            "type": "integer",
+            "description": "最大骨架展开深度；默认 4"
+          },
+          "sample_array_items": {
+            "type": "integer",
+            "description": "数组结构采样项数；默认 3"
+          },
+          "max_keys_per_object": {
+            "type": "integer",
+            "description": "单个 object 最多展开多少个 key；默认 80"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "json_subtree_read",
+      "description": "读取 JSON 资源指定路径下的局部子树。适用于在看过 json_structure_read 的 skeleton/children 之后，按 JSON Pointer 逐层深入读取深层节点，而不是读取整份大 JSON。对普通 JSON 文件与 canonical JSON 文档都适用；当目标节点很大时，后端会按 max_bytes 和 max_nodes 自动裁剪返回值。",
+      "strict": false,
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "integer",
+            "description": "普通 JSON 文件的 file_id。与 document_id 二选一。"
+          },
+          "document_id": {
+            "type": "integer",
+            "description": "canonical JSON 文档的 document_id。与 file_id 二选一。"
+          },
+          "path": {
+            "type": "string",
+            "description": "JSON Pointer 路径，例如 /cards/0/content；不传默认为 /"
+          },
+          "max_bytes": {
+            "type": "integer",
+            "description": "返回 JSON 的目标字节上限；默认 12000"
+          },
+          "max_nodes": {
+            "type": "integer",
+            "description": "返回 JSON 的节点数上限；默认 400"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "scope": {
+        "requires_user": true,
+        "requires_project": true,
+        "requires_session": false
+      },
+      "safety": {
+        "writes_data": false,
+        "idempotent": true
+      }
+    }
+  ]
+}

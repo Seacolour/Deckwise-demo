@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+package paperpuppy.backendintl.agent;
+
+option java_multiple_files = true;
+option java_package = "com.xiaoyuan.paperpuppyagent.grpc.agent";
+option java_outer_classname = "AgentServiceProto";
+
+// Agent 调度平台 gRPC（流式事件）
+// 说明：
+// - 这是对外“主入口”协议，未来所有对话/工具调用都走这里
+// - Backend 的 ASK / AGENT 语义均通过本协议进入 Agent，由 Agent mode / enable_tools 决定是否启用工具
+service AgentService {
+  rpc Chat (AgentChatRequest) returns (stream AgentChatResponse);
+}
+
+message AgentChatRequest {
+  reserved 20, 36;
+  reserved "force_plan_b", "enable_advanced_tools";
+
+  // 说明：ID 在系统内为数值型（DB/权限/工具上下文均依赖），这里保持 int64 以避免隐式 parse/不一致风险
+  int64 user_id = 1;
+  int64 session_id = 2;
+
+  // Canonical Conversation Schema v1 root JSON（仅历史）
+  string full_context_json = 3;
+
+  // 本轮用户文本（可选：仅图片时可空）
+  string message = 4;
+
+  // 本轮图片 URL
+  repeated string image_urls = 5;
+  // 本轮公开文件 URL（多模态 input_file）
+  repeated string file_urls = 9;
+
+  // 预留：能力开关/策略位（由 Agent 决定是否允许工具/并行/高级能力）
+  bool enable_tools = 6;
+  bool enable_image = 7;
+  bool is_vip = 8;
+
+  // 当前项目 ID（用于工具执行上下文，由 Backend 强制注入）
+  int64 project_id = 10;
+
+  string locale = 30;
+  // 用户自定义规则（拼接到 AI 提示词末尾）
+  string custom_rules = 31;
+  // 用户记忆（注入 AI 上下文作为背景知识）
+  string user_memories = 32;
+  // 用户已关闭的技能名称列表（Agent 侧据此过滤 skill.json 中的 functions）
+  repeated string disabled_skill_names = 33;
+  // 用户自定义 PromptSkill 拼接后的提示词（Agent 侧注入为独立系统消息）
+  string user_skill_prompt = 34;
+  // 是否为本次请求启用 OpenAI priority processing（service_tier=priority）
+  bool enable_priority_processing = 35;
+  // Backend 解析后的模型。为空时 Agent 使用本地默认模型兜底。
+  string model = 37;
+  // Backend 解析后的 provider ID；非空表示使用本次请求的 BYOK 凭据，不回退服务密钥。
+  string provider_id = 38;
+  // 仅供本次模型调用使用的明文凭据。不得写入日志、对话上下文或持久化记录。
+  string provider_api_key = 39;
+}
+
+message TextChunk {
+  string text = 1;
+}
+
+message MetaData {
+  string keyword = 1;
+  map<string, string> info = 2;
+  repeated Link links = 3;
+}
+
+message Link {
+  string title = 1;
+  string url = 2;
+  string description = 3;
+  string resources = 4;
+  string publication_info = 5;
+}
+
+// 预留：工具调用事件（Agent<->AI 的核心契约）
+message ToolCall {
+  string call_id = 1;
+  string name = 2;
+  string arguments_json = 3;
+}
+
+// 工具执行结果事件（与 ToolCall 通过 call_id 关联）
+message ToolResult {
+  string call_id = 1;
+  string name = 2;
+  // 工具执行结果（JSON 字符串；可包含 error/code/message 等）
+  string result_json = 3;
+}
+
+// Code Interpreter 产物文件引用
+message CiFileRef {
+  string container_id = 1;
+  string file_id     = 2;
+  string file_name   = 3;
+}
+
+message FinalResponse {
+  map<string, string> response_meta = 1;
+  repeated CiFileRef ci_files = 2;
+}
+
+message Done {
+  string reason = 1; // e.g. "completed" | "cancelled" | "failed"
+}
+
+message Error {
+  string message = 1;
+  string code = 2;
+}
+
+message AgentChatResponse {
+  oneof payload {
+    TextChunk text = 1;
+    MetaData metadata = 2;
+    ToolCall tool_call = 3;
+    ToolResult tool_result = 4;
+    FinalResponse final_response = 97;
+    Done done = 98;
+    Error error = 99;
+  }
+}
+

@@ -1,0 +1,139 @@
+spring:
+  application:
+    name: PaperPuppy-Agent
+  main:
+    web-application-type: none
+
+# Agent gRPC Server（本地 BYOK 模式只监听 127.0.0.1；跨机部署前须启用 TLS/mTLS）
+grpc:
+  enabled: true
+  port: ${GRPC_PORT:41051}
+  logging:
+    # 生产环境建议关闭：避免将 Authorization/cookie/内部 token 等写入日志
+    log-headers: false
+  shutdown:
+    grace-ms: ${GRPC_SHUTDOWN_GRACE_MS:10000}
+    now-wait-ms: ${GRPC_SHUTDOWN_NOW_WAIT_MS:2000}
+
+# Backend Tool gRPC 客户端（调用 Backend 的 AgentToolService）
+backend-tool:
+  host: ${BACKEND_TOOL_HOST:127.0.0.1}
+  port: ${BACKEND_TOOL_GRPC_PORT:40052}
+  deadline-ms: ${BACKEND_TOOL_DEADLINE_MS:30000}
+  auth:
+    enabled: ${AGENT_TOOL_GRPC_AUTH_ENABLED:false}
+    service-token: ${AGENT_TOOL_GRPC_SERVICE_TOKEN:}
+
+# 路由策略：默认走 agent；ask_only 可强制关闭 tools，用作纯 ASK / 普通聊天分支。
+agent:
+  mode: ${AGENT_MODE:agent_rag} # agent_rag | agent_only | agent_prefer | ask_only
+  loop:
+    max-iterations: ${AGENT_LOOP_MAX_ITERATIONS:20}
+    model-call:
+      # 小于等于 0 时不设置 max_output_tokens，用于临时回退旧行为
+      default-max-output-tokens: ${AGENT_LOOP_MODEL_CALL_DEFAULT_MAX_OUTPUT_TOKENS:4096}
+      no-tools-max-output-tokens: ${AGENT_LOOP_MODEL_CALL_NO_TOOLS_MAX_OUTPUT_TOKENS:4096}
+      # 允许模型在一轮中发出多个独立 read-only tool_call，减少多页读取时的 loop 次数
+      parallel-tool-calls-enabled: ${AGENT_LOOP_MODEL_CALL_PARALLEL_TOOL_CALLS_ENABLED:true}
+      # 若同一轮出现多个写工具，只执行第一个写工具，避免多个 patch 共用旧 revision
+      guard-parallel-writes: ${AGENT_LOOP_MODEL_CALL_GUARD_PARALLEL_WRITES:true}
+      max-retries: ${AGENT_LOOP_MODEL_CALL_MAX_RETRIES:2}
+      initial-backoff-ms: ${AGENT_LOOP_MODEL_CALL_INITIAL_BACKOFF_MS:250}
+      max-backoff-ms: ${AGENT_LOOP_MODEL_CALL_MAX_BACKOFF_MS:2000}
+      jitter-ms: ${AGENT_LOOP_MODEL_CALL_JITTER_MS:100}
+      # Agent loop OpenAI 出口容量池：按 model 独立维护 TPM/RPM/并发窗口，容量不足时排队而不是直接打到 OpenAI。
+      capacity-limiter-enabled: ${AGENT_LOOP_MODEL_CAPACITY_LIMITER_ENABLED:true}
+      capacity-window-ms: ${AGENT_LOOP_MODEL_CAPACITY_WINDOW_MS:60000}
+      capacity-safe-tpm-limit: ${AGENT_LOOP_MODEL_CAPACITY_SAFE_TPM_LIMIT:160000}
+      capacity-rpm-limit: ${AGENT_LOOP_MODEL_CAPACITY_RPM_LIMIT:300}
+      capacity-max-concurrent: ${AGENT_LOOP_MODEL_CAPACITY_MAX_CONCURRENT:6}
+      capacity-max-queue-ms: ${AGENT_LOOP_MODEL_CAPACITY_MAX_QUEUE_MS:45000}
+      capacity-wait-tick-ms: ${AGENT_LOOP_MODEL_CAPACITY_WAIT_TICK_MS:250}
+      capacity-chars-per-token: ${AGENT_LOOP_MODEL_CAPACITY_CHARS_PER_TOKEN:4.0}
+      capacity-min-reserved-tokens: ${AGENT_LOOP_MODEL_CAPACITY_MIN_RESERVED_TOKENS:1000}
+      capacity-max-reserved-tokens: ${AGENT_LOOP_MODEL_CAPACITY_MAX_RESERVED_TOKENS:0}
+    openai-context-management:
+      # OpenAI Responses 官方 context_management compaction，默认关闭，按环境灰度开启。
+      enabled: ${AGENT_OPENAI_CONTEXT_MANAGEMENT_ENABLED:false}
+      store: ${AGENT_OPENAI_CONTEXT_MANAGEMENT_STORE:false}
+      compact-threshold: ${AGENT_OPENAI_CONTEXT_MANAGEMENT_COMPACT_THRESHOLD:258000}
+      persist-compacted-window: ${AGENT_OPENAI_CONTEXT_MANAGEMENT_PERSIST_WINDOW:true}
+    tool-result:
+      # 只影响回灌给模型的 function_call_output；SSE/前端展示仍使用原始结果的 20k 截断版
+      compact-for-model: ${AGENT_LOOP_COMPACT_TOOL_RESULT_FOR_MODEL:true}
+      model-visible-max-chars: ${AGENT_LOOP_TOOL_RESULT_MODEL_VISIBLE_MAX_CHARS:8000}
+      text-preview-chars: ${AGENT_LOOP_TOOL_RESULT_TEXT_PREVIEW_CHARS:3000}
+      array-preview-items: ${AGENT_LOOP_TOOL_RESULT_ARRAY_PREVIEW_ITEMS:8}
+    work-memory:
+      # 阶段二 MVP：单次 run 内保存工具结果引用，允许模型用 agent_tool_result_open 按需打开局部结果
+      enabled: ${AGENT_LOOP_WORK_MEMORY_ENABLED:true}
+      max-results-per-run: ${AGENT_LOOP_WORK_MEMORY_MAX_RESULTS_PER_RUN:80}
+      max-stored-result-chars: ${AGENT_LOOP_WORK_MEMORY_MAX_STORED_RESULT_CHARS:1000000}
+      default-open-max-chars: ${AGENT_LOOP_WORK_MEMORY_DEFAULT_OPEN_MAX_CHARS:4000}
+      max-open-chars: ${AGENT_LOOP_WORK_MEMORY_MAX_OPEN_CHARS:8000}
+      summary-array-preview-items: ${AGENT_LOOP_WORK_MEMORY_SUMMARY_ARRAY_PREVIEW_ITEMS:6}
+      max-ledger-view-chars: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_VIEW_CHARS:6000}
+      retain-assistant-messages-in-loop-history: ${AGENT_LOOP_WORK_MEMORY_RETAIN_ASSISTANT_MESSAGES_IN_LOOP_HISTORY:false}
+      loop-history-compaction-enabled: ${AGENT_LOOP_WORK_MEMORY_LOOP_HISTORY_COMPACTION_ENABLED:true}
+      retained-tool-turns-in-loop-history: ${AGENT_LOOP_WORK_MEMORY_RETAINED_TOOL_TURNS_IN_LOOP_HISTORY:4}
+      max-ledger-todos: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_TODOS:12}
+      max-ledger-facts: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_FACTS:12}
+      max-ledger-decisions: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_DECISIONS:8}
+      max-ledger-artifacts: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_ARTIFACTS:12}
+      max-ledger-recent-tool-calls: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_RECENT_TOOL_CALLS:8}
+      max-ledger-reuse-hints: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_REUSE_HINTS:6}
+      max-ledger-update-items: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_UPDATE_ITEMS:12}
+      max-ledger-text-chars: ${AGENT_LOOP_WORK_MEMORY_MAX_LEDGER_TEXT_CHARS:500}
+      soft-max-model-calls-per-run: ${AGENT_LOOP_WORK_MEMORY_SOFT_MAX_MODEL_CALLS_PER_RUN:20}
+      soft-max-tool-calls-per-run: ${AGENT_LOOP_WORK_MEMORY_SOFT_MAX_TOOL_CALLS_PER_RUN:80}
+      soft-max-tool-result-open-calls-per-run: ${AGENT_LOOP_WORK_MEMORY_SOFT_MAX_TOOL_RESULT_OPEN_CALLS_PER_RUN:12}
+      budget-warning-percent: ${AGENT_LOOP_WORK_MEMORY_BUDGET_WARNING_PERCENT:95}
+      # 阶段三 A：best-effort 上报 Agent run/model/tool/ledger 事实到 backend 持久化表
+      persistence-enabled: ${AGENT_LOOP_WORK_MEMORY_PERSISTENCE_ENABLED:true}
+      max-persisted-tool-result-chars: ${AGENT_LOOP_WORK_MEMORY_MAX_PERSISTED_TOOL_RESULT_CHARS:200000}
+      # 运行中 ledger snapshot 按工具调用数节流；run 结束时仍强制 flush 最终快照
+      ledger-snapshot-flush-tool-call-interval: ${AGENT_LOOP_WORK_MEMORY_LEDGER_SNAPSHOT_FLUSH_TOOL_CALL_INTERVAL:4}
+    # 连续工具失败达到阈值后，给用户提示并结束（避免无意义循环直到 max-iterations）
+    max-consecutive-tool-errors: ${AGENT_LOOP_MAX_CONSEC_TOOL_ERRORS:2}
+    # 是否允许用户自定义 PromptSkill 注入到系统消息；默认关闭，避免第三方 skill 能力预期失配
+    allow-user-skill-prompt: ${AGENT_LOOP_ALLOW_USER_SKILL_PROMPT:false}
+    # 模型系统指令（system prompt）：按 locale 动态加载对应文件
+    # - 文件命名规则：{instructions-dir}/{instructions-prefix}{locale}{instructions-suffix}
+    # - 回退策略：完整 locale -> 语言代码 -> 默认语言 (en)
+    instructions-dir: ${AGENT_LOOP_INSTRUCTIONS_DIR:classpath:prompts/}
+    instructions-prefix: ${AGENT_LOOP_INSTRUCTIONS_PREFIX:agent_loop_instructions_}
+    instructions-suffix: ${AGENT_LOOP_INSTRUCTIONS_SUFFIX:.md}
+    # 可选兜底：用于快速覆盖/调试（建议保持为空，避免污染 yml 可读性）
+    instructions: ${AGENT_LOOP_INSTRUCTIONS:}
+  # 动态超时配置：基于工具调用心跳延长超时预算
+  deadline:
+    base-thinking-budget-ms: ${AGENT_DEADLINE_BASE_MS:40000}
+    per-tool-budget-ms: ${AGENT_DEADLINE_PER_TOOL_MS:15000}
+    max-total-cap-ms: ${AGENT_DEADLINE_MAX_MS:240000}
+
+skills:
+  # Skill manifests 的加载位置（支持 classpath*:/file: 通配符）
+  # 默认仅加载内部工具 skill；第三方/实验性 skill 需要显式覆盖配置后才会启用
+  manifests: ${SKILLS_MANIFESTS:classpath*:skills/paperpuppy-internal/skill.json}
+  # Skill binding manifests：将模型可见 function 绑定到 native runtime
+  # 默认仅加载内部工具 bindings；第三方/实验性 skill 需要显式覆盖配置后才会启用
+  bindings: ${SKILLS_BINDINGS:classpath*:skills/paperpuppy-internal/skill.binding.json}
+  # 全局禁用工具列表（逗号分隔，优先级高于用户设置，所有用户均不可见/调用）
+  globally-disabled: ${SKILLS_GLOBALLY_DISABLED:}
+  # OpenAI 内置 web search 工具（服务端执行，不占用本地工具额度）
+  web-search:
+    enabled: ${SKILLS_WEB_SEARCH_ENABLED:true}
+    # 搜索上下文大小：low / medium / high（影响注入模型的搜索结果量和 token 消耗）
+    search-context-size: ${SKILLS_WEB_SEARCH_CONTEXT_SIZE:medium}
+
+openai:
+  api-key: ${OPENAI_API_KEY:}
+  base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+  # 默认模型（可被 openai.auto-title.model 覆盖）
+  model: ${OPENAI_MODEL:gpt-5.4}
+  org-id: ${OPENAI_ORG_ID:}
+  project-id: ${OPENAI_PROJECT_ID:}
+
+deepseek:
+  # 仅供没有显式 BYOK provider_id 的本地旧请求使用。
+  api-key: ${DEEPSEEK_API_KEY:}

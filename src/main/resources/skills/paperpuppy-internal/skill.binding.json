@@ -1,0 +1,78 @@
+{
+  "id": "paperpuppy.internal",
+  "version": "1.0.0",
+  "bindings": [
+    {
+      "function_name": "file_list",
+      "runtime": "native"
+    },
+    {
+      "function_name": "file_content_read",
+      "runtime": "native"
+    },
+    {
+      "function_name": "image_read",
+      "runtime": "native"
+    },
+    {
+      "function_name": "file_read_url",
+      "runtime": "native"
+    },
+    {
+      "function_name": "todo_list",
+      "runtime": "native"
+    },
+    {
+      "function_name": "agent_ledger_update",
+      "runtime": "native"
+    },
+    {
+      "function_name": "agent_tool_result_open",
+      "runtime": "native"
+    },
+    {
+      "function_name": "agent_artifact_view_open",
+      "runtime": "native"
+    },
+    {
+      "function_name": "document_read",
+      "runtime": "native"
+    },
+    {
+      "function_name": "document_diff",
+      "runtime": "native"
+    },
+    {
+      "function_name": "document_save",
+      "runtime": "native"
+    },
+    {
+      "function_name": "document_locate",
+      "runtime": "native"
+    },
+    {
+      "function_name": "document_update_summary",
+      "runtime": "native"
+    },
+    {
+      "function_name": "document_create",
+      "runtime": "native"
+    },
+    {
+      "function_name": "json_structure_read",
+      "runtime": "native"
+    },
+    {
+      "function_name": "json_subtree_read",
+      "runtime": "native"
+    },
+    {
+      "function_name": "manage_user_rules",
+      "runtime": "native"
+    },
+    {
+      "function_name": "manage_user_memory",
+      "runtime": "native"
+    }
+  ]
+}

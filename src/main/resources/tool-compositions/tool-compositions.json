@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    {
+      "source": "json_structure_read",
+      "then": "json_subtree_read",
+      "when": "declared_child_path",
+      "max_depth": 1,
+      "safety": {
+        "allow_write_tools": false
+      },
+      "arg_mapping": {
+        "file_id": "$args.file_id",
+        "document_id": "$args.document_id",
+        "path": "$slots.path",
+        "max_bytes": "$compose.next_args.max_bytes",
+        "max_nodes": "$compose.next_args.max_nodes"
+      }
+    }
+  ]
+}
