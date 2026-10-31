@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+package paperpuppy.backendintl.agent.tool;
+
+option java_multiple_files = true;
+option java_package = "com.xiaoyuan.paperpuppybackendintl.grpc.agent.tool";
+option java_outer_classname = "AgentToolDocumentProto";
+
+// 通用文档、canonical JSON、revision 与 rollback 协议。
+
+message UpdateDocumentDraftRequest {
+  int64 user_id = 1;
+  int64 project_id = 2;
+  int64 document_id = 3;
+  string content = 4;           // 新的文档内容
+  string save_message = 5;      // 保存说明（可选）
+  int32 expected_version = 6;   // 文档当前版本（用于乐观锁）
+}
+message UpdateDocumentDraftResponse {
+  bool success = 1;
+  int64 document_id = 2;
+  int32 new_version = 3;        // 更新后的版本号
+  string updated_at = 4;
+}
+
+// ======== UpdateDocumentSummary（更新文档摘要）========
+
+message UpdateDocumentSummaryRequest {
+  int64 user_id = 1;
+  int64 project_id = 2;
+  int64 document_id = 3;
+  string summary = 4;           // Agent 生成的摘要（建议 100-200 字符）
+}
+
+message UpdateDocumentSummaryResponse {
+  bool success = 1;
+  int64 document_id = 2;
+  string updated_at = 3;
+}
+
+// ======== CreateDocument（创建 Markdown 文档）========
+
+message CreateDocumentRequest {
+  int64 user_id = 1;
+  int64 project_id = 2;
+  string title = 3;               // 文档标题
+  string content = 4;             // 初始 Markdown 内容（可选）
+}
+
+message CreateDocumentResponse {
+  bool success = 1;
+  int64 document_id = 2;
+  string title = 3;
+  int32 version = 4;
+  string created_at = 5;
+}
+
+
+message JsonStructureReadRequest {
+  int64 user_id = 1;
+  int64 project_id = 2;
+  int64 file_id = 3;
+  int64 document_id = 4;
+  string path = 5;             // JSON Pointer；"/" 表示根节点
+  int32 max_depth = 6;
+  int32 sample_array_items = 7;
+  int32 max_keys_per_object = 8;
+}
+
+message JsonStructureReadResponse {
+  bool success = 1;
+  string resource_kind = 2;    // file | document
+  int64 file_id = 3;
+  int64 document_id = 4;
+  string revision = 5;
+  string result_json = 6;      // 结构骨架、统计、children 等 JSON
+  string error = 7;
+}
+
+message JsonSubtreeReadRequest {
+  int64 user_id = 1;
+  int64 project_id = 2;
+  int64 file_id = 3;
+  int64 document_id = 4;
+  string path = 5;             // JSON Pointer；"/" 表示根节点
+  int32 max_bytes = 6;
+  int32 max_nodes = 7;
+}
+
+message JsonSubtreeReadResponse {
+  bool success = 1;
+  string resource_kind = 2;    // file | document
+  int64 file_id = 3;
+  int64 document_id = 4;
+  string revision = 5;
+  string result_json = 6;      // 子树、truncated、approxBytes 等 JSON
+  string error = 7;
+}

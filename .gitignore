@@ -1,0 +1,55 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.env
+/.env
+src/main/resources/keys/**/*.p8
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+/.env-prod
+*.code-workspace
+/.qodana/
+/.codex-session-handoffs/
+
+### Cloudflare Wrangler ###
+.wrangler/
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+/tmp/
+/scripts/slide-review-contact-sheet/
+
+### Python ###
+__pycache__/
+*.py[cod]
+# Linked local worktrees for the sibling branches.
+/agent/
+/web/

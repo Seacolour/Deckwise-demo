@@ -1,0 +1,88 @@
+{
+  "defaultModel": "deepseek/deepseek-flash",
+  "serviceTiers": {
+    "priority": {
+      "tokenCostMultiplier": 2.0
+    }
+  },
+  "models": [
+    {
+      "id": "deepseek/deepseek-flash",
+      "providerId": "deepseek",
+      "upstreamModelId": "deepseek-flash",
+      "apiFormat": "openai-responses",
+      "displayName": "DeepSeek Flash",
+      "description": "Fast document chat",
+      "askSupported": true,
+      "agentSupported": true,
+      "enabled": true
+    },
+    {
+      "id": "deepseek/deepseek-v4-pro",
+      "providerId": "deepseek",
+      "upstreamModelId": "deepseek-v4-pro",
+      "apiFormat": "openai-responses",
+      "displayName": "DeepSeek V4 Pro",
+      "description": "More capable document chat",
+      "askSupported": true,
+      "agentSupported": true,
+      "enabled": true
+    },
+    {
+      "id": "openai/gpt-5.6-terra",
+      "providerId": "openai",
+      "upstreamModelId": "gpt-5.6-terra",
+      "apiFormat": "openai-responses",
+      "displayName": "OpenAI Fast",
+      "description": "Thinks harder",
+      "askSupported": true,
+      "agentSupported": true,
+      "enabled": true,
+      "tokenPricing": {
+        "currency": "USD",
+        "inputPerMillion": 2.5,
+        "cachedInputPerMillion": 0.25,
+        "outputPerMillion": 15.0
+      }
+    },
+    {
+      "id": "openai/gpt-5.6-sol",
+      "providerId": "openai",
+      "upstreamModelId": "gpt-5.6-sol",
+      "apiFormat": "openai-responses",
+      "displayName": "OpenAI Smart",
+      "description": "Best for complex work",
+      "askSupported": true,
+      "agentSupported": true,
+      "enabled": true,
+      "tokenPricing": {
+        "currency": "USD",
+        "inputPerMillion": 5.0,
+        "cachedInputPerMillion": 0.5,
+        "outputPerMillion": 30.0
+      }
+    },
+    {
+      "id": "openrouter/openai/gpt-6.1-terra",
+      "providerId": "openrouter",
+      "upstreamModelId": "openai/gpt-6.1-terra",
+      "apiFormat": "openai-responses",
+      "displayName": "GPT-6.1 Terra · OpenRouter",
+      "description": "Capable OpenAI model for document Agent tasks through OpenRouter",
+      "askSupported": true,
+      "agentSupported": true,
+      "enabled": true
+    },
+    {
+      "id": "openrouter/openai/gpt-6-luna",
+      "providerId": "openrouter",
+      "upstreamModelId": "openai/gpt-6-luna",
+      "apiFormat": "openai-responses",
+      "displayName": "GPT-6 Luna · OpenRouter",
+      "description": "Fast OpenAI model for lighter Agent tasks through OpenRouter",
+      "askSupported": true,
+      "agentSupported": true,
+      "enabled": true
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+spring:
+  application:
+    name: PaperPuppy-backend-Intl
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/backend_db?currentSchema=backend_data
+    username: postgres
+    password: ${DB_PASSWORD:}
+    driver-class-name: org.postgresql.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+  servlet:
+    # 文件上传
+    multipart:
+      # 大小限制
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+server:
+  address: 0.0.0.0
+  port: 8104
+  servlet:
+    context-path: /api
+
+storage:
+  r2:
+    endpoint: https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+    region: auto
+    bucket: ${R2_PUBLIC_BUCKET:dev}
+    access-key: ${R2_ACCESS_KEY}
+    secret-key: ${R2_SECRET_KEY}
+    path-prefix: ${R2_PUBLIC_PATH_PREFIX:workbench/public}
+    public-domain: ${R2_PUBLIC_DOMAIN:}
+    public:
+      endpoint: https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+      region: ${R2_PUBLIC_REGION:auto}
+      bucket: ${R2_PUBLIC_BUCKET:dev}
+      access-key: ${R2_ACCESS_KEY}
+      secret-key: ${R2_SECRET_KEY}
+      path-prefix: ${R2_PUBLIC_PATH_PREFIX:workbench/public}
+      public-domain: ${R2_PUBLIC_DOMAIN:}
+    private:
+      endpoint: https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com
+      region: ${R2_PRIVATE_REGION:auto}
+      bucket: ${R2_PRIVATE_BUCKET:dev}
+      access-key: ${R2_ACCESS_KEY}
+      secret-key: ${R2_SECRET_KEY}
+      path-prefix: ${R2_PRIVATE_PATH_PREFIX:workbench/private}
+    pending-project-file:
+      # 首页 pending 文件：未被项目消费前只保留在 R2 + Redis
+      metadata-ttl-seconds: ${R2_PENDING_PROJECT_FILE_TTL_SECONDS:86400}
+      cleanup-grace-seconds: ${R2_PENDING_PROJECT_FILE_CLEANUP_GRACE_SECONDS:604800}
+      cleanup-delay-ms: ${R2_PENDING_PROJECT_FILE_CLEANUP_DELAY_MS:600000}
+      cleanup-batch-size: ${R2_PENDING_PROJECT_FILE_CLEANUP_BATCH_SIZE:100}
+  object-delivery:
+    worker:
+      enabled: ${OBJECT_DELIVERY_WORKER_ENABLED:false}
+      file-domain: ${OBJECT_DELIVERY_FILE_DOMAIN:}
+      image-domain: ${OBJECT_DELIVERY_IMAGE_DOMAIN:}
+      resource-token-key-id: ${OBJECT_RESOURCE_TOKEN_KEY_ID:v1}
+      resource-token-secret: ${OBJECT_RESOURCE_TOKEN_SECRET:}
+      access-token-default-ttl-seconds: ${OBJECT_RESOURCE_TOKEN_DEFAULT_TTL_SECONDS:600}
+      access-token-min-ttl-seconds: ${OBJECT_RESOURCE_TOKEN_MIN_TTL_SECONDS:60}
+      access-token-max-ttl-seconds: ${OBJECT_RESOURCE_TOKEN_MAX_TTL_SECONDS:1800}
+      default-file-ttl-seconds: ${OBJECT_DELIVERY_FILE_TTL_SECONDS:1800}
+      default-image-ttl-seconds: ${OBJECT_DELIVERY_IMAGE_TTL_SECONDS:3600}
+grpc:
+  logging:
+    # 生产环境建议关闭：避免将 Authorization/cookie/内部 token 等写入日志
+    log-headers: ${LOGGING_LOG_HEADERS:false}
+  agent:
+    server:
+      port: 41051
+      host: localhost
+      plaintext: true
+      deadline-ms: 270000  # 硬上限，须 >= Agent 端 max-total-cap (240s) + 余量
+  agent-tool:
+    server:
+      port: 40052
+      enabled: true
+      auth:
+        enabled: ${AGENT_TOOL_GRPC_AUTH_ENABLED:false}
+        service-token: ${AGENT_TOOL_GRPC_SERVICE_TOKEN:}
+        previous-service-token: ${AGENT_TOOL_GRPC_PREVIOUS_SERVICE_TOKEN:}
+
+
+
+
+# OpenAI（会话标题、Markdown 摘要与可选的文件媒体提取）
+# - 建议通过环境变量 OPENAI_API_KEY 或配置 openai.api-key 注入，不要提交到仓库
+openai:
+  api-key: ${OPENAI_API_KEY:}
+  base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+  # 默认模型（可被 openai.auto-title.model 覆盖）
+  model: ${OPENAI_MODEL:gpt-5.2}
+  org-id: ${OPENAI_ORG_ID:}
+  project-id: ${OPENAI_PROJECT_ID:}
+  service-tier: ${OPENAI_SERVICE_TIER:priority}
+  auto-title:
+    enabled: ${OPENAI_AUTO_TITLE_ENABLED:true}
+    model: ${OPENAI_AUTO_TITLE_MODEL:gpt-5.4-mini}
+    timeout-ms: ${OPENAI_AUTO_TITLE_TIMEOUT_MS:10000}
+    max-title-length: ${OPENAI_AUTO_TITLE_MAX_LEN:30}
+    placeholder-titles: ${OPENAI_AUTO_TITLE_PLACEHOLDERS:新会话,新对话,New chat,New Session,Chat}
+  # 文档摘要（Markdown）异步生成：上传后入队，worker 异步写回 documents.summary + documents.summary_version
+  document-summary:
+    enabled: ${OPENAI_DOC_SUMMARY_ENABLED:false}
+    model: ${OPENAI_DOC_SUMMARY_MODEL:gpt-5.4-mini}
+    timeout-ms: ${OPENAI_DOC_SUMMARY_TIMEOUT_MS:30000}
+    max-summary-length: ${OPENAI_DOC_SUMMARY_MAX_LEN:600}
+    max-input-chars: ${OPENAI_DOC_SUMMARY_MAX_INPUT_CHARS:60000}
+    max-attempts: ${OPENAI_DOC_SUMMARY_MAX_ATTEMPTS:3}
+# 安全：token 密钥请务必通过环境变量注入（不要提交到仓库）
+app:
+  security:
+    jwt:
+      secret: ${APP_JWT_SECRET:}
+      expiration-days: 30
+      leeway-seconds: 60
+    web-session-cookie:
+      enabled: ${APP_WEB_SESSION_COOKIE_ENABLED:true}
+      name: ${APP_WEB_SESSION_COOKIE_NAME:deckwise_session}
+      secure: ${APP_WEB_SESSION_COOKIE_SECURE:false}
+      same-site: ${APP_WEB_SESSION_COOKIE_SAME_SITE:Lax}
+      path: /
+      domain: ${APP_WEB_SESSION_COOKIE_DOMAIN:}
+      max-age-days: ${APP_WEB_SESSION_COOKIE_MAX_AGE_DAYS:30}
+      csrf-origin-check-enabled: ${APP_WEB_SESSION_COOKIE_CSRF_ORIGIN_CHECK_ENABLED:true}
+      allowed-origins:
+        - http://localhost:3000
+  model-catalog:
+    enabled: ${APP_MODEL_CATALOG_ENABLED:true}
+    location: ${APP_MODEL_CATALOG_LOCATION:classpath:model-catalog.json}
+  model-credentials:
+    # Stable, base64-encoded 32-byte master key; supplied by the Backend runtime.
+    encryption-key: ${APP_MODEL_CREDENTIAL_ENCRYPTION_KEY:}
+  pdf-derived-assets:
+    # PDF 派生图片解析总开关。默认关闭，避免普通上传链路引入外部 JGDA 依赖。
+    enabled: ${PDF_DERIVED_ASSETS_ENABLED:false}
+    # backend 进程内走 PDFBox + R2 + OpenAI。
+    extractor-mode: local
+    # JGDA 默认服务上下文为 /api，因此本地默认值需要包含 /api。
+    extractor-base-url: ${PDF_DERIVED_ASSETS_EXTRACTOR_BASE_URL:http://localhost:8201/api}
+    timeout-ms: ${PDF_DERIVED_ASSETS_TIMEOUT_MS:120000}
+    dpi: ${PDF_DERIVED_ASSETS_DPI:144}
+    max-pages: ${PDF_DERIVED_ASSETS_MAX_PAGES:50}
+    max-assets: 4
+    render-pages: ${PDF_DERIVED_ASSETS_RENDER_PAGES:false}
+    extract-embedded-images: ${PDF_DERIVED_ASSETS_EXTRACT_EMBEDDED_IMAGES:true}
+    crop-figures: ${PDF_DERIVED_ASSETS_CROP_FIGURES:true}
+    image-detection-provider: openai
+    enable-document-ai: ${PDF_DERIVED_ASSETS_ENABLE_DOCUMENT_AI:true}
+    document-ai-max-pages: ${PDF_DERIVED_ASSETS_DOCUMENT_AI_MAX_PAGES:5}
+    document-ai-return-images: ${PDF_DERIVED_ASSETS_DOCUMENT_AI_RETURN_IMAGES:false}
+    document-ai-return-bounding-boxes: ${PDF_DERIVED_ASSETS_DOCUMENT_AI_RETURN_BOUNDING_BOXES:true}
+    document-ai-enable-image-annotation: ${PDF_DERIVED_ASSETS_DOCUMENT_AI_ENABLE_IMAGE_ANNOTATION:true}
+    document-ai-include-tables: ${PDF_DERIVED_ASSETS_DOCUMENT_AI_INCLUDE_TABLES:false}
+    document-ai-crop-margin: ${PDF_DERIVED_ASSETS_DOCUMENT_AI_CROP_MARGIN:12}
+    document-ai-min-page-area-ratio: ${PDF_DERIVED_ASSETS_DOCUMENT_AI_MIN_PAGE_AREA_RATIO:0.005}
+    open-ai-max-pages: 4
+    open-ai-model: ${PDF_DERIVED_ASSETS_OPEN_AI_MODEL:}
+    open-ai-temperature: ${PDF_DERIVED_ASSETS_OPEN_AI_TEMPERATURE:-1}
+    open-ai-top-p: ${PDF_DERIVED_ASSETS_OPEN_AI_TOP_P:-1}
+    open-ai-max-output-tokens: ${PDF_DERIVED_ASSETS_OPEN_AI_MAX_OUTPUT_TOKENS:800}
+    open-ai-reasoning-effort: ${PDF_DERIVED_ASSETS_OPEN_AI_REASONING_EFFORT:low}
+    open-ai-text-verbosity: ${PDF_DERIVED_ASSETS_OPEN_AI_TEXT_VERBOSITY:low}
+    open-ai-detection-render-dpi: ${PDF_DERIVED_ASSETS_OPEN_AI_DETECTION_RENDER_DPI:144}
+    open-ai-render-dpi: ${PDF_DERIVED_ASSETS_OPEN_AI_RENDER_DPI:288}
+    open-ai-crop-margin: ${PDF_DERIVED_ASSETS_OPEN_AI_CROP_MARGIN:12}
+    open-ai-min-page-area-ratio: ${PDF_DERIVED_ASSETS_OPEN_AI_MIN_PAGE_AREA_RATIO:0.005}
+    min-embedded-width: ${PDF_DERIVED_ASSETS_MIN_EMBEDDED_WIDTH:32}
+    min-embedded-height: ${PDF_DERIVED_ASSETS_MIN_EMBEDDED_HEIGHT:32}
+    min-embedded-file-size-bytes: ${PDF_DERIVED_ASSETS_MIN_EMBEDDED_FILE_SIZE_BYTES:0}
+    min-embedded-page-area-ratio: ${PDF_DERIVED_ASSETS_MIN_EMBEDDED_PAGE_AREA_RATIO:0}
+    deduplicate-embedded-images: ${PDF_DERIVED_ASSETS_DEDUPLICATE_EMBEDDED_IMAGES:true}
+    ai-image-transform-enabled: ${PDF_DERIVED_ASSETS_AI_IMAGE_TRANSFORM_ENABLED:true}
+    ai-image-transform-base-url: ${PDF_DERIVED_ASSETS_AI_IMAGE_TRANSFORM_BASE_URL:}
+    ai-image-transform-preset: ${PDF_DERIVED_ASSETS_AI_IMAGE_TRANSFORM_PRESET:ai-outline}
+    ai-image-transform-width: ${PDF_DERIVED_ASSETS_AI_IMAGE_TRANSFORM_WIDTH:1600}
+    ai-image-transform-quality: ${PDF_DERIVED_ASSETS_AI_IMAGE_TRANSFORM_QUALITY:85}
+    ai-image-transform-format: ${PDF_DERIVED_ASSETS_AI_IMAGE_TRANSFORM_FORMAT:jpeg}
+  background-jobs:
+    enabled: ${APP_BACKGROUND_JOBS_ENABLED:true}
+    batch-size: ${APP_BACKGROUND_JOBS_BATCH_SIZE:10}
+    max-attempts: ${APP_BACKGROUND_JOBS_MAX_ATTEMPTS:5}
+    poll-delay-ms: ${APP_BACKGROUND_JOBS_POLL_DELAY_MS:5000}
+    recover-delay-ms: ${APP_BACKGROUND_JOBS_RECOVER_DELAY_MS:60000}
+    initial-retry-delay-seconds: ${APP_BACKGROUND_JOBS_INITIAL_RETRY_DELAY_SECONDS:30}
+    max-retry-delay-seconds: ${APP_BACKGROUND_JOBS_MAX_RETRY_DELAY_SECONDS:3600}
+    stale-running-seconds: ${APP_BACKGROUND_JOBS_STALE_RUNNING_SECONDS:900}
+  file-gc:
+    orphan-scanner-enabled: ${APP_FILE_GC_ORPHAN_SCANNER_ENABLED:true}
+    orphan-scanner-delay-ms: ${APP_FILE_GC_ORPHAN_SCANNER_DELAY_MS:1800000}
+    orphan-scanner-batch-size: ${APP_FILE_GC_ORPHAN_SCANNER_BATCH_SIZE:100}
+    orphan-candidate-min-age-seconds: ${APP_FILE_GC_ORPHAN_CANDIDATE_MIN_AGE_SECONDS:86400}
+    project-delete-grace-seconds: ${APP_FILE_GC_PROJECT_DELETE_GRACE_SECONDS:86400}
+    derived-cache-retention-seconds: ${APP_FILE_GC_DERIVED_CACHE_RETENTION_SECONDS:604800}
+  ai-billing:
+    # 仅控制用量成本估算；关闭时仍记录 token 用量，不向用户收费。
+    enabled: ${APP_AI_BILLING_ENABLED:false}
+    currency: ${APP_AI_BILLING_CURRENCY:USD}
+    provider: ${APP_AI_BILLING_PROVIDER:openai}
+  # 邮箱验证码登录使用 Resend 发信。
+  resend:
+    api-key: ${APP_RESEND_API_KEY:}
+    from: ${APP_RESEND_FROM:}
+  project-naming:
+    placeholder-names: ${APP_PROJECT_NAMING_PLACEHOLDERS:New Project}
+  project-gc:
+    scanner-delay-ms: ${APP_PROJECT_GC_SCANNER_DELAY_MS:1800000}
+    empty-project-shell-scanner-enabled: ${APP_PROJECT_GC_EMPTY_PROJECT_SHELL_SCANNER_ENABLED:true}
+    empty-project-shell-scanner-batch-size: ${APP_PROJECT_GC_EMPTY_PROJECT_SHELL_SCANNER_BATCH_SIZE:50}
+    empty-project-shell-candidate-min-age-seconds: ${APP_PROJECT_GC_EMPTY_PROJECT_SHELL_CANDIDATE_MIN_AGE_SECONDS:86400}
+    empty-project-shell-max-created-updated-delta-seconds: ${APP_PROJECT_GC_EMPTY_PROJECT_SHELL_MAX_CREATED_UPDATED_DELTA_SECONDS:300}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      probes:
+        enabled: true
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+logging:
+  level:
+    # 开发环境：打开“客户端错误请求”详情日志，便于定位前端误调（404/405/参数错误等）
+    com.xiaoyuan.paperpuppybackendintl.badrequest: INFO
+    # PDFBox 字体映射警告（No Unicode mapping）：部分 PDF 嵌入了不完整的字体子集，不影响功能
+    org.apache.pdfbox.pdmodel.font: ERROR
+    org.apache.pdfbox.contentstream: ERROR
+
+# Agent 模式总开关：关闭后聊天运行时会 fail fast，不再降级到 AI-Intl。
+chat:
+  agent:
+    enabled: ${CHAT_AGENT_ENABLED:true}
+  context-compaction:
+    # fullContextJson 仍从最近 200 条候选历史中选择，但不再把所有工具过程和旧消息都回灌给模型。
+    enabled: ${CHAT_CONTEXT_COMPACTION_ENABLED:true}
+    max-text-messages: ${CHAT_CONTEXT_COMPACTION_MAX_TEXT_MESSAGES:12}
+    max-tool-pairs: ${CHAT_CONTEXT_COMPACTION_MAX_TOOL_PAIRS:8}
+    max-history-chars: ${CHAT_CONTEXT_COMPACTION_MAX_HISTORY_CHARS:15000}
+    agent-ledger-projection-enabled: ${CHAT_CONTEXT_AGENT_LEDGER_PROJECTION_ENABLED:true}
+    max-agent-ledger-projection-chars: ${CHAT_CONTEXT_MAX_AGENT_LEDGER_PROJECTION_CHARS:6000}
+    artifact-projection-enabled: ${CHAT_CONTEXT_ARTIFACT_PROJECTION_ENABLED:true}
+    max-artifact-projection-chars: ${CHAT_CONTEXT_MAX_ARTIFACT_PROJECTION_CHARS:6000}
+    # 只恢复同一 session/project 内近期 AgentRunLedger 投影；<=0 表示不做时间过滤。
+    agent-ledger-projection-max-age-hours: ${CHAT_CONTEXT_AGENT_LEDGER_PROJECTION_MAX_AGE_HOURS:72}
+  provider-context-compaction:
+    # 复用 OpenAI Responses 官方 compaction window；默认关闭，待灰度验证后开启。
+    enabled: ${CHAT_PROVIDER_CONTEXT_COMPACTION_ENABLED:false}
+    provider: ${CHAT_PROVIDER_CONTEXT_COMPACTION_PROVIDER:openai}
+    max-delta-messages: ${CHAT_PROVIDER_CONTEXT_COMPACTION_MAX_DELTA_MESSAGES:80}
+  execution:
+    # Agent 技能总开关：映射到 agent_service.proto 的 enable_tools。
+    allow-agent-skills: ${CHAT_EXECUTION_ALLOW_AGENT_SKILLS:true}

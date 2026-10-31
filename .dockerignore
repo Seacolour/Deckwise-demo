@@ -1,0 +1,13 @@
+.git
+.idea
+.vscode
+**/*.iml
+
+# Keep built jar, ignore everything else under target to keep build context small
+target/*
+!target/*.jar
+
+# Logs / local data
+**/logs
+**/*.log
+

@@ -1,0 +1,2 @@
+org.springframework.boot.EnvironmentPostProcessor=\
+com.xiaoyuan.paperpuppybackendintl.testsupport.DotenvTestEnvironmentPostProcessor

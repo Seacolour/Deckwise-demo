@@ -1,0 +1,154 @@
+syntax = "proto3";
+
+package paperpuppy.backendintl.agent.tool;
+
+option java_multiple_files = true;
+option java_package = "com.xiaoyuan.paperpuppybackendintl.grpc.agent.tool";
+option java_outer_classname = "AgentToolPersistenceProto";
+
+// Agent run、model/tool facts、ledger 与 artifact projection 持久化协议。
+
+message AgentPersistenceAck {
+  bool success = 1;
+  string message = 2;
+}
+
+message AgentTokenUsage {
+  int32 input_tokens = 1;
+  int32 output_tokens = 2;
+  int32 total_tokens = 3;
+  int32 cached_tokens = 4;
+  int32 reasoning_tokens = 5;
+}
+
+message UpsertAgentRunRequest {
+  string agent_run_id = 1;
+  int64 user_id = 2;
+  int64 session_id = 3;
+  int64 project_id = 4;
+  string goal = 5;
+  string status = 6;
+  string model = 7;
+  string started_at = 8;
+  string metadata_json = 9;
+}
+
+message FinishAgentRunRequest {
+  string agent_run_id = 1;
+  int64 user_id = 2;
+  int64 session_id = 3;
+  int64 project_id = 4;
+  string status = 5;
+  string error_message = 6;
+  string ended_at = 7;
+  int32 total_model_calls = 8;
+  int32 total_tool_calls = 9;
+  int32 total_tool_result_open_calls = 10;
+  AgentTokenUsage usage = 11;
+  string metadata_json = 12;
+}
+
+message RecordAgentModelCallRequest {
+  string agent_run_id = 1;
+  int64 user_id = 2;
+  int64 session_id = 3;
+  int64 project_id = 4;
+  string provider = 5;
+  string call_site = 6;
+  string model = 7;
+  string response_id = 8;
+  int32 input_items = 9;
+  int32 estimated_input_chars = 10;
+  int32 instructions_chars = 11;
+  int32 tools_count = 12;
+  int32 max_output_tokens = 13;
+  string service_tier = 14;
+  int32 attempt = 15;
+  bool success = 16;
+  AgentTokenUsage usage = 17;
+  int32 elapsed_ms = 18;
+  string error_type = 19;
+  string error_message = 20;
+  string raw_usage_json = 21;
+  string metadata_json = 22;
+}
+
+message RecordAgentContextCompactionRequest {
+  string agent_run_id = 1;
+  int64 user_id = 2;
+  int64 session_id = 3;
+  int64 project_id = 4;
+  string provider = 5;
+  string model = 6;
+  string mode = 7;                  // auto | manual
+  string status = 8;                // active | failed | expired
+  string context_format = 9;        // responses_compacted_window_v1
+  int32 source_first_seq = 10;
+  int32 source_last_seq = 11;
+  int32 source_first_item_idx = 12;
+  int32 source_last_item_idx = 13;
+  string instructions_hash = 14;
+  string input_fingerprint = 15;
+  int32 compact_threshold = 16;
+  string compacted_input_json = 17;
+  int32 compacted_item_count = 18;
+  int32 estimated_input_chars = 19;
+  int32 estimated_saved_chars = 20;
+  string response_id = 21;
+  string previous_response_id = 22;
+  string raw_usage_json = 23;
+  string metadata_json = 24;
+  string error_type = 25;
+  string error_message = 26;
+}
+
+message RecordAgentToolCallRequest {
+  string agent_run_id = 1;
+  string call_id = 2;
+  int64 user_id = 3;
+  int64 session_id = 4;
+  int64 project_id = 5;
+  string tool_name = 6;
+  string arguments_json = 7;
+  string status = 8;
+  bool success = 9;
+  string result_summary = 10;
+  string error_code = 11;
+  int32 result_chars = 12;
+  string read_key = 13;
+  string duplicate_of_call_id = 14;
+  int32 cost_ms = 15;
+  string started_at = 16;
+  string finished_at = 17;
+  string result_json = 18;
+  bool compacted_for_model = 19;
+}
+
+message UpsertAgentLedgerSnapshotRequest {
+  string agent_run_id = 1;
+  int64 user_id = 2;
+  int64 session_id = 3;
+  int64 project_id = 4;
+  string ledger_json = 5;
+  int32 model_calls = 6;
+  int32 tool_calls = 7;
+  int32 tool_result_open_calls = 8;
+}
+
+message OpenAgentArtifactViewRequest {
+  int64 user_id = 1;
+  int64 session_id = 2;
+  int64 project_id = 3;
+  string view_key = 4;
+  int64 document_id = 5;
+  string view_type = 6;
+  string mode = 7;       // summary | detail | path
+  string path = 8;       // JSON Pointer when mode=path
+  int32 max_chars = 9;
+}
+
+message OpenAgentArtifactViewResponse {
+  bool success = 1;
+  string result_json = 2;
+  string error = 3;
+}

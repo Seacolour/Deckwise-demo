@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package paperpuppy.backendintl.agent.tool;
+
+option java_multiple_files = true;
+option java_package = "com.xiaoyuan.paperpuppybackendintl.grpc.agent.tool";
+option java_outer_classname = "AgentToolServiceProto";
+
+import "agent_tool_common.proto";
+import "agent_tool_document.proto";
+import "agent_tool_file.proto";
+import "agent_tool_persistence.proto";
+
+// Agent 工具调用 gRPC 服务
+service AgentToolService {
+  // 列出项目文件
+  rpc ListProjectFiles (ListProjectFilesRequest) returns (ListProjectFilesResponse);
+  // 读取文档内容（Markdown 等有 Document 副本的文件）
+  rpc GetDocument (GetDocumentRequest) returns (GetDocumentResponse);
+  // 读取文件切片内容（PDF 等无 Document 副本的文件）
+  rpc GetFileContent (GetFileContentRequest) returns (GetFileContentResponse);
+  // 获取图片 URL（用于多模态输入）
+  rpc GetImage (GetImageRequest) returns (GetImageResponse);
+  // 获取文件 AI 可访问 URL（用于多模态 input_file 输入，支持 public URL 或私有资源 token URL）
+  rpc GetFileUrl (GetFileUrlRequest) returns (GetFileUrlResponse);
+  // 更新文档草稿（Agent 保存修改时调用）
+  rpc UpdateDocumentDraft (UpdateDocumentDraftRequest) returns (UpdateDocumentDraftResponse);
+  // 更新文档摘要（Agent 主动调用更新）
+  rpc UpdateDocumentSummary (UpdateDocumentSummaryRequest) returns (UpdateDocumentSummaryResponse);
+  // 创建 Markdown 文档（Agent 调用）
+  rpc CreateDocument (CreateDocumentRequest) returns (CreateDocumentResponse);
+  // 管理用户规则（Agent 调用）
+  rpc ManageUserRules (ManageUserRulesRequest) returns (ManageUserRulesResponse);
+  // 管理用户记忆（Agent 调用）
+  rpc ManageUserMemory (ManageUserMemoryRequest) returns (ManageUserMemoryResponse);
+  // 读取系统工具书（目录/章节/正文）
+  rpc ReadToolBook (ReadToolBookRequest) returns (ReadToolBookResponse);
+  // 读取 JSON 资源的结构骨架（支持普通 JSON 文件与 canonical JSON 文档）
+  rpc JsonStructureRead (JsonStructureReadRequest) returns (JsonStructureReadResponse);
+  // 读取 JSON 资源指定路径下的子树（支持普通 JSON 文件与 canonical JSON 文档）
+  rpc JsonSubtreeRead (JsonSubtreeReadRequest) returns (JsonSubtreeReadResponse);
+  // 上报/更新 Agent run 基础信息（阶段三 A：backend-owned persistent work memory）
+  rpc UpsertAgentRun (UpsertAgentRunRequest) returns (AgentPersistenceAck);
+  // 上报 Agent run 结束状态
+  rpc FinishAgentRun (FinishAgentRunRequest) returns (AgentPersistenceAck);
+  // 上报一次 Agent 模型调用事实
+  rpc RecordAgentModelCall (RecordAgentModelCallRequest) returns (AgentPersistenceAck);
+  // 上报 OpenAI Responses context compaction 捕获结果
+  rpc RecordAgentContextCompaction (RecordAgentContextCompactionRequest) returns (AgentPersistenceAck);
+  // 上报一次 Agent 工具调用事实及可选原始结果
+  rpc RecordAgentToolCall (RecordAgentToolCallRequest) returns (AgentPersistenceAck);
+  // 上报当前 AgentRunLedger 快照
+  rpc UpsertAgentLedgerSnapshot (UpsertAgentLedgerSnapshotRequest) returns (AgentPersistenceAck);
+  // 打开 backend 持久化的 Agent artifact view projection/detail
+  rpc OpenAgentArtifactView (OpenAgentArtifactViewRequest) returns (OpenAgentArtifactViewResponse);
+}
