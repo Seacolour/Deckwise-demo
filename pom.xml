@@ -31,6 +31,7 @@
         <protobuf.version>3.25.5</protobuf.version>
         <grpc.version>1.75.0</grpc.version>
         <lombok.version>1.18.46</lombok.version>
+        <pandoc4j.version>0.3.0</pandoc4j.version>
         <!-- 仅当 target/generated-sources/jooq 已存在时，才能用 -DskipJooq=true 跳过生成。 -->
         <skipJooq>false</skipJooq>
         <!-- 本地默认连接 5432；验证全新基线时用 -Djooq.jdbc.url 指向独立空库。 -->
@@ -140,11 +141,11 @@
             <classifier>jdk17</classifier>
         </dependency>
 
-        <!-- pandoc4j: Pandoc CLI wrapper – Word/DOCX → Markdown conversion -->
+        <!-- Wrapper-only by default: use an installed Pandoc executable. -->
         <dependency>
             <groupId>org.tinycircl</groupId>
             <artifactId>pandoc4j</artifactId>
-            <version>0.3.0</version>
+            <version>${pandoc4j.version}</version>
         </dependency>
 
         <dependency>
@@ -525,6 +526,21 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <!-- Adds the managed binary provider without replacing the pandoc4j API.
+             The Pandoc executable is downloaded and cached on first conversion. -->
+        <profile>
+            <id>managed-pandoc</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.tinycircl</groupId>
+                    <artifactId>pandoc4j-binary</artifactId>
+                    <version>${pandoc4j.version}</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 
 
 </project>
