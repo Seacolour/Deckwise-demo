@@ -8,6 +8,7 @@ import {
   listModelCredentialStatuses,
   listWorkbenchModels,
   saveModelCredential,
+  testModelCredential,
 } from "@/src/lib/api/modelProviders";
 
 describe("model provider API", () => {
@@ -50,6 +51,19 @@ describe("model provider API", () => {
     });
   });
 
+  it("tests a candidate Key without saving it and can retest the stored Key", async () => {
+    fetchMock.mockResolvedValue({ providerId: "openrouter", modelId: "openai/gpt-6-luna",
+      status: "valid", message: "连接成功" });
+    await testModelCredential("openrouter", "candidate-test-key");
+    await testModelCredential("openrouter");
+    expect(fetchMock).toHaveBeenNthCalledWith(1, "/user/model-credentials/openrouter/test", {
+      method: "POST", body: { apiKey: "candidate-test-key" }, requestPolicy: "mutation",
+    });
+    expect(fetchMock).toHaveBeenNthCalledWith(2, "/user/model-credentials/openrouter/test", {
+      method: "POST", body: {}, requestPolicy: "mutation",
+    });
+  });
+
   it("normalizes available models and treats older DeepSeek responses as ASK-only", async () => {
     fetchMock.mockResolvedValue([
       { id: "deepseek/deepseek-chat", displayName: "DeepSeek Chat" },
@@ -59,11 +73,11 @@ describe("model provider API", () => {
     await expect(listWorkbenchModels()).resolves.toEqual([
       {
         id: "deepseek/deepseek-chat", providerId: "deepseek", displayName: "DeepSeek Chat",
-        description: null, askSupported: true, agentSupported: false,
+        description: null, askSupported: true, agentSupported: false, imageSupported: false,
       },
       {
         id: "openai/gpt-4.1", providerId: "openai", displayName: "GPT-4.1",
-        description: null, askSupported: true, agentSupported: true,
+        description: null, askSupported: true, agentSupported: true, imageSupported: false,
       },
     ]);
     expect(fetchMock).toHaveBeenCalledWith("/models/available", expect.objectContaining({ cache: "no-store" }));

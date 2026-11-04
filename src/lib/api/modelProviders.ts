@@ -8,6 +8,13 @@ export type ModelCredentialStatus = {
   maskedKey: string | null;
 };
 
+export type ModelCredentialTestResult = {
+  providerId: ModelProviderId;
+  modelId: string;
+  status: "valid" | "invalid" | "unavailable";
+  message: string;
+};
+
 export type AvailableWorkbenchModel = {
   id: string;
   providerId: string;
@@ -15,6 +22,7 @@ export type AvailableWorkbenchModel = {
   description: string | null;
   askSupported: boolean;
   agentSupported: boolean;
+  imageSupported?: boolean;
 };
 
 type AvailableWorkbenchModelResponse = {
@@ -24,6 +32,7 @@ type AvailableWorkbenchModelResponse = {
   description?: string | null;
   askSupported?: boolean | null;
   agentSupported?: boolean | null;
+  imageSupported?: boolean | null;
 };
 
 export const MODEL_CREDENTIALS_CHANGED_EVENT = "agentworkbench:model-credentials-changed";
@@ -45,6 +54,14 @@ export async function saveModelCredential(providerId: ModelProviderId, apiKey: s
   return apiFetchWithAuth<ModelCredentialStatus>(`/user/model-credentials/${providerId}`, {
     method: "PUT",
     body: { apiKey },
+    requestPolicy: "mutation",
+  });
+}
+
+export async function testModelCredential(providerId: ModelProviderId, apiKey?: string): Promise<ModelCredentialTestResult> {
+  return apiFetchWithAuth<ModelCredentialTestResult>(`/user/model-credentials/${providerId}/test`, {
+    method: "POST",
+    body: apiKey === undefined ? {} : { apiKey },
     requestPolicy: "mutation",
   });
 }
@@ -74,6 +91,8 @@ export async function listWorkbenchModels(): Promise<AvailableWorkbenchModel[]> 
       // Older catalog responses have no capability flags. Keep a conservative
       // fallback for DeepSeek when connected to a backend predating tool support.
       agentSupported: model.agentSupported ?? providerId !== "deepseek",
+      imageSupported: model.imageSupported ?? (providerId === "openrouter"
+        && (id.startsWith("openai/") || id.startsWith("openrouter/openai/"))),
     }];
   });
 }

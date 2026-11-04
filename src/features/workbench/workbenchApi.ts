@@ -2,7 +2,7 @@ import { apiFetchWithAuth } from "@/src/lib/api/fetcherWithAuth";
 import type { FileUploadBatchResponse } from "@/src/lib/types/all/fileUploadBatchResponse";
 import type { ProjectFileMappingDTO } from "@/src/lib/types/all/projectFileMappingDTO";
 import type { PrivateObjectAccessUrlResponse } from "@/src/lib/types/all/privateObjectAccessUrlResponse";
-import type { ConversationEntry, ConversationPart } from "./conversationTypes";
+import type { ConversationAttachment, ConversationEntry, ConversationPart } from "./conversationTypes";
 import { parseWorkbenchToolEvent, toolResultStatus } from "./conversationEvents";
 
 export type WorkbenchProject = {
@@ -48,12 +48,12 @@ export async function listWorkbenchFiles(projectId: string): Promise<WorkbenchFi
   });
 }
 
-export async function uploadWorkbenchFile(projectId: string, file: File): Promise<FileUploadBatchResponse> {
+export async function uploadWorkbenchFile(projectId: string, file: File, modelId?: string): Promise<FileUploadBatchResponse> {
   const body = new FormData();
   body.append("files", file);
   return apiFetchWithAuth<FileUploadBatchResponse>("/files/upload/batch", {
     method: "POST",
-    params: { projectId, uploadSource: "user_upload" },
+    params: { projectId, uploadSource: "user_upload", ...(modelId ? { model: modelId } : {}) },
     body,
     requestPolicy: "upload",
   });
@@ -89,7 +89,24 @@ type SessionMessage = {
   rawContent?: string | null;
   status?: string | null;
   agentMessageGroupId?: string | null;
+  attachments?: unknown;
 };
+
+function messageAttachments(raw: unknown): ConversationAttachment[] {
+  if (!Array.isArray(raw)) return [];
+  return raw.flatMap((item): ConversationAttachment[] => {
+    if (!item || typeof item !== "object" || Array.isArray(item)) return [];
+    const record = item as Record<string, unknown>;
+    const kind = record.kind;
+    const name = typeof record.name === "string" ? record.name.trim().slice(0, 180) : "";
+    if (!name || (kind !== "file" && kind !== "image" && kind !== "document")) return [];
+    return [{ kind, name,
+      ...(typeof record.fileId === "string" ? { fileId: record.fileId } : {}),
+      ...(typeof record.documentId === "string" ? { documentId: record.documentId } : {}),
+      ...(typeof record.cacheKey === "string" ? { cacheKey: record.cacheKey } : {}),
+    }];
+  }).slice(0, 15);
+}
 
 export async function listWorkbenchProjects(): Promise<WorkbenchProject[]> {
   const page = await apiFetchWithAuth<Page<WorkbenchProject>>("/projects/list", {
@@ -151,7 +168,9 @@ function historyEntries(rows: SessionMessage[]): ConversationEntry[] {
     const type = row.type?.toLowerCase() ?? "text";
     if (role === "user" && type === "text") {
       const text = row.content ?? row.rawContent ?? "";
-      if (text.trim()) entries.push({ id, kind: "user", text });
+      const attachments = messageAttachments(row.attachments);
+      if (text.trim() || attachments.length) entries.push({ id, kind: "user", text,
+        ...(attachments.length ? { attachments } : {}) });
       assistant = null;
       assistantGroupId = null;
       continue;

@@ -4,7 +4,7 @@ This branch contains the Next.js interface for [Deckwise Demo](https://github.co
 
 The workbench provides email login, BYOK model settings, conversations, workspace files, local file previews, and a Markdown editor.
 
-With Node.js 24 and Backend running on port `8104`, copy [`env.example`](env.example) to `.env.local`, then run:
+With Node.js 24 and a compatible Backend running, copy [`env.example`](env.example) to `.env.local`, set `API_PROXY_TARGET`, then run:
 
 ```bash
 npm ci
@@ -12,3 +12,13 @@ npm run dev
 ```
 
 Open `http://localhost:3000`. When Backend API contracts change, run `npm run api:gen` while Backend is running.
+
+For the Java Demo Backend, the example target is `http://localhost:8104`. To use the [FastAPI + LangGraph Python backend](https://github.com/Seacolour/Deckwise-backend-Python), set `API_PROXY_TARGET=http://127.0.0.1:8000` and follow that repository's PostgreSQL, Redis, and model credential setup. The workbench can then show project files, document editing, JSON tools, image questions, and conversation attachments.
+
+For a production build check, supply a non-`local` public Backend signature:
+
+```powershell
+$env:NEXT_PUBLIC_BACKEND_SIGNATURE='deckwise-demo-public'
+npm run build
+Remove-Item Env:NEXT_PUBLIC_BACKEND_SIGNATURE
+```

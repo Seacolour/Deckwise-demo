@@ -10,6 +10,14 @@ export type ConversationPart =
     status: "running" | "completed" | "error" | "stopped";
   };
 
+export type ConversationAttachment = {
+  kind: "file" | "image" | "document";
+  name: string;
+  fileId?: string;
+  documentId?: string;
+  cacheKey?: string;
+};
+
 export type ConversationEntry =
-  | { id: string; kind: "user"; text: string }
+  | { id: string; kind: "user"; text: string; attachments?: ConversationAttachment[] }
   | { id: string; kind: "assistant"; parts: ConversationPart[]; pending?: boolean };

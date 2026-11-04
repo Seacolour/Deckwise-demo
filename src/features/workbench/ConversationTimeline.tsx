@@ -1,14 +1,29 @@
 "use client";
 
 import { useEffect, useRef, useState, type Ref } from "react";
-import { Check, ChevronDown, CircleStop, Copy, LoaderCircle, TriangleAlert, Wrench } from "lucide-react";
+import { Check, ChevronDown, CircleStop, Copy, FileText, Image as ImageIcon, LoaderCircle, Paperclip, TriangleAlert, Wrench } from "lucide-react";
 import { copyTextToClipboard } from "@/src/lib/clipboard/copyTextToClipboard";
 import { isHiddenAssistantText } from "./conversationText";
 import { WorkbenchMarkdown } from "./WorkbenchMarkdown";
-import type { ConversationEntry, ConversationPart } from "./conversationTypes";
+import type { ConversationAttachment, ConversationEntry, ConversationPart } from "./conversationTypes";
 import styles from "./conversationTimeline.module.css";
 
 export type { ConversationEntry, ConversationPart } from "./conversationTypes";
+
+function UserAttachment({ attachment }: { attachment: ConversationAttachment }) {
+  const Icon = attachment.kind === "image" ? ImageIcon : attachment.kind === "document" ? FileText : Paperclip;
+  const suffix = attachment.name.includes(".") ? attachment.name.split(".").at(-1)?.toUpperCase() : null;
+  const extension = suffix && suffix.length <= 8 ? suffix : "FILE";
+  return (
+    <span className={styles.userAttachment} aria-label={`已发送附件 ${attachment.name}`} title={attachment.name}>
+      <span className={styles.userAttachmentIcon}><Icon size={17} aria-hidden="true" /></span>
+      <span className={styles.userAttachmentText}>
+        <span className={styles.userAttachmentName}>{attachment.name}</span>
+        <span className={styles.userAttachmentType}>{extension}</span>
+      </span>
+    </span>
+  );
+}
 
 type ToolPart = Extract<ConversationPart, { kind: "tool" }>;
 type ToolMetadata = { label: string; value: string };
@@ -150,7 +165,7 @@ function AssistantEntry({ entry, activity }: { entry: Extract<ConversationEntry,
   const pendingLabel = hasRunningTool ? "工具执行中…" : activity?.trim() || "正在处理请求…";
 
   return (
-    <article className={styles.assistantEntry} aria-label="Deckwise Demo 回复">
+    <article className={styles.assistantEntry} aria-label="AgentWorkbench 回复">
       <div className={styles.assistantContent}>
         <div className={styles.parts}>
           {entry.parts.map((part) => part.kind === "tool"
@@ -192,6 +207,14 @@ export function ConversationTimeline({
       {entries.map((entry) => entry.kind === "user" ? (
         <article key={entry.id} className={styles.userEntry} aria-label="你的消息">
           <div className={styles.userContent}>
+            {entry.attachments && entry.attachments.length > 0 && (
+              <div className={styles.userAttachments} aria-label="这条消息的附件">
+                {entry.attachments.map((attachment, index) => (
+                  <UserAttachment key={`${attachment.kind}-${attachment.fileId ?? attachment.documentId ?? attachment.name}-${index}`}
+                    attachment={attachment} />
+                ))}
+              </div>
+            )}
             <p className={styles.userBubble}>{entry.text}</p>
             <div className={styles.userActions}>
               <MessageCopyButton text={entry.text} label="复制你的消息" />

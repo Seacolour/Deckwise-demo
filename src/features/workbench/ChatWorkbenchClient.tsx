@@ -15,7 +15,7 @@ import { StreamEventParser } from "@/src/lib/stream";
 import { useAuthSnapshot } from "@/src/stores/auth";
 import { appendAssistantText, appendAssistantToolEvent, parseWorkbenchToolEvent, settleAssistant, type WorkbenchToolEvent } from "./conversationEvents";
 import { ConversationTimeline } from "./ConversationTimeline";
-import type { ConversationEntry } from "./conversationTypes";
+import type { ConversationAttachment, ConversationEntry } from "./conversationTypes";
 import { MarkdownDocumentPanel } from "./MarkdownDocumentPanel";
 import {
   abortWorkbenchSession,
@@ -48,6 +48,11 @@ const STARTERS = [
 
 function messageOf(error: unknown): string {
   return error instanceof Error ? error.message : "请求失败，请稍后重试";
+}
+
+function supportsImageInput(model: AvailableWorkbenchModel | undefined): boolean {
+  return model?.imageSupported ?? (model?.providerId === "openrouter"
+    && (model.id.startsWith("openai/") || model.id.startsWith("openrouter/openai/")));
 }
 
 function changedDocumentId(event: WorkbenchToolEvent): string | null {
@@ -120,6 +125,7 @@ export default function ChatWorkbenchClient() {
   const bottomRef = useRef<HTMLDivElement | null>(null);
   const composerRef = useRef<HTMLTextAreaElement | null>(null);
   const composerUploadRef = useRef<HTMLInputElement | null>(null);
+  const composerUploadProjectRef = useRef<string | null>(null);
 
   useEffect(() => {
     setDocumentPanelOpen(typeof window.matchMedia === "function"
@@ -209,7 +215,11 @@ export default function ChatWorkbenchClient() {
   useEffect(() => {
     filesVersionRef.current += 1;
     setWorkspaceFiles([]);
-    setAttachedFiles([]);
+    if (composerUploadProjectRef.current === projectId && projectId !== null) {
+      composerUploadProjectRef.current = null;
+    } else {
+      setAttachedFiles([]);
+    }
     setAttachedDocumentIds([]);
     setFileError(null);
     if (projectId) void refreshWorkspaceFiles(projectId);
@@ -275,8 +285,21 @@ export default function ChatWorkbenchClient() {
     else setActiveDocumentId(selectedId);
   };
 
-  const uploadFile = async (file: File) => {
+  const uploadFile = async (file: File, attachToMessage = false) => {
     if (sending || documentSaving || fileUploading || loading) return;
+    if (attachToMessage && attachedFiles.length + attachedDocumentIds.length >= 5) {
+      const cause = new Error("每条消息最多引用 5 个文件");
+      setError(cause.message);
+      throw cause;
+    }
+    const selectedModel = models.find((model) => model.id === selectedModelId);
+    if ((file.type.startsWith("image/") || /\.(?:png|jpe?g|webp|gif)$/i.test(file.name))
+      && !supportsImageInput(selectedModel)) {
+      const cause = new Error("当前模型不支持图片，请先切换到 OpenRouter GPT 视觉模型");
+      setFileError(cause.message);
+      setError(cause.message);
+      throw cause;
+    }
     if (file.size > 50 * 1024 * 1024) {
       const cause = new Error("文件不能超过 50 MB");
       setFileError(cause.message);
@@ -291,16 +314,32 @@ export default function ChatWorkbenchClient() {
       if (!targetProjectId) {
         const createdProject = await createWorkbenchProject();
         targetProjectId = String(createdProject.id);
+        if (attachToMessage) composerUploadProjectRef.current = targetProjectId;
         setProjects((previous) => [createdProject, ...previous]);
         setProjectId(targetProjectId);
         currentProjectIdRef.current = targetProjectId;
         setWorkspaceUrl(targetProjectId, null);
       }
-      const uploaded = await uploadWorkbenchFile(targetProjectId, file);
+      const uploaded = await uploadWorkbenchFile(targetProjectId, file, selectedModel?.id);
       const stored = uploaded?.files?.[0];
       if (stored?.sourceFileId && stored.cacheKey) {
         void cacheWorkbenchFile(deriveUserKey(auth.rawUser), targetProjectId,
           { id: String(stored.sourceFileId), cacheKey: stored.cacheKey }, file);
+      }
+      if (attachToMessage) {
+        if (!stored?.sourceFileId || !stored.cacheKey) {
+          throw new Error("文件已上传，但无法加入当前消息；请从文件列表重新附加");
+        }
+        const name = stored.fileName?.trim() || file.name;
+        const reference: WorkbenchFile = {
+          id: String(stored.sourceFileId), cacheKey: stored.cacheKey,
+          name, sizeBytes: stored.sizeBytes ?? file.size,
+          documentId: stored.documentId == null ? null : String(stored.documentId),
+          image: (stored.mimeType ?? file.type).startsWith("image/") || /\.(?:png|jpe?g|webp|gif)$/i.test(name),
+        };
+        setAttachedFiles((previous) => previous.some((item) => item.id === reference.id)
+          ? previous : [...previous, reference]);
+        composerRef.current?.focus();
       }
       await Promise.all([refreshWorkspaceFiles(targetProjectId), refreshDocuments(targetProjectId, activeDocumentId)]);
       setDocumentPanelOpen(true);
@@ -453,6 +492,10 @@ export default function ChatWorkbenchClient() {
 
   const attachFile = (file: WorkbenchFile) => {
     if (sending || fileUploading || documentSaving) return;
+    if (file.image && !supportsImageInput(models.find((model) => model.id === selectedModelId))) {
+      setError("当前模型不支持图片，请先切换到 OpenRouter GPT 视觉模型");
+      return;
+    }
     if (attachedFiles.some((attached) => attached.id === file.id)) {
       composerRef.current?.focus();
       return;
@@ -614,6 +657,10 @@ export default function ChatWorkbenchClient() {
       ?? models.find((model) => mode === "ASK" ? model.askSupported : model.agentSupported);
     if (!text || !selectedModel || sending || loading || modelsLoading || documentSaving || fileUploading
       || (activeDocumentId !== null && documentLoading)) return;
+    if (attachedFiles.some((file) => file.image) && !supportsImageInput(selectedModel)) {
+      setError("当前模型不支持图片，请先切换到 OpenRouter GPT 视觉模型");
+      return;
+    }
     setSending(true);
     setError(null);
     setActivity("正在准备对话…");
@@ -624,6 +671,16 @@ export default function ChatWorkbenchClient() {
     let touchedDocumentId: string | null = null;
     let streamStarted = false;
     const optimisticId = `pending-${Date.now()}`;
+    const sentAttachments: ConversationAttachment[] = [
+      ...attachedDocumentIds.map((id) => {
+        const document = documents.find((item) => String(item.id) === id);
+        const title = document?.title?.trim() || `文档 ${id}`;
+        return { kind: "document" as const, documentId: id,
+          name: title.toLowerCase().endsWith(".md") ? title : `${title}.md` };
+      }),
+      ...attachedFiles.map((file) => ({ kind: file.image ? "image" as const : "file" as const,
+        fileId: file.id, cacheKey: file.cacheKey, name: file.name })),
+    ];
     try {
       if (documentDirty) workingDocument = await saveDocument();
       if (!currentProjectId) {
@@ -643,7 +700,7 @@ export default function ChatWorkbenchClient() {
       setDraft("");
       setMessages((previous) => [
         ...previous,
-        { id: `${optimisticId}-user`, kind: "user", text },
+        { id: `${optimisticId}-user`, kind: "user", text, attachments: sentAttachments },
         { id: `${optimisticId}-assistant`, kind: "assistant", parts: [], pending: true },
       ]);
       setActivity(mode === "AGENT" ? "Agent 正在处理任务…" : "正在生成回复…");
@@ -842,10 +899,12 @@ export default function ChatWorkbenchClient() {
             <textarea ref={composerRef} value={draft} onChange={(event) => setDraft(event.target.value)} onKeyDown={onComposerKeyDown}
               placeholder="描述你的想法，或交给 Agent 一个任务…" aria-label="消息内容" rows={3} disabled={loading || sending || fileUploading} />
             <input ref={composerUploadRef} className={styles.hiddenUploadInput} type="file" aria-label="选择要上传到工作区的文件"
-              accept=".md,.txt,.json,.pdf,.docx,.png,.jpg,.jpeg,.webp,.gif"
+              accept={supportsImageInput(selectedModel)
+                ? ".md,.txt,.json,.pdf,.docx,.png,.jpg,.jpeg,.webp,.gif"
+                : ".md,.txt,.json,.pdf,.docx"}
               onChange={(event) => {
                 const file = event.target.files?.[0];
-                if (file) void uploadFile(file).catch(() => undefined);
+                if (file) void uploadFile(file, true).catch(() => undefined);
                 event.target.value = "";
               }} />
             <div className={styles.composerToolbar}>
@@ -871,13 +930,16 @@ export default function ChatWorkbenchClient() {
               </button>
             </div>
           </form>
-          <p className={styles.composerHint}>Agent 可能出错，请检查重要内容。按 Enter 发送，Shift + Enter 换行。</p>
+          <p className={styles.composerHint}>{supportsImageInput(selectedModel)
+            ? "当前模型支持图片。Agent 可能出错，请检查重要内容。按 Enter 发送，Shift + Enter 换行。"
+            : "当前模型不支持图片；切换到 OpenRouter GPT 视觉模型后可上传。按 Enter 发送，Shift + Enter 换行。"}</p>
         </div>
       </main>
       <MarkdownDocumentPanel key={projectId ?? "new"} open={documentPanelOpen} projectId={projectId} projectName={currentProject?.name ?? null}
         userKey={deriveUserKey(auth.rawUser)}
         view={documentPanelView} onViewChange={setDocumentPanelView}
-        documents={documents} files={workspaceFiles} filesLoading={filesLoading} fileUploading={fileUploading} fileError={fileError}
+        documents={documents} files={workspaceFiles} filesLoading={filesLoading} fileUploading={fileUploading}
+        allowImageUpload={supportsImageInput(selectedModel)} fileError={fileError}
         activeDocument={activeDocument} activeDocumentId={activeDocumentId} draft={documentDraft} loading={documentLoading}
         busy={sending || documentSaving || loading || fileUploading} error={documentError}
         onClose={() => setDocumentPanelOpen(false)} onCreate={createMarkdownDocument}

@@ -339,7 +339,34 @@ describe("workbench model selection", () => {
     ));
   });
 
-  it("uploads a local file from the composer, creates a workspace, and makes it available to Agent", async () => {
+  it("shows an attached DOCX on the outgoing user message and after history reload", async () => {
+    const cacheKey = "f".repeat(64);
+    mocks.listProjects.mockResolvedValue([{ id: 7, name: "我的工作区" }]);
+    mocks.listFiles.mockResolvedValue([{ id: "42", cacheKey, name: "agent-capabilities-roadmap.docx",
+      sizeBytes: 1024, documentId: null, image: false }]);
+    mocks.listModels.mockResolvedValue([
+      { id: "deepseek-chat", providerId: "deepseek", displayName: "DeepSeek", askSupported: true, agentSupported: true },
+    ]);
+    let finishStream: (() => void) | undefined;
+    mocks.stream.mockImplementation(() => new Promise<void>((resolve) => { finishStream = resolve; }));
+    render(<ChatWorkbenchClient />);
+
+    const row = await screen.findByRole("button", { name: "文件 agent-capabilities-roadmap.docx" });
+    const transfer = dragTransfer();
+    fireEvent.dragStart(row, { dataTransfer: transfer });
+    fireEvent.drop(screen.getByRole("textbox", { name: "消息内容" }), { dataTransfer: transfer });
+    fireEvent.change(screen.getByRole("textbox", { name: "消息内容" }), { target: { value: "你能看到这个文档吗？" } });
+    fireEvent.click(screen.getByRole("button", { name: "发送消息" }));
+    await waitFor(() => expect(mocks.stream).toHaveBeenCalled());
+    expect(screen.getByLabelText("这条消息的附件")).toHaveTextContent("agent-capabilities-roadmap.docxDOCX");
+
+    mocks.listMessages.mockResolvedValue([{ id: "1", kind: "user", text: "你能看到这个文档吗？",
+      attachments: [{ kind: "file", name: "agent-capabilities-roadmap.docx", fileId: "42", cacheKey }] }]);
+    await act(async () => { finishStream?.(); });
+    await waitFor(() => expect(screen.getByLabelText("这条消息的附件")).toHaveTextContent("agent-capabilities-roadmap.docxDOCX"));
+  });
+
+  it("uploads a local file from the composer and attaches it to the next message", async () => {
     const cacheKey = "a".repeat(64);
     const uploadedFile = { id: "31", cacheKey, name: "research.txt", sizeBytes: 8, documentId: null, image: false };
     mocks.listFiles.mockResolvedValue([uploadedFile]);
@@ -354,18 +381,13 @@ describe("workbench model selection", () => {
     fireEvent.change(screen.getByLabelText("选择要上传到工作区的文件"), { target: { files: [file] } });
 
     await waitFor(() => expect(mocks.createProject).toHaveBeenCalled());
-    await waitFor(() => expect(mocks.uploadFile).toHaveBeenCalledWith("7", file));
+    await waitFor(() => expect(mocks.uploadFile).toHaveBeenCalledWith("7", file, "openai/gpt-4.1"));
     await waitFor(() => expect(mocks.cacheFile).toHaveBeenCalledWith(
       "demo@example.com", "7", { id: "31", cacheKey }, file,
     ));
     const row = await screen.findByRole("button", { name: "文件 research.txt" });
     await waitFor(() => expect(row).toBeEnabled());
-    fireEvent.click(row);
-    expect(screen.queryByLabelText("本轮引用的文件")).not.toBeInTheDocument();
-    const transfer = dragTransfer();
-    fireEvent.dragStart(row, { dataTransfer: transfer });
-    fireEvent.drop(screen.getByRole("textbox", { name: "消息内容" }), { dataTransfer: transfer });
-    expect(screen.getByLabelText("本轮引用的文件")).toHaveTextContent("research.txt");
+    await waitFor(() => expect(screen.getByLabelText("本轮引用的文件")).toHaveTextContent("research.txt"));
 
     fireEvent.click(screen.getByRole("button", { name: "Agent 任务" }));
     fireEvent.change(screen.getByRole("textbox", { name: "消息内容" }), { target: { value: "阅读这份资料" } });
@@ -376,12 +398,55 @@ describe("workbench model selection", () => {
     ));
   });
 
+  it("keeps a file-panel upload in the workspace without attaching it to the message", async () => {
+    const cacheKey = "b".repeat(64);
+    const uploadedFile = { id: "32", cacheKey, name: "notes.txt", sizeBytes: 8, documentId: null, image: false };
+    mocks.listProjects.mockResolvedValue([{ id: 7, name: "我的工作区" }]);
+    mocks.listFiles.mockResolvedValue([uploadedFile]);
+    mocks.uploadFile.mockResolvedValue({ files: [{ sourceFileId: "32", cacheKey, fileName: "notes.txt" }] });
+    mocks.listModels.mockResolvedValue([
+      { id: "deepseek-chat", providerId: "deepseek", displayName: "DeepSeek", askSupported: true, agentSupported: true },
+    ]);
+    render(<ChatWorkbenchClient />);
+
+    const file = new File(["资料内容"], "notes.txt", { type: "text/plain" });
+    await waitFor(() => expect(screen.getByLabelText("选择上传文件")).toBeInTheDocument());
+    fireEvent.change(screen.getByLabelText("选择上传文件"), { target: { files: [file] } });
+    await waitFor(() => expect(mocks.uploadFile).toHaveBeenCalledWith("7", file, "deepseek-chat"));
+    await screen.findByRole("button", { name: "文件 notes.txt" });
+    expect(screen.queryByLabelText("本轮引用的文件")).not.toBeInTheDocument();
+  });
+
+  it("attaches a local image from the composer for the selected vision model", async () => {
+    const cacheKey = "c".repeat(64);
+    mocks.listProjects.mockResolvedValue([{ id: 7, name: "我的工作区" }]);
+    mocks.listFiles.mockResolvedValue([{ id: "33", cacheKey, name: "photo.png", sizeBytes: 128,
+      documentId: null, image: true }]);
+    mocks.uploadFile.mockResolvedValue({ files: [{ sourceFileId: "33", cacheKey, fileName: "photo.png",
+      mimeType: "image/png" }] });
+    mocks.listModels.mockResolvedValue([
+      { id: "openai/gpt-6-luna", providerId: "openrouter", displayName: "GPT Vision",
+        askSupported: true, agentSupported: true, imageSupported: true },
+    ]);
+    render(<ChatWorkbenchClient />);
+
+    const image = new File(["png"], "photo.png", { type: "image/png" });
+    fireEvent.change(await screen.findByLabelText("选择要上传到工作区的文件"), { target: { files: [image] } });
+    await waitFor(() => expect(screen.getByLabelText("本轮引用的文件")).toHaveTextContent("photo.png"));
+    fireEvent.change(screen.getByRole("textbox", { name: "消息内容" }), { target: { value: "描述图片" } });
+    fireEvent.click(screen.getByRole("button", { name: "发送消息" }));
+    await waitFor(() => expect(mocks.stream).toHaveBeenCalledWith(
+      "9", expect.objectContaining({ imageCacheKeys: [cacheKey], message: "描述图片" }),
+      expect.any(Object), expect.any(AbortSignal),
+    ));
+  });
+
   it("routes a dragged image through imageCacheKeys", async () => {
     const cacheKey = "c".repeat(64);
     mocks.listProjects.mockResolvedValue([{ id: 7, name: "我的工作区" }]);
     mocks.listFiles.mockResolvedValue([{ id: "22", cacheKey, name: "photo.png", sizeBytes: 1024, documentId: null, image: true }]);
     mocks.listModels.mockResolvedValue([
-      { id: "openai/gpt-4.1", providerId: "openai", displayName: "GPT-4.1", askSupported: true, agentSupported: true },
+      { id: "openai/gpt-6-luna", providerId: "openrouter", displayName: "GPT Vision", askSupported: true, agentSupported: true },
     ]);
     render(<ChatWorkbenchClient />);
 
@@ -397,6 +462,30 @@ describe("workbench model selection", () => {
       expect.any(Object), expect.any(AbortSignal),
     ));
     expect(mocks.stream.mock.calls[0][1]).not.toHaveProperty("fileCacheKeys");
+  });
+
+  it("blocks image upload and attachment while DeepSeek is selected", async () => {
+    const cacheKey = "d".repeat(64);
+    mocks.listProjects.mockResolvedValue([{ id: 7, name: "我的工作区" }]);
+    mocks.listFiles.mockResolvedValue([{ id: "23", cacheKey, name: "photo.png", sizeBytes: 1024, documentId: null, image: true }]);
+    mocks.listModels.mockResolvedValue([
+      { id: "deepseek-chat", providerId: "deepseek", displayName: "DeepSeek", askSupported: true, agentSupported: true },
+    ]);
+    render(<ChatWorkbenchClient />);
+
+    await screen.findByRole("button", { name: "文件 photo.png" });
+    const composerInput = screen.getByLabelText("选择要上传到工作区的文件");
+    expect((composerInput as HTMLInputElement).accept).not.toContain(".png");
+    const image = new File(["png"], "photo.png", { type: "image/png" });
+    fireEvent.change(composerInput, { target: { files: [image] } });
+    expect((await screen.findAllByText(/当前模型不支持图片，请先切换/)).length).toBeGreaterThan(0);
+    expect(mocks.uploadFile).not.toHaveBeenCalled();
+
+    const row = screen.getByRole("button", { name: "文件 photo.png" });
+    const transfer = dragTransfer();
+    fireEvent.dragStart(row, { dataTransfer: transfer });
+    fireEvent.drop(screen.getByRole("textbox", { name: "消息内容" }), { dataTransfer: transfer });
+    expect(screen.queryByLabelText("本轮引用的文件")).not.toBeInTheDocument();
   });
 
   it("drags a Markdown draft into the composer as Agent document context", async () => {

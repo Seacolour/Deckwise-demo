@@ -49,6 +49,15 @@ describe("workbench API", () => {
     expect(body.get("files")).toBe(file);
   });
 
+  it("passes the selected vision model for image uploads", async () => {
+    fetchMock.mockResolvedValue({ files: [] });
+    const image = new File(["png"], "photo.png", { type: "image/png" });
+    await uploadWorkbenchFile("7", image, "openai/gpt-6-luna");
+    expect(fetchMock).toHaveBeenCalledWith("/files/upload/batch", expect.objectContaining({
+      params: { projectId: "7", uploadSource: "user_upload", model: "openai/gpt-6-luna" },
+    }));
+  });
+
   it("requests an authorized temporary URL for physical file preview", async () => {
     fetchMock.mockResolvedValue({ accessUrl: "https://example.com/file.txt?token=test" });
     await expect(getWorkbenchFilePreviewUrl("7", "21")).resolves.toBe("https://example.com/file.txt?token=test");
@@ -82,6 +91,20 @@ describe("workbench API", () => {
     await expect(listWorkbenchMessages("99")).resolves.toEqual([
       { id: "1", kind: "user", text: "你好" },
       { id: "assistant-3", kind: "assistant", parts: [{ id: "3", kind: "text", text: "你好，我来帮你。" }] },
+    ]);
+  });
+
+  it("restores attachments on their user message after refreshing history", async () => {
+    fetchMock.mockResolvedValue([
+      { id: 1, seq: 1, role: "user", type: "text", content: "你能看到这个文档吗？",
+        attachments: [{ kind: "file", name: "agent-capabilities-roadmap.docx", fileId: "42", cacheKey: "a".repeat(64) }] },
+      { id: 2, seq: 2, role: "assistant", type: "text", content: "可以。" },
+    ]);
+    await expect(listWorkbenchMessages("9")).resolves.toEqual([
+      { id: "1", kind: "user", text: "你能看到这个文档吗？", attachments: [
+        { kind: "file", name: "agent-capabilities-roadmap.docx", fileId: "42", cacheKey: "a".repeat(64) },
+      ] },
+      { id: "assistant-2", kind: "assistant", parts: [{ id: "2", kind: "text", text: "可以。" }] },
     ]);
   });
 

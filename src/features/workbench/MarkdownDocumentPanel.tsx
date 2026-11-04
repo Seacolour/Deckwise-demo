@@ -21,6 +21,7 @@ type Props = {
   files: WorkbenchFile[];
   filesLoading: boolean;
   fileUploading: boolean;
+  allowImageUpload: boolean;
   fileError: string | null;
   activeDocument: DocumentDTO | null;
   activeDocumentId: string | null;
@@ -40,7 +41,7 @@ type Props = {
 };
 
 export function MarkdownDocumentPanel({
-  open, projectId, projectName, userKey, view, documents, files, filesLoading, fileUploading, fileError,
+  open, projectId, projectName, userKey, view, documents, files, filesLoading, fileUploading, allowImageUpload, fileError,
   activeDocument, activeDocumentId, draft, loading, busy, error,
   onClose, onViewChange, onCreate, onUploadFile, onRefreshFiles, onSelect, onChange, onSave, onRefresh,
 }: Props) {
@@ -177,7 +178,9 @@ export function MarkdownDocumentPanel({
             </div>
           </div>
           <input ref={uploadRef} className={styles.hiddenInput} type="file" aria-label="选择上传文件"
-            accept=".md,.txt,.json,.pdf,.docx,.png,.jpg,.jpeg,.webp,.gif"
+            accept={allowImageUpload
+              ? ".md,.txt,.json,.pdf,.docx,.png,.jpg,.jpeg,.webp,.gif"
+              : ".md,.txt,.json,.pdf,.docx"}
             onChange={(event) => void upload(event.target.files?.[0])} />
           {creating && <form className={styles.createForm} onSubmit={(event) => void create(event)}>
             <input aria-label="新文档标题" value={newTitle} onChange={(event) => setNewTitle(event.target.value)}

@@ -6,7 +6,9 @@ import {
   listModelCredentialStatuses,
   notifyModelCredentialsChanged,
   saveModelCredential,
+  testModelCredential,
   type ModelCredentialStatus,
+  type ModelCredentialTestResult,
   type ModelProviderId,
 } from "@/src/lib/api/modelProviders";
 
@@ -25,6 +27,7 @@ export function ModelProviderSettingsContent() {
   const [apiKey, setApiKey] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  const [testResult, setTestResult] = useState<ModelCredentialTestResult | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -40,11 +43,13 @@ export function ModelProviderSettingsContent() {
     setError(null);
     setNotice(null);
     setConfirmDelete(null);
+    setTestResult(null);
     setEditingProvider(providerId);
   };
 
   const cancelEditing = () => {
     setApiKey("");
+    setTestResult(null);
     setEditingProvider(null);
   };
 
@@ -60,6 +65,7 @@ export function ModelProviderSettingsContent() {
       setStatuses((previous) => [...previous.filter((item) => item.providerId !== providerId), updated]);
       cancelEditing();
       setNotice(`${PROVIDERS.find((provider) => provider.id === providerId)?.name} 密钥已保存。`);
+      setTestResult(null);
       notifyModelCredentialsChanged();
     } catch {
       // Do not surface transport errors that might echo a submitted secret.
@@ -81,9 +87,25 @@ export function ModelProviderSettingsContent() {
         : item));
       setConfirmDelete(null);
       setNotice(`${PROVIDERS.find((provider) => provider.id === providerId)?.name} 密钥已移除。`);
+      setTestResult(null);
       notifyModelCredentialsChanged();
     } catch {
       setError("移除密钥失败，请稍后重试。");
+    } finally {
+      setBusyProvider(null);
+    }
+  };
+
+  const test = async (providerId: ModelProviderId, candidateKey?: string) => {
+    if (busyProvider) return;
+    setBusyProvider(providerId);
+    setError(null);
+    setNotice(null);
+    setTestResult(null);
+    try {
+      setTestResult(await testModelCredential(providerId, candidateKey));
+    } catch {
+      setError("测试请求失败，请检查网络或后端服务后重试。");
     } finally {
       setBusyProvider(null);
     }
@@ -94,10 +116,10 @@ export function ModelProviderSettingsContent() {
       <div>
         <h2 id="model-provider-settings-title" className="text-[14px] font-semibold leading-5 text-foreground">模型提供商</h2>
         <p className="mt-1 text-[13px] leading-5 text-muted-foreground">
-          添加自己的 API Key 后才能在对话中选择对应模型。密钥由后端加密保存，页面只显示末尾几位。
+          添加自己的 API Key 后才能在对话中选择对应模型。密钥由后端加密保存，页面只显示末尾几位。测试连接会发送一次极短的模型请求，可能产生少量费用。
         </p>
       </div>
-      {PROVIDERS.map((provider) => {
+      {(loading ? PROVIDERS : PROVIDERS.filter((provider) => statuses.some((item) => item.providerId === provider.id))).map((provider) => {
         const status = statuses.find((item) => item.providerId === provider.id);
         const configured = status?.configured === true;
         return (
@@ -116,6 +138,9 @@ export function ModelProviderSettingsContent() {
                   <button type="button" className="rounded-lg border border-border px-3 py-1.5 text-[13px] hover:bg-muted" disabled={Boolean(busyProvider)} onClick={() => beginEditing(provider.id)}>
                     {configured ? "更换密钥" : "设置密钥"}
                   </button>
+                  {configured && <button type="button" className="rounded-lg border border-border px-3 py-1.5 text-[13px] hover:bg-muted" disabled={Boolean(busyProvider)} onClick={() => void test(provider.id)}>
+                    {busyProvider === provider.id ? "测试中…" : "测试连接"}
+                  </button>}
                   {configured && <button type="button" className="rounded-lg px-2 py-1.5 text-[13px] text-destructive hover:bg-muted" disabled={Boolean(busyProvider)} onClick={() => setConfirmDelete(provider.id)}>
                     移除
                   </button>}
@@ -123,11 +148,17 @@ export function ModelProviderSettingsContent() {
               ) : null}
             </div>
             {editingProvider === provider.id && <form className="mt-4 flex flex-wrap items-center gap-2" onSubmit={(event) => void save(event, provider.id)}>
-              <input type="password" autoComplete="off" aria-label={`${provider.name} API Key`} value={apiKey} onChange={(event) => setApiKey(event.target.value)}
+              <input type="password" autoComplete="off" aria-label={`${provider.name} API Key`} value={apiKey} onChange={(event) => { setApiKey(event.target.value); setTestResult(null); }}
                 className="h-9 min-w-[180px] flex-1 rounded-md border border-border bg-background px-3 text-[13px] outline-none focus:ring-2 focus:ring-ring/35" placeholder="输入新的 API Key" disabled={Boolean(busyProvider)} />
               <button type="submit" className="h-9 rounded-md bg-primary px-3 text-[12px] text-primary-foreground disabled:opacity-50" disabled={!apiKey.trim() || Boolean(busyProvider)}>保存</button>
+              <button type="button" className="h-9 rounded-md border border-border px-3 text-[12px] disabled:opacity-50" disabled={!apiKey.trim() || Boolean(busyProvider)} onClick={() => void test(provider.id, apiKey.trim())}>
+                {busyProvider === provider.id ? "测试中…" : "测试 Key"}
+              </button>
               <button type="button" className="h-9 px-2 text-[12px] text-muted-foreground" onClick={cancelEditing} disabled={Boolean(busyProvider)}>取消</button>
             </form>}
+            {testResult?.providerId === provider.id && <p role="status" className={`mt-2 text-[12px] ${testResult.status === "valid" ? "text-emerald-700 dark:text-emerald-300" : "text-destructive"}`}>
+              {testResult.message}
+            </p>}
             {confirmDelete === provider.id && <div className="mt-4 flex flex-wrap items-center gap-2 text-[12px]">
               <span>移除后，此提供商的模型将不可用。确定移除？</span>
               <button type="button" className="rounded-md bg-destructive px-3 py-1.5 text-destructive-foreground disabled:opacity-50" disabled={Boolean(busyProvider)} onClick={() => void remove(provider.id)}>确认移除</button>
