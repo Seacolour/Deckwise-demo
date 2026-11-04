@@ -10,6 +10,7 @@ export const SETTINGS_CENTER_SECTIONS = [
   "account",
   "general",
   "models",
+  "plugins",
   "personalization",
 ] as const;
 

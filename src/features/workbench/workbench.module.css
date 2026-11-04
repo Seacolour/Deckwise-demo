@@ -33,6 +33,8 @@
 .newButton { display: flex; flex: none; align-items: center; justify-content: center; gap: 7px; width: 100%; height: 38px; padding: 0 12px; border: 1px solid #e5e7eb; border-radius: 9px; background: #fff; color: #353f4d; font-size: 13px; font-weight: 600; text-align: center; transition: background .15s, border-color .15s; }
 .newButton:hover:not(:disabled) { border-color: #d2d8e3; background: #eef0f3; }
 .sidebarCollapsed .newButton { width: 36px; height: 36px; padding: 0; }
+.pluginShortcut { flex: none; margin-top: 8px; text-decoration: none; }
+.sidebarCollapsed .pluginShortcut { justify-content: center; width: 36px; padding: 0; }
 .sidebarBrowser { flex: 1; min-height: 0; overflow-y: auto; margin-top: 15px; padding-right: 1px; scrollbar-gutter: stable; }
 .sidebarCollapsed .sidebarBrowser { width: 100%; padding: 0; }
 .sectionHeader { display: flex; align-items: center; gap: 4px; height: 36px; margin: 0 0 5px; padding: 0 3px; }

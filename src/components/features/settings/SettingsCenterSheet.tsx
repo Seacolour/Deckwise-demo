@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import {
   Database,
   Mail,
+  Puzzle,
   Shapes,
   SlidersHorizontal,
   UserRound,
@@ -14,6 +15,7 @@ import { AppCenteredSheet } from "@/src/components/_shared/ui/AppCenteredSheet";
 import { AccountSettingsContent } from "@/src/components/features/settings/AccountSettingsContent";
 import { GeneralSettingsContent } from "@/src/components/features/settings/GeneralSettingsContent";
 import { ModelProviderSettingsContent } from "@/src/components/features/settings/ModelProviderSettingsContent";
+import { AgentPluginsSettingsContent } from "@/src/components/features/settings/AgentPluginsSettingsContent";
 import { PersonalizationSettingsContent } from "@/src/components/features/settings/PersonalizationSettingsContent";
 import {
   resolveUserDisplayName,
@@ -126,6 +128,8 @@ export function SettingsCenterSheet({
         return t("general");
       case "models":
         return t("models");
+      case "plugins":
+        return t("plugins");
       case "personalization":
         return t("title");
     }
@@ -139,6 +143,8 @@ export function SettingsCenterSheet({
         return t("generalSubtitle");
       case "models":
         return "";
+      case "plugins":
+        return t("pluginsSubtitle");
       case "personalization":
         return t("subtitle");
     }
@@ -148,6 +154,7 @@ export function SettingsCenterSheet({
     { icon: UserRound, label: t("account"), section: "account" as const },
     { icon: SlidersHorizontal, label: t("general"), section: "general" as const },
     { icon: Database, label: t("models"), section: "models" as const },
+    { icon: Puzzle, label: t("plugins"), section: "plugins" as const },
     { icon: Shapes, label: t("title"), section: "personalization" as const },
   ];
 
@@ -208,6 +215,8 @@ export function SettingsCenterSheet({
                     <GeneralSettingsContent />
                   ) : activeSection === "models" ? (
                     <ModelProviderSettingsContent />
+                  ) : activeSection === "plugins" ? (
+                    <AgentPluginsSettingsContent />
                   ) : activeSection === "personalization" ? (
                     <PersonalizationSettingsContent
                       profileName={profileName}

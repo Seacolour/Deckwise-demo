@@ -15,6 +15,8 @@ Open `http://localhost:3000`. When Backend API contracts change, run `npm run ap
 
 For the Java Demo Backend, the example target is `http://localhost:8104`. To use the [FastAPI + LangGraph Python backend](https://github.com/Seacolour/Deckwise-backend-Python), set `API_PROXY_TARGET=http://127.0.0.1:8000` and follow that repository's PostgreSQL, Redis, and model credential setup. The workbench can then show project files, document editing, JSON tools, image questions, and conversation attachments.
 
+The Python backend's optional Notion MCP connection starts from **Plugins → MCP plugins**. Set its `NOTION_MCP_REDIRECT_URI` to this Web origin plus `/oauth/notion-mcp/callback` (the local default is `http://localhost:3000/oauth/notion-mcp/callback`). Authorization is per user; the Notion connection and plugin switch are separate. When both are active, the Agent can search and read that user's Notion pages through two allowlisted MCP tools.
+
 For a production build check, supply a non-`local` public Backend signature:
 
 ```powershell

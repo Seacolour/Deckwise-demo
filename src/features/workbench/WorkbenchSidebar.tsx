@@ -3,7 +3,7 @@
 import { useEffect, useState, type FormEvent } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import Link from "next/link";
-import { ArrowDownAZ, ChevronDown, ChevronRight, FolderClosed, FolderPlus, LogOut, MessageSquare, MessageSquarePlus, MoreHorizontal, PanelLeftClose, PanelLeftOpen, Pencil, Plus, Search, Send, Settings2, Sparkles, Trash2, UserRound, X } from "lucide-react";
+import { ArrowDownAZ, ChevronDown, ChevronRight, FolderClosed, FolderPlus, LogOut, MessageSquare, MessageSquarePlus, MoreHorizontal, PanelLeftClose, PanelLeftOpen, Pencil, Plus, Puzzle, Search, Send, Settings2, Sparkles, Trash2, UserRound, X } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/src/components/_shared/ui/dropdown-menu";
 import { logoutCurrentSession } from "@/src/lib/auth/logout";
 import { resolveLogoutRedirectPath } from "@/src/lib/auth/logoutRedirect";
@@ -170,6 +170,12 @@ export function WorkbenchSidebar({
         <Plus size={18} strokeWidth={1.9} />
         {wide && <span>新建对话</span>}
       </button>
+
+      <Link href="/app/settings/plugins" className={`${styles.navItem} ${styles.pluginShortcut}`}
+        onClick={onCloseMobile} title={!wide ? "插件" : undefined} aria-label="插件">
+        <Puzzle size={17} strokeWidth={1.9} aria-hidden="true" />
+        {wide && <span>插件</span>}
+      </Link>
 
       <div className={styles.sidebarBrowser}>
         {wide && <div className={styles.sectionHeader}>

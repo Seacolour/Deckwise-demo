@@ -27,6 +27,10 @@ vi.mock("@/src/components/features/settings/ModelProviderSettingsContent", () =>
   ModelProviderSettingsContent: () => <div>Model provider settings content</div>,
 }));
 
+vi.mock("@/src/components/features/settings/AgentPluginsSettingsContent", () => ({
+  AgentPluginsSettingsContent: () => <div>Agent plugins settings content</div>,
+}));
+
 vi.mock("@/src/stores/auth", () => ({
   useAuthSnapshot: () => ({
     rawUser: {
@@ -84,5 +88,12 @@ describe("SettingsCenterSheet", () => {
 
     expect(await screen.findByText("Model provider settings content")).toBeInTheDocument();
     expect(window.location.hash).toBe("#settings/models");
+  });
+
+  it("opens MCP plugins and Skills from one settings entry", async () => {
+    render(<SettingsCenterSheet open section="account" urlMode="hash" />);
+    fireEvent.click(screen.getByRole("button", { name: "Plugins" }));
+    expect(await screen.findByText("Agent plugins settings content")).toBeInTheDocument();
+    expect(window.location.hash).toBe("#settings/plugins");
   });
 });
