@@ -37,6 +37,13 @@
 .createForm input { padding: 0 10px; }
 .createForm button, .footer button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 35px; padding: 0 10px; border: 0; border-radius: 8px; background: #2865df; color: #fff; font-size: 12px; font-weight: 600; }
 .createForm button:disabled, .footer button:disabled { background: #c8d2e2; cursor: not-allowed; }
+.notionForm { display: flex; flex-direction: column; gap: 8px; padding: 10px 18px; }
+.notionForm > p { margin: 0; color: #708092; font-size: 11px; line-height: 1.5; }
+.notionForm input { width: 100%; height: 34px; padding: 0 10px; border: 1px solid #dfe5ed; border-radius: 8px; background: #fff; color: #263445; font-size: 12px; }
+.notionForm > div { display: flex; justify-content: flex-end; gap: 6px; }
+.notionForm button { min-height: 30px; padding: 0 10px; border: 1px solid #dbe5f3; border-radius: 7px; background: #fff; color: #3767b6; font: inherit; font-size: 11px; cursor: pointer; }
+.notionForm button[type="submit"] { background: #f5f8fe; font-weight: 600; }
+.notionForm button:disabled { opacity: .55; cursor: not-allowed; }
 .detailToolbar { display: flex; flex: none; align-items: center; gap: 10px; min-height: 50px; padding: 7px 14px; border-bottom: 1px solid #e9edf1; }
 .detailToolbar strong { flex: 1; min-width: 0; overflow: hidden; color: #364659; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
 .backButton { display: inline-flex; align-items: center; gap: 5px; flex: none; padding: 5px 7px; border: 0; border-radius: 7px; background: transparent; color: #64758a; font-size: 12px; cursor: pointer; }

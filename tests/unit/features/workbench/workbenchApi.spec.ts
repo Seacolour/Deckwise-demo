@@ -7,6 +7,7 @@ import {
   createWorkbenchSession,
   getWorkbenchFilePreviewUrl,
   getWorkbenchInlinePreviewPath,
+  importWorkbenchNotionPage,
   listWorkbenchFiles,
   listWorkbenchMessages,
   listWorkbenchProjects,
@@ -30,9 +31,12 @@ describe("workbench API", () => {
     fetchMock.mockResolvedValue([
       { id: "21", fileName: "photo.png", cacheKey, sizeBytes: 1024 },
       { id: "22", fileName: "incomplete.txt" },
+      { id: "23", fileName: "Notion 页面.md", cacheKey, sourceId: "page-123", sourceType: "notion", sizeBytes: 20 },
     ]);
     await expect(listWorkbenchFiles("7")).resolves.toEqual([
       { id: "21", name: "photo.png", cacheKey, sizeBytes: 1024, documentId: null, image: true },
+      { id: "23", name: "Notion 页面.md", cacheKey, sizeBytes: 20,
+        documentId: null, image: false, sourceType: "notion" },
     ]);
     expect(fetchMock).toHaveBeenCalledWith("/projects/7/files", { requestPolicy: "query" });
   });
@@ -56,6 +60,15 @@ describe("workbench API", () => {
     expect(fetchMock).toHaveBeenCalledWith("/files/upload/batch", expect.objectContaining({
       params: { projectId: "7", uploadSource: "user_upload", model: "openai/gpt-6-luna" },
     }));
+  });
+
+  it("imports an explicit Notion page into the selected project", async () => {
+    fetchMock.mockResolvedValue({ pageId: "abc", file: { sourceFileId: "22" } });
+    await importWorkbenchNotionPage("7", "https://app.notion.com/p/abc");
+    expect(fetchMock).toHaveBeenCalledWith("/notion/pages/import", {
+      method: "POST", body: { projectId: 7, pageIdOrUrl: "https://app.notion.com/p/abc" },
+      requestPolicy: "mutation",
+    });
   });
 
   it("requests an authorized temporary URL for physical file preview", async () => {
@@ -123,6 +136,25 @@ describe("workbench API", () => {
         { id: "2", kind: "text", text: "我先查看文件。" },
         { id: "3", kind: "tool", name: "file_list", callId: "c1", argumentsRaw: "{}", resultRaw: '{"files":[]}', status: "completed" },
         { id: "5", kind: "text", text: "目前没有文件。" },
+      ] },
+    ]);
+  });
+
+  it("restores a paired Todo update after refreshing conversation history", async () => {
+    const result = '{"success":true,"todos":[{"content":"读取资料","status":"completed"},{"content":"整理结论","status":"pending"}]}';
+    fetchMock.mockResolvedValue([
+      { id: 1, seq: 1, role: "user", type: "text", content: "整理资料并生成结论" },
+      { id: 2, seq: 2, role: "tool", type: "tool_output",
+        content: JSON.stringify({ type: "tool_call", name: "write_todos", call_id: "plan-1", arguments_json: "{}" }) },
+      { id: 3, seq: 3, role: "tool", type: "tool_output",
+        content: JSON.stringify({ type: "tool_result", name: "write_todos", call_id: "plan-1", result_json: result }) },
+    ]);
+    const entries = await listWorkbenchMessages("9");
+    expect(entries).toEqual([
+      { id: "1", kind: "user", text: "整理资料并生成结论" },
+      { id: "assistant-2", kind: "assistant", parts: [
+        { id: "2", kind: "tool", name: "write_todos", callId: "plan-1",
+          argumentsRaw: "{}", resultRaw: result, status: "completed" },
       ] },
     ]);
   });

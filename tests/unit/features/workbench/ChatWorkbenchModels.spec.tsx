@@ -15,6 +15,7 @@ const mocks = vi.hoisted(() => ({
   listDocuments: vi.fn(),
   listFiles: vi.fn(),
   uploadFile: vi.fn(),
+  importNotion: vi.fn(),
   getFilePreviewUrl: vi.fn(),
   loadPreviewBlob: vi.fn(),
   cacheFile: vi.fn(),
@@ -35,6 +36,7 @@ vi.mock("@/src/features/workbench/workbenchApi", () => ({
   listWorkbenchMessages: mocks.listMessages,
   listWorkbenchFiles: mocks.listFiles,
   uploadWorkbenchFile: mocks.uploadFile,
+  importWorkbenchNotionPage: mocks.importNotion,
   getWorkbenchFilePreviewUrl: mocks.getFilePreviewUrl,
   getWorkbenchInlinePreviewPath: (projectId: string, file: { id: string; name: string }) =>
     `/api/workbench/files/${file.id}/preview?projectId=${projectId}&kind=${file.name.split(".").at(-1)}`,
@@ -85,6 +87,7 @@ describe("workbench model selection", () => {
     mocks.listDocuments.mockResolvedValue([]);
     mocks.listFiles.mockResolvedValue([]);
     mocks.uploadFile.mockResolvedValue(undefined);
+    mocks.importNotion.mockResolvedValue({ pageId: "abc", file: { sourceFileId: "40" } });
     mocks.getFilePreviewUrl.mockResolvedValue("https://example.com/preview.txt");
     mocks.loadPreviewBlob.mockResolvedValue(new Blob(["测试"], { type: "text/plain" }));
     URL.createObjectURL = vi.fn(() => "blob:preview-test");
@@ -414,6 +417,27 @@ describe("workbench model selection", () => {
     fireEvent.change(screen.getByLabelText("选择上传文件"), { target: { files: [file] } });
     await waitFor(() => expect(mocks.uploadFile).toHaveBeenCalledWith("7", file, "deepseek-chat"));
     await screen.findByRole("button", { name: "文件 notes.txt" });
+    expect(screen.queryByLabelText("本轮引用的文件")).not.toBeInTheDocument();
+  });
+
+  it("imports a user-selected Notion page snapshot into the current workspace", async () => {
+    mocks.listProjects.mockReset().mockResolvedValue([{ id: 7, name: "我的工作区" }]);
+    mocks.listModels.mockResolvedValue([{ id: "deepseek-chat", providerId: "deepseek",
+      displayName: "DeepSeek", askSupported: true, agentSupported: true }]);
+    render(<ChatWorkbenchClient />);
+
+    await waitFor(() => expect(mocks.listSessions).toHaveBeenCalledWith("7"));
+    const notionButton = await screen.findByRole("button", { name: "从 Notion 导入" });
+    await waitFor(() => expect(notionButton).toBeEnabled());
+    fireEvent.click(notionButton);
+    fireEvent.change(screen.getByRole("textbox", { name: "Notion 页面链接或 ID" }), {
+      target: { value: "0123456789abcdef0123456789abcdef" },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "导入页面" }));
+    await waitFor(() => expect(mocks.importNotion).toHaveBeenCalledWith(
+      "7", "0123456789abcdef0123456789abcdef",
+    ));
+    expect(await screen.findByRole("status")).toHaveTextContent("Notion 页面快照已导入工作区文件");
     expect(screen.queryByLabelText("本轮引用的文件")).not.toBeInTheDocument();
   });
 

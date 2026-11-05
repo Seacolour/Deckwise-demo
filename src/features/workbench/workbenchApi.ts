@@ -26,6 +26,7 @@ export type WorkbenchFile = {
   sizeBytes: number | null;
   documentId: string | null;
   image: boolean;
+  sourceType?: string;
 };
 
 export async function listWorkbenchFiles(projectId: string): Promise<WorkbenchFile[]> {
@@ -44,6 +45,7 @@ export async function listWorkbenchFiles(projectId: string): Promise<WorkbenchFi
       sizeBytes: file.sizeBytes ?? null,
       documentId: file.documentId == null ? null : String(file.documentId),
       image: /\.(?:png|jpe?g|webp|gif)$/i.test(name) || /\.(?:png|jpe?g|webp|gif)$/i.test(file.objectKey ?? ""),
+      ...("sourceType" in file && file.sourceType === "notion" ? { sourceType: "notion" } : {}),
     }];
   });
 }
@@ -56,6 +58,22 @@ export async function uploadWorkbenchFile(projectId: string, file: File, modelId
     params: { projectId, uploadSource: "user_upload", ...(modelId ? { model: modelId } : {}) },
     body,
     requestPolicy: "upload",
+  });
+}
+
+export type NotionPageImportResult = {
+  pageId: string;
+  pageUrl: string;
+  title: string;
+  snapshotLastEditedAt: string | null;
+  file: { sourceFileId: string; cacheKey: string; fileName: string };
+};
+
+export async function importWorkbenchNotionPage(projectId: string, pageIdOrUrl: string): Promise<NotionPageImportResult> {
+  return apiFetchWithAuth<NotionPageImportResult>("/notion/pages/import", {
+    method: "POST",
+    body: { projectId: Number(projectId), pageIdOrUrl },
+    requestPolicy: "mutation",
   });
 }
 

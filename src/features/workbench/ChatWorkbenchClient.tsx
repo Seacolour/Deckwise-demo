@@ -24,6 +24,7 @@ import {
   deleteWorkbenchProject,
   listWorkbenchMessages,
   listWorkbenchFiles,
+  importWorkbenchNotionPage,
   listWorkbenchProjects,
   listWorkbenchSessions,
   renameWorkbenchProject,
@@ -348,6 +349,20 @@ export default function ChatWorkbenchClient() {
       setFileError(messageOf(cause));
       setError(messageOf(cause));
       throw cause;
+    } finally {
+      setFileUploading(false);
+    }
+  };
+
+  const importNotionPage = async (pageIdOrUrl: string) => {
+    if (!projectId || sending || documentSaving || fileUploading || loading) {
+      throw new Error("请先选择工作区并等待当前任务完成");
+    }
+    setFileUploading(true);
+    setFileError(null);
+    try {
+      await importWorkbenchNotionPage(projectId, pageIdOrUrl);
+      await refreshWorkspaceFiles(projectId);
     } finally {
       setFileUploading(false);
     }
@@ -943,7 +958,8 @@ export default function ChatWorkbenchClient() {
         activeDocument={activeDocument} activeDocumentId={activeDocumentId} draft={documentDraft} loading={documentLoading}
         busy={sending || documentSaving || loading || fileUploading} error={documentError}
         onClose={() => setDocumentPanelOpen(false)} onCreate={createMarkdownDocument}
-        onUploadFile={uploadFile} onRefreshFiles={() => { if (projectId) void refreshWorkspaceFiles(projectId); }}
+        onUploadFile={uploadFile} onImportNotion={importNotionPage}
+        onRefreshFiles={() => { if (projectId) void refreshWorkspaceFiles(projectId); }}
         onSelect={selectDocument} onChange={setDocumentDraft}
         onSave={() => saveDocument().catch(() => null)}
         onRefresh={() => { if (activeDocumentId) void loadDocument(activeDocumentId); }} />

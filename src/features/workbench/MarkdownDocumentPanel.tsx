@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type DragEvent, type FormEvent } from "react";
-import { ArrowLeft, ExternalLink, Eye, File as FileIcon, FilePlus2, FileText, Image, Pencil, RefreshCw, Save, Upload, X } from "lucide-react";
+import { ArrowLeft, ExternalLink, Eye, File as FileIcon, FilePlus2, FileText, Image, Link2, Pencil, RefreshCw, Save, Upload, X } from "lucide-react";
 import type { DocumentDTO } from "@/src/lib/api/documents";
 import { getWorkbenchFilePreviewUrl, getWorkbenchInlinePreviewPath, type WorkbenchFile } from "./workbenchApi";
 import { loadWorkbenchPreviewFile } from "./workbenchFileCache";
@@ -33,6 +33,7 @@ type Props = {
   onViewChange: (view: "files" | "preview" | "editor") => void;
   onCreate: (title: string) => Promise<void>;
   onUploadFile: (file: File) => Promise<void>;
+  onImportNotion: (pageIdOrUrl: string) => Promise<void>;
   onRefreshFiles: () => void;
   onSelect: (id: string) => boolean;
   onChange: (value: string) => void;
@@ -43,10 +44,15 @@ type Props = {
 export function MarkdownDocumentPanel({
   open, projectId, projectName, userKey, view, documents, files, filesLoading, fileUploading, allowImageUpload, fileError,
   activeDocument, activeDocumentId, draft, loading, busy, error,
-  onClose, onViewChange, onCreate, onUploadFile, onRefreshFiles, onSelect, onChange, onSave, onRefresh,
+  onClose, onViewChange, onCreate, onUploadFile, onImportNotion, onRefreshFiles, onSelect, onChange, onSave, onRefresh,
 }: Props) {
   const [newTitle, setNewTitle] = useState("");
   const [creating, setCreating] = useState(false);
+  const [notionOpen, setNotionOpen] = useState(false);
+  const [notionReference, setNotionReference] = useState("");
+  const [notionBusy, setNotionBusy] = useState(false);
+  const [notionError, setNotionError] = useState<string | null>(null);
+  const [notionNotice, setNotionNotice] = useState<string | null>(null);
   const [selectedKey, setSelectedKey] = useState<string | null>(null);
   const [previewFile, setPreviewFile] = useState<WorkbenchFile | null>(null);
   const [filePreviewResult, setFilePreviewResult] = useState<{
@@ -112,6 +118,25 @@ export function MarkdownDocumentPanel({
     if (uploadRef.current) uploadRef.current.value = "";
   };
 
+  const importNotion = async (event: FormEvent) => {
+    event.preventDefault();
+    const reference = notionReference.trim();
+    if (!reference || !projectId || busy || notionBusy) return;
+    setNotionBusy(true);
+    setNotionError(null);
+    setNotionNotice(null);
+    try {
+      await onImportNotion(reference);
+      setNotionReference("");
+      setNotionOpen(false);
+      setNotionNotice("Notion 页面快照已导入工作区文件。");
+    } catch (cause) {
+      setNotionError(cause instanceof Error ? cause.message : "导入 Notion 页面失败");
+    } finally {
+      setNotionBusy(false);
+    }
+  };
+
   const dragDocument = (event: DragEvent<HTMLDivElement>, document: DocumentDTO) => {
     if (!projectId || document.id == null) return;
     const name = document.title?.trim() || `文档 ${document.id}`;
@@ -173,6 +198,8 @@ export function MarkdownDocumentPanel({
                 aria-label="刷新文件列表" title="刷新文件列表"><RefreshCw size={16} /></button>
               <button type="button" className={styles.uploadButton} onClick={() => uploadRef.current?.click()}
                 disabled={busy || fileUploading} aria-label="上传文件" title="上传文件到工作区"><Upload size={15} />上传文件</button>
+              <button type="button" className={styles.uploadButton} onClick={() => { setNotionOpen((value) => !value); setNotionError(null); }}
+                disabled={!projectId || busy || fileUploading} aria-label="从 Notion 导入" title="导入 Notion 页面快照"><Link2 size={15} />Notion</button>
               <button type="button" className={styles.iconButton} onClick={() => setCreating((previous) => !previous)}
                 disabled={busy} aria-label="新建 Markdown 文档" title="新建 Markdown 文档"><FilePlus2 size={16} /></button>
             </div>
@@ -187,10 +214,24 @@ export function MarkdownDocumentPanel({
               placeholder="新文档标题" maxLength={200} disabled={busy} />
             <button type="submit" disabled={busy || !newTitle.trim()} aria-label="创建文档"><FilePlus2 size={17} /></button>
           </form>}
+          {notionOpen && <form className={styles.notionForm} onSubmit={(event) => void importNotion(event)}>
+            <p>输入你有权访问的 Notion 页面链接或 ID。导入当前快照；图片和附件链接仍指向 Notion，可能过期。</p>
+            <input aria-label="Notion 页面链接或 ID" value={notionReference} maxLength={500}
+              placeholder="粘贴 Notion 页面链接或 ID" disabled={notionBusy || busy}
+              onChange={(event) => setNotionReference(event.target.value)} />
+            <div>
+              <button type="button" onClick={() => setNotionOpen(false)} disabled={notionBusy}>取消</button>
+              <button type="submit" disabled={!notionReference.trim() || notionBusy || busy}>
+                {notionBusy ? "导入中…" : "导入页面"}
+              </button>
+            </div>
+            {notionError && <p className={styles.error} role="alert">{notionError}</p>}
+          </form>}
+          {notionNotice && <p className={styles.note} role="status">{notionNotice}</p>}
           {fileError && <p className={styles.error} role="alert">{fileError}</p>}
           {error && <p className={styles.error} role="alert">{error}</p>}
           {filesLoading && <p className={styles.note}>正在载入文件…</p>}
-          {fileUploading && <p className={styles.note}>正在上传文件…</p>}
+          {fileUploading && <p className={styles.note}>正在添加文件…</p>}
           <div className={styles.fileList} aria-label="当前工作区文件">
             {documents.filter((document) => document.id != null).map((document) => {
               const id = String(document.id);
@@ -225,7 +266,7 @@ export function MarkdownDocumentPanel({
                   onDoubleClick={() => openPhysicalFile(file)}>
                   <span className={styles.fileGlyph}><Icon size={17} /></span>
                   <span className={styles.fileName}>{file.name}</span>
-                  {file.sizeBytes != null && <span className={styles.fileMeta}>{file.sizeBytes < 1024
+                  {file.sourceType === "notion" ? <span className={styles.fileMeta}>Notion</span> : file.sizeBytes != null && <span className={styles.fileMeta}>{file.sizeBytes < 1024
                     ? `${file.sizeBytes} B` : file.sizeBytes < 1024 * 1024
                       ? `${Math.round(file.sizeBytes / 1024)} KB` : `${(file.sizeBytes / 1024 / 1024).toFixed(1)} MB`}</span>}
                 </button>
