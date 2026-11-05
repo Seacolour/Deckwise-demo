@@ -165,6 +165,18 @@
   color: #465263;
 }
 
+.todoCard { width: min(100%, 580px); overflow: hidden; border: 1px solid #dbe5f3; border-radius: 12px; background: #f8fbff; color: #344356; }
+.todoHeader { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-bottom: 1px solid #e4ebf5; font-size: 12px; font-weight: 650; }
+.todoHeader span { margin-left: auto; color: #6f7f92; font-size: 11px; font-weight: 500; }
+.todoList { display: flex; flex-direction: column; gap: 7px; margin: 0; padding: 10px 12px; list-style: none; }
+.todoList li { display: flex; align-items: flex-start; gap: 8px; font-size: 12px; line-height: 1.5; }
+.todoList li > span:first-child { flex: none; width: 16px; color: #8a97a5; text-align: center; }
+.todoList li > span:nth-child(2) { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.todoList small { flex: none; color: #7d8997; font-size: 11px; }
+.todoList .todo_in_progress > span:first-child { color: #3767b6; }
+.todoList .todo_completed > span:first-child { color: #3d8a64; }
+.todo_completed > span:nth-child(2) { color: #718193; }
+
 .toolSummary {
   display: flex;
   align-items: center;

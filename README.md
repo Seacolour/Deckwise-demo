@@ -17,6 +17,10 @@ For the Java Demo Backend, the example target is `http://localhost:8104`. To use
 
 The Python backend's optional Notion MCP connection starts from **Plugins → MCP plugins**. Set its `NOTION_MCP_REDIRECT_URI` to this Web origin plus `/oauth/notion-mcp/callback` (the local default is `http://localhost:3000/oauth/notion-mcp/callback`). Authorization is per user; the Notion connection and plugin switch are separate. When both are active, the Agent can search and read that user's Notion pages through two allowlisted MCP tools.
 
+With Notion connected, the workspace file panel also accepts a Notion page URL or ID for an explicit Markdown snapshot import. The imported file is available to file preview and Agent reads; later Notion edits do not synchronize automatically.
+
+For multi-step `AGENT` turns, the Python backend can emit `write_todos` updates. The conversation renders them as task progress cards and restores them from persisted tool events after refresh. `ASK` turns remain unplanned.
+
 For a production build check, supply a non-`local` public Backend signature:
 
 ```powershell

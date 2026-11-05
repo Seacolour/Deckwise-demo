@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type Ref } from "react";
-import { Check, ChevronDown, CircleStop, Copy, FileText, Image as ImageIcon, LoaderCircle, Paperclip, TriangleAlert, Wrench } from "lucide-react";
+import { Check, ChevronDown, CircleStop, Copy, FileText, Image as ImageIcon, ListTodo, LoaderCircle, Paperclip, TriangleAlert, Wrench } from "lucide-react";
 import { copyTextToClipboard } from "@/src/lib/clipboard/copyTextToClipboard";
 import { isHiddenAssistantText } from "./conversationText";
 import { WorkbenchMarkdown } from "./WorkbenchMarkdown";
@@ -99,9 +99,46 @@ function safeToolMetadata(part: ToolPart): ToolMetadata[] {
   return metadata;
 }
 
+type TodoDisplay = { content: string; status: "pending" | "in_progress" | "completed" };
+
+function safeTodos(part: ToolPart): TodoDisplay[] | null {
+  const result = parsedObject(part.resultRaw);
+  if (result?.success === false) return null;
+  const args = parsedObject(part.argumentsRaw);
+  const source = Array.isArray(result?.todos) ? result.todos : args?.todos;
+  if (!Array.isArray(source) || source.length < 2 || source.length > 6) return null;
+  const items = source.flatMap((value): TodoDisplay[] => {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return [];
+    const item = value as Record<string, unknown>;
+    const content = typeof item.content === "string" ? item.content.trim() : "";
+    if (!content || content.length > 120 ||
+      !["pending", "in_progress", "completed"].includes(String(item.status))) return [];
+    return [{ content, status: item.status as TodoDisplay["status"] }];
+  });
+  return items.length === source.length ? items : null;
+}
+
 function ToolRow({ part }: { part: ToolPart }) {
   const { label, Icon } = TOOL_STATUS[part.status];
   const metadata = safeToolMetadata(part);
+  const todos = part.name === "write_todos" ? safeTodos(part) : null;
+
+  if (todos) return (
+    <section className={styles.todoCard} aria-label="任务计划">
+      <div className={styles.todoHeader}><ListTodo size={16} aria-hidden="true" />任务计划
+        <span>{todos.filter((item) => item.status === "completed").length}/{todos.length} 已完成</span>
+      </div>
+      <ol className={styles.todoList}>
+        {todos.map((item, index) => (
+          <li key={index} className={styles[`todo_${item.status}`]}>
+            <span aria-hidden="true">{item.status === "completed" ? "✓" : item.status === "in_progress" ? "●" : "○"}</span>
+            <span>{item.content}</span>
+            <small>{item.status === "completed" ? "完成" : item.status === "in_progress" ? "进行中" : "待处理"}</small>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
 
   return (
     <details className={`${styles.tool} ${styles[`tool_${part.status}`]}`}>
@@ -155,6 +192,8 @@ function MessageCopyButton({ text, label }: { text: string; label: string }) {
 }
 
 function AssistantEntry({ entry, activity }: { entry: Extract<ConversationEntry, { kind: "assistant" }>; activity?: string }) {
+  const latestPlan = entry.parts.flatMap((part) => part.kind === "tool" && part.name === "write_todos" && safeTodos(part)
+    ? [part] : []).at(-1);
   const visibleText = entry.parts.flatMap((part) => part.kind === "text" && part.text.trim() && !isHiddenAssistantText(part.text)
     ? [part.text.trim()]
     : []);
@@ -168,8 +207,9 @@ function AssistantEntry({ entry, activity }: { entry: Extract<ConversationEntry,
     <article className={styles.assistantEntry} aria-label="AgentWorkbench 回复">
       <div className={styles.assistantContent}>
         <div className={styles.parts}>
+          {latestPlan && <ToolRow key={`active-${latestPlan.id}`} part={latestPlan} />}
           {entry.parts.map((part) => part.kind === "tool"
-            ? <ToolRow key={part.id} part={part} />
+            ? part.name === "write_todos" && safeTodos(part) ? null : <ToolRow key={part.id} part={part} />
             : part.text.trim() && !isHiddenAssistantText(part.text)
               ? <div className={styles.markdown} key={part.id}><WorkbenchMarkdown text={part.text} /></div>
               : null)}

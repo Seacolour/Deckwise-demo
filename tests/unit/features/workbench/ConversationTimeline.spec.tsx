@@ -81,6 +81,27 @@ describe("ConversationTimeline", () => {
     expect(screen.queryByText("正在处理请求…")).not.toBeInTheDocument();
   });
 
+  it("shows a bounded Todo snapshot as task progress", () => {
+    const { container } = render(<ConversationTimeline entries={[{
+      id: "a1", kind: "assistant", parts: [{
+        id: "old-plan", kind: "tool", name: "write_todos", callId: "plan-0", status: "completed",
+        argumentsRaw: null,
+        resultRaw: '{"success":true,"todos":[{"content":"读取资料","status":"pending"},{"content":"整理结论","status":"pending"}]}',
+      }, {
+        id: "plan", kind: "tool", name: "write_todos", callId: "plan-1", status: "completed",
+        argumentsRaw: '{"todos":[{"content":"读取资料","status":"in_progress"},{"content":"整理结论","status":"pending"}]}',
+        resultRaw: '{"success":true,"todos":[{"content":"读取资料","status":"completed"},{"content":"整理结论","status":"in_progress"}]}',
+      }],
+    }]} />);
+    expect(screen.getByRole("region", { name: "任务计划" })).toBeInTheDocument();
+    expect(screen.getByText("1/2 已完成")).toBeInTheDocument();
+    expect(screen.getByText("读取资料")).toBeInTheDocument();
+    expect(screen.getByText("整理结论")).toBeInTheDocument();
+    expect(screen.getByText("进行中")).toBeInTheDocument();
+    expect(screen.getAllByText("读取资料")).toHaveLength(1);
+    expect(container.innerHTML).not.toContain("plan-1");
+  });
+
   it("keeps tool details collapsed initially and lets the user expand them", () => {
     const { container } = render(<ConversationTimeline entries={[
       { id: "a1", kind: "assistant", parts: [tool("one", "completed")] },
