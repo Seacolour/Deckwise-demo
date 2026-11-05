@@ -21,6 +21,8 @@ With Notion connected, the workspace file panel also accepts a Notion page URL o
 
 For multi-step `AGENT` turns, the Python backend can emit `write_todos` updates. The conversation renders them as task progress cards and restores them from persisted tool events after refresh. `ASK` turns remain unplanned.
 
+The existing Personalization settings page now works with the Python backend's user-memory and custom-rule APIs. User-entered profile facts and Agent-written memories can be viewed or deleted there; the backend uses a separate LangGraph Store namespace for semantic recall across conversations.
+
 For a production build check, supply a non-`local` public Backend signature:
 
 ```powershell
